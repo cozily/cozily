@@ -1,0 +1,12 @@
+@import "blueprint";
+
+.two-col {
+  @include container;
+  background-color: #cccccc;
+  #header, #footer {
+    @include column(24, true); }
+  #footer {
+    text-align: right;
+  }
+  #content {
+    @include column(24, true); } }

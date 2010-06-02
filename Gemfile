@@ -2,6 +2,7 @@ source :gemcutter
 
 gem "bundler", "0.9.25"
 gem "clearance", "0.8.8"
+gem "compass", "0.10.2"
 gem "formtastic", "0.9.10"
 gem "haml", "3.0.6"
 gem "paperclip", "2.3.1.1"

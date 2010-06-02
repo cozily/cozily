@@ -1,0 +1,38 @@
+/* line 3, ../../../app/stylesheets/application.scss */
+.two-col {
+  width: 950px;
+  margin: 0 auto;
+  overflow: hidden;
+  display: inline-block;
+  background-color: #cccccc;
+}
+/* line 8, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.0/frameworks/compass/stylesheets/compass/utilities/general/_hacks.scss */
+.two-col {
+  display: block;
+}
+/* line 6, ../../../app/stylesheets/application.scss */
+.two-col #header, .two-col #footer {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 950px;
+}
+/* line 138, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.0/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .two-col #header, * html .two-col #footer {
+  overflow-x: hidden;
+}
+/* line 8, ../../../app/stylesheets/application.scss */
+.two-col #footer {
+  text-align: right;
+}
+/* line 11, ../../../app/stylesheets/application.scss */
+.two-col #content {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 950px;
+}
+/* line 138, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.0/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .two-col #content {
+  overflow-x: hidden;
+}
