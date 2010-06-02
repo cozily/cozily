@@ -1,7 +1,7 @@
 # General
 
 Then /^I should see error messages$/ do
-  assert_match /error(s)? prohibited/m, response.body
+  page.should have_content("error")
 end
 
 # Database
@@ -15,7 +15,7 @@ Given /^I signed up with "(.*)\/(.*)"$/ do |email, password|
     :email                 => email,
     :password              => password,
     :password_confirmation => password
-end 
+end
 
 Given /^I am signed up and confirmed as "(.*)\/(.*)"$/ do |email, password|
   user = Factory :email_confirmed_user,
@@ -27,11 +27,13 @@ end
 # Session
 
 Then /^I should be signed in$/ do
-  assert controller.signed_in?
+  Given %Q{I am on the homepage}
+  Then %Q{I should see "Sign out"}
 end
 
 Then /^I should be signed out$/ do
-  assert ! controller.signed_in?
+  Given %Q{I am on the homepage}
+  Then %Q{I should see "Sign in"}
 end
 
 When /^session is cleared$/ do
@@ -117,6 +119,5 @@ When /^I update my password with "(.*)\/(.*)"$/ do |password, confirmation|
 end
 
 When /^I return next time$/ do
-  When %{session is cleared}
   And %{I go to the homepage}
 end
