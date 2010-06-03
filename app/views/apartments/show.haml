@@ -1,1 +1,18 @@
-=@apartment.address.full_address
+:javascript
+  var address = #{@apartment.address.to_json};
+
+%dl
+  %dt Address
+  %dd=@apartment.address.full_address
+  %dt Rent
+  %dd=@apartment.rent
+  %dt Bedrooms
+  %dd=@apartment.bedrooms
+  %dt Bedrooms
+  %dd=@apartment.bathrooms
+  %dt Square footage
+  %dd=@apartment.square_footage
+  %dt Description
+  %dd=@apartment.description
+
+#map_canvas

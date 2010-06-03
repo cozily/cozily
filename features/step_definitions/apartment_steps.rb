@@ -14,3 +14,17 @@ Then /^I can create an apartment$/ do
   }.should change(Apartment, :count).by(1)
   current_path.should == apartment_path(Apartment.last)
 end
+
+Then /^I can view the apartment$/ do
+  apartment = Apartment.last
+  visit apartment_path(apartment)
+
+  [:full_address,
+   :rent,
+   :bedrooms,
+   :bathrooms,
+   :square_footage,
+   :description].each do |attr|
+    page.should have_content(apartment.send(attr).to_s)
+  end
+end

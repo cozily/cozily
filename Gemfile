@@ -18,6 +18,7 @@ group :test do
   gem "database_cleaner", "0.5.2"
   gem "factory_girl", "1.2.4"
   gem "faker", "0.3.1"
+  gem "pickle", "0.2.11"
   gem "remarkable", "3.1.13"
   gem "remarkable_rails", "3.1.13"
   gem "rspec", "1.3.0"
