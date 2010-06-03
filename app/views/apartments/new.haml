@@ -1,0 +1,12 @@
+-semantic_form_for @apartment do |f|
+  =f.error_messages
+  -f.inputs do
+    -f.semantic_fields_for :address do |fields|
+      =fields.input :full_address, :label => "Address"
+    =f.input :rent
+    =f.input :bedrooms
+    =f.input :bathrooms
+    =f.input :square_footage
+    =f.input :description
+  -f.buttons do
+    =f.commit_button

@@ -9,7 +9,30 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100601162733) do
+ActiveRecord::Schema.define(:version => 20100603020725) do
+
+  create_table "addresses", :force => true do |t|
+    t.string   "street"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.string   "full_address"
+    t.decimal  "lat",          :precision => 15, :scale => 10
+    t.decimal  "lng",          :precision => 15, :scale => 10
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "apartments", :force => true do |t|
+    t.integer  "address_id"
+    t.float    "rent"
+    t.float    "bedrooms"
+    t.float    "bathrooms"
+    t.float    "square_footage"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email"
