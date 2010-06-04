@@ -44,3 +44,10 @@ When /^I fill in an apartment's fields$/ do
   fill_in "Bathrooms", :with => "1"
   fill_in "Square footage", :with => "500"
 end
+
+Then /^I can delete the apartment$/ do
+  apartment = Apartment.last
+  visit edit_apartment_path(apartment)
+  click_link "delete this apartment"
+  apartment.reload.should be_nil
+end

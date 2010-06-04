@@ -29,4 +29,10 @@ class ApartmentsController < ApplicationController
       render :edit
     end
   end
+
+  def destroy
+    @apartment = Apartment.find(params[:id])
+    @apartment.destroy
+    redirect_to root_path
+  end
 end

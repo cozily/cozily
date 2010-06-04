@@ -11,3 +11,7 @@ Feature: Apartments
   Scenario: User edits an apartment
     Given an apartment exists
     Then I can edit the apartment
+
+  Scenario: User deletes an apartment
+    Given an apartment exists
+    Then I can delete the apartment
