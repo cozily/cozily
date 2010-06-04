@@ -14,6 +14,7 @@ class Address < ActiveRecord::Base
 
   private
   def geocode_address
+    return unless full_address
     location = GoogleGeocoder.geocode(full_address)
     if location.full_address.present?
       self.full_address = location.full_address
