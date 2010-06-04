@@ -5,6 +5,7 @@ class Address < ActiveRecord::Base
                    :lng_column_name => :lng
 
   before_validation_on_create :geocode_address
+  before_validation_on_update :geocode_address
 
   validates_presence_of :street,
                         :city,

@@ -7,3 +7,7 @@ Feature: Apartments
   Scenario: User views an apartment
     Given an apartment exists
     Then I can view the apartment
+
+  Scenario: User edits an apartment
+    Given an apartment exists
+    Then I can edit the apartment

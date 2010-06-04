@@ -1,6 +1,8 @@
 :javascript
   var address = #{@apartment.address.to_json};
 
+=link_to "edit apartment", edit_apartment_path(@apartment)
+
 %dl
   %dt Address
   %dd=@apartment.address.full_address

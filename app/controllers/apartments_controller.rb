@@ -8,12 +8,25 @@ class ApartmentsController < ApplicationController
     @apartment = Apartment.find(params[:id])
   end
 
+  def edit
+    @apartment = Apartment.find(params[:id])
+  end
+
   def create
     @apartment = Apartment.new(params[:apartment])
     if @apartment.save
       redirect_to @apartment
     else
       render :new
+    end
+  end
+
+  def update
+    @apartment = Apartment.find(params[:id])
+    if @apartment.update_attributes(params[:apartment])
+      redirect_to @apartment
+    else
+      render :edit
     end
   end
 end
