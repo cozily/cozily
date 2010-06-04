@@ -3,6 +3,9 @@
 
 =link_to "edit apartment", edit_apartment_path(@apartment)
 
+-if current_user
+  =favorite_for_user_and_apartment(current_user, @apartment)
+
 %dl
   %dt Address
   %dd=@apartment.address.full_address
