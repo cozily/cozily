@@ -2,7 +2,9 @@ ActionController::Routing::Routes.draw do |map|
   Clearance::Routes.draw(map)
 
   map.resources :apartments
-  map.resources :favorites
+  map.resources :users do |user|
+    user.resources :favorites
+  end
 
   map.root :controller => "welcome"
 end

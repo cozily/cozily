@@ -2,6 +2,11 @@ Feature: Favorites
 
   @javascript
   Scenario: User favorites an apartment
-    Given I am logged in user
+    Given I am a logged in user
     And an apartment exists
     Then I can favorite the apartment
+
+  Scenario: User views their favorites
+    Given I am a logged in user
+    And I have favorites
+    Then I can view my favorites

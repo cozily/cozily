@@ -11,3 +11,17 @@ Then /^I can favorite the apartment$/ do
     click_link "unfavorite"
   }.should change(Favorite, :count).by(-1)
 end
+
+Given /^I have favorites$/ do
+  Factory(:favorite,
+          :user => User.last)
+end
+
+Then /^I can view my favorites$/ do
+  click_link "my favorites"
+  current_path.should == user_favorites_path(User.last)
+
+  User.last.favorites.each do |favorite|
+    page.should have_css("a:contains('#{favorite.apartment.full_address}')")
+  end
+end
