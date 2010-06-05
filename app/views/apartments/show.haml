@@ -3,8 +3,7 @@
 
 =link_to "edit apartment", edit_apartment_path(@apartment)
 
--if current_user
-  =favorite_for_user_and_apartment(current_user, @apartment)
+=render "favorites/link"
 
 %dl
   %dt Address
@@ -13,7 +12,7 @@
   %dd=@apartment.rent
   %dt Bedrooms
   %dd=@apartment.bedrooms
-  %dt Bedrooms
+  %dt Bathrooms
   %dd=@apartment.bathrooms
   %dt Square footage
   %dd=@apartment.square_footage
