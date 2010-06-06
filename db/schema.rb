@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100606055057) do
+ActiveRecord::Schema.define(:version => 20100606063548) do
 
   create_table "addresses", :force => true do |t|
     t.string   "street"
@@ -30,7 +30,6 @@ ActiveRecord::Schema.define(:version => 20100606055057) do
     t.float    "bedrooms"
     t.float    "bathrooms"
     t.float    "square_footage"
-    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

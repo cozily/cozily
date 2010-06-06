@@ -19,8 +19,7 @@ Then /^I can view the apartment$/ do
    :rent,
    :bedrooms,
    :bathrooms,
-   :square_footage,
-   :description].each do |attr|
+   :square_footage].each do |attr|
     page.should have_content(apartment.send(attr).to_s)
   end
 end
@@ -44,5 +43,4 @@ When /^I fill in an apartment's fields$/ do
   fill_in "Bedrooms", :with => "1"
   fill_in "Bathrooms", :with => "1"
   fill_in "Square footage", :with => "500"
-  fill_in "Description", :with => Faker::Lorem.paragraph
 end

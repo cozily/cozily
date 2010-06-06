@@ -9,8 +9,7 @@ class Apartment < ActiveRecord::Base
                         :rent,
                         :bedrooms,
                         :bathrooms,
-                        :square_footage,
-                        :description
+                        :square_footage
 
   accepts_nested_attributes_for :address
 

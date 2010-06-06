@@ -8,7 +8,6 @@ Factory.define :apartment do |a|
   a.bedrooms        1
   a.bathrooms       1
   a.square_footage  500
-  a.description     Faker::Lorem.paragraph(1)
 end
 
 Factory.define :favorite do |f|
