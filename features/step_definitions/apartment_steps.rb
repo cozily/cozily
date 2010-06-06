@@ -8,6 +8,7 @@ Then /^I can create an apartment$/ do
   }.should change(Apartment, :count).by(1)
 
   current_path.should == apartment_path(Apartment.last)
+  page.should have_content "Carroll Gardens"
 end
 
 Then /^I can view the apartment$/ do

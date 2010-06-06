@@ -8,6 +8,8 @@
 %dl
   %dt Address
   %dd=@apartment.address.full_address
+  %dt Neighborhood
+  %dd=@apartment.neighborhood.try(:name) || "Unknown"
   %dt Rent
   %dd=@apartment.rent
   %dt Bedrooms
