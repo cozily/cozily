@@ -9,7 +9,11 @@
   %dt Address
   %dd=@apartment.address.full_address
   %dt Neighborhood
-  %dd=@apartment.neighborhood.try(:name) || "Unknown"
+  %dd
+    -if @apartment.neighborhood.present?
+      =link_to @apartment.neighborhood.name, @apartment.neighborhood
+    -else
+      Unknown
   %dt Rent
   %dd=@apartment.rent
   %dt Bedrooms

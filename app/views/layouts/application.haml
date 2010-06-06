@@ -18,8 +18,9 @@
           =link_to "Cozily", root_url
 
         =render "sessions/nav_actions"
-        -if current_user
-          %ul
+        %ul
+          %li=link_to_unless_current "neighborhoods", neighborhoods_path
+          -if current_user
             %li=link_to_unless_current "new apartment", new_apartment_path
             %li=link_to_unless_current "my favorites", user_favorites_path(current_user)
 

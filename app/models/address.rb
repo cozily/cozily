@@ -5,6 +5,7 @@ class Address < ActiveRecord::Base
                    :lng_column_name => :lng
 
   belongs_to :neighborhood
+  has_many :apartments, :dependent => :destroy
 
   before_validation_on_create :geocode_address, :neighborhood_search
   before_validation_on_update :geocode_address, :neighborhood_search
