@@ -49,5 +49,5 @@ Then /^I can delete the apartment$/ do
   apartment = Apartment.last
   visit edit_apartment_path(apartment)
   click_link "delete this apartment"
-  apartment.reload.should be_nil
+  lambda { apartment.reload }.should raise_error(ActiveRecord::RecordNotFound)
 end
