@@ -52,12 +52,12 @@ Then /^I can delete the apartment$/ do
   lambda { apartment.reload }.should raise_error(ActiveRecord::RecordNotFound)
 end
 
-Then /^I can publish the apartment$/ do
+Then /^I can (publish|unpublish) the apartment$/ do |action|
   apartment = Apartment.last
 
   visit apartment_path(apartment)
-  click_button "publish"
+  click_button action
 
-  apartment.reload.should be_published
-  page.should_not have_css("input[type='submit'][value='publish']")
+  apartment.reload.send("#{action}ed?").should be_true
+  page.should_not have_css("input[type='submit'][value='#{action}']")
 end

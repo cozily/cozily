@@ -19,5 +19,9 @@ class Apartment < ActiveRecord::Base
     event :publish do
       transition :unpublished => :published
     end
+
+    event :unpublish do
+      transition :published => :unpublished
+    end
   end
 end

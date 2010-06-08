@@ -19,3 +19,7 @@ Feature: Apartments
   Scenario: User publishes an apartment
     Given an apartment exists with state: "unpublished"
     Then I can publish the apartment
+
+  Scenario: User unpublishes an apartment
+    Given an apartment exists with state: "published"
+    Then I can unpublish the apartment
