@@ -1,4 +1,6 @@
 Then /^I can create an apartment$/ do
+  Given %Q{all the features are present}
+
   click_link "new apartment"
   current_path.should == new_apartment_path
 
@@ -9,6 +11,8 @@ Then /^I can create an apartment$/ do
 
   current_path.should == apartment_path(Apartment.last)
   page.should have_content "Carroll Gardens"
+  page.should have_content "backyard"
+  page.should have_content "balcony"
 end
 
 Then /^I can view the apartment$/ do
@@ -25,6 +29,8 @@ Then /^I can view the apartment$/ do
 end
 
 Then /^I can edit the apartment$/ do
+  Given %Q{all the features are present}
+
   apartment = Apartment.last
   visit apartment_path(apartment)
 
@@ -43,6 +49,9 @@ When /^I fill in an apartment's fields$/ do
   fill_in "Bedrooms", :with => "1"
   fill_in "Bathrooms", :with => "1"
   fill_in "Square footage", :with => "500"
+
+  check "backyard"
+  check "balcony"
 end
 
 Then /^I can delete the apartment$/ do
@@ -60,4 +69,11 @@ Then /^I can (publish|unpublish) the apartment$/ do |action|
 
   apartment.reload.send("#{action}ed?").should be_true
   page.should_not have_css("input[type='submit'][value='#{action}']")
+end
+
+Given /^all the features are present$/ do
+  ["backyard",
+   "balcony"].each do |name|
+    Feature.create(:name => name)
+  end
 end

@@ -1,7 +1,9 @@
 class Apartment < ActiveRecord::Base
   belongs_to :address
 
+  has_many :apartment_features, :dependent => :destroy
   has_many :favorites, :dependent => :destroy
+  has_many :features, :through => :apartment_features
 
   has_friendly_id :full_address, :use_slug => true
 

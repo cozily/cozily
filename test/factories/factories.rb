@@ -10,7 +10,16 @@ Factory.define :apartment do |a|
   a.square_footage  500
 end
 
+Factory.define :apartment_feature do |a|
+  a.association  :apartment
+  a.association  :feature
+end
+
 Factory.define :favorite do |f|
   f.association  :user
   f.association  :apartment
+end
+
+Factory.define :feature do |f|
+  f.name  Faker::Lorem.words(1)
 end

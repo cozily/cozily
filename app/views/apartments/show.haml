@@ -30,4 +30,8 @@
   %dt Square footage
   %dd=@apartment.square_footage
 
+%ul
+  -@apartment.features.each do |feature|
+    %li=feature.name
+
 #map_canvas
