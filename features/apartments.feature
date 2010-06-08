@@ -15,3 +15,7 @@ Feature: Apartments
   Scenario: User deletes an apartment
     Given an apartment exists
     Then I can delete the apartment
+
+  Scenario: User publishes an apartment
+    Given an apartment exists with state: "unpublished"
+    Then I can publish the apartment

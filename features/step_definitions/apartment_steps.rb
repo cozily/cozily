@@ -51,3 +51,13 @@ Then /^I can delete the apartment$/ do
   click_link "delete this apartment"
   lambda { apartment.reload }.should raise_error(ActiveRecord::RecordNotFound)
 end
+
+Then /^I can publish the apartment$/ do
+  apartment = Apartment.last
+
+  visit apartment_path(apartment)
+  click_button "publish"
+
+  apartment.reload.should be_published
+  page.should_not have_css("input[type='submit'][value='publish']")
+end

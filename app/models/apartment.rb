@@ -14,4 +14,10 @@ class Apartment < ActiveRecord::Base
   accepts_nested_attributes_for :address
 
   delegate :full_address, :neighborhood, :to => :address
+
+  state_machine :state, :initial => :unpublished do
+    event :publish do
+      transition :unpublished => :published
+    end
+  end
 end
