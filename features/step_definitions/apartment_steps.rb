@@ -15,6 +15,14 @@ Then /^I can create an apartment$/ do
   page.should have_content "balcony"
 end
 
+Then /^I cannot create an apartment$/ do
+  visit "/"
+  page.should_not have_css("a:contains('new apartment')")
+
+  visit new_apartment_path
+  current_path.should == "/"
+end
+
 Then /^I can view the apartment$/ do
   apartment = Apartment.last
   visit apartment_path(apartment)

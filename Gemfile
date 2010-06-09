@@ -1,6 +1,7 @@
 source :gemcutter
 
 gem "bundler", "0.9.25"
+gem "cancan", "1.1.1"
 gem "clearance", "0.8.8"
 gem "compass", "0.10.2"
 gem "formtastic", "0.9.10"

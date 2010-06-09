@@ -1,4 +1,6 @@
 class ApartmentsController < ApplicationController
+  load_and_authorize_resource
+
   def new
     @apartment = Apartment.new
     @apartment.build_address

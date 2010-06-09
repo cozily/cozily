@@ -21,8 +21,9 @@
         =render "sessions/nav_actions"
         %ul
           %li=link_to_unless_current "neighborhoods", neighborhoods_path
-          -if current_user
+          -if can? :create, Apartment
             %li=link_to_unless_current "new apartment", new_apartment_path
+          -if current_user
             %li=link_to_unless_current "my favorites", user_favorites_path(current_user)
 
       #content
