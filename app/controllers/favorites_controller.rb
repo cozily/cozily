@@ -7,8 +7,8 @@ class FavoritesController < ApplicationController
 
   def create
     @favorite = @user.favorites.create(params[:favorite])
-    @apartment = @favorite.apartment
-    render :json => { :favorite_link => render_to_string(:partial => "favorites/link"),
+    render :json => { :favorite_link => render_to_string(:partial => "favorites/link",
+                                                         :locals => { :apartment => @favorite.apartment }),
                       :neighborhood_table => render_to_string(:partial => "apartments/table",
                                                               :locals => { :apartments => @favorite.apartment.neighborhood.apartments,
                                                                            :type => "neighborhood" })
@@ -18,8 +18,8 @@ class FavoritesController < ApplicationController
   def destroy
     @favorite = Favorite.find(params[:id])
     @favorite.destroy
-    @apartment = @favorite.apartment
-    render :json => { :favorite_link => render_to_string(:partial => "favorites/link"),
+    render :json => { :favorite_link => render_to_string(:partial => "favorites/link",
+                                                         :locals => { :apartment => @favorite.apartment }),
                       :favorites_table => render_to_string(:partial => "apartments/table",
                                                            :locals => { :apartments => @user.favorite_apartments,
                                                                         :type => "favorites" }),

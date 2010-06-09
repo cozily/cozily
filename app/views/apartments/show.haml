@@ -3,7 +3,7 @@
 
 =link_to "edit apartment", edit_apartment_path(@apartment)
 
-=render "favorites/link"
+=render "favorites/link", :apartment => @apartment
 =render "flags/link", :apartment => @apartment
 
 -@apartment.state_transitions.each do |transition|
