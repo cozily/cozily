@@ -23,3 +23,8 @@ end
 Factory.define :feature do |f|
   f.name  Faker::Lorem.words(1)
 end
+
+Factory.define :flag do |f|
+  f.association  :user
+  f.association  :apartment
+end

@@ -4,6 +4,7 @@
 =link_to "edit apartment", edit_apartment_path(@apartment)
 
 =render "favorites/link"
+=render "flags/link", :apartment => @apartment
 
 -@apartment.state_transitions.each do |transition|
   -semantic_form_for @apartment do |form|

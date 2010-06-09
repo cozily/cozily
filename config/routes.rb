@@ -5,6 +5,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :neighborhoods
   map.resources :users do |user|
     user.resources :favorites
+    user.resources :flags
   end
 
   map.root :controller => "welcome"
