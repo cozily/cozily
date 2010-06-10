@@ -1,5 +1,6 @@
 :javascript
   var address = #{@apartment.address.to_json};
+  var apartments = #{(Apartment.all - [@apartment]).to_json(:methods => :to_param, :include => :address)};
 
 -if can? :edit, @apartment
   =link_to "edit apartment", edit_apartment_path(@apartment)

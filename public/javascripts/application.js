@@ -11,6 +11,12 @@ function updateContent(content) {
     $(document).trigger('content-updated');
 }
 
+function attachClickToMarker(marker, index) {
+    google.maps.event.addListener(marker, 'click', function() {
+        window.location = apartments[index].apartment.to_param;
+    });
+}
+
 (function($) {
     $(function() {
         if (document.getElementById('map_canvas') != null) {
@@ -19,13 +25,24 @@ function updateContent(content) {
                 mapTypeId: google.maps.MapTypeId.HYBRID
             });
 
-            var point1 = new google.maps.LatLng(address.address.lat, address.address.lng);
-            bounds.extend(point1);
+            var point = new google.maps.LatLng(address.address.lat, address.address.lng);
+            bounds.extend(point);
 
-            var marker = new google.maps.Marker({position: point1, title: address.address.full_address});
+            var marker = new google.maps.Marker({position: point, title: address.address.full_address});
 
             marker.setMap(map);
             map.fitBounds(bounds);
+
+            for (var i = 0; i < apartments.length; i++) {
+                var apartment = apartments[i].apartment;
+
+                point = new google.maps.LatLng(apartment.address.lat, apartment.address.lng);
+                marker = new google.maps.Marker({position: point, param: apartment.to_param});
+
+                attachClickToMarker(marker, i);
+
+                marker.setMap(map);
+            }
         }
 
         $('a[data-remote=true]').live('click', function(event) {
