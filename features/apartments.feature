@@ -8,8 +8,10 @@ Feature: Apartments
     Then I cannot create an apartment
 
   Scenario: User views an apartment
-    Given an apartment exists
+    Given an apartment exists with state: "published"
     Then I can view the apartment
+    When an apartment exists with state: "unpublished"
+    Then I should see that the apartment is unpublished
 
   @allow-rescue
   Scenario: User edits an apartment

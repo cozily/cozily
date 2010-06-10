@@ -120,3 +120,9 @@ Then /^I can view my apartments$/ do
     page.should have_content(apartment.full_address)
   end
 end
+
+Then /^I should see that the apartment is unpublished$/ do
+  visit apartment_path(Apartment.last)
+  page.should have_content("This apartment is unpublished")
+end
+
