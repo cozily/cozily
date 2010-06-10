@@ -4,6 +4,7 @@ end
 
 Factory.define :apartment do |a|
   a.association     :address
+  a.association     :user
   a.rent            1500
   a.bedrooms        1
   a.bathrooms       1

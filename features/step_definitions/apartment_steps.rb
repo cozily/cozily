@@ -85,3 +85,19 @@ Given /^all the features are present$/ do
     Feature.create(:name => name)
   end
 end
+
+Given /^I have an? ?(published|unpublished)? apartment$/ do |state|
+  Factory(:apartment,
+          :user => User.last,
+          :state => state || "unpublished")
+end
+
+Then /^I cannot edit another user's apartment$/ do
+  apartment = Factory(:apartment)
+
+  visit apartment_path(apartment)
+  page.should_not have_content("edit apartment")
+
+  visit edit_apartment_path(apartment)
+  current_path.should == "/"
+end

@@ -11,22 +11,24 @@ Feature: Apartments
     Given an apartment exists
     Then I can view the apartment
 
+  @allow-rescue
   Scenario: User edits an apartment
     Given I am a logged in user
-    And an apartment exists
+    And I have an apartment
     Then I can edit the apartment
+    But I cannot edit another user's apartment
 
   Scenario: User deletes an apartment
     Given I am a logged in user
-    And an apartment exists
+    And I have an apartment
     Then I can delete the apartment
 
   Scenario: User publishes an apartment
     Given I am a logged in user
-    And an apartment exists with state: "unpublished"
+    And I have an unpublished apartment
     Then I can publish the apartment
 
   Scenario: User unpublishes an apartment
     Given I am a logged in user
-    And an apartment exists with state: "published"
+    And I have an published apartment
     Then I can unpublish the apartment

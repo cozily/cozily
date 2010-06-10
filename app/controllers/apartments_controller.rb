@@ -15,7 +15,7 @@ class ApartmentsController < ApplicationController
   end
 
   def create
-    @apartment = Apartment.new(params[:apartment])
+    @apartment = current_user.apartments.new(params[:apartment])
     if @apartment.save
       redirect_to @apartment
     else

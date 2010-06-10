@@ -1,7 +1,8 @@
 :javascript
   var address = #{@apartment.address.to_json};
 
-=link_to "edit apartment", edit_apartment_path(@apartment)
+-if can? :edit, @apartment
+  =link_to "edit apartment", edit_apartment_path(@apartment)
 
 =render "favorites/link", :apartment => @apartment
 =render "flags/link", :apartment => @apartment

@@ -62,4 +62,5 @@ if defined?(ActiveRecord::Base)
   end
 end
 
+World(DefiniteArticleHelper)
 World(PathHelper)
