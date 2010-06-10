@@ -1,4 +1,4 @@
 =render "apartments/form", :apartment => @apartment
 
 -if can? :destroy, @apartment
-  =link_to "delete this apartment", apartment_path(@apartment), :method => :delete
+  =link_to "delete this apartment", apartment_path(@apartment), :method => :delete, :confirm => "Are you sure?"

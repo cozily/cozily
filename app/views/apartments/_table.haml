@@ -25,10 +25,10 @@
               %td=favorite_for_user_and_apartment(current_user, apartment)
             -elsif type == "owner"
               %td
-                =render "apartments/state_machine", :apartment => apartment, :return_to => apartments_path
+                =render "apartments/state_machine", :apartment => apartment, :return_to => user_apartments_path(current_user)
               %td
                 -if can? :destroy, apartment
-                  =link_to "delete", apartment_path(apartment, :return_to => apartments_path), :method => :delete
+                  =link_to "delete", apartment_path(apartment, :return_to => user_apartments_path(current_user)), :method => :delete, :confirm => "Are you sure?"
 
   -else
     %p
@@ -36,3 +36,5 @@
         You don't have any favorites.  Are you too picky?
       -elsif type == "neighborhood"
         Cozily doesn't know of any apartments in this neighborhood.
+      -elsif type == "owner"
+        You don't have any apartments.  Maybe you should create one?
