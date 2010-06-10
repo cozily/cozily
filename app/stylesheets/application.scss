@@ -1,5 +1,9 @@
 @import "blueprint";
 
+div.ui-datepicker {
+ width: 19em;
+}
+
 .two-col {
   @include container;
   background-color: #cccccc;

@@ -1,4 +1,9 @@
 /* line 3, ../../../app/stylesheets/application.scss */
+div.ui-datepicker {
+  width: 19em;
+}
+
+/* line 7, ../../../app/stylesheets/application.scss */
 .two-col {
   width: 950px;
   margin: 0 auto;
@@ -10,7 +15,7 @@
 .two-col {
   display: block;
 }
-/* line 6, ../../../app/stylesheets/application.scss */
+/* line 10, ../../../app/stylesheets/application.scss */
 .two-col #header, .two-col #footer {
   display: inline;
   float: left;
@@ -21,11 +26,11 @@
 * html .two-col #header, * html .two-col #footer {
   overflow-x: hidden;
 }
-/* line 8, ../../../app/stylesheets/application.scss */
+/* line 12, ../../../app/stylesheets/application.scss */
 .two-col #footer {
   text-align: right;
 }
-/* line 11, ../../../app/stylesheets/application.scss */
+/* line 15, ../../../app/stylesheets/application.scss */
 .two-col #content {
   display: inline;
   float: left;
@@ -36,7 +41,7 @@
 * html .two-col #content {
   overflow-x: hidden;
 }
-/* line 13, ../../../app/stylesheets/application.scss */
+/* line 17, ../../../app/stylesheets/application.scss */
 .two-col #content #map_canvas {
   width: 50%;
   height: 500px;

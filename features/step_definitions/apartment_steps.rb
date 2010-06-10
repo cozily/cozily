@@ -57,6 +57,7 @@ When /^I fill in an apartment's fields$/ do
   fill_in "Bedrooms", :with => "1"
   fill_in "Bathrooms", :with => "1"
   fill_in "Square footage", :with => "500"
+  fill_in "Start date", :with => Date.today
 
   check "backyard"
   check "balcony"

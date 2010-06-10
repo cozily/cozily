@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100610012038) do
+ActiveRecord::Schema.define(:version => 20100610205416) do
 
   create_table "addresses", :force => true do |t|
     t.string   "street"
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(:version => 20100610012038) do
     t.string   "state"
     t.integer  "flags_count",    :default => 0
     t.integer  "user_id"
+    t.date     "start_date"
   end
 
   create_table "favorites", :force => true do |t|

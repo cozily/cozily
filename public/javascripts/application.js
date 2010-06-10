@@ -19,6 +19,8 @@ function attachClickToMarker(marker, index) {
 
 (function($) {
     $(function() {
+        $("#apartment_start_date").datepicker();
+
         if (document.getElementById('map_canvas') != null) {
             var bounds = new google.maps.LatLngBounds();
             var map = new google.maps.Map(document.getElementById("map_canvas"), {
