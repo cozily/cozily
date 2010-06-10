@@ -79,6 +79,13 @@ Then /^I can (publish|unpublish) the apartment$/ do |action|
   page.should_not have_css("input[type='submit'][value='#{action}']")
 end
 
+But /^I cannot (publish|unpublish) another user's apartment$/ do |action|
+  visit apartment_path(Factory(:apartment,
+                               :state => action == "publish" ? "unpublished" : "published"))
+
+  page.should_not have_css("input[type='submit'][value='#{action}']")
+end
+
 Given /^all the features are present$/ do
   ["backyard",
    "balcony"].each do |name|

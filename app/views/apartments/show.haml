@@ -7,12 +7,13 @@
 =render "favorites/link", :apartment => @apartment
 =render "flags/link", :apartment => @apartment
 
--@apartment.state_transitions.each do |transition|
-  -semantic_form_for @apartment do |form|
-    -form.inputs do
-      =form.input :state, :value => transition.to, :as => :hidden
-    -form.buttons do
-      =form.commit_button transition.event.to_s
+-if can? :edit, @apartment
+  -@apartment.state_transitions.each do |transition|
+    -semantic_form_for @apartment do |form|
+      -form.inputs do
+        =form.input :state, :value => transition.to, :as => :hidden
+      -form.buttons do
+        =form.commit_button transition.event.to_s
 
 %dl
   %dt Address

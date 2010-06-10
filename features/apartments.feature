@@ -27,8 +27,10 @@ Feature: Apartments
     Given I am a logged in user
     And I have an unpublished apartment
     Then I can publish the apartment
+    But I cannot publish another user's apartment
 
   Scenario: User unpublishes an apartment
     Given I am a logged in user
     And I have an published apartment
     Then I can unpublish the apartment
+    But I cannot unpublish another user's apartment
