@@ -3,9 +3,10 @@ class Ability
 
   def initialize(user)
     if user.present?
-      can :manage, :all
+      can :manage, Apartment
+      can :manage, Favorite, :user_id => user.id
     else
-      can :read, :all
+      can :read, Apartment
     end
   end
 end

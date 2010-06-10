@@ -1,7 +1,8 @@
 class FavoritesController < ApplicationController
-  before_filter :load_user
+  load_and_authorize_resource :nested => :user
 
   def index
+    raise CanCan::AccessDenied unless @user == current_user
     @apartments = @user.favorite_apartments
   end
 
@@ -27,10 +28,5 @@ class FavoritesController < ApplicationController
                                                               :locals => { :apartments => @favorite.apartment.neighborhood.apartments,
                                                                            :type => "neighborhood" })
     }
-  end
-
-  private
-  def load_user
-    @user = User.find(params[:user_id])
   end
 end
