@@ -14,6 +14,8 @@ end
 
 Given /^I have favorites$/ do
   Factory(:favorite,
+          :apartment => Factory(:apartment,
+                                :state => "published"),
           :user => User.last)
 end
 

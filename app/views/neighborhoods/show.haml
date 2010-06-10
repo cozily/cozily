@@ -1,1 +1,1 @@
-=render "apartments/table", :apartments => @neighborhood.apartments, :type => "neighborhood"
+=render "apartments/table", :apartments => @neighborhood.apartments.with_state(:published), :type => "neighborhood"

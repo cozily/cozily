@@ -3,7 +3,7 @@ class FavoritesController < ApplicationController
 
   def index
     raise CanCan::AccessDenied unless @user == current_user
-    @apartments = @user.favorite_apartments
+    @apartments = @user.favorite_apartments.with_state(:published)
   end
 
   def create
