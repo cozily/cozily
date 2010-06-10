@@ -95,8 +95,10 @@ end
 
 Given /^I have an? ?(published|unpublished)? apartment$/ do |state|
   Factory(:apartment,
-          :user => User.last,
+          :user => the.user,
           :state => state || "unpublished")
+
+  the.user.apartments.should be_present
 end
 
 Then /^I cannot edit another user's apartment$/ do
@@ -107,4 +109,14 @@ Then /^I cannot edit another user's apartment$/ do
 
   visit edit_apartment_path(apartment)
   current_path.should == "/"
+end
+
+Then /^I can view my apartments$/ do
+  visit "/"
+  click_link "my apartments"
+  current_path.should == user_apartments_path(the.user)
+
+  the.user.apartments.each do |apartment|
+    page.should have_content(apartment.full_address)
+  end
 end

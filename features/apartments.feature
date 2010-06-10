@@ -34,3 +34,8 @@ Feature: Apartments
     And I have an published apartment
     Then I can unpublish the apartment
     But I cannot unpublish another user's apartment
+
+  Scenario: Owner views their apartments
+    Given I am a logged in user
+    And I have an apartment
+    Then I can view my apartments

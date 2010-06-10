@@ -1,0 +1,10 @@
+-return_to ||= apartment_path(apartment)
+
+-if can? :edit, apartment
+  -apartment.state_transitions.each do |transition|
+    -semantic_form_for apartment do |form|
+      =hidden_field_tag :return_to, return_to
+      -form.inputs do
+        =form.input :state, :value => transition.to, :as => :hidden
+      -form.buttons do
+        =form.commit_button transition.event.to_s

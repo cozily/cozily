@@ -25,6 +25,8 @@
             %li=link_to_unless_current "new apartment", new_apartment_path
           -if current_user
             %li=link_to_unless_current "my favorites", user_favorites_path(current_user)
+          -if current_user && current_user.apartments.present?
+            %li=link_to_unless_current "my apartments", user_apartments_path(current_user)
 
       #content
         #flash

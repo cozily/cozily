@@ -19,6 +19,8 @@ class Apartment < ActiveRecord::Base
 
   delegate :full_address, :neighborhood, :to => :address
 
+  default_scope :order => "apartments.created_at"
+
   state_machine :state, :initial => :unpublished do
     event :publish do
       transition :unpublished => :published

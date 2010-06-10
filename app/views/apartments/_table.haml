@@ -10,6 +10,8 @@
           %th Square Footage
           -if current_user
             %th
+          -if type == "owner"
+            %th
 
       %tbody
         -apartments.each do |apartment|
@@ -19,8 +21,14 @@
             %td=apartment.bedrooms
             %td=apartment.bathrooms
             %td=apartment.square_footage
-            -if current_user
+            -if current_user && type != "owner"
               %td=favorite_for_user_and_apartment(current_user, apartment)
+            -elsif type == "owner"
+              %td
+                =render "apartments/state_machine", :apartment => apartment, :return_to => apartments_path
+              %td
+                -if can? :destroy, apartment
+                  =link_to "delete", apartment_path(apartment, :return_to => apartments_path), :method => :delete
 
   -else
     %p

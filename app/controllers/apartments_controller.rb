@@ -1,6 +1,11 @@
 class ApartmentsController < ApplicationController
   load_and_authorize_resource
 
+  def index
+    raise CanCan::AccessDenied unless current_user == User.find(params[:user_id])
+    @apartments = current_user.apartments
+  end
+
   def new
     @apartment = Apartment.new
     @apartment.build_address
@@ -26,7 +31,7 @@ class ApartmentsController < ApplicationController
   def update
     @apartment = Apartment.find(params[:id])
     if @apartment.update_attributes(params[:apartment])
-      redirect_to @apartment
+      redirect_to params[:return_to] || @apartment
     else
       render :edit
     end
@@ -35,6 +40,6 @@ class ApartmentsController < ApplicationController
   def destroy
     @apartment = Apartment.find(params[:id])
     @apartment.destroy
-    redirect_to root_path
+    redirect_to params[:return_to] || root_path
   end
 end
