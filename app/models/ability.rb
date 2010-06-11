@@ -5,7 +5,7 @@ class Ability
     if user.present?
       can :create, Apartment
       can :read, Apartment
-      can [:edit, :update, :destroy], Apartment, :user_id => user.id
+      can [:edit, :transition, :update, :destroy], Apartment, :user_id => user.id
 
       can :manage, Favorite, :user_id => user.id
     else

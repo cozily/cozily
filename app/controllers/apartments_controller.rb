@@ -42,4 +42,10 @@ class ApartmentsController < ApplicationController
     @apartment.destroy
     redirect_to params[:return_to] || root_path
   end
+
+  def transition
+    @apartment = Apartment.find(params[:id])
+    @apartment.send("#{params[:event]}!")
+    redirect_to params[:return_to] || @apartment
+  end
 end

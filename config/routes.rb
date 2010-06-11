@@ -1,7 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
   Clearance::Routes.draw(map)
 
-  map.resources :apartments
+  map.resources :apartments,
+                :member => { :transition => :put }
   map.resources :neighborhoods
   map.resources :users do |user|
     user.resources :apartments, :only => :index

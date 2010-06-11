@@ -13,6 +13,7 @@ gem "paperclip", "2.3.1.1"
 gem "pg", "0.9.0"
 gem "rails", "2.3.8"
 gem "state_machine", "0.9.2"
+gem "twitter", "0.9.7"
 
 group :test do
   gem "capybara", "0.3.8"

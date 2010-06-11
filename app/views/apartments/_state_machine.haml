@@ -2,9 +2,9 @@
 
 -if can? :edit, apartment
   -apartment.state_transitions.each do |transition|
-    -semantic_form_for apartment do |form|
-      =hidden_field_tag :return_to, return_to
+    -semantic_form_for [:transition, apartment] do |form|
       -form.inputs do
-        =form.input :state, :value => transition.to, :as => :hidden
+        =hidden_field_tag :return_to, return_to
+        =hidden_field_tag :event, transition.event
       -form.buttons do
         =form.commit_button transition.event.to_s
