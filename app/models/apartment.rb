@@ -11,12 +11,11 @@ class Apartment < ActiveRecord::Base
 
   has_friendly_id :full_address, :use_slug => true
 
-  validates_presence_of :address,
-                        :user,
-                        :rent,
-                        :bedrooms,
-                        :bathrooms,
-                        :square_footage
+  validates_presence_of :address, :user
+  validates_numericality_of :rent, :allow_nil => true, :greater_than => 0, :only_integer => true
+  validates_numericality_of :square_footage, :allow_nil => true, :greater_than => 0, :only_integer => true
+  validates_numericality_of :bedrooms, :allow_nil => true
+  validates_numericality_of :bathrooms, :allow_nil => true
 
   accepts_nested_attributes_for :address
 
@@ -35,11 +34,20 @@ class Apartment < ActiveRecord::Base
     end
 
     event :publish do
-      transition :unpublished => :published
+      transition :unpublished => :published, :if => :publishable?
     end
 
     event :unpublish do
       transition :published => :unpublished
     end
+  end
+
+  def publishable?
+    [:address,
+     :user,
+     :rent,
+     :bedrooms,
+     :bathrooms,
+     :square_footage].all? { |attr| self.send(attr).present? }
   end
 end
