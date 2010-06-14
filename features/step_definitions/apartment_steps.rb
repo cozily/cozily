@@ -50,7 +50,7 @@ Then /^I can edit the apartment$/ do
   When %Q{I fill in an apartment's fields}
   click_button "Update Apartment"
 
-  current_path.should == apartment_path(apartment)
+  current_path.should == apartment_path(Apartment.last)
 end
 
 When /^I fill in an apartment's fields$/ do

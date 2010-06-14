@@ -25,7 +25,7 @@ class Apartment < ActiveRecord::Base
 
   default_scope :order => "apartments.created_at"
 
-  before_save :upcase_unit
+  before_save :format_unit
 
   state_machine :state, :initial => :unpublished do
     after_transition :on => :publish do |apt|
@@ -47,7 +47,7 @@ class Apartment < ActiveRecord::Base
   end
 
   def name
-    [full_address, unit].compact.join(" #")
+    [full_address, unit].reject { |str| str.blank? }.join(" #")
   end
 
   def publishable?
@@ -61,7 +61,8 @@ class Apartment < ActiveRecord::Base
   end
 
   private
-  def upcase_unit
-    unit.try(:upcase!)
+  def format_unit
+    return unless self.unit
+    self.unit = self.unit.delete("#").upcase
   end
 end

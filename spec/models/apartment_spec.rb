@@ -21,10 +21,18 @@ describe Apartment do
     it { should validate_numericality_of(attr, :allow_nil => true) }
   end
 
-  it "should upcase unit before save" do
-    @apartment = Factory(:apartment,
-                         :unit => "1c")
-    @apartment.reload.unit.should == "1C"
+  describe "#before_save" do
+    it "upcases unit" do
+      @apartment = Factory(:apartment,
+                           :unit => "1c")
+      @apartment.reload.unit.should == "1C"
+    end
+
+    it "deletes pounds from unit" do
+      @apartment = Factory(:apartment,
+                           :unit => "#1c")
+      @apartment.reload.unit.should == "1C"
+    end
   end
 
   describe "#name" do
