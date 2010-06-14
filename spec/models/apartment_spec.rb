@@ -21,6 +21,12 @@ describe Apartment do
     it { should validate_numericality_of(attr, :allow_nil => true) }
   end
 
+  it "should upcase unit before save" do
+    @apartment = Factory(:apartment,
+                         :unit => "1c")
+    @apartment.reload.unit.should == "1C"
+  end
+
   describe "#publishable?" do
     before do
       @apartment = Factory(:apartment,

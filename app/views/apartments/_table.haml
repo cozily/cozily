@@ -18,7 +18,7 @@
       %tbody
         -apartments.each do |apartment|
           %tr
-            %td=link_to apartment.full_address, apartment
+            %td=link_to apartment.name, apartment
             %td=apartment.rent
             %td=apartment.bedrooms
             %td=apartment.bathrooms

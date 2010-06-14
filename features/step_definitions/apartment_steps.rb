@@ -55,6 +55,7 @@ end
 
 When /^I fill in an apartment's fields$/ do
   fill_in "Address", :with => "546 Henry St 11231"
+  fill_in "Unit", :with => "1C"
   fill_in "Rent", :with => "1500"
   fill_in "Bedrooms", :with => "1"
   fill_in "Bathrooms", :with => "1"

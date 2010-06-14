@@ -10,7 +10,7 @@ class Apartment < ActiveRecord::Base
   has_many :favorites, :dependent => :destroy
   has_many :features, :through => :apartment_features
 
-  has_friendly_id :full_address, :use_slug => true
+  has_friendly_id :name, :use_slug => true
 
   validates_presence_of :address, :user
   validates_numericality_of :rent, :allow_nil => true, :greater_than => 0, :only_integer => true
@@ -24,6 +24,8 @@ class Apartment < ActiveRecord::Base
   delegate :full_address, :neighborhood, :to => :address
 
   default_scope :order => "apartments.created_at"
+
+  before_save :upcase_unit
 
   state_machine :state, :initial => :unpublished do
     after_transition :on => :publish do |apt|
@@ -44,6 +46,10 @@ class Apartment < ActiveRecord::Base
     end
   end
 
+  def name
+    [:full_address, :unit].compact.join(" #")
+  end
+
   def publishable?
     [:address,
      :contact,
@@ -52,5 +58,10 @@ class Apartment < ActiveRecord::Base
      :bedrooms,
      :bathrooms,
      :square_footage].all? { |attr| self.send(attr).present? }
+  end
+
+  private
+  def upcase_unit
+    unit.try(:upcase!)
   end
 end
