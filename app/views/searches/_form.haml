@@ -1,0 +1,26 @@
+-form_for :search, search, :url => search_path do |f|
+  =f.label :min_bedrooms
+  =f.select :min_bedrooms, Search::BEDROOMS
+
+  =f.label :max_bedrooms
+  =f.select :max_bedrooms, Search::BEDROOMS
+
+  =f.label :min_bathrooms
+  =f.select :min_bathrooms, Search::BATHROOMS
+
+  =f.label :max_bathrooms
+  =f.select :max_bathrooms, Search::BATHROOMS
+
+  =f.label :min_rent
+  =f.text_field :min_rent
+
+  =f.label :max_rent
+  =f.text_field :max_rent
+
+  =f.label :min_square_footage
+  =f.text_field :min_square_footage
+
+  =f.label :max_square_footage
+  =f.text_field :max_square_footage
+
+  =f.submit :search

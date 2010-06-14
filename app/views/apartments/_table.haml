@@ -1,5 +1,7 @@
 %div{:'data-content-key' => "#{type}_table"}
   -if apartments.present?
+    %h3== #{apartments.count} apartments found
+
     %table
       %thead
         %tr
@@ -36,5 +38,7 @@
         You don't have any favorites.  Are you too picky?
       -elsif type == "neighborhood"
         Cozily doesn't know of any apartments in this neighborhood.
+      -elsif type == "search"
+        Cozily can't find anything like that.  You should consider settling.
       -elsif type == "owner"
         You don't have any apartments.  Maybe you should create one?

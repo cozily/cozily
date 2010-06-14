@@ -4,6 +4,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :apartments,
                 :member => { :transition => :put }
   map.resources :neighborhoods
+  map.resource  :search
   map.resources :users do |user|
     user.resources :apartments, :only => :index
     user.resources :favorites
