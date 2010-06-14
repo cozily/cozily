@@ -30,6 +30,13 @@
     %dt Start date
     %dd=@apartment.start_date
 
+    -if @apartment.contact
+      %dt Contact
+      %dd
+        =@apartment.contact.name
+        =@apartment.contact.email
+        =@apartment.contact.phone
+
   %ul
     -@apartment.features.each do |feature|
       %li=feature.name

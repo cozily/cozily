@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe Apartment do
   it { should belong_to(:address) }
+  it { should belong_to(:contact) }
   it { should belong_to(:user) }
 
   it { should have_many(:apartment_features, :dependent => :destroy) }
@@ -25,6 +26,7 @@ describe Apartment do
       @apartment = Factory(:apartment,
                            :address => Factory.build(:address),
                            :user => Factory.build(:user),
+                           :contact => Factory.build(:contact),
                            :rent => 1500,
                            :bedrooms => 1,
                            :bathrooms => 1,
@@ -35,7 +37,7 @@ describe Apartment do
       @apartment.should be_publishable
     end
 
-    [:address, :user, :rent, :bedrooms, :bathrooms, :square_footage].each do |attr|
+    [:address, :contact, :user, :rent, :bedrooms, :bathrooms, :square_footage].each do |attr|
       it "returns false when #{attr} is missing" do
         @apartment.send("#{attr}=", nil)
         @apartment.should_not be_publishable

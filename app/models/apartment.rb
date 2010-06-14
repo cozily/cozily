@@ -3,6 +3,7 @@ default_url_options[:host] = "cozi.ly"
 
 class Apartment < ActiveRecord::Base
   belongs_to :address
+  belongs_to :contact
   belongs_to :user
 
   has_many :apartment_features, :dependent => :destroy
@@ -18,6 +19,7 @@ class Apartment < ActiveRecord::Base
   validates_numericality_of :bathrooms, :allow_nil => true
 
   accepts_nested_attributes_for :address
+  accepts_nested_attributes_for :contact, :reject_if => Proc.new { |attributes| attributes["name"].blank? }
 
   delegate :full_address, :neighborhood, :to => :address
 
@@ -44,6 +46,7 @@ class Apartment < ActiveRecord::Base
 
   def publishable?
     [:address,
+     :contact,
      :user,
      :rent,
      :bedrooms,

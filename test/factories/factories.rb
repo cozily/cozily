@@ -4,6 +4,7 @@ end
 
 Factory.define :apartment do |a|
   a.association     :address
+  a.association     :contact
   a.association     :user
   a.rent            1500
   a.bedrooms        1
@@ -14,6 +15,12 @@ end
 Factory.define :apartment_feature do |a|
   a.association  :apartment
   a.association  :feature
+end
+
+Factory.define :contact do |c|
+  c.association  :user
+  c.name         Faker::Name.name
+  c.email        Faker::Internet.email
 end
 
 Factory.define :favorite do |f|
