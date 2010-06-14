@@ -47,7 +47,7 @@ class Apartment < ActiveRecord::Base
   end
 
   def name
-    [:full_address, :unit].compact.join(" #")
+    [full_address, unit].compact.join(" #")
   end
 
   def publishable?

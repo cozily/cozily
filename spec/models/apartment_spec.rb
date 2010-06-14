@@ -27,6 +27,13 @@ describe Apartment do
     @apartment.reload.unit.should == "1C"
   end
 
+  describe "#name" do
+    it "should join address and unit" do
+      @apartment = Factory(:apartment)
+      @apartment.name.should == [@apartment.full_address, @apartment.unit].compact.join(" #")
+    end
+  end
+
   describe "#publishable?" do
     before do
       @apartment = Factory(:apartment,
