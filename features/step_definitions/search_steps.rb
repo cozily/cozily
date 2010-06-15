@@ -5,7 +5,7 @@ Given(/^there are searchable apartments$/) do
   Factory.create(:apartment, :bedrooms => 1, :bathrooms => 1, :rent => 1800, :state => 'unpublished')
   Factory.create(:apartment, :bedrooms => 2, :bathrooms => 1, :rent => 2300, :state => 'published')
 
-  visit new_search_path
+  visit search_path
 end
 
 Given(/^searching for apartments yields the correct results$/) do

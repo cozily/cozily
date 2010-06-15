@@ -1,3 +1,4 @@
-=render "searches/form", :search => @search
+= render "searches/form", :search => @search
 
-=render "apartments/table", :apartments => @search.results, :type => "search"
+- if params[:q]
+  = render "apartments/table", :apartments => @search.results, :type => "search"

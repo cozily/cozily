@@ -1,4 +1,4 @@
--form_for :search, search, :url => search_path, :html => {:method => :get} do |f|
+-form_for :q, search, :url => search_path, :html => {:method => :get} do |f|
   =f.label :min_bedrooms
   =f.select :min_bedrooms, Search::BEDROOMS
 

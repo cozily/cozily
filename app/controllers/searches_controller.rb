@@ -1,9 +1,5 @@
 class SearchesController < ApplicationController
-  def new
-    @search = Search.new
-  end
-
   def show
-    @search = Search.new(params[:search])
+    @search = params[:q].present? ? Search.new(params[:q]) : Search.new
   end
 end

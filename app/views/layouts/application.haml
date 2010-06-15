@@ -23,7 +23,7 @@
         =render "sessions/nav_actions"
         %ul
           %li=link_to_unless_current "neighborhoods", neighborhoods_path
-          %li=link_to_unless_current "search", new_search_path
+          %li=link_to_unless_current "search", search_path
           -if can? :create, Apartment
             %li=link_to_unless_current "new apartment", new_apartment_path
           -if current_user
