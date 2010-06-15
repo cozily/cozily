@@ -3,7 +3,7 @@ class SearchesController < ApplicationController
     @search = Search.new
   end
 
-  def create
+  def show
     @search = Search.new(params[:search])
   end
 end
