@@ -103,8 +103,7 @@ Given /^I have an? ?(published|unpublished)? apartment$/ do |state|
   Factory(:apartment,
           :user => the.user,
           :state => state || "unpublished")
-
-  the.user.apartments.should be_present
+  the.user.apartments(true).should be_present
 end
 
 Then /^I cannot edit another user's apartment$/ do

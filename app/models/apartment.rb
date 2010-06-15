@@ -17,6 +17,7 @@ class Apartment < ActiveRecord::Base
   validates_numericality_of :square_footage, :allow_nil => true, :greater_than => 0, :only_integer => true
   validates_numericality_of :bedrooms, :allow_nil => true
   validates_numericality_of :bathrooms, :allow_nil => true
+  validate :ensure_uniqueness_of_name_for_user
 
   accepts_nested_attributes_for :address
   accepts_nested_attributes_for :contact, :reject_if => Proc.new { |attributes| attributes["name"].blank? }
@@ -64,5 +65,13 @@ class Apartment < ActiveRecord::Base
   def format_unit
     return unless self.unit
     self.unit = self.unit.delete("#").upcase
+  end
+
+  def ensure_uniqueness_of_name_for_user
+    return unless user
+    address.valid?
+    if (user.apartments(true) - [self]).any? { |a| a.name == self.name }
+      errors.add_to_base("You already have an apartment for this address and unit.")
+    end
   end
 end

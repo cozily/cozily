@@ -6,6 +6,7 @@ Factory.define :apartment do |a|
   a.association     :address
   a.association     :contact
   a.association     :user
+  a.unit            { (rand(100) + 1).to_s }
   a.rent            1500
   a.bedrooms        1
   a.bathrooms       1
