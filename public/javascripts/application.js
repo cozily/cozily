@@ -26,7 +26,16 @@ function attachClickToMarker(marker, index) {
 			minLength: 3,
             delay: 400,
 			select: function(event, ui) {
-			}
+			    $.ajax({
+                    type      : 'get',
+                    url       : '/neighborhoods/search',
+                    data      : { "lat" : ui.item.lat, "lng" : ui.item.lng },
+                    dataType  : 'json',
+                    success   : function success(response) {
+                        $(document).trigger('content-received', response);
+                    }
+                });
+            }
 		});
 
         if (document.getElementById('map_canvas') != null) {

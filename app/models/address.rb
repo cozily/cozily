@@ -31,17 +31,6 @@ class Address < ActiveRecord::Base
   end
 
   def neighborhood_search
-    response = JSON.parse(Yelp.new.neighborhood_for_lat_and_lng(lat, lng))
-    if response.has_key?("neighborhoods") && response["neighborhoods"].present?
-      response = response["neighborhoods"][0]
-      neighborhood = Neighborhood.find_or_initialize_by_name_and_city(response["name"], response["city"])
-      neighborhood.borough = response["borough"]
-      neighborhood.state = response["state"]
-      neighborhood.country = response["country"]
-      neighborhood.save if neighborhood.changed?
-    else
-      neighborhood = nil
-    end
-    self.neighborhood = neighborhood
+    self.neighborhood = Neighborhood.for_lat_and_lng(lat, lng)
   end
 end

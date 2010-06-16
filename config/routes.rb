@@ -5,7 +5,8 @@ ActionController::Routing::Routes.draw do |map|
                 :collection => { :geocode => :get }
   map.resources :apartments,
                 :member => { :transition => :put }
-  map.resources :neighborhoods
+  map.resources :neighborhoods,
+                :collection => { :search => :get }
   map.resource  :search
   map.resources :users do |user|
     user.resources :apartments, :only => :index
