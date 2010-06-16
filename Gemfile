@@ -22,6 +22,7 @@ group :test do
   gem "database_cleaner", "0.5.2"
   gem "factory_girl", "1.2.4"
   gem "faker", "0.3.1"
+  gem "fakeweb", "1.2.8"
   gem "launchy", "0.3.5"
   gem "pickle", "0.2.11"
   gem "remarkable", "3.1.13"
