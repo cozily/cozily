@@ -13,3 +13,15 @@ Given /^I am not a logged in user$/ do
 
   current_path.should == sign_in_path
 end
+
+Then /^I can edit my profile$/ do
+  visit root_path
+
+  click_link "Edit profile"
+  current_path.should == edit_user_path(the.user)
+
+  fill_in "Email", :with => "new@email.com"
+  click_button "Update Profile"
+
+  the.user.reload.email.should == "new@email.com"
+end

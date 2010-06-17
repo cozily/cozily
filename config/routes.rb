@@ -1,5 +1,4 @@
 ActionController::Routing::Routes.draw do |map|
-  Clearance::Routes.draw(map)
 
   map.resources :addresses,
                 :collection => { :geocode => :get }
@@ -10,11 +9,13 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :neighborhoods,
                 :collection => { :search => :get }
   map.resource  :search
-  map.resources :users do |user|
+  map.resources :users, :controller => 'users', :only => [:edit, :update] do |user|
     user.resources :apartments, :only => :index
     user.resources :favorites
     user.resources :flags
   end
+
+  Clearance::Routes.draw(map)
 
   map.root :controller => "welcome"
 end
