@@ -9,6 +9,7 @@ class Apartment < ActiveRecord::Base
   has_many :apartment_features, :dependent => :destroy
   has_many :favorites, :dependent => :destroy
   has_many :features, :through => :apartment_features
+  has_many :images, :dependent => :destroy
 
   has_friendly_id :name, :use_slug => true
 
@@ -27,6 +28,9 @@ class Apartment < ActiveRecord::Base
   default_scope :order => "apartments.created_at"
 
   before_save :format_unit
+  after_save :link_images
+
+  attr_accessor :image_ids
 
   state_machine :state, :initial => :unpublished do
     after_transition :on => :publish do |apt|
@@ -72,6 +76,12 @@ class Apartment < ActiveRecord::Base
     address.valid?
     if (user.apartments(true) - [self]).any? { |a| a.name == self.name }
       errors.add_to_base("You already have an apartment for this address and unit.")
+    end
+  end
+
+  def link_images
+    image_ids.try(:each) do |id|
+      Image.update_all( {:apartment_id => self.id}, {:id => id} )
     end
   end
 end

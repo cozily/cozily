@@ -41,6 +41,10 @@
     -@apartment.features.each do |feature|
       %li=feature.name
 
+  %ul
+    -@apartment.images.each do |image|
+      %li=image_tag image.asset.url(:medium)
+
   #map_canvas
 
 -else

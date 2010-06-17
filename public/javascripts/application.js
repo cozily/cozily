@@ -22,11 +22,11 @@ function attachClickToMarker(marker, index) {
         $("#apartment_start_date").datepicker();
 
         $("input#apartment_address_attributes_full_address").autocomplete({
-			source: "/addresses/geocode",
-			minLength: 3,
+            source: "/addresses/geocode",
+            minLength: 3,
             delay: 400,
-			select: function(event, ui) {
-			    $.ajax({
+            select: function(event, ui) {
+                $.ajax({
                     type      : 'get',
                     url       : '/neighborhoods/search',
                     data      : { "lat" : ui.item.lat, "lng" : ui.item.lng },
@@ -36,7 +36,36 @@ function attachClickToMarker(marker, index) {
                     }
                 });
             }
-		});
+        });
+
+        new AjaxUpload('#image_upload', {
+            action: '/images',
+            onSubmit : function(file, ext) {
+                //if (ext && new RegExp('^(' + allowed.join('|') + ')$').test(ext)){
+                if (ext && /^(jpg|png|jpeg|gif)$/.test(ext)) {
+                    /* Setting data */
+                    this.setData({
+                        'authenticity_token': window._token
+                    });
+
+                    $('#upload_text').text('Uploading ' + file);
+                } else {
+
+                    // extension is not allowed
+                    $('#upload_text').text('Error: only images are allowed');
+                    // cancel upload
+                    return false;
+                }
+
+            },
+            onComplete : function(file, extension) {
+                $('#upload_text').text('Uploaded ' + file);
+                extension = extension.split(",");
+                console.debug(extension);
+                $("form.apartment").append("<input type='hidden' value='" + extension[0] + "' name='apartment[image_ids][]' />");
+                $("form.apartment").prepend("<image src='" + extension[1] + "'/>");
+            }
+        });
 
         if (document.getElementById('map_canvas') != null) {
             var bounds = new google.maps.LatLngBounds();

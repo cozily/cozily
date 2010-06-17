@@ -1,0 +1,14 @@
+development:
+  bucket: cozily-development
+  access_key_id: 0N21HJT8JX06YC6KFA82
+  secret_access_key: dj61ZTkCpdnB7g4Q7jIzZSem2ni2qzow2hPVBOSx
+
+test:
+  bucket: cozily-test
+  access_key_id: 0N21HJT8JX06YC6KFA82
+  secret_access_key: dj61ZTkCpdnB7g4Q7jIzZSem2ni2qzow2hPVBOSx
+
+production:
+  bucket: cozily
+  access_key_id: 0N21HJT8JX06YC6KFA82
+  secret_access_key: dj61ZTkCpdnB7g4Q7jIzZSem2ni2qzow2hPVBOSx

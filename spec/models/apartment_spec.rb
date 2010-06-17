@@ -8,6 +8,7 @@ describe Apartment do
   it { should have_many(:apartment_features, :dependent => :destroy) }
   it { should have_many(:favorites, :dependent => :destroy) }
   it { should have_many(:features, :through => :apartment_features) }
+  it { should have_many(:images, :dependent => :destroy) }
 
   [:address, :user].each do |attr|
     it { should validate_presence_of(attr) }

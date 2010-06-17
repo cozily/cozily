@@ -1,5 +1,6 @@
 source :gemcutter
 
+gem "aws-s3", "0.6.2"
 gem "bundler", "0.9.26"
 gem "cancan", "1.1.1"
 gem "clearance", "0.8.8"
@@ -9,7 +10,7 @@ gem "friendly_id", "3.0.4"
 gem "geokit", "1.5.0"
 gem "haml", "3.0.6"
 gem "httparty", "0.5.2"
-gem "paperclip", "2.3.1.1"
+gem "paperclip", "2.3.3"
 gem "pg", "0.9.0"
 gem "rails", "2.3.8"
 gem "state_machine", "0.9.2"
