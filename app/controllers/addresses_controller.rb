@@ -1,6 +1,7 @@
 class AddressesController < ApplicationController
   def geocode
-    response = GoogleGeocoder.geocode(params[:term])
+    nyc_bounds = GoogleGeocoder.geocode('New York City').suggested_bounds
+    response = GoogleGeocoder.geocode(params[:term], :bias => nyc_bounds)
     results = []
     response.all.each do |result|
       results << { :label => result.full_address,
