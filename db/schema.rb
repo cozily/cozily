@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100617031312) do
+ActiveRecord::Schema.define(:version => 20100617183621) do
 
   create_table "addresses", :force => true do |t|
     t.string   "street"
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(:version => 20100617031312) do
     t.date     "start_date"
     t.integer  "contact_id"
     t.string   "unit"
+    t.integer  "images_count",   :default => 0
   end
 
   create_table "contacts", :force => true do |t|

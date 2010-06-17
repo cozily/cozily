@@ -11,16 +11,16 @@ class Apartment < ActiveRecord::Base
   has_many :features, :through => :apartment_features
   has_many :images, :dependent => :destroy
 
-  has_friendly_id :name, :use_slug => true
+  has_friendly_id :name, :use_slug => true, :allow_nil => true
 
-  validates_presence_of :address, :user
+  validates_presence_of :user
   validates_numericality_of :rent, :allow_nil => true, :greater_than => 0, :only_integer => true
   validates_numericality_of :square_footage, :allow_nil => true, :greater_than => 0, :only_integer => true
   validates_numericality_of :bedrooms, :allow_nil => true
   validates_numericality_of :bathrooms, :allow_nil => true
-  validate :ensure_uniqueness_of_name_for_user
+  #validate :ensure_uniqueness_of_name_for_user
 
-  accepts_nested_attributes_for :address
+  accepts_nested_attributes_for :address, :reject_if => Proc.new { |attributes| attributes["full_address"].blank? }
   accepts_nested_attributes_for :contact, :reject_if => Proc.new { |attributes| attributes["name"].blank? }
 
   delegate :full_address, :neighborhood, :to => :address
@@ -28,9 +28,6 @@ class Apartment < ActiveRecord::Base
   default_scope :order => "apartments.created_at"
 
   before_save :format_unit
-  after_save :link_images
-
-  attr_accessor :image_ids
 
   state_machine :state, :initial => :unpublished do
     after_transition :on => :publish do |apt|
@@ -52,7 +49,7 @@ class Apartment < ActiveRecord::Base
   end
 
   def name
-    [full_address, unit].reject { |str| str.blank? }.join(" #")
+    [full_address, unit].reject { |str| str.blank? }.join(" #") if address
   end
 
   def publishable?
@@ -76,12 +73,6 @@ class Apartment < ActiveRecord::Base
     address.valid?
     if (user.apartments(true) - [self]).any? { |a| a.name == self.name }
       errors.add_to_base("You already have an apartment for this address and unit.")
-    end
-  end
-
-  def link_images
-    image_ids.try(:each) do |id|
-      Image.update_all( {:apartment_id => self.id}, {:id => id} )
     end
   end
 end

@@ -15,7 +15,7 @@
     %dd=@apartment.name
     %dt Neighborhood
     %dd
-      -if @apartment.neighborhood.present?
+      -if @apartment.address && @apartment.neighborhood
         =link_to @apartment.neighborhood.name, @apartment.neighborhood
       -else
         Unknown

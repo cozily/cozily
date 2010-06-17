@@ -6,11 +6,6 @@ class ApartmentsController < ApplicationController
     @apartments = current_user.apartments
   end
 
-  def new
-    @apartment = Apartment.new
-    @apartment.build_address
-  end
-
   def show
     @apartment = Apartment.find(params[:id])
   end
@@ -20,12 +15,8 @@ class ApartmentsController < ApplicationController
   end
 
   def create
-    @apartment = current_user.apartments.new(params[:apartment])
-    if @apartment.save
-      redirect_to @apartment
-    else
-      render :new
-    end
+    @apartment = current_user.apartments.create
+    redirect_to edit_apartment_path(@apartment)
   end
 
   def update

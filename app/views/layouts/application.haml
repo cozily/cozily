@@ -26,7 +26,7 @@
           %li=link_to_unless_current "neighborhoods", neighborhoods_path
           %li=link_to_unless_current "search", search_path
           -if can? :create, Apartment
-            %li=link_to_unless_current "new apartment", new_apartment_path
+            %li=link_to_unless_current "new apartment", apartments_path, :method => :post
           -if current_user
             %li=link_to_unless_current "my favorites", user_favorites_path(current_user)
           -if current_user && current_user.apartments.present?

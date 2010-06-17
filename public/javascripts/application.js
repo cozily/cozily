@@ -38,34 +38,29 @@ function attachClickToMarker(marker, index) {
             }
         });
 
-        new AjaxUpload('#image_upload', {
-            action: '/images',
-            onSubmit : function(file, ext) {
-                //if (ext && new RegExp('^(' + allowed.join('|') + ')$').test(ext)){
-                if (ext && /^(jpg|png|jpeg|gif)$/.test(ext)) {
-                    /* Setting data */
-                    this.setData({
-                        'authenticity_token': window._token
-                    });
+        if ("a[data-upload-path]".length > 0) {
+            new AjaxUpload('#upload', {
+                action: $("a[data-upload-path]").attr('data-upload-path'),
+                onSubmit : function(file, ext) {
+                    if (ext && /^(jpg|png|jpeg|gif)$/.test(ext)) {
+                        this.setData({
+                            'authenticity_token': window._token
+                        });
 
-                    $('#upload_text').text('Uploading ' + file);
-                } else {
+                        $('#upload_status').text('Uploading ' + file);
+                    } else {
+                        $('#upload_status').text('Error: only images are allowed');
+                        return false;
+                    }
 
-                    // extension is not allowed
-                    $('#upload_text').text('Error: only images are allowed');
-                    // cancel upload
-                    return false;
+                },
+                onComplete : function(file, extension) {
+                    $("div#upload_status").text('');
+                    extension = extension.split(",");
+                    $("div#images").append("<image src='" + extension[1] + "'/>");
                 }
-
-            },
-            onComplete : function(file, extension) {
-                $('#upload_text').text('Uploaded ' + file);
-                extension = extension.split(",");
-                console.debug(extension);
-                $("form.apartment").append("<input type='hidden' value='" + extension[0] + "' name='apartment[image_ids][]' />");
-                $("form.apartment").prepend("<image src='" + extension[1] + "'/>");
-            }
-        });
+            });
+        }
 
         if (document.getElementById('map_canvas') != null) {
             var bounds = new google.maps.LatLngBounds();

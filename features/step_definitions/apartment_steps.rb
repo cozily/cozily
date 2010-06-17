@@ -1,15 +1,17 @@
 Then /^I can create an apartment$/ do
   Given %Q{all the features are present}
 
-  click_link "new apartment"
-  current_path.should == new_apartment_path
+  lambda {
+    click_link "new apartment"
+  }.should change(Apartment, :count).by(1)
+  apartment = Apartment.last
+
+  current_path.should == edit_apartment_path(apartment)
 
   When %Q{I fill in an apartment's fields}
-  lambda {
-    click_button "Create Apartment"
-  }.should change(Apartment, :count).by(1)
+  click_button "Update Apartment"
 
-  apartment = Apartment.last
+  apartment.reload
   current_path.should == apartment_path(apartment)
   page.should have_content "Carroll Gardens"
   page.should have_content "backyard"

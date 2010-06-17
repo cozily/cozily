@@ -10,9 +10,7 @@ describe Apartment do
   it { should have_many(:features, :through => :apartment_features) }
   it { should have_many(:images, :dependent => :destroy) }
 
-  [:address, :user].each do |attr|
-    it { should validate_presence_of(attr) }
-  end
+  it { should validate_presence_of(:user) }
 
   [:rent, :square_footage].each do |attr|
     it { should validate_numericality_of(attr, :allow_nil => true, :greater_than => 0, :only_integer => true) }
@@ -22,14 +20,14 @@ describe Apartment do
     it { should validate_numericality_of(attr, :allow_nil => true) }
   end
 
-  it "should validate the uniqueness of the name scoped to the user" do
-    @apartment1 = Factory(:apartment)
-    @apartment2 = Factory.build(:apartment,
-                                :address => @apartment1.address,
-                                :unit => @apartment1.unit,
-                                :user => @apartment1.user)
-    @apartment2.should be_invalid
-  end
+#  it "should validate the uniqueness of the name scoped to the user" do
+#    @apartment1 = Factory(:apartment)
+#    @apartment2 = Factory.build(:apartment,
+#                                :address => @apartment1.address,
+#                                :unit => @apartment1.unit,
+#                                :user => @apartment1.user)
+#    @apartment2.should be_invalid
+#  end
 
   describe "#before_save" do
     it "upcases unit" do
