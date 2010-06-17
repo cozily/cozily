@@ -64,3 +64,13 @@ end
 
 World(DefiniteArticleHelper)
 World(PathHelper)
+
+require 'fakeweb'
+FakeWeb.allow_net_connect = true
+
+["http://maps.google.com/maps/geo?q=546+Henry+St+11231&output=xml&key=ABQIAAAA9wWHEGNCfZW2F9-qCEHgohSNtFT0HrWdEyzoj3osWY55tZjYABRmZkmve1rwY6-nWvpT-N3MZcV_rg&oe=utf-8",
+ "http://maps.google.com/maps/geo?q=546+Henry+St%2C+Brooklyn%2C+NY+11231%2C+USA&output=xml&key=ABQIAAAA9wWHEGNCfZW2F9-qCEHgohSNtFT0HrWdEyzoj3osWY55tZjYABRmZkmve1rwY6-nWvpT-N3MZcV_rg&oe=utf-8",
+ "http://api.yelp.com/neighborhood_search?long=&lat=&ywsid=7a05VXb3EXz850ByvWF90w",
+ "http://api.yelp.com/neighborhood_search?long=-74.0003197&lat=40.6824793&ywsid=7a05VXb3EXz850ByvWF90w"].each do |uri|
+  FakeWeb.register_uri(:get, uri, :response => `curl -is "#{uri}"`)
+end
