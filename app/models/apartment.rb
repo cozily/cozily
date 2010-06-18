@@ -31,11 +31,13 @@ class Apartment < ActiveRecord::Base
 
   state_machine :state, :initial => :unpublished do
     after_transition :on => :publish do |apt|
-      if RAILS_ENV == "production"
-        oauth = Twitter::OAuth.new('voDmOvIReD71vENQJRR1g', 'SnK9IbDfrXxz862ImcIOmjqvfrleWRrWN1Km0vrGyds')
-        oauth.authorize_from_access('154155384-9Vaj2QiXa998sIVn8XicaSVrQOM1rzvkRfAcYjHf', 'yicMo06MlgUMHSGgC5Q6lk0EicPqUZiNRrt4')
-        client = Twitter::Base.new(oauth)
-        client.update("#{apt.bedrooms} bedroom apt in #{apt.neighborhood.name} for $#{apt.rent} #{apartment_url(apt)}")
+      component(:tweet_apartments) do
+        if RAILS_ENV == "production"
+          oauth = Twitter::OAuth.new('voDmOvIReD71vENQJRR1g', 'SnK9IbDfrXxz862ImcIOmjqvfrleWRrWN1Km0vrGyds')
+          oauth.authorize_from_access('154155384-9Vaj2QiXa998sIVn8XicaSVrQOM1rzvkRfAcYjHf', 'yicMo06MlgUMHSGgC5Q6lk0EicPqUZiNRrt4')
+          client = Twitter::Base.new(oauth)
+          client.update("#{apt.bedrooms} bedroom apt in #{apt.neighborhood.name} for $#{apt.rent} #{apartment_url(apt)}")
+        end
       end
     end
 
