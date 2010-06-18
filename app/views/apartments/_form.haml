@@ -10,7 +10,7 @@
 
     #images
       -apartment.images.each do |image|
-        =image_tag(image.asset.url(:thumb))
+        =render "images/thumbnail", :image => image
 
     -f.object.build_address unless f.object.address.present?
     -f.semantic_fields_for :address do |address_fields|

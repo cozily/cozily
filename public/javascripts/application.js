@@ -38,8 +38,8 @@ function attachClickToMarker(marker, index) {
             }
         });
 
-        if ("a[data-upload-path]".length > 0) {
-            new AjaxUpload('#upload', {
+        if ($("a[data-upload-path]").length > 0) {
+            new AjaxUpload('upload', {
                 action: $("a[data-upload-path]").attr('data-upload-path'),
                 onSubmit : function(file, ext) {
                     if (ext && /^(jpg|png|jpeg|gif)$/.test(ext)) {
@@ -56,8 +56,7 @@ function attachClickToMarker(marker, index) {
                 },
                 onComplete : function(file, extension) {
                     $("div#upload_status").text('');
-                    extension = extension.split(",");
-                    $("div#images").append("<image src='" + extension[1] + "'/>");
+                    $("div#images").append(extension);
                 }
             });
         }
@@ -99,6 +98,12 @@ function attachClickToMarker(marker, index) {
                     $(document).trigger('content-received', response);
                 }
             });
+
+            if(type == "delete") {
+                var container = link.closest("div.removeable");
+                container.hide('explode');
+            }
+
             return false;
         });
 

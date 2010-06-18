@@ -102,9 +102,9 @@ Given /^all the features are present$/ do
 end
 
 Given /^I have an? ?(published|unpublished)? apartment$/ do |state|
-  Factory(:apartment,
-          :user => the.user,
-          :state => state || "unpublished")
+  the.apartment = Factory(:apartment,
+                          :user => the.user,
+                          :state => state || "unpublished")
   the.user.apartments(true).should be_present
 end
 

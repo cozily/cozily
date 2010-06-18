@@ -37,3 +37,7 @@ Factory.define :flag do |f|
   f.association  :user
   f.association  :apartment
 end
+
+Factory.define :image do |f|
+  f.association  :apartment
+end
