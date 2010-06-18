@@ -13,11 +13,6 @@ class Apartment < ActiveRecord::Base
 
   has_friendly_id :name, :use_slug => true, :allow_nil => true
 
-  validates_presence_of :user
-  validates_numericality_of :rent, :allow_nil => true, :greater_than => 0, :only_integer => true
-  validates_numericality_of :square_footage, :allow_nil => true, :greater_than => 0, :only_integer => true
-  validates_numericality_of :bedrooms, :allow_nil => true
-  validates_numericality_of :bathrooms, :allow_nil => true
   validate :ensure_uniqueness_of_name_for_user
 
   accepts_nested_attributes_for :address, :reject_if => Proc.new { |attributes| attributes["full_address"].blank? }
@@ -39,6 +34,22 @@ class Apartment < ActiveRecord::Base
           client.update("#{apt.bedrooms} bedroom apt in #{apt.neighborhood.name} for $#{apt.rent} #{apartment_url(apt)}")
         end
       end
+    end
+
+    state :published do
+      validates_presence_of :address, :contact, :user, :start_date
+      validates_numericality_of :rent, :greater_than => 0, :only_integer => true
+      validates_numericality_of :square_footage, :greater_than => 0, :only_integer => true
+      validates_numericality_of :bedrooms
+      validates_numericality_of :bathrooms
+    end
+
+    state :unpublished do
+      validates_presence_of :user
+      validates_numericality_of :rent, :allow_nil => true, :greater_than => 0, :only_integer => true
+      validates_numericality_of :square_footage, :allow_nil => true, :greater_than => 0, :only_integer => true
+      validates_numericality_of :bedrooms, :allow_nil => true
+      validates_numericality_of :bathrooms, :allow_nil => true
     end
 
     event :publish do
