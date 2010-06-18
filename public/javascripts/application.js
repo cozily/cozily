@@ -13,9 +13,8 @@ function updateContent(content) {
     $(document).trigger('content-updated');
 }
 
-function attachClickToMarker(marker, index) {
+function attachClickToMarker(marker, apt) {
     google.maps.event.addListener(marker, 'click', function() {
-        var apt = apartments[index].apartment;
         var contentString = "<div class='apartment_info'>" +
                             "<h3><a href='" + apt.to_param + "'>" + apt.address.full_address + "</a></h3>" +
                             "<dl>" +
@@ -87,15 +86,17 @@ function attachClickToMarker(marker, index) {
         }
 
         if (document.getElementById('map_canvas') != null) {
-            var point = new google.maps.LatLng(address.address.lat, address.address.lng);
+            var point = new google.maps.LatLng(self.apartment.address.lat, self.apartment.address.lng);
             map = new google.maps.Map(document.getElementById("map_canvas"), {
                 zoom: 16,
                 center: point,
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             });
 
-            var marker = new google.maps.Marker({position: point, title: address.address.full_address});
+            var marker = new google.maps.Marker({position: point, title: self.apartment.address.full_address});
             marker.setMap(map);
+
+            attachClickToMarker(marker, self.apartment);
 
             for (var i = 0; i < apartments.length; i++) {
                 var apartment = apartments[i].apartment;
@@ -103,7 +104,7 @@ function attachClickToMarker(marker, index) {
                 point = new google.maps.LatLng(apartment.address.lat, apartment.address.lng);
                 marker = new google.maps.Marker({position: point, param: apartment.to_param});
 
-                attachClickToMarker(marker, i);
+                attachClickToMarker(marker, apartment);
 
                 marker.setMap(map);
             }
