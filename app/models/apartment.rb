@@ -2,6 +2,8 @@ include ActionController::UrlWriter
 default_url_options[:host] = "cozi.ly"
 
 class Apartment < ActiveRecord::Base
+  REQUIRED_FIELDS = [:address, :contact, :user, :rent, :bedrooms, :bathrooms, :square_footage, :start_date]
+
   belongs_to :address
   belongs_to :contact
   belongs_to :user
@@ -66,13 +68,13 @@ class Apartment < ActiveRecord::Base
   end
 
   def publishable?
-    [:address,
-     :contact,
-     :user,
-     :rent,
-     :bedrooms,
-     :bathrooms,
-     :square_footage].all? { |attr| self.send(attr).present? }
+    REQUIRED_FIELDS.all? { |attr| self.send(attr).present? }
+  end
+
+  def fields_remaining_for_publishing
+    [].tap do |fields|
+      REQUIRED_FIELDS.each { |attr| fields << attr.to_s.humanize.downcase unless self.send(attr).present? }
+    end
   end
 
   private

@@ -1,3 +1,7 @@
+=render "apartments/state_machine", :apartment => @apartment
+-if @apartment.fields_remaining_for_publishing.present?
+  ==You need to provide #{@apartment.fields_remaining_for_publishing.to_sentence} before you can publish this apartment.
+
 =render "apartments/form", :apartment => @apartment
 
 -if can? :destroy, @apartment

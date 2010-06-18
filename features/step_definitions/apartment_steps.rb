@@ -12,7 +12,7 @@ Then /^I can create an apartment$/ do
   click_button "Update Apartment"
 
   apartment.reload
-  current_path.should == apartment_path(apartment)
+  current_path.should == edit_apartment_path(apartment)
   page.should have_content "Carroll Gardens"
   page.should have_content "backyard"
   page.should have_content "balcony"
@@ -52,7 +52,7 @@ Then /^I can edit the apartment$/ do
   When %Q{I fill in an apartment's fields}
   click_button "Update Apartment"
 
-  current_path.should == apartment_path(Apartment.last)
+  current_path.should == edit_apartment_path(Apartment.last)
 end
 
 When /^I fill in an apartment's fields$/ do
@@ -80,7 +80,7 @@ end
 Then /^I can (publish|unpublish) the apartment$/ do |action|
   apartment = Apartment.last
 
-  visit apartment_path(apartment)
+  visit edit_apartment_path(apartment)
   click_button action
 
   apartment.reload.send("#{action}ed?").should be_true

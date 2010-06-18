@@ -11,6 +11,7 @@ Factory.define :apartment do |a|
   a.bedrooms        1
   a.bathrooms       1
   a.square_footage  500
+  a.start_date      1.month.from_now
 end
 
 Factory.define :apartment_feature do |a|
