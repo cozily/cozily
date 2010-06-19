@@ -31,7 +31,10 @@ class ApartmentsController < ApplicationController
   def destroy
     @apartment = Apartment.find(params[:id])
     @apartment.destroy
-    redirect_to params[:return_to] || root_path
+    respond_to do |format|
+      format.html { redirect_to user_apartments_path(current_user) }
+      format.js   { render :nothing => true }
+    end
   end
 
   def transition

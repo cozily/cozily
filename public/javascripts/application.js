@@ -113,18 +113,45 @@ function attachClickToMarker(marker, apt) {
         $('a[data-remote=true]').live('click', function(event) {
             var link = $(event.currentTarget);
             var type = link.attr('data-method') ? link.attr('data-method') : 'post';
-            $.ajax({
-                type      : type,
-                url       : link.attr('href'),
-                dataType  : 'json',
-                success   : function success(response) {
-                    $(document).trigger('content-received', response);
-                }
-            });
 
             if (type == "delete") {
-                var container = link.closest("div.removeable");
-                container.hide('explode');
+                $("<div>Are you sure?</div>").dialog({
+                    resizable: false,
+                    height:140,
+                    modal: true,
+                    title: "Delete this item?",
+                    buttons: {
+                        'Yes': function() {
+                            $.ajax({
+                                type      : type,
+                                url       : link.attr('href'),
+                                dataType  : 'json',
+                                success   : function success(response) {
+                                    $(document).trigger('content-received', response);
+                                }
+                            });
+                            var container = link.closest(".removeable");
+                            if (container.is('div')) {
+                                container.hide('explode');
+                            } else {
+                                container.fadeOut();
+                            }
+                            $(this).dialog('close');
+                        },
+                        Cancel: function() {
+                            $(this).dialog('close');
+                        }
+                    }
+                });
+            } else {
+                $.ajax({
+                    type      : type,
+                    url       : link.attr('href'),
+                    dataType  : 'json',
+                    success   : function success(response) {
+                        $(document).trigger('content-received', response);
+                    }
+                });
             }
 
             return false;
