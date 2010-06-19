@@ -86,17 +86,22 @@ function attachClickToMarker(marker, apt) {
         }
 
         if (document.getElementById('map_canvas') != null) {
-            var point = new google.maps.LatLng(self.apartment.address.lat, self.apartment.address.lng);
             map = new google.maps.Map(document.getElementById("map_canvas"), {
                 zoom: 16,
-                center: point,
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             });
 
-            var marker = new google.maps.Marker({position: point, title: self.apartment.address.full_address});
-            marker.setMap(map);
+            if (self.apartment != undefined) {
+                var point = new google.maps.LatLng(self.apartment.address.lat, self.apartment.address.lng);
+                map.setCenter(point);
 
-            attachClickToMarker(marker, self.apartment);
+                var marker = new google.maps.Marker({position: point, title: self.apartment.address.full_address});
+                marker.setMap(map);
+
+                attachClickToMarker(marker, self.apartment);
+            } else {
+                var bounds = new google.maps.LatLngBounds();
+            }
 
             for (var i = 0; i < apartments.length; i++) {
                 var apartment = apartments[i].apartment;
@@ -107,6 +112,11 @@ function attachClickToMarker(marker, apt) {
                 attachClickToMarker(marker, apartment);
 
                 marker.setMap(map);
+
+                if (bounds) {
+                    bounds.extend(point);
+                    map.fitBounds(bounds);
+                }
             }
         }
 

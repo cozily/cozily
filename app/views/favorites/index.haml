@@ -1,1 +1,6 @@
+:javascript
+  var apartments = #{@apartments.to_json(:methods => :to_param, :include => :address)};
+
 =render "apartments/table", :apartments => @apartments, :type => "favorites"
+
+#map_canvas
