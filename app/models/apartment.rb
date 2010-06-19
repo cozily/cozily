@@ -20,7 +20,7 @@ class Apartment < ActiveRecord::Base
   accepts_nested_attributes_for :address, :reject_if => Proc.new { |attributes| attributes["full_address"].blank? }
   accepts_nested_attributes_for :contact, :reject_if => Proc.new { |attributes| attributes["name"].blank? }
 
-  delegate :full_address, :neighborhood, :to => :address
+  delegate :full_address, :lat, :lng, :neighborhood, :to => :address
 
   default_scope :order => "apartments.created_at"
 
@@ -63,18 +63,22 @@ class Apartment < ActiveRecord::Base
     end
   end
 
-  def name
-    [full_address, unit].reject { |str| str.blank? }.join(" #") if address
-  end
-
-  def publishable?
-    REQUIRED_FIELDS.all? { |attr| self.send(attr).present? }
-  end
-
   def fields_remaining_for_publishing
     [].tap do |fields|
       REQUIRED_FIELDS.each { |attr| fields << attr.to_s.humanize.downcase unless self.send(attr).present? }
     end
+  end
+
+  def name
+    [full_address, unit].reject { |str| str.blank? }.join(" #") if address
+  end
+
+  def nearby_stations
+    Station.find(:all, :origin => [lat, lng], :within => 0.4, :order => 'distance')
+  end
+
+  def publishable?
+    REQUIRED_FIELDS.all? { |attr| self.send(attr).present? }
   end
 
   private

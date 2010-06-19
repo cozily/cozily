@@ -42,3 +42,9 @@ end
 Factory.define :image do |f|
   f.association  :apartment
 end
+
+Factory.define :station do |s|
+  s.name  "W 215 St"
+  s.lat   40.869555
+  s.lng   -73.915163
+end

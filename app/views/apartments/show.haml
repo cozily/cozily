@@ -36,6 +36,14 @@
         =@apartment.contact.email
         =@apartment.contact.phone
 
+    %dt Nearby stations
+    %dd
+      %ul
+        -@apartment.nearby_stations.each do |station|
+          %li
+            =station.name
+            =station.distance
+
   %ul
     -@apartment.features.each do |feature|
       %li=feature.name
