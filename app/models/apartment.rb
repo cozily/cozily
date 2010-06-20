@@ -74,6 +74,7 @@ class Apartment < ActiveRecord::Base
   end
 
   def nearby_stations
+    return [] unless address
     Station.find(:all, :origin => [lat, lng], :within => 0.4, :order => 'distance')
   end
 
