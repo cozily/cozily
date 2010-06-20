@@ -2,3 +2,9 @@
 
 - if params[:q]
   = render "apartments/table", :apartments => @search.results, :type => "search"
+
+- if @search.results.present?
+  :javascript
+    var apartments = #{@search.results.to_json(:methods => :to_param, :include => :address)};
+
+  #map_canvas
