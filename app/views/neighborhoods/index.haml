@@ -1,3 +1,4 @@
 %ul
   -@neighborhoods.each do |neighborhood|
-    %li=link_to neighborhood.name, neighborhood
+    -next unless neighborhood.apartments.with_state(:published).present?
+    %li=link_to "#{neighborhood.name} (#{neighborhood.apartments.with_state(:published).count})", neighborhood

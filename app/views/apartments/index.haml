@@ -1,6 +1,7 @@
-:javascript
-  var apartments = #{@apartments.to_json(:methods => :to_param, :include => :address)};
-
 =render "apartments/table", :apartments => @apartments, :type => "owner"
 
-#map_canvas
+-if @apartments.any? { |a| a.address.present? }
+  :javascript
+    var apartments = #{@apartments.to_json(:methods => :to_param, :include => :address)};
+
+  #map_canvas
