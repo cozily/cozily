@@ -27,6 +27,7 @@ Dir[File.expand_path(File.join(File.dirname(__FILE__), 'helpers', '**', '*.rb'))
 # prefer to use XPath just remove this line and adjust any selectors in your
 # steps to use the XPath syntax.
 Capybara.default_selector = :css
+Capybara.default_wait_time = 5
 
 # If you set this to false, any error raised from within your app will bubble
 # up to your step definition and out to cucumber unless you catch it somewhere
@@ -64,13 +65,3 @@ end
 
 World(DefiniteArticleHelper)
 World(PathHelper)
-
-require 'fakeweb'
-FakeWeb.allow_net_connect = true
-
-["http://maps.google.com/maps/geo?q=546+Henry+St+11231&output=xml&key=ABQIAAAA9wWHEGNCfZW2F9-qCEHgohSNtFT0HrWdEyzoj3osWY55tZjYABRmZkmve1rwY6-nWvpT-N3MZcV_rg&oe=utf-8",
- "http://maps.google.com/maps/geo?q=546+Henry+St%2C+Brooklyn%2C+NY+11231%2C+USA&output=xml&key=ABQIAAAA9wWHEGNCfZW2F9-qCEHgohSNtFT0HrWdEyzoj3osWY55tZjYABRmZkmve1rwY6-nWvpT-N3MZcV_rg&oe=utf-8",
- "http://api.yelp.com/neighborhood_search?long=&lat=&ywsid=7a05VXb3EXz850ByvWF90w",
- "http://api.yelp.com/neighborhood_search?long=-74.0003197&lat=40.6824793&ywsid=7a05VXb3EXz850ByvWF90w"].each do |uri|
-  FakeWeb.register_uri(:get, uri, :response => `curl -is "#{uri}"`)
-end
