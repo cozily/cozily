@@ -124,7 +124,7 @@ function attachClickToMarker(marker, apt) {
             var link = $(event.currentTarget);
             var type = link.attr('data-method') ? link.attr('data-method') : 'post';
 
-            if (type == "delete") {
+            if (link.attr('data-confirm')) {
                 $("<div>Are you sure?</div>").dialog({
                     resizable: false,
                     height:140,

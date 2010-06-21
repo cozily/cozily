@@ -2,6 +2,6 @@
 
 -if @apartments.any? { |a| a.address.present? }
   :javascript
-    var apartments = #{@apartments.to_json(:methods => :to_param, :include => :address)};
+    var apartments = #{@apartments.as_json(:methods => :to_param, :include => :address).to_json};
 
   #map_canvas

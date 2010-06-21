@@ -5,6 +5,6 @@
 
 - if @search.results.present?
   :javascript
-    var apartments = #{@search.results.to_json(:methods => :to_param, :include => :address)};
+    var apartments = #{@search.results.as_json(:methods => :to_param, :include => :address).to_json};
 
   #map_canvas

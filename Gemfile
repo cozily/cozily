@@ -15,7 +15,7 @@ gem "paperclip", "2.3.3"
 gem "pg", "0.9.0"
 gem "rails", "2.3.8"
 gem "state_machine", "0.9.2"
-gem "twitter", "0.9.7"
+gem "twitter_oauth", "0.4.0"
 
 group :test do
   gem "capybara", "0.3.8"

@@ -1,7 +1,7 @@
 -if @apartment.published? || (signed_in? && current_user.apartments.include?(@apartment))
   :javascript
-    var self = #{@apartment.to_json(:methods => :to_param, :include => :address)};
-    var apartments = #{(Apartment.with_state(:published) - [@apartment]).to_json(:methods => :to_param, :include => :address)};
+    var self = #{@apartment.as_json(:methods => :to_param, :include => :address).to_json};
+    var apartments = #{(Apartment.with_state(:published) - [@apartment]).as_json(:methods => :to_param, :include => :address).to_json};
 
   -if can? :edit, @apartment
     =link_to "edit apartment", edit_apartment_path(@apartment)
