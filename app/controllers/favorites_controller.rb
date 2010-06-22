@@ -11,21 +11,21 @@ class FavoritesController < ApplicationController
     render :json => { :favorite_link => render_to_string(:partial => "favorites/link",
                                                          :locals => { :apartment => @favorite.apartment }),
                       :neighborhood_table => render_to_string(:partial => "apartments/table",
-                                                              :locals => { :apartments => @favorite.apartment.neighborhood.apartments,
+                                                              :locals => { :apartments => @favorite.apartment.neighborhood.apartments.with_state(:published),
                                                                            :type => "neighborhood" })
     }
   end
 
   def destroy
-    @favorite = Favorite.find(params[:id])
+    @favorite = @user.favorites.find(params[:id])
     @favorite.destroy
     render :json => { :favorite_link => render_to_string(:partial => "favorites/link",
                                                          :locals => { :apartment => @favorite.apartment }),
                       :favorites_table => render_to_string(:partial => "apartments/table",
-                                                           :locals => { :apartments => @user.favorite_apartments,
+                                                           :locals => { :apartments => @user.favorite_apartments.with_state(:published),
                                                                         :type => "favorites" }),
                       :neighborhood_table => render_to_string(:partial => "apartments/table",
-                                                              :locals => { :apartments => @favorite.apartment.neighborhood.apartments,
+                                                              :locals => { :apartments => @favorite.apartment.neighborhood.apartments.with_state(:published),
                                                                            :type => "neighborhood" })
     }
   end

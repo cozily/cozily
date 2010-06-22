@@ -8,7 +8,7 @@ class FlagsController < ApplicationController
   end
 
   def destroy
-    @flag = Flag.find(params[:id])
+    @flag = @user.flags.find(params[:id])
     @flag.destroy
     render :json => { :flag_link => render_to_string(:partial => "flags/link",
                                                      :locals => { :apartment => @flag.apartment }) }
