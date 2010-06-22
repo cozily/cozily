@@ -15,6 +15,9 @@ ActionController::Routing::Routes.draw do |map|
     user.resources :flags
   end
 
+  map.about "about", :controller => "pages", :action => "about"
+  map.faq "faq", :controller => "pages", :action => "faq"
+
   Clearance::Routes.draw(map)
 
   map.root :controller => "welcome"
