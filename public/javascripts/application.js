@@ -106,16 +106,18 @@ function attachClickToMarker(marker, apt) {
             for (var i = 0; i < apartments.length; i++) {
                 var apartment = apartments[i].apartment;
 
-                point = new google.maps.LatLng(apartment.address.lat, apartment.address.lng);
-                marker = new google.maps.Marker({position: point, param: apartment.to_param});
+                if (apartment.address != undefined) {
+                    point = new google.maps.LatLng(apartment.address.lat, apartment.address.lng);
+                    marker = new google.maps.Marker({position: point, param: apartment.to_param});
 
-                attachClickToMarker(marker, apartment);
+                    attachClickToMarker(marker, apartment);
 
-                marker.setMap(map);
+                    marker.setMap(map);
 
-                if (bounds) {
-                    bounds.extend(point);
-                    map.fitBounds(bounds);
+                    if (bounds) {
+                        bounds.extend(point);
+                        map.fitBounds(bounds);
+                    }
                 }
             }
         }

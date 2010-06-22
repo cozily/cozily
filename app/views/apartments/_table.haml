@@ -10,9 +10,10 @@
           %th Bedrooms
           %th Bathrooms
           %th Square Footage
-          -if current_user
+          -if type != "owner"
             %th
           -if type == "owner"
+            %th
             %th
 
       %tbody
@@ -23,9 +24,9 @@
             %td=apartment.bedrooms
             %td=apartment.bathrooms
             %td=apartment.square_footage
-            -if current_user && type != "owner"
+            -if type != "owner"
               %td=favorite_for_user_and_apartment(current_user, apartment)
-            -elsif type == "owner"
+            -if type == "owner"
               %td
                 =render "apartments/state_machine", :apartment => apartment, :return_to => user_apartments_path(current_user)
               %td
