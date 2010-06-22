@@ -16,7 +16,7 @@ function updateContent(content) {
 function attachClickToMarker(marker, apt) {
     google.maps.event.addListener(marker, 'click', function() {
         var contentString = "<div class='apartment_info'>" +
-                            "<h3><a href='" + apt.to_param + "'>" + apt.address.full_address + "</a></h3>" +
+                            "<h3><a href='/apartments/" + apt.to_param + "'>" + apt.address.full_address + "</a></h3>" +
                             "<dl>" +
                             "<dt>Rent</dt>" +
                             "<dd>" + apt.rent + "</dd>" +
