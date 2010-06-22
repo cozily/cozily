@@ -44,6 +44,9 @@
             =station.name
             =station.distance
 
+  -if @apartment.address
+    .business_search{:'data-lat' => @apartment.lat, :'data-lng' => @apartment.lng}
+
   %ul
     -@apartment.features.each do |feature|
       %li=feature.name

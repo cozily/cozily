@@ -1,5 +1,4 @@
 ActionController::Routing::Routes.draw do |map|
-
   map.resources :addresses,
                 :collection => { :geocode => :get }
   map.resources :apartments,
@@ -15,6 +14,7 @@ ActionController::Routing::Routes.draw do |map|
     user.resources :flags
   end
 
+  map.business_search "yelp/business_search", :controller => "yelp", :action => "business_search"
   map.about "about", :controller => "pages", :action => "about"
   map.faq "faq", :controller => "pages", :action => "faq"
 
