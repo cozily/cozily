@@ -24,7 +24,7 @@
             %td=apartment.bedrooms
             %td=apartment.bathrooms
             %td=apartment.square_footage
-            -if type != "owner"
+            -if current_user && type != "owner"
               %td=favorite_for_user_and_apartment(current_user, apartment)
             -if type == "owner"
               %td
