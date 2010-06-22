@@ -134,6 +134,14 @@ function attachClickToMarker(marker, apt) {
                     title: "Delete this item?",
                     buttons: {
                         'Yes': function() {
+                            $.ajax({
+                                type      : type,
+                                url       : link.attr('href'),
+                                dataType  : 'json',
+                                success   : function success(response) {
+                                    $(document).trigger('content-received', response);
+                                }
+                            });
                             var container = link.closest(".removeable");
                             if (container.is('div')) {
                                 container.hide('explode');
@@ -144,20 +152,19 @@ function attachClickToMarker(marker, apt) {
                         },
                         Cancel: function() {
                             $(this).dialog('close');
-                            return false;
                         }
                     }
                 });
+            } else {
+                $.ajax({
+                    type      : type,
+                    url       : link.attr('href'),
+                    dataType  : 'json',
+                    success   : function success(response) {
+                        $(document).trigger('content-received', response);
+                    }
+                });
             }
-
-            $.ajax({
-                type      : type,
-                url       : link.attr('href'),
-                dataType  : 'json',
-                success   : function success(response) {
-                    $(document).trigger('content-received', response);
-                }
-            });
 
             return false;
         });
