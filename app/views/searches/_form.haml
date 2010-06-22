@@ -23,4 +23,7 @@
   =f.label :max_square_footage
   =f.text_field :max_square_footage
 
+  =f.label :neighborhood_ids, "Neighborhoods"
+  =f.select :neighborhood_ids, Neighborhood.to_dropdown, {}, {:multiple => true}
+
   =f.submit :search

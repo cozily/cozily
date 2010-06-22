@@ -6,6 +6,7 @@ class Search
   attr_accessor :min_bathrooms, :max_bathrooms
   attr_accessor :min_rent, :max_rent
   attr_accessor :min_square_footage, :max_square_footage
+  attr_accessor :neighborhood_ids
 
   def initialize(options = {})
     @min_bedrooms = (options[:min_bedrooms] || 0).to_i
@@ -16,6 +17,7 @@ class Search
     @max_rent = (options[:max_rent] || 3000).to_i
     @min_square_footage = (options[:min_square_footage] || 250).to_i
     @max_square_footage = (options[:max_square_footage] || 800).to_i
+    @neighborhood_ids = (options[:neighborhood_ids] || []).collect {|n| n.to_i}
   end
 
   def results
@@ -28,8 +30,9 @@ class Search
       condition << "rent <= #{@max_rent}"
       condition << "square_footage >= #{@min_square_footage}"
       condition << "square_footage <= #{@max_square_footage}"
-      condition << "state = 'published'"
+      condition << "addresses.neighborhood_id IN (#{@neighborhood_ids.join(",")})" unless @neighborhood_ids.empty?
+      condition << "apartments.state = 'published'"
     end.join(" AND ")
-    Apartment.all(:conditions => conditions)
+    Apartment.all(:conditions => conditions, :joins => :address)
   end
 end

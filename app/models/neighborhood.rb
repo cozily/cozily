@@ -21,5 +21,9 @@ class Neighborhood < ActiveRecord::Base
       end
       neighborhood
     end
+
+    def to_dropdown
+      all.map {|n| [n.name, n.id]}
+    end
   end
 end

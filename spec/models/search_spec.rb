@@ -54,4 +54,20 @@ describe Search do
       @search.results.count.should == 1
     end
   end
+
+  context "when searching by neighborhood" do
+    before do
+      Factory(:apartment,
+              :address => Factory(:address, :full_address => "546 Henry St, Brooklyn, NY 11231, USA"),
+              :state => 'published')
+      Factory(:apartment,
+              :address => Factory(:address, :full_address => "111 W 74th St, New York, NY 10023, USA"),
+              :state => 'published')
+      @search = Search.new(:neighborhood_ids => Neighborhood.find_all_by_name("Upper West Side").map(&:id))
+    end
+
+    it "returns the correct number of apartments in that neighborhood" do
+      @search.results.count.should == 1
+    end
+  end
 end

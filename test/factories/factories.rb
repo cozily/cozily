@@ -1,5 +1,6 @@
 Factory.define :address do |a|
   a.full_address  "546 Henry St 11231"
+  a.association   :neighborhood
 end
 
 Factory.define :apartment do |a|
@@ -39,8 +40,12 @@ Factory.define :flag do |f|
   f.association  :apartment
 end
 
-Factory.define :image do |f|
-  f.association  :apartment
+Factory.define :image do |i|
+  i.association  :apartment
+end
+
+Factory.define :neighborhood do |n|
+  n.name { ["Upper West Side", "Greenpoint", "Williamsburg"].rand }
 end
 
 Factory.define :station do |s|
