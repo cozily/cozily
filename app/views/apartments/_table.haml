@@ -19,7 +19,7 @@
       %tbody
         -apartments.each do |apartment|
           %tr.removeable
-            %td=link_to apartment.name, apartment
+            %td=apartment_link(apartment)
             %td=apartment.rent
             %td=apartment.bedrooms
             %td=apartment.bathrooms
