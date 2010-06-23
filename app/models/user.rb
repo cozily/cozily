@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  is_gravtastic!
   include Clearance::User
 
   has_many :apartments, :dependent => :destroy
