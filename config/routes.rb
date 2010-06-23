@@ -1,9 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :addresses,
                 :collection => { :geocode => :get }
-
   map.resources :apartments,
-                :member => { :transition => :put } do |apartment|
+                :member => {:transition => :put} do |apartment|
     apartment.resources :images
     apartment.resources :messages
   end
@@ -12,7 +11,6 @@ ActionController::Routing::Routes.draw do |map|
                 :collection => { :search => :get }
 
   map.resource  :search
-
   map.resources :users, :controller => 'users', :only => [:edit, :update] do |user|
     user.resources :apartments, :only => :index
     user.resources :favorites
@@ -22,8 +20,11 @@ ActionController::Routing::Routes.draw do |map|
   end
 
   map.business_search "yelp/business_search", :controller => "yelp", :action => "business_search"
-  map.about "about", :controller => "pages", :action => "about"
-  map.faq "faq", :controller => "pages", :action => "faq"
+
+  map.with_options :controller => "pages" do |page|
+    page.about "about", :action => "about"
+    page.faq "faq", :action => "faq"
+  end
 
   Clearance::Routes.draw(map)
 
