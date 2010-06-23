@@ -12,6 +12,7 @@ class Apartment < ActiveRecord::Base
   has_many :favorites, :dependent => :destroy
   has_many :features, :through => :apartment_features
   has_many :images, :dependent => :destroy
+  has_many :messages, :dependent => :destroy
 
   has_friendly_id :name, :use_slug => true, :allow_nil => true
 

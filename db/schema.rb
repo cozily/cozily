@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100619020246) do
+ActiveRecord::Schema.define(:version => 20100623142816) do
 
   create_table "addresses", :force => true do |t|
     t.string   "street"
@@ -84,6 +84,15 @@ ActiveRecord::Schema.define(:version => 20100619020246) do
     t.string   "asset_content_type"
     t.integer  "asset_file_size"
     t.datetime "asset_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "messages", :force => true do |t|
+    t.integer  "apartment_id"
+    t.integer  "sender_id"
+    t.integer  "receiver_id"
+    t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

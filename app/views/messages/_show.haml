@@ -1,0 +1,5 @@
+%div[message]
+  =image_tag message.sender.gravatar_url
+  %span.name=message.sender.email
+  ="#{time_ago_in_words(message.created_at)} ago"
+  %p=message.body
