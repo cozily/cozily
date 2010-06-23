@@ -3,13 +3,11 @@ Then /^I can favorite the apartment$/ do
   visit apartment_path(apartment)
 
   page.should_not have_css("a:contains('unfavorite')")
-  lambda {
-    click_link "favorite"
-  }.should change(Favorite, :count).by(1)
+  click_link "favorite"
 
-  lambda {
-    click_link "unfavorite"
-  }.should change(Favorite, :count).by(-1)
+  click_link "unfavorite"
+  page.should have_no_css("a:contains('unfavorite')")
+  page.should have_css("a:contains('favorite')")
 end
 
 Given /^I have favorites$/ do
