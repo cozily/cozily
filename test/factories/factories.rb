@@ -44,6 +44,13 @@ Factory.define :image do |i|
   i.association  :apartment
 end
 
+Factory.define :message do |m|
+  m.association  :apartment
+  m.association  :sender, :factory => :user
+  m.association  :receiver, :factory => :user
+  m.body         Faker::Lorem.paragraph
+end
+
 Factory.define :neighborhood do |n|
   n.name { ["Upper West Side", "Greenpoint", "Williamsburg"].rand }
 end

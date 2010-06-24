@@ -8,4 +8,10 @@ describe Message do
   [:apartment, :body, :sender, :receiver].each do |attr|
     it { should validate_presence_of(attr) }
   end
+
+  it "should e-mail the receiver after create" do
+    message = Factory.build(:message)
+    MessageMailer.should_receive(:deliver_receiver_notification).with(message)
+    message.save
+  end
 end
