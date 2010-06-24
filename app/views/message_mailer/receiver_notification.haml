@@ -1,10 +1,13 @@
 Someone sent you a message.
 
+
 ==--------------------
 ==Re: #{@message.apartment.name}
+
 
 =@message.body
 ==--------------------
 
+
 To reply to this message, follow the link below:
-=url_for(apartment_path(@message.apartment))
+=url_for({:controller => 'apartments', :action => 'show', :id => @message.apartment.to_param, :host => "cozi.ly"})
