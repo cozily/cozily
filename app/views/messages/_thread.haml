@@ -1,0 +1,5 @@
+%div{ :'data-content-key' => 'thread' }
+  -messages.each do |message|
+    =render "messages/show", :message => message
+
+  =render "messages/new", :apartment => @apartment

@@ -1,5 +1,6 @@
 Feature: Messages
 
+  @javascript
   Scenario: Non-owner messages an owner
     Given I am a logged in user
     And an apartment exists with state: "published"

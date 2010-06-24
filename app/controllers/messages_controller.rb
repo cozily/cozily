@@ -4,7 +4,9 @@ class MessagesController < ApplicationController
   def create
     @message = @apartment.messages.build(params[:message].merge(:sender_id => current_user.id))
     @message.save
-    redirect_to :back
+    render :json => { :thread => render_to_string(:partial => "messages/thread",
+                                                  :locals => { :messages => @apartment.messages.for_user(current_user) })
+    }
   end
 
   private

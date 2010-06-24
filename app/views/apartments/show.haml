@@ -58,10 +58,7 @@
   #map_canvas
 
   -if can? :manage, Message
-    -@apartment.messages.for_user(current_user).each do |message|
-      =render "messages/show", :message => message
-
-    =render "messages/new", :apartment => @apartment
+    =render "messages/thread", :messages => @apartment.messages.for_user(current_user)
 
 -else
   %p This apartment is unpublished.
