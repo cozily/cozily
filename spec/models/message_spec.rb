@@ -9,6 +9,14 @@ describe Message do
     it { should validate_presence_of(attr) }
   end
 
+  it "should validate that the sender is not the receiver" do
+    user = Factory(:user)
+    message = Factory.build(:message,
+                            :sender => user,
+                            :receiver => user)
+    message.should be_invalid
+  end
+
   it "should e-mail the receiver after create" do
     message = Factory.build(:message)
     MessageMailer.should_receive(:deliver_receiver_notification).with(message)
