@@ -13,6 +13,8 @@ Feature: Sign up
 
     Scenario: User signs up with valid data
       When I go to the sign up page
+      And I fill in "First name" with "Barack"
+      And I fill in "Last name" with "Obama"
       And I fill in "Email" with "email@person.com"
       And I fill in "Password" with "password"
       And I fill in "Confirm password" with "password"

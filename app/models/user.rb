@@ -8,4 +8,10 @@ class User < ActiveRecord::Base
   has_many :flags, :dependent => :destroy
   has_many :favorite_apartments, :through => :favorites, :source => :apartment
   has_many :flagged_apartments, :through => :flags, :source => :apartment
+
+  validates_presence_of :first_name, :last_name
+
+  def full_name
+    [first_name, last_name].join(" ")
+  end
 end
