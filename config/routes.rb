@@ -17,6 +17,8 @@ ActionController::Routing::Routes.draw do |map|
     user.resources :apartments, :only => :index
     user.resources :favorites
     user.resources :flags
+    user.resources :messages,
+                   :controller => "users/messages"
   end
 
   map.business_search "yelp/business_search", :controller => "yelp", :action => "business_search"

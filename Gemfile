@@ -15,6 +15,7 @@ gem "padlock", "0.1.0"
 gem "paperclip", "2.3.3"
 gem "pg", "0.9.0"
 gem "rails", "2.3.8"
+gem "searchlogic", "2.4.19"
 gem "state_machine", "0.9.2"
 gem "twitter_oauth", "0.4.0"
 

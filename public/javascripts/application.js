@@ -62,6 +62,16 @@ function attachClickToMarker(marker, apt) {
             }
         });
 
+        $("[data-click-path]").live("click", function(event) {
+            var element = $(event.currentTarget);
+            document.location = element.attr('data-click-path');
+            return false;
+        });
+
+        if (typeof message_id != 'undefined') {
+            $.scrollTo("div#message_" + message_id, 800);
+        }
+
         if ($("a[data-upload-path]").length > 0) {
             new AjaxUpload('upload', {
                 action: $("a[data-upload-path]").attr('data-upload-path'),

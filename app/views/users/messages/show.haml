@@ -1,0 +1,5 @@
+:javascript
+  var message_id = '#{@message.id}';
+
+-@message.thread.each do |message|
+  =render "messages/show", :message => message
