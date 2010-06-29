@@ -1,0 +1,84 @@
+/* line 3, /Users/mrhaddad/workspace/cozily/public/stylesheets/sass/apartments.sass */
+body.apartments.show div.head div.name {
+  float: left;
+  border-left: 3px solid #a0c045;
+  padding-left: 20px;
+  height: 100px;
+}
+/* line 8, /Users/mrhaddad/workspace/cozily/public/stylesheets/sass/apartments.sass */
+body.apartments.show div.head div.name h1 {
+  margin-bottom: 0.05em;
+  font-weight: bold;
+  line-height: 65px;
+  margin-bottom: -15px;
+}
+/* line 14, /Users/mrhaddad/workspace/cozily/public/stylesheets/sass/apartments.sass */
+body.apartments.show div.head ul.actions {
+  float: right;
+}
+/* line 16, /Users/mrhaddad/workspace/cozily/public/stylesheets/sass/apartments.sass */
+body.apartments.show div.head ul.actions li {
+  float: left;
+  padding: 0 15px;
+  font-size: 1.05em;
+  line-height: 35px;
+}
+/* line 22, /Users/mrhaddad/workspace/cozily/public/stylesheets/sass/apartments.sass */
+body.apartments.show div.article {
+  border-left: 3px solid white;
+  width: 625px;
+  float: left;
+  margin-right: 10px;
+}
+/* line 28, /Users/mrhaddad/workspace/cozily/public/stylesheets/sass/apartments.sass */
+body.apartments.show div.article img {
+  width: 625px;
+  height: 440px;
+  background-color: black;
+  display: block;
+}
+/* line 34, /Users/mrhaddad/workspace/cozily/public/stylesheets/sass/apartments.sass */
+body.apartments.show div.article div.info {
+  position: relative;
+  top: -10px;
+  background-color: #deb35d;
+  width: 350px;
+  padding: 6px 0 10px 12px;
+}
+/* line 41, /Users/mrhaddad/workspace/cozily/public/stylesheets/sass/apartments.sass */
+body.apartments.show div.article div.info div.rooms {
+  font-size: 2.5em;
+  float: left;
+}
+/* line 45, /Users/mrhaddad/workspace/cozily/public/stylesheets/sass/apartments.sass */
+body.apartments.show div.article div.info div.rent {
+  background-color: black;
+  color: white;
+  float: right;
+  width: 110px;
+  font-size: 2em;
+  padding-left: 8px;
+  margin-top: 3px;
+}
+/* line 54, /Users/mrhaddad/workspace/cozily/public/stylesheets/sass/apartments.sass */
+body.apartments.show div.article div.info ul {
+  clear: both;
+  font-size: 1.2em;
+}
+/* line 58, /Users/mrhaddad/workspace/cozily/public/stylesheets/sass/apartments.sass */
+body.apartments.show div.article div.info ul li {
+  margin-bottom: -1px;
+}
+/* line 61, /Users/mrhaddad/workspace/cozily/public/stylesheets/sass/apartments.sass */
+body.apartments.show div.aside {
+  width: 315px;
+}
+/* line 64, /Users/mrhaddad/workspace/cozily/public/stylesheets/sass/apartments.sass */
+body.apartments.show div.aside div#map_canvas {
+  width: 307px;
+  height: 307px;
+}
+/* line 68, /Users/mrhaddad/workspace/cozily/public/stylesheets/sass/apartments.sass */
+body.apartments.show dl {
+  clear: both;
+}

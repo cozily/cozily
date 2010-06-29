@@ -3,12 +3,12 @@ Then /^I can flag the apartment$/ do
 
   visit apartment_path(apartment)
 
-  page.should_not have_css("a:contains('unflag')")
+  page.should_not have_css("a:contains('unflag this')")
   lambda {
-    click_link "flag"
+    click_link "flag this"
   }.should change(Flag, :count).by(1)
 
   lambda {
-    click_link "unflag"
-  }.should change(Flag, :count).by(-1)  
+    click_link "unflag this"
+  }.should change(Flag, :count).by(-1)
 end

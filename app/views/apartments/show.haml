@@ -3,49 +3,61 @@
     var self = #{@apartment.as_json(:methods => :to_param, :include => :address).to_json};
     var apartments = #{(Apartment.with_state(:published) - [@apartment]).as_json(:methods => :to_param, :include => :address).to_json};
 
-  -if can? :edit, @apartment
-    =link_to "edit apartment", edit_apartment_path(@apartment)
+  .head
+    .name
+      %h1=@apartment.address.street
+      %h2==#{@apartment.address.city}, #{@apartment.address.state} #{@apartment.address.zip}
 
-  =render "favorites/link", :apartment => @apartment
-  =render "flags/link", :apartment => @apartment
+    %ul.actions
+      -if can? :edit, @apartment
+        %li=link_to "edit apartment", edit_apartment_path(@apartment)
+      %li=render "flags/link", :apartment => @apartment
+      %li=render "favorites/link", :apartment => @apartment
 
-  %dl
-    %dt Address
-    %dd=@apartment.name
-    %dt Neighborhood
-    %dd
-      -if @apartment.address && @apartment.neighborhood
-        =link_to @apartment.neighborhood.name, @apartment.neighborhood
-      -else
-        Unknown
-    %dt Rent
-    %dd=@apartment.rent
-    %dt Bedrooms
-    %dd=@apartment.bedrooms
-    %dt Bathrooms
-    %dd=@apartment.bathrooms
-    %dt Square footage
-    %dd=@apartment.square_footage
-    %dt Start date
-    %dd=@apartment.start_date
+  %br{:style => "clear:both"}
 
-    -if @apartment.contact
-      %dt Contact
-      %dd
-        =@apartment.contact.name
-        =@apartment.contact.email
-        =@apartment.contact.phone
+  .article
+    -if @apartment.images.present?
+      =image_tag @apartment.images.first.asset.url(:large)
+    -else
+      %img{:src => 'http://www.google.com'}
 
-    %dt Nearby stations
-    %dd
+    .info
+      .rooms
+        ==#{@apartment.bedrooms.prettify}bd/#{@apartment.bathrooms.prettify}ba
+      .rent
+        ==$#{@apartment.rent.prettify}
+
       %ul
-        -@apartment.nearby_stations.each do |station|
-          %li
-            =station.name
-            =station.distance
+        %li==#{@apartment.square_footage.prettify} sq. ft.
+        %li
+          -if @apartment.address && @apartment.neighborhood
+            ==Neighborhood: #{link_to @apartment.neighborhood.name, @apartment.neighborhood}
+          -else
+            Neighborhood: Unknown
+        %li==Available starting #{@apartment.start_date}
 
-  -if @apartment.address
-    .business_search{:'data-lat' => @apartment.lat, :'data-lng' => @apartment.lng}
+  .aside
+    #map_canvas
+
+    %dl
+      -if @apartment.contact
+        %dt Contact
+        %dd
+          =@apartment.contact.name
+          =@apartment.contact.email
+          =@apartment.contact.phone
+
+        %dt Nearby stations
+        %dd
+          %ul
+            -@apartment.nearby_stations.each do |station|
+              %li
+                =station.name
+                =station.distance
+
+    -if @apartment.address
+      .business_search{:'data-lat' => @apartment.lat, :'data-lng' => @apartment.lng}
 
   %ul
     -@apartment.features.each do |feature|
@@ -55,7 +67,6 @@
     -@apartment.images.each do |image|
       %li=image_tag image.asset.url(:medium)
 
-  #map_canvas
 
   -if can? :manage, Message
     =render "messages/thread", :messages => @apartment.messages.for_user(current_user)
