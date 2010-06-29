@@ -1,17 +1,11 @@
-/* line 1, /Users/mrhaddad/workspace/cozily/public/stylesheets/sass/reset.sass */
 html, body {
-  height: 100%;
-}
+  height: 100%; }
 
-/* line 4, /Users/mrhaddad/workspace/cozily/public/stylesheets/sass/reset.sass */
 ul {
   margin: 0;
   padding: 0;
-  list-style-type: none;
-}
+  list-style-type: none; }
 
-/* line 9, /Users/mrhaddad/workspace/cozily/public/stylesheets/sass/reset.sass */
 a:link, a:visited, a:hover, a:active {
   text-decoration: none;
-  color: #1982a0;
-}
+  color: #1982a0; }
