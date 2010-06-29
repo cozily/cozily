@@ -17,7 +17,7 @@ end
 Then /^I can edit my profile$/ do
   visit root_path
 
-  click_link "Edit profile"
+  click_link "My Cozily"
   current_path.should == edit_user_path(the.user)
 
   fill_in "Email", :with => "new@email.com"

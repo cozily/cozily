@@ -2,7 +2,7 @@ Then /^I can create an apartment$/ do
   Given %Q{all the features are present}
 
   lambda {
-    click_link "new apartment"
+    click_link "New Apartment"
   }.should change(Apartment, :count).by(1)
   apartment = Apartment.last
 

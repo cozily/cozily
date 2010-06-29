@@ -1,0 +1,129 @@
+/* line 1, /Users/mrhaddad/workspace/cozily/public/stylesheets/sass/reset.sass */
+html, body {
+  height: 100%;
+}
+
+/* line 4, /Users/mrhaddad/workspace/cozily/public/stylesheets/sass/reset.sass */
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* line 9, /Users/mrhaddad/workspace/cozily/public/stylesheets/sass/reset.sass */
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: #1982a0;
+}
+
+/* line 3, /Users/mrhaddad/workspace/cozily/public/stylesheets/sass/application.sass */
+div#head {
+  background-color: black;
+  color: white;
+  height: 37px;
+  clear: both;
+}
+/* line 9, /Users/mrhaddad/workspace/cozily/public/stylesheets/sass/application.sass */
+div#head h1 {
+  float: left;
+  text-transform: uppercase;
+  margin-right: 50px;
+  font-size: 1.9em;
+  line-height: 33px;
+}
+/* line 15, /Users/mrhaddad/workspace/cozily/public/stylesheets/sass/application.sass */
+div#head h1 a {
+  color: white;
+}
+/* line 18, /Users/mrhaddad/workspace/cozily/public/stylesheets/sass/application.sass */
+div#head ul.nav {
+  text-transform: uppercase;
+}
+/* line 20, /Users/mrhaddad/workspace/cozily/public/stylesheets/sass/application.sass */
+div#head ul.nav li {
+  float: left;
+  border-left: 1px solid #4d4d4d;
+  padding: 0 20px;
+  height: 37px;
+  font-family: "Georgia";
+  font-size: 1.1em;
+  line-height: 33px;
+}
+/* line 28, /Users/mrhaddad/workspace/cozily/public/stylesheets/sass/application.sass */
+div#head ul.nav li a {
+  color: white;
+}
+/* line 30, /Users/mrhaddad/workspace/cozily/public/stylesheets/sass/application.sass */
+div#head ul.nav li:last-child {
+  border-right: 1px solid #4d4d4d;
+}
+/* line 33, /Users/mrhaddad/workspace/cozily/public/stylesheets/sass/application.sass */
+div#head ul.session {
+  float: right;
+}
+/* line 35, /Users/mrhaddad/workspace/cozily/public/stylesheets/sass/application.sass */
+div#head ul.session li {
+  float: left;
+  line-height: 33px;
+  padding: 0 8px;
+  color: #a5a5a5;
+  font-family: "Georgia";
+  font-size: 1.05em;
+}
+/* line 42, /Users/mrhaddad/workspace/cozily/public/stylesheets/sass/application.sass */
+div#head ul.session li.action a {
+  color: white;
+}
+/* line 44, /Users/mrhaddad/workspace/cozily/public/stylesheets/sass/application.sass */
+div#head ul.session li.profile a {
+  color: #e29c47;
+}
+
+/* line 47, /Users/mrhaddad/workspace/cozily/public/stylesheets/sass/application.sass */
+div#body {
+  background-color: #ebebeb;
+}
+
+/* line 50, /Users/mrhaddad/workspace/cozily/public/stylesheets/sass/application.sass */
+div#foot {
+  background-color: #ebebeb;
+  height: 60px;
+  clear: both;
+}
+/* line 55, /Users/mrhaddad/workspace/cozily/public/stylesheets/sass/application.sass */
+div#foot div.container {
+  background-color: white;
+}
+/* line 58, /Users/mrhaddad/workspace/cozily/public/stylesheets/sass/application.sass */
+div#foot ul {
+  margin: 0 10px;
+}
+/* line 60, /Users/mrhaddad/workspace/cozily/public/stylesheets/sass/application.sass */
+div#foot ul li {
+  font-family: "Georgia";
+  float: left;
+  padding: 0 6px;
+  height: 60px;
+  line-height: 58px;
+  font-size: 1.05em;
+}
+/* line 67, /Users/mrhaddad/workspace/cozily/public/stylesheets/sass/application.sass */
+div#foot ul li a {
+  color: #1982a0;
+}
+/* line 69, /Users/mrhaddad/workspace/cozily/public/stylesheets/sass/application.sass */
+div#foot ul li.copyright {
+  float: right;
+  color: #666666;
+}
+
+/* line 73, /Users/mrhaddad/workspace/cozily/public/stylesheets/sass/application.sass */
+div#map_canvas {
+  width: 50%;
+  height: 500px;
+}
+
+/* line 77, /Users/mrhaddad/workspace/cozily/public/stylesheets/sass/application.sass */
+div.ui-datepicker {
+  width: 19em;
+}

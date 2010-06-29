@@ -1,5 +1,5 @@
 %table
-  -Message.for_user(current_user).root.map(&:latest_reply).each do |message|
+  -Message.for_user(current_user).root.map(&:latest_reply).compact.each do |message|
     %tr{:'data-click-path' => user_message_path(current_user, message)}
       %td
         =message.sender.full_name
