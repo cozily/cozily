@@ -60,38 +60,38 @@ body.apartments.show div.article {
 body.apartments.show div.aside {
   width: 315px;
   float: right; }
-  body.apartments.show div.aside div#nearby_stations {
-    margin-bottom: 15px; }
-    body.apartments.show div.aside div#nearby_stations h3 {
-      border-right: 4px solid #efa54e; }
-    body.apartments.show div.aside div#nearby_stations table {
-      background-color: #f0f4f7;
-      padding: 6px 6px 10px 6px;
-      width: 311px; }
-      body.apartments.show div.aside div#nearby_stations table tr td {
-        border-bottom: 1px solid #e7ebee; }
-      body.apartments.show div.aside div#nearby_stations table td:first-child {
-        color: #202123;
-        width: 90%; }
-      body.apartments.show div.aside div#nearby_stations table td:last-child {
-        color: #676767;
-        text-align: right;
-        width: 10%; }
-  body.apartments.show div.aside div#nearby_restaurants {
-    margin-bottom: 15px; }
-    body.apartments.show div.aside div#nearby_restaurants h3 {
-      border-right: 4px solid #429e87; }
-    body.apartments.show div.aside div#nearby_restaurants ul {
-      width: 311px; }
-      body.apartments.show div.aside div#nearby_restaurants ul li {
-        float: left;
-        width: 145px;
-        margin-bottom: 5px;
-        padding-left: 10px; }
-        body.apartments.show div.aside div#nearby_restaurants ul li a {
-          display: block; }
-          body.apartments.show div.aside div#nearby_restaurants ul li a img {
-            border: 4px solid #e8e8ea; }
+  body.apartments.show div.aside > div {
+    margin-bottom: 15px;
+    -moz-box-shadow: 3px 4px 5px #cccccc;
+    -webkit-box-shadow: 3px 4px 5px #cccccc; }
+  body.apartments.show div.aside div#nearby_stations h3 {
+    border-right: 4px solid #efa54e; }
+  body.apartments.show div.aside div#nearby_stations table {
+    background-color: #f0f4f7;
+    padding: 6px 6px 10px 6px;
+    width: 311px; }
+    body.apartments.show div.aside div#nearby_stations table tr td {
+      border-bottom: 1px solid #e7ebee; }
+    body.apartments.show div.aside div#nearby_stations table td:first-child {
+      color: #202123;
+      width: 90%; }
+    body.apartments.show div.aside div#nearby_stations table td:last-child {
+      color: #676767;
+      text-align: right;
+      width: 10%; }
+  body.apartments.show div.aside div#nearby_restaurants h3 {
+    border-right: 4px solid #429e87; }
+  body.apartments.show div.aside div#nearby_restaurants ul {
+    width: 311px; }
+    body.apartments.show div.aside div#nearby_restaurants ul li {
+      float: left;
+      width: 145px;
+      margin-bottom: 5px;
+      padding-left: 10px; }
+      body.apartments.show div.aside div#nearby_restaurants ul li a {
+        display: block; }
+        body.apartments.show div.aside div#nearby_restaurants ul li a img {
+          border: 4px solid #e8e8ea; }
   body.apartments.show div.aside h3 {
     font-size: 2em;
     padding-bottom: 8px;
@@ -153,8 +153,9 @@ div#head {
       color: #e29c47; }
 
 div#search {
-  height: 80px;
-  background-color: #8d9ca1; }
+  height: 72px;
+  background-color: #8d9ca1;
+  background: url(/images/backgrounds/search_bar.png) repeat-x; }
 
 div#breadcrumbs {
   height: 30px;

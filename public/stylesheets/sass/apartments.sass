@@ -56,9 +56,12 @@ body.apartments.show
     :width 315px
     :float right
 
-    div#nearby_stations
+    > div
       :margin-bottom 15px
+      :-moz-box-shadow 3px 4px 5px #CCC
+      :-webkit-box-shadow 3px 4px 5px #CCC
 
+    div#nearby_stations
       h3
         :border-right 4px solid #EFA54E
 
@@ -80,8 +83,6 @@ body.apartments.show
           :width 10%
 
     div#nearby_restaurants
-      :margin-bottom 15px
-
       h3
         :border-right 4px solid #429E87
 
