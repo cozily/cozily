@@ -121,14 +121,11 @@ div#head {
   color: white;
   height: 37px;
   clear: both; }
-  div#head h1 {
+  div#head img {
     float: left;
-    text-transform: uppercase;
     margin-right: 50px;
-    font-size: 1.9em;
-    line-height: 35px; }
-    div#head h1 a {
-      color: white; }
+    height: 36px;
+    width: 94px; }
   div#head ul.nav {
     text-transform: uppercase; }
     div#head ul.nav li {

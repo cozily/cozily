@@ -23,8 +23,7 @@
   %body{:class => "#{controller.controller_name} #{controller.action_name}"}
     #head
       .container
-        %h1
-          =link_to "Cozily", root_url
+        =link_to image_tag("logos/logo.png"), root_url
 
         %ul.nav
           %li=link_to_unless_current "neighborhoods", neighborhoods_path
