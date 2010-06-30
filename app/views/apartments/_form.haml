@@ -13,8 +13,7 @@
         =render "images/thumbnail", :image => image
 
     -f.object.build_address unless f.object.address.present?
-    -f.semantic_fields_for :address do |address_fields|
-      =address_fields.input :full_address, :label => "Address"
+    =f.input :full_address, :label => "Address"
     =f.input :unit
     =f.input :rent
     =f.input :bedrooms

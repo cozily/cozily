@@ -1,5 +1,4 @@
 Given(/^there are searchable apartments$/) do
-  Factory.create(:apartment, :bedrooms => 3, :bathrooms => 1.5, :rent => 3000, :state => 'published')
   Factory.create(:apartment, :bedrooms => 2, :bathrooms => 1, :rent => 2000, :state => 'unpublished')
   Factory.create(:apartment, :bedrooms => 2, :bathrooms => 0.5, :rent => 1700, :state => 'published')
   Factory.create(:apartment, :bedrooms => 1, :bathrooms => 1, :rent => 1800, :state => 'unpublished')

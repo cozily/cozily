@@ -1,5 +1,5 @@
 Factory.define :address do |a|
-  a.full_address  "546 Henry St 11231"
+  a.full_address  { Factory.next :full_address }
   a.association   :neighborhood
 end
 
@@ -59,4 +59,9 @@ Factory.define :station do |s|
   s.name  "W 215 St"
   s.lat   40.869555
   s.lng   -73.915163
+end
+
+Factory.sequence :full_address do |n|
+  addresses = ["546 Henry St 11231", "151 Huron St 11222", "99 S 3rd St 11211", "111 W 74th St 10023"]
+  addresses[n % addresses.length]
 end

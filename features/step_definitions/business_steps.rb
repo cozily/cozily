@@ -1,5 +1,4 @@
 Then /^I can view restaurants that are near the apartment$/ do
   visit apartment_path(Apartment.last)
-  page.should have_content("Lucali")
-  page.should have_content("Koto Sushi")
+  page.should have_css("div#nearby_restaurants ul li.business")
 end

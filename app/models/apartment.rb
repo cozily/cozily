@@ -18,7 +18,6 @@ class Apartment < ActiveRecord::Base
 
   validate :ensure_uniqueness_of_name_for_user
 
-  accepts_nested_attributes_for :address, :reject_if => Proc.new { |attributes| attributes["full_address"].blank? }
   accepts_nested_attributes_for :contact, :reject_if => Proc.new { |attributes| attributes["name"].blank? }
 
   delegate :full_address, :lat, :lng, :neighborhood, :to => :address
@@ -69,6 +68,10 @@ class Apartment < ActiveRecord::Base
     [].tap do |fields|
       REQUIRED_FIELDS.each { |attr| fields << attr.to_s.humanize.downcase unless self.send(attr).present? }
     end
+  end
+
+  def full_address=(address)
+    self.address = Address.for_full_address(address)
   end
 
   def name
