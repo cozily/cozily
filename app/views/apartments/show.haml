@@ -51,6 +51,7 @@
       %li.favorite=render "favorites/link", :apartment => @apartment
 
     #map_canvas
+    =image_tag "backgrounds/shadow.png", :class => "shadow"
 
     #nearby_stations
       %h3 Nearby Stations
@@ -59,6 +60,7 @@
           %tr
             %td=station.name
             %td==#{number_with_precision(station.distance, :precision => 2)}mi
+    =image_tag "backgrounds/shadow.png", :class => "shadow"
 
     -if @apartment.address
       .business_search{:'data-lat' => @apartment.lat, :'data-lng' => @apartment.lng}

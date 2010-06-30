@@ -60,10 +60,9 @@ body.apartments.show div.article {
 body.apartments.show div.aside {
   width: 315px;
   float: right; }
-  body.apartments.show div.aside > div {
+  body.apartments.show div.aside img.shadow {
     margin-bottom: 15px;
-    -moz-box-shadow: 3px 4px 5px #cccccc;
-    -webkit-box-shadow: 3px 4px 5px #cccccc; }
+    padding-left: 1px; }
   body.apartments.show div.aside div#nearby_stations h3 {
     border-right: 4px solid #efa54e; }
   body.apartments.show div.aside div#nearby_stations table {
