@@ -47,8 +47,8 @@
 
   .aside
     %ul.actions
-      %li=render "flags/link", :apartment => @apartment
-      %li=render "favorites/link", :apartment => @apartment
+      %li.flag=render "flags/link", :apartment => @apartment
+      %li.favorite=render "favorites/link", :apartment => @apartment
 
     #map_canvas
 

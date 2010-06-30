@@ -56,10 +56,9 @@ body.apartments.show
     :width 315px
     :float right
 
-    div
+    div#nearby_stations
       :margin-bottom 15px
 
-    div#nearby_stations
       h3
         :border-right 4px solid #EFA54E
 
@@ -81,6 +80,8 @@ body.apartments.show
           :width 10%
 
     div#nearby_restaurants
+      :margin-bottom 15px
+
       h3
         :border-right 4px solid #429E87
 
@@ -109,6 +110,15 @@ body.apartments.show
         :padding 0 15px
         :font-size 1.05em
         :line-height 35px
+        div
+          :padding-left 5px
+
+      li.favorite
+        :background url(/images/icons/favorite.png) no-repeat 0 9px
+
+      li.flag
+        :background url(/images/icons/flag.png) no-repeat 0 9px
+
 
     div#map_canvas
       :width 311px
