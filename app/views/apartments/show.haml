@@ -19,7 +19,7 @@
         .rooms
           ==#{@apartment.bedrooms.prettify}bd/#{@apartment.bathrooms.prettify}ba
         .rent
-          ==$#{@apartment.rent.prettify}
+          ==$#{number_with_delimiter(@apartment.rent.prettify)}
 
         %ul
           %li==#{@apartment.square_footage.prettify} sq. ft.
