@@ -1,8 +1,9 @@
-Nearby Restaurants
+#nearby_restaurants
+  %h3 Nearby Restaurants
 
-%ul
-  -businesses.each do |business|
-    %li
-      =link_to(image_tag(business.photo_url), business.url, :target => "_blank")
-      =link_to(business.name, business.url, :target => "_blank")
-      =business.distance
+  %ul
+    -businesses.each do |business|
+      %li[business]
+        =link_to(image_tag(business.photo_url), business.url, :target => "_blank")
+        =link_to(business.name, business.url, :target => "_blank")
+        ==#{number_with_precision(business.distance, :precision => 2)}mi

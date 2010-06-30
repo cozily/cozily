@@ -1,70 +1,118 @@
 body.apartments.show
-  div.head
-    div.name
-      :float left
-      :border-left 3px solid #A0C045
-      :padding-left 20px
-      :height 100px
-      h1
-        :margin-bottom 0.05em
-        :font-weight bold
-        :line-height 65px
-        :font-size 3.2em
-        :margin-bottom -10px
+  div.article
+    :width 625px
+    :float left
+    :margin-right 10px
+
+    div.head
+      div.name
+        :border-left 4px solid #A0C045
+        :padding-left 20px
+        :height 100px
+        h1
+          :margin-bottom 0.05em
+          :font-weight bold
+          :line-height 65px
+          :font-size 3.2em
+          :margin-bottom -10px
+
+    div.content
+      :border-left 4px solid white
+
+      img
+        :width 622px
+        :height 440px
+        :background-color black
+        :display block
+
+      div.info
+        :position relative
+        :top -10px
+        :background-color #DEB35D
+        :width 350px
+        :padding 6px 0 10px 12px
+
+        div.rooms
+          :font-size 2.5em
+          :float left
+
+        div.rent
+          :background-color black
+          :color white
+          :float right
+          :width 110px
+          :font-size 2em
+          :padding-left 8px
+          :margin-top 3px
+
+        ul
+          :clear both
+          :font-size 1.2em
+
+          li
+            :margin-bottom -1px
+
+  div.aside
+    :width 315px
+    :float right
+
+    div
+      :margin-bottom 15px
+
+    div#nearby_stations
+      h3
+        :border-right 4px solid #EFA54E
+
+      table
+        :background-color #F0F4F7
+        :padding 6px 6px 10px 6px
+        :width 311px
+
+        tr td
+          :border-bottom 1px solid #E7EBEE
+
+        td:first-child
+          :color #202123
+          :width 90%
+
+        td:last-child
+          :color #676767
+          :text-align right
+          :width 10%
+
+    div#nearby_restaurants
+      h3
+        :border-right 4px solid #429E87
+
+      ul
+        :width 311px
+        li
+          :float left
+          :width 145px
+          :margin-bottom 5px
+          :padding-left 10px
+          a
+            :display block
+            img
+              :border 4px solid #E8E8EA
+
+    h3
+      :font-size 2em
+      :padding-bottom 8px
+      :margin-bottom 0
 
     ul.actions
       :float right
+      :height 100px
       li
         :float left
         :padding 0 15px
         :font-size 1.05em
         :line-height 35px
 
-  div.article
-    :border-left 3px solid white
-    :width 625px
-    :float left
-    :margin-right 10px
-
-    img
-      :width 625px
-      :height 440px
-      :background-color black
-      :display block
-
-    div.info
-      :position relative
-      :top -10px
-      :background-color #DEB35D
-      :width 350px
-      :padding 6px 0 10px 12px
-
-      div.rooms
-        :font-size 2.5em
-        :float left
-
-      div.rent
-        :background-color black
-        :color white
-        :float right
-        :width 110px
-        :font-size 2em
-        :padding-left 8px
-        :margin-top 3px
-
-      ul
-        :clear both
-        :font-size 1.2em
-
-        li
-          :margin-bottom -1px
-
-  div.aside
-    :width 315px
-
     div#map_canvas
-      :width 307px
-      :height 307px
+      :width 311px
+      :height 311px
 
   dl
     :clear both
