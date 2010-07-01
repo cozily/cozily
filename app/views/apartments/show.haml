@@ -63,7 +63,9 @@
       %table
         -@apartment.nearby_stations.each do |station|
           %tr
-            %td=station.name
+            %td
+              = station.name
+              = trains_for(station)
             %td==#{number_with_precision(station.distance, :precision => 2)}mi
     =image_tag "backgrounds/shadow.png", :class => "shadow"
 
