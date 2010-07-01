@@ -45,7 +45,7 @@ function attachClickToMarker(marker, apt) {
     $(function() {
         $("#apartment_start_date").datepicker();
 
-        $("input#apartment_address_attributes_full_address").autocomplete({
+        $("input#apartment_full_address").autocomplete({
             source: "/addresses/geocode",
             minLength: 3,
             delay: 400,
