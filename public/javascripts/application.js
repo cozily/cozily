@@ -68,6 +68,20 @@ function attachClickToMarker(marker, apt) {
             return false;
         });
 
+        $("[data-default-value]").live("click", function(event) {
+            var element = $(event.currentTarget);
+            if (element.val() == element.attr('data-default-value')) {
+                element.val('');
+            }
+        });
+
+        $("[data-default-value]").live("blur", function(event) {
+            var element = $(event.currentTarget);
+            if (element.val() == '') {
+                element.val(element.attr('data-default-value'));
+            }
+        });
+
         if (typeof message_id != 'undefined') {
             $.scrollTo("div#message_" + message_id, 800);
         }

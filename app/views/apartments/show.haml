@@ -30,20 +30,25 @@
               Neighborhood: Unknown
           %li==Available starting #{@apartment.start_date}
 
-      %ul
-        -@apartment.features.each do |feature|
-          %li=feature.name
 
-      %dl
+      -if @apartment.features.present?
+        .highlights
+          %h4 Apartment Highlights
+          %ul
+            -@apartment.features.each do |feature|
+              %li=feature.name
+
+      .contact
+        %h3 Contact
         -if @apartment.contact
-          %dt Contact
-          %dd
-            =@apartment.contact.name
-            =@apartment.contact.email
-            =@apartment.contact.phone
+          %span.name=@apartment.contact.name
+          -if @apartment.contact.email.present?
+            %span.email=@apartment.contact.email
+          -if @apartment.contact.phone.present?
+            %span.phone=@apartment.contact.phone
 
-      -if can? :manage, Message
-        =render "messages/thread", :messages => @apartment.messages.for_user(current_user)
+        -if can? :manage, Message
+          =render "messages/thread", :messages => @apartment.messages.for_user(current_user)
 
   .aside
     %ul.actions

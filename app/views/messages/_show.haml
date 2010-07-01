@@ -1,5 +1,6 @@
 %div[message]
+  %span.date="#{time_ago_in_words(message.created_at)} ago"
+  %span.name==#{message.sender.full_name} contacted #{message.receiver.full_name}
   =image_tag message.sender.gravatar_url
-  %span.name=message.sender.email
-  ="#{time_ago_in_words(message.created_at)} ago"
   %p=message.body
+  %br{ :style => "clear:both" }
