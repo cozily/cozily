@@ -3,7 +3,7 @@ Feature: Favorites
   @javascript
   Scenario: User favorites an apartment
     Given I am a logged in user
-    And an apartment exists with state: "published"
+    And an apartment exists with state: "listed"
     Then I can favorite the apartment
 
   @allow-rescue

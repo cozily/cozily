@@ -5,7 +5,7 @@ class NeighborhoodsController < ApplicationController
 
   def show
     @neighborhood = Neighborhood.find(params[:id])
-    @apartments = @neighborhood.apartments.with_state(:published)
+    @apartments = @neighborhood.apartments.with_state(:listed)
   end
 
   def search

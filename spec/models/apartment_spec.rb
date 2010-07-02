@@ -32,15 +32,44 @@ describe Apartment do
 
   describe "#before_save" do
     it "upcases unit" do
-      @apartment = Factory(:apartment,
-                           :unit => "1c")
+      @apartment = Factory(:apartment, :unit => "1c")
       @apartment.reload.unit.should == "1C"
     end
 
     it "deletes pounds from unit" do
-      @apartment = Factory(:apartment,
-                           :unit => "#1c")
+      @apartment = Factory(:apartment, :unit => "#1c")
       @apartment.reload.unit.should == "1C"
+    end
+  end
+
+  describe "#after_update" do
+    ['unlisted', 'listed'].each do |state|
+      it "creates a status_changed_to_#{state} TimelineEvent when the state has changed" do
+        initial_state = case state
+          when 'unlisted' then 'listed'
+          when 'listed' then 'unlisted'
+        end
+
+        apartment = Factory(:apartment, :state => initial_state)
+
+        lambda {
+          apartment.state = state
+          apartment.save!
+        }.should change(TimelineEvent, :count).by(1)
+
+        event = TimelineEvent.last
+        event.event_type.should == "state_changed_to_#{state}"
+        event.subject.should == apartment
+        event.actor.should be_nil
+      end
+    end
+
+    it "does not create a status_changed TimelineEvent when the state has not changed" do
+      apartment = Factory(:apartment)
+
+      lambda {
+        apartment.touch
+      }.should_not change(TimelineEvent, :count)
     end
   end
 
@@ -51,7 +80,7 @@ describe Apartment do
     end
   end
 
-  describe "#publishable?" do
+  describe "#listable?" do
     before do
       @apartment = Factory(:apartment,
                            :address => Factory.build(:address),
@@ -64,13 +93,13 @@ describe Apartment do
     end
 
     it "returns true when required fields are present" do
-      @apartment.should be_publishable
+      @apartment.should be_listable
     end
 
     [:address, :contact, :user, :rent, :bedrooms, :bathrooms, :square_footage].each do |attr|
       it "returns false when #{attr} is missing" do
         @apartment.send("#{attr}=", nil)
-        @apartment.should_not be_publishable
+        @apartment.should_not be_listable
       end
     end
   end

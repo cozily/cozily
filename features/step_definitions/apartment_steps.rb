@@ -77,7 +77,7 @@ Then /^I can delete the apartment$/ do
   lambda { apartment.reload }.should raise_error(ActiveRecord::RecordNotFound)
 end
 
-Then /^I can (publish|unpublish) the apartment$/ do |action|
+Then /^I can (list|unlist) the apartment$/ do |action|
   apartment = Apartment.last
 
   visit edit_apartment_path(apartment)
@@ -87,9 +87,9 @@ Then /^I can (publish|unpublish) the apartment$/ do |action|
   page.should_not have_css("input[type='submit'][value='#{action}']")
 end
 
-But /^I cannot (publish|unpublish) another user's apartment$/ do |action|
+But /^I cannot (list|unlist) another user's apartment$/ do |action|
   visit apartment_path(Factory(:apartment,
-                               :state => action == "publish" ? "unpublished" : "published"))
+                               :state => action == "list" ? "unlisted" : "listed"))
 
   page.should_not have_css("input[type='submit'][value='#{action}']")
 end
@@ -101,10 +101,10 @@ Given /^all the features are present$/ do
   end
 end
 
-Given /^I have an? ?(published|unpublished)? apartment$/ do |state|
+Given /^I have an? ?(listed|unlisted)? apartment$/ do |state|
   the.apartment = Factory(:apartment,
                           :user => the.user,
-                          :state => state || "unpublished")
+                          :state => state || "unlisted")
   the.user.apartments(true).should be_present
 end
 
@@ -128,8 +128,8 @@ Then /^I can view my apartments$/ do
   end
 end
 
-Then /^I should see that the apartment is unpublished$/ do
+Then /^I should see that the apartment is unlisted$/ do
   visit apartment_path(Apartment.last)
-  page.should have_content("This apartment is unpublished")
+  page.should have_content("This apartment is unlisted")
 end
 

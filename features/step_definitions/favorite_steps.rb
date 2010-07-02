@@ -13,7 +13,7 @@ end
 Given /^I have favorites$/ do
   Factory(:favorite,
           :apartment => Factory(:apartment,
-                                :state => "published"),
+                                :state => "listed"),
           :user => User.last)
 end
 

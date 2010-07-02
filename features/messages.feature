@@ -3,7 +3,7 @@ Feature: Messages
   @javascript
   Scenario: Non-owner messages an owner
     Given I am a logged in user
-    And an apartment exists with state: "published"
+    And an apartment exists with state: "listed"
     Then I can message the owner
 
   Scenario: User views their inbox

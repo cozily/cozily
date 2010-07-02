@@ -3,7 +3,7 @@ class FavoritesController < ApplicationController
 
   def index
     raise CanCan::AccessDenied unless @user == current_user
-    @apartments = @user.favorite_apartments.with_state(:published)
+    @apartments = @user.favorite_apartments.with_state(:listed)
   end
 
   def create
@@ -11,7 +11,7 @@ class FavoritesController < ApplicationController
     render :json => { :favorite_link => render_to_string(:partial => "favorites/link",
                                                          :locals => { :apartment => @favorite.apartment }),
                       :neighborhood_table => render_to_string(:partial => "apartments/table",
-                                                              :locals => { :apartments => @favorite.apartment.neighborhood.apartments.with_state(:published),
+                                                              :locals => { :apartments => @favorite.apartment.neighborhood.apartments.with_state(:listed),
                                                                            :type => "neighborhood" })
     }
   end
@@ -22,10 +22,10 @@ class FavoritesController < ApplicationController
     render :json => { :favorite_link => render_to_string(:partial => "favorites/link",
                                                          :locals => { :apartment => @favorite.apartment }),
                       :favorites_table => render_to_string(:partial => "apartments/table",
-                                                           :locals => { :apartments => @user.favorite_apartments.with_state(:published),
+                                                           :locals => { :apartments => @user.favorite_apartments.with_state(:listed),
                                                                         :type => "favorites" }),
                       :neighborhood_table => render_to_string(:partial => "apartments/table",
-                                                              :locals => { :apartments => @favorite.apartment.neighborhood.apartments.with_state(:published),
+                                                              :locals => { :apartments => @favorite.apartment.neighborhood.apartments.with_state(:listed),
                                                                            :type => "neighborhood" })
     }
   end

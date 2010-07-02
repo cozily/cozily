@@ -8,10 +8,10 @@ Feature: Apartments
     Then I cannot create an apartment
 
   Scenario: User views an apartment
-    Given an apartment exists with state: "published"
+    Given an apartment exists with state: "listed"
     Then I can view the apartment
-    When an apartment exists with state: "unpublished"
-    Then I should see that the apartment is unpublished
+    When an apartment exists with state: "unlisted"
+    Then I should see that the apartment is unlisted
 
   @allow-rescue
   Scenario: User edits an apartment
@@ -25,17 +25,17 @@ Feature: Apartments
     And I have an apartment
     Then I can delete the apartment
 
-  Scenario: User publishes an apartment
+  Scenario: User lists an apartment
     Given I am a logged in user
-    And I have an unpublished apartment
-    Then I can publish the apartment
-    But I cannot publish another user's apartment
+    And I have an unlisted apartment
+    Then I can list the apartment
+    But I cannot list another user's apartment
 
-  Scenario: User unpublishes an apartment
+  Scenario: User unlistes an apartment
     Given I am a logged in user
-    And I have an published apartment
-    Then I can unpublish the apartment
-    But I cannot unpublish another user's apartment
+    And I have an listed apartment
+    Then I can unlist the apartment
+    But I cannot unlist another user's apartment
 
   Scenario: Owner views their apartments
     Given I am a logged in user

@@ -16,6 +16,7 @@ gem "pg", "0.9.0"
 gem "rails", "2.3.8"
 gem "searchlogic", "2.4.19"
 gem "state_machine", "0.9.2"
+gem "timeline_fu", "0.3.0"
 gem "twitter_oauth", "0.4.0"
 
 group :test do

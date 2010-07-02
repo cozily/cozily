@@ -4,6 +4,8 @@ default_url_options[:host] = "cozi.ly"
 class Apartment < ActiveRecord::Base
   REQUIRED_FIELDS = [:address, :contact, :user, :rent, :bedrooms, :bathrooms, :square_footage, :start_date]
 
+  include Eventable
+
   belongs_to :address
   belongs_to :contact
   belongs_to :user
@@ -26,8 +28,14 @@ class Apartment < ActiveRecord::Base
 
   before_save :format_unit
 
-  state_machine :state, :initial => :unpublished do
-    after_transition :on => :publish do |apt|
+  [:unlisted, :listed].each do |state|
+    fires :"state_changed_to_#{state}",
+          :on => :update,
+          :if => lambda { |apartment| apartment.state_changed? && apartment.state_name == state }
+  end
+
+  state_machine :state, :initial => :unlisted do
+    after_transition :on => :list do |apt|
       component(:tweet_apartments) do
         client = TwitterOAuth::Client.new(
           :consumer_key => 'voDmOvIReD71vENQJRR1g',
@@ -35,11 +43,11 @@ class Apartment < ActiveRecord::Base
           :token => '154155384-9Vaj2QiXa998sIVn8XicaSVrQOM1rzvkRfAcYjHf',
           :secret => 'yicMo06MlgUMHSGgC5Q6lk0EicPqUZiNRrt4'
         )
-        client.update("#{apt.user.first_name} just published a #{apt.bedrooms.prettify} bedroom apt in #{apt.neighborhood.name} for $#{apt.rent.prettify} #{apartment_url(apt)}")
+        client.update("#{apt.user.first_name} just listed a #{apt.bedrooms.prettify} bedroom apt in #{apt.neighborhood.name} for $#{apt.rent.prettify} #{apartment_url(apt)}")
       end
     end
 
-    state :published do
+    state :listed do
       validates_presence_of :address, :contact, :user, :start_date
       validates_numericality_of :rent, :greater_than => 0, :only_integer => true
       validates_numericality_of :square_footage, :greater_than => 0, :only_integer => true
@@ -47,7 +55,7 @@ class Apartment < ActiveRecord::Base
       validates_numericality_of :bathrooms
     end
 
-    state :unpublished do
+    state :unlisted do
       validates_presence_of :user
       validates_numericality_of :rent, :allow_nil => true, :greater_than => 0, :only_integer => true
       validates_numericality_of :square_footage, :allow_nil => true, :greater_than => 0, :only_integer => true
@@ -55,16 +63,16 @@ class Apartment < ActiveRecord::Base
       validates_numericality_of :bathrooms, :allow_nil => true
     end
 
-    event :publish do
-      transition :unpublished => :published, :if => :publishable?
+    event :list do
+      transition :unlisted => :listed, :if => :listable?
     end
 
-    event :unpublish do
-      transition :published => :unpublished
+    event :unlist do
+      transition :listed => :unlisted
     end
   end
 
-  def fields_remaining_for_publishing
+  def fields_remaining_for_listing
     [].tap do |fields|
       REQUIRED_FIELDS.each { |attr| fields << attr.to_s.humanize.downcase unless self.send(attr).present? }
     end
@@ -83,7 +91,7 @@ class Apartment < ActiveRecord::Base
     Station.find(:all, :origin => [lat, lng], :within => 0.4, :order => 'distance')
   end
 
-  def publishable?
+  def listable?
     REQUIRED_FIELDS.all? { |attr| self.send(attr).present? }
   end
 
