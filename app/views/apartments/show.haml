@@ -11,32 +11,37 @@
 
     .content
       -if @apartment.images.present?
-        =image_tag @apartment.images.first.asset.url(:large)
+        =image_tag @apartment.images.first.asset.url(:large), :class => "active"
       -else
-        %img{:src => 'http://www.google.com'}
+        %img{:src => 'http://www.google.com', :class => "active"}
 
       .info
-        .rooms
-          ==#{@apartment.bedrooms.prettify}bd/#{@apartment.bathrooms.prettify}ba
-        .rent
-          ==$#{number_with_delimiter(@apartment.rent.prettify)}
+        .demographic
+          .rooms
+            ==#{@apartment.bedrooms.prettify}bd/#{@apartment.bathrooms.prettify}ba
+          .rent
+            ==$#{number_with_delimiter(@apartment.rent.prettify)}
 
-        %ul
-          %li==#{@apartment.square_footage.prettify} sq. ft.
-          %li
-            -if @apartment.address && @apartment.neighborhood
-              ==Neighborhood: #{link_to @apartment.neighborhood.name, @apartment.neighborhood}
-            -else
-              Neighborhood: Unknown
-          %li==Available starting #{@apartment.start_date}
-
-
-      -if @apartment.features.present?
-        .highlights
-          %h4 Apartment Highlights
           %ul
-            -@apartment.features.each do |feature|
-              %li=feature.name
+            %li==#{@apartment.square_footage.prettify} sq. ft.
+            %li
+              -if @apartment.address && @apartment.neighborhood
+                ==Neighborhood: #{link_to @apartment.neighborhood.name, @apartment.neighborhood}
+              -else
+                Neighborhood: Unknown
+            %li==Available starting #{@apartment.start_date}
+
+        -if @apartment.features.present?
+          .highlights
+            %h4 Apartment Highlights
+            %ul
+              -@apartment.features.each do |feature|
+                %li=feature.name
+
+      .images
+        %ul
+          -@apartment.images.each do |image|
+            %li=image_tag(image.asset.url(:thumb), :'data-large-image-path' => image.asset.url(:large))
 
       .contact
         %h3 Contact

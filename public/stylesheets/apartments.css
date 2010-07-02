@@ -1,170 +1,135 @@
-body.apartments.show div.article {
-  width: 625px;
-  float: left;
-  margin-right: 10px; }
-  body.apartments.show div.article div.head div.name {
-    border-left: 4px solid #a0c045;
-    padding-left: 20px;
-    height: 100px; }
-    body.apartments.show div.article div.head div.name h1 {
-      margin-bottom: 0.05em;
-      font-weight: bold;
-      line-height: 65px;
-      font-size: 3.2em;
-      margin-bottom: -10px; }
-  body.apartments.show div.article div.content {
-    border-left: 4px solid white; }
-    body.apartments.show div.article div.content img {
-      width: 622px;
-      height: 440px;
-      background-color: black;
-      display: block; }
-    body.apartments.show div.article div.content div.info {
-      position: relative;
-      top: -10px;
-      background-color: #deb35d;
-      width: 350px;
-      padding: 6px 0 10px 12px;
-      margin-bottom: 5px; }
-      body.apartments.show div.article div.content div.info div.rooms {
-        font-size: 2.5em;
-        float: left; }
-      body.apartments.show div.article div.content div.info div.rent {
-        background-color: black;
-        color: white;
-        float: right;
-        width: 110px;
-        font-size: 2em;
-        padding-left: 8px;
-        margin-top: 3px; }
-      body.apartments.show div.article div.content div.info ul {
-        clear: both;
-        font-size: 1.2em; }
-        body.apartments.show div.article div.content div.info ul li {
-          margin-bottom: -1px; }
-    body.apartments.show div.article div.content div.highlights h4 {
-      font-weight: bold;
-      padding-left: 12px;
-      margin-bottom: 0.6em; }
-    body.apartments.show div.article div.content div.highlights ul {
-      list-style-type: square;
-      margin: 0 0 10px 28px; }
-      body.apartments.show div.article div.content div.highlights ul li {
-        margin-bottom: 5px;
-        font-size: 1.15em; }
-    body.apartments.show div.article div.content div.contact {
-      background-color: #ebebeb;
-      padding: 15px; }
-      body.apartments.show div.article div.content div.contact h3 {
-        font-size: 1.9em;
-        margin-bottom: 0.4em; }
-      body.apartments.show div.article div.content div.contact span {
-        font-size: 1.1em;
-        padding: 0 10px;
-        border-right: 1px solid #cccccc; }
-      body.apartments.show div.article div.content div.contact span.name {
-        padding-left: 0px; }
-      body.apartments.show div.article div.content div.contact form {
-        margin-top: 10px; }
-        body.apartments.show div.article div.content div.contact form fieldset {
-          width: 100%; }
-          body.apartments.show div.article div.content div.contact form fieldset li {
-            margin-bottom: 5px; }
-            body.apartments.show div.article div.content div.contact form fieldset li textarea {
-              height: 140px;
-              width: 100%;
-              padding: 8px;
-              font-size: 1.1em;
-              color: #aaaaaa; }
-        body.apartments.show div.article div.content div.contact form fieldset.buttons {
-          padding-left: 0; }
-          body.apartments.show div.article div.content div.contact form fieldset.buttons li.commit {
-            text-align: right;
-            float: none;
-            padding-right: 0; }
-      body.apartments.show div.article div.content div.contact div.messages {
-        background-color: #f5f5f5;
-        padding: 10px 15px;
-        margin-top: 15px; }
-        body.apartments.show div.article div.content div.contact div.messages h5 {
-          font-size: 1.2em;
-          border-bottom: 1px solid #ebebeb;
-          padding-bottom: 5px;
-          margin-bottom: 0.75em; }
-        body.apartments.show div.article div.content div.contact div.messages div.message {
-          font-family: "Arial", "Helvetica", "sans-serif";
-          font-size: 1em;
-          margin-bottom: 15px; }
-          body.apartments.show div.article div.content div.contact div.messages div.message img {
-            width: 75px;
-            height: 75px;
-            border: 1px solid #ebebeb;
-            margin-right: 15px;
-            float: left; }
-          body.apartments.show div.article div.content div.contact div.messages div.message p {
-            margin-top: 5px;
-            float: left;
-            width: 80%; }
-          body.apartments.show div.article div.content div.contact div.messages div.message span.date {
-            font-weight: bold; }
-          body.apartments.show div.article div.content div.contact div.messages div.message span {
-            font-size: 1em;
-            padding: 0 10px 0 0;
-            border: none; }
-body.apartments.show div.aside {
-  width: 315px;
-  float: right; }
-  body.apartments.show div.aside img.shadow {
-    margin-bottom: 15px;
-    padding-left: 1px; }
-  body.apartments.show div.aside div#nearby_stations h3 {
-    border-right: 4px solid #efa54e; }
-  body.apartments.show div.aside div#nearby_stations table {
-    background-color: #f0f4f7;
-    padding: 6px 6px 10px 6px;
-    width: 311px; }
-    body.apartments.show div.aside div#nearby_stations table tr td {
-      border-bottom: 1px solid #e7ebee; }
-    body.apartments.show div.aside div#nearby_stations table td:first-child {
-      color: #202123;
-      width: 90%; }
-    body.apartments.show div.aside div#nearby_stations table td:last-child {
-      color: #676767;
-      text-align: right;
-      width: 10%; }
-  body.apartments.show div.aside div#nearby_restaurants h3 {
-    border-right: 4px solid #429e87; }
-  body.apartments.show div.aside div#nearby_restaurants ul {
-    width: 311px; }
-    body.apartments.show div.aside div#nearby_restaurants ul li {
-      float: left;
-      width: 145px;
-      margin-bottom: 5px;
-      padding-left: 10px; }
-      body.apartments.show div.aside div#nearby_restaurants ul li a {
-        display: block; }
-        body.apartments.show div.aside div#nearby_restaurants ul li a img {
-          border: 4px solid #e8e8ea; }
-  body.apartments.show div.aside h3 {
-    font-size: 2em;
-    padding-bottom: 8px;
-    margin-bottom: 0; }
-  body.apartments.show div.aside ul.actions {
-    float: right;
-    height: 100px; }
-    body.apartments.show div.aside ul.actions li {
-      float: left;
-      padding: 0 15px;
-      font-size: 1.05em;
-      line-height: 35px; }
-      body.apartments.show div.aside ul.actions li div {
-        padding-left: 5px; }
-    body.apartments.show div.aside ul.actions li.favorite {
-      background: url(/images/icons/favorite.png) no-repeat 0 9px; }
-    body.apartments.show div.aside ul.actions li.flag {
-      background: url(/images/icons/flag.png) no-repeat 0 9px; }
-  body.apartments.show div.aside div#map_canvas {
-    width: 311px;
-    height: 311px; }
-body.apartments.show dl {
-  clear: both; }
+/*
+Syntax error: Undefined mixin 'rounded-corners'.
+        on line 126 of /Users/mrhaddad/workspace/cozily/public/stylesheets/sass/apartments.sass, in `rounded-corners'
+        from line 126 of /Users/mrhaddad/workspace/cozily/public/stylesheets/sass/apartments.sass
+
+121:                 :background transparent url(/images/backgrounds/button.png) repeat-x scroll 0 0
+122:                 :padding 5px 10px
+123:                 :color white
+124:                 :border 1px solid #EBEBEB
+125:                 :font-size 1.2em
+126:                 @include rounded-corners(4px)
+127: 
+128:         div.messages
+129:           :background-color #F5F5F5
+130:           :padding 10px 15px
+131:           :margin-top 15px
+
+Backtrace:
+/Users/mrhaddad/workspace/cozily/public/stylesheets/sass/apartments.sass:126:in `rounded-corners'
+/Users/mrhaddad/workspace/cozily/public/stylesheets/sass/apartments.sass:126
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/mixin_node.rb:74:in `perform!'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:301:in `_perform'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:209:in `perform'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:322:in `perform_children'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:322:in `map'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:322:in `perform_children'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:313:in `perform!'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/rule_node.rb:188:in `perform!'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:301:in `_perform'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:209:in `perform'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:322:in `perform_children'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:322:in `map'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:322:in `perform_children'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:313:in `perform!'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/rule_node.rb:188:in `perform!'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:301:in `_perform'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:209:in `perform'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:322:in `perform_children'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:322:in `map'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:322:in `perform_children'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:313:in `perform!'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/rule_node.rb:188:in `perform!'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:301:in `_perform'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:209:in `perform'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:322:in `perform_children'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:322:in `map'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:322:in `perform_children'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:313:in `perform!'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/rule_node.rb:188:in `perform!'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:301:in `_perform'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:209:in `perform'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:322:in `perform_children'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:322:in `map'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:322:in `perform_children'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:313:in `perform!'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/rule_node.rb:188:in `perform!'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:301:in `_perform'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:209:in `perform'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:322:in `perform_children'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:322:in `map'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:322:in `perform_children'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:313:in `perform!'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/rule_node.rb:188:in `perform!'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:301:in `_perform'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:209:in `perform'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:322:in `perform_children'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:322:in `map'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:322:in `perform_children'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:313:in `perform!'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/rule_node.rb:188:in `perform!'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:301:in `_perform'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:209:in `perform'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:322:in `perform_children'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:322:in `map'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:322:in `perform_children'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:313:in `perform!'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/rule_node.rb:188:in `perform!'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:301:in `_perform'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:209:in `perform'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:322:in `perform_children'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:322:in `map'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:322:in `perform_children'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:313:in `perform!'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/root_node.rb:59:in `perform!'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:301:in `_perform'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/node.rb:209:in `perform'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/root_node.rb:37:in `perform'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/tree/root_node.rb:29:in `render'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/plugin.rb:221:in `update_stylesheet'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/plugin.rb:86:in `update_stylesheets'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/plugin.rb:79:in `each'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/plugin.rb:79:in `update_stylesheets'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/plugin.rb:77:in `each'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/plugin.rb:77:in `update_stylesheets'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/plugin.rb:51:in `check_for_updates'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/haml-3.0.6/rails/../lib/sass/plugin/rack.rb:40:in `call'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+/Users/mrhaddad/.bundle/ruby/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+script/server:3:in `require'
+script/server:3
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined mixin 'rounded-corners'.\A         on line 126 of /Users/mrhaddad/workspace/cozily/public/stylesheets/sass/apartments.sass, in `rounded-corners'\A         from line 126 of /Users/mrhaddad/workspace/cozily/public/stylesheets/sass/apartments.sass\A \A 121:                 :background transparent url(/images/backgrounds/button.png) repeat-x scroll 0 0\A 122:                 :padding 5px 10px\A 123:                 :color white\A 124:                 :border 1px solid #EBEBEB\A 125:                 :font-size 1.2em\A 126:                 @include rounded-corners(4px)\A 127: \A 128:         div.messages\A 129:           :background-color #F5F5F5\A 130:           :padding 10px 15px\A 131:           :margin-top 15px"; }

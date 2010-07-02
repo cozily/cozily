@@ -82,6 +82,12 @@ function attachClickToMarker(marker, apt) {
             }
         });
 
+        $("[data-large-image-path]").live("click", function(event) {
+            var element = $(event.currentTarget);
+            $("img.active").attr('src', element.attr('data-large-image-path'));
+            element.closest("li").addClass("active");
+        });
+
         if (typeof message_id != 'undefined') {
             $.scrollTo("div#message_" + message_id, 800);
         }
@@ -133,7 +139,7 @@ function attachClickToMarker(marker, apt) {
                 var point = new google.maps.LatLng(self.apartment.address.lat, self.apartment.address.lng);
                 map.setCenter(point);
 
-                var marker = new google.maps.Marker({position: point, title: self.apartment.address.full_address});
+                var marker = new google.maps.Marker({position: point, title: self.apartment.address.full_address, icon: '../images/icons/blue_marker.png'});
                 marker.setMap(map);
 
                 attachClickToMarker(marker, self.apartment);

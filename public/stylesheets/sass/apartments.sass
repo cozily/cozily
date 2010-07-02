@@ -19,55 +19,68 @@ body.apartments.show
     div.content
       :border-left 4px solid white
 
-      img
+      img.active
         :width 622px
         :height 440px
         :background-color black
         :display block
 
       div.info
-        :position relative
-        :top -10px
-        :background-color #DEB35D
-        :width 350px
-        :padding 6px 0 10px 12px
-        :margin-bottom 5px
+        :float left
 
-        div.rooms
-          :font-size 2.5em
+        div.demographic
+          :position relative
+          :top -10px
+          :background-color #DEB35D
+          :width 345px
+          :padding 6px 0 10px 12px
+          :margin 0 0px 5px 0
+
+          div.rooms
+            :font-size 2.5em
+            :float left
+
+          div.rent
+            :background-color black
+            :color white
+            :float right
+            :width 110px
+            :font-size 2em
+            :padding-left 8px
+            :margin-top 3px
+
+          ul
+            :clear both
+            :font-size 1.2em
+
+            li
+              :margin-bottom -1px
+
+        div.highlights
+          h4
+            :font-weight bold
+            :padding-left 12px
+            :margin-bottom 0.6em
+
+          ul
+            :list-style-type square
+            :margin 0 0 15px 28px
+
+            li
+              :margin-bottom 3px
+              :font-size 1.15em
+
+      div.images
+        :margin-top 8px
+        li
           :float left
-
-        div.rent
-          :background-color black
-          :color white
-          :float right
-          :width 110px
-          :font-size 2em
-          :padding-left 8px
-          :margin-top 3px
-
-        ul
-          :clear both
-          :font-size 1.2em
-
-          li
-            :margin-bottom -1px
-
-      div.highlights
-        h4
-          :font-weight bold
-          :padding-left 12px
-          :margin-bottom 0.6em
-
-        ul
-          :list-style-type square
-          :margin 0 0 10px 28px
-
-          li
-            :margin-bottom 5px
-            :font-size 1.15em
+          :margin 0 0 4px 8px
+          img
+            :width 80px
+            :height 80px
 
       div.contact
+        :clear both
         :background-color #EBEBEB
         :padding 15px
 
@@ -104,6 +117,13 @@ body.apartments.show
               :text-align right
               :float none
               :padding-right 0
+              input
+                :background transparent url(/images/backgrounds/button.png) repeat-x scroll 0 0
+                :padding 5px 10px
+                :color white
+                :border 1px solid #EBEBEB
+                :font-size 1.2em
+                @include rounded-corners(4px)
 
         div.messages
           :background-color #F5F5F5

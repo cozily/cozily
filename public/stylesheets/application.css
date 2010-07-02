@@ -30,45 +30,56 @@ body.apartments.show div.article {
       margin-bottom: -10px; }
   body.apartments.show div.article div.content {
     border-left: 4px solid white; }
-    body.apartments.show div.article div.content img {
+    body.apartments.show div.article div.content img.active {
       width: 622px;
       height: 440px;
       background-color: black;
       display: block; }
     body.apartments.show div.article div.content div.info {
-      position: relative;
-      top: -10px;
-      background-color: #deb35d;
-      width: 350px;
-      padding: 6px 0 10px 12px;
-      margin-bottom: 5px; }
-      body.apartments.show div.article div.content div.info div.rooms {
-        font-size: 2.5em;
-        float: left; }
-      body.apartments.show div.article div.content div.info div.rent {
-        background-color: black;
-        color: white;
-        float: right;
-        width: 110px;
-        font-size: 2em;
-        padding-left: 8px;
-        margin-top: 3px; }
-      body.apartments.show div.article div.content div.info ul {
-        clear: both;
-        font-size: 1.2em; }
-        body.apartments.show div.article div.content div.info ul li {
-          margin-bottom: -1px; }
-    body.apartments.show div.article div.content div.highlights h4 {
-      font-weight: bold;
-      padding-left: 12px;
-      margin-bottom: 0.6em; }
-    body.apartments.show div.article div.content div.highlights ul {
-      list-style-type: square;
-      margin: 0 0 10px 28px; }
-      body.apartments.show div.article div.content div.highlights ul li {
-        margin-bottom: 5px;
-        font-size: 1.15em; }
+      float: left; }
+      body.apartments.show div.article div.content div.info div.demographic {
+        position: relative;
+        top: -10px;
+        background-color: #deb35d;
+        width: 345px;
+        padding: 6px 0 10px 12px;
+        margin: 0 0px 5px 0; }
+        body.apartments.show div.article div.content div.info div.demographic div.rooms {
+          font-size: 2.5em;
+          float: left; }
+        body.apartments.show div.article div.content div.info div.demographic div.rent {
+          background-color: black;
+          color: white;
+          float: right;
+          width: 110px;
+          font-size: 2em;
+          padding-left: 8px;
+          margin-top: 3px; }
+        body.apartments.show div.article div.content div.info div.demographic ul {
+          clear: both;
+          font-size: 1.2em; }
+          body.apartments.show div.article div.content div.info div.demographic ul li {
+            margin-bottom: -1px; }
+      body.apartments.show div.article div.content div.info div.highlights h4 {
+        font-weight: bold;
+        padding-left: 12px;
+        margin-bottom: 0.6em; }
+      body.apartments.show div.article div.content div.info div.highlights ul {
+        list-style-type: square;
+        margin: 0 0 15px 28px; }
+        body.apartments.show div.article div.content div.info div.highlights ul li {
+          margin-bottom: 3px;
+          font-size: 1.15em; }
+    body.apartments.show div.article div.content div.images {
+      margin-top: 8px; }
+      body.apartments.show div.article div.content div.images li {
+        float: left;
+        margin: 0 0 4px 8px; }
+        body.apartments.show div.article div.content div.images li img {
+          width: 80px;
+          height: 80px; }
     body.apartments.show div.article div.content div.contact {
+      clear: both;
       background-color: #ebebeb;
       padding: 15px; }
       body.apartments.show div.article div.content div.contact h3 {
@@ -98,6 +109,14 @@ body.apartments.show div.article {
             text-align: right;
             float: none;
             padding-right: 0; }
+            body.apartments.show div.article div.content div.contact form fieldset.buttons li.commit input {
+              background: transparent url(/images/backgrounds/button.png) repeat-x scroll 0 0;
+              padding: 5px 10px;
+              color: white;
+              border: 1px solid #ebebeb;
+              font-size: 1.2em;
+              -moz-border-radius: 4px;
+              -webkit-border-radius: 4px; }
       body.apartments.show div.article div.content div.contact div.messages {
         background-color: #f5f5f5;
         padding: 10px 15px;
