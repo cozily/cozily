@@ -11,4 +11,34 @@ describe Favorite do
   end
 
   it { should validate_uniqueness_of(:apartment_id, :scope => :user_id)}
+
+  describe "#after_create" do
+    it "creates a created TimelineEvent" do
+      favorite = Factory.build(:favorite)
+      lambda {
+        favorite.save
+      }.should change(TimelineEvent, :count).by(1)
+
+      event = TimelineEvent.first
+      event.event_type.should == "created"
+      event.subject == favorite
+      event.secondary_subject.should == favorite.apartment
+      event.actor.should == favorite.user
+    end
+  end
+
+  describe "#after_destroy" do
+    it "creates a created TimelineEvent" do
+      favorite = Factory(:favorite)
+      lambda {
+        favorite.destroy
+      }.should change(TimelineEvent, :count).by(1)
+
+      event = TimelineEvent.first
+      event.event_type.should == "destroyed"
+      event.subject == favorite
+      event.secondary_subject.should == favorite.apartment
+      event.actor.should == favorite.user
+    end
+  end
 end

@@ -19,7 +19,7 @@ class User < ActiveRecord::Base
   end
 
   def timeline_events
-    TimelineEvent.event_type_equals("state_changed_to_listed")
+    TimelineEvent.actor_id_equals(self.id) | TimelineEvent.event_type_equals("state_changed_to_listed")
   end
 
   def unread_message_count
