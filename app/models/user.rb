@@ -18,6 +18,10 @@ class User < ActiveRecord::Base
     [first_name, last_name].join(" ")
   end
 
+  def timeline_events
+    TimelineEvent.event_type_equals("state_changed_to_listed")
+  end
+
   def unread_message_count
     received_messages.unread.count
   end
