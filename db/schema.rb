@@ -11,17 +11,23 @@
 
 ActiveRecord::Schema.define(:version => 20100702143351) do
 
+  create_table "address_neighborhoods", :force => true do |t|
+    t.integer  "address_id"
+    t.integer  "neighborhood_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "addresses", :force => true do |t|
     t.string   "street"
     t.string   "city"
     t.string   "state"
     t.string   "zip"
     t.string   "full_address"
-    t.decimal  "lat",             :precision => 15, :scale => 10
-    t.decimal  "lng",             :precision => 15, :scale => 10
+    t.decimal  "lat",          :precision => 15, :scale => 10
+    t.decimal  "lng",          :precision => 15, :scale => 10
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "neighborhood_id"
   end
 
   create_table "apartment_features", :force => true do |t|

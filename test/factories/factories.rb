@@ -1,6 +1,10 @@
 Factory.define :address do |a|
   a.full_address  { Factory.next :full_address }
-  a.association   :neighborhood
+end
+
+Factory.define :address_neighborhood do |a|
+  a.association  :address
+  a.association  :neighborhood
 end
 
 Factory.define :apartment do |a|

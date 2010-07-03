@@ -3,8 +3,9 @@ include GeoKit::Geocoders
 class Address < ActiveRecord::Base
   acts_as_mappable
 
-  belongs_to :neighborhood
+  has_many :address_neighborhoods, :dependent => :destroy
   has_many :apartments, :dependent => :destroy
+  has_many :neighborhoods, :through => :address_neighborhoods
 
   before_validation_on_create :geocode, :neighborhood_search
   before_validation_on_update :geocode, :neighborhood_search
@@ -56,6 +57,6 @@ class Address < ActiveRecord::Base
   end
 
   def neighborhood_search
-    self.neighborhood = Neighborhood.for_lat_and_lng(lat, lng)
+    self.neighborhoods = Neighborhood.for_lat_and_lng(lat, lng)
   end
 end

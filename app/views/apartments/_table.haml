@@ -17,7 +17,7 @@
             %th
 
       %tbody
-        -apartments.each do |apartment|
+        -apartments.each_with_index do |apartment, index|
           %tr.removeable
             %td=apartment_link(apartment)
             %td=apartment.rent
@@ -25,7 +25,7 @@
             %td=apartment.bathrooms
             %td=apartment.square_footage
             -if current_user && type != "owner"
-              %td=favorite_for_user_and_apartment(current_user, apartment)
+              %td=render "favorites/link", :apartment => apartment, :count => index
             -if type == "owner"
               %td
                 =render "apartments/state_machine", :apartment => apartment, :return_to => user_apartments_path(current_user)

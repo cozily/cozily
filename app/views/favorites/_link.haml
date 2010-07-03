@@ -1,3 +1,4 @@
+-count ||= 0
 -if current_user
-  %div{:'data-content-key' => "favorite_link"}
-    =favorite_for_user_and_apartment(current_user, apartment)
+  %div{:'data-content-key' => "favorite_link_#{count}"}
+    =favorite_for_user_and_apartment(current_user, apartment, count)

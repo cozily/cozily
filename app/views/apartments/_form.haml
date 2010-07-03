@@ -1,4 +1,4 @@
-=render "neighborhoods/name", :neighborhood => apartment.address ? apartment.neighborhood : Neighborhood.new
+=render "neighborhoods/name", :neighborhoods => apartment.address.present? ? apartment.neighborhoods : []
 
 -semantic_form_for apartment do |f|
   =f.error_messages

@@ -13,8 +13,13 @@ class Apartment < ActiveRecord::Base
   has_many :apartment_features, :dependent => :destroy
   has_many :favorites, :dependent => :destroy
   has_many :features, :through => :apartment_features
+  has_many :flags, :dependent => :destroy
   has_many :images, :dependent => :destroy
   has_many :messages, :dependent => :destroy, :order => "created_at desc"
+  has_many :neighborhoods, :finder_sql => 'select n.* from neighborhoods n
+                                            inner join address_neighborhoods a1 on a1.neighborhood_id = n.id
+                                             inner join addresses a2 on a2.id = a1.address_id
+                                              where a2.id = #{address_id}'
 
   has_friendly_id :name, :use_slug => true, :allow_nil => true
 
@@ -22,7 +27,7 @@ class Apartment < ActiveRecord::Base
 
   accepts_nested_attributes_for :contact, :reject_if => Proc.new { |attributes| attributes["name"].blank? }
 
-  delegate :full_address, :lat, :lng, :neighborhood, :to => :address
+  delegate :full_address, :lat, :lng, :to => :address
 
   default_scope :order => "apartments.created_at"
 

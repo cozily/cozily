@@ -25,8 +25,8 @@
           %ul
             %li==#{@apartment.square_footage.prettify} sq. ft.
             %li
-              -if @apartment.address && @apartment.neighborhood
-                ==Neighborhood: #{link_to @apartment.neighborhood.name, @apartment.neighborhood}
+              -if @apartment.address && @apartment.neighborhoods
+                ==Neighborhood: #{neighborhood_links(@apartment)}
               -else
                 Neighborhood: Unknown
             %li==Available starting #{@apartment.start_date}

@@ -1,2 +1,2 @@
 %div{ :'data-content-key' => 'neighborhood_name' }
-  =neighborhood.try(:name)
+  =neighborhoods.map(&:name).join(", ")

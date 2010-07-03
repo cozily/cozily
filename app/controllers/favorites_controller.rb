@@ -9,10 +9,8 @@ class FavoritesController < ApplicationController
   def create
     @favorite = @user.favorites.create(params[:favorite])
     render :json => { :favorite_link => render_to_string(:partial => "favorites/link",
-                                                         :locals => { :apartment => @favorite.apartment }),
-                      :neighborhood_table => render_to_string(:partial => "apartments/table",
-                                                              :locals => { :apartments => @favorite.apartment.neighborhood.apartments.with_state(:listed),
-                                                                           :type => "neighborhood" })
+                                                         :locals => { :apartment => @favorite.apartment,
+                                                                      :count => params[:count] })
     }
   end
 
@@ -20,13 +18,8 @@ class FavoritesController < ApplicationController
     @favorite = @user.favorites.find(params[:id])
     @favorite.destroy
     render :json => { :favorite_link => render_to_string(:partial => "favorites/link",
-                                                         :locals => { :apartment => @favorite.apartment }),
-                      :favorites_table => render_to_string(:partial => "apartments/table",
-                                                           :locals => { :apartments => @user.favorite_apartments.with_state(:listed),
-                                                                        :type => "favorites" }),
-                      :neighborhood_table => render_to_string(:partial => "apartments/table",
-                                                              :locals => { :apartments => @favorite.apartment.neighborhood.apartments.with_state(:listed),
-                                                                           :type => "neighborhood" })
+                                                         :locals => { :apartment => @favorite.apartment,
+                                                                      :count => params[:count] })
     }
   end
 end

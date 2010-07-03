@@ -30,9 +30,12 @@ class Search
       condition << "rent <= #{@max_rent}"
       condition << "square_footage >= #{@min_square_footage}"
       condition << "square_footage <= #{@max_square_footage}"
-      condition << "addresses.neighborhood_id IN (#{@neighborhood_ids.join(",")})" unless @neighborhood_ids.empty?
       condition << "apartments.state = 'listed'"
     end.join(" AND ")
-    Apartment.all(:conditions => conditions, :joins => :address)
+    apartments = Apartment.all(:conditions => conditions, :joins => :address)
+    unless @neighborhood_ids.empty?
+      apartments = apartments.select { |a| (a.neighborhoods.map(&:id) & @neighborhood_ids).present? }
+    end
+    apartments
   end
 end
