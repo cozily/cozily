@@ -273,6 +273,9 @@ div#foot {
     div#foot ul li.copyright {
       float: right;
       color: #666666; }
+    div#foot ul li.facebook, div#foot ul li.twitter {
+      float: right;
+      padding-top: 6px; }
 
 div#map_canvas {
   width: 50%;
