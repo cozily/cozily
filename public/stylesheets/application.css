@@ -274,8 +274,9 @@ div#foot {
       float: right;
       color: #666666; }
     div#foot ul li.facebook, div#foot ul li.twitter {
-      float: right;
-      padding-top: 6px; }
+      float: right; }
+      div#foot ul li.facebook img, div#foot ul li.twitter img {
+        padding-top: 16px; }
 
 div#map_canvas {
   width: 50%;
