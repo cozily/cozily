@@ -6,6 +6,7 @@ ActionController::Routing::Routes.draw do |map|
     apartment.resources :images
     apartment.resources :messages
   end
+  map.resources :feedback, :only => :create
 
   map.resources :neighborhoods,
                 :collection => { :search => :get }

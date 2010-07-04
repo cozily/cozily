@@ -1,0 +1,18 @@
+.feedback
+  <a class="handle" href="http://link-for-non-js-users.html">Content</a>
+  %p
+    Thanks for your feedback.  We are interested in your thoughts.
+  -form_tag '/feedback', :'data-remote' => true, :class => 'formtastic' do
+    %fieldset.inputs
+      %ol
+        %li.string
+          %label
+            Email
+          =text_field 'feedback', 'email'
+        %li.text
+          %label
+            Message
+          =text_area 'feedback', 'message'
+    %fieldset.buttons
+      %ol
+        %li.commit=submit_tag 'send'

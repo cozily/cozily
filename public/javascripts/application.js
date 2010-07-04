@@ -115,6 +115,19 @@ function attachClickToMarker(marker, apt) {
             });
         }
 
+        $('.feedback').tabSlideOut({
+            tabHandle: '.handle',                     //class of the element that will become your tab
+            pathToTabImage: '../images/contact_tab.gif', //path to the image for the tab //Optionally can be set using css
+            imageHeight: '122px',                     //height of tab image           //Optionally can be set using css
+            imageWidth: '40px',                       //width of tab image            //Optionally can be set using css
+            tabLocation: 'left',                      //side of screen where tab lives, top, right, bottom, or left
+            speed: 300,                               //speed of animation
+            action: 'click',                          //options: 'click' or 'hover', action to trigger animation
+            topPos: '200px',                          //position from the top/ use if tabLocation is left or right
+            leftPos: '20px',                          //position from left/ use if tabLocation is bottom or top
+            fixedPosition: true                      //options: true makes it stick(fixed position) on scroll
+        });
+
         if ($("div.business_search").length > 0) {
             var lat = $("div.business_search").attr('data-lat');
             var lng = $("div.business_search").attr('data-lng');
@@ -179,6 +192,8 @@ function attachClickToMarker(marker, apt) {
                 data      : data,
                 dataType  : 'json',
                 success   : function success(response) {
+                    form.find(":input").not(":submit").val("");
+                    $('.feedback .handle').click();
                     $(document).trigger('content-received', response);
                 }
             });

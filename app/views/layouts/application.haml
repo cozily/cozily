@@ -11,6 +11,7 @@
     = javascript_include_tag 'jquery'
     = javascript_include_tag 'jquery-ui'
     = javascript_include_tag 'jquery.scrollTo'
+    = javascript_include_tag 'jquery.tabSlideOut'
     = javascript_include_tag 'ajaxupload'
     = javascript_include_tag 'application'
 
@@ -58,6 +59,8 @@
           %li.twitter=link_to image_tag("icons/twitter.png"), "http://www.twitter.com/cozidotly", :target => "_blank"
           %li.facebook=link_to image_tag("icons/facebook.png"), "http://www.facebook.com/pages/Cozily/125237897517891", :target => "_blank"
           %li.copyright="&copy; #{Time.now.year} Cozily All Rights Reserved"
+
+    =render "feedback/feedback"
 
     :javascript
       window._token = '#{form_authenticity_token}';
