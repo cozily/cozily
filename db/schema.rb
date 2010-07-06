@@ -120,13 +120,25 @@ ActiveRecord::Schema.define(:version => 20100709160434) do
   add_index "slugs", ["name", "sluggable_type", "sequence", "scope"], :name => "index_slugs_on_n_s_s_and_s", :unique => true
   add_index "slugs", ["sluggable_id"], :name => "index_slugs_on_sluggable_id"
 
+  create_table "station_trains", :force => true do |t|
+    t.integer  "station_id"
+    t.integer  "train_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "stations", :force => true do |t|
     t.string   "name"
     t.decimal  "lat",        :precision => 15, :scale => 10
     t.decimal  "lng",        :precision => 15, :scale => 10
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "trains"
+  end
+
+  create_table "trains", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "timeline_events", :force => true do |t|
