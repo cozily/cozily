@@ -22,7 +22,7 @@ describe Apartment do
     it { should validate_numericality_of(attr, :allow_nil => true) }
   end
 
-  it "should validate the uniqueness of the name scoped to the user" do
+  it "should validate the uniqueness of the address scoped to the user and unit" do
     @apartment1 = Factory(:apartment)
     @apartment2 = Factory.build(:apartment,
                                 :address => @apartment1.address,
@@ -39,14 +39,16 @@ describe Apartment do
     @apartment.should have(1).error_on(:end_date)
   end
 
-  describe "#before_save" do
+  describe "#before_validation_on_update" do
     it "upcases unit" do
-      @apartment = Factory(:apartment, :unit => "1c")
+      @apartment = Factory.build(:apartment, :unit => "1c")
+      @apartment.save
       @apartment.reload.unit.should == "1C"
     end
 
     it "deletes pounds from unit" do
-      @apartment = Factory(:apartment, :unit => "#1c")
+      @apartment = Factory.build(:apartment, :unit => "#1c")
+      @apartment.save
       @apartment.reload.unit.should == "1C"
     end
   end

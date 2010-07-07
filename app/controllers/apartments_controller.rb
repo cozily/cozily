@@ -15,7 +15,7 @@ class ApartmentsController < ApplicationController
   end
 
   def create
-    @apartment = current_user.apartments.create
+    @apartment = current_user.apartments.create!
     redirect_to edit_apartment_path(@apartment)
   end
 

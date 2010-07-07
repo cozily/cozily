@@ -23,15 +23,13 @@ class Apartment < ActiveRecord::Base
 
   has_friendly_id :name, :use_slug => true, :allow_nil => true
 
-  validate :ensure_uniqueness_of_name_for_user
-
   accepts_nested_attributes_for :contact, :reject_if => Proc.new { |attributes| attributes["name"].blank? }
 
   delegate :full_address, :lat, :lng, :to => :address
 
   default_scope :order => "apartments.created_at"
 
-  before_save :format_unit
+  before_validation :format_unit
 
   [:unlisted, :listed].each do |state|
     fires :"state_changed_to_#{state}",
@@ -59,6 +57,7 @@ class Apartment < ActiveRecord::Base
       validates_numericality_of :square_footage, :greater_than => 0, :only_integer => true
       validates_numericality_of :bedrooms
       validates_numericality_of :bathrooms
+      validates_uniqueness_of :address_id, :scope => [ :user_id, :unit ]
     end
 
     state :unlisted do
@@ -68,6 +67,7 @@ class Apartment < ActiveRecord::Base
       validates_numericality_of :square_footage, :allow_nil => true, :greater_than => 0, :only_integer => true
       validates_numericality_of :bedrooms, :allow_nil => true
       validates_numericality_of :bathrooms, :allow_nil => true
+      validates_uniqueness_of :address_id, :scope => [ :user_id, :unit ], :allow_nil => true
     end
 
     event :list do
@@ -110,13 +110,5 @@ class Apartment < ActiveRecord::Base
   def format_unit
     return unless self.unit
     self.unit = self.unit.delete("#").upcase
-  end
-
-  def ensure_uniqueness_of_name_for_user
-    return unless user && address
-    address.valid?
-    if (user.apartments(true) - [self]).any? { |a| a.name == self.name }
-      errors.add_to_base("You already have an apartment for this address and unit.")
-    end
   end
 end
