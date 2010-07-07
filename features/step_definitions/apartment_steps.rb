@@ -1,4 +1,4 @@
-Then /^I can create an apartment$/ do
+Then /^I can create an? (apartment|sublet)$/ do |apartment_or_sublet|
   Given %Q{all the features are present}
 
   lambda {
@@ -9,6 +9,12 @@ Then /^I can create an apartment$/ do
   current_path.should == edit_apartment_path(apartment)
 
   When %Q{I fill in an apartment's fields}
+  if apartment_or_sublet == "sublet"
+    check "This is a sublet"
+    fill_in "End date", :with => 6.months.from_now
+  else
+    page.should have_css("li.hidden label:contains('End date')")
+  end
   click_button "Update Apartment"
 
   apartment.reload
@@ -132,4 +138,3 @@ Then /^I should see that the apartment is unlisted$/ do
   visit apartment_path(Apartment.last)
   page.should have_content("This apartment is unlisted")
 end
-

@@ -19,7 +19,11 @@
     =f.input :bedrooms
     =f.input :bathrooms
     =f.input :square_footage
-    =f.input :start_date, :as => :string
+    =f.input :sublet, :label => "This is a sublet"
+    =f.input :start_date, :as => :string, :input_html => { :'data-date' => true }
+
+    -show_end_date = f.object.sublet? ? '' : 'hidden'
+    =f.input :end_date, :as => :string, :wrapper_html => { :class => show_end_date }, :input_html => { :'data-date' => true }
 
     -if current_user.contacts.present?
       =f.input :contact, :collection => current_user.contacts

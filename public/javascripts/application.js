@@ -43,7 +43,14 @@ function attachClickToMarker(marker, apt) {
 
 (function($) {
     $(function() {
-        $("#apartment_start_date").datepicker();
+        $("input[data-date=true]").datepicker();
+        $("input#apartment_sublet").live("change", function(event) {
+            if ($("input#apartment_sublet").attr('checked')) {
+                $("li#apartment_end_date_input").show();
+            } else {
+                $("li#apartment_end_date_input").hide();
+            }
+        });
 
         $("input#apartment_full_address").autocomplete({
             source: "/addresses/geocode",

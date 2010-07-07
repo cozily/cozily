@@ -7,6 +7,11 @@ Feature: Apartments
     When I am not a logged in user
     Then I cannot create an apartment
 
+  @javascript
+  Scenario: User creates a sublet
+    Given I am a logged in user
+    Then I can create a sublet
+
   Scenario: User views an apartment
     Given an apartment exists with state: "listed"
     Then I can view the apartment

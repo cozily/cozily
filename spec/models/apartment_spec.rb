@@ -31,6 +31,14 @@ describe Apartment do
     @apartment2.should be_invalid
   end
 
+  it "should validate presence of end date if it's a sublet" do
+    @apartment = Factory.build(:apartment,
+                               :sublet => true,
+                               :end_date => nil)
+    @apartment.should_not be_valid
+    @apartment.should have(1).error_on(:end_date)
+  end
+
   describe "#before_save" do
     it "upcases unit" do
       @apartment = Factory(:apartment, :unit => "1c")
@@ -47,8 +55,10 @@ describe Apartment do
     ['unlisted', 'listed'].each do |state|
       it "creates a status_changed_to_#{state} TimelineEvent when the state has changed" do
         initial_state = case state
-          when 'unlisted' then 'listed'
-          when 'listed' then 'unlisted'
+          when 'unlisted' then
+            'listed'
+          when 'listed' then
+            'unlisted'
         end
 
         apartment = Factory(:apartment, :state => initial_state)

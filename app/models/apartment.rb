@@ -54,6 +54,7 @@ class Apartment < ActiveRecord::Base
 
     state :listed do
       validates_presence_of :address, :contact, :user, :start_date
+      validates_presence_of :end_date, :if => Proc.new { |apartment| apartment.sublet? }
       validates_numericality_of :rent, :greater_than => 0, :only_integer => true
       validates_numericality_of :square_footage, :greater_than => 0, :only_integer => true
       validates_numericality_of :bedrooms
@@ -62,6 +63,7 @@ class Apartment < ActiveRecord::Base
 
     state :unlisted do
       validates_presence_of :user
+      validates_presence_of :end_date, :if => Proc.new { |apartment| apartment.sublet? }
       validates_numericality_of :rent, :allow_nil => true, :greater_than => 0, :only_integer => true
       validates_numericality_of :square_footage, :allow_nil => true, :greater_than => 0, :only_integer => true
       validates_numericality_of :bedrooms, :allow_nil => true
