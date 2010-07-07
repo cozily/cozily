@@ -18,7 +18,8 @@ FakeWeb.allow_net_connect = false
  "http://api.yelp.com/neighborhood_search?long=-73.955389&lat=40.733134&ywsid=7a05VXb3EXz850ByvWF90w",
  "http://api.yelp.com/neighborhood_search?long=-73.963561&ywsid=7a05VXb3EXz850ByvWF90w&lat=40.713106",
  "http://api.yelp.com/neighborhood_search?long=-73.978437&lat=40.779237&ywsid=7a05VXb3EXz850ByvWF90w",
- "http://api.yelp.com/neighborhood_search?lat=40.723535&ywsid=7a05VXb3EXz850ByvWF90w&long=-73.993236"].each do |uri|
+ "http://api.yelp.com/neighborhood_search?lat=40.723535&ywsid=7a05VXb3EXz850ByvWF90w&long=-73.993236",
+ "http://api.yelp.com/neighborhood_search?lat=40.68244&long=-74.0003021&ywsid=7a05VXb3EXz850ByvWF90w"].each do |uri|
   FakeWeb.register_uri(:get, uri, :response => `curl -is "#{uri}"`)
 end
 
