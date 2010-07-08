@@ -98,12 +98,27 @@ ActiveRecord::Schema.define(:version => 20100709160434) do
     t.integer  "parent_id"
   end
 
+  create_table "neighborhood_profiles", :force => true do |t|
+    t.integer  "neighborhood_id"
+    t.integer  "profile_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "neighborhoods", :force => true do |t|
     t.string   "name"
     t.string   "city"
     t.string   "state"
     t.string   "country"
     t.string   "borough"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "profiles", :force => true do |t|
+    t.integer  "user_id"
+    t.float    "bedrooms"
+    t.float    "rent"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -135,12 +150,6 @@ ActiveRecord::Schema.define(:version => 20100709160434) do
     t.datetime "updated_at"
   end
 
-  create_table "trains", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "timeline_events", :force => true do |t|
     t.string   "event_type"
     t.string   "subject_type"
@@ -149,6 +158,12 @@ ActiveRecord::Schema.define(:version => 20100709160434) do
     t.integer  "subject_id"
     t.integer  "actor_id"
     t.integer  "secondary_subject_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "trains", :force => true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

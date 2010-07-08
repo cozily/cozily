@@ -52,6 +52,17 @@ Factory.define :neighborhood do |n|
   n.name { ["Upper West Side", "Greenpoint", "Williamsburg"].rand }
 end
 
+Factory.define :neighborhood_profile do |n|
+  n.association :neighborhood
+  n.association :profile
+end
+
+Factory.define :profile do |p|
+  p.bedrooms     { rand(8) }
+  p.rent         { 1000 + 100*rand(20) }
+  p.association  :user
+end
+
 Factory.define :station do |s|
   s.name  "W 215 St"
   s.lat   40.869555
