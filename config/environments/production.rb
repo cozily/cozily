@@ -28,3 +28,5 @@ config.action_view.cache_template_loading            = true
 # config.threadsafe!
 
 config.action_mailer.default_url_options = { :host => 'cozi.ly' }
+
+Sass::Plugin.options[:never_update] = true
