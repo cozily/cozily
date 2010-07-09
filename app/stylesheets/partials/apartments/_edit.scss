@@ -1,0 +1,62 @@
+body.apartments.edit {
+    div.article {
+        width: 600px;
+        margin-right: 40px;
+        float: left;
+        padding-top: 25px;
+
+        h2 {
+            margin-left: 20px;
+        }
+
+        form.apartment {
+            label {
+                width: 140px;
+                margin-right: 25px;
+                font-size: 1.1em;
+                line-height: 31px;
+                text-align: right;
+            }
+
+            input[type=text] {
+                height: 35px;
+                padding: 5px;
+                font-size: 1.3em;
+                color: $input-grey;
+            }
+
+            div#upload_photos {
+                background-color: #EBEBEB;
+                padding: 15px;
+                border-left: 4px solid white;
+            }
+
+            ul.features {
+                margin-left: 40px;
+
+                li.feature {
+                    float: left;
+                    width: 185px;
+
+                    input[type=checkbox] {
+                        float: left;
+                        margin: 5px 20px 0 0;
+                    }
+
+                    label {
+                        text-transform: capitalize;
+                        font-size: 1.2em;
+                        float: none;
+                        text-align: left;
+                        padding-top: 0;
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+    }
+
+    div.aside {
+
+    }
+}

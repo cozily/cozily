@@ -5,42 +5,38 @@
   -f.inputs do
     =hidden_field_tag "apartment[feature_ids][]"
 
-    %a#upload{:'data-upload-path' => apartment_images_path(apartment)} Upload an image
-    #upload_status
-
-    #images
-      -apartment.images.each do |image|
-        =render "images/thumbnail", :image => image
-
     -f.object.build_address unless f.object.address.present?
     =f.input :full_address, :label => "Address"
-    =f.input :unit
-    =f.input :rent
-    =f.input :bedrooms
-    =f.input :bathrooms
+    =f.input :unit, :label => "Unit No."
+    =f.input :rent, :label => "Rent ($)"
+    =f.input :bedrooms, :label => "Bedrooms (#)"
+    =f.input :bathrooms, :label => "Bathrooms (#)"
     =f.input :square_footage
-    =f.input :sublet, :label => "This is a sublet"
     =f.input :start_date, :as => :string, :input_html => { :'data-date' => true }
+    =f.input :sublet, :label => "This is a sublet"
 
     -show_end_date = f.object.sublet? ? '' : 'hidden'
     =f.input :end_date, :as => :string, :wrapper_html => { :class => show_end_date }, :input_html => { :'data-date' => true }
 
-    -if current_user.contacts.present?
-      =f.input :contact, :collection => current_user.contacts
+    %h2 Upload Photos
+    #upload_photos
+      %p
+        Research shows that most renters won't even view a listing without photos.  We require at least two:
 
-    -f.object.build_contact(:user => current_user)
-    -f.semantic_fields_for :contact do |contact_fields|
-      -contact_fields.inputs contact_text do
-        =contact_fields.input :user_id, :as => :hidden
-        =contact_fields.input :name
-        =contact_fields.input :email
-        =contact_fields.input :phone
+      %a#upload{:'data-upload-path' => apartment_images_path(apartment)} Upload an image
+      #upload_status
 
-    -Feature.all.each do |feature|
-      %li
-        -field_id = "feature_#{feature.id}"
-        =label_tag field_id, feature.name
-        =check_box_tag("apartment[feature_ids][]", feature.id, apartment.features.include?(feature), { :id => field_id })
+      #images
+        -apartment.images.each do |image|
+          =render "images/thumbnail", :image => image
+
+    %h2 Apartment Extras
+    %ul.features
+      -Feature.all.each do |feature|
+        %li.feature
+          -field_id = "feature_#{feature.id}"
+          =check_box_tag("apartment[feature_ids][]", feature.id, apartment.features.include?(feature), { :id => field_id })
+          =label_tag field_id, feature.name
 
   -f.buttons do
     =f.commit_button
