@@ -18,6 +18,8 @@ ActionController::Routing::Routes.draw do |map|
     user.resources :flags
     user.resources :messages,
                    :controller => "users/messages"
+    user.resource  :profile,
+                   :controller => "users/profiles"
   end
 
   map.business_search "yelp/business_search", :controller => "yelp", :action => "business_search"
