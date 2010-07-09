@@ -22,7 +22,6 @@ Then /^I can create an? (apartment|sublet)$/ do |apartment_or_sublet|
   page.should have_content "Carroll Gardens"
   page.should have_content "backyard"
   page.should have_content "balcony"
-  page.should have_content apartment.contact.name
 end
 
 Then /^I cannot create an apartment$/ do
@@ -69,8 +68,6 @@ When /^I fill in an apartment's fields$/ do
   fill_in "Bathrooms", :with => "1"
   fill_in "Square footage", :with => "500"
   fill_in "Start date", :with => Date.today
-  fill_in "Name", :with => Faker::Name.name
-  fill_in "Email", :with => Faker::Internet.email
 
   check "backyard"
   check "balcony"

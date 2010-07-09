@@ -2,12 +2,11 @@ include ActionController::UrlWriter
 default_url_options[:host] = "cozi.ly"
 
 class Apartment < ActiveRecord::Base
-  REQUIRED_FIELDS = [:address, :contact, :user, :rent, :bedrooms, :bathrooms, :square_footage, :start_date]
+  REQUIRED_FIELDS = [:address, :user, :rent, :bedrooms, :bathrooms, :square_footage, :start_date]
 
   include Eventable
 
   belongs_to :address
-  belongs_to :contact
   belongs_to :user
 
   has_many :apartment_features, :dependent => :destroy
@@ -22,8 +21,6 @@ class Apartment < ActiveRecord::Base
                                               where a2.id = #{address_id}'
 
   has_friendly_id :name, :use_slug => true, :allow_nil => true
-
-  accepts_nested_attributes_for :contact, :reject_if => Proc.new { |attributes| attributes["name"].blank? }
 
   delegate :full_address, :lat, :lng, :to => :address
 
@@ -51,7 +48,7 @@ class Apartment < ActiveRecord::Base
     end
 
     state :listed do
-      validates_presence_of :address, :contact, :user, :start_date
+      validates_presence_of :address, :user, :start_date
       validates_presence_of :end_date, :if => Proc.new { |apartment| apartment.sublet? }
       validates_numericality_of :rent, :greater_than => 0, :only_integer => true
       validates_numericality_of :square_footage, :greater_than => 0, :only_integer => true
