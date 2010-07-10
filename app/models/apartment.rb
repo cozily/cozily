@@ -43,7 +43,7 @@ class Apartment < ActiveRecord::Base
           :token => '154155384-9Vaj2QiXa998sIVn8XicaSVrQOM1rzvkRfAcYjHf',
           :secret => 'yicMo06MlgUMHSGgC5Q6lk0EicPqUZiNRrt4'
         )
-        client.update("#{apt.user.first_name} just listed a #{apt.bedrooms.prettify} bedroom apt in #{apt.neighborhood.name} for $#{apt.rent.prettify} #{apartment_url(apt)}")
+        client.update("#{apt.user.first_name} just listed a #{apt.bedrooms.prettify} bedroom apt in #{apt.neighborhood.name} for $#{apt.rent} #{apartment_url(apt)}")
       end
     end
 

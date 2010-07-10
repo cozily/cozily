@@ -22,10 +22,10 @@
           .rooms
             ==#{@apartment.bedrooms.prettify}bd/#{@apartment.bathrooms.prettify}ba
           .rent
-            ==$#{number_with_delimiter(@apartment.rent.prettify)}
+            ==$#{number_with_delimiter(@apartment.rent)}
 
           %ul
-            %li==#{@apartment.square_footage.prettify} sq. ft.
+            %li==#{@apartment.square_footage} sq. ft.
             %li
               -if @apartment.address && @apartment.neighborhoods
                 ==Neighborhood: #{neighborhood_links(@apartment)}
