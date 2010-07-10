@@ -14,6 +14,7 @@ body.apartments.edit {
                 width: 140px;
                 margin-right: 25px;
                 font-size: 1.1em;
+                font-weight: 500;
                 line-height: 31px;
                 text-align: right;
             }
@@ -23,6 +24,21 @@ body.apartments.edit {
                 padding: 5px;
                 font-size: 1.3em;
                 color: $input-grey;
+            }
+
+            div[data-content-key=neighborhood] {
+                margin: 0 0 1.5em 165px;
+
+                > span {
+                    background-color: #DDE7E9;
+                    padding: 5px 10px;
+                    color: #666;
+                    @include border-radius(3px);
+
+                    span {
+                        font-weight: 500;
+                    }
+                }
             }
 
             div#upload_photos {

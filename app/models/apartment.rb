@@ -28,7 +28,7 @@ class Apartment < ActiveRecord::Base
 
   before_validation :format_unit
 
-  [:unlisted, :listed].each do |state|
+  [:unlisted, :listed, :leased].each do |state|
     fires :"state_changed_to_#{state}",
           :on => :update,
           :if => lambda { |apartment| apartment.state_changed? && apartment.state_name == state }
@@ -68,11 +68,15 @@ class Apartment < ActiveRecord::Base
     end
 
     event :list do
-      transition :unlisted => :listed, :if => :listable?
+      transition [:unlisted, :leased] => :listed, :if => :listable?
     end
 
     event :unlist do
       transition :listed => :unlisted
+    end
+
+    event :lease do
+      transition :listed => :leased
     end
   end
 

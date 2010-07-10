@@ -1,0 +1,8 @@
+%div{ :'data-content-key' => 'neighborhood' }
+  %span
+    Neighborhood:
+    %span
+      -if neighborhoods.present?
+        =neighborhoods.map(&:name).join(", ")
+      -else
+        Unknown

@@ -9,7 +9,7 @@ class NeighborhoodsController < ApplicationController
   end
 
   def search
-    render :json => { :apartment_name => render_to_string(:partial => "neighborhoods/name",
+    render :json => { :apartment_name => render_to_string(:partial => "apartments/neighborhood",
                                                           :locals => { :neighborhoods => Neighborhood.for_lat_and_lng(params[:lat], params[:lng]) } )
     }
   end

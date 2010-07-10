@@ -95,6 +95,11 @@ function attachClickToMarker(marker, apt) {
             element.closest("li").addClass("active");
         });
 
+        $("ul.buttons li.save a").live("click", function() {
+            $("form.apartment").submit();
+            return false;
+        });
+
         if (typeof message_id != 'undefined') {
             $.scrollTo("div#message_" + message_id, 800);
         }

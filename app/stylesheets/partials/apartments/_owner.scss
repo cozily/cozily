@@ -1,0 +1,28 @@
+body.apartments {
+    div.owner {
+        border-bottom: 5px solid black;
+
+        ul.buttons {
+            float: right;
+            margin: -50px 20px 0 0;
+
+            li {
+                float: left;
+                padding: 10px 15px;
+                margin-right: 10px;
+                background-color: #6F7E85;
+                @include border-radius(4px);
+
+                a {
+                    font-size: 1.1em;
+                    font-weight: bold;
+                    color: white;
+                }
+            }
+
+            li.save, li.list {
+                background-color: #9ABF34;
+            }
+        }
+    }
+}

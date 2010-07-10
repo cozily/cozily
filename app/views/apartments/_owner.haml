@@ -1,0 +1,13 @@
+.owner
+  -if request.request_uri == edit_apartment_path(apartment)
+    %ul.buttons
+      %li=link_to "Delete Apartment", apartment_path(apartment), :method => :delete, :confirm => "Are you sure?"
+      -if apartment.can_unlist?
+        %li=link_to "Unlist Apartment", transition_apartment_path(apartment, :event => "unlist"), :method => :put
+      -if apartment.can_lease?
+        %li=link_to "Mark as 'Leased'", transition_apartment_path(apartment, :event => "lease"), :method => :put
+      %li.save=link_to "Save Changes", "#"
+      -if apartment.can_list?
+        %li.list=link_to "List Apartment", transition_apartment_path(apartment, :event => "list"), :method => :put
+
+  =render "apartments/tabs", :apartment => apartment

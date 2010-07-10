@@ -40,6 +40,6 @@ class ApartmentsController < ApplicationController
   def transition
     @apartment = Apartment.find(params[:id])
     @apartment.send("#{params[:event]}!")
-    redirect_to params[:return_to] || @apartment
+    redirect_to params[:return_to] || edit_apartment_path(@apartment)
   end
 end

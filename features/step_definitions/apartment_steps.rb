@@ -51,7 +51,7 @@ Then /^I can edit the apartment$/ do
   apartment = Apartment.last
   visit apartment_path(apartment)
 
-  click_link "edit apartment"
+  click_link "Edit Listing"
   current_path.should == edit_apartment_path(apartment)
 
   When %Q{I fill in an apartment's fields}
@@ -76,7 +76,7 @@ end
 Then /^I can delete the apartment$/ do
   apartment = Apartment.last
   visit edit_apartment_path(apartment)
-  click_link "delete this apartment"
+  click_link "Delete Apartment"
   lambda { apartment.reload }.should raise_error(ActiveRecord::RecordNotFound)
 end
 
@@ -84,7 +84,7 @@ Then /^I can (list|unlist) the apartment$/ do |action|
   apartment = Apartment.last
 
   visit edit_apartment_path(apartment)
-  click_button action
+  click_link "#{action.titleize} Apartment"
 
   apartment.reload.send("#{action}ed?").should be_true
   page.should_not have_css("input[type='submit'][value='#{action}']")
