@@ -1,9 +1,28 @@
+:javascript
+  var self = #{@apartment.as_json(:methods => :to_param, :include => :address).to_json};
+  var apartments = #{(@apartment.comparable_apartments).as_json(:methods => :to_param, :include => :address).to_json};
+
 =render "apartments/owner", :apartment => @apartment, :type => :edit
 
 .article
-  %h2 About the Apartment
+  %h2
+    About the Apartment
+    %span==(#{@apartment.state_name})
 
   =render "apartments/form", :apartment => @apartment
 
 .aside
   %h2 Comparables in the Area
+
+  #map_canvas
+
+  #comparables
+    %h6 Comparable Rental Prices In The Area
+    %table
+      -@apartment.comparable_apartments.each do |apartment|
+        %tr
+          %td &nbsp;
+          %td
+            %span.street=link_to apartment.street, apartment
+            %span.info==#{apartment.bedrooms.prettify}bd/#{apartment.bathrooms.prettify}ba
+          %td.rent==$#{number_with_delimiter(apartment.rent)}

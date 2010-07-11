@@ -7,6 +7,12 @@ body.apartments.edit {
 
         h2 {
             margin-left: 20px;
+
+            span {
+                margin-left: 4px;
+                font-style: italic;
+                color: #666;
+            }
         }
 
         form.apartment {
@@ -21,13 +27,14 @@ body.apartments.edit {
 
             input[type=text] {
                 height: 35px;
+                width: 435px;
                 padding: 5px;
                 font-size: 1.3em;
                 color: $input-grey;
             }
 
             div[data-content-key=neighborhood] {
-                margin: 0 0 1.5em 165px;
+                margin: 0 0 1.5em 164px;
 
                 > span {
                     background-color: #DDE7E9;
@@ -73,6 +80,59 @@ body.apartments.edit {
     }
 
     div.aside {
+        padding-top: 25px;
 
+        h2 {
+            margin-bottom: 3px;
+        }
+
+        div#map_canvas {
+            width: 306px;
+            height: 306px;
+        }
+
+        div#comparables {
+            @include clearfix;
+            margin-top: 25px;
+
+            h6 {
+                color: #647378;
+                text-align: center;
+                text-transform: uppercase;
+                padding: 25px 0;
+            }
+
+            table {
+                width: 295px;
+
+                tr {
+                    td {
+                        border-bottom: 1px solid #CCCCCC;
+                        padding: 5px 0 10px;
+
+                        span.street {
+                            display: block;
+                            font-size: 1.1em;
+
+                            a {
+                                color: black;
+                                font-weight: 500;
+                            }
+                        }
+
+                        span.info {
+                            color: #666;
+                        }
+                    }
+
+                    td.rent {
+                        font-size: 1.1em;
+                        font-weight: 500;
+                        vertical-align: top;
+                        text-align: right;
+                    }
+                }
+            }
+        }
     }
 }

@@ -22,7 +22,7 @@ class Apartment < ActiveRecord::Base
 
   has_friendly_id :name, :use_slug => true, :allow_nil => true
 
-  delegate :full_address, :lat, :lng, :to => :address
+  delegate :full_address, :lat, :lng, :street, :to => :address
 
   default_scope :order => "apartments.created_at"
 
@@ -78,6 +78,10 @@ class Apartment < ActiveRecord::Base
     event :lease do
       transition :listed => :leased
     end
+  end
+
+  def comparable_apartments
+    Apartment.with_state(:listed)
   end
 
   def fields_remaining_for_listing
