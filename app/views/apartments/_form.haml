@@ -20,12 +20,12 @@
     %h2 Upload Photos
     #upload_photos
       %p
-        Research shows that most renters won't even view a listing without photos.  We require at least two:
+        Research shows that most renters won't even view a listing without photos.  We require that you upload at least two:
 
-      %a#upload{:'data-upload-path' => apartment_images_path(apartment)} Upload an image
+      %a#upload{:'data-upload-path' => apartment_images_path(apartment)} Upload Photo
       #upload_status
 
-      #images
+      %ul#images
         -apartment.images.each do |image|
           =render "images/thumbnail", :image => image
 
@@ -38,4 +38,6 @@
           =label_tag field_id, feature.name
 
   -f.buttons do
-    =f.commit_button
+    %ul.buttons
+      %li=link_to "Delete Apartment", apartment_path(apartment), :method => :delete, :confirm => "Are you sure?"
+      %li.save=link_to "Save Changes", "#"

@@ -83,7 +83,7 @@ function updateContent(content) {
                             'authenticity_token': window._token
                         });
 
-                        $('#upload_status').text('Uploading ' + file);
+                        $('#upload_status').text('Uploading image...');
                     } else {
                         $('#upload_status').text('Error: only images are allowed');
                         return false;
@@ -92,7 +92,7 @@ function updateContent(content) {
                 },
                 onComplete : function(file, extension) {
                     $("div#upload_status").text('');
-                    $("div#images").append(extension);
+                    $("ul#images").append(extension);
                 }
             });
         }
@@ -166,7 +166,7 @@ function updateContent(content) {
                                 }
                             });
                             var container = link.closest(".removeable");
-                            if (container.is('div')) {
+                            if (container.is('div') || container.is('li')) {
                                 container.hide('explode');
                             } else {
                                 container.fadeOut();
