@@ -9,8 +9,11 @@
   .article
     .head
       .name
-        %h1=@apartment.address.street
-        %h2==#{@apartment.address.city}, #{@apartment.address.state} #{@apartment.address.zip}
+        -if @apartment.address
+          %h1=@apartment.address.street
+          %h2==#{@apartment.address.city}, #{@apartment.address.state} #{@apartment.address.zip}
+        -else
+          %h1 Unknown Address
 
     .content
       -if @apartment.images.present?
@@ -21,7 +24,7 @@
       .info
         .demographic
           .rooms
-            ==#{@apartment.bedrooms.prettify}bd/#{@apartment.bathrooms.prettify}ba
+            ==#{@apartment.bedrooms.try(:prettify)}bd/#{@apartment.bathrooms.try(:prettify)}ba
           .rent
             ==$#{number_with_delimiter(@apartment.rent)}
 
