@@ -844,36 +844,6 @@ body.apartments.edit div.article form.apartment ul.features li.feature label {
   line-height: 24px;
 }
 
-/* line 2, ../../../app/stylesheets/partials/apartments/_tabs.scss */
-body.apartments ul.tabs {
-  overflow: hidden;
-  display: inline-block;
-  margin-top: 70px;
-  margin-left: 25px;
-}
-/* line 8, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/general/_hacks.scss */
-body.apartments ul.tabs {
-  display: block;
-}
-/* line 6, ../../../app/stylesheets/partials/apartments/_tabs.scss */
-body.apartments ul.tabs li {
-  float: left;
-  padding: 5px 20px 10px;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 1.2em;
-}
-/* line 18, ../../../app/stylesheets/partials/apartments/_tabs.scss */
-body.apartments ul.tabs li.active {
-  border-top: 4px solid #A0C045;
-  border-left: 4px solid #DCDCDC;
-  border-right: 4px solid #DCDCDC;
-}
-/* line 24, ../../../app/stylesheets/partials/apartments/_tabs.scss */
-body.apartments ul.tabs li.inactive {
-  border-top: 4px solid white;
-}
-
 /* line 2, ../../../app/stylesheets/partials/apartments/_owner.scss */
 body.apartments div.owner {
   border-bottom: 5px solid black;
@@ -905,4 +875,30 @@ body.apartments div.owner ul.buttons li a {
 /* line 23, ../../../app/stylesheets/partials/apartments/_owner.scss */
 body.apartments div.owner ul.buttons li.save, body.apartments div.owner ul.buttons li.list {
   background-color: #9ABF34;
+}
+/* line 28, ../../../app/stylesheets/partials/apartments/_owner.scss */
+body.apartments div.owner ul.tabs {
+  overflow: hidden;
+  display: inline-block;
+  margin-top: 70px;
+  margin-left: 25px;
+}
+/* line 8, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/general/_hacks.scss */
+body.apartments div.owner ul.tabs {
+  display: block;
+}
+/* line 32, ../../../app/stylesheets/partials/apartments/_owner.scss */
+body.apartments div.owner ul.tabs li {
+  float: left;
+  padding: 5px 20px 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.2em;
+  border-top: 4px solid white;
+}
+/* line 41, ../../../app/stylesheets/partials/apartments/_owner.scss */
+body.apartments div.owner ul.tabs li.active {
+  border-top: 4px solid #A0C045;
+  border-left: 4px solid #DCDCDC;
+  border-right: 4px solid #DCDCDC;
 }

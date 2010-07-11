@@ -1,5 +1,5 @@
 .owner
-  -if request.request_uri == edit_apartment_path(apartment)
+  -if type == :edit
     %ul.buttons
       %li=link_to "Delete Apartment", apartment_path(apartment), :method => :delete, :confirm => "Are you sure?"
       -if apartment.can_unlist?
@@ -10,4 +10,8 @@
       -if apartment.can_list?
         %li.list=link_to "List Apartment", transition_apartment_path(apartment, :event => "list"), :method => :put
 
-  =render "apartments/tabs", :apartment => apartment
+  %ul.tabs
+    -[["Edit Listing", edit_apartment_path(apartment)], ["View Listing", apartment_path(apartment)]].each do |text, path|
+      -klass = (request.request_uri == path) ? "active" : "inactive"
+      %li{:class => klass}
+        =link_to_unless_current text, path
