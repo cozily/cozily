@@ -1,0 +1,9 @@
+%h2 Edit User Details
+
+- semantic_form_for @user do |f|
+  = f.error_messages
+  = render :partial => "/users/inputs", :locals => { :form => f }
+  - f.buttons do
+    = f.commit_button "Update Profile"
+
+= link_to "Edit Profile", edit_user_profile_path(@user)
