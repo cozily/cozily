@@ -1,8 +1,10 @@
 -semantic_form_for [current_user, current_user.profile] do |f|
   = f.error_messages
 
-  = f.input :bedrooms
-  = f.input :rent
-  = f.input :neighborhoods
+  - f.inputs do
+    = f.input :bedrooms
+    = f.input :rent
+    = f.input :neighborhoods
 
-  = f.commit_button "Save Profile"
+  -f.buttons do
+    = f.commit_button "Save Profile"
