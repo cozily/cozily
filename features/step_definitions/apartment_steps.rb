@@ -15,7 +15,7 @@ Then /^I can create an? (apartment|sublet)$/ do |apartment_or_sublet|
   else
     page.should have_css("li.hidden label:contains('End date')")
   end
-  click_button "Update Apartment"
+  click_link "Save Changes"
 
   apartment.reload
   current_path.should == edit_apartment_path(apartment)
@@ -55,7 +55,7 @@ Then /^I can edit the apartment$/ do
   current_path.should == edit_apartment_path(apartment)
 
   When %Q{I fill in an apartment's fields}
-  click_button "Update Apartment"
+  click_link "Save Changes"
 
   current_path.should == edit_apartment_path(Apartment.last)
 end

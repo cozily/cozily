@@ -2,7 +2,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :addresses,
                 :collection => { :geocode => :get }
   map.resources :apartments,
-                :member => {:transition => :put} do |apartment|
+                :member => { :order_images => :put,
+                             :transition => :put } do |apartment|
     apartment.resources :images
     apartment.resources :messages
   end

@@ -40,7 +40,7 @@ function attachClickToMarker(marker, apt) {
                 var point = new google.maps.LatLng(self.apartment.address.lat, self.apartment.address.lng);
                 map.setCenter(point);
 
-                var marker = new google.maps.Marker({position: point, title: self.apartment.address.full_address, icon: '../images/icons/blue_marker.png'});
+                var marker = new google.maps.Marker({position: point, title: self.apartment.address.full_address, icon: '/images/icons/blue_marker.png'});
                 marker.setMap(map);
 
                 attachClickToMarker(marker, self.apartment);

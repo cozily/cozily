@@ -33,8 +33,18 @@ class ApartmentsController < ApplicationController
     @apartment.destroy
     respond_to do |format|
       format.html { redirect_to user_apartments_path(current_user) }
-      format.js   { render :nothing => true }
+      format.js { render :nothing => true }
     end
+  end
+
+  def order_images
+    @apartment = Apartment.find(params[:id])
+    images = @apartment.images
+    images.each do |image|
+      image.position = params['image'].index(image.id.to_s) + 1
+      image.save
+    end
+    render :nothing => true
   end
 
   def transition

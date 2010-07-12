@@ -1,6 +1,7 @@
 Feature: Apartments
 
   @allow-rescue
+  @javascript
   Scenario: User creates an apartment
     Given I am a logged in user
     Then I can create an apartment

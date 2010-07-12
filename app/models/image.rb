@@ -8,4 +8,6 @@ class Image < ActiveRecord::Base
                     :path => "/:id/:style/:filename"
 
   validates_presence_of :apartment
+
+  acts_as_list :scope => :apartment
 end

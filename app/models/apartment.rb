@@ -13,7 +13,7 @@ class Apartment < ActiveRecord::Base
   has_many :favorites, :dependent => :destroy
   has_many :features, :through => :apartment_features
   has_many :flags, :dependent => :destroy
-  has_many :images, :dependent => :destroy
+  has_many :images, :order => "position", :dependent => :destroy
   has_many :messages, :dependent => :destroy, :order => "created_at desc"
   has_many :neighborhoods, :finder_sql => 'select n.* from neighborhoods n
                                             inner join address_neighborhoods a1 on a1.neighborhood_id = n.id

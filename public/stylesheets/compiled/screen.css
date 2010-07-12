@@ -940,20 +940,20 @@ body.apartments.edit div.article form.apartment ul.features li.feature label {
   padding-top: 0;
   line-height: 24px;
 }
-/* line 131, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 127, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.aside {
   padding-top: 25px;
 }
-/* line 134, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 130, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.aside h2 {
   margin-bottom: 3px;
 }
-/* line 138, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 134, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.aside div#map_canvas {
   width: 306px;
   height: 306px;
 }
-/* line 143, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 139, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.aside div#comparables {
   overflow: hidden;
   display: inline-block;
@@ -963,7 +963,7 @@ body.apartments.edit div.aside div#comparables {
 body.apartments.edit div.aside div#comparables {
   display: block;
 }
-/* line 147, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 143, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.aside div#comparables h6 {
   color: #647378;
   text-align: center;
@@ -971,30 +971,30 @@ body.apartments.edit div.aside div#comparables h6 {
   padding: 25px 0;
   width: 295px;
 }
-/* line 155, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 151, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.aside div#comparables table {
   width: 295px;
 }
-/* line 159, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 155, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.aside div#comparables table tr td {
   border-bottom: 1px solid #CCCCCC;
   padding: 5px 0 10px;
 }
-/* line 163, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 159, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.aside div#comparables table tr td span.street {
   display: block;
   font-size: 1.1em;
 }
-/* line 167, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 163, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.aside div#comparables table tr td span.street a {
   color: black;
   font-weight: 500;
 }
-/* line 173, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 169, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.aside div#comparables table tr td span.info {
   color: #666;
 }
-/* line 178, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 174, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.aside div#comparables table tr td.rent {
   font-size: 1.1em;
   font-weight: 500;

@@ -97,6 +97,22 @@ function updateContent(content) {
             });
         }
 
+        $('ul#images').sortable({
+            axis: 'x',
+            dropOnEmpty:false,
+            cursor: 'crosshair',
+            items: 'li',
+            opacity: 0.4,
+            scroll: true,
+            update: function() {
+                $.ajax({
+                    type: 'put',
+                    data: $('ul#images').sortable('serialize'),
+                    dataType: 'script',
+                    url: "/apartments/" + self.apartment.id + "/order_images"});
+            }
+        });
+
         $('.feedback').tabSlideOut({
             tabHandle: '.handle',                     //class of the element that will become your tab
             pathToTabImage: '/images/contact_tab.gif', //path to the image for the tab //Optionally can be set using css
