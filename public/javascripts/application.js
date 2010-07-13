@@ -14,8 +14,8 @@ function updateContent(content) {
 (function($) {
     $(function() {
         $("input[data-date=true]").datepicker();
-        $("input#apartment_sublet").live("change", function(event) {
-            if ($("input#apartment_sublet").attr('checked')) {
+        $("input[name=apartment[sublet]]").live("change", function(event) {
+            if ($("input#apartment_sublet_true").attr('checked')) {
                 $("li#apartment_end_date_input").show();
             } else {
                 $("li#apartment_end_date_input").hide();

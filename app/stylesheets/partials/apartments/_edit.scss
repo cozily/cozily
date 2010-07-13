@@ -22,6 +22,7 @@ body.apartments.edit {
                 font-weight: 500;
                 line-height: 31px;
                 text-align: right;
+                text-transform: capitalize;
             }
 
             input[type=text] {
@@ -43,6 +44,25 @@ body.apartments.edit {
 
                     span {
                         font-weight: 500;
+                    }
+                }
+            }
+
+            li.radio {
+                height: 35px;
+                legend label {
+                    text-transform: none;
+                }
+
+                ol {
+                    width: 600px;
+                    li {
+                        float: left;
+                        label {
+                            width: 55px;
+                            margin-right: 0px;
+                            text-transform: uppercase;
+                        }
                     }
                 }
             }
