@@ -10,7 +10,7 @@ Then /^I can create an? (apartment|sublet)$/ do |apartment_or_sublet|
 
   When %Q{I fill in an apartment's fields}
   if apartment_or_sublet == "sublet"
-    check "This is a sublet"
+    choose "apartment_sublet_true"
     fill_in "End date", :with => 6.months.from_now
   else
     page.should have_css("li.hidden label:contains('End date')")
