@@ -980,13 +980,14 @@ body.apartments.edit div.aside div#map_canvas {
 body.apartments.edit div.aside div[data-content-key=comparables] {
   overflow: hidden;
   display: inline-block;
-  margin-top: 25px;
+  margin-top: 10px;
+  background: url(/images/backgrounds/comparables.png) no-repeat 0 0;
 }
 /* line 8, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/general/_hacks.scss */
 body.apartments.edit div.aside div[data-content-key=comparables] {
   display: block;
 }
-/* line 163, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 164, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.aside div[data-content-key=comparables] h6 {
   color: #647378;
   text-align: center;
@@ -994,30 +995,30 @@ body.apartments.edit div.aside div[data-content-key=comparables] h6 {
   padding: 25px 0;
   width: 295px;
 }
-/* line 171, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 172, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.aside div[data-content-key=comparables] table {
   width: 295px;
 }
-/* line 175, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 176, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.aside div[data-content-key=comparables] table tr td {
   border-bottom: 1px solid #CCCCCC;
   padding: 5px 0 10px;
 }
-/* line 179, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 180, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.aside div[data-content-key=comparables] table tr td span.street {
   display: block;
   font-size: 1.1em;
 }
-/* line 183, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 184, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.aside div[data-content-key=comparables] table tr td span.street a {
   color: black;
   font-weight: 500;
 }
-/* line 189, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 190, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.aside div[data-content-key=comparables] table tr td span.info {
   color: #666;
 }
-/* line 194, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 195, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.aside div[data-content-key=comparables] table tr td.rent {
   font-size: 1.1em;
   font-weight: 500;

@@ -158,7 +158,8 @@ body.apartments.edit {
 
         div[data-content-key=comparables] {
             @include clearfix;
-            margin-top: 25px;
+            margin-top: 10px;
+            background: url(/images/backgrounds/comparables.png) no-repeat 0 0;
 
             h6 {
                 color: #647378;
