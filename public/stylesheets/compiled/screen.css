@@ -1028,7 +1028,7 @@ body.apartments.edit div.aside div[data-content-key=comparables] table tr td.ren
 
 /* line 2, ../../../app/stylesheets/partials/apartments/_owner.scss */
 body.apartments div.owner {
-  border-bottom: 5px solid black;
+  background: url(/images/backgrounds/tab.png) repeat-x left bottom;
 }
 /* line 5, ../../../app/stylesheets/partials/apartments/_owner.scss */
 body.apartments div.owner ul.buttons {
@@ -1060,4 +1060,5 @@ body.apartments div.owner ul.tabs li.active {
   border-top: 4px solid #A0C045;
   border-left: 4px solid #DCDCDC;
   border-right: 4px solid #DCDCDC;
+  background: url(/images/backgrounds/white.png) repeat-x left bottom;
 }

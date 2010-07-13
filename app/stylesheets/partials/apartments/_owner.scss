@@ -1,6 +1,6 @@
 body.apartments {
     div.owner {
-        border-bottom: 5px solid black;
+        background: url(/images/backgrounds/tab.png) repeat-x left bottom;
 
         ul.buttons {
             float: right;
@@ -24,6 +24,7 @@ body.apartments {
                 border-top: 4px solid #A0C045;
                 border-left: 4px solid #DCDCDC;
                 border-right: 4px solid #DCDCDC;
+                background: url(/images/backgrounds/white.png) repeat-x left bottom;
             }
         }
     }
