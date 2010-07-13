@@ -38,17 +38,27 @@ describe Apartment do
     @apartment.should have(1).error_on(:end_date)
   end
 
-  describe "#before_validation_on_update" do
-    it "upcases unit" do
-      @apartment = Factory.build(:apartment, :unit => "1c")
-      @apartment.save
-      @apartment.reload.unit.should == "1C"
-    end
+  describe ".bedrooms_near" do
+    it "returns apartments with bedrooms within 0.5 of the given value" do
+      @apartment1 = Factory(:apartment, :bedrooms => 2)
+      @apartment2 = Factory(:apartment, :bedrooms => 3)
+      @apartment3 = Factory(:apartment, :bedrooms => 4)
 
-    it "deletes pounds from unit" do
-      @apartment = Factory.build(:apartment, :unit => "#1c")
-      @apartment.save
-      @apartment.reload.unit.should == "1C"
+      Apartment.bedrooms_near(2.5).should include(@apartment1)
+      Apartment.bedrooms_near(2.5).should include(@apartment2)
+      Apartment.bedrooms_near(2.5).should_not include(@apartment3)
+    end
+  end
+
+  describe ".rent_near" do
+    it "returns apartments with rent within 20% of the given value" do
+      @apartment1 = Factory(:apartment, :rent => 800)
+      @apartment2 = Factory(:apartment, :rent => 1200)
+      @apartment3 = Factory(:apartment, :rent => 1201)
+
+      Apartment.rent_near(1000).should include(@apartment1)
+      Apartment.rent_near(1000).should include(@apartment2)
+      Apartment.rent_near(1000).should_not include(@apartment3)
     end
   end
 
@@ -85,10 +95,17 @@ describe Apartment do
     end
   end
 
-  describe "#name" do
-    it "should join address and unit" do
-      @apartment = Factory(:apartment)
-      @apartment.name.should == [@apartment.full_address, @apartment.unit].compact.join(" #")
+  describe "#before_validation_on_update" do
+    it "upcases unit" do
+      @apartment = Factory.build(:apartment, :unit => "1c")
+      @apartment.save
+      @apartment.reload.unit.should == "1C"
+    end
+
+    it "deletes pounds from unit" do
+      @apartment = Factory.build(:apartment, :unit => "#1c")
+      @apartment.save
+      @apartment.reload.unit.should == "1C"
     end
   end
 
@@ -112,6 +129,13 @@ describe Apartment do
         @apartment.send("#{attr}=", nil)
         @apartment.should_not be_listable
       end
+    end
+  end
+
+  describe "#name" do
+    it "should join address and unit" do
+      @apartment = Factory(:apartment)
+      @apartment.name.should == [@apartment.full_address, @apartment.unit].compact.join(" #")
     end
   end
 end
