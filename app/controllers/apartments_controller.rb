@@ -22,9 +22,20 @@ class ApartmentsController < ApplicationController
   def update
     @apartment = Apartment.find(params[:id])
     if @apartment.update_attributes(params[:apartment])
-      redirect_to params[:return_to] || edit_apartment_path(@apartment)
+      respond_to do |format|
+        format.html { redirect_to params[:return_to] || edit_apartment_path(@apartment) }
+        format.js do
+          render :json => {
+                  :comparables => render_to_string(:partial => "apartments/comparables",
+                                                   :locals => { :apartments => @apartment.comparable_apartments })
+          }
+        end
+      end
     else
-      render :edit
+      respond_to do |format|
+        format.html { render :edit }
+        format.js { render :nothing => true }
+      end
     end
   end
 

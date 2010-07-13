@@ -156,7 +156,7 @@ body.apartments.edit {
             height: 306px;
         }
 
-        div#comparables {
+        div[data-content-key=comparables] {
             @include clearfix;
             margin-top: 25px;
 

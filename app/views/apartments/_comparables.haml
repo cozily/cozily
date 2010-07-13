@@ -1,0 +1,10 @@
+%div{ :'data-content-key' => "comparables" }
+  %h6 Comparable Rental Prices In The Area
+  %table
+    -apartments.each do |apartment|
+      %tr
+        %td &nbsp;
+        %td
+          %span.street=link_to apartment.street, apartment
+          %span.info==#{apartment.bedrooms.prettify}bd/#{apartment.bathrooms.prettify}ba
+        %td.rent==$#{number_with_delimiter(apartment.rent)}

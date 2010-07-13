@@ -20,6 +20,7 @@ class Apartment < ActiveRecord::Base
                                              inner join addresses a2 on a2.id = a1.address_id
                                               where a2.id = #{address_id}'
 
+  acts_as_mappable :through => :address
   has_friendly_id :name, :use_slug => true, :allow_nil => true
 
   delegate :full_address, :lat, :lng, :street, :to => :address
@@ -81,7 +82,7 @@ class Apartment < ActiveRecord::Base
   end
 
   def comparable_apartments
-    Apartment.with_state(:listed)
+    Apartment.with_state(:listed).bedrooms_gte(bedrooms - 0.5).bedrooms_lte(bedrooms + 0.5).to_a.sort_by_distance_from(self)
   end
 
   def fields_remaining_for_listing
