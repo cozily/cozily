@@ -15,6 +15,7 @@
     = javascript_include_tag 'jquery-ui'
     = javascript_include_tag 'jquery.scrollTo'
     = javascript_include_tag 'jquery.tabSlideOut'
+    = javascript_include_tag 'jquery.spicyselect'
     = javascript_include_tag 'ajaxupload'
     = javascript_include_tag 'application'
     = javascript_include_tag 'maps'
@@ -41,6 +42,16 @@
         =render "sessions/nav_actions"
 
     #search
+      .container
+        %h2 Find Apartments
+
+        -form_for :q, Search.new(:min_bedrooms => "", :max_rent => ""), :url => search_path, :html => {:method => :get} do |f|
+          =f.select :neighborhood_ids, Neighborhood.to_dropdown, :prompt => "All Neighborhoods"
+          =f.select :min_bedrooms, Search::BEDROOMS, :prompt => "All # Bedrooms"
+          =f.select :max_rent, Search::RENTS, :prompt => "All Prices"
+
+          =f.submit :search
+
 
     #breadcrumbs
 

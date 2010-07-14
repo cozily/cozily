@@ -30,7 +30,7 @@ class Neighborhood < ActiveRecord::Base
     end
 
     def to_dropdown
-      all.map {|n| [n.name, n.id]}
+      Neighborhood.ascend_by_name.map {|n| [n.name, n.id]}
     end
   end
 

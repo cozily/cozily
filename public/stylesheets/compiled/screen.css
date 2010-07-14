@@ -463,6 +463,150 @@ div.feedback textarea {
   height: 100px;
 }
 
+/* line 2, ../../../app/stylesheets/partials/_search.scss */
+div#search div.container {
+  overflow: visible;
+}
+/* line 6, ../../../app/stylesheets/partials/_search.scss */
+div#search h2 {
+  color: white;
+  font-weight: 500;
+  padding: 15px 0;
+  float: left;
+  margin-right: 20px;
+}
+/* line 14, ../../../app/stylesheets/partials/_search.scss */
+div#search form {
+  padding: 18px 0;
+}
+/* line 17, ../../../app/stylesheets/partials/_search.scss */
+div#search form div.spicyselect {
+  float: left;
+  margin-right: 10px;
+  background-color: white;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  padding: 5px 5px 5px 15px;
+}
+/* line 24, ../../../app/stylesheets/partials/_search.scss */
+div#search form div.spicyselect a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: #999;
+  font-size: 1.2em;
+  font-weight: 200;
+}
+/* line 34, ../../../app/stylesheets/partials/_search.scss */
+div#search form div.spicyselect.focus {
+  -moz-box-shadow: black 0 0 5px;
+  -webkit-box-shadow: black 0 0 5px;
+  -o-box-shadow: black 0 0 5px;
+  box-shadow: black 0 0 5px;
+}
+/* line 38, ../../../app/stylesheets/partials/_search.scss */
+div#search form div#q_neighborhood_ids_mask {
+  width: 230px;
+}
+/* line 41, ../../../app/stylesheets/partials/_search.scss */
+div#search form div#q_neighborhood_ids_mask ol {
+  width: 600px;
+  z-index: 100;
+}
+/* line 44, ../../../app/stylesheets/partials/_search.scss */
+div#search form div#q_neighborhood_ids_mask ol li {
+  float: left;
+  border: none;
+  width: 140px;
+}
+/* line 52, ../../../app/stylesheets/partials/_search.scss */
+div#search form div#q_min_bedrooms_mask {
+  width: 125px;
+}
+/* line 56, ../../../app/stylesheets/partials/_search.scss */
+div#search form div#q_max_rent_mask {
+  width: 150px;
+}
+/* line 60, ../../../app/stylesheets/partials/_search.scss */
+div#search form input[type=submit] {
+  text-transform: capitalize;
+  color: white;
+  font-size: 1.2em;
+  background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, color-stop(0%, #6f7e85), color-stop(100%, #7d8a92));
+  background-image: -moz-radial-gradient(center center, circle, #6f7e85 0%, #7d8a92 100%);
+  background-color: #6F7E85;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  border-radius: 4px;
+  border: none;
+  width: 110px;
+  height: 30px;
+  margin-left: 20px;
+}
+
+/* line 75, ../../../app/stylesheets/partials/_search.scss */
+.spicyselect {
+  width: 200px;
+  position: relative;
+}
+
+/* line 80, ../../../app/stylesheets/partials/_search.scss */
+.spicyselect:hover {
+  cursor: default;
+}
+
+/* line 84, ../../../app/stylesheets/partials/_search.scss */
+.spicyselect > ol {
+  border-top: 1px solid black;
+  position: absolute;
+  background-color: white;
+  border: 1px solid black;
+}
+
+/* line 91, ../../../app/stylesheets/partials/_search.scss */
+.spicyselect ol {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 96, ../../../app/stylesheets/partials/_search.scss */
+.spicyselect ol ol {
+  padding-left: 8px;
+}
+
+/* line 100, ../../../app/stylesheets/partials/_search.scss */
+.spicyselect ol ol li.optgroup_label {
+  margin-left: -8px;
+  font-weight: bold;
+  background-color: lightgray;
+}
+
+/* line 106, ../../../app/stylesheets/partials/_search.scss */
+.spicyselect ol ol li.optgroup_label:hover {
+  background-color: lightgray;
+  color: black;
+}
+
+/* line 111, ../../../app/stylesheets/partials/_search.scss */
+.spicyselect li {
+  border-bottom: 1px solid black;
+  list-style: none;
+  padding: 5px;
+}
+
+/* line 117, ../../../app/stylesheets/partials/_search.scss */
+.spicyselect li.current {
+  background-color: lightblue;
+  color: black;
+}
+
 /* line 2, ../../../app/stylesheets/partials/_apartments.sass */
 body.apartments.show div.article {
   width: 625px;
