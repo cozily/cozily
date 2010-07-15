@@ -8,8 +8,19 @@ class ApplicationController < ActionController::Base
   geocode_ip_address
   has_mobile_fu
 
+  layout :set_layout
+
   rescue_from CanCan::AccessDenied do |exception|
     flash[:error] = exception.message
     redirect_to root_url
+  end
+
+  private
+  def set_layout
+    if is_mobile_device?
+      "mobile"
+    else
+      "application"
+    end
   end
 end
