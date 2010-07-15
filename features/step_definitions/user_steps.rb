@@ -25,3 +25,17 @@ Then /^I can edit my profile$/ do
 
   the.user.reload.email.should == "new@email.com"
 end
+
+Given /^I am an unauthenticated user$/ do
+  the.user = Factory(:email_confirmed_user)
+end
+
+Then /^I can sign in on the homepage$/ do
+  visit root_path
+
+  fill_in "session_email", :with => the.user.email
+  fill_in "session_password", :with => the.user.password
+  click_button "Sign in"
+
+  page.should have_content "Hi #{the.user.first_name}"
+end

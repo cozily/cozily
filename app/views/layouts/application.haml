@@ -41,19 +41,20 @@
 
         =render "sessions/nav_actions"
 
-    #search
-      .container
-        %h2 Find Apartments
+    -if current_user
+      #search
+        .container
+          %h2 Find Apartments
 
-        -form_for :q, Search.new(:min_bedrooms => "", :max_rent => ""), :url => search_path, :html => {:method => :get} do |f|
-          =f.select :neighborhood_ids, Neighborhood.to_dropdown, :prompt => "All Neighborhoods"
-          =f.select :min_bedrooms, Search::BEDROOMS, :prompt => "All # Bedrooms"
-          =f.select :max_rent, Search::RENTS, :prompt => "All Prices"
+          -form_for :q, Search.new(:min_bedrooms => "", :max_rent => ""), :url => search_path, :html => {:method => :get} do |f|
+            =f.select :neighborhood_ids, Neighborhood.to_dropdown, :prompt => "All Neighborhoods"
+            =f.select :min_bedrooms, Search::BEDROOMS, :prompt => "All # Bedrooms"
+            =f.select :max_rent, Search::RENTS, :prompt => "All Prices"
 
-          =f.submit :search
+            =f.submit :search
 
 
-    #breadcrumbs
+      #breadcrumbs
 
     #body
       .container
