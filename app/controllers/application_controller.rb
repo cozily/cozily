@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
 
   geocode_ip_address
+  has_mobile_fu
 
   rescue_from CanCan::AccessDenied do |exception|
     flash[:error] = exception.message
