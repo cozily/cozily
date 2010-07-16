@@ -533,36 +533,36 @@ div#search form div#q_max_rent_mask {
 }
 /* line 60, ../../../app/stylesheets/partials/_search.scss */
 div#search form input[type=submit] {
-  text-transform: capitalize;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #637379;
+  height: 33px;
   color: white;
+  font-weight: 500;
   font-size: 1.2em;
-  background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, color-stop(0%, #6f7e85), color-stop(100%, #7d8a92));
-  background-image: -moz-radial-gradient(center center, circle, #6f7e85 0%, #7d8a92 100%);
-  background-color: #6F7E85;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -o-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -khtml-border-radius: 4px;
-  border-radius: 4px;
-  border: none;
+  text-transform: capitalize;
+  line-height: 32px;
+  background: url(/images/buttons/blue_button.png) repeat-x;
   width: 110px;
-  height: 30px;
   margin-left: 20px;
 }
 
-/* line 75, ../../../app/stylesheets/partials/_search.scss */
+/* line 68, ../../../app/stylesheets/partials/_search.scss */
 .spicyselect {
   width: 200px;
   position: relative;
 }
 
-/* line 80, ../../../app/stylesheets/partials/_search.scss */
+/* line 73, ../../../app/stylesheets/partials/_search.scss */
 .spicyselect:hover {
   cursor: default;
 }
 
-/* line 84, ../../../app/stylesheets/partials/_search.scss */
+/* line 77, ../../../app/stylesheets/partials/_search.scss */
 .spicyselect > ol {
   border-top: 1px solid black;
   position: absolute;
@@ -570,38 +570,38 @@ div#search form input[type=submit] {
   border: 1px solid black;
 }
 
-/* line 91, ../../../app/stylesheets/partials/_search.scss */
+/* line 84, ../../../app/stylesheets/partials/_search.scss */
 .spicyselect ol {
   margin: 0;
   padding: 0;
 }
 
-/* line 96, ../../../app/stylesheets/partials/_search.scss */
+/* line 89, ../../../app/stylesheets/partials/_search.scss */
 .spicyselect ol ol {
   padding-left: 8px;
 }
 
-/* line 100, ../../../app/stylesheets/partials/_search.scss */
+/* line 93, ../../../app/stylesheets/partials/_search.scss */
 .spicyselect ol ol li.optgroup_label {
   margin-left: -8px;
   font-weight: bold;
   background-color: lightgray;
 }
 
-/* line 106, ../../../app/stylesheets/partials/_search.scss */
+/* line 99, ../../../app/stylesheets/partials/_search.scss */
 .spicyselect ol ol li.optgroup_label:hover {
   background-color: lightgray;
   color: black;
 }
 
-/* line 111, ../../../app/stylesheets/partials/_search.scss */
+/* line 104, ../../../app/stylesheets/partials/_search.scss */
 .spicyselect li {
   border-bottom: 1px solid black;
   list-style: none;
   padding: 5px;
 }
 
-/* line 117, ../../../app/stylesheets/partials/_search.scss */
+/* line 110, ../../../app/stylesheets/partials/_search.scss */
 .spicyselect li.current {
   background-color: lightblue;
   color: black;
@@ -758,38 +758,43 @@ body.apartments.show div.article div.content div.contact form fieldset.buttons l
 }
 /* line 120, ../../../app/stylesheets/partials/_apartments.sass */
 body.apartments.show div.article div.content div.contact form fieldset.buttons li.commit input {
-  background: transparent url(/images/backgrounds/button.png) repeat-x scroll 0 0;
-  padding: 5px 10px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #637379;
+  height: 33px;
   color: white;
-  border: 1px solid #ebebeb;
+  font-weight: 500;
   font-size: 1.2em;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -o-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -khtml-border-radius: 4px;
-  border-radius: 4px;
+  text-transform: capitalize;
+  line-height: 32px;
+  background: url(/images/buttons/blue_button.png) repeat-x;
+  font-weight: 400;
+  width: 140px;
 }
-/* line 128, ../../../app/stylesheets/partials/_apartments.sass */
+/* line 125, ../../../app/stylesheets/partials/_apartments.sass */
 body.apartments.show div.article div.content div.contact div.messages {
   background-color: #f5f5f5;
   padding: 10px 15px;
   margin-top: 15px;
 }
-/* line 133, ../../../app/stylesheets/partials/_apartments.sass */
+/* line 130, ../../../app/stylesheets/partials/_apartments.sass */
 body.apartments.show div.article div.content div.contact div.messages h5 {
   font-size: 1.2em;
   border-bottom: 1px solid #ebebeb;
   padding-bottom: 5px;
   margin-bottom: 0.75em;
 }
-/* line 139, ../../../app/stylesheets/partials/_apartments.sass */
+/* line 136, ../../../app/stylesheets/partials/_apartments.sass */
 body.apartments.show div.article div.content div.contact div.messages div.message {
   font-family: "Arial", "Helvetica", "sans-serif";
   font-size: 1em;
   margin-bottom: 15px;
 }
-/* line 144, ../../../app/stylesheets/partials/_apartments.sass */
+/* line 141, ../../../app/stylesheets/partials/_apartments.sass */
 body.apartments.show div.article div.content div.contact div.messages div.message img {
   width: 75px;
   height: 75px;
@@ -797,116 +802,116 @@ body.apartments.show div.article div.content div.contact div.messages div.messag
   margin-right: 15px;
   float: left;
 }
-/* line 151, ../../../app/stylesheets/partials/_apartments.sass */
+/* line 148, ../../../app/stylesheets/partials/_apartments.sass */
 body.apartments.show div.article div.content div.contact div.messages div.message p {
   margin-top: 5px;
   float: left;
   width: 80%;
 }
-/* line 156, ../../../app/stylesheets/partials/_apartments.sass */
+/* line 153, ../../../app/stylesheets/partials/_apartments.sass */
 body.apartments.show div.article div.content div.contact div.messages div.message span.date {
   font-weight: bold;
 }
-/* line 159, ../../../app/stylesheets/partials/_apartments.sass */
+/* line 156, ../../../app/stylesheets/partials/_apartments.sass */
 body.apartments.show div.article div.content div.contact div.messages div.message span {
   font-size: 1em;
   padding: 0 10px 0 0;
   border: none;
 }
-/* line 164, ../../../app/stylesheets/partials/_apartments.sass */
+/* line 161, ../../../app/stylesheets/partials/_apartments.sass */
 body.apartments.show div.aside {
   width: 315px;
   float: right;
 }
-/* line 168, ../../../app/stylesheets/partials/_apartments.sass */
+/* line 165, ../../../app/stylesheets/partials/_apartments.sass */
 body.apartments.show div.aside img.shadow {
   margin-bottom: 15px;
   padding-left: 1px;
 }
-/* line 173, ../../../app/stylesheets/partials/_apartments.sass */
+/* line 170, ../../../app/stylesheets/partials/_apartments.sass */
 body.apartments.show div.aside div#nearby_stations h3 {
   border-right: 4px solid #efa54e;
 }
-/* line 176, ../../../app/stylesheets/partials/_apartments.sass */
+/* line 173, ../../../app/stylesheets/partials/_apartments.sass */
 body.apartments.show div.aside div#nearby_stations table {
   background-color: #f0f4f7;
   padding: 6px 6px 10px 6px;
   width: 311px;
 }
-/* line 181, ../../../app/stylesheets/partials/_apartments.sass */
+/* line 178, ../../../app/stylesheets/partials/_apartments.sass */
 body.apartments.show div.aside div#nearby_stations table tr td {
   border-bottom: 1px solid #e7ebee;
 }
-/* line 184, ../../../app/stylesheets/partials/_apartments.sass */
+/* line 181, ../../../app/stylesheets/partials/_apartments.sass */
 body.apartments.show div.aside div#nearby_stations table td:first-child {
   color: #202123;
   width: 90%;
 }
-/* line 188, ../../../app/stylesheets/partials/_apartments.sass */
+/* line 185, ../../../app/stylesheets/partials/_apartments.sass */
 body.apartments.show div.aside div#nearby_stations table td:last-child {
   color: #676767;
   text-align: right;
   width: 10%;
 }
-/* line 194, ../../../app/stylesheets/partials/_apartments.sass */
+/* line 191, ../../../app/stylesheets/partials/_apartments.sass */
 body.apartments.show div.aside div#nearby_restaurants h3 {
   border-right: 4px solid #429e87;
 }
-/* line 197, ../../../app/stylesheets/partials/_apartments.sass */
+/* line 194, ../../../app/stylesheets/partials/_apartments.sass */
 body.apartments.show div.aside div#nearby_restaurants ul {
   width: 311px;
 }
-/* line 199, ../../../app/stylesheets/partials/_apartments.sass */
+/* line 196, ../../../app/stylesheets/partials/_apartments.sass */
 body.apartments.show div.aside div#nearby_restaurants ul li {
   float: left;
   width: 145px;
   margin-bottom: 5px;
   padding-left: 10px;
 }
-/* line 204, ../../../app/stylesheets/partials/_apartments.sass */
+/* line 201, ../../../app/stylesheets/partials/_apartments.sass */
 body.apartments.show div.aside div#nearby_restaurants ul li a {
   display: block;
 }
-/* line 206, ../../../app/stylesheets/partials/_apartments.sass */
+/* line 203, ../../../app/stylesheets/partials/_apartments.sass */
 body.apartments.show div.aside div#nearby_restaurants ul li a img {
   border: 4px solid #e8e8ea;
 }
-/* line 209, ../../../app/stylesheets/partials/_apartments.sass */
+/* line 206, ../../../app/stylesheets/partials/_apartments.sass */
 body.apartments.show div.aside h3 {
   font-size: 2em;
   padding-bottom: 8px;
   margin-bottom: 0;
 }
-/* line 214, ../../../app/stylesheets/partials/_apartments.sass */
+/* line 211, ../../../app/stylesheets/partials/_apartments.sass */
 body.apartments.show div.aside ul.actions {
   float: right;
   height: 100px;
 }
-/* line 217, ../../../app/stylesheets/partials/_apartments.sass */
+/* line 214, ../../../app/stylesheets/partials/_apartments.sass */
 body.apartments.show div.aside ul.actions li {
   float: left;
   padding: 0 15px;
   font-size: 1.05em;
   line-height: 35px;
 }
-/* line 222, ../../../app/stylesheets/partials/_apartments.sass */
+/* line 219, ../../../app/stylesheets/partials/_apartments.sass */
 body.apartments.show div.aside ul.actions li div {
   padding-left: 5px;
 }
-/* line 225, ../../../app/stylesheets/partials/_apartments.sass */
+/* line 222, ../../../app/stylesheets/partials/_apartments.sass */
 body.apartments.show div.aside ul.actions li.favorite {
   background: url(/images/icons/favorite.png) no-repeat 0 9px;
 }
-/* line 228, ../../../app/stylesheets/partials/_apartments.sass */
+/* line 225, ../../../app/stylesheets/partials/_apartments.sass */
 body.apartments.show div.aside ul.actions li.flag {
   background: url(/images/icons/flag.png) no-repeat 0 9px;
 }
-/* line 232, ../../../app/stylesheets/partials/_apartments.sass */
+/* line 229, ../../../app/stylesheets/partials/_apartments.sass */
 body.apartments.show div.aside div#map_canvas {
   width: 311px;
   height: 311px;
 }
-/* line 236, ../../../app/stylesheets/partials/_apartments.sass */
+/* line 233, ../../../app/stylesheets/partials/_apartments.sass */
 body.apartments.show dl {
   clear: both;
 }
@@ -914,35 +919,37 @@ body.apartments.show dl {
 /* line 3, ../../../app/stylesheets/partials/apartments/_apartments.scss */
 body.apartments ul.buttons li {
   float: left;
-  padding: 10px 15px;
-  margin: 9px 10px 0 0;
-  background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, color-stop(0%, #6f7e85), color-stop(100%, #7d8a92));
-  background-image: -moz-radial-gradient(center center, circle, #6f7e85 0%, #7d8a92 100%);
-  background-color: #6F7E85;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -o-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -khtml-border-radius: 4px;
-  border-radius: 4px;
+  margin: 9px 8px 0 0;
 }
-/* line 11, ../../../app/stylesheets/partials/apartments/_apartments.scss */
+/* line 7, ../../../app/stylesheets/partials/apartments/_apartments.scss */
 body.apartments ul.buttons li a {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #637379;
+  height: 33px;
+  color: white;
+  font-weight: 500;
+  font-size: 1.2em;
+  text-transform: capitalize;
+  line-height: 32px;
+  background: url(/images/buttons/blue_button.png) repeat-x;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  line-height: 32px;
+  width: 130px;
   font-size: 1.1em;
   font-weight: 500;
   color: white;
 }
-/* line 18, ../../../app/stylesheets/partials/apartments/_apartments.scss */
-body.apartments ul.buttons li.save, body.apartments ul.buttons li.list {
-  background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, color-stop(0%, #9abf34), color-stop(100%, #a5ca3e));
-  background-image: -moz-radial-gradient(center center, circle, #9abf34 0%, #a5ca3e 100%);
-  background-color: #9ABF34;
-}
-/* line 23, ../../../app/stylesheets/partials/apartments/_apartments.scss */
+/* line 20, ../../../app/stylesheets/partials/apartments/_apartments.scss */
 body.apartments ul.buttons li.list {
   font-size: 1.6em;
   margin-top: 0;
-  padding: 12px 20px;
 }
 
 /* line 2, ../../../app/stylesheets/partials/apartments/_edit.scss */
@@ -1034,30 +1041,35 @@ body.apartments.edit div.article form.apartment div#upload_photos p {
 }
 /* line 80, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.article form.apartment div#upload_photos a#upload {
-  background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, color-stop(0%, #6f7e85), color-stop(100%, #7d8a92));
-  background-image: -moz-radial-gradient(center center, circle, #6f7e85 0%, #7d8a92 100%);
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #637379;
+  height: 33px;
   color: white;
-  padding: 10px 15px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -o-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -khtml-border-radius: 4px;
-  border-radius: 4px;
-  text-decoration: none;
   font-weight: 500;
-  font-size: 1.15em;
+  font-size: 1.2em;
+  text-transform: capitalize;
+  line-height: 32px;
+  background: url(/images/buttons/blue_button.png) repeat-x;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  line-height: 32px;
+  width: 130px;
   margin-left: 140px;
-  margin: 30px 0 30px 140px;
 }
-/* line 92, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 86, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.article form.apartment div#upload_photos div#upload_status {
   float: right;
   margin-right: 170px;
   font-style: italic;
   overflow: hidden;
 }
-/* line 99, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 93, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.article form.apartment div#upload_photos ul#images {
   overflow: hidden;
   display: inline-block;
@@ -1067,38 +1079,38 @@ body.apartments.edit div.article form.apartment div#upload_photos ul#images {
 body.apartments.edit div.article form.apartment div#upload_photos ul#images {
   display: block;
 }
-/* line 103, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 97, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.article form.apartment div#upload_photos ul#images li {
   float: left;
   margin-right: 25px;
 }
-/* line 107, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 101, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.article form.apartment div#upload_photos ul#images li img {
   width: 55px;
   height: 55px;
   display: block;
   margin-bottom: 5px;
 }
-/* line 114, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 108, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.article form.apartment div#upload_photos ul#images li a {
   font-size: 0.85em;
   margin-left: 7px;
 }
-/* line 122, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 116, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.article form.apartment ul.features {
   margin-left: 40px;
 }
-/* line 125, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 119, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.article form.apartment ul.features li.feature {
   float: left;
   width: 185px;
 }
-/* line 129, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 123, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.article form.apartment ul.features li.feature input[type=checkbox] {
   float: left;
   margin: 5px 20px 0 0;
 }
-/* line 134, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 128, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.article form.apartment ul.features li.feature label {
   text-transform: capitalize;
   font-size: 1.2em;
@@ -1107,20 +1119,20 @@ body.apartments.edit div.article form.apartment ul.features li.feature label {
   padding-top: 0;
   line-height: 24px;
 }
-/* line 147, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 141, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.aside {
   padding-top: 25px;
 }
-/* line 150, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 144, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.aside h2 {
   margin-bottom: 3px;
 }
-/* line 154, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 148, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.aside div#map_canvas {
   width: 306px;
   height: 306px;
 }
-/* line 159, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 153, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.aside div[data-content-key=comparables] {
   overflow: hidden;
   display: inline-block;
@@ -1131,7 +1143,7 @@ body.apartments.edit div.aside div[data-content-key=comparables] {
 body.apartments.edit div.aside div[data-content-key=comparables] {
   display: block;
 }
-/* line 164, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 158, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.aside div[data-content-key=comparables] h6 {
   color: #647378;
   text-align: center;
@@ -1139,30 +1151,30 @@ body.apartments.edit div.aside div[data-content-key=comparables] h6 {
   padding: 25px 0;
   width: 295px;
 }
-/* line 172, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 166, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.aside div[data-content-key=comparables] table {
   width: 295px;
 }
-/* line 176, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 170, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.aside div[data-content-key=comparables] table tr td {
   border-bottom: 1px solid #CCCCCC;
   padding: 5px 0 10px;
 }
-/* line 180, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 174, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.aside div[data-content-key=comparables] table tr td span.street {
   display: block;
   font-size: 1.1em;
 }
-/* line 184, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 178, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.aside div[data-content-key=comparables] table tr td span.street a {
   color: black;
   font-weight: 500;
 }
-/* line 190, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 184, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.aside div[data-content-key=comparables] table tr td span.info {
   color: #666;
 }
-/* line 195, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 189, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.aside div[data-content-key=comparables] table tr td.rent {
   font-size: 1.1em;
   font-weight: 500;
@@ -1177,7 +1189,7 @@ body.apartments div.owner {
 /* line 5, ../../../app/stylesheets/partials/apartments/_owner.scss */
 body.apartments div.owner ul.buttons {
   float: right;
-  margin: -50px 20px 0 0;
+  margin: -50px 15px 0 0;
 }
 /* line 10, ../../../app/stylesheets/partials/apartments/_owner.scss */
 body.apartments div.owner ul.tabs {

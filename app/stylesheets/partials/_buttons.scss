@@ -1,0 +1,28 @@
+@mixin button {
+    @include border-radius(5px);
+    border: 1px solid #637379;
+    height: 33px;
+    color: white;
+    font-weight: 500;
+    font-size: 1.2em;
+    text-transform: capitalize;
+    line-height: 32px;
+}
+
+@mixin dark-blue-button {
+    @include button;
+    background: url(/images/buttons/blue_button.png) repeat-x;
+}
+
+@mixin green-button {
+    @include button;
+    background: url(/images/buttons/green_button.png) repeat-x;
+}
+
+@mixin dark-blue-link {
+    @include dark-blue-button;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    line-height: 32px;
+}

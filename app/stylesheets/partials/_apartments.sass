@@ -118,12 +118,9 @@ body.apartments.show
               :float none
               :padding-right 0
               input
-                :background transparent url(/images/backgrounds/button.png) repeat-x scroll 0 0
-                :padding 5px 10px
-                :color white
-                :border 1px solid #EBEBEB
-                :font-size 1.2em
-                +border-radius(4px)
+                @include dark-blue-button
+                :font-weight 400
+                :width 140px
 
         div.messages
           :background-color #F5F5F5

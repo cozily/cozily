@@ -78,15 +78,9 @@ body.apartments.edit {
                 }
 
                 a#upload {
-                    @include radial-gradient(color-stops(#6F7E85, #7D8A92));
-                    color: white;
-                    padding: 10px 15px;
-                    @include border-radius(4px);
-                    text-decoration: none;
-                    font-weight: 500;
-                    font-size: 1.15em;
+                    @include dark-blue-link;
+                    width: 130px;
                     margin-left: 140px;
-                    margin: 30px 0 30px 140px;
                 }
 
                 div#upload_status {

@@ -2,13 +2,11 @@ body.apartments {
     ul.buttons {
         li {
             float: left;
-            padding: 10px 15px;
-            margin: 9px 10px 0 0;
-            @include radial-gradient(color-stops(#6F7E85, #7D8A92));
-            background-color: #6F7E85;
-            @include border-radius(4px);
+            margin: 9px 8px 0 0;
 
             a {
+                @include dark-blue-link;
+                width: 130px;
                 font-size: 1.1em;
                 font-weight: 500;
                 color: white;
@@ -16,14 +14,12 @@ body.apartments {
         }
 
         li.save, li.list {
-            @include radial-gradient(color-stops(#9ABF34, #A5CA3E));
-            background-color: #9ABF34;
+
         }
 
         li.list {
             font-size: 1.6em;
             margin-top: 0;
-            padding: 12px 20px;
         }
     }
 }
