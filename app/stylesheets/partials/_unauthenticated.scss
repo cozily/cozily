@@ -1,9 +1,73 @@
 body.welcome.index {
-    form.session {
-        input[type=submit] {
-            @include dark-blue-button;
-            width: 100px;
-            font-weight: 400;
+    div#body {
+        background: url(/images/backgrounds/unauthenticated_side.png) repeat-x;
+
+        div.container {
+            background: url(/images/backgrounds/unauthenticated.png) no-repeat;
+            width: 950px;
+            height: 582px;
+
+            h1 {
+                text-align: center;
+                margin-top: 50px;
+            }
+
+            div#buttons {
+                text-align: center;
+                margin-top: 50px;
+            }
+
+            img.lady {
+                position: relative;
+                top: -65px;
+            }
+
+            img.man {
+                position: relative;
+                top: -65px;
+                left: 555px;
+            }
+
+            div#login {
+                position: absolute;
+                top: 530px;
+
+                h6 {
+                    margin-left: 245px;
+                    color: #55534E;
+                }
+
+                form.session {
+                    margin-left: 245px;
+
+                    li {
+                        float: left;
+                        width: 175px;
+                        margin-right: 8px;
+
+                        input {
+                            width: 175px;
+                            max-width: 175px;
+                            height: 33px;
+                            padding: 4px;
+                            font-size: 1.25em;
+                            color: #888;
+                        }
+
+                        input[type=submit] {
+                            @include dark-blue-button;
+                            width: 100px;
+                            font-weight: 400;
+                            line-height: 21px;
+                            text-transform: none;
+                        }
+                    }
+                }
+            }
         }
+    }
+
+    div#foot {
+        background-color: white;
     }
 }

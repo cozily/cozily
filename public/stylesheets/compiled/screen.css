@@ -607,8 +607,68 @@ div#search form input[type=submit] {
   color: black;
 }
 
-/* line 3, ../../../app/stylesheets/partials/_unauthenticated.scss */
-body.welcome.index form.session input[type=submit] {
+/* line 2, ../../../app/stylesheets/partials/_unauthenticated.scss */
+body.welcome.index div#body {
+  background: url(/images/backgrounds/unauthenticated_side.png) repeat-x;
+}
+/* line 5, ../../../app/stylesheets/partials/_unauthenticated.scss */
+body.welcome.index div#body div.container {
+  background: url(/images/backgrounds/unauthenticated.png) no-repeat;
+  width: 950px;
+  height: 582px;
+}
+/* line 10, ../../../app/stylesheets/partials/_unauthenticated.scss */
+body.welcome.index div#body div.container h1 {
+  text-align: center;
+  margin-top: 50px;
+}
+/* line 15, ../../../app/stylesheets/partials/_unauthenticated.scss */
+body.welcome.index div#body div.container div#buttons {
+  text-align: center;
+  margin-top: 50px;
+}
+/* line 20, ../../../app/stylesheets/partials/_unauthenticated.scss */
+body.welcome.index div#body div.container img.lady {
+  position: relative;
+  top: -65px;
+}
+/* line 25, ../../../app/stylesheets/partials/_unauthenticated.scss */
+body.welcome.index div#body div.container img.man {
+  position: relative;
+  top: -65px;
+  left: 555px;
+}
+/* line 31, ../../../app/stylesheets/partials/_unauthenticated.scss */
+body.welcome.index div#body div.container div#login {
+  position: absolute;
+  top: 530px;
+}
+/* line 35, ../../../app/stylesheets/partials/_unauthenticated.scss */
+body.welcome.index div#body div.container div#login h6 {
+  margin-left: 245px;
+  color: #55534E;
+}
+/* line 40, ../../../app/stylesheets/partials/_unauthenticated.scss */
+body.welcome.index div#body div.container div#login form.session {
+  margin-left: 245px;
+}
+/* line 43, ../../../app/stylesheets/partials/_unauthenticated.scss */
+body.welcome.index div#body div.container div#login form.session li {
+  float: left;
+  width: 175px;
+  margin-right: 8px;
+}
+/* line 48, ../../../app/stylesheets/partials/_unauthenticated.scss */
+body.welcome.index div#body div.container div#login form.session li input {
+  width: 175px;
+  max-width: 175px;
+  height: 33px;
+  padding: 4px;
+  font-size: 1.25em;
+  color: #888;
+}
+/* line 57, ../../../app/stylesheets/partials/_unauthenticated.scss */
+body.welcome.index div#body div.container div#login form.session li input[type=submit] {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   -o-border-radius: 5px;
@@ -625,6 +685,12 @@ body.welcome.index form.session input[type=submit] {
   border: 1px solid #637379;
   width: 100px;
   font-weight: 400;
+  line-height: 21px;
+  text-transform: none;
+}
+/* line 70, ../../../app/stylesheets/partials/_unauthenticated.scss */
+body.welcome.index div#foot {
+  background-color: white;
 }
 
 /* line 2, ../../../app/stylesheets/partials/_apartments.sass */

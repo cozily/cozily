@@ -1,6 +1,15 @@
--semantic_form_for :session, :url => session_path do |form|
-  -form.inputs do
-    =form.input :email, :value => "FOO"
-    =form.input :password, :as => :password
-  -form.buttons do
-    =form.commit_button "Sign in"
+%h1 Intelligent apartment hunting in NYC. No brokers. No fees.
+
+#buttons
+  =link_to image_tag("buttons/find_an_apartment.png", :class => "find"), "#"
+  =link_to image_tag("buttons/list_an_apartment.png", :class => "list"), "#"
+=image_tag "characters/lady.png", :class => "lady"
+=image_tag "characters/man.png", :class => "man"
+
+#login
+  %h6 Already have an account?
+  -semantic_form_for :session, :url => session_path do |form|
+    -form.inputs do
+      =form.input :email, :label => false
+      =form.input :password, :as => :password, :label => false
+      =form.commit_button "Sign in"
