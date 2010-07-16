@@ -14,7 +14,9 @@ body.apartments {
         }
 
         li.save, li.list {
-
+            a {
+                @include green-link;
+            }
         }
 
         li.list {

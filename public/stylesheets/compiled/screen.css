@@ -539,7 +539,6 @@ div#search form input[type=submit] {
   -ms-border-radius: 5px;
   -khtml-border-radius: 5px;
   border-radius: 5px;
-  border: 1px solid #637379;
   height: 33px;
   color: white;
   font-weight: 500;
@@ -547,6 +546,7 @@ div#search form input[type=submit] {
   text-transform: capitalize;
   line-height: 32px;
   background: url(/images/buttons/blue_button.png) repeat-x;
+  border: 1px solid #637379;
   width: 110px;
   margin-left: 20px;
 }
@@ -615,7 +615,6 @@ body.welcome.index form.session input[type=submit] {
   -ms-border-radius: 5px;
   -khtml-border-radius: 5px;
   border-radius: 5px;
-  border: 1px solid #637379;
   height: 33px;
   color: white;
   font-weight: 500;
@@ -623,6 +622,7 @@ body.welcome.index form.session input[type=submit] {
   text-transform: capitalize;
   line-height: 32px;
   background: url(/images/buttons/blue_button.png) repeat-x;
+  border: 1px solid #637379;
   width: 100px;
   font-weight: 400;
 }
@@ -784,7 +784,6 @@ body.apartments.show div.article div.content div.contact form fieldset.buttons l
   -ms-border-radius: 5px;
   -khtml-border-radius: 5px;
   border-radius: 5px;
-  border: 1px solid #637379;
   height: 33px;
   color: white;
   font-weight: 500;
@@ -792,6 +791,7 @@ body.apartments.show div.article div.content div.contact form fieldset.buttons l
   text-transform: capitalize;
   line-height: 32px;
   background: url(/images/buttons/blue_button.png) repeat-x;
+  border: 1px solid #637379;
   font-weight: 400;
   width: 140px;
 }
@@ -943,13 +943,16 @@ body.apartments ul.buttons li {
 }
 /* line 7, ../../../app/stylesheets/partials/apartments/_apartments.scss */
 body.apartments ul.buttons li a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  line-height: 32px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   -o-border-radius: 5px;
   -ms-border-radius: 5px;
   -khtml-border-radius: 5px;
   border-radius: 5px;
-  border: 1px solid #637379;
   height: 33px;
   color: white;
   font-weight: 500;
@@ -957,16 +960,36 @@ body.apartments ul.buttons li a {
   text-transform: capitalize;
   line-height: 32px;
   background: url(/images/buttons/blue_button.png) repeat-x;
-  display: block;
-  text-decoration: none;
-  text-align: center;
-  line-height: 32px;
+  border: 1px solid #637379;
+  border: 1px solid #637379;
   width: 135px;
   font-size: 1.1em;
   font-weight: 500;
   color: white;
 }
-/* line 20, ../../../app/stylesheets/partials/apartments/_apartments.scss */
+/* line 17, ../../../app/stylesheets/partials/apartments/_apartments.scss */
+body.apartments ul.buttons li.save a, body.apartments ul.buttons li.list a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  line-height: 32px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  height: 33px;
+  color: white;
+  font-weight: 500;
+  font-size: 1.2em;
+  text-transform: capitalize;
+  line-height: 32px;
+  background: url(/images/buttons/green_button.png) repeat-x;
+  border: 1px solid #8EAC46;
+  border: 1px solid #8EAC46;
+}
+/* line 22, ../../../app/stylesheets/partials/apartments/_apartments.scss */
 body.apartments ul.buttons li.list {
   font-size: 1.6em;
   margin-top: 0;
@@ -1061,13 +1084,16 @@ body.apartments.edit div.article form.apartment div#upload_photos p {
 }
 /* line 80, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.article form.apartment div#upload_photos a#upload {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  line-height: 32px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   -o-border-radius: 5px;
   -ms-border-radius: 5px;
   -khtml-border-radius: 5px;
   border-radius: 5px;
-  border: 1px solid #637379;
   height: 33px;
   color: white;
   font-weight: 500;
@@ -1075,10 +1101,8 @@ body.apartments.edit div.article form.apartment div#upload_photos a#upload {
   text-transform: capitalize;
   line-height: 32px;
   background: url(/images/buttons/blue_button.png) repeat-x;
-  display: block;
-  text-decoration: none;
-  text-align: center;
-  line-height: 32px;
+  border: 1px solid #637379;
+  border: 1px solid #637379;
   width: 130px;
   margin-left: 140px;
 }

@@ -1,6 +1,5 @@
 @mixin button {
     @include border-radius(5px);
-    border: 1px solid #637379;
     height: 33px;
     color: white;
     font-weight: 500;
@@ -9,20 +8,33 @@
     line-height: 32px;
 }
 
+@mixin link {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    line-height: 32px;
+}
+
 @mixin dark-blue-button {
     @include button;
     background: url(/images/buttons/blue_button.png) repeat-x;
+    border: 1px solid #637379;
 }
 
 @mixin green-button {
     @include button;
     background: url(/images/buttons/green_button.png) repeat-x;
+    border: 1px solid #8EAC46;
 }
 
 @mixin dark-blue-link {
+    @include link;
     @include dark-blue-button;
-    display: block;
-    text-decoration: none;
-    text-align: center;
-    line-height: 32px;
+    border: 1px solid #637379;
+}
+
+@mixin green-link {
+    @include link;
+    @include green-button;
+    border: 1px solid #8EAC46;
 }
