@@ -164,9 +164,15 @@ body.apartments.edit {
             }
 
             table {
-                width: 295px;
+                width: 306px;
+                padding: 0 10px;
 
                 tr {
+                    td.marker {
+                        vertical-align: top;
+                        padding-top: 7px;
+                    }
+
                     td {
                         border-bottom: 1px solid #CCCCCC;
                         padding: 5px 0 10px;

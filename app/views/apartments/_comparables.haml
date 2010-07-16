@@ -3,7 +3,7 @@
   %table
     -apartments.each do |apartment|
       %tr
-        %td &nbsp;
+        %td.marker= image_tag "icons/orange_marker_with_shadow.png"
         %td
           %span.street=link_to apartment.street, apartment
           %span.info==#{apartment.bedrooms.prettify}bd/#{apartment.bathrooms.prettify}ba
