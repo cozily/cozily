@@ -1,5 +1,6 @@
 .owner
   -if type == :edit
+    %h1 Edit Listing
     %ul.buttons
       %li=link_to "Delete Apartment", apartment_path(apartment), :method => :delete, :confirm => "Are you sure?"
       -if apartment.can_unlist?
@@ -9,6 +10,8 @@
       %li.save=link_to "Save Changes", "#"
       -if apartment.can_list?
         %li.list=link_to "List Apartment", transition_apartment_path(apartment, :event => "list"), :method => :put
+  -else
+    %h1 View Listing
 
   %ul.tabs
     -[["Edit Listing", edit_apartment_path(apartment)], ["View Listing", apartment_path(apartment)]].each do |text, path|
