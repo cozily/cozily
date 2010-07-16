@@ -5,12 +5,19 @@ describe Favorite do
     Factory(:favorite)
   end
 
-  [:user, :apartment].each do |assoc|
-    it { should belong_to(assoc) }
-    it { should validate_presence_of(assoc) }
-  end
+  it { should belong_to(:user) }
+  it { should belong_to(:apartment) }
 
   it { should validate_uniqueness_of(:apartment_id, :scope => :user_id)}
+
+  it "should ensure that the favoriter is not the owner of the apartment" do
+    apartment = Factory(:apartment)
+    favorite = Factory.build(:favorite,
+                             :apartment => apartment,
+                             :user => apartment.user)
+    favorite.should be_invalid
+    favorite.should have(1).error_on(:user)
+  end
 
   describe "#after_create" do
     it "creates a created TimelineEvent" do

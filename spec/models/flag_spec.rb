@@ -10,6 +10,15 @@ describe Flag do
 
   it { should validate_uniqueness_of(:apartment_id, :scope => :user_id) }
 
+  it "should ensure that the flagger is not the owner of the apartment" do
+    apartment = Factory(:apartment)
+    flag = Factory.build(:flag,
+                         :apartment => apartment,
+                         :user => apartment.user)
+    flag.should be_invalid
+    flag.should have(1).error_on(:user)
+  end
+
   describe "#after_create" do
     it "creates a created TimelineEvent" do
       flag = Factory.build(:flag)

@@ -1,4 +1,5 @@
 require 'geokit-rails'
+require 'mobile_fu'
 
 class ApplicationController < ActionController::Base
   include Clearance::Authentication

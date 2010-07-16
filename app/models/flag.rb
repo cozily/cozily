@@ -3,6 +3,7 @@ class Flag < ActiveRecord::Base
   belongs_to :user
 
   validates_uniqueness_of :apartment_id, :scope => :user_id
+  validate :ensure_user_is_not_owner
 
   fires :created,
         :on => :create,
@@ -13,4 +14,9 @@ class Flag < ActiveRecord::Base
         :on => :destroy,
         :actor => :user,
         :secondary_subject => :apartment
+
+  private
+  def ensure_user_is_not_owner
+    errors.add(:user, "You can't flag your own apartment") if user == apartment.user
+  end
 end

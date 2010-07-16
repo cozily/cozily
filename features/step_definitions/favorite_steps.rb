@@ -14,7 +14,7 @@ Given /^I have favorites$/ do
   Factory(:favorite,
           :apartment => Factory(:apartment,
                                 :state => "listed"),
-          :user => User.last)
+          :user => the.user)
 end
 
 Then /^I can view my favorites$/ do
