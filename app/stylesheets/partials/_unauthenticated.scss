@@ -1,0 +1,9 @@
+body.welcome.index {
+    form.session {
+        input[type=submit] {
+            @include dark-blue-button;
+            width: 100px;
+            font-weight: 400;
+        }
+    }
+}
