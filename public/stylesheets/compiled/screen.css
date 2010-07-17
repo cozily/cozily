@@ -621,44 +621,46 @@ body.welcome.index div#body div.container {
 body.welcome.index div#body div.container h1 {
   text-align: center;
   margin-top: 50px;
+  font-size: 2.7em;
+  font-weight: 500;
 }
-/* line 15, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 17, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container div#buttons {
   text-align: center;
   margin-top: 50px;
 }
-/* line 20, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 22, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container img.lady {
   position: relative;
   top: -65px;
 }
-/* line 25, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 27, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container img.man {
   position: relative;
   top: -65px;
   left: 555px;
 }
-/* line 31, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 33, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container div#login {
   position: absolute;
   top: 530px;
 }
-/* line 35, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 37, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container div#login h6 {
   margin-left: 245px;
   color: #55534E;
 }
-/* line 40, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 42, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container div#login form.session {
   margin-left: 245px;
 }
-/* line 43, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 45, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container div#login form.session li {
   float: left;
   width: 175px;
   margin-right: 8px;
 }
-/* line 48, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 50, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container div#login form.session li input {
   width: 175px;
   max-width: 175px;
@@ -667,7 +669,7 @@ body.welcome.index div#body div.container div#login form.session li input {
   font-size: 1.25em;
   color: #888;
 }
-/* line 57, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 59, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container div#login form.session li input[type=submit] {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -688,7 +690,7 @@ body.welcome.index div#body div.container div#login form.session li input[type=s
   line-height: 21px;
   text-transform: none;
 }
-/* line 70, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 72, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#foot {
   background-color: white;
 }
@@ -714,7 +716,7 @@ body.dashboard div.head div.lady {
 body.dashboard div.head div.lady span {
   font-size: 1.2em;
   font-style: italic;
-  width: 190px;
+  width: 220px;
   padding: 15px 85px 0 0;
   text-align: center;
   display: block;
