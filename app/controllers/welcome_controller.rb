@@ -1,9 +1,5 @@
 class WelcomeController < ApplicationController
   def index
-    if signed_in?
-      redirect_to dashboard_path
-    else
-      render "unauthenticated"
-    end
+    redirect_to dashboard_path if signed_in?
   end
 end
