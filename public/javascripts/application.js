@@ -11,6 +11,19 @@ function updateContent(content) {
     $(document).trigger('content-updated');
 }
 
+function showAndFadeFlash() {
+    var container = $('div#flash');
+    if (container.children('span').html() !== '') {
+        clearTimeout(this.timer);
+
+        container.show();
+
+        this.timer = setTimeout(function() {
+            container.fadeOut();
+        }, 4000);
+    }
+}
+
 (function($) {
     $(function() {
         $("input[data-date=true]").datepicker();
@@ -223,6 +236,19 @@ function updateContent(content) {
             }
 
             return false;
+        });
+
+        if ($("div#flash span").text() !== '') {
+            showAndFadeFlash();
+        }
+
+        $(document).bind("content-received", function(event, data) {
+            console.debug(data);
+            var flash = data.flash;
+            if (flash && flash != "") {
+                $("div#flash span").html(flash);
+                showAndFadeFlash();
+            }
         });
 
         $(document).bind('content-received', function(e, content) {

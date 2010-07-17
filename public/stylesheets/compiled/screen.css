@@ -463,6 +463,21 @@ div.feedback textarea {
   height: 100px;
 }
 
+/* line 139, ../../../app/stylesheets/partials/_application.scss */
+div#flash {
+  position: fixed;
+  top: 5px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+/* line 147, ../../../app/stylesheets/partials/_application.scss */
+div#flash span {
+  background-color: red;
+  padding: 3px 8px;
+}
+
 /* line 2, ../../../app/stylesheets/partials/_search.scss */
 div#search div.container {
   overflow: visible;

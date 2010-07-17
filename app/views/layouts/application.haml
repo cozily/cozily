@@ -59,8 +59,7 @@
     #body
       .container
         #flash
-          -flash.each do |key, value|
-            %div{:id => "flash_#{key}"}=value
+          %span=flash[:success]
 
         =yield
 

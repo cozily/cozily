@@ -4,6 +4,6 @@ class FeedbackController < ApplicationController
       FeedbackMailer.deliver_feedback(params[:feedback][:email], params[:feedback][:message])
     end
 
-    render :json => { }
+    render :json => { :flash => "Thanks for your feedback!" }
   end
 end

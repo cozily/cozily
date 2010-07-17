@@ -135,3 +135,17 @@ div.feedback {
     height: 100px;
   }
 }
+
+div#flash {
+  position: fixed;
+  top: 5px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  display: none;
+
+  span {
+    background-color: red;
+    padding: 3px 8px;
+  }
+}
