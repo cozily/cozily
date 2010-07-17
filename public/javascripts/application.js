@@ -243,7 +243,6 @@ function showAndFadeFlash() {
         }
 
         $(document).bind("content-received", function(event, data) {
-            console.debug(data);
             var flash = data.flash;
             if (flash && flash != "") {
                 $("div#flash span").html(flash);
