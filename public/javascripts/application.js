@@ -128,6 +128,10 @@ function updateContent(content) {
             fixedPosition: true                      //options: true makes it stick(fixed position) on scroll
         });
 
+        $("div.feedback :submit").bind("click", function() {
+            $('div.feedback a.handle').click();
+        });
+
         $("form.apartment :input").live("blur", function(event) {
             $.ajax({
                 type      : "put",
@@ -168,7 +172,6 @@ function updateContent(content) {
                 dataType  : 'json',
                 success   : function success(response) {
                     form.find(":input").not(":submit").val("");
-                    $('.feedback .handle').click();
                     $(document).trigger('content-received', response);
                 }
             });
