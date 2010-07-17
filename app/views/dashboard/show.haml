@@ -1,0 +1,10 @@
+%div.head
+  %h1==Hi, #{current_user.first_name}
+
+  %div.lady
+    %span=="Wow #{current_user.first_name}, that's a fabulous shirt you're wearing"
+
+  %ul.tabs
+    %li.active=link_to "Matches", "#"
+    %li=link_to "Favorites", "#"
+    %li=link_to "Inbox", "#"

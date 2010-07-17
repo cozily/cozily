@@ -24,6 +24,7 @@ ActionController::Routing::Routes.draw do |map|
   end
 
   map.business_search "yelp/business_search", :controller => "yelp", :action => "business_search"
+  map.dashboard "dashboard", :controller => "dashboard", :action => "show"
 
   map.with_options :controller => "pages" do |page|
     page.about "about", :action => "about"

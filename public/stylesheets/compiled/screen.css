@@ -693,6 +693,60 @@ body.welcome.index div#foot {
   background-color: white;
 }
 
+/* line 2, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.head {
+  background: url(/images/backgrounds/tab.png) repeat-x left bottom;
+}
+/* line 5, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.head h1 {
+  font-weight: 500;
+  float: left;
+  margin: -55px 0 0 25px;
+}
+/* line 11, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.head div.lady {
+  float: right;
+  margin: -60px 12px 0 0;
+  background: url(/images/characters/lady_head.png) no-repeat right center;
+  height: 84px;
+}
+/* line 17, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.head div.lady span {
+  font-size: 1.2em;
+  font-style: italic;
+  width: 190px;
+  padding: 15px 85px 0 0;
+  text-align: center;
+  display: block;
+}
+/* line 27, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.head ul.tabs {
+  overflow: hidden;
+  display: inline-block;
+  margin-top: 70px;
+  margin-left: 25px;
+}
+/* line 8, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/general/_hacks.scss */
+body.dashboard div.head ul.tabs {
+  display: block;
+}
+/* line 31, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.head ul.tabs li {
+  float: left;
+  padding: 5px 20px 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.2em;
+  border-top: 4px solid white;
+}
+/* line 40, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.head ul.tabs li.active {
+  border-top: 4px solid #A0C045;
+  border-left: 4px solid #DCDCDC;
+  border-right: 4px solid #DCDCDC;
+  background: url(/images/backgrounds/white.png) repeat-x left bottom;
+}
+
 /* line 2, ../../../app/stylesheets/partials/_apartments.sass */
 body.apartments.show div.article {
   width: 625px;
