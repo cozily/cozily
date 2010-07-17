@@ -1,0 +1,137 @@
+div.container {
+  @include container;
+}
+
+div#head {
+  background-color: black;
+  color: white;
+  height: 37px;
+  clear: both;
+
+  img {
+    float: left;
+    margin-right: 50px;
+    height: 36px;
+    width: 94px;
+  }
+
+  ul.nav {
+    text-transform: uppercase;
+
+    li {
+      float: left;
+      border-left: 1px solid #4D4D4D;
+      padding: 0 20px;
+      height: 37px;
+      font-size: 1.1em;
+      line-height: 36px;
+      a {
+        color: white;
+      }
+    }
+
+    li:last-child {
+      border-right: 1px solid #4D4D4D;
+    }
+  }
+
+  ul.session {
+    float: right;
+
+    li {
+      float: left;
+      line-height: 36px;
+      padding: 0 8px;
+      color: #A5A5A5;
+      font-size: 1.05em;
+    }
+
+    li.action a {
+      color: white;
+    }
+
+    li.profile a {
+      color: #E29C47;
+    }
+  }
+}
+
+div#search {
+  height: 72px;
+  background-color: #8D9CA1;
+  background: url(/images/backgrounds/search_bar.png) repeat-x;
+}
+
+div#breadcrumbs {
+  height: 30px;
+  background-color: #EBEBEB;
+}
+
+div#body {
+  background-color: #EBEBEB;
+  div.container {
+    background-color: white;
+  }
+}
+
+div#foot {
+  background-color: #EBEBEB;
+  height: 60px;
+  clear: both;
+
+  div.container {
+    background-color: white;
+  }
+
+  ul {
+    margin: 0 10px;
+
+    li {
+      float: left;
+      padding: 0 6px;
+      height: 60px;
+      line-height: 58px;
+      font-size: 1.05em;
+      a {
+        color: #1982A0;
+      }
+    }
+
+    li.copyright {
+      float: right;
+      color: #666666;
+    }
+
+    li.facebook, li.twitter {
+      float: right;
+      img {
+        padding-top: 16px;
+      }
+    }
+  }
+}
+
+div#map_canvas {
+  width: 50%;
+  height: 500px;
+}
+
+div.ui-datepicker {
+  width: 19em;
+}
+
+div.feedback {
+  padding: 20px;
+  width: 250px;
+  background: #CCC;
+  border: 1px solid #29216D;
+
+  form {
+    margin-bottom: 0;
+  }
+
+  textarea {
+    width: 100%;
+    height: 100px;
+  }
+}
