@@ -82,7 +82,7 @@ describe Apartment do
         event = TimelineEvent.last
         event.event_type.should == "state_changed_to_#{state}"
         event.subject.should == apartment
-        event.actor.should be_nil
+        event.actor.should == apartment.user
       end
     end
 

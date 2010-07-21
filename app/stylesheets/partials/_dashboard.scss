@@ -45,4 +45,45 @@ body.dashboard {
             }
         }
     }
+
+    div.article {
+        width: 630px;
+        margin-right: 10px;
+        float: left;
+    }
+
+    div.aside {
+        width: 310px;
+        float: right;
+
+        h3 {
+            font-size: 2em;
+            padding-bottom: 8px;
+            margin-bottom: 0;
+        }
+
+        div#activity_feed {
+            h3 {
+                border-right: 4px solid #429E87;
+            }
+
+            ul {
+                margin-top: 5px;
+
+                li {
+                    background: url(/images/icons/favorite.png) no-repeat 0 2px;
+                    padding-left: 25px;
+
+                    span.text {
+                        font-weight: 500;
+                    }
+
+                    span.date {
+                        display: block;
+                        color: #888;
+                    }
+                }
+            }
+        }
+    }
 }

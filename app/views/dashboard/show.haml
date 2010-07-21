@@ -1,10 +1,24 @@
-%div.head
+.head
   %h1==Hi, #{current_user.first_name}
 
-  %div.lady
+  .lady
     %span=="Wow #{current_user.first_name}, that's a fabulous shirt you're wearing"
 
   %ul.tabs
     %li.active=link_to "Matches", "#"
     %li=link_to "Favorites", "#"
     %li=link_to "Inbox", "#"
+
+.article
+
+.aside
+  %h3 Messages
+
+  #activity_feed
+    %h3 Activity Feed
+    %ul
+      -@events.each do |event|
+        %li
+          %span.text=event_text(event)
+          %span.date==#{time_ago_in_words(event.created_at)} ago
+  =image_tag "backgrounds/shadow.png", :class => "shadow"

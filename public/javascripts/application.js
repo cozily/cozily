@@ -27,6 +27,7 @@ function showAndFadeFlash() {
 (function($) {
     $(function() {
         $("input[data-date=true]").datepicker();
+
         $("input[name=apartment[sublet]]").live("change", function(event) {
             if ($("input#apartment_sublet_true").attr('checked')) {
                 $("li#apartment_end_date_input").show();

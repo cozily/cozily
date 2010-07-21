@@ -32,6 +32,7 @@ class Apartment < ActiveRecord::Base
   [:unlisted, :listed, :leased].each do |state|
     fires :"state_changed_to_#{state}",
           :on => :update,
+          :actor => :user,
           :if => lambda { |apartment| apartment.state_changed? && apartment.state_name == state }
   end
 

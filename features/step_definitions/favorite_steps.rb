@@ -28,5 +28,5 @@ end
 
 Then /^I cannot view another user's favorites$/ do
   visit user_favorites_path(Factory(:user))
-  current_path.should == "/"
+  current_path.should == dashboard_path
 end

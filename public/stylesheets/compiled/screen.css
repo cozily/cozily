@@ -763,6 +763,45 @@ body.dashboard div.head ul.tabs li.active {
   border-right: 4px solid #DCDCDC;
   background: url(/images/backgrounds/white.png) repeat-x left bottom;
 }
+/* line 49, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.article {
+  width: 630px;
+  margin-right: 10px;
+  float: left;
+}
+/* line 55, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.aside {
+  width: 310px;
+  float: right;
+}
+/* line 59, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.aside h3 {
+  font-size: 2em;
+  padding-bottom: 8px;
+  margin-bottom: 0;
+}
+/* line 66, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.aside div#activity_feed h3 {
+  border-right: 4px solid #429E87;
+}
+/* line 70, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.aside div#activity_feed ul {
+  margin-top: 5px;
+}
+/* line 73, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.aside div#activity_feed ul li {
+  background: url(/images/icons/favorite.png) no-repeat 0 2px;
+  padding-left: 25px;
+}
+/* line 77, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.aside div#activity_feed ul li span.text {
+  font-weight: 500;
+}
+/* line 81, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.aside div#activity_feed ul li span.date {
+  display: block;
+  color: #888;
+}
 
 /* line 3, ../../../app/stylesheets/partials/apartments/_apartments.scss */
 body.apartments ul.buttons li {

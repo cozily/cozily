@@ -22,7 +22,7 @@ gem "twitter_oauth", "0.4.0"
 
 group :test do
   gem "capybara", "0.3.8"
-  gem "cucumber", "0.8.3"
+  gem "cucumber", "0.8.5"
   gem "cucumber-rails", "0.3.2"
   gem "database_cleaner", "0.5.2"
   gem "factory_girl", "1.2.4"

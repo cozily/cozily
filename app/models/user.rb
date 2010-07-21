@@ -11,15 +11,12 @@ class User < ActiveRecord::Base
   has_one  :profile, :dependent => :destroy
   has_many :received_messages, :class_name => "Message", :foreign_key => "receiver_id"
   has_many :sent_messages, :class_name => "Message", :foreign_key => "sender_id"
+  has_many :timeline_events, :foreign_key => "actor_id", :dependent => :destroy
 
   validates_presence_of :first_name, :last_name
 
   def full_name
     [first_name, last_name].join(" ")
-  end
-
-  def timeline_events
-    TimelineEvent.actor_id_equals(self.id) | TimelineEvent.event_type_equals("state_changed_to_listed")
   end
 
   def unread_message_count
