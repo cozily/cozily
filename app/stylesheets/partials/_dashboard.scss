@@ -50,6 +50,58 @@ body.dashboard {
         width: 630px;
         margin-right: 10px;
         float: left;
+
+        div.apartment {
+            height: 120px;
+            border-bottom: 1px solid #CCC;
+            padding: 3px 0;
+
+            > ul {
+                li {
+                    float: left;
+                    margin-right: 10px;
+                }
+
+                li.photo {
+                    width: 150px;
+                }
+
+                li.info {
+                    border-right: 1px solid #CCC;
+                    width: 265px;
+                    font-weight: 500;
+
+                    ul {
+                        li.street {
+                            margin-bottom: 4px;
+                            a {
+                                font-size: 1.8em;
+                                font-weight: 600;
+                            }
+                        }
+
+                        li.neighborhood a {
+                            font-size: 1em;
+                        }
+
+                        li.basic {
+                            font-size: 1.2em;
+                            span.rent {
+                                font-weight: 600;
+                            }
+                        }
+
+                        li.neighborhood, li.listed_on {
+                            font-size: 0.95em;
+                        }
+                    }
+                }
+
+                li.contact {
+                    width: 170px;
+                }
+            }
+        }
     }
 
     div.aside {
@@ -96,7 +148,7 @@ body.dashboard {
                 }
 
                 li.message.created {
-                    background: url(/images/icons/message.png) no-repeat 0 2px;                    
+                    background: url(/images/icons/message.png) no-repeat 0 2px;
                 }
             }
         }

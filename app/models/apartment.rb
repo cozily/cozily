@@ -113,6 +113,10 @@ class Apartment < ActiveRecord::Base
     REQUIRED_FIELDS.all? { |attr| self.send(attr).present? }
   end
 
+  def listed_on
+    subject_timeline_events.event_type_equals("state_changed_to_listed").first.try(:created_at)
+  end
+
   def as_json(options = {})
     super(options)
   end

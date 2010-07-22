@@ -10,6 +10,20 @@
     %li=link_to "Inbox", "#"
 
 .article
+  -@matches.each do |match|
+    %div[match]
+      %ul
+        %li.photo &nbsp;
+        %li.info
+          %ul
+            %li.street=link_to match.street, match
+            %li.basic
+              %span.rent==$#{number_with_delimiter(match.rent)}
+              ==/ #{match.bedrooms.prettify}bd/#{match.bathrooms.prettify}ba / #{match.square_footage} sq. ft.
+            %li.neighborhood==Neighborhood: #{neighborhood_links(match)}
+            %li.listed_on==Listed on #{match.listed_on}
+
+        %li.contact &nbsp;
 
 .aside
   %h3 Messages

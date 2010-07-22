@@ -769,51 +769,101 @@ body.dashboard div.article {
   margin-right: 10px;
   float: left;
 }
-/* line 55, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 54, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.article div.apartment {
+  height: 120px;
+  border-bottom: 1px solid #CCC;
+  padding: 3px 0;
+}
+/* line 60, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.article div.apartment > ul li {
+  float: left;
+  margin-right: 10px;
+}
+/* line 65, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.article div.apartment > ul li.photo {
+  width: 150px;
+}
+/* line 69, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.article div.apartment > ul li.info {
+  border-right: 1px solid #CCC;
+  width: 265px;
+  font-weight: 500;
+}
+/* line 75, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.article div.apartment > ul li.info ul li.street {
+  margin-bottom: 4px;
+}
+/* line 77, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.article div.apartment > ul li.info ul li.street a {
+  font-size: 1.8em;
+  font-weight: 600;
+}
+/* line 83, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.article div.apartment > ul li.info ul li.neighborhood a {
+  font-size: 1em;
+}
+/* line 87, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.article div.apartment > ul li.info ul li.basic {
+  font-size: 1.2em;
+}
+/* line 89, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.article div.apartment > ul li.info ul li.basic span.rent {
+  font-weight: 600;
+}
+/* line 94, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.article div.apartment > ul li.info ul li.neighborhood, body.dashboard div.article div.apartment > ul li.info ul li.listed_on {
+  font-size: 0.95em;
+}
+/* line 100, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.article div.apartment > ul li.contact {
+  width: 170px;
+}
+/* line 107, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside {
   width: 310px;
   float: right;
 }
-/* line 59, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 111, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside h3 {
   font-size: 2em;
   padding-bottom: 8px;
   margin-bottom: 0;
 }
-/* line 66, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 118, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed h3 {
   border-right: 4px solid #429E87;
 }
-/* line 70, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 122, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul {
   margin-top: 5px;
   padding-right: 22px;
 }
-/* line 74, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 126, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li {
   background-repeat: no-repeat;
   background-position: 0 2px;
   padding-left: 25px;
   margin-bottom: 12px;
 }
-/* line 80, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 132, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li span.text {
   font-weight: 500;
 }
-/* line 84, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 136, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li span.date {
   display: block;
   color: #888;
 }
-/* line 90, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 142, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li.favorite.created {
   background: url(/images/icons/add.png) no-repeat 0 2px;
 }
-/* line 94, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 146, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li.favorite.destroyed {
   background: url(/images/icons/remove.png) no-repeat 0 2px;
 }
-/* line 98, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 150, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li.message.created {
   background: url(/images/icons/message.png) no-repeat 0 2px;
 }
