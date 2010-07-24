@@ -26,10 +26,11 @@ ActionController::Routing::Routes.draw do |map|
   map.business_search "yelp/business_search", :controller => "yelp", :action => "business_search"
   map.dashboard "dashboard", :controller => "dashboard", :action => "show"
 
-  map.with_options :controller => "pages" do |page|
-    page.about "about", :action => "about"
-    page.faq "faq", :action => "faq"
-  end
+  map.resource :page, :controller => "pages",
+               :member => { :about => :get,
+                            :faq => :get,
+                            :privacy_policy => :get,
+                            :terms_of_use => :get }
 
   Clearance::Routes.draw(map)
 
