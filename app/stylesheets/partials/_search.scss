@@ -19,6 +19,8 @@ div#search {
             margin-right: 10px;
             background-color: white;
             @include border-radius(5px);
+            background: url(/images/icons/search_arrow.png) no-repeat 95% center;
+            background-color: white;
             padding: 5px 5px 5px 15px;
 
                 a {
@@ -50,11 +52,11 @@ div#search {
         }
 
         div#q_min_bedrooms_mask {
-            width: 125px;
+            width: 140px;
         }
 
         div#q_max_rent_mask {
-            width: 150px;
+            width: 135px;
         }
 
         input[type=submit] {
