@@ -773,99 +773,102 @@ body.dashboard div.article {
 }
 /* line 54, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment {
-  height: 120px;
+  height: 130px;
+  margin-left: 3px;
   border-bottom: 1px solid #CCC;
   padding: 3px 0;
 }
-/* line 60, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.article div.apartment > ul li {
+/* line 61, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.article div.apartment > ul > li {
   float: left;
   margin-right: 10px;
+  height: 100%;
 }
-/* line 65, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 67, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.photo {
   width: 150px;
 }
-/* line 69, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 71, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.info {
   border-right: 1px solid #CCC;
   width: 265px;
   font-weight: 500;
 }
-/* line 75, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 77, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.info ul li.street {
+  padding-top: 15px;
   margin-bottom: 4px;
 }
-/* line 77, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 80, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.info ul li.street a {
   font-size: 1.8em;
   font-weight: 600;
 }
-/* line 83, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 86, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.info ul li.neighborhood a {
   font-size: 1em;
 }
-/* line 87, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 90, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.info ul li.basic {
   font-size: 1.2em;
 }
-/* line 89, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 92, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.info ul li.basic span.rent {
   font-weight: 600;
 }
-/* line 94, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 97, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.info ul li.neighborhood, body.dashboard div.article div.apartment > ul li.info ul li.listed_on {
   font-size: 0.95em;
 }
-/* line 100, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 103, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.contact {
   width: 170px;
 }
-/* line 107, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 110, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside {
   width: 310px;
   float: right;
 }
-/* line 111, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 114, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside h3 {
   font-size: 2em;
   padding-bottom: 8px;
   margin-bottom: 0;
 }
-/* line 118, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 121, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed h3 {
   border-right: 4px solid #429E87;
 }
-/* line 122, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 125, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul {
   margin-top: 5px;
   padding-right: 22px;
 }
-/* line 126, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 129, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li {
   background-repeat: no-repeat;
   background-position: 0 2px;
   padding-left: 25px;
   margin-bottom: 12px;
 }
-/* line 132, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 135, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li span.text {
   font-weight: 500;
 }
-/* line 136, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 139, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li span.date {
   display: block;
   color: #888;
 }
-/* line 142, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 145, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li.favorite.created {
   background: url(/images/icons/add.png) no-repeat 0 2px;
 }
-/* line 146, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 149, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li.favorite.destroyed {
   background: url(/images/icons/remove.png) no-repeat 0 2px;
 }
-/* line 150, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 153, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li.message.created {
   background: url(/images/icons/message.png) no-repeat 0 2px;
 }

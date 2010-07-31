@@ -52,14 +52,16 @@ body.dashboard {
         float: left;
 
         div.apartment {
-            height: 120px;
+            height: 130px;
+            margin-left: 3px;
             border-bottom: 1px solid #CCC;
             padding: 3px 0;
 
             > ul {
-                li {
+                > li {
                     float: left;
                     margin-right: 10px;
+                    height: 100%;
                 }
 
                 li.photo {
@@ -73,6 +75,7 @@ body.dashboard {
 
                     ul {
                         li.street {
+                            padding-top: 15px;
                             margin-bottom: 4px;
                             a {
                                 font-size: 1.8em;
