@@ -124,13 +124,40 @@ body.dashboard {
                 }
 
                 li.contact {
-                    width: 170px;
+                    width: 180px;
+                    margin-right: 0;
 
                     ul {
+                        position: relative;
+                        top: 15px;
+
+                        li {
+                            padding-left: 15px;
+                        }
+
                         li.phone {
-                            text-align: center;
                             font-weight: 500;
-                            font-size: 1.5em;
+                            font-size: 1.7em;
+                            margin-bottom: 5px;
+                        }
+
+                        li.message a, li.favorite a {
+                            padding-left: 15px;
+                            font-size: 0.95em;
+                        }
+
+                        li.message a {
+                            background: url(/images/icons/message_small.png) no-repeat 0 4px;
+                        }
+
+                        li.favorite a {
+                            &.add {
+                                background: url(/images/icons/add_small.png) no-repeat 0 3px;
+                            }
+
+                            &.remove {
+                                background: url(/images/icons/remove_small.png) no-repeat 0 3px;
+                            }
                         }
                     }
                 }

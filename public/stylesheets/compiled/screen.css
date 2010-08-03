@@ -844,59 +844,86 @@ body.dashboard div.article div.apartment > ul li.info ul li.neighborhood, body.d
 }
 /* line 126, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.contact {
-  width: 170px;
+  width: 180px;
+  margin-right: 0;
 }
 /* line 130, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.article div.apartment > ul li.contact ul li.phone {
-  text-align: center;
-  font-weight: 500;
-  font-size: 1.5em;
+body.dashboard div.article div.apartment > ul li.contact ul {
+  position: relative;
+  top: 15px;
 }
-/* line 141, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 134, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.article div.apartment > ul li.contact ul li {
+  padding-left: 15px;
+}
+/* line 138, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.article div.apartment > ul li.contact ul li.phone {
+  font-weight: 500;
+  font-size: 1.7em;
+  margin-bottom: 5px;
+}
+/* line 144, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.article div.apartment > ul li.contact ul li.message a, body.dashboard div.article div.apartment > ul li.contact ul li.favorite a {
+  padding-left: 15px;
+  font-size: 0.95em;
+}
+/* line 149, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.article div.apartment > ul li.contact ul li.message a {
+  background: url(/images/icons/message_small.png) no-repeat 0 4px;
+}
+/* line 154, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.article div.apartment > ul li.contact ul li.favorite a.add {
+  background: url(/images/icons/add_small.png) no-repeat 0 3px;
+}
+/* line 158, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.article div.apartment > ul li.contact ul li.favorite a.remove {
+  background: url(/images/icons/remove_small.png) no-repeat 0 3px;
+}
+/* line 168, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside {
   width: 310px;
   float: right;
 }
-/* line 145, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 172, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside h3 {
   font-size: 2em;
   padding-bottom: 8px;
   margin-bottom: 0;
 }
-/* line 152, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 179, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed h3 {
   border-right: 4px solid #429E87;
 }
-/* line 156, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 183, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul {
   margin-top: 5px;
   padding-right: 22px;
 }
-/* line 160, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 187, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li {
   background-repeat: no-repeat;
   background-position: 0 2px;
   padding-left: 25px;
   margin-bottom: 12px;
 }
-/* line 166, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 193, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li span.text {
   font-weight: 500;
 }
-/* line 170, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 197, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li span.date {
   display: block;
   color: #888;
 }
-/* line 176, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 203, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li.favorite.created {
   background: url(/images/icons/add.png) no-repeat 0 2px;
 }
-/* line 180, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 207, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li.favorite.destroyed {
   background: url(/images/icons/remove.png) no-repeat 0 2px;
 }
-/* line 184, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 211, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li.message.created {
   background: url(/images/icons/message.png) no-repeat 0 2px;
 }
