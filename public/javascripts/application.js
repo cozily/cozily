@@ -255,6 +255,10 @@ function showAndFadeFlash() {
             $.each(content, function(key, value) {
                 updateContent(value);
             });
+
+            $("[data-animate]").each(function() {
+                $(this).hide('clip');
+            });
         });
     });
 })(jQuery);
