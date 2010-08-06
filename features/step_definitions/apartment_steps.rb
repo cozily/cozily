@@ -118,7 +118,7 @@ Then /^I cannot edit another user's apartment$/ do
   page.should_not have_content("edit apartment")
 
   visit edit_apartment_path(apartment)
-  current_path.should == dashboard_path
+  current_path.should == dashboard_matches_path
 end
 
 Then /^I can view my apartments$/ do

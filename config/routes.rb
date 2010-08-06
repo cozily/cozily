@@ -24,7 +24,10 @@ ActionController::Routing::Routes.draw do |map|
   end
 
   map.business_search "yelp/business_search", :controller => "yelp", :action => "business_search"
-  map.dashboard "dashboard", :controller => "dashboard", :action => "show"
+
+  map.dashboard_matches "dashboard", :controller => "dashboard", :action => "matches"
+  map.dashboard_favorites "dashboard/favorites", :controller => "dashboard", :action => "favorites"
+  map.dashboard_messages "dashboard/messages", :controller => "dashboard", :action => "messages"
 
   map.connect 'signup/:action', :controller => 'signup'
 

@@ -1,0 +1,13 @@
+=render "dashboard/matches"
+
+.aside
+  %h3 Messages
+
+  #activity_feed
+    %h3 Activity Feed
+    %ul
+      -@events.each do |event|
+        %li{ :class => "#{event.subject_type.downcase} #{event.event_type}" }
+          %span.text=event_text(event)
+          %span.date==#{time_ago_in_words(event.created_at)} ago
+  =image_tag "backgrounds/shadow.png", :class => "shadow"
