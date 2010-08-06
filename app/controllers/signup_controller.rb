@@ -1,17 +1,17 @@
 class SignupController < ApplicationController
-  def new
+  def profile
     session[:want] = params[:want]
-    render :json => { :want => render_to_string(:partial => "signup/#{session[:want]}") }
+    render :json => { :want => render_to_string(:partial => "signup/profile") }
   end
 
-  def profile
+  def account
     session[:profile] = {}
     session[:profile] = params[:profile]
     @user = User.new
     render :json => { :account => render_to_string(:partial => "signup/account") }
   end
 
-  def account
+  def create
     @user = User.new(params[:user])
     if @user.save
       @user.create_profile(session[:profile])

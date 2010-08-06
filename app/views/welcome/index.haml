@@ -1,8 +1,8 @@
 %h1 Intelligent apartment hunting in NYC. No brokers. No fees.
 
 #buttons
-  =link_to image_tag("buttons/find_an_apartment.png", :class => "find"), signup_path(:want => "find"), :'data-remote' => true, :'data-method' => 'get'
-  =link_to image_tag("buttons/list_an_apartment.png", :class => "list"), signup_path(:want => "list"), :'data-remote' => true, :'data-method' => 'get'
+  =link_to image_tag("buttons/find_an_apartment.png", :class => "find"), {:controller => 'signup', :action => 'profile', :want => 'find'}, :'data-remote' => true, :'data-method' => 'get'
+  =link_to image_tag("buttons/list_an_apartment.png", :class => "list"), {:controller => 'signup', :action => 'profile', :want => 'list'}, :'data-remote' => true, :'data-method' => 'get'
 =image_tag "characters/lady.png", :class => "lady"
 =image_tag "characters/man.png", :class => "man"
 

@@ -25,7 +25,6 @@ ActionController::Routing::Routes.draw do |map|
 
   map.business_search "yelp/business_search", :controller => "yelp", :action => "business_search"
   map.dashboard "dashboard", :controller => "dashboard", :action => "show"
-  map.signup "signup", :controller => "signup", :action => "new"
 
   map.connect 'signup/:action', :controller => 'signup'
 

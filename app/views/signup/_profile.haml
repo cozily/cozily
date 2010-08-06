@@ -1,0 +1,19 @@
+.profile{ :'data-content-key' => 'yield' }
+  -if session[:want] == 'find'
+    .article
+      %h1 Great! We'll help you find an apartment!
+      %h2 Tell us a little about your needs.
+
+      -semantic_form_for Profile.new, :url => { :controller => "signup", :action => "account" }, :html => { :'data-remote' => true } do |f|
+        -f.inputs do
+          =f.input :bedrooms
+          =f.input :rent
+
+        -f.buttons do
+          =f.commit_button "Next"
+
+    =image_tag "characters/lady.png", :class => "lady"
+
+  -else
+    .article
+    =image_tag "characters/man.png", :class => "man"
