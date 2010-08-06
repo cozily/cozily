@@ -257,7 +257,10 @@ function showAndFadeFlash() {
             });
 
             $("[data-animate]").each(function() {
-                $(this).hide('clip');
+                $(this).animate({
+                    opacity: 0,
+                    height: 0
+                });
             });
         });
     });
