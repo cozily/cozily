@@ -633,51 +633,53 @@ body.welcome.index div#body div.container, body.signup.account div#body div.cont
   background: url(/images/backgrounds/unauthenticated.png) no-repeat;
   width: 950px;
   height: 582px;
+  position: relative;
 }
-/* line 10, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 11, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container h1, body.signup.account div#body div.container h1 {
   text-align: center;
   margin-top: 50px;
   font-size: 2.7em;
   font-weight: 500;
 }
-/* line 17, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 18, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container div#buttons, body.signup.account div#body div.container div#buttons {
   text-align: center;
   margin-top: 50px;
 }
-/* line 22, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 23, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container img.lady, body.signup.account div#body div.container img.lady {
-  position: relative;
-  top: -65px;
+  position: absolute;
+  top: 186px;
+  left: 0px;
 }
-/* line 27, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 29, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container img.man, body.signup.account div#body div.container img.man {
-  position: relative;
-  top: -65px;
-  left: 555px;
+  position: absolute;
+  top: 179px;
+  right: 1px;
 }
-/* line 33, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 35, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container div#login, body.signup.account div#body div.container div#login {
   position: absolute;
-  top: 530px;
+  top: 493px;
 }
-/* line 37, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 39, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container div#login h6, body.signup.account div#body div.container div#login h6 {
   margin-left: 245px;
   color: #55534E;
 }
-/* line 42, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 44, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container div#login form.session, body.signup.account div#body div.container div#login form.session {
   margin-left: 245px;
 }
-/* line 45, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 47, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container div#login form.session li, body.signup.account div#body div.container div#login form.session li {
   float: left;
   width: 175px;
   margin-right: 8px;
 }
-/* line 50, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 52, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container div#login form.session li input, body.signup.account div#body div.container div#login form.session li input {
   width: 175px;
   max-width: 175px;
@@ -686,7 +688,7 @@ body.welcome.index div#body div.container div#login form.session li input, body.
   font-size: 1.25em;
   color: #888;
 }
-/* line 59, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 61, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container div#login form.session li input[type=submit], body.signup.account div#body div.container div#login form.session li input[type=submit] {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -707,24 +709,87 @@ body.welcome.index div#body div.container div#login form.session li input[type=s
   line-height: 21px;
   text-transform: none;
 }
-/* line 72, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 74, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#foot, body.signup.account div#foot {
   background-color: white;
 }
 
-/* line 81, ../../../app/stylesheets/partials/_unauthenticated.scss */
-body.welcome.index div#body div.container div.profile img.lady, body.welcome.index div#body div.container div.account img.lady, body.signup.account div#body div.container div.profile img.lady, body.signup.account div#body div.container div.account img.lady {
+/* line 83, ../../../app/stylesheets/partials/_unauthenticated.scss */
+body.welcome.index div#body div.container, body.signup.account div#body div.container {
   position: relative;
-  top: -239px;
 }
-/* line 86, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 87, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container div.profile div.article, body.welcome.index div#body div.container div.account div.article, body.signup.account div#body div.container div.profile div.article, body.signup.account div#body div.container div.account div.article {
   background-color: white;
   width: 650px;
   height: 425px;
-  position: relative;
-  top: 39px;
+  position: absolute;
   left: 150px;
+  top: 39px;
+  -moz-border-radius: 35px 35px 0 0;
+  -webkit-border-radius: 35px 35px 0 0;
+  -o-border-radius: 35px 35px 0 0;
+  -ms-border-radius: 35px 35px 0 0;
+  -khtml-border-radius: 35px 35px 0 0;
+  border-radius: 35px 35px 0 0;
+  -moz-opacity: 0.8;
+  -webkit-opacity: 0.8;
+  -o-opacity: 0.8;
+  -khtml-opacity: 0.8;
+  opacity: 0.8;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+}
+/* line 97, ../../../app/stylesheets/partials/_unauthenticated.scss */
+body.welcome.index div#body div.container div.profile div.article h1, body.welcome.index div#body div.container div.account div.article h1, body.signup.account div#body div.container div.profile div.article h1, body.signup.account div#body div.container div.account div.article h1 {
+  padding-top: 20px;
+  margin: 0;
+  font-size: 2em;
+  text-align: center;
+}
+/* line 104, ../../../app/stylesheets/partials/_unauthenticated.scss */
+body.welcome.index div#body div.container div.profile div.article h2, body.welcome.index div#body div.container div.account div.article h2, body.signup.account div#body div.container div.profile div.article h2, body.signup.account div#body div.container div.account div.article h2 {
+  font-size: 1.7em;
+  text-align: center;
+}
+/* line 114, ../../../app/stylesheets/partials/_unauthenticated.scss */
+body.welcome.index div#body div.container div.profile div.article form.profile label, body.welcome.index div#body div.container div.profile div.article form.user label, body.welcome.index div#body div.container div.account div.article form.profile label, body.welcome.index div#body div.container div.account div.article form.user label, body.signup.account div#body div.container div.profile div.article form.profile label, body.signup.account div#body div.container div.profile div.article form.user label, body.signup.account div#body div.container div.account div.article form.profile label, body.signup.account div#body div.container div.account div.article form.user label {
+  width: 200px;
+  text-align: right;
+  margin-right: 20px;
+  line-height: 32px;
+  font-size: 1.2em;
+}
+/* line 122, ../../../app/stylesheets/partials/_unauthenticated.scss */
+body.welcome.index div#body div.container div.profile div.article form.profile input[type=text], body.welcome.index div#body div.container div.profile div.article form.profile input[type=password], body.welcome.index div#body div.container div.profile div.article form.user input[type=text], body.welcome.index div#body div.container div.profile div.article form.user input[type=password], body.welcome.index div#body div.container div.account div.article form.profile input[type=text], body.welcome.index div#body div.container div.account div.article form.profile input[type=password], body.welcome.index div#body div.container div.account div.article form.user input[type=text], body.welcome.index div#body div.container div.account div.article form.user input[type=password], body.signup.account div#body div.container div.profile div.article form.profile input[type=text], body.signup.account div#body div.container div.profile div.article form.profile input[type=password], body.signup.account div#body div.container div.profile div.article form.user input[type=text], body.signup.account div#body div.container div.profile div.article form.user input[type=password], body.signup.account div#body div.container div.account div.article form.profile input[type=text], body.signup.account div#body div.container div.account div.article form.profile input[type=password], body.signup.account div#body div.container div.account div.article form.user input[type=text], body.signup.account div#body div.container div.account div.article form.user input[type=password] {
+  width: 350px;
+  height: 35px;
+}
+/* line 127, ../../../app/stylesheets/partials/_unauthenticated.scss */
+body.welcome.index div#body div.container div.profile div.article form.profile input[type=submit], body.welcome.index div#body div.container div.profile div.article form.user input[type=submit], body.welcome.index div#body div.container div.account div.article form.profile input[type=submit], body.welcome.index div#body div.container div.account div.article form.user input[type=submit], body.signup.account div#body div.container div.profile div.article form.profile input[type=submit], body.signup.account div#body div.container div.profile div.article form.user input[type=submit], body.signup.account div#body div.container div.account div.article form.profile input[type=submit], body.signup.account div#body div.container div.account div.article form.user input[type=submit] {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  height: 33px;
+  color: white;
+  font-weight: 500;
+  font-size: 1.2em;
+  text-transform: capitalize;
+  line-height: 32px;
+  background: url(/images/buttons/green_button.png) repeat-x;
+  border: 1px solid #8EAC46;
+  width: 75px;
+}
+/* line 132, ../../../app/stylesheets/partials/_unauthenticated.scss */
+body.welcome.index div#body div.container div.profile div.article form.profile fieldset.buttons, body.welcome.index div#body div.container div.profile div.article form.user fieldset.buttons, body.welcome.index div#body div.container div.account div.article form.profile fieldset.buttons, body.welcome.index div#body div.container div.account div.article form.user fieldset.buttons, body.signup.account div#body div.container div.profile div.article form.profile fieldset.buttons, body.signup.account div#body div.container div.profile div.article form.user fieldset.buttons, body.signup.account div#body div.container div.account div.article form.profile fieldset.buttons, body.signup.account div#body div.container div.account div.article form.user fieldset.buttons {
+  padding-left: 220px;
+}
+/* line 139, ../../../app/stylesheets/partials/_unauthenticated.scss */
+body.welcome.index div#body div.container div.account div.article form.user input[type=submit], body.signup.account div#body div.container div.account div.article form.user input[type=submit] {
+  width: 210px;
 }
 
 /* line 2, ../../../app/stylesheets/partials/_dashboard.scss */

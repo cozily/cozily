@@ -3,7 +3,7 @@ Then /^I can sign up as an apartment seeker$/ do
   fill_in 'Bedrooms', :with => '1'
   fill_in 'Rent', :with => '1500'
 
-  click_button 'Create Profile'
+  click_button 'Next'
 
   fill_in 'First name', :with => first_name = Faker::Name.first_name
   fill_in 'Last name', :with => Faker::Name.last_name
@@ -11,7 +11,7 @@ Then /^I can sign up as an apartment seeker$/ do
   fill_in 'Password', :with => 'pass'
   fill_in 'Confirm password', :with => 'pass'
 
-  click_button 'Create User'
+  click_button 'Sign Up & Start Browsing'
 
   page.should have_content("Hi #{first_name}")
   page.should have_content("Sign out")

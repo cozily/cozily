@@ -6,6 +6,7 @@ body.welcome.index, body.signup.account {
             background: url(/images/backgrounds/unauthenticated.png) no-repeat;
             width: 950px;
             height: 582px;
+            position: relative;
 
             h1 {
                 text-align: center;
@@ -20,19 +21,20 @@ body.welcome.index, body.signup.account {
             }
 
             img.lady {
-                position: relative;
-                top: -65px;
+                position: absolute;
+                top: 186px;
+                left: 0px;
             }
 
             img.man {
-                position: relative;
-                top: -65px;
-                left: 555px;
+                position: absolute;
+                top: 179px;
+                right: 1px;
             }
 
             div#login {
                 position: absolute;
-                top: 530px;
+                top: 493px;
 
                 h6 {
                     margin-left: 245px;
@@ -74,23 +76,68 @@ body.welcome.index, body.signup.account {
     }
 }
 
+
+
 body.welcome.index, body.signup.account {
     div#body {
         div.container {
-            div.profile, div.account {
-                img.lady {
-                    position: relative;
-                    top: -239px;
-                }
+            position: relative;
 
+            div.profile, div.account {
                 div.article {
                     background-color: white;
                     width: 650px;
                     height: 425px;
-                    position: relative;
-                    top: 39px;
+                    position: absolute;
                     left: 150px;
+                    top: 39px;
+                    @include border-radius(35px 35px 0 0);
+                    @include opacity(0.8);
+
+                    h1 {
+                        padding-top: 20px;
+                        margin: 0;
+                        font-size: 2em;
+                        text-align: center;
+                    }
+
+                    h2 {
+                        font-size: 1.7em;
+                        text-align: center;
+                    }
                 }
+            }
+
+            div.profile, div.account {
+                div.article {
+                    form.profile, form.user {
+                        label {
+                            width: 200px;
+                            text-align: right;
+                            margin-right: 20px;
+                            line-height: 32px;
+                            font-size: 1.2em;
+                        }
+
+                        input[type=text], input[type=password] {
+                            width: 350px;
+                            height: 35px;
+                        }
+
+                        input[type=submit] {
+                            @include green-button;
+                            width: 75px;
+                        }
+
+                        fieldset.buttons {
+                            padding-left: 220px;
+                        }
+                    }
+                }
+            }
+
+            div.account div.article form.user input[type=submit] {
+                width: 210px;
             }
         }
     }
