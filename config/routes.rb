@@ -28,11 +28,12 @@ ActionController::Routing::Routes.draw do |map|
 
   map.connect 'signup/:action', :controller => 'signup'
 
-  map.resource :page, :controller => "pages",
-               :member => { :about => :get,
-                            :faq => :get,
-                            :privacy_policy => :get,
-                            :terms_of_use => :get }
+  map.with_options :controller => "pages" do |page|
+    page.about_page "/about", :action => "about"
+    page.faq_page "/faq", :action => "faq"
+    page.privacy_policy_page "/privacy_policy", :action => "privacy_policy"
+    page.terms_of_service_page "/terms_of_service", :action => "terms_of_service"
+  end
 
   Clearance::Routes.draw(map)
 

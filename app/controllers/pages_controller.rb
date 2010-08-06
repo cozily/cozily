@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   def faq
   end
 
-  def terms_of_use
+  def terms_of_service
   end
 
   def privacy_policy
