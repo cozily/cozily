@@ -625,60 +625,60 @@ div#search form input[type=submit] {
 }
 
 /* line 2, ../../../app/stylesheets/partials/_unauthenticated.scss */
-body.welcome.index div#body {
+body.welcome.index div#body, body.signup.account div#body {
   background: url(/images/backgrounds/unauthenticated_side.png) repeat-x;
 }
 /* line 5, ../../../app/stylesheets/partials/_unauthenticated.scss */
-body.welcome.index div#body div.container {
+body.welcome.index div#body div.container, body.signup.account div#body div.container {
   background: url(/images/backgrounds/unauthenticated.png) no-repeat;
   width: 950px;
   height: 582px;
 }
 /* line 10, ../../../app/stylesheets/partials/_unauthenticated.scss */
-body.welcome.index div#body div.container h1 {
+body.welcome.index div#body div.container h1, body.signup.account div#body div.container h1 {
   text-align: center;
   margin-top: 50px;
   font-size: 2.7em;
   font-weight: 500;
 }
 /* line 17, ../../../app/stylesheets/partials/_unauthenticated.scss */
-body.welcome.index div#body div.container div#buttons {
+body.welcome.index div#body div.container div#buttons, body.signup.account div#body div.container div#buttons {
   text-align: center;
   margin-top: 50px;
 }
 /* line 22, ../../../app/stylesheets/partials/_unauthenticated.scss */
-body.welcome.index div#body div.container img.lady {
+body.welcome.index div#body div.container img.lady, body.signup.account div#body div.container img.lady {
   position: relative;
   top: -65px;
 }
 /* line 27, ../../../app/stylesheets/partials/_unauthenticated.scss */
-body.welcome.index div#body div.container img.man {
+body.welcome.index div#body div.container img.man, body.signup.account div#body div.container img.man {
   position: relative;
   top: -65px;
   left: 555px;
 }
 /* line 33, ../../../app/stylesheets/partials/_unauthenticated.scss */
-body.welcome.index div#body div.container div#login {
+body.welcome.index div#body div.container div#login, body.signup.account div#body div.container div#login {
   position: absolute;
   top: 530px;
 }
 /* line 37, ../../../app/stylesheets/partials/_unauthenticated.scss */
-body.welcome.index div#body div.container div#login h6 {
+body.welcome.index div#body div.container div#login h6, body.signup.account div#body div.container div#login h6 {
   margin-left: 245px;
   color: #55534E;
 }
 /* line 42, ../../../app/stylesheets/partials/_unauthenticated.scss */
-body.welcome.index div#body div.container div#login form.session {
+body.welcome.index div#body div.container div#login form.session, body.signup.account div#body div.container div#login form.session {
   margin-left: 245px;
 }
 /* line 45, ../../../app/stylesheets/partials/_unauthenticated.scss */
-body.welcome.index div#body div.container div#login form.session li {
+body.welcome.index div#body div.container div#login form.session li, body.signup.account div#body div.container div#login form.session li {
   float: left;
   width: 175px;
   margin-right: 8px;
 }
 /* line 50, ../../../app/stylesheets/partials/_unauthenticated.scss */
-body.welcome.index div#body div.container div#login form.session li input {
+body.welcome.index div#body div.container div#login form.session li input, body.signup.account div#body div.container div#login form.session li input {
   width: 175px;
   max-width: 175px;
   height: 33px;
@@ -687,7 +687,7 @@ body.welcome.index div#body div.container div#login form.session li input {
   color: #888;
 }
 /* line 59, ../../../app/stylesheets/partials/_unauthenticated.scss */
-body.welcome.index div#body div.container div#login form.session li input[type=submit] {
+body.welcome.index div#body div.container div#login form.session li input[type=submit], body.signup.account div#body div.container div#login form.session li input[type=submit] {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   -o-border-radius: 5px;
@@ -708,8 +708,23 @@ body.welcome.index div#body div.container div#login form.session li input[type=s
   text-transform: none;
 }
 /* line 72, ../../../app/stylesheets/partials/_unauthenticated.scss */
-body.welcome.index div#foot {
+body.welcome.index div#foot, body.signup.account div#foot {
   background-color: white;
+}
+
+/* line 81, ../../../app/stylesheets/partials/_unauthenticated.scss */
+body.welcome.index div#body div.container div.profile img.lady, body.welcome.index div#body div.container div.account img.lady, body.signup.account div#body div.container div.profile img.lady, body.signup.account div#body div.container div.account img.lady {
+  position: relative;
+  top: -239px;
+}
+/* line 86, ../../../app/stylesheets/partials/_unauthenticated.scss */
+body.welcome.index div#body div.container div.profile div.article, body.welcome.index div#body div.container div.account div.article, body.signup.account div#body div.container div.profile div.article, body.signup.account div#body div.container div.account div.article {
+  background-color: white;
+  width: 650px;
+  height: 425px;
+  position: relative;
+  top: 39px;
+  left: 150px;
 }
 
 /* line 2, ../../../app/stylesheets/partials/_dashboard.scss */

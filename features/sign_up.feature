@@ -45,3 +45,7 @@ Feature: Sign up
       Then I should see "Already confirmed email. Please sign in."
       And I should be signed out
 
+    @javascript
+    Scenario: Apartment seeker signs up
+      When I go to the home page
+      Then I can sign up as an apartment seeker

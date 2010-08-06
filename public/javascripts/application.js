@@ -5,7 +5,7 @@ function updateContent(content) {
         var node = $(this);
         var key = node.attr("data-content-key");
 
-        $("[data-content-key=" + key + "]").html(node.html());
+        $("[data-content-key=" + key + "]").replaceWith(node);
     });
 
     $(document).trigger('content-updated');

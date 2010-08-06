@@ -1,4 +1,4 @@
-body.welcome.index {
+body.welcome.index, body.signup.account {
     div#body {
         background: url(/images/backgrounds/unauthenticated_side.png) repeat-x;
 
@@ -71,5 +71,27 @@ body.welcome.index {
 
     div#foot {
         background-color: white;
+    }
+}
+
+body.welcome.index, body.signup.account {
+    div#body {
+        div.container {
+            div.profile, div.account {
+                img.lady {
+                    position: relative;
+                    top: -239px;
+                }
+
+                div.article {
+                    background-color: white;
+                    width: 650px;
+                    height: 425px;
+                    position: relative;
+                    top: 39px;
+                    left: 150px;
+                }
+            }
+        }
     }
 }

@@ -61,7 +61,8 @@
         #flash
           %span=flash[:success]
 
-        =yield
+        %div{:'data-content-key' => 'yield'}
+          =yield
 
     #foot
       .container

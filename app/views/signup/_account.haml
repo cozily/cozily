@@ -1,0 +1,9 @@
+.account{:'data-content-key' => 'yield'}
+  .article
+    -semantic_form_for @user, :url => { :controller => "signup", :action => "account" } do |f|
+      =render "users/inputs", :form => f
+
+      -f.buttons do
+        =f.commit_button
+
+  =image_tag "characters/lady.png", :class => "lady"
