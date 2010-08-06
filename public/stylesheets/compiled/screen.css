@@ -784,10 +784,14 @@ body.welcome.index div#body div.container div.profile div.article form.profile i
   width: 75px;
 }
 /* line 132, ../../../app/stylesheets/partials/_unauthenticated.scss */
+body.welcome.index div#body div.container div.profile div.article form.profile fieldset.inputs, body.welcome.index div#body div.container div.profile div.article form.user fieldset.inputs, body.welcome.index div#body div.container div.account div.article form.profile fieldset.inputs, body.welcome.index div#body div.container div.account div.article form.user fieldset.inputs, body.signup.account div#body div.container div.profile div.article form.profile fieldset.inputs, body.signup.account div#body div.container div.profile div.article form.user fieldset.inputs, body.signup.account div#body div.container div.account div.article form.profile fieldset.inputs, body.signup.account div#body div.container div.account div.article form.user fieldset.inputs {
+  width: 100%;
+}
+/* line 136, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container div.profile div.article form.profile fieldset.buttons, body.welcome.index div#body div.container div.profile div.article form.user fieldset.buttons, body.welcome.index div#body div.container div.account div.article form.profile fieldset.buttons, body.welcome.index div#body div.container div.account div.article form.user fieldset.buttons, body.signup.account div#body div.container div.profile div.article form.profile fieldset.buttons, body.signup.account div#body div.container div.profile div.article form.user fieldset.buttons, body.signup.account div#body div.container div.account div.article form.profile fieldset.buttons, body.signup.account div#body div.container div.account div.article form.user fieldset.buttons {
   padding-left: 220px;
 }
-/* line 139, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 143, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container div.account div.article form.user input[type=submit], body.signup.account div#body div.container div.account div.article form.user input[type=submit] {
   width: 210px;
 }
