@@ -5,13 +5,14 @@ class SignupController < ApplicationController
   end
 
   def account
-    session[:profile] = {}
-    session[:profile] = params[:profile]
+    session[:profile] = params[:profile] if params.has_key?(:profile)
+    session[:user] = params[:user] if params.has_key?(:user)
     @user = User.new
     render :json => { :account => render_to_string(:partial => "signup/account") }
   end
 
   def create
+    params[:user].merge!(session[:user]) if session[:user]
     @user = User.new(params[:user])
     if @user.save
       @user.create_profile(session[:profile])

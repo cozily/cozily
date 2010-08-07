@@ -49,3 +49,8 @@ Feature: Sign up
     Scenario: Apartment seeker signs up
       When I go to the home page
       Then I can sign up as an apartment seeker
+
+    @javascript
+    Scenario: Apartment lister signs up
+      When I go to the home page
+      Then I can sign up as an apartment lister

@@ -1,12 +1,26 @@
 .account{:'data-content-key' => 'yield'}
-  .article
-    %h1 Almost done!
-    %h2 Just tell us a little more to do.
+  -if session[:want] == 'find'
+    .article
+      %h1 Almost done!
+      %h2 Just tell us a little more to do.
 
-    -semantic_form_for @user, :url => { :controller => "signup", :action => "create" } do |f|
-      =render "users/inputs", :form => f
+      -semantic_form_for @user, :url => { :controller => "signup", :action => "create" } do |f|
+        =render "users/inputs", :form => f
 
-      -f.buttons do
-        =f.commit_button "Sign Up & Start Browsing"
+        -f.buttons do
+          =f.commit_button "Sign Up & Start Browsing"
 
-  =image_tag "characters/lady.png", :class => "lady"
+    =image_tag "characters/lady.png", :class => "lady"
+
+  -else
+    .article
+      %h1 Almost done!
+      %h2 Just tell us a little more to do.
+
+      -semantic_form_for @user, :url => { :controller => "signup", :action => "create" } do |f|
+        =render "users/inputs", :form => f
+
+        -f.buttons do
+          =f.commit_button "Sign Up & Start Listing"
+
+    =image_tag "characters/man.png", :class => "man"

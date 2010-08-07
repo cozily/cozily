@@ -18,5 +18,16 @@
 
   -else
     .article
+      %h1 Great! We'll help you rent your apartment!
+      %h2 Tell us a little about yourself.
+
+      -semantic_form_for User.new, :url => { :controller => "signup", :action => "account" }, :html => { :'data-remote' => true } do |f|
+        -f.inputs do
+          =f.input :email
+          =f.input :phone
+
+        -f.buttons do
+          =f.commit_button "Next"
+
     =image_tag "characters/lady.png", :class => "lady", :'data-animate' => 'fade-out-and-shrink'
     =image_tag "characters/man.png", :class => "man"

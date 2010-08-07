@@ -16,3 +16,21 @@ Then /^I can sign up as an apartment seeker$/ do
   page.should have_content("Hi #{first_name}")
   page.should have_content("Sign out")
 end
+
+Then /^I can sign up as an apartment lister$/ do
+  page.find("a img.list").click
+  fill_in 'Email', :with => Faker::Internet.email
+  fill_in 'Phone', :with => Faker::PhoneNumber.phone_number
+
+  click_button 'Next'
+
+  fill_in 'First name', :with => first_name = Faker::Name.first_name
+  fill_in 'Last name', :with => Faker::Name.last_name
+  fill_in 'Password', :with => 'pass'
+  fill_in 'Confirm password', :with => 'pass'
+
+  click_button 'Sign Up & Start Listing'
+
+  page.should have_content("Hi #{first_name}")
+  page.should have_content("Sign out")
+end
