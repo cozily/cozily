@@ -1,7 +1,7 @@
 Then /^I can sign up as an apartment seeker$/ do
   page.find("a img.find").click
-  fill_in 'Bedrooms', :with => '1'
-  fill_in 'Rent', :with => '1500'
+  select '1', :from => 'How many bedrooms do you need?'
+  fill_in 'How much can you pay?', :with => '1500'
 
   click_button 'Next'
 

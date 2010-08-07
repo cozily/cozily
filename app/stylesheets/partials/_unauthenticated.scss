@@ -112,15 +112,19 @@ body.welcome.index, body.signup.create {
                 div.article {
                     form.profile, form.user {
                         label {
-                            width: 200px;
+                            width: 300px;
                             text-align: right;
                             margin-right: 20px;
                             line-height: 32px;
                             font-size: 1.2em;
                         }
 
+                        select {
+                            margin-top: 10px;
+                        }
+
                         input[type=text], input[type=password] {
-                            width: 350px;
+                            width: 250px;
                             height: 35px;
                         }
 
@@ -134,14 +138,30 @@ body.welcome.index, body.signup.create {
                         }
 
                         fieldset.buttons {
-                            padding-left: 220px;
+                            padding-left: 320px;
                         }
                     }
                 }
             }
 
-            div.account div.article form.user input[type=submit] {
-                width: 210px;
+
+
+            div.account div.article form.user {
+                label {
+                    width: 200px;
+                }
+
+                input[type=text], input[type=password] {
+                    width: 350px;
+                }
+
+                input[type=submit] {
+                    width: 210px;
+                }
+
+                fieldset.buttons {
+                    padding-left: 220px;
+                }
             }
         }
     }
