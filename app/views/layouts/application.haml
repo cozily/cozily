@@ -69,7 +69,8 @@
           %li=link_to "FAQ", faq_page_path
           %li=link_to "Privacy Policy", privacy_policy_page_path
           %li=link_to "Terms of Service", terms_of_service_page_path
-          %li=link_to "New Apartment", apartments_path, :method => :post
+          -if current_user
+            %li=link_to "New Apartment", apartments_path, :method => :post
           %li.twitter=link_to image_tag("icons/twitter.png"), "http://www.twitter.com/cozidotly", :target => "_blank"
           %li.facebook=link_to image_tag("icons/facebook.png"), "http://www.facebook.com/pages/Cozily/125237897517891", :target => "_blank"
           %li.copyright="&copy; #{Time.now.year} Cozily All Rights Reserved"
