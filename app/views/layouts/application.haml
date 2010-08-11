@@ -32,8 +32,6 @@
         =link_to image_tag("logos/logo.png"), root_url
 
         %ul.nav
-          %li=link_to_unless_current "neighborhoods", neighborhoods_path
-          %li=link_to_unless_current "search", search_path
           -if current_user
             %li=link_to_unless_current "my favorites", user_favorites_path(current_user)
           -if current_user && current_user.apartments.present?
