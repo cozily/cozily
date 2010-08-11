@@ -32,7 +32,7 @@
 
           %li.contact
             %ul
-              %li.phone 800-309-2860
+              %li.phone=match.user.phone
               %li.message=link_to "send message", "#"
               %li.favorite=render "favorites/link", :apartment => match, :count => index
 
