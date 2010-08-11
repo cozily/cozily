@@ -1,6 +1,6 @@
 class DashboardController < ApplicationController
   def matches
-    @matches = Apartment.with_state(:listed)
+    @matches = Apartment.with_state(:listed).paginate(:page => params[:page])
     @events = current_user.timeline_events[0...5]
     respond_to do |format|
       format.html {}
@@ -12,7 +12,7 @@ class DashboardController < ApplicationController
 
   def favorites
     render :json => { :matches => render_to_string(:partial => "dashboard/favorites",
-                                                   :locals => { :favorites => current_user.favorite_apartments }) }
+                                                   :locals => { :favorites => current_user.favorite_apartments.paginate(:page => params[:page]) }) }
   end
 
   def messages

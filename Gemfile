@@ -18,6 +18,7 @@ gem "searchlogic", "2.4.19"
 gem "state_machine", "0.9.2"
 gem "timeline_fu", "0.3.0"
 gem "twitter_oauth", "0.4.0"
+gem "will_paginate", "2.3.14"
 
 group :test do
   gem "capybara", "0.3.8"

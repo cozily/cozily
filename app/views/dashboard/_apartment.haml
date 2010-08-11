@@ -6,7 +6,7 @@
           =image_tag(apartment.images.first.asset.url(:medium))
         -else
           &nbsp;
-      .count==#{index + 1}
+      .count=position
     %li.info
       %ul
         %li.street=link_to apartment.street, apartment
@@ -20,5 +20,5 @@
       %ul
         %li.phone=apartment.user.phone
         %li.message=link_to "send message", "#"
-        %li.favorite=render "favorites/link", :apartment => apartment, :count => index
+        %li.favorite=render "favorites/link", :apartment => apartment, :count => position
 

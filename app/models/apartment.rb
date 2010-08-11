@@ -85,6 +85,12 @@ class Apartment < ActiveRecord::Base
   named_scope :bedrooms_near, lambda { |count| { :conditions => ["bedrooms >= ? and bedrooms <= ?", count - 0.5, count + 0.5] } }
   named_scope :rent_near, lambda { |amount| { :conditions => ["rent >= ? and rent <= ?", amount * 0.8, amount * 1.2] } }
 
+  class << self
+    def per_page
+      10
+    end
+  end
+
   def comparable_apartments
     return [] unless bedrooms && rent && address
     Apartment.with_state(:listed).bedrooms_near(bedrooms).rent_near(rent).to_a.sort_by_distance_from(self) - [self]

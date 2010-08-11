@@ -11,5 +11,7 @@
       %li=link_to "Inbox", dashboard_messages_path, :'data-remote' => true
 
   .article
-    -favorites.each_with_index do |apartment, index|
-      =render "dashboard/apartment", :apartment => apartment, :index => index
+    =pagination_summary(params[:page], current_user.favorite_apartments)
+    =will_paginate(favorites, :renderer => AjaxPaginationLinkRenderer)
+    -favorites.each do |apartment|
+      =render "dashboard/apartment", :apartment => apartment, :position => position_in_collection(apartment, current_user.favorite_apartments)
