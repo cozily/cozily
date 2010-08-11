@@ -2,10 +2,14 @@ class Image < ActiveRecord::Base
   belongs_to :apartment, :counter_cache => true
 
   has_attached_file :asset,
-                    :styles => { :large => "625x440#", :medium => "115x115#", :thumb => "85x85#" },
+                    :styles => { :large => "625x440#",
+                                 :medium => "115x115#",
+                                 :thumb => "85x85#",
+                                 :micro => "32x32#" },
                     :storage => :s3,
                     :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
-                    :path => "/:id/:style/:filename"
+                    :path => "/:id/:style/:filename",
+                    :default_url => "/images/defaults/:style.png"
 
   validates_presence_of :apartment
 

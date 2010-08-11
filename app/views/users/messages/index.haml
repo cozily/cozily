@@ -1,11 +1,37 @@
-%table
-  -Message.for_user(current_user).root.map(&:latest_reply).compact.each do |message|
-    %tr{:'data-click-path' => user_message_path(current_user, message)}
-      %td
-        =message.sender.full_name
-      %td
-        =message.apartment.name
-        ==-
-        =truncate(message.body)
-      %td
-        =message.created_at
+.head
+  %h1==Hi, #{current_user.first_name}
+
+  .lady
+    %span=="Wow #{current_user.first_name}, people seem to love talking to you!"
+
+  %ul.tabs
+    %li=link_to "Matches", "#"
+    %li=link_to "Favorites", "#"
+    %li.active=link_to "Messages", "#"
+
+.sorting
+
+.pagination
+  %hr
+    
+.messages
+  - @message_threads.each_with_index do |message_thread, index|
+    %div[message_thread]
+      %ul{:'data-click-path' => user_message_path(current_user, message_thread)}
+        %li.status.new &nbsp;
+        %li.info
+          %ul
+            %li.sender= message_thread.sender.full_name
+            %li.details
+              = truncate(message_thread.body)
+              |
+              = message_thread.created_at
+
+        %li.delete= image_tag "icons/delete_message.png"
+        %li.photo
+          -if message_thread.apartment.images.present?
+            =image_tag(message_thread.apartment.images.first.asset.url(:micro))
+          -else
+            &nbsp;
+        %li.name= message_thread.apartment.address.street
+      

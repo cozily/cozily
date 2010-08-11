@@ -12,16 +12,11 @@ end
 
 Then /^I can view my inbox$/ do
   apartment = Factory(:apartment)
-  Factory(:message,
-          :apartment => apartment,
-          :sender => the.user)
-  Factory(:message,
-          :apartment => apartment,
-          :receiver => the.user)
-
-#  visit "/"
-#  click_link "Inbox (1)"
+  message = Factory(:message,
+                    :apartment => apartment,
+                    :sender => the.user)
 
   visit user_messages_path(the.user)
   current_path.should == user_messages_path(the.user)
+  page.should have_content(message.body)
 end

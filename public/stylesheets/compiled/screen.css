@@ -1033,6 +1033,115 @@ body.dashboard div.aside div#activity_feed ul li.message.created {
   background: url(/images/icons/message.png) no-repeat 0 2px;
 }
 
+/* line 2, ../../../app/stylesheets/partials/_messages.scss */
+body.messages div.head {
+  background: url(/images/backgrounds/tab.png) repeat-x left bottom;
+}
+/* line 5, ../../../app/stylesheets/partials/_messages.scss */
+body.messages div.head h1 {
+  font-weight: 500;
+  float: left;
+  margin: -55px 0 0 25px;
+}
+/* line 11, ../../../app/stylesheets/partials/_messages.scss */
+body.messages div.head div.lady {
+  float: right;
+  margin: -60px 12px 0 0;
+  background: url(/images/characters/lady_head.png) no-repeat right center;
+  height: 84px;
+}
+/* line 17, ../../../app/stylesheets/partials/_messages.scss */
+body.messages div.head div.lady span {
+  font-size: 1.2em;
+  font-style: italic;
+  width: 220px;
+  padding: 15px 85px 0 0;
+  text-align: center;
+  display: block;
+}
+/* line 27, ../../../app/stylesheets/partials/_messages.scss */
+body.messages div.head ul.tabs {
+  overflow: hidden;
+  display: inline-block;
+  margin-top: 70px;
+  margin-left: 25px;
+}
+/* line 8, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/general/_hacks.scss */
+body.messages div.head ul.tabs {
+  display: block;
+}
+/* line 31, ../../../app/stylesheets/partials/_messages.scss */
+body.messages div.head ul.tabs li {
+  float: left;
+  padding: 5px 20px 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.2em;
+  border-top: 4px solid white;
+}
+/* line 40, ../../../app/stylesheets/partials/_messages.scss */
+body.messages div.head ul.tabs li.active {
+  border-top: 4px solid #A0C045;
+  border-left: 4px solid #DCDCDC;
+  border-right: 4px solid #DCDCDC;
+  background: url(/images/backgrounds/white.png) repeat-x left bottom;
+}
+/* line 49, ../../../app/stylesheets/partials/_messages.scss */
+body.messages div.messages {
+  padding: 0 10px;
+  width: 930px;
+}
+/* line 53, ../../../app/stylesheets/partials/_messages.scss */
+body.messages div.messages div.message {
+  height: 55px;
+  background: url(/images/backgrounds/message_thread.png) repeat-x;
+  border: 1px solid #ececec;
+}
+/* line 58, ../../../app/stylesheets/partials/_messages.scss */
+body.messages div.messages div.message > ul > li {
+  float: left;
+}
+/* line 61, ../../../app/stylesheets/partials/_messages.scss */
+body.messages div.messages div.message > ul > li.status {
+  height: 100%;
+  width: 55px;
+}
+/* line 65, ../../../app/stylesheets/partials/_messages.scss */
+body.messages div.messages div.message > ul > li.new {
+  background: url(/images/backgrounds/new_message.png) no-repeat left center;
+}
+/* line 68, ../../../app/stylesheets/partials/_messages.scss */
+body.messages div.messages div.message > ul > li.info {
+  padding-top: 0.5em;
+}
+/* line 71, ../../../app/stylesheets/partials/_messages.scss */
+body.messages div.messages div.message > ul > li.info > ul li.sender {
+  font-size: 1.5em;
+}
+/* line 76, ../../../app/stylesheets/partials/_messages.scss */
+body.messages div.messages div.message > ul > li.name {
+  float: right;
+  font-size: 1.2em;
+  padding-top: 1.2em;
+  color: #aaa;
+  text-align: right;
+}
+/* line 83, ../../../app/stylesheets/partials/_messages.scss */
+body.messages div.messages div.message > ul > li.photo {
+  float: right;
+  padding: 12px;
+}
+/* line 87, ../../../app/stylesheets/partials/_messages.scss */
+body.messages div.messages div.message > ul > li.delete {
+  float: right;
+  padding: 21px 15px 16px 17px;
+  background: url(/images/backgrounds/sideways_gradient_right.png) repeat-y left;
+}
+/* line 95, ../../../app/stylesheets/partials/_messages.scss */
+body.messages div.messages div.message:hover {
+  background: url(/images/backgrounds/message_thread_hover.png) repeat-x;
+}
+
 /* line 3, ../../../app/stylesheets/partials/apartments/_apartments.scss */
 body.apartments ul.buttons li {
   float: left;
