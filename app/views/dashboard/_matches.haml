@@ -5,10 +5,7 @@
     .lady
       %span=="Wow #{current_user.first_name}, that's a fabulous shirt you're wearing"
 
-    %ul.tabs
-      %li.active=link_to "Matches", dashboard_matches_path, :'data-remote' => true
-      %li=link_to "Favorites", dashboard_favorites_path, :'data-remote' => true
-      %li=link_to "Inbox", dashboard_messages_path, :'data-remote' => true
+    =render "dashboard/tabs", :active => :matches
 
   .article
     =pagination_summary(params[:page], Apartment.with_state(:listed))

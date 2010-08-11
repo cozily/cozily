@@ -15,6 +15,7 @@ Then /^I can sign up as an apartment seeker$/ do
 
   page.should have_content("Hi #{first_name}")
   page.should have_content("Sign out")
+  page.should_not have_content("My Listings")
 end
 
 Then /^I can sign up as an apartment lister$/ do

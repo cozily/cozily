@@ -19,6 +19,10 @@ class User < ActiveRecord::Base
     [first_name, last_name].join(" ")
   end
 
+  def lister?
+    apartments.present?
+  end
+
   def unread_message_count
     received_messages.unread.count
   end

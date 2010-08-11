@@ -1,4 +1,5 @@
 Then /^I can view the apartment by its neighborhood$/ do
+  pending "decision neighborhood functionality"
   apartment = Apartment.last
 
   click_link "neighborhoods"

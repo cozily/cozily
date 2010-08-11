@@ -1,5 +1,7 @@
 module PaginationHelper
   def pagination_summary(page, collection)
+    return unless collection.present?
+
     page = page.nil? ? 1 : page.to_i
 
     per_page = collection.first.class.per_page

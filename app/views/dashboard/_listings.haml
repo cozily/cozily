@@ -1,0 +1,39 @@
+%div{:'data-content-key' => 'active-tab'}
+  .head
+    %h1==Hi, #{current_user.first_name}
+
+    .lady
+      %span=="Wow #{current_user.first_name}, that's a fabulous shirt you're wearing"
+
+    =render "dashboard/tabs", :active => :listings
+
+  .article
+    =pagination_summary(params[:page], current_user.apartments)
+    =will_paginate(apartments, :renderer => AjaxPaginationLinkRenderer)
+    -apartments.each do |apartment|
+      -position = position_in_collection(apartment, current_user.apartments)
+      %div[apartment]
+        %ul
+          %li.photo
+            .image
+              -if apartment.images.present?
+                =image_tag(apartment.images.first.asset.url(:medium))
+              -else
+                &nbsp;
+            .count=position
+          %li.info
+            %ul
+              -if apartment.address
+                %li.street=link_to apartment.street, apartment
+              %li.basic
+                %span.rent==$#{number_with_delimiter(apartment.rent)}
+                ==/ #{apartment.bedrooms.try(:prettify)}bd/#{apartment.bathrooms.try(:prettify)}ba / #{apartment.square_footage} sq. ft.
+              -if apartment.address
+                %li.neighborhood==Neighborhood: #{neighborhood_links(apartment)}
+              %li.listed_on==Listed on #{apartment.listed_on.try(:to_date).try(:to_s, :app_long)}
+
+          %li.contact
+            %ul
+              %li.phone=apartment.user.phone
+              %li.message=link_to "send message", "#"
+              %li.favorite=render "favorites/link", :apartment => apartment, :count => position

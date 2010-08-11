@@ -25,11 +25,15 @@ ActionController::Routing::Routes.draw do |map|
 
   map.business_search "yelp/business_search", :controller => "yelp", :action => "business_search"
 
-  map.dashboard_matches "dashboard", :controller => "dashboard", :action => "matches"
-  map.dashboard_favorites "dashboard/favorites", :controller => "dashboard", :action => "favorites"
-  map.dashboard_messages "dashboard/messages", :controller => "dashboard", :action => "messages"
-
   map.connect 'signup/:action', :controller => 'signup'
+
+  map.with_options :controller => "dashboard" do |page|
+    page.dashboard "dashboard", :action => "show"
+    page.dashboard_listings "dashboard/listings", :action => "listings"
+    page.dashboard_matches "dashboard/matches", :action => "matches"
+    page.dashboard_favorites "dashboard/favorites", :action => "favorites"
+    page.dashboard_messages "dashboard/messages", :action => "messages"
+  end
 
   map.with_options :controller => "pages" do |page|
     page.about_page "/about", :action => "about"

@@ -17,7 +17,7 @@ class SignupController < ApplicationController
     if @user.save
       @user.create_profile(session[:profile])
       sign_in(@user)
-      redirect_to dashboard_matches_path
+      redirect_to dashboard_path
     else
       render "_account"
     end
