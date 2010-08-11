@@ -144,9 +144,7 @@ body.welcome.index, body.signup.create {
                 }
             }
 
-
-
-            div.account div.article form.user {
+            div.profile div.article form.user, div.account div.article form.user {
                 label {
                     width: 200px;
                 }
@@ -163,6 +161,12 @@ body.welcome.index, body.signup.create {
                     padding-left: 220px;
                 }
             }
+
+            div.profile div.article form.user {
+                input[type=submit] {
+                    width: 75px;
+                }
+            }            
         }
     }
 }
