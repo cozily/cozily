@@ -11,7 +11,8 @@ class DashboardController < ApplicationController
   end
 
   def favorites
-    render :json => { :matches => render_to_string(:partial => "dashboard/favorites") }
+    render :json => { :matches => render_to_string(:partial => "dashboard/favorites",
+                                                   :locals => { :favorites => current_user.favorite_apartments }) }
   end
 
   def messages

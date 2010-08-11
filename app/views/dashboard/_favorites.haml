@@ -11,3 +11,5 @@
       %li=link_to "Inbox", dashboard_messages_path, :'data-remote' => true
 
   .article
+    -favorites.each_with_index do |apartment, index|
+      =render "dashboard/apartment", :apartment => apartment, :index => index
