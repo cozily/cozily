@@ -1,7 +1,7 @@
 class Station < ActiveRecord::Base
   acts_as_mappable
 
-  has_many :station_trains
+  has_many :station_trains, :dependent => :destroy
   has_many :trains, :through => :station_trains
 
   validates_presence_of :name

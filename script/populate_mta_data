@@ -1,0 +1,22 @@
+Station.destroy_all
+StationTrain.destroy_all
+Train.destroy_all
+
+require 'rubygems'
+require 'faster_csv'
+
+FasterCSV.foreach("lib/mta_subway_info.csv", :headers => :first_row) do |row|
+  station = Station.create(:name => row["Station Name"],
+                           :line => row["Line"],
+                           :lat => row["Latitude"],
+                           :lng => row["Longitude"])
+  station = Station.find_by_lat_and_lng(row["Latitude"], row["Longitude"]) unless station
+
+  (1..9).each do |num|
+    name = row["Route#{num}"]
+    if name.present?
+      train = Train.find_or_create_by_name(name)
+      StationTrain.create(:station => station, :train => train)
+    end
+  end
+end
