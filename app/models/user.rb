@@ -17,13 +17,21 @@ class User < ActiveRecord::Base
 
   validates_presence_of :first_name, :last_name
 
+  def finder?
+    role_symbols.include?(:finder) || role_symbols.empty?
+  end
+
   def full_name
     [first_name, last_name].join(" ")
   end
 
   def lister?
-    apartments.present?
+    role_symbols.include?(:lister) || apartments.present?
   end
+
+  def role_symbols
+     (roles || []).map {|r| r.name.to_sym}
+   end
 
   def unread_message_count
     received_messages.unread.count

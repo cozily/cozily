@@ -123,11 +123,11 @@ end
 
 Then /^I can view my apartments$/ do
   visit "/"
-  click_link "my apartments"
-  current_path.should == user_apartments_path(the.user)
+  click_link "my listings"
+  current_path.should == dashboard_listings_path
 
   the.user.apartments.each do |apartment|
-    page.should have_content(apartment.full_address)
+    page.should have_content(apartment.street)
   end
 end
 

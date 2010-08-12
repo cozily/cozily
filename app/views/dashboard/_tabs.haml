@@ -1,9 +1,11 @@
 %ul.tabs
-  %li{:class => "#{'active' if active == :listings}"}
-    =link_to "My Listings", dashboard_listings_path, :'data-remote' => true
-  %li{:class => "#{'active' if active == :matches}"}
-    =link_to "Matches", dashboard_matches_path, :'data-remote' => true
-  %li{:class => "#{'active' if active == :favorites}"}
-    =link_to "Favorites", dashboard_favorites_path, :'data-remote' => true
+  -if current_user.lister?
+    %li{:class => "#{'active' if active == :listings}"}
+      =link_to "My Listings", dashboard_listings_path, :'data-remote' => true
+  -if current_user.finder?
+    %li{:class => "#{'active' if active == :matches}"}
+      =link_to "Matches", dashboard_matches_path, :'data-remote' => true
+    %li{:class => "#{'active' if active == :favorites}"}
+      =link_to "Favorites", dashboard_favorites_path, :'data-remote' => true
   %li{:class => "#{'active' if active == :messages}"}
     =link_to "Inbox", dashboard_messages_path, :'data-remote' => true

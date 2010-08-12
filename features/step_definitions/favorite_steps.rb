@@ -18,8 +18,8 @@ Given /^I have favorites$/ do
 end
 
 Then /^I can view my favorites$/ do
-  click_link "my favorites"
-  current_path.should == user_favorites_path(the.user)
+  click_link "favorites"
+  current_path.should == dashboard_favorites_path
 
   the.user.favorites.each do |favorite|
     page.should have_css("a:contains('#{favorite.apartment.full_address}')")

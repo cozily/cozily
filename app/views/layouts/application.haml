@@ -32,10 +32,11 @@
         =link_to image_tag("logos/logo.png"), root_url
 
         %ul.nav
-          -if current_user
-            %li=link_to_unless_current "my favorites", user_favorites_path(current_user)
-          -if current_user && current_user.apartments.present?
-            %li=link_to_unless_current "my apartments", user_apartments_path(current_user)
+          -if current_user.try(:lister?)
+            %li=link_to_unless_current "my listings", dashboard_listings_path
+          -if current_user.try(:finder?)
+            %li=link_to_unless_current "matches", dashboard_matches_path
+            %li=link_to_unless_current "favorites", dashboard_favorites_path
 
         =render "sessions/nav_actions"
 
