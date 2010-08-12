@@ -1,14 +1,13 @@
-%div{:'data-content-key' => 'active-tab'}
-  .head
-    %h1==Hi, #{current_user.first_name}
+.head
+  %h1==Hi, #{current_user.first_name}
 
-    .lady
-      %span=="Wow #{current_user.first_name}, that's a fabulous shirt you're wearing"
+  .lady
+    %span=="Wow #{current_user.first_name}, that's a fabulous shirt you're wearing"
 
-    =render "dashboard/tabs", :active => :favorites
+  =render "dashboard/tabs", :active => :favorites
 
-  .article
-    =pagination_summary(params[:page], current_user.favorite_apartments)
-    =will_paginate(favorites, :renderer => AjaxPaginationLinkRenderer)
-    -favorites.each do |apartment|
-      =render "dashboard/apartment", :apartment => apartment, :position => position_in_collection(apartment, current_user.favorite_apartments)
+.article
+  =pagination_summary(params[:page], current_user.favorite_apartments)
+  =will_paginate(favorites, :renderer => AjaxPaginationLinkRenderer)
+  -favorites.each do |apartment|
+    =render "dashboard/apartment", :apartment => apartment, :position => position_in_collection(apartment, current_user.favorite_apartments)

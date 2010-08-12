@@ -9,29 +9,4 @@
     %li=link_to "Favorites", "#"
     %li.active=link_to "Messages", "#"
 
-.sorting
-
-.pagination
-  %hr
-    
-.messages
-  - @message_threads.each_with_index do |message_thread, index|
-    %div[message_thread]
-      %ul{:'data-click-path' => user_message_path(current_user, message_thread)}
-        %li.status.new &nbsp;
-        %li.info
-          %ul
-            %li.sender= message_thread.sender.full_name
-            %li.details
-              = truncate(message_thread.body)
-              |
-              = message_thread.created_at
-
-        %li.delete= image_tag "icons/delete_message.png"
-        %li.photo
-          -if message_thread.apartment.images.present?
-            =image_tag(message_thread.apartment.images.first.asset.url(:micro))
-          -else
-            &nbsp;
-        %li.name= message_thread.apartment.address.street
       

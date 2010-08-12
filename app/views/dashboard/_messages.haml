@@ -1,10 +1,31 @@
-%div{:'data-content-key' => 'active-tab'}
-  .head
-    %h1==Hi, #{current_user.first_name}
+.head
+  %h1==Hi, #{current_user.first_name}
 
-    .lady
-      %span=="Wow #{current_user.first_name}, that's a fabulous shirt you're wearing"
+  .lady
+    %span=="Wow #{current_user.first_name}, people really seem to love talking to you!"
 
-    =render "dashboard/tabs", :active => :messages
+  =render "dashboard/tabs", :active => :messages
 
-  .article
+.pagination
+  %hr
+
+.messages
+  - @messages.each_with_index do |message, index|
+    %div[message]
+      %ul{:'data-click-path' => user_message_path(current_user, message)}
+        %li.status.new &nbsp;
+        %li.info
+          %ul
+            %li.sender= message.sender.full_name
+            %li.details
+              = truncate(message.body)
+              |
+              = message.created_at
+
+        %li.delete= image_tag "icons/delete_message.png"
+        %li.photo
+          -if message.apartment.images.present?
+            =image_tag(message.apartment.images.first.asset.url(:micro))
+          -else
+            &nbsp;
+        %li.name= message.apartment.address.street

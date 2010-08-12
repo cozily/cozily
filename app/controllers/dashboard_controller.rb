@@ -16,7 +16,7 @@ class DashboardController < ApplicationController
     respond_to do |format|
       format.html
       format.js do
-        render :json => { :listings => render_to_string(:partial => "dashboard/listings",
+        render :json => { :listings => render_to_string(:layout => "dashboard/listings",
                                                        :locals => { :apartments => current_user.apartments.paginate(:page => params[:page]) }) }
       end
     end
@@ -27,7 +27,7 @@ class DashboardController < ApplicationController
     respond_to do |format|
       format.html
       format.js do
-        render :json => { :matches => render_to_string(:partial => "dashboard/matches",
+        render :json => { :matches => render_to_string(:layout => "dashboard/matches",
                                                        :locals => { :matches => @matches }) }
       end
     end
@@ -38,14 +38,21 @@ class DashboardController < ApplicationController
     respond_to do |format|
       format.html
       format.js do
-        render :json => { :favorites => render_to_string(:partial => "dashboard/favorites",
+        render :json => { :favorites => render_to_string(:layout => "dashboard/favorites",
                                                        :locals => { :favorites => @favorites }) }
       end
     end
   end
 
   def messages
-    render :json => { :messages => render_to_string(:partial => "dashboard/messages") }
+    @messages = Message.for_user(current_user).root
+    respond_to do |format|
+      format.html
+      format.js do
+        render :json => { :messages => render_to_string(:layout => "dashboard/messages",
+                                                        :locals => { :messages => @messages }) }
+      end
+    end
   end
 
   private
