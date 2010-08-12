@@ -112,7 +112,7 @@ class Apartment < ActiveRecord::Base
 
   def nearby_stations
     return [] unless address
-    Station.find(:all, :origin => [lat, lng], :within => 0.4, :order => 'distance', :group => "name")
+    Station.find(:all, :origin => [lat, lng], :within => 0.4, :order => 'distance')
   end
 
   def listable?
