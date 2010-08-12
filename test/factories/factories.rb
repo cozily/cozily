@@ -63,10 +63,19 @@ Factory.define :profile do |p|
   p.association  :user
 end
 
+Factory.define :role do |r|
+  r.name  { Faker::Lorem.words }
+end
+
 Factory.define :station do |s|
   s.name  "W 215 St"
   s.lat   40.869555
   s.lng   -73.915163
+end
+
+Factory.define :user_role do |u|
+  u.association  :user
+  u.association  :role
 end
 
 Factory.sequence :full_address do |n|

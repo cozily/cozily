@@ -1,0 +1,11 @@
+finder:
+  id   : 1
+  name : finder
+
+lister:
+  id   : 2
+  name : lister
+
+admin:
+  id   : 3
+  name : admin
