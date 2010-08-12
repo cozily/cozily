@@ -1,47 +1,15 @@
-body.messages {
-    div.head {
-        background: url(/images/backgrounds/tab.png) repeat-x left bottom;
+body.dashboard {
 
-        h1 {
-            font-weight: 500;
-            float: left;
-            margin: -55px 0 0 25px;
-        }
-
-        div.lady {
-            float: right;
-            margin: -60px 12px 0 0;
-            background: url(/images/characters/lady_head.png) no-repeat right center;
-            height: 84px;
-
-            span {
-                font-size: 1.2em;
-                font-style: italic;
-                width: 220px;
-                padding: 15px 85px 0 0;
-                text-align: center;
-                display: block;
-            }
-        }
-
-        ul.tabs {
-            @include clearfix;
-            margin-top: 70px;
-            margin-left: 25px;
-            li {
+    div.pagination {
+        font-size: 1.2em;
+        height: 36px;
+        > ul {
+            padding: 9px 18px;
+            > li.counts {
                 float: left;
-                padding: 5px 20px 10px;
-                text-transform: uppercase;
-                font-weight: bold;
-                font-size: 1.2em;
-                border-top: 4px solid white;
             }
-
-            li.active {
-                border-top: 4px solid #A0C045;
-                border-left: 4px solid #DCDCDC;
-                border-right: 4px solid #DCDCDC;
-                background: url(/images/backgrounds/white.png) repeat-x left bottom;
+            > li.navigation {
+                float: right
             }
         }
     }
@@ -54,7 +22,11 @@ body.messages {
             height: 55px;
             background: url(/images/backgrounds/message_thread.png) repeat-x;
             border: 1px solid #ececec;
-            > ul {
+            span.bold {
+                font-weight: bold;
+            }
+
+            > ul.root {
                 > li {
                     float: left;
                 }
@@ -88,6 +60,11 @@ body.messages {
                     float: right;
                     padding: 21px 15px 16px 17px;
                     background: url(/images/backgrounds/sideways_gradient_right.png) repeat-y left;
+                }
+            }
+            > ul.replies {
+                > li {
+
                 }
             }
         }

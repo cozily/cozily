@@ -7,12 +7,14 @@
   =render "dashboard/tabs", :active => :messages
 
 .pagination
-  %hr
+  %ul
+    %li.counts= pagination_summary(params[:page], Message.for_user(current_user).root)
+    %li.navigation= will_paginate((@messages), :renderer => AjaxPaginationLinkRenderer)
 
 .messages
-  - @messages.each_with_index do |message, index|
+  - @messages.each do |message|
     %div[message]
-      %ul{:'data-click-path' => user_message_path(current_user, message)}
+      %ul.root{:'data-click-path' => user_message_path(current_user, message)}
         %li.status.new &nbsp;
         %li.info
           %ul
