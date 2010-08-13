@@ -1110,6 +1110,11 @@ body.dashboard div.messages div.message:hover {
   background: url(/images/backgrounds/message_thread_hover.png) repeat-x;
 }
 
+/* line 2, ../../../app/stylesheets/partials/_pages.scss */
+body.pages div.page {
+  padding: 2em;
+}
+
 /* line 3, ../../../app/stylesheets/partials/apartments/_apartments.scss */
 body.apartments ul.buttons li {
   float: left;
