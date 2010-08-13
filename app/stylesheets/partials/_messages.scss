@@ -15,18 +15,23 @@ body.dashboard {
     }
 
     div.messages {
-        padding: 0 10px;
+        margin: 0 10px;
         width: 930px;
+        border: 1px solid #ececec;
+
+        span.bold {
+            font-weight: bold;
+        }
+
+        span.light {
+            color: #dadada;
+        }
 
         div.message {
             height: 55px;
             background: url(/images/backgrounds/message_thread.png) repeat-x;
-            border: 1px solid #ececec;
-            span.bold {
-                font-weight: bold;
-            }
 
-            > ul.root {
+            ul.root {
                 > li {
                     float: left;
                 }
@@ -58,19 +63,37 @@ body.dashboard {
                 }
                 > li.delete {
                     float: right;
-                    padding: 21px 15px 16px 17px;
+                    padding: 20px 15px 16px 17px;
                     background: url(/images/backgrounds/sideways_gradient_right.png) repeat-y left;
                 }
             }
-            > ul.replies {
-                > li {
 
-                }
-            }
         }
 
         div.message:hover {
             background: url(/images/backgrounds/message_thread_hover.png) repeat-x;
+        }
+
+        div.replies {
+            ul {
+                padding: 10px;
+                > li {
+                    padding: 10px;
+                    border-bottom: 1px solid #ececec;
+                    p {
+                        line-height: 2em;
+                        margin: 0;
+                    }
+                }
+                > li.reply {
+                    padding-right: 0px;
+                    border-bottom: 0;
+                    a {
+                        font-weight: bold;
+                        float: right;
+                    }
+                }
+            }
         }
     }
 }

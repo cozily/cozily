@@ -1052,62 +1052,91 @@ body.dashboard div.pagination > ul > li.navigation {
 }
 /* line 17, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.messages {
-  padding: 0 10px;
+  margin: 0 10px;
   width: 930px;
+  border: 1px solid #ececec;
 }
-/* line 21, ../../../app/stylesheets/partials/_messages.scss */
+/* line 22, ../../../app/stylesheets/partials/_messages.scss */
+body.dashboard div.messages span.bold {
+  font-weight: bold;
+}
+/* line 26, ../../../app/stylesheets/partials/_messages.scss */
+body.dashboard div.messages span.light {
+  color: #dadada;
+}
+/* line 30, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.messages div.message {
   height: 55px;
   background: url(/images/backgrounds/message_thread.png) repeat-x;
-  border: 1px solid #ececec;
 }
-/* line 25, ../../../app/stylesheets/partials/_messages.scss */
-body.dashboard div.messages div.message span.bold {
-  font-weight: bold;
-}
-/* line 30, ../../../app/stylesheets/partials/_messages.scss */
-body.dashboard div.messages div.message > ul.root > li {
+/* line 35, ../../../app/stylesheets/partials/_messages.scss */
+body.dashboard div.messages div.message ul.root > li {
   float: left;
 }
-/* line 33, ../../../app/stylesheets/partials/_messages.scss */
-body.dashboard div.messages div.message > ul.root > li.status {
+/* line 38, ../../../app/stylesheets/partials/_messages.scss */
+body.dashboard div.messages div.message ul.root > li.status {
   height: 100%;
   width: 55px;
 }
-/* line 37, ../../../app/stylesheets/partials/_messages.scss */
-body.dashboard div.messages div.message > ul.root > li.new {
+/* line 42, ../../../app/stylesheets/partials/_messages.scss */
+body.dashboard div.messages div.message ul.root > li.new {
   background: url(/images/backgrounds/new_message.png) no-repeat left center;
 }
-/* line 40, ../../../app/stylesheets/partials/_messages.scss */
-body.dashboard div.messages div.message > ul.root > li.info {
+/* line 45, ../../../app/stylesheets/partials/_messages.scss */
+body.dashboard div.messages div.message ul.root > li.info {
+  width: 500px;
   padding-top: 0.5em;
 }
-/* line 43, ../../../app/stylesheets/partials/_messages.scss */
-body.dashboard div.messages div.message > ul.root > li.info > ul li.sender {
+/* line 49, ../../../app/stylesheets/partials/_messages.scss */
+body.dashboard div.messages div.message ul.root > li.info > ul li.sender {
   font-size: 1.5em;
 }
-/* line 48, ../../../app/stylesheets/partials/_messages.scss */
-body.dashboard div.messages div.message > ul.root > li.name {
+/* line 54, ../../../app/stylesheets/partials/_messages.scss */
+body.dashboard div.messages div.message ul.root > li.name {
   float: right;
   font-size: 1.2em;
   padding-top: 1.2em;
   color: #aaa;
   text-align: right;
 }
-/* line 55, ../../../app/stylesheets/partials/_messages.scss */
-body.dashboard div.messages div.message > ul.root > li.photo {
+/* line 61, ../../../app/stylesheets/partials/_messages.scss */
+body.dashboard div.messages div.message ul.root > li.photo {
   float: right;
   padding: 12px;
 }
-/* line 59, ../../../app/stylesheets/partials/_messages.scss */
-body.dashboard div.messages div.message > ul.root > li.delete {
+/* line 65, ../../../app/stylesheets/partials/_messages.scss */
+body.dashboard div.messages div.message ul.root > li.delete {
   float: right;
-  padding: 21px 15px 16px 17px;
+  padding: 20px 15px 16px 17px;
   background: url(/images/backgrounds/sideways_gradient_right.png) repeat-y left;
 }
-/* line 72, ../../../app/stylesheets/partials/_messages.scss */
+/* line 74, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.messages div.message:hover {
   background: url(/images/backgrounds/message_thread_hover.png) repeat-x;
+}
+/* line 79, ../../../app/stylesheets/partials/_messages.scss */
+body.dashboard div.messages div.replies ul {
+  padding: 10px;
+}
+/* line 81, ../../../app/stylesheets/partials/_messages.scss */
+body.dashboard div.messages div.replies ul > li {
+  padding: 10px;
+  border-bottom: 1px solid #ececec;
+}
+/* line 84, ../../../app/stylesheets/partials/_messages.scss */
+body.dashboard div.messages div.replies ul > li p {
+  line-height: 2em;
+  margin: 0;
+}
+/* line 89, ../../../app/stylesheets/partials/_messages.scss */
+body.dashboard div.messages div.replies ul > li.reply {
+  padding-right: 0px;
+  border-bottom: 0;
+}
+/* line 92, ../../../app/stylesheets/partials/_messages.scss */
+body.dashboard div.messages div.replies ul > li.reply a {
+  font-weight: bold;
+  float: right;
 }
 
 /* line 2, ../../../app/stylesheets/partials/_pages.scss */

@@ -14,7 +14,7 @@
 .messages
   - @messages.each do |message|
     %div[message]
-      %ul.root{:'data-click-path' => user_message_path(current_user, message)}
+      %ul.root
         %li.status.new &nbsp;
         %li.info
           %ul
@@ -31,3 +31,18 @@
           -else
             &nbsp;
         %li.name= message.apartment.address.street
+    %div.replies
+      %ul
+        %li
+          %span.bold= message.created_at
+          %span.light &#124;
+          %span.bold
+            From:
+            = message.sender.full_name
+          %p
+            = message.body
+        %li.reply
+          %span.bold Reply
+          %form
+            = text_area_tag :foo
+          %a.close{:href => "#"} close

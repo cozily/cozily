@@ -86,6 +86,16 @@ function showAndFadeFlash() {
             return false;
         });
 
+        $("div.messages ul.root").live("click", function(event) {
+            $(event.currentTarget).parent("div").next("div").slideToggle('slow');
+            return false;
+        });
+
+        $("div.replies a.close").live("click", function(event) {
+            $(event.currentTarget).parents("div.replies").slideUp('slow');
+            return false;
+        });
+
         if (typeof message_id != 'undefined') {
             $.scrollTo("div#message_" + message_id, 800);
         }
