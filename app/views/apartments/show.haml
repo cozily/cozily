@@ -70,13 +70,13 @@
     #nearby_stations
       %h3 Nearby Stations
       %table
-        -@apartment.nearby_stations.map {|s| [s.name, s.trains.map(&:name), s.distance] }.uniq.each do |station|
+        -@apartment.nearby_stations.each do |station|
           %tr
             %td
-              = station[0]
-              - station[1].each do |train|
-                = image_tag "mta/#{train}.gif"
-            %td==#{number_with_precision(station[2], :precision => 2)}mi
+              = station.name
+              - station.trains do |train|
+                = image_tag "mta/#{train.name}.gif"
+            %td==#{number_with_precision(station.distance, :precision => 2)}mi
     =image_tag "backgrounds/shadow.png", :class => "shadow"
 
     -if @apartment.address
