@@ -74,7 +74,7 @@
           %tr
             %td
               = station.name
-              - station.trains do |train|
+              - station.trains.each do |train|
                 = image_tag "mta/#{train.name}.gif"
             %td==#{number_with_precision(station.distance, :precision => 2)}mi
     =image_tag "backgrounds/shadow.png", :class => "shadow"
