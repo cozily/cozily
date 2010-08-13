@@ -73,7 +73,7 @@
         -@apartment.nearby_stations.each do |station|
           %tr
             %td
-              = station.name
+              .name= station.name
               - station.trains.each do |train|
                 = image_tag "mta/#{train.name}.gif"
             %td==#{number_with_precision(station.distance, :precision => 2)}mi

@@ -1403,75 +1403,79 @@ body.apartments.show div.aside div#nearby_stations table tr td {
   border-bottom: 1px solid #e7ebee;
 }
 /* line 179, ../../../app/stylesheets/partials/apartments/_show.sass */
+body.apartments.show div.aside div#nearby_stations table td .name {
+  margin-bottom: 3px;
+}
+/* line 182, ../../../app/stylesheets/partials/apartments/_show.sass */
 body.apartments.show div.aside div#nearby_stations table td:first-child {
   color: #202123;
   width: 90%;
 }
-/* line 183, ../../../app/stylesheets/partials/apartments/_show.sass */
+/* line 186, ../../../app/stylesheets/partials/apartments/_show.sass */
 body.apartments.show div.aside div#nearby_stations table td:last-child {
   color: #676767;
   text-align: right;
   width: 10%;
 }
-/* line 189, ../../../app/stylesheets/partials/apartments/_show.sass */
+/* line 192, ../../../app/stylesheets/partials/apartments/_show.sass */
 body.apartments.show div.aside div#nearby_restaurants h3 {
   border-right: 4px solid #429e87;
 }
-/* line 192, ../../../app/stylesheets/partials/apartments/_show.sass */
+/* line 195, ../../../app/stylesheets/partials/apartments/_show.sass */
 body.apartments.show div.aside div#nearby_restaurants ul {
   width: 311px;
 }
-/* line 194, ../../../app/stylesheets/partials/apartments/_show.sass */
+/* line 197, ../../../app/stylesheets/partials/apartments/_show.sass */
 body.apartments.show div.aside div#nearby_restaurants ul li {
   float: left;
   width: 145px;
   margin-bottom: 5px;
   padding-left: 10px;
 }
-/* line 199, ../../../app/stylesheets/partials/apartments/_show.sass */
+/* line 202, ../../../app/stylesheets/partials/apartments/_show.sass */
 body.apartments.show div.aside div#nearby_restaurants ul li a {
   display: block;
 }
-/* line 201, ../../../app/stylesheets/partials/apartments/_show.sass */
+/* line 204, ../../../app/stylesheets/partials/apartments/_show.sass */
 body.apartments.show div.aside div#nearby_restaurants ul li a img {
   border: 4px solid #e8e8ea;
 }
-/* line 204, ../../../app/stylesheets/partials/apartments/_show.sass */
+/* line 207, ../../../app/stylesheets/partials/apartments/_show.sass */
 body.apartments.show div.aside h3 {
   font-size: 2em;
   padding-bottom: 8px;
   margin-bottom: 0;
 }
-/* line 209, ../../../app/stylesheets/partials/apartments/_show.sass */
+/* line 212, ../../../app/stylesheets/partials/apartments/_show.sass */
 body.apartments.show div.aside ul.actions {
   float: right;
   height: 100px;
 }
-/* line 212, ../../../app/stylesheets/partials/apartments/_show.sass */
+/* line 215, ../../../app/stylesheets/partials/apartments/_show.sass */
 body.apartments.show div.aside ul.actions li {
   float: left;
   padding: 0 15px;
   font-size: 1.05em;
   line-height: 35px;
 }
-/* line 217, ../../../app/stylesheets/partials/apartments/_show.sass */
+/* line 220, ../../../app/stylesheets/partials/apartments/_show.sass */
 body.apartments.show div.aside ul.actions li div {
   padding-left: 5px;
 }
-/* line 220, ../../../app/stylesheets/partials/apartments/_show.sass */
+/* line 223, ../../../app/stylesheets/partials/apartments/_show.sass */
 body.apartments.show div.aside ul.actions li.favorite {
   background: url(/images/icons/favorite.png) no-repeat 0 9px;
 }
-/* line 223, ../../../app/stylesheets/partials/apartments/_show.sass */
+/* line 226, ../../../app/stylesheets/partials/apartments/_show.sass */
 body.apartments.show div.aside ul.actions li.flag {
   background: url(/images/icons/flag.png) no-repeat 0 9px;
 }
-/* line 227, ../../../app/stylesheets/partials/apartments/_show.sass */
+/* line 230, ../../../app/stylesheets/partials/apartments/_show.sass */
 body.apartments.show div.aside div#map_canvas {
   width: 311px;
   height: 311px;
 }
-/* line 231, ../../../app/stylesheets/partials/apartments/_show.sass */
+/* line 234, ../../../app/stylesheets/partials/apartments/_show.sass */
 body.apartments.show dl {
   clear: both;
 }
