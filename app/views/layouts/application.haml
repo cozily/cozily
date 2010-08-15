@@ -59,6 +59,8 @@
       .container
         #flash
           %span=flash[:success]
+        #loading
+          %span Loading...
 
         %div{:'data-content-key' => 'yield'}
           =yield

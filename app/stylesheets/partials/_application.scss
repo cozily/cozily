@@ -136,16 +136,21 @@ div.feedback {
   }
 }
 
-div#flash {
+div#flash, div#loading {
   position: fixed;
-  top: 5px;
+  top: 0px;
   left: 0;
   width: 100%;
   text-align: center;
   display: none;
 
   span {
-    background-color: red;
-    padding: 3px 8px;
+    background-color: #E1B55E;
+    padding: 5px 12px;
+    @include border-radius(0 0 5px 5px);
+    @include box-shadow;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: italic;
   }
 }

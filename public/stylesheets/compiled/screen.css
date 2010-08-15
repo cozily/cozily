@@ -464,18 +464,31 @@ div.feedback textarea {
 }
 
 /* line 139, ../../../app/stylesheets/partials/_application.scss */
-div#flash {
+div#flash, div#loading {
   position: fixed;
-  top: 5px;
+  top: 0px;
   left: 0;
   width: 100%;
   text-align: center;
   display: none;
 }
 /* line 147, ../../../app/stylesheets/partials/_application.scss */
-div#flash span {
-  background-color: red;
-  padding: 3px 8px;
+div#flash span, div#loading span {
+  background-color: #E1B55E;
+  padding: 5px 12px;
+  -moz-border-radius: 0 0 5px 5px;
+  -webkit-border-radius: 0 0 5px 5px;
+  -o-border-radius: 0 0 5px 5px;
+  -ms-border-radius: 0 0 5px 5px;
+  -khtml-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
+  -moz-box-shadow: #333333 1px 1px 5px;
+  -webkit-box-shadow: #333333 1px 1px 5px;
+  -o-box-shadow: #333333 1px 1px 5px;
+  box-shadow: #333333 1px 1px 5px;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: italic;
 }
 
 /* line 2, ../../../app/stylesheets/partials/_search.scss */
@@ -1084,14 +1097,13 @@ body.dashboard div.messages div.message ul.root > li.new {
 }
 /* line 45, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.messages div.message ul.root > li.info {
-  width: 500px;
   padding-top: 0.5em;
 }
-/* line 49, ../../../app/stylesheets/partials/_messages.scss */
+/* line 48, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.messages div.message ul.root > li.info > ul li.sender {
   font-size: 1.5em;
 }
-/* line 54, ../../../app/stylesheets/partials/_messages.scss */
+/* line 53, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.messages div.message ul.root > li.name {
   float: right;
   font-size: 1.2em;
@@ -1099,41 +1111,41 @@ body.dashboard div.messages div.message ul.root > li.name {
   color: #aaa;
   text-align: right;
 }
-/* line 61, ../../../app/stylesheets/partials/_messages.scss */
+/* line 60, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.messages div.message ul.root > li.photo {
   float: right;
   padding: 12px;
 }
-/* line 65, ../../../app/stylesheets/partials/_messages.scss */
+/* line 64, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.messages div.message ul.root > li.delete {
   float: right;
   padding: 20px 15px 16px 17px;
   background: url(/images/backgrounds/sideways_gradient_right.png) repeat-y left;
 }
-/* line 74, ../../../app/stylesheets/partials/_messages.scss */
+/* line 73, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.messages div.message:hover {
   background: url(/images/backgrounds/message_thread_hover.png) repeat-x;
 }
-/* line 79, ../../../app/stylesheets/partials/_messages.scss */
+/* line 78, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.messages div.replies ul {
   padding: 10px;
 }
-/* line 81, ../../../app/stylesheets/partials/_messages.scss */
+/* line 80, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.messages div.replies ul > li {
   padding: 10px;
   border-bottom: 1px solid #ececec;
 }
-/* line 84, ../../../app/stylesheets/partials/_messages.scss */
+/* line 83, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.messages div.replies ul > li p {
   line-height: 2em;
   margin: 0;
 }
-/* line 89, ../../../app/stylesheets/partials/_messages.scss */
+/* line 88, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.messages div.replies ul > li.reply {
   padding-right: 0px;
   border-bottom: 0;
 }
-/* line 92, ../../../app/stylesheets/partials/_messages.scss */
+/* line 91, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.messages div.replies ul > li.reply a {
   font-weight: bold;
   float: right;

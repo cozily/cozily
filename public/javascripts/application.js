@@ -1,3 +1,5 @@
+var ajaxRequests = 0;
+
 function updateContent(content) {
     var $contentKeyElements = $(content).filter('[data-content-key]');
 
@@ -22,6 +24,17 @@ function showAndFadeFlash() {
             container.fadeOut();
         }, 4000);
     }
+}
+
+function showLoading() {
+    var container = $('div#loading:hidden');
+    if(container) {
+        container.fadeIn(150);
+    }
+}
+
+function hideLoading() {
+    $('div#loading:visible').fadeOut();
 }
 
 (function($) {
@@ -214,11 +227,14 @@ function showAndFadeFlash() {
                     title: "Delete this item?",
                     buttons: {
                         'Yes': function() {
+                            ajaxRequests++;
+                            showLoading();
                             $.ajax({
                                 type      : type,
                                 url       : link.attr('href'),
                                 dataType  : 'json',
                                 success   : function success(response) {
+                                    ajaxRequests--;
                                     $(document).trigger('content-received', response);
                                 }
                             });
@@ -236,11 +252,14 @@ function showAndFadeFlash() {
                     }
                 });
             } else {
+                ajaxRequests++;
+                showLoading();
                 $.ajax({
                     type      : type,
                     url       : link.attr('href'),
                     dataType  : 'json',
                     success   : function success(response) {
+                        ajaxRequests--;
                         $(document).trigger('content-received', response);
                     }
                 });
@@ -258,6 +277,10 @@ function showAndFadeFlash() {
             if (flash && flash != "") {
                 $("div#flash span").html(flash);
                 showAndFadeFlash();
+            }
+
+            if(ajaxRequests == 0) {
+                hideLoading();
             }
         });
 
