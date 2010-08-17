@@ -36,3 +36,5 @@
             %li.phone=apartment.user.phone
             %li.message=link_to "send message", "#"
             %li.favorite=render "favorites/link", :apartment => apartment, :count => position
+      ==Number of Views: #{apartment.views_count}
+      ==Number of Favorites: #{apartment.favorites_count}

@@ -6,7 +6,7 @@ describe Favorite do
   end
 
   it { should belong_to(:user) }
-  it { should belong_to(:apartment) }
+  it { should belong_to(:apartment, :counter_cache => true) }
 
   it { should validate_uniqueness_of(:apartment_id, :scope => :user_id)}
 

@@ -8,6 +8,7 @@ class ApartmentsController < ApplicationController
 
   def show
     @apartment = Apartment.find(params[:id])
+    @apartment.update_attribute(:views_count, @apartment.views_count + 1) if current_user != @apartment.user
   end
 
   def edit

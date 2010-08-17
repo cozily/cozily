@@ -1,6 +1,6 @@
 class Favorite < ActiveRecord::Base
   belongs_to :user
-  belongs_to :apartment
+  belongs_to :apartment, :counter_cache => true
 
   validates_uniqueness_of :apartment_id, :scope => :user_id
   validate :ensure_user_is_not_owner
