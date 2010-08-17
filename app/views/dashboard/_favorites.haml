@@ -7,7 +7,12 @@
   =render "dashboard/tabs", :active => :favorites
 
 .article
-  =pagination_summary(params[:page], current_user.favorite_apartments)
-  =will_paginate(favorites, :renderer => AjaxPaginationLinkRenderer)
-  -favorites.each do |apartment|
-    =render "dashboard/apartment", :apartment => apartment, :position => position_in_collection(apartment, current_user.favorite_apartments)
+  -if favorites.present?
+    =pagination_summary(params[:page], current_user.favorite_apartments)
+    =will_paginate(favorites, :renderer => AjaxPaginationLinkRenderer)
+    -favorites.each do |apartment|
+      =render "dashboard/apartment", :apartment => apartment, :position => position_in_collection(apartment, current_user.favorite_apartments)
+
+  -else
+    %p.empty
+      You haven't favorited any apartments.  What gives?

@@ -51,6 +51,12 @@ body.dashboard {
         margin-right: 10px;
         float: left;
 
+        p.empty {
+            font-size: 18px;
+            padding: 18px;
+            text-align: center;
+        }
+
         div.apartment {
             height: 130px;
             margin-left: 3px;

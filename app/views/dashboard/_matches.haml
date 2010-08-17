@@ -7,7 +7,12 @@
   =render "dashboard/tabs", :active => :matches
 
 .article
-  =pagination_summary(params[:page], Apartment.with_state(:listed))
-  =will_paginate(matches, :renderer => AjaxPaginationLinkRenderer)
-  -matches.each do |apartment|
-    =render "dashboard/apartment", :apartment => apartment, :position => position_in_collection(apartment, Apartment.with_state(:listed))
+  -if matches.present?
+    =pagination_summary(params[:page], Apartment.with_state(:listed))
+    =will_paginate(matches, :renderer => AjaxPaginationLinkRenderer)
+    -matches.each do |apartment|
+      =render "dashboard/apartment", :apartment => apartment, :position => position_in_collection(apartment, Apartment.with_state(:listed))
+
+  -else
+    %p.empty
+      You don't have any matches.  We're working on it.

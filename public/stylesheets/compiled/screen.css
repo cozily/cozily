@@ -889,34 +889,40 @@ body.dashboard div.article {
   float: left;
 }
 /* line 54, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.article p.empty {
+  font-size: 18px;
+  padding: 18px;
+  text-align: center;
+}
+/* line 60, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment {
   height: 130px;
   margin-left: 3px;
   border-bottom: 1px solid #CCC;
   padding: 3px 0;
 }
-/* line 61, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 67, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul > li {
   float: left;
   margin-right: 10px;
   height: 100%;
 }
-/* line 67, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 73, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.photo {
   width: 150px;
 }
-/* line 70, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 76, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.photo div {
   float: left;
 }
-/* line 74, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 80, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.photo div.image {
   width: 110px;
   height: 110px;
   float: left;
   padding: 5px 0 5px 5px;
 }
-/* line 81, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 87, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.photo div.count {
   width: 35px;
   height: 35px;
@@ -928,120 +934,120 @@ body.dashboard div.article div.apartment > ul li.photo div.count {
   position: relative;
   top: -105px;
 }
-/* line 94, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 100, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.info {
   border-right: 1px solid #CCC;
   width: 265px;
   font-weight: 500;
 }
-/* line 100, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 106, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.info ul li.street {
   padding-top: 10px;
   margin-bottom: 4px;
 }
-/* line 103, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 109, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.info ul li.street a {
   font-size: 1.8em;
   font-weight: 600;
 }
-/* line 109, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 115, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.info ul li.neighborhood a {
   font-size: 1em;
 }
-/* line 113, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 119, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.info ul li.basic {
   font-size: 1.2em;
 }
-/* line 115, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 121, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.info ul li.basic span.rent {
   font-weight: 600;
 }
-/* line 120, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 126, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.info ul li.neighborhood, body.dashboard div.article div.apartment > ul li.info ul li.listed_on {
   font-size: 0.95em;
 }
-/* line 126, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 132, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.contact {
   width: 180px;
   margin-right: 0;
 }
-/* line 130, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 136, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.contact ul {
   position: relative;
   top: 20px;
 }
-/* line 134, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 140, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.contact ul li {
   padding-left: 15px;
 }
-/* line 138, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 144, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.contact ul li.phone {
   font-weight: 500;
   font-size: 1.7em;
   margin-bottom: 5px;
 }
-/* line 144, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 150, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.contact ul li.message a, body.dashboard div.article div.apartment > ul li.contact ul li.favorite a {
   padding-left: 15px;
   font-size: 0.95em;
 }
-/* line 149, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 155, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.contact ul li.message a {
   background: url(/images/icons/message_small.png) no-repeat 0 4px;
 }
-/* line 154, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 160, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.contact ul li.favorite a.add {
   background: url(/images/icons/add_small.png) no-repeat 0 3px;
 }
-/* line 158, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 164, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.contact ul li.favorite a.remove {
   background: url(/images/icons/remove_small.png) no-repeat 0 3px;
 }
-/* line 168, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 174, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside {
   width: 310px;
   float: right;
 }
-/* line 172, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 178, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside h3 {
   font-size: 2em;
   padding-bottom: 8px;
   margin-bottom: 0;
 }
-/* line 179, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 185, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed h3 {
   border-right: 4px solid #429E87;
 }
-/* line 183, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 189, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul {
   margin-top: 5px;
   padding-right: 22px;
 }
-/* line 187, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 193, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li {
   background-repeat: no-repeat;
   background-position: 0 2px;
   padding-left: 25px;
   margin-bottom: 12px;
 }
-/* line 193, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 199, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li span.text {
   font-weight: 500;
 }
-/* line 197, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 203, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li span.date {
   display: block;
   color: #888;
 }
-/* line 203, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 209, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li.favorite.created {
   background: url(/images/icons/add.png) no-repeat 0 2px;
 }
-/* line 207, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 213, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li.favorite.destroyed {
   background: url(/images/icons/remove.png) no-repeat 0 2px;
 }
-/* line 211, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 217, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li.message.created {
   background: url(/images/icons/message.png) no-repeat 0 2px;
 }
