@@ -17,7 +17,7 @@ class DashboardController < ApplicationController
       format.html
       format.js do
         render :json => { :listings => render_to_string(:layout => "dashboard/listings",
-                                                       :locals => { :apartments => current_user.apartments.paginate(:page => params[:page]) }) }
+                                                        :locals => { :apartments => current_user.apartments.paginate(:page => params[:page]) }) }
       end
     end
   end
@@ -39,7 +39,7 @@ class DashboardController < ApplicationController
       format.html
       format.js do
         render :json => { :favorites => render_to_string(:layout => "dashboard/favorites",
-                                                       :locals => { :favorites => @favorites }) }
+                                                         :locals => { :favorites => @favorites }) }
       end
     end
   end
