@@ -1,7 +1,6 @@
 class Search
   BEDROOMS = (0..8).to_a
   BATHROOMS = (1..10).to_a.map { |x| x/2.0 }
-  RENTS = (100..4000).to_a.select { |x| x % 100 == 0 }
 
   attr_accessor :min_bedrooms, :max_bedrooms
   attr_accessor :min_bathrooms, :max_bathrooms

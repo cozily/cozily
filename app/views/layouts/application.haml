@@ -45,10 +45,10 @@
         .container
           %h2 Find Apartments
 
-          -form_for :q, Search.new(:min_bedrooms => "", :max_rent => ""), :url => search_path, :html => {:method => :get} do |f|
+          -form_for :q, Search.new(:min_bedrooms => "", :max_rent => "All Prices"), :url => search_path, :html => {:method => :get} do |f|
             =f.select :neighborhood_ids, Neighborhood.to_dropdown, :prompt => "All Neighborhoods"
             =f.select :min_bedrooms, Search::BEDROOMS, :prompt => "All # Bedrooms"
-            =f.select :max_rent, Search::RENTS, :prompt => "All Prices"
+            =f.text_field :max_rent, :'data-default-value' => "All Prices"
 
             =f.submit :search
 

@@ -17,7 +17,6 @@ div#search {
         div.spicyselect {
             float: left;
             margin-right: 10px;
-            background-color: white;
             @include border-radius(5px);
             background: url(/images/icons/search_arrow.png) no-repeat 95% center;
             background-color: white;
@@ -55,8 +54,18 @@ div#search {
             width: 140px;
         }
 
-        div#q_max_rent_mask {
-            width: 135px;
+        input#q_max_rent {
+            float: left;
+            width: 155px;
+            height: 32px;
+            background-color: white;
+            @include border-radius(5px);
+            padding: 5px 5px 5px 15px;
+            border: none;
+            color: #999;
+            font-size: 1.2em;
+            font-weight: 200;
+            margin-right: 10px;
         }
 
         input[type=submit] {
