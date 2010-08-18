@@ -3,6 +3,19 @@
 - semantic_form_for @user do |f|
   = f.error_messages
   = render :partial => "/users/inputs", :locals => { :form => f }
+
+  - f.inputs do
+    I am here to:
+    %li.boolean.optional
+      %label{ :for => "role_ids_0" }
+        =check_box_tag "role_ids[]", Role.find_by_name("finder").id, f.object.role_symbols.include?(:finder), :id => "role_ids_0"
+        find apartments
+
+    %li.boolean.optional
+      %label{ :for => "role_ids_1" }
+        =check_box_tag "role_ids[]", Role.find_by_name("lister").id, f.object.role_symbols.include?(:lister), :id => "role_ids_1"
+        list apartments
+
   - f.buttons do
     = f.commit_button "Update Profile"
 

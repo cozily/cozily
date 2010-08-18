@@ -39,3 +39,39 @@ Then /^I can sign in on the homepage$/ do
 
   page.should have_content "Hi #{the.user.first_name}"
 end
+
+Then /^I can edit my roles$/ do
+  visit edit_user_path(the.user)
+
+  check "find apartments"
+  uncheck "list apartments"
+  click_button "Update Profile"
+
+  page.should have_content("Matches")
+  page.should_not have_content("My Listings")
+
+  visit edit_user_path(the.user)
+  uncheck "find apartments"
+  check "list apartments"
+  click_button "Update Profile"
+
+  page.should_not have_content("Matches")
+  page.should have_content("My Listings")
+
+  visit edit_user_path(the.user)
+  check "find apartments"
+  check "list apartments"
+  click_button "Update Profile"
+
+  page.should have_content("Matches")
+  page.should have_content("My Listings")
+
+  visit edit_user_path(the.user)
+  uncheck "find apartments"
+  uncheck "list apartments"
+  click_button "Update Profile"
+
+  page.should have_content("Matches")
+  page.should_not have_content("My Listings")
+end
+
