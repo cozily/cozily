@@ -980,88 +980,93 @@ body.dashboard div.article div.apartment > ul li.info ul li.basic span.rent {
 body.dashboard div.article div.apartment > ul li.info ul li.neighborhood, body.dashboard div.article div.apartment > ul li.info ul li.listed_on {
   font-size: 0.95em;
 }
-/* line 132, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 134, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.article div.apartment > ul li.status fieldset.inputs label {
+  display: inline;
+  float: none;
+}
+/* line 141, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.contact {
   width: 180px;
   margin-right: 0;
 }
-/* line 136, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 145, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.contact ul {
   position: relative;
   top: 20px;
 }
-/* line 140, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 149, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.contact ul li {
   padding-left: 15px;
 }
-/* line 144, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 153, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.contact ul li.phone {
   font-weight: 500;
   font-size: 1.7em;
   margin-bottom: 5px;
 }
-/* line 150, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 159, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.contact ul li.message a, body.dashboard div.article div.apartment > ul li.contact ul li.favorite a {
   padding-left: 15px;
   font-size: 0.95em;
 }
-/* line 155, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 164, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.contact ul li.message a {
   background: url(/images/icons/message_small.png) no-repeat 0 4px;
 }
-/* line 160, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 169, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.contact ul li.favorite a.add {
   background: url(/images/icons/add_small.png) no-repeat 0 3px;
 }
-/* line 164, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 173, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.contact ul li.favorite a.remove {
   background: url(/images/icons/remove_small.png) no-repeat 0 3px;
 }
-/* line 174, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 183, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside {
   width: 310px;
   float: right;
 }
-/* line 178, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 187, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside h3 {
   font-size: 2em;
   padding-bottom: 8px;
   margin-bottom: 0;
 }
-/* line 185, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 194, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed h3 {
   border-right: 4px solid #429E87;
 }
-/* line 189, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 198, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul {
   margin-top: 5px;
   padding-right: 22px;
 }
-/* line 193, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 202, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li {
   background-repeat: no-repeat;
   background-position: 0 2px;
   padding-left: 25px;
   margin-bottom: 12px;
 }
-/* line 199, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 208, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li span.text {
   font-weight: 500;
 }
-/* line 203, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 212, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li span.date {
   display: block;
   color: #888;
 }
-/* line 209, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 218, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li.favorite.created {
   background: url(/images/icons/add.png) no-repeat 0 2px;
 }
-/* line 213, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 222, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li.favorite.destroyed {
   background: url(/images/icons/remove.png) no-repeat 0 2px;
 }
-/* line 217, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 226, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li.message.created {
   background: url(/images/icons/message.png) no-repeat 0 2px;
 }

@@ -28,7 +28,7 @@ function showAndFadeFlash() {
 
 function showLoading() {
     var container = $('div#loading:hidden');
-    if(container) {
+    if (container) {
         container.fadeIn(150);
     }
 }
@@ -195,6 +195,25 @@ function hideLoading() {
             });
         }
 
+        $("div.apartment ul li.status form input").live("change", function(event) {
+            var element = $(event.target);
+            var form = element.closest('form');
+            ajaxRequests++;
+            showLoading();
+
+            $.ajax({
+                type     : 'put',
+                data     : { event : element.val() },
+                dataType : 'json',
+                url      : form.attr('action'),
+                success  : function success(response) {
+                    ajaxRequests--;
+                    $(document).trigger('content-received', response);
+                }
+            });
+            return false;
+        });
+
         $("form[data-remote=true]").live("submit", function(event) {
             event.preventDefault();
             var element = $(event.target);
@@ -279,7 +298,7 @@ function hideLoading() {
                 showAndFadeFlash();
             }
 
-            if(ajaxRequests == 0) {
+            if (ajaxRequests == 0) {
                 hideLoading();
             }
         });

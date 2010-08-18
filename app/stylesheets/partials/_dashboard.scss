@@ -129,6 +129,15 @@ body.dashboard {
                     }
                 }
 
+                li.status {
+                    fieldset.inputs {
+                        label {
+                            display: inline;
+                            float: none;
+                        }
+                    }
+                }
+
                 li.contact {
                     width: 180px;
                     margin-right: 0;

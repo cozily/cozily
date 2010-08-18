@@ -32,11 +32,10 @@
                 %li.neighborhood==Neighborhood: #{neighborhood_links(apartment)}
               %li.listed_on==Listed on #{apartment.listed_on.try(:to_date).try(:to_s, :app_long)}
 
-          %li.contact
-            %ul
-              %li.phone=apartment.user.phone
-              %li.message=link_to "send message", "#"
-              %li.favorite=render "favorites/link", :apartment => apartment, :count => position
+          %li.status
+            %p Current Status of Listing:
+            =render "apartments/state_buttons", :apartment => apartment
+
         ==Number of Views: #{apartment.views_count}
         ==Number of Favorites: #{apartment.favorites_count}
 

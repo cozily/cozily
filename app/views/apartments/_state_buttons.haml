@@ -1,0 +1,16 @@
+%div{:'data-content-key' => "state_buttons_#{apartment.id}"}
+  -form_tag transition_apartment_path(apartment), :class => 'formtastic' do
+    %fieldset.inputs
+      %ol
+        %li
+          %label{:for => "event_unlist_#{apartment.id}"}
+            =radio_button_tag("event", "unlist", apartment.unlisted?, :id => "event_unlist_#{apartment.id}", :disabled => !apartment.can_unlist? && !apartment.unlisted?)
+            Unlisted
+        %li
+          %label{:for => "event_list_#{apartment.id}"}
+            =radio_button_tag("event", "list", apartment.listed?, :id => "event_list_#{apartment.id}", :disabled => !apartment.can_list? && !apartment.listed?)
+            Listed
+        %li
+          %label{:for => "event_lease_#{apartment.id}"}
+            =radio_button_tag("event", "lease", apartment.leased?, :id => "event_lease_#{apartment.id}", :disabled => !apartment.can_lease? && !apartment.leased?)
+            Leased

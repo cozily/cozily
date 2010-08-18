@@ -62,6 +62,14 @@ class ApartmentsController < ApplicationController
   def transition
     @apartment = Apartment.find(params[:id])
     @apartment.send("#{params[:event]}!")
-    redirect_to params[:return_to] || edit_apartment_path(@apartment)
+    respond_to do |format|
+      format.html do
+        redirect_to params[:return_to] || edit_apartment_path(@apartment)
+      end
+      format.js do
+        render :json => { :state_buttons => render_to_string(:partial => "apartments/state_buttons",
+                                                             :locals => { :apartment => @apartment }) }
+      end
+    end
   end
 end
