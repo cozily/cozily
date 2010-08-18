@@ -100,12 +100,12 @@ function hideLoading() {
         });
 
         $("div.messages ul.root").live("click", function(event) {
-            $(event.currentTarget).parent("div").next("div").slideToggle('slow');
+            $(event.currentTarget).parent("div").next("div").slideToggle(150);
             return false;
         });
 
         $("div.replies a.close").live("click", function(event) {
-            $(event.currentTarget).parents("div.replies").slideUp('slow');
+            $(event.currentTarget).parents("div.replies").slideUp(150);
             return false;
         });
 
