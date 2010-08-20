@@ -1,0 +1,8 @@
+%li
+  %span.bold= message.created_at
+  %span.light &#124;
+  %span.bold
+    From:
+    = message.sender.full_name
+  %p
+    = message.body

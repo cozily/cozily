@@ -1071,64 +1071,76 @@ body.dashboard div.aside div#activity_feed ul li.message.created {
   background: url(/images/icons/message.png) no-repeat 0 2px;
 }
 
-/* line 3, ../../../app/stylesheets/partials/_messages.scss */
+/* line 2, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.pagination {
+  overflow: hidden;
+  display: inline-block;
   font-size: 1.2em;
   height: 36px;
+  width: 100%;
 }
-/* line 6, ../../../app/stylesheets/partials/_messages.scss */
+/* line 8, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/general/_hacks.scss */
+body.dashboard div.pagination {
+  display: block;
+}
+/* line 7, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.pagination > ul {
   padding: 9px 18px;
 }
-/* line 8, ../../../app/stylesheets/partials/_messages.scss */
+/* line 9, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.pagination > ul > li.counts {
   float: left;
 }
-/* line 11, ../../../app/stylesheets/partials/_messages.scss */
+/* line 12, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.pagination > ul > li.navigation {
   float: right;
 }
-/* line 17, ../../../app/stylesheets/partials/_messages.scss */
+/* line 15, ../../../app/stylesheets/partials/_messages.scss */
+body.dashboard div.pagination > ul > li.navigation > ul.pagination > li {
+  float: left;
+  padding: 0 0 0 5px;
+}
+/* line 24, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.messages {
   margin: 0 10px;
   width: 930px;
   border: 1px solid #ececec;
 }
-/* line 22, ../../../app/stylesheets/partials/_messages.scss */
+/* line 29, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.messages span.bold {
   font-weight: bold;
 }
-/* line 26, ../../../app/stylesheets/partials/_messages.scss */
+/* line 33, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.messages span.light {
   color: #dadada;
 }
-/* line 30, ../../../app/stylesheets/partials/_messages.scss */
+/* line 37, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.messages div.message {
   height: 55px;
   background: url(/images/backgrounds/message_thread.png) repeat-x;
 }
-/* line 35, ../../../app/stylesheets/partials/_messages.scss */
+/* line 42, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.messages div.message ul.root > li {
   float: left;
 }
-/* line 38, ../../../app/stylesheets/partials/_messages.scss */
+/* line 46, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.messages div.message ul.root > li.status {
   height: 100%;
   width: 55px;
 }
-/* line 42, ../../../app/stylesheets/partials/_messages.scss */
+/* line 51, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.messages div.message ul.root > li.new {
   background: url(/images/backgrounds/new_message.png) no-repeat left center;
 }
-/* line 45, ../../../app/stylesheets/partials/_messages.scss */
+/* line 55, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.messages div.message ul.root > li.info {
   padding-top: 0.5em;
 }
-/* line 48, ../../../app/stylesheets/partials/_messages.scss */
+/* line 58, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.messages div.message ul.root > li.info > ul li.sender {
   font-size: 1.5em;
 }
-/* line 53, ../../../app/stylesheets/partials/_messages.scss */
+/* line 64, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.messages div.message ul.root > li.name {
   float: right;
   font-size: 1.2em;
@@ -1136,44 +1148,83 @@ body.dashboard div.messages div.message ul.root > li.name {
   color: #aaa;
   text-align: right;
 }
-/* line 60, ../../../app/stylesheets/partials/_messages.scss */
+/* line 72, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.messages div.message ul.root > li.photo {
   float: right;
   padding: 12px;
 }
-/* line 64, ../../../app/stylesheets/partials/_messages.scss */
+/* line 77, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.messages div.message ul.root > li.delete {
   float: right;
   padding: 20px 15px 16px 17px;
   background: url(/images/backgrounds/sideways_gradient_right.png) repeat-y left;
 }
-/* line 73, ../../../app/stylesheets/partials/_messages.scss */
+/* line 86, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.messages div.message:hover {
   background: url(/images/backgrounds/message_thread_hover.png) repeat-x;
 }
-/* line 78, ../../../app/stylesheets/partials/_messages.scss */
+/* line 91, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.messages div.replies ul {
   padding: 10px;
 }
-/* line 80, ../../../app/stylesheets/partials/_messages.scss */
+/* line 93, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.messages div.replies ul > li {
   padding: 10px;
   border-bottom: 1px solid #ececec;
 }
-/* line 83, ../../../app/stylesheets/partials/_messages.scss */
+/* line 96, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.messages div.replies ul > li p {
   line-height: 2em;
   margin: 0;
 }
-/* line 88, ../../../app/stylesheets/partials/_messages.scss */
+/* line 101, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.messages div.replies ul > li.reply {
   padding-right: 0px;
   border-bottom: 0;
 }
-/* line 91, ../../../app/stylesheets/partials/_messages.scss */
+/* line 104, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.messages div.replies ul > li.reply a {
   font-weight: bold;
   float: right;
+}
+/* line 112, ../../../app/stylesheets/partials/_messages.scss */
+body.dashboard div.messages div.replies form fieldset.inputs {
+  width: 560px;
+}
+/* line 115, ../../../app/stylesheets/partials/_messages.scss */
+body.dashboard div.messages div.replies form fieldset.inputs li textarea {
+  height: 80px;
+  width: 100%;
+  margin-top: 5px;
+  padding: 0.5em;
+  color: #aaa;
+}
+/* line 125, ../../../app/stylesheets/partials/_messages.scss */
+body.dashboard div.messages div.replies form fieldset.buttons {
+  padding-left: 10px;
+}
+/* line 127, ../../../app/stylesheets/partials/_messages.scss */
+body.dashboard div.messages div.replies form fieldset.buttons li.commit {
+  float: left;
+}
+/* line 129, ../../../app/stylesheets/partials/_messages.scss */
+body.dashboard div.messages div.replies form fieldset.buttons li.commit input {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  height: 33px;
+  color: white;
+  font-weight: 500;
+  font-size: 1.2em;
+  text-transform: capitalize;
+  line-height: 32px;
+  background: url(/images/buttons/blue_button.png) repeat-x;
+  border: 1px solid #637379;
+  font-weight: 400;
+  width: 80px;
 }
 
 /* line 2, ../../../app/stylesheets/partials/_pages.scss */

@@ -1,15 +1,22 @@
 body.dashboard {
-
     div.pagination {
+        @include clearfix;
         font-size: 1.2em;
         height: 36px;
+        width: 100%;
         > ul {
             padding: 9px 18px;
             > li.counts {
                 float: left;
             }
             > li.navigation {
-                float: right
+                float: right;
+                > ul.pagination {
+                    > li {
+                        float: left;
+                        padding: 0 0 0 5px;
+                    }
+                }
             }
         }
     }
@@ -35,13 +42,16 @@ body.dashboard {
                 > li {
                     float: left;
                 }
+
                 > li.status {
                     height: 100%;
                     width: 55px;
                 }
+
                 > li.new {
                     background: url(/images/backgrounds/new_message.png) no-repeat left center;
                 }
+
                 > li.info {
                     padding-top: 0.5em;
                     > ul {
@@ -50,6 +60,7 @@ body.dashboard {
                         }
                     }
                 }
+
                 > li.name {
                     float: right;
                     font-size: 1.2em;
@@ -57,10 +68,12 @@ body.dashboard {
                     color: #aaa;
                     text-align: right;
                 }
+
                 > li.photo {
                     float: right;
                     padding: 12px;
                 }
+
                 > li.delete {
                     float: right;
                     padding: 20px 15px 16px 17px;
@@ -91,6 +104,33 @@ body.dashboard {
                     a {
                         font-weight: bold;
                         float: right;
+                    }
+                }
+            }
+
+            form {
+                fieldset.inputs {
+                    width: 560px;
+                    li {
+                        textarea {
+                            height: 80px;
+                            width: 100%;
+                            margin-top: 5px;
+                            padding: 0.5em;
+                            color: #aaa;
+                        }
+                    }
+                }
+
+                fieldset.buttons {
+                    padding-left: 10px;
+                    li.commit {
+                        float: left;
+                        input {
+                            @include dark-blue-button;
+                            font-weight: 400;
+                            width: 80px;
+                        }
                     }
                 }
             }

@@ -31,18 +31,10 @@
           -else
             &nbsp;
         %li.name= message.apartment.address.street
-    %div.replies
+    %div.replies{:style => "display: none;"}
       %ul
-        %li
-          %span.bold= message.created_at
-          %span.light &#124;
-          %span.bold
-            From:
-            = message.sender.full_name
-          %p
-            = message.body
+        = render "dashboard/message", :message => message
+        = render "dashboard/messages/replies", :message => message
         %li.reply
-          %span.bold Reply
-          %form
-            = text_area_tag :foo
+          = render "dashboard/messages/reply", :message => message
           %a.close{:href => "#"} close

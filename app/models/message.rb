@@ -27,6 +27,10 @@ class Message < ActiveRecord::Base
     end.flatten
   end
 
+  def determine_receiver(user)
+    (sender == user ? receiver : sender)
+  end
+
   private
   def notify_receiver
     MessageMailer.deliver_receiver_notification(self)
