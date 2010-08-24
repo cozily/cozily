@@ -74,11 +74,11 @@ class Apartment < ActiveRecord::Base
     end
 
     event :unlist do
-      transition :listed => :unlisted
+      transition [:listed, :leased] => :unlisted
     end
 
     event :lease do
-      transition :listed => :leased
+      transition [:listed, :unlisted] => :leased
     end
   end
 
