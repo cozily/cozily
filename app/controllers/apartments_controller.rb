@@ -44,7 +44,7 @@ class ApartmentsController < ApplicationController
     @apartment = Apartment.find(params[:id])
     @apartment.destroy
     respond_to do |format|
-      format.html { redirect_to user_apartments_path(current_user) }
+      format.html { redirect_to dashboard_listings_path }
       format.js { render :nothing => true }
     end
   end

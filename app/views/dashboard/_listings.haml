@@ -36,6 +36,11 @@
             %p Current Status of Listing:
             =render "apartments/state_buttons", :apartment => apartment
 
+            %ul.buttons
+              %li.edit=link_to "Edit", edit_apartment_path(apartment)
+              %li.delete=link_to "Delete", apartment_path(apartment), :method => :delete, :confirm => "Are you sure?"
+
+
         ==Number of Views: #{apartment.views_count}
         ==Number of Favorites: #{apartment.favorites_count}
 

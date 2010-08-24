@@ -980,93 +980,173 @@ body.dashboard div.article div.apartment > ul li.info ul li.basic span.rent {
 body.dashboard div.article div.apartment > ul li.info ul li.neighborhood, body.dashboard div.article div.apartment > ul li.info ul li.listed_on {
   font-size: 0.95em;
 }
-/* line 134, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.article div.apartment > ul li.status fieldset.inputs label {
+/* line 133, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.article div.apartment > ul li.status p {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-bottom: 3px;
+}
+/* line 139, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.article div.apartment > ul li.status ul.buttons {
+  position: relative;
+  top: -5px;
+  left: 10px;
+}
+/* line 144, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.article div.apartment > ul li.status ul.buttons li {
+  float: left;
+  margin-right: 10px;
+  width: 70px;
+}
+/* line 149, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.article div.apartment > ul li.status ul.buttons li a {
+  color: white;
+}
+/* line 154, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.article div.apartment > ul li.status ul.buttons li.edit {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  line-height: 32px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  height: 33px;
+  color: white;
+  font-weight: 500;
+  font-size: 1.2em;
+  text-transform: capitalize;
+  line-height: 32px;
+  background: url(/images/buttons/green_button.png) repeat-x;
+  border: 1px solid #8EAC46;
+  border: 1px solid #8EAC46;
+  height: 26px;
+  line-height: 26px;
+}
+/* line 160, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.article div.apartment > ul li.status ul.buttons li.delete {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  line-height: 32px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  height: 33px;
+  color: white;
+  font-weight: 500;
+  font-size: 1.2em;
+  text-transform: capitalize;
+  line-height: 32px;
+  background: url(/images/buttons/blue_button.png) repeat-x;
+  border: 1px solid #637379;
+  border: 1px solid #637379;
+  height: 26px;
+  line-height: 26px;
+}
+/* line 169, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.article div.apartment > ul li.status fieldset.inputs ol li {
+  padding-left: 10px;
+  margin-bottom: 1px;
+}
+/* line 172, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.article div.apartment > ul li.status fieldset.inputs ol li label {
   display: inline;
   float: none;
+  font-size: 1.1em;
 }
-/* line 141, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 178, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.article div.apartment > ul li.status fieldset.inputs ol li input[type=radio] {
+  margin-right: 5px;
+}
+/* line 186, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.contact {
   width: 180px;
   margin-right: 0;
 }
-/* line 145, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 190, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.contact ul {
   position: relative;
   top: 20px;
 }
-/* line 149, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 194, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.contact ul li {
   padding-left: 15px;
 }
-/* line 153, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 198, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.contact ul li.phone {
   font-weight: 500;
   font-size: 1.7em;
   margin-bottom: 5px;
 }
-/* line 159, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 204, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.contact ul li.message a, body.dashboard div.article div.apartment > ul li.contact ul li.favorite a {
   padding-left: 15px;
   font-size: 0.95em;
 }
-/* line 164, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 209, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.contact ul li.message a {
   background: url(/images/icons/message_small.png) no-repeat 0 4px;
 }
-/* line 169, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 214, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.contact ul li.favorite a.add {
   background: url(/images/icons/add_small.png) no-repeat 0 3px;
 }
-/* line 173, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 218, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.contact ul li.favorite a.remove {
   background: url(/images/icons/remove_small.png) no-repeat 0 3px;
 }
-/* line 183, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 228, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside {
   width: 310px;
   float: right;
 }
-/* line 187, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 232, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside h3 {
   font-size: 2em;
   padding-bottom: 8px;
   margin-bottom: 0;
 }
-/* line 194, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 239, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed h3 {
   border-right: 4px solid #429E87;
 }
-/* line 198, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 243, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul {
   margin-top: 5px;
   padding-right: 22px;
 }
-/* line 202, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 247, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li {
   background-repeat: no-repeat;
   background-position: 0 2px;
   padding-left: 25px;
   margin-bottom: 12px;
 }
-/* line 208, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 253, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li span.text {
   font-weight: 500;
 }
-/* line 212, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 257, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li span.date {
   display: block;
   color: #888;
 }
-/* line 218, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 263, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li.favorite.created {
   background: url(/images/icons/add.png) no-repeat 0 2px;
 }
-/* line 222, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 267, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li.favorite.destroyed {
   background: url(/images/icons/remove.png) no-repeat 0 2px;
 }
-/* line 226, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 271, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li.message.created {
   background: url(/images/icons/message.png) no-repeat 0 2px;
 }

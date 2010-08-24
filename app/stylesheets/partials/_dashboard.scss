@@ -130,10 +130,55 @@ body.dashboard {
                 }
 
                 li.status {
+                    p {
+                        font-weight: bold;
+                        font-size: 1.1em;
+                        margin-bottom: 3px;
+                    }
+
+                    ul.buttons {
+                        position: relative;
+                        top: -5px;
+                        left: 10px;
+
+                        li {
+                            float: left;
+                            margin-right: 10px;
+                            width: 70px;
+
+                            a {
+                                color: white;
+                            }
+                        }
+
+                        li.edit {
+                            @include green-link;
+                            height: 26px;
+                            line-height: 26px;
+                        }
+
+                        li.delete {
+                            @include dark-blue-link;
+                            height: 26px;
+                            line-height: 26px;
+                        }
+                    }
+
                     fieldset.inputs {
-                        label {
-                            display: inline;
-                            float: none;
+                        ol {
+                            li {
+                                padding-left: 10px;
+                                margin-bottom: 1px;
+                                label {
+                                    display: inline;
+                                    float: none;
+                                    font-size: 1.1em;
+                                }
+
+                                input[type=radio] {
+                                    margin-right: 5px;
+                                }
+                            }
                         }
                     }
                 }

@@ -78,6 +78,7 @@ Then /^I can delete the apartment$/ do
   visit edit_apartment_path(apartment)
   click_link "Delete Apartment"
   lambda { apartment.reload }.should raise_error(ActiveRecord::RecordNotFound)
+  current_path.should == dashboard_listings_path
 end
 
 Then /^I can (list|unlist) the apartment$/ do |action|
