@@ -12,7 +12,7 @@
     =will_paginate(apartments, :renderer => AjaxPaginationLinkRenderer)
     -apartments.each do |apartment|
       -position = position_in_collection(apartment, current_user.apartments)
-      %div[apartment]
+      .listing[apartment]
         %ul
           %li.photo
             .image
@@ -40,9 +40,9 @@
               %li.edit=link_to "Edit", edit_apartment_path(apartment)
               %li.delete=link_to "Delete", apartment_path(apartment), :method => :delete, :confirm => "Are you sure?"
 
-
-        ==Number of Views: #{apartment.views_count}
-        ==Number of Favorites: #{apartment.favorites_count}
+        %p.summary
+          ==Number of Views: <span>#{apartment.views_count}</span>
+          ==Number of Favorites: <span>#{apartment.favorites_count}</span>
 
   -else
     %p.empty

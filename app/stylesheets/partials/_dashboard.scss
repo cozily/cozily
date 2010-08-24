@@ -57,6 +57,27 @@ body.dashboard {
             text-align: center;
         }
 
+        div.apartment.listing {
+            height: 140px;
+            margin-bottom: 45px;
+
+            p.summary {
+                background-color: #F0F4F7;
+                border-bottom: 1px solid #CCCCCC;
+                height: 32px;
+                line-height: 32px;
+                clear: both;
+                font-size: 1.1em;
+                font-weight: 500;
+                padding-left: 10px;
+
+                span {
+                    margin-right: 30px;
+                    font-weight: bold;
+                }
+            }
+        }
+
         div.apartment {
             height: 130px;
             margin-left: 3px;
@@ -134,13 +155,10 @@ body.dashboard {
                         font-weight: bold;
                         font-size: 1.1em;
                         margin-bottom: 3px;
+                        padding-top: 2px;
                     }
 
                     ul.buttons {
-                        position: relative;
-                        top: -5px;
-                        left: 10px;
-
                         li {
                             float: left;
                             margin-right: 10px;
