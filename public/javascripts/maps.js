@@ -28,12 +28,16 @@ function attachClickToMarker(marker, apt) {
     });
 }
 
-function updateMap(self, others) {
+function initializeMap() {
     map = new google.maps.Map(document.getElementById("map_canvas"), {
         zoom: 16,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     });
 
+    map.setCenter(new google.maps.LatLng(40.7144843, -74.0072444));
+}
+
+function updateMap(self, others) {
     if (self.apartment != undefined && self.apartment.address != undefined) {
         var point = new google.maps.LatLng(self.apartment.address.lat, self.apartment.address.lng);
         map.setCenter(point);
@@ -69,7 +73,10 @@ function updateMap(self, others) {
 (function($) {
     $(function() {
         if (document.getElementById('map_canvas') != null) {
-            updateMap(self, apartments);
+            initializeMap();
+            if (typeof(apartments) != 'undefined') {
+                updateMap(self, apartments);
+            }
         }
     });
 })(jQuery);

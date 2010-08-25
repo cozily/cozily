@@ -254,7 +254,15 @@ body.dashboard {
             margin-bottom: 0;
         }
 
+        div#map_canvas {
+            width: 306px;
+            height: 306px;
+            margin-top: 4px;
+        }
+
         div#activity_feed {
+            margin-top: 15px;
+
             h3 {
                 border-right: 4px solid #429E87;
             }

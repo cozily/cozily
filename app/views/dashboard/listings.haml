@@ -2,6 +2,9 @@
   =render "dashboard/listings", :apartments => @apartments
 
   .aside
+    #map_canvas
+    =image_tag "backgrounds/shadow.png", :class => "shadow"
+
     #activity_feed
       %h3 Activity Feed
       %ul

@@ -314,6 +314,8 @@ function hideLoading() {
                     height: 0
                 });
             });
+
+            initializeMap();
         });
     });
 })(jQuery);
