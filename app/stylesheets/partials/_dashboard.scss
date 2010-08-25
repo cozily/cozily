@@ -151,6 +151,10 @@ body.dashboard {
                 }
 
                 li.status {
+                    div {
+                        height: 62px;
+                    }
+
                     p {
                         font-weight: bold;
                         font-size: 1.1em;
@@ -160,6 +164,8 @@ body.dashboard {
 
                     ul.buttons {
                         padding-left: 12px;
+                        margin-top: 10px;
+
                         li {
                             float: left;
                             margin-right: 10px;

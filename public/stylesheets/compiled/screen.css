@@ -1002,27 +1002,32 @@ body.dashboard div.article div.apartment > ul li.info ul li.neighborhood, body.d
   font-size: 0.95em;
 }
 /* line 154, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.article div.apartment > ul li.status div {
+  height: 62px;
+}
+/* line 158, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.status p {
   font-weight: bold;
   font-size: 1.1em;
   margin-bottom: 3px;
   padding-top: 2px;
 }
-/* line 161, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 165, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.status ul.buttons {
   padding-left: 12px;
+  margin-top: 10px;
 }
-/* line 163, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 169, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.status ul.buttons li {
   float: left;
   margin-right: 10px;
   width: 70px;
 }
-/* line 168, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 174, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.status ul.buttons li a {
   color: white;
 }
-/* line 173, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 179, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.status ul.buttons li.edit {
   display: block;
   text-decoration: none;
@@ -1046,7 +1051,7 @@ body.dashboard div.article div.apartment > ul li.status ul.buttons li.edit {
   height: 26px;
   line-height: 26px;
 }
-/* line 179, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 185, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.status ul.buttons li.delete {
   display: block;
   text-decoration: none;
@@ -1070,113 +1075,113 @@ body.dashboard div.article div.apartment > ul li.status ul.buttons li.delete {
   height: 26px;
   line-height: 26px;
 }
-/* line 188, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 194, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.status fieldset.inputs ol li {
   padding-left: 10px;
   margin-bottom: 1px;
 }
-/* line 191, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 197, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.status fieldset.inputs ol li label {
   display: inline;
   float: none;
   font-size: 1.1em;
 }
-/* line 197, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 203, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.status fieldset.inputs ol li input[type=radio] {
   margin-right: 5px;
 }
-/* line 205, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 211, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.contact {
   width: 180px;
   margin-right: 0;
 }
-/* line 209, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 215, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.contact ul {
   position: relative;
   top: 20px;
 }
-/* line 213, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 219, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.contact ul li {
   padding-left: 15px;
 }
-/* line 217, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 223, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.contact ul li.phone {
   font-weight: 500;
   font-size: 1.7em;
   margin-bottom: 5px;
 }
-/* line 223, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 229, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.contact ul li.message a, body.dashboard div.article div.apartment > ul li.contact ul li.favorite a {
   padding-left: 15px;
   font-size: 0.95em;
 }
-/* line 228, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 234, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.contact ul li.message a {
   background: url(/images/icons/message_small.png) no-repeat 0 4px;
 }
-/* line 233, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 239, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.contact ul li.favorite a.add {
   background: url(/images/icons/add_small.png) no-repeat 0 3px;
 }
-/* line 237, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 243, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.contact ul li.favorite a.remove {
   background: url(/images/icons/remove_small.png) no-repeat 0 3px;
 }
-/* line 247, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 253, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside {
   width: 310px;
   float: right;
 }
-/* line 251, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 257, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside h3 {
   font-size: 2em;
   padding-bottom: 8px;
   margin-bottom: 0;
 }
-/* line 257, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 263, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#map_canvas {
   width: 306px;
   height: 306px;
   margin-top: 4px;
 }
-/* line 263, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 269, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed {
   margin-top: 15px;
 }
-/* line 266, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 272, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed h3 {
   border-right: 4px solid #429E87;
 }
-/* line 270, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 276, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul {
   margin-top: 5px;
   padding-right: 22px;
 }
-/* line 274, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 280, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li {
   background-repeat: no-repeat;
   background-position: 0 2px;
   padding-left: 25px;
   margin-bottom: 12px;
 }
-/* line 280, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 286, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li span.text {
   font-weight: 500;
 }
-/* line 284, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 290, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li span.date {
   display: block;
   color: #888;
 }
-/* line 290, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 296, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li.favorite.created {
   background: url(/images/icons/add.png) no-repeat 0 2px;
 }
-/* line 294, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 300, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li.favorite.destroyed {
   background: url(/images/icons/remove.png) no-repeat 0 2px;
 }
-/* line 298, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 304, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li.message.created {
   background: url(/images/icons/message.png) no-repeat 0 2px;
 }
