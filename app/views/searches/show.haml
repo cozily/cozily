@@ -1,10 +1,11 @@
-= render "searches/form", :search => @search
-
-- if params[:q]
-  = render "apartments/table", :apartments => @search.results, :type => "search"
-
 - if @search.results.present?
   :javascript
-    var apartments = #{@search.results.as_json(:methods => :to_param, :include => :address).to_json};
+    var apartments = #{@search.paginated_results.as_json(:methods => :to_param, :include => :address).to_json};
+
+.article
+  =render "results", :search => @search
+
+.aside
 
   #map_canvas
+  =image_tag "backgrounds/shadow.png", :class => "shadow"

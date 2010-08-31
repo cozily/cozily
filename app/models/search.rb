@@ -7,6 +7,7 @@ class Search
   attr_accessor :min_rent, :max_rent
   attr_accessor :min_square_footage, :max_square_footage
   attr_accessor :neighborhood_ids
+  attr_accessor :page
 
   def initialize(options = {})
     @min_bedrooms = (options[:min_bedrooms] || 0)
@@ -18,6 +19,7 @@ class Search
     @min_square_footage = (options[:min_square_footage] || 250).to_i
     @max_square_footage = (options[:max_square_footage] || 800).to_i
     @neighborhood_ids = (options[:neighborhood_ids] || []).collect {|n| n.to_i}
+    @page = options[:page]
   end
 
   def results
@@ -27,7 +29,7 @@ class Search
       condition << "bathrooms >= #{@min_bathrooms}"
       condition << "bathrooms <= #{@max_bathrooms}"
       condition << "rent >= #{@min_rent}"
-      condition << "rent <= #{@max_rent}" if @max_rent.present?
+      #condition << "rent <= #{@max_rent}" if @max_rent.present?
       condition << "square_footage >= #{@min_square_footage}"
       condition << "square_footage <= #{@max_square_footage}"
       condition << "apartments.state = 'listed'"
@@ -36,6 +38,11 @@ class Search
     unless @neighborhood_ids.empty?
       apartments = apartments.select { |a| (a.neighborhoods.map(&:id) & @neighborhood_ids).present? }
     end
+
     apartments
+  end
+
+  def paginated_results
+    results.paginate(:page => page, :per_page => Apartment.per_page)
   end
 end

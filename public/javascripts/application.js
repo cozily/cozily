@@ -2,7 +2,6 @@ var ajaxRequests = 0;
 
 function updateContent(content) {
     var $contentKeyElements = $(content).filter('[data-content-key]');
-
     $contentKeyElements.each(function() {
         var node = $(this);
         var key = node.attr("data-content-key");
@@ -292,10 +291,12 @@ function hideLoading() {
         }
 
         $(document).bind("content-received", function(event, data) {
-            var flash = data.flash;
-            if (flash && flash != "") {
-                $("div#flash span").html(flash);
-                showAndFadeFlash();
+            if (data.flash) {
+                var flash = data.flash;
+                if (flash && flash != "") {
+                    $("div#flash span").html(flash);
+                    showAndFadeFlash();
+                }
             }
 
             if (ajaxRequests == 0) {
@@ -304,9 +305,15 @@ function hideLoading() {
         });
 
         $(document).bind('content-received', function(e, content) {
-            if(content.map_others) {
+            if (content.map_others) {
                 apartments = JSON.parse(content.map_others);
             }
+
+            $.each(content, function(key, value) {
+                if (key != "map_others") {
+                    updateContent(value);
+                }
+            });
 
             $("[data-animate]").each(function() {
                 $(this).animate({
@@ -314,13 +321,9 @@ function hideLoading() {
                     height: 0
                 });
             });
-
-            $.each(content, function(key, value) {
-                updateContent(value);
-            });
         });
 
-        $(document).bind('content-updated', function(e, content) {
+        $(document).bind('content-updated', function(event, data) {
             initializeMap();
         });
     });

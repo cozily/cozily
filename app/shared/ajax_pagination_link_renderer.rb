@@ -26,7 +26,7 @@ class AjaxPaginationLinkRenderer < WillPaginate::LinkRenderer
   end
 
   def page_link(page, text, attributes = {})
-    @template.content_tag(:li, @template.link_to(text, url_for(page), :'data-remote' => true), attributes)
+    @template.content_tag(:li, @template.link_to(text, url_for(page), :'data-remote' => true, :'data-method' => 'get'), attributes)
   end
 
   def page_span(page, text, attributes = {})

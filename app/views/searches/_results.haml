@@ -1,0 +1,11 @@
+%div{:'data-content-key' => 'search-results'}
+  - if search.results.present?
+    =pagination_summary(params[:page], search.results)
+    =will_paginate(search.paginated_results, :renderer => AjaxPaginationLinkRenderer)
+
+    -search.paginated_results.each do |apartment|
+      =render "dashboard/apartment", :apartment => apartment, :position => position_in_collection(apartment, search.results)
+
+  -else
+    %p.empty
+      We couldn't find anything like that.
