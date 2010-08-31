@@ -17,18 +17,20 @@ class DashboardController < ApplicationController
       format.html
       format.js do
         render :json => { :listings => render_to_string(:layout => "dashboard/listings",
-                                                        :locals => { :apartments => current_user.apartments.paginate(:page => params[:page]) }) }
+                                                        :locals => { :apartments => @apartments }),
+                          :map_others => @apartments.as_json(:methods => :to_param, :include => :address).to_json }
       end
     end
   end
 
   def matches
-    @matches = Apartment.with_state(:listed).paginate(:page => params[:page])
+    @matches = current_user.matches.paginate(:page => params[:page])
     respond_to do |format|
       format.html
       format.js do
         render :json => { :matches => render_to_string(:layout => "dashboard/matches",
-                                                       :locals => { :matches => @matches }) }
+                                                       :locals => { :matches => @matches }),
+                          :map_others => @matches.as_json(:methods => :to_param, :include => :address).to_json }
       end
     end
   end
@@ -39,7 +41,8 @@ class DashboardController < ApplicationController
       format.html
       format.js do
         render :json => { :favorites => render_to_string(:layout => "dashboard/favorites",
-                                                         :locals => { :favorites => @favorites }) }
+                                                         :locals => { :favorites => @favorites }),
+                          :map_others => @favorites.as_json(:methods => :to_param, :include => :address).to_json }
       end
     end
   end

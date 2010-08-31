@@ -35,6 +35,10 @@ function initializeMap() {
     });
 
     map.setCenter(new google.maps.LatLng(40.7144843, -74.0072444));
+
+    if (typeof(apartments) != 'undefined') {
+        updateMap(self, apartments);
+    }
 }
 
 function updateMap(self, others) {
@@ -53,7 +57,6 @@ function updateMap(self, others) {
 
     for (var i = 0; i < others.length; i++) {
         var apartment = others[i].apartment;
-
         if (apartment.address != undefined) {
             point = new google.maps.LatLng(apartment.address.lat, apartment.address.lng);
             marker = new google.maps.Marker({position: point, param: apartment.to_param});
@@ -74,9 +77,6 @@ function updateMap(self, others) {
     $(function() {
         if (document.getElementById('map_canvas') != null) {
             initializeMap();
-            if (typeof(apartments) != 'undefined') {
-                updateMap(self, apartments);
-            }
         }
     });
 })(jQuery);

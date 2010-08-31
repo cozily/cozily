@@ -1,3 +1,6 @@
+:javascript
+  var apartments = #{(current_user.apartments).as_json(:methods => :to_param, :include => :address).to_json};
+
 %div{:'data-content-key' => 'active-tab'}
   =render "dashboard/listings", :apartments => @apartments
 

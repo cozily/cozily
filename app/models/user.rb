@@ -29,6 +29,10 @@ class User < ActiveRecord::Base
     role_symbols.include?(:lister) || apartments.present?
   end
 
+  def matches
+    Apartment.with_state(:listed)
+  end
+
   def role_symbols
      (roles || []).map {|r| r.name.to_sym}
    end

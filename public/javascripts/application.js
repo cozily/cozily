@@ -304,9 +304,9 @@ function hideLoading() {
         });
 
         $(document).bind('content-received', function(e, content) {
-            $.each(content, function(key, value) {
-                updateContent(value);
-            });
+            if(content.map_others) {
+                apartments = JSON.parse(content.map_others);
+            }
 
             $("[data-animate]").each(function() {
                 $(this).animate({
@@ -315,6 +315,12 @@ function hideLoading() {
                 });
             });
 
+            $.each(content, function(key, value) {
+                updateContent(value);
+            });
+        });
+
+        $(document).bind('content-updated', function(e, content) {
             initializeMap();
         });
     });
