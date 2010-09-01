@@ -5,17 +5,29 @@ module TimelineEventsHelper
         apartment = event.subject
         actor = current_user && current_user == apartment.user ? "You" : apartment.user.first_name
         verb = "listed"
-        subject = "a #{link_to "#{apartment.bedrooms.prettify} bedroom apartment", apartment} in #{apartment.neighborhoods.map(&:name).join(", ")}"
+        subject = if apartment.bedrooms.present?
+          "a #{link_to "#{apartment.bedrooms.prettify} bedroom apartment", apartment} in #{apartment.neighborhoods.map(&:name).join(", ")}"
+        else
+          "an #{link_to "apartment", apartment} in #{apartment.neighborhoods.map(&:name).join(", ")}"
+        end
       when "state_changed_to_unlisted"
         apartment = event.subject
         actor = current_user && current_user == apartment.user ? "You" : apartment.user.first_name
         verb = "unlisted"
-        subject = "a #{link_to "#{apartment.bedrooms.prettify} bedroom apartment", apartment} in #{apartment.neighborhoods.map(&:name).join(", ")}"
+        subject = if apartment.bedrooms.present?
+          "a #{link_to "#{apartment.bedrooms.prettify} bedroom apartment", apartment} in #{apartment.neighborhoods.map(&:name).join(", ")}"
+        else
+          "an #{link_to "apartment", apartment} in #{apartment.neighborhoods.map(&:name).join(", ")}"
+        end
       when "state_changed_to_leased"
         apartment = event.subject
         actor = current_user && current_user == apartment.user ? "You" : apartment.user.first_name
         verb = "leased"
-        subject = "a #{link_to "#{apartment.bedrooms.prettify} bedroom apartment", apartment} in #{apartment.neighborhoods.map(&:name).join(", ")}"
+        subject = if apartment.bedrooms.present?
+          "a #{link_to "#{apartment.bedrooms.prettify} bedroom apartment", apartment} in #{apartment.neighborhoods.map(&:name).join(", ")}"
+        else
+          "an #{link_to "apartment", apartment} in #{apartment.neighborhoods.map(&:name).join(", ")}"
+        end
       when "created"
         actor = "You"
         verb = case event.subject_type
