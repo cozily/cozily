@@ -2,7 +2,7 @@ Then /^I can create an? (apartment|sublet)$/ do |apartment_or_sublet|
   Given %Q{all the features are present}
 
   lambda {
-    click_link "New Apartment"
+    click_link "New Listing"
   }.should change(Apartment, :count).by(1)
   apartment = Apartment.last
 
