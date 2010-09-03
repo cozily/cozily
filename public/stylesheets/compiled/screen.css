@@ -1401,6 +1401,66 @@ body.sessions form.session input[type=submit] {
   width: 125px;
 }
 
+/* line 2, ../../../app/stylesheets/partials/_profile.scss */
+body.users.edit div[data-content-key=yield] {
+  padding: 20px;
+}
+/* line 4, ../../../app/stylesheets/partials/_profile.scss */
+body.users.edit div[data-content-key=yield] h2 {
+  margin-bottom: 5px;
+}
+/* line 9, ../../../app/stylesheets/partials/_profile.scss */
+body.users.edit form.user {
+  background-color: #CCC;
+  padding: 20px;
+  margin-bottom: 15px;
+  -moz-box-shadow: #333333 1px 1px 5px;
+  -webkit-box-shadow: #333333 1px 1px 5px;
+  -o-box-shadow: #333333 1px 1px 5px;
+  box-shadow: #333333 1px 1px 5px;
+  width: 70%;
+  font-size: 1.2em;
+}
+/* line 17, ../../../app/stylesheets/partials/_profile.scss */
+body.users.edit form.user label {
+  line-height: 32px;
+}
+/* line 21, ../../../app/stylesheets/partials/_profile.scss */
+body.users.edit form.user input[type=text] {
+  width: 60%;
+}
+/* line 25, ../../../app/stylesheets/partials/_profile.scss */
+body.users.edit form.user li.boolean {
+  margin-bottom: 0;
+  position: relative;
+  top: -28px;
+}
+/* line 31, ../../../app/stylesheets/partials/_profile.scss */
+body.users.edit form.user input[type=text], body.users.edit form.user input[type=password] {
+  height: 35px;
+  color: #888;
+  padding: 5px;
+}
+/* line 37, ../../../app/stylesheets/partials/_profile.scss */
+body.users.edit form.user input[type=submit] {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  height: 33px;
+  color: white;
+  font-weight: 500;
+  font-size: 1.2em;
+  text-transform: capitalize;
+  line-height: 32px;
+  background: url(/images/buttons/blue_button.png) repeat-x;
+  border: 1px solid #637379;
+  width: 125px;
+  font-size: 14px;
+}
+
 /* line 3, ../../../app/stylesheets/partials/apartments/_apartments.scss */
 body.apartments ul.buttons li {
   float: left;
