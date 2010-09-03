@@ -36,6 +36,20 @@ function hideLoading() {
     $('div#loading:visible').fadeOut();
 }
 
+function toggleRoleFields() {
+    if ($("input#role_ids_0:checked").length > 0) {
+        $("fieldset.finder").show();
+    } else {
+        $("fieldset.finder").hide();
+    }
+
+    if ($("input#role_ids_1:checked").length > 0) {
+        $("fieldset.lister").show();
+    } else {
+        $("fieldset.lister").hide();
+    }
+}
+
 (function($) {
     $(function() {
         $("input[data-date=true]").datepicker();
@@ -47,6 +61,11 @@ function hideLoading() {
                 $("li#apartment_end_date_input").hide();
             }
         });
+
+        $("form.user li.boolean input[type=checkbox]").live("change", function() {
+            toggleRoleFields();
+        });
+        toggleRoleFields();
 
         $("div#search select").spicyselect();
 

@@ -1,4 +1,4 @@
-body.users.edit {
+body.users.edit, body.users.update {
     div[data-content-key=yield] {
         padding: 20px;
         h2 {
@@ -44,6 +44,12 @@ body.users.edit {
             @include dark-blue-button;
             width: 125px;
             font-size: 14px;
+        }
+
+        legend {
+            margin-bottom: 12px;
+            font-size: 18px;
+            border-bottom: 3px solid black;
         }
     }
 }
