@@ -17,6 +17,8 @@ class User < ActiveRecord::Base
 
   validates_presence_of :first_name, :last_name
 
+  accepts_nested_attributes_for :profile
+
   def finder?
     role_symbols.include?(:finder) || role_symbols.empty?
   end

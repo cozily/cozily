@@ -16,7 +16,13 @@
         =check_box_tag "role_ids[]", Role.find_by_name("lister").id, f.object.role_symbols.include?(:lister), :id => "role_ids_1"
         list apartments
 
+    = f.input :phone
+
+    - f.semantic_fields_for :profile do |profile_fields|
+      - profile_fields.inputs do
+        = profile_fields.input :bedrooms, :label => "Minimum bedrooms", :as => :select, :collection => (0..8)
+        = profile_fields.input :rent, :label => "Maximum rent"
+        = profile_fields.input :neighborhoods
+
   - f.buttons do
     = f.commit_button "Update Profile"
-
-= link_to "Edit Profile", edit_user_profile_path(@user)
