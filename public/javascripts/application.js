@@ -333,16 +333,16 @@ function toggleRoleFields() {
                     updateContent(value);
                 }
             });
+        });
 
+        $(document).bind('content-updated', function(event, data) {
             $("[data-animate]").each(function() {
                 $(this).animate({
                     opacity: 0,
                     height: 0
                 });
             });
-        });
 
-        $(document).bind('content-updated', function(event, data) {
             initializeMap();
         });
     });
