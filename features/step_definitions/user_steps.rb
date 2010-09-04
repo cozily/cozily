@@ -1,11 +1,18 @@
-Given /^I am a logged in user$/ do
+Given /^I am a logged in (user|finder|lister)$/ do |role|
   Given %{I am signed up and confirmed as "email@person.com/password"}
+  the.user = User.last
+
+  case role
+    when "finder"
+      the.user.roles << Role.find_by_name("finder")
+    when "lister"
+      the.user.roles << Role.find_by_name("lister")
+  end
+
   When %Q{I go to the sign in page}
   And %Q{I sign in as "email@person.com/password"}
   Then %Q{I should see "Signed in"}
   And %Q{I should be signed in}
-
-  the.user = User.last
 end
 
 Given /^I am not a logged in user$/ do
@@ -74,4 +81,3 @@ Then /^I can edit my roles$/ do
   page.should have_content("Matches")
   page.should_not have_content("My Listings")
 end
-
