@@ -1,4 +1,4 @@
-body.users.edit, body.users.update {
+body.users.edit, body.users.update, body.users.new, body.users.create {
     div[data-content-key=yield] {
         padding: 20px;
         h2 {

@@ -1402,15 +1402,15 @@ body.sessions form.session input[type=submit] {
 }
 
 /* line 2, ../../../app/stylesheets/partials/_profile.scss */
-body.users.edit div[data-content-key=yield], body.users.update div[data-content-key=yield] {
+body.users.edit div[data-content-key=yield], body.users.update div[data-content-key=yield], body.users.new div[data-content-key=yield], body.users.create div[data-content-key=yield] {
   padding: 20px;
 }
 /* line 4, ../../../app/stylesheets/partials/_profile.scss */
-body.users.edit div[data-content-key=yield] h2, body.users.update div[data-content-key=yield] h2 {
+body.users.edit div[data-content-key=yield] h2, body.users.update div[data-content-key=yield] h2, body.users.new div[data-content-key=yield] h2, body.users.create div[data-content-key=yield] h2 {
   margin-bottom: 5px;
 }
 /* line 9, ../../../app/stylesheets/partials/_profile.scss */
-body.users.edit form.user, body.users.update form.user {
+body.users.edit form.user, body.users.update form.user, body.users.new form.user, body.users.create form.user {
   background-color: #CCC;
   padding: 20px;
   margin-bottom: 15px;
@@ -1422,31 +1422,31 @@ body.users.edit form.user, body.users.update form.user {
   font-size: 1.2em;
 }
 /* line 17, ../../../app/stylesheets/partials/_profile.scss */
-body.users.edit form.user label, body.users.update form.user label {
+body.users.edit form.user label, body.users.update form.user label, body.users.new form.user label, body.users.create form.user label {
   line-height: 32px;
 }
 /* line 21, ../../../app/stylesheets/partials/_profile.scss */
-body.users.edit form.user input[type=text], body.users.update form.user input[type=text] {
+body.users.edit form.user input[type=text], body.users.update form.user input[type=text], body.users.new form.user input[type=text], body.users.create form.user input[type=text] {
   width: 60%;
 }
 /* line 25, ../../../app/stylesheets/partials/_profile.scss */
-body.users.edit form.user li.boolean, body.users.update form.user li.boolean {
+body.users.edit form.user li.boolean, body.users.update form.user li.boolean, body.users.new form.user li.boolean, body.users.create form.user li.boolean {
   margin-bottom: 0;
   position: relative;
   top: -28px;
 }
 /* line 32, ../../../app/stylesheets/partials/_profile.scss */
-body.users.edit form.user li.select select, body.users.update form.user li.select select {
+body.users.edit form.user li.select select, body.users.update form.user li.select select, body.users.new form.user li.select select, body.users.create form.user li.select select {
   margin-top: 8px;
 }
 /* line 37, ../../../app/stylesheets/partials/_profile.scss */
-body.users.edit form.user input[type=text], body.users.edit form.user input[type=password], body.users.update form.user input[type=text], body.users.update form.user input[type=password] {
+body.users.edit form.user input[type=text], body.users.edit form.user input[type=password], body.users.update form.user input[type=text], body.users.update form.user input[type=password], body.users.new form.user input[type=text], body.users.new form.user input[type=password], body.users.create form.user input[type=text], body.users.create form.user input[type=password] {
   height: 35px;
   color: #888;
   padding: 5px;
 }
 /* line 43, ../../../app/stylesheets/partials/_profile.scss */
-body.users.edit form.user input[type=submit], body.users.update form.user input[type=submit] {
+body.users.edit form.user input[type=submit], body.users.update form.user input[type=submit], body.users.new form.user input[type=submit], body.users.create form.user input[type=submit] {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   -o-border-radius: 5px;
@@ -1465,7 +1465,7 @@ body.users.edit form.user input[type=submit], body.users.update form.user input[
   font-size: 14px;
 }
 /* line 49, ../../../app/stylesheets/partials/_profile.scss */
-body.users.edit form.user legend, body.users.update form.user legend {
+body.users.edit form.user legend, body.users.update form.user legend, body.users.new form.user legend, body.users.create form.user legend {
   margin-bottom: 12px;
   font-size: 18px;
   border-bottom: 3px solid black;
