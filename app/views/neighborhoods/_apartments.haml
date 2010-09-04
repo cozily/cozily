@@ -1,0 +1,11 @@
+%div{:'data-content-key' => 'neighborhood-apartments'}
+  - if @neighborhood.listed_apartments.present?
+    =pagination_summary(params[:page], @neighborhood.listed_apartments)
+    =will_paginate(apartments, :renderer => AjaxPaginationLinkRenderer)
+
+    -apartments.each do |apartment|
+      =render "dashboard/apartment", :apartment => apartment, :position => position_in_collection(apartment, @neighborhood.listed_apartments)
+
+  -else
+    %p.empty
+      We don't have any listings in this neighborhood.  But we're working on it.

@@ -1,4 +1,4 @@
-body.dashboard, body.searches {
+body.dashboard, body.searches, body.neighborhoods.show {
     div.head {
         background: url(/images/backgrounds/tab.png) repeat-x left bottom;
 
@@ -50,6 +50,11 @@ body.dashboard, body.searches {
         width: 630px;
         margin-right: 10px;
         float: left;
+
+        h2 {
+            margin: 15px;
+            border-bottom: 3px solid black;
+        }
 
         p.empty {
             font-size: 18px;

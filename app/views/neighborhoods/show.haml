@@ -1,7 +1,11 @@
-=render "apartments/table", :apartments => @apartments, :type => "neighborhood"
-
 -if @apartments.present?
   :javascript
     var apartments = #{@apartments.as_json(:methods => :to_param, :include => :address).to_json};
 
+.article
+  %h2==Matches in #{@neighborhood.name}
+
+  =render "apartments", :apartments => @apartments
+
+.aside
   #map_canvas
