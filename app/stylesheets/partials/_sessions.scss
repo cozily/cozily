@@ -1,4 +1,4 @@
-body.sessions {
+body.sessions, body.passwords {
     div[data-content-key=yield] {
         padding: 20px;
         h2 {
@@ -6,7 +6,7 @@ body.sessions {
         }
     }
 
-    form.session {
+    form.session, form.password, form.user {
         background-color: #CCC;
         padding: 20px;
         margin-bottom: 15px;
@@ -32,6 +32,26 @@ body.sessions {
         input[type=submit] {
             @include dark-blue-button;
             width: 125px;
+        }
+    }
+
+    form.password {
+        input[type=submit] {
+            width: 140px;
+        }
+    }
+
+    form.user {
+        label {
+            width: 30%;
+        }
+
+        fieldset.buttons {
+            padding-left: 30%;
+
+            input[type=submit] {
+                width: 170px;
+            }
         }
     }
 }

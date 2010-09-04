@@ -1353,15 +1353,15 @@ body.pages div.page {
 }
 
 /* line 2, ../../../app/stylesheets/partials/_sessions.scss */
-body.sessions div[data-content-key=yield] {
+body.sessions div[data-content-key=yield], body.passwords div[data-content-key=yield] {
   padding: 20px;
 }
 /* line 4, ../../../app/stylesheets/partials/_sessions.scss */
-body.sessions div[data-content-key=yield] h2 {
+body.sessions div[data-content-key=yield] h2, body.passwords div[data-content-key=yield] h2 {
   margin-bottom: 5px;
 }
 /* line 9, ../../../app/stylesheets/partials/_sessions.scss */
-body.sessions form.session {
+body.sessions form.session, body.sessions form.password, body.sessions form.user, body.passwords form.session, body.passwords form.password, body.passwords form.user {
   background-color: #CCC;
   padding: 20px;
   margin-bottom: 15px;
@@ -1372,23 +1372,23 @@ body.sessions form.session {
   width: 60%;
 }
 /* line 16, ../../../app/stylesheets/partials/_sessions.scss */
-body.sessions form.session label {
+body.sessions form.session label, body.sessions form.password label, body.sessions form.user label, body.passwords form.session label, body.passwords form.password label, body.passwords form.user label {
   line-height: 32px;
   font-size: 1.2em;
 }
 /* line 21, ../../../app/stylesheets/partials/_sessions.scss */
-body.sessions form.session input[type=text] {
+body.sessions form.session input[type=text], body.sessions form.password input[type=text], body.sessions form.user input[type=text], body.passwords form.session input[type=text], body.passwords form.password input[type=text], body.passwords form.user input[type=text] {
   width: 65%;
 }
 /* line 25, ../../../app/stylesheets/partials/_sessions.scss */
-body.sessions form.session input[type=text], body.sessions form.session input[type=password] {
+body.sessions form.session input[type=text], body.sessions form.session input[type=password], body.sessions form.password input[type=text], body.sessions form.password input[type=password], body.sessions form.user input[type=text], body.sessions form.user input[type=password], body.passwords form.session input[type=text], body.passwords form.session input[type=password], body.passwords form.password input[type=text], body.passwords form.password input[type=password], body.passwords form.user input[type=text], body.passwords form.user input[type=password] {
   height: 35px;
   font-size: 1.2em;
   color: #888;
   padding: 5px;
 }
 /* line 32, ../../../app/stylesheets/partials/_sessions.scss */
-body.sessions form.session input[type=submit] {
+body.sessions form.session input[type=submit], body.sessions form.password input[type=submit], body.sessions form.user input[type=submit], body.passwords form.session input[type=submit], body.passwords form.password input[type=submit], body.passwords form.user input[type=submit] {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   -o-border-radius: 5px;
@@ -1404,6 +1404,22 @@ body.sessions form.session input[type=submit] {
   background: url(/images/buttons/blue_button.png) repeat-x;
   border: 1px solid #637379;
   width: 125px;
+}
+/* line 39, ../../../app/stylesheets/partials/_sessions.scss */
+body.sessions form.password input[type=submit], body.passwords form.password input[type=submit] {
+  width: 140px;
+}
+/* line 45, ../../../app/stylesheets/partials/_sessions.scss */
+body.sessions form.user label, body.passwords form.user label {
+  width: 30%;
+}
+/* line 49, ../../../app/stylesheets/partials/_sessions.scss */
+body.sessions form.user fieldset.buttons, body.passwords form.user fieldset.buttons {
+  padding-left: 30%;
+}
+/* line 52, ../../../app/stylesheets/partials/_sessions.scss */
+body.sessions form.user fieldset.buttons input[type=submit], body.passwords form.user fieldset.buttons input[type=submit] {
+  width: 170px;
 }
 
 /* line 2, ../../../app/stylesheets/partials/_profile.scss */
