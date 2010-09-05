@@ -1,6 +1,5 @@
 .idea
 log/*.log
 tmp/**/*
-Gemfile.lock
 .bundle
 tmp/restart.txt
