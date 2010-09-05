@@ -11,6 +11,9 @@ class Neighborhood < ActiveRecord::Base
   has_friendly_id :name, :use_slug => true
 
   validates_presence_of :name
+  validates_uniqueness_of :name, :scope => [ :city, :state, :country, :borough ]
+
+  default_scope :order => "name"
 
   class << self
     def for_lat_and_lng(lat, lng)
