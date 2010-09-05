@@ -54,6 +54,7 @@ Then /^I can edit my roles$/ do
   uncheck "list apartments"
   click_button "Update Profile"
 
+  visit root_path
   page.should have_content("Matches")
   page.should_not have_content("My Listings")
 
@@ -62,6 +63,7 @@ Then /^I can edit my roles$/ do
   check "list apartments"
   click_button "Update Profile"
 
+  visit root_path
   page.should_not have_content("Matches")
   page.should have_content("My Listings")
 
@@ -70,6 +72,7 @@ Then /^I can edit my roles$/ do
   check "list apartments"
   click_button "Update Profile"
 
+  visit root_path
   page.should have_content("Matches")
   page.should have_content("My Listings")
 
@@ -78,6 +81,7 @@ Then /^I can edit my roles$/ do
   uncheck "list apartments"
   click_button "Update Profile"
 
+  visit root_path
   page.should have_content("Matches")
   page.should_not have_content("My Listings")
 end

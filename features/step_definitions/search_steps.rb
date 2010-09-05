@@ -8,6 +8,7 @@ Given(/^there are searchable apartments$/) do
 end
 
 Given(/^searching for apartments yields the correct results$/) do
+  pending "advanced search"
   select "1", :from => "Min bedrooms"
   select "2", :from => "Max bedrooms"
   select "0.5", :from => "Min bathrooms"
