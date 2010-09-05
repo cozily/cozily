@@ -35,7 +35,7 @@
                 ==Neighborhood: #{neighborhood_links(@apartment)}
               -else
                 Neighborhood: Unknown
-            %li==Available starting #{@apartment.start_date}
+            %li=availability(@apartment)
 
         -if @apartment.features.present?
           .highlights
