@@ -32,7 +32,7 @@
             %li==#{@apartment.square_footage} sq. ft.
             %li
               -if @apartment.address && @apartment.neighborhoods
-                ==Neighborhood: #{neighborhood_links(@apartment)}
+                ==Neighborhood: #{neighborhood_links(@apartment.neighborhoods)}
               -else
                 Neighborhood: Unknown
             %li=availability(@apartment)

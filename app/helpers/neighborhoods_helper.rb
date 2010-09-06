@@ -1,7 +1,7 @@
 module NeighborhoodsHelper
-  def neighborhood_links(apartment)
+  def neighborhood_links(neighborhoods)
     links = []
-    apartment.neighborhoods.each do |neighborhood|
+    neighborhoods.each do |neighborhood|
       links << link_to(neighborhood.name, neighborhood)
     end
     links.join(", ")
