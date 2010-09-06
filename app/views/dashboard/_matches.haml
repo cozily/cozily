@@ -7,6 +7,10 @@
   =render "dashboard/tabs", :active => :matches
 
 .article
+  %p.summary
+    =profile_summary(current_user.profile)
+  %p.update
+    =link_to("update profile", edit_user_path(current_user))
   -if matches.present?
     =pagination_summary(params[:page], Apartment.with_state(:listed))
     =will_paginate(matches, :renderer => AjaxPaginationLinkRenderer)

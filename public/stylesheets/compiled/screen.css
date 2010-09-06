@@ -1,4 +1,4 @@
-/* line 4, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 4, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 html, body {
   margin: 0;
   padding: 0;
@@ -10,12 +10,12 @@ html, body {
   vertical-align: baseline;
 }
 
-/* line 6, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 6, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 html {
   font-size: 100.01%;
 }
 
-/* line 16, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 16, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
 pre, a, abbr, acronym, address, code, del, dfn, em, img,
 dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead, tr {
@@ -29,7 +29,7 @@ dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, th
   vertical-align: baseline;
 }
 
-/* line 18, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 18, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 blockquote, q {
   margin: 0;
   padding: 0;
@@ -41,12 +41,12 @@ blockquote, q {
   vertical-align: baseline;
   quotes: "" "";
 }
-/* line 45, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 45, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 blockquote:before, blockquote:after, q:before, q:after {
   content: "";
 }
 
-/* line 20, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 20, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 th, td, caption {
   margin: 0;
   padding: 0;
@@ -61,7 +61,7 @@ th, td, caption {
   vertical-align: middle;
 }
 
-/* line 22, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 22, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 table {
   margin: 0;
   padding: 0;
@@ -76,7 +76,7 @@ table {
   vertical-align: middle;
 }
 
-/* line 24, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 24, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 a img {
   border: none;
 }
@@ -88,197 +88,197 @@ body {
   color: #333333;
   font-size: 75%;
 }
-/* line 68, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 68, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body h1, body h2, body h3, body h4, body h5, body h6 {
   font-weight: normal;
   color: #222222;
 }
-/* line 69, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 69, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body h1 img, body h2 img, body h3 img, body h4 img, body h5 img, body h6 img {
   margin: 0;
 }
-/* line 70, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 70, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body h1 {
   font-size: 3em;
   line-height: 1;
   margin-bottom: 0.50em;
 }
-/* line 71, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 71, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body h2 {
   font-size: 2em;
   margin-bottom: 0.75em;
 }
-/* line 72, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 72, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body h3 {
   font-size: 1.5em;
   line-height: 1;
   margin-bottom: 1.00em;
 }
-/* line 73, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 73, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body h4 {
   font-size: 1.2em;
   line-height: 1.25;
   margin-bottom: 1.25em;
 }
-/* line 74, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 74, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body h5 {
   font-size: 1em;
   font-weight: bold;
   margin-bottom: 1.50em;
 }
-/* line 75, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 75, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body h6 {
   font-size: 1em;
   font-weight: bold;
 }
-/* line 76, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 76, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body p {
   margin: 0 0 1.5em;
 }
-/* line 77, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 77, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body p img.left {
   display: inline;
   float: left;
   margin: 1.5em 1.5em 1.5em 0;
   padding: 0;
 }
-/* line 78, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 78, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body p img.right {
   display: inline;
   float: right;
   margin: 1.5em 0 1.5em 1.5em;
   padding: 0;
 }
-/* line 80, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 80, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body a {
   text-decoration: underline;
   color: #000099;
 }
-/* line 18, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
+/* line 18, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
 body a:visited {
   color: #000066;
 }
-/* line 22, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
+/* line 22, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
 body a:focus {
   color: black;
 }
-/* line 26, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
+/* line 26, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
 body a:hover {
   color: black;
 }
-/* line 30, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
+/* line 30, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
 body a:active {
   color: #cc0099;
 }
-/* line 81, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 81, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body blockquote {
   margin: 1.5em;
   color: #666666;
   font-style: italic;
 }
-/* line 82, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 82, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body strong {
   font-weight: bold;
 }
-/* line 83, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 83, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body em {
   font-style: italic;
 }
-/* line 84, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 84, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body dfn {
   font-style: italic;
   font-weight: bold;
 }
-/* line 85, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 85, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body sup, body sub {
   line-height: 0;
 }
-/* line 86, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 86, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body abbr, body acronym {
   border-bottom: 1px dotted #666666;
 }
-/* line 87, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 87, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body address {
   margin: 0 0 1.5em;
   font-style: italic;
 }
-/* line 88, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 88, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body del {
   color: #666666;
 }
-/* line 89, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 89, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body pre {
   margin: 1.5em 0;
   white-space: pre;
 }
-/* line 90, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 90, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body pre, body code, body tt {
   font: 1em "andale mono", "lucida console", monospace;
   line-height: 1.5;
 }
-/* line 91, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 91, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body li ul, body li ol {
   margin: 0;
 }
-/* line 92, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 92, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body ul, body ol {
   margin: 0 1.5em 1.5em 0;
   padding-left: 3.333em;
 }
-/* line 93, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 93, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body ul {
   list-style-type: disc;
 }
-/* line 94, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 94, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body ol {
   list-style-type: decimal;
 }
-/* line 95, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 95, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body dl {
   margin: 0 0 1.5em 0;
 }
-/* line 96, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 96, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body dl dt {
   font-weight: bold;
 }
-/* line 97, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 97, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body dd {
   margin-left: 1.5em;
 }
-/* line 98, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 98, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body table {
   margin-bottom: 1.4em;
   width: 100%;
 }
-/* line 99, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 99, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body th {
   font-weight: bold;
 }
-/* line 100, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 100, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body thead th {
   background: #c3d9ff;
 }
-/* line 101, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 101, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body th, body td, body caption {
   padding: 4px 10px 4px 5px;
 }
-/* line 102, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 102, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body tr.even td {
   background: #e5ecf9;
 }
-/* line 103, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 103, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body tfoot {
   font-style: italic;
 }
-/* line 104, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 104, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body caption {
   background: #eeeeee;
 }
-/* line 105, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 105, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body .quiet {
   color: #666666;
 }
-/* line 106, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 106, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body .loud {
   color: #111111;
 }
@@ -310,7 +310,11 @@ div.container {
   width: 950px;
   margin: 0 auto;
   overflow: hidden;
-  *zoom: 1;
+  display: inline-block;
+}
+/* line 8, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/general/_hacks.scss */
+div.container {
+  display: block;
 }
 
 /* line 5, ../../../app/stylesheets/partials/_application.scss */
@@ -478,10 +482,10 @@ div#flash span, div#loading span {
   -ms-border-radius: 0 0 5px 5px;
   -khtml-border-radius: 0 0 5px 5px;
   border-radius: 0 0 5px 5px;
-  -moz-box-shadow: #333333 1px 1px 5px 0;
-  -webkit-box-shadow: #333333 1px 1px 5px 0;
-  -o-box-shadow: #333333 1px 1px 5px 0;
-  box-shadow: #333333 1px 1px 5px 0;
+  -moz-box-shadow: #333333 1px 1px 5px;
+  -webkit-box-shadow: #333333 1px 1px 5px;
+  -o-box-shadow: #333333 1px 1px 5px;
+  box-shadow: #333333 1px 1px 5px;
   font-size: 16px;
   font-weight: 500;
   font-style: italic;
@@ -528,10 +532,10 @@ div#search form div.spicyselect a {
 }
 /* line 35, ../../../app/stylesheets/partials/_search.scss */
 div#search form div.spicyselect.focus {
-  -moz-box-shadow: black 0 0 5px 0;
-  -webkit-box-shadow: black 0 0 5px 0;
-  -o-box-shadow: black 0 0 5px 0;
-  box-shadow: black 0 0 5px 0;
+  -moz-box-shadow: black 0 0 5px;
+  -webkit-box-shadow: black 0 0 5px;
+  -o-box-shadow: black 0 0 5px;
+  box-shadow: black 0 0 5px;
 }
 /* line 39, ../../../app/stylesheets/partials/_search.scss */
 div#search form div#q_neighborhood_ids_mask {
@@ -755,6 +759,10 @@ body.welcome.index div#body div.container div.profile div.article, body.welcome.
   -ms-border-radius: 35px 35px 0 0;
   -khtml-border-radius: 35px 35px 0 0;
   border-radius: 35px 35px 0 0;
+  -moz-opacity: 0.8;
+  -webkit-opacity: 0.8;
+  -o-opacity: 0.8;
+  -khtml-opacity: 0.8;
   opacity: 0.8;
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
@@ -864,9 +872,13 @@ body.dashboard div.head div.lady span, body.searches div.head div.lady span, bod
 /* line 27, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.head ul.tabs, body.searches div.head ul.tabs, body.neighborhoods.show div.head ul.tabs {
   overflow: hidden;
-  *zoom: 1;
+  display: inline-block;
   margin-top: 70px;
   margin-left: 25px;
+}
+/* line 8, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/general/_hacks.scss */
+body.dashboard div.head ul.tabs, body.searches div.head ul.tabs, body.neighborhoods.show div.head ul.tabs {
+  display: block;
 }
 /* line 31, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.head ul.tabs li, body.searches div.head ul.tabs li, body.neighborhoods.show div.head ul.tabs li {
@@ -896,17 +908,34 @@ body.dashboard div.article h2, body.searches div.article h2, body.neighborhoods.
   border-bottom: 3px solid black;
 }
 /* line 59, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.article p.summary, body.searches div.article p.summary, body.neighborhoods.show div.article p.summary {
+  padding: 15px 10px 0 10px;
+  margin: 0;
+  text-align: right;
+  font-style: italic;
+  float: left;
+  width: 80%;
+}
+/* line 68, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.article p.update, body.searches div.article p.update, body.neighborhoods.show div.article p.update {
+  float: left;
+  margin-left: 15px;
+  padding: 15px 10px 0 10px;
+  margin: 0;
+}
+/* line 75, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article p.empty, body.searches div.article p.empty, body.neighborhoods.show div.article p.empty {
   font-size: 18px;
   padding: 18px;
   text-align: center;
+  clear: both;
 }
-/* line 65, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 82, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment.listing, body.searches div.article div.apartment.listing, body.neighborhoods.show div.article div.apartment.listing {
   height: 140px;
   margin-bottom: 45px;
 }
-/* line 69, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 86, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment.listing p.summary, body.searches div.article div.apartment.listing p.summary, body.neighborhoods.show div.article div.apartment.listing p.summary {
   background-color: #F0F4F7;
   border-bottom: 1px solid #CCCCCC;
@@ -917,40 +946,40 @@ body.dashboard div.article div.apartment.listing p.summary, body.searches div.ar
   font-weight: 500;
   padding-left: 10px;
 }
-/* line 79, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 96, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment.listing p.summary span, body.searches div.article div.apartment.listing p.summary span, body.neighborhoods.show div.article div.apartment.listing p.summary span {
   margin-right: 30px;
   font-weight: bold;
 }
-/* line 86, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 103, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment, body.searches div.article div.apartment, body.neighborhoods.show div.article div.apartment {
   height: 130px;
   margin-left: 3px;
   border-bottom: 1px solid #CCC;
   padding: 3px 0;
 }
-/* line 93, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 110, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul > li, body.searches div.article div.apartment > ul > li, body.neighborhoods.show div.article div.apartment > ul > li {
   float: left;
   margin-right: 10px;
   height: 100%;
 }
-/* line 99, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 116, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.photo, body.searches div.article div.apartment > ul li.photo, body.neighborhoods.show div.article div.apartment > ul li.photo {
   width: 150px;
 }
-/* line 102, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 119, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.photo div, body.searches div.article div.apartment > ul li.photo div, body.neighborhoods.show div.article div.apartment > ul li.photo div {
   float: left;
 }
-/* line 106, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 123, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.photo div.image, body.searches div.article div.apartment > ul li.photo div.image, body.neighborhoods.show div.article div.apartment > ul li.photo div.image {
   width: 110px;
   height: 110px;
   float: left;
   padding: 5px 0 5px 5px;
 }
-/* line 113, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 130, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.photo div.count, body.searches div.article div.apartment > ul li.photo div.count, body.neighborhoods.show div.article div.apartment > ul li.photo div.count {
   width: 35px;
   height: 35px;
@@ -962,65 +991,65 @@ body.dashboard div.article div.apartment > ul li.photo div.count, body.searches 
   position: relative;
   top: -105px;
 }
-/* line 126, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 143, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.info, body.searches div.article div.apartment > ul li.info, body.neighborhoods.show div.article div.apartment > ul li.info {
   border-right: 1px solid #CCC;
   width: 265px;
   font-weight: 500;
 }
-/* line 132, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 149, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.info ul li.street, body.searches div.article div.apartment > ul li.info ul li.street, body.neighborhoods.show div.article div.apartment > ul li.info ul li.street {
   padding-top: 10px;
   margin-bottom: 4px;
 }
-/* line 135, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 152, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.info ul li.street a, body.searches div.article div.apartment > ul li.info ul li.street a, body.neighborhoods.show div.article div.apartment > ul li.info ul li.street a {
   font-size: 1.8em;
   font-weight: 600;
 }
-/* line 141, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 158, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.info ul li.neighborhood a, body.searches div.article div.apartment > ul li.info ul li.neighborhood a, body.neighborhoods.show div.article div.apartment > ul li.info ul li.neighborhood a {
   font-size: 1em;
 }
-/* line 145, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 162, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.info ul li.basic, body.searches div.article div.apartment > ul li.info ul li.basic, body.neighborhoods.show div.article div.apartment > ul li.info ul li.basic {
   font-size: 1.2em;
 }
-/* line 147, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 164, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.info ul li.basic span.rent, body.searches div.article div.apartment > ul li.info ul li.basic span.rent, body.neighborhoods.show div.article div.apartment > ul li.info ul li.basic span.rent {
   font-weight: 600;
 }
-/* line 152, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 169, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.info ul li.neighborhood, body.dashboard div.article div.apartment > ul li.info ul li.listed_on, body.searches div.article div.apartment > ul li.info ul li.neighborhood, body.searches div.article div.apartment > ul li.info ul li.listed_on, body.neighborhoods.show div.article div.apartment > ul li.info ul li.neighborhood, body.neighborhoods.show div.article div.apartment > ul li.info ul li.listed_on {
   font-size: 0.95em;
 }
-/* line 159, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 176, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.status div, body.searches div.article div.apartment > ul li.status div, body.neighborhoods.show div.article div.apartment > ul li.status div {
   height: 62px;
 }
-/* line 163, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 180, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.status p, body.searches div.article div.apartment > ul li.status p, body.neighborhoods.show div.article div.apartment > ul li.status p {
   font-weight: bold;
   font-size: 1.1em;
   margin-bottom: 3px;
   padding-top: 2px;
 }
-/* line 170, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 187, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.status ul.buttons, body.searches div.article div.apartment > ul li.status ul.buttons, body.neighborhoods.show div.article div.apartment > ul li.status ul.buttons {
   padding-left: 12px;
   margin-top: 10px;
 }
-/* line 174, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 191, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.status ul.buttons li, body.searches div.article div.apartment > ul li.status ul.buttons li, body.neighborhoods.show div.article div.apartment > ul li.status ul.buttons li {
   float: left;
   margin-right: 10px;
   width: 70px;
 }
-/* line 179, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 196, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.status ul.buttons li a, body.searches div.article div.apartment > ul li.status ul.buttons li a, body.neighborhoods.show div.article div.apartment > ul li.status ul.buttons li a {
   color: white;
 }
-/* line 184, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 201, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.status ul.buttons li.edit, body.searches div.article div.apartment > ul li.status ul.buttons li.edit, body.neighborhoods.show div.article div.apartment > ul li.status ul.buttons li.edit {
   display: block;
   text-decoration: none;
@@ -1044,7 +1073,7 @@ body.dashboard div.article div.apartment > ul li.status ul.buttons li.edit, body
   height: 26px;
   line-height: 26px;
 }
-/* line 190, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 207, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.status ul.buttons li.delete, body.searches div.article div.apartment > ul li.status ul.buttons li.delete, body.neighborhoods.show div.article div.apartment > ul li.status ul.buttons li.delete {
   display: block;
   text-decoration: none;
@@ -1068,113 +1097,113 @@ body.dashboard div.article div.apartment > ul li.status ul.buttons li.delete, bo
   height: 26px;
   line-height: 26px;
 }
-/* line 199, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 216, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.status fieldset.inputs ol li, body.searches div.article div.apartment > ul li.status fieldset.inputs ol li, body.neighborhoods.show div.article div.apartment > ul li.status fieldset.inputs ol li {
   padding-left: 10px;
   margin-bottom: 1px;
 }
-/* line 202, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 219, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.status fieldset.inputs ol li label, body.searches div.article div.apartment > ul li.status fieldset.inputs ol li label, body.neighborhoods.show div.article div.apartment > ul li.status fieldset.inputs ol li label {
   display: inline;
   float: none;
   font-size: 1.1em;
 }
-/* line 208, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 225, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.status fieldset.inputs ol li input[type=radio], body.searches div.article div.apartment > ul li.status fieldset.inputs ol li input[type=radio], body.neighborhoods.show div.article div.apartment > ul li.status fieldset.inputs ol li input[type=radio] {
   margin-right: 5px;
 }
-/* line 216, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 233, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.contact, body.searches div.article div.apartment > ul li.contact, body.neighborhoods.show div.article div.apartment > ul li.contact {
   width: 180px;
   margin-right: 0;
 }
-/* line 220, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 237, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.contact ul, body.searches div.article div.apartment > ul li.contact ul, body.neighborhoods.show div.article div.apartment > ul li.contact ul {
   position: relative;
   top: 20px;
 }
-/* line 224, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 241, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.contact ul li, body.searches div.article div.apartment > ul li.contact ul li, body.neighborhoods.show div.article div.apartment > ul li.contact ul li {
   padding-left: 15px;
 }
-/* line 228, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 245, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.contact ul li.phone, body.searches div.article div.apartment > ul li.contact ul li.phone, body.neighborhoods.show div.article div.apartment > ul li.contact ul li.phone {
   font-weight: 500;
   font-size: 1.7em;
   margin-bottom: 5px;
 }
-/* line 234, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 251, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.contact ul li.message a, body.dashboard div.article div.apartment > ul li.contact ul li.favorite a, body.searches div.article div.apartment > ul li.contact ul li.message a, body.searches div.article div.apartment > ul li.contact ul li.favorite a, body.neighborhoods.show div.article div.apartment > ul li.contact ul li.message a, body.neighborhoods.show div.article div.apartment > ul li.contact ul li.favorite a {
   padding-left: 15px;
   font-size: 0.95em;
 }
-/* line 239, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 256, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.contact ul li.message a, body.searches div.article div.apartment > ul li.contact ul li.message a, body.neighborhoods.show div.article div.apartment > ul li.contact ul li.message a {
   background: url(/images/icons/message_small.png) no-repeat 0 4px;
 }
-/* line 244, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 261, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.contact ul li.favorite a.add, body.searches div.article div.apartment > ul li.contact ul li.favorite a.add, body.neighborhoods.show div.article div.apartment > ul li.contact ul li.favorite a.add {
   background: url(/images/icons/add_small.png) no-repeat 0 3px;
 }
-/* line 248, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 265, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.contact ul li.favorite a.remove, body.searches div.article div.apartment > ul li.contact ul li.favorite a.remove, body.neighborhoods.show div.article div.apartment > ul li.contact ul li.favorite a.remove {
   background: url(/images/icons/remove_small.png) no-repeat 0 3px;
 }
-/* line 258, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 275, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside, body.searches div.aside, body.neighborhoods.show div.aside {
   width: 310px;
   float: right;
 }
-/* line 262, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 279, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside h3, body.searches div.aside h3, body.neighborhoods.show div.aside h3 {
   font-size: 2em;
   padding-bottom: 8px;
   margin-bottom: 0;
 }
-/* line 268, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 285, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#map_canvas, body.searches div.aside div#map_canvas, body.neighborhoods.show div.aside div#map_canvas {
   width: 306px;
   height: 306px;
   margin-top: 4px;
 }
-/* line 274, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 291, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed, body.searches div.aside div#activity_feed, body.neighborhoods.show div.aside div#activity_feed {
   margin-top: 15px;
 }
-/* line 277, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 294, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed h3, body.searches div.aside div#activity_feed h3, body.neighborhoods.show div.aside div#activity_feed h3 {
   border-right: 4px solid #429E87;
 }
-/* line 281, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 298, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul, body.searches div.aside div#activity_feed ul, body.neighborhoods.show div.aside div#activity_feed ul {
   margin-top: 5px;
   padding-right: 22px;
 }
-/* line 285, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 302, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li, body.searches div.aside div#activity_feed ul li, body.neighborhoods.show div.aside div#activity_feed ul li {
   background-repeat: no-repeat;
   background-position: 0 2px;
   padding-left: 25px;
   margin-bottom: 12px;
 }
-/* line 291, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 308, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li span.text, body.searches div.aside div#activity_feed ul li span.text, body.neighborhoods.show div.aside div#activity_feed ul li span.text {
   font-weight: 500;
 }
-/* line 295, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 312, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li span.date, body.searches div.aside div#activity_feed ul li span.date, body.neighborhoods.show div.aside div#activity_feed ul li span.date {
   display: block;
   color: #888;
 }
-/* line 301, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 318, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li.favorite.created, body.searches div.aside div#activity_feed ul li.favorite.created, body.neighborhoods.show div.aside div#activity_feed ul li.favorite.created {
   background: url(/images/icons/add.png) no-repeat 0 2px;
 }
-/* line 305, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 322, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li.favorite.destroyed, body.searches div.aside div#activity_feed ul li.favorite.destroyed, body.neighborhoods.show div.aside div#activity_feed ul li.favorite.destroyed {
   background: url(/images/icons/remove.png) no-repeat 0 2px;
 }
-/* line 309, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 326, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li.message.created, body.searches div.aside div#activity_feed ul li.message.created, body.neighborhoods.show div.aside div#activity_feed ul li.message.created {
   background: url(/images/icons/message.png) no-repeat 0 2px;
 }
@@ -1182,10 +1211,14 @@ body.dashboard div.aside div#activity_feed ul li.message.created, body.searches 
 /* line 2, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.pagination {
   overflow: hidden;
-  *zoom: 1;
+  display: inline-block;
   font-size: 1.2em;
   height: 36px;
   width: 100%;
+}
+/* line 8, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/general/_hacks.scss */
+body.dashboard div.pagination {
+  display: block;
 }
 /* line 7, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.pagination > ul {
@@ -1349,10 +1382,10 @@ body.sessions form.session, body.sessions form.password, body.sessions form.user
   background-color: #CCC;
   padding: 20px;
   margin-bottom: 15px;
-  -moz-box-shadow: #333333 1px 1px 5px 0;
-  -webkit-box-shadow: #333333 1px 1px 5px 0;
-  -o-box-shadow: #333333 1px 1px 5px 0;
-  box-shadow: #333333 1px 1px 5px 0;
+  -moz-box-shadow: #333333 1px 1px 5px;
+  -webkit-box-shadow: #333333 1px 1px 5px;
+  -o-box-shadow: #333333 1px 1px 5px;
+  box-shadow: #333333 1px 1px 5px;
   width: 60%;
 }
 /* line 16, ../../../app/stylesheets/partials/_sessions.scss */
@@ -1419,10 +1452,10 @@ body.users.edit form.user, body.users.update form.user, body.users.new form.user
   background-color: #CCC;
   padding: 20px;
   margin-bottom: 15px;
-  -moz-box-shadow: #333333 1px 1px 5px 0;
-  -webkit-box-shadow: #333333 1px 1px 5px 0;
-  -o-box-shadow: #333333 1px 1px 5px 0;
-  box-shadow: #333333 1px 1px 5px 0;
+  -moz-box-shadow: #333333 1px 1px 5px;
+  -webkit-box-shadow: #333333 1px 1px 5px;
+  -o-box-shadow: #333333 1px 1px 5px;
+  box-shadow: #333333 1px 1px 5px;
   width: 70%;
   font-size: 1.2em;
 }
@@ -1969,8 +2002,12 @@ body.apartments.edit div.article form.apartment div#upload_photos div#upload_sta
 /* line 93, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.article form.apartment div#upload_photos ul#images {
   overflow: hidden;
-  *zoom: 1;
+  display: inline-block;
   margin: 25px 0 0 140px;
+}
+/* line 8, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/general/_hacks.scss */
+body.apartments.edit div.article form.apartment div#upload_photos ul#images {
+  display: block;
 }
 /* line 97, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.article form.apartment div#upload_photos ul#images li {
@@ -2028,9 +2065,13 @@ body.apartments.edit div.aside div#map_canvas {
 /* line 153, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.aside div[data-content-key=comparables] {
   overflow: hidden;
-  *zoom: 1;
+  display: inline-block;
   margin-top: 10px;
   background: url(/images/backgrounds/comparables.png) no-repeat 0 0;
+}
+/* line 8, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/general/_hacks.scss */
+body.apartments.edit div.aside div[data-content-key=comparables] {
+  display: block;
 }
 /* line 158, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.aside div[data-content-key=comparables] h6 {
@@ -2095,9 +2136,13 @@ body.apartments div.owner ul.buttons {
 /* line 16, ../../../app/stylesheets/partials/apartments/_owner.scss */
 body.apartments div.owner ul.tabs {
   overflow: hidden;
-  *zoom: 1;
+  display: inline-block;
   margin-top: 70px;
   margin-left: 25px;
+}
+/* line 8, ../../../../../.bundle/ruby/1.8/gems/compass-0.10.2/frameworks/compass/stylesheets/compass/utilities/general/_hacks.scss */
+body.apartments div.owner ul.tabs {
+  display: block;
 }
 /* line 20, ../../../app/stylesheets/partials/apartments/_owner.scss */
 body.apartments div.owner ul.tabs li {

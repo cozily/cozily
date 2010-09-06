@@ -56,10 +56,27 @@ body.dashboard, body.searches, body.neighborhoods.show {
             border-bottom: 3px solid black;
         }
 
+        p.summary {
+            padding: 15px 10px 0 10px;
+            margin: 0;
+            text-align: right;
+            font-style: italic;
+            float: left;
+            width: 80%;
+        }
+
+        p.update {
+            float: left;
+            margin-left: 15px;
+            padding: 15px 10px 0 10px;
+            margin: 0;
+       }
+
         p.empty {
             font-size: 18px;
             padding: 18px;
             text-align: center;
+            clear: both;
         }
 
         div.apartment.listing {
