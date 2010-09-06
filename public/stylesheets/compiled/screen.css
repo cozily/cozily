@@ -908,7 +908,7 @@ body.dashboard div.article h2, body.searches div.article h2, body.neighborhoods.
   border-bottom: 3px solid black;
 }
 /* line 59, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.article p.summary, body.searches div.article p.summary, body.neighborhoods.show div.article p.summary {
+body.dashboard div.article p.profile_summary, body.searches div.article p.profile_summary, body.neighborhoods.show div.article p.profile_summary {
   padding: 15px 10px 0 10px;
   margin: 0;
   text-align: right;
@@ -917,7 +917,7 @@ body.dashboard div.article p.summary, body.searches div.article p.summary, body.
   width: 80%;
 }
 /* line 68, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.article p.update, body.searches div.article p.update, body.neighborhoods.show div.article p.update {
+body.dashboard div.article p.profile_update, body.searches div.article p.profile_update, body.neighborhoods.show div.article p.profile_update {
   float: left;
   margin-left: 15px;
   padding: 15px 10px 0 10px;
