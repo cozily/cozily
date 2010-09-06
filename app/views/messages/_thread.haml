@@ -1,9 +1,10 @@
 %div{ :'data-content-key' => 'thread' }
   =render "messages/new", :apartment => @apartment
 
-  -if messages.present?
+  -if conversations.present?
     .messages
       %h5 Messages
 
-      -messages.each do |message|
-        =render "messages/show", :message => message
+      - conversations.each do |conversation|
+        - conversation.messages.each do |message|
+          =render "messages/show", :message => message

@@ -117,13 +117,13 @@ function toggleRoleFields() {
             return false;
         });
 
-        $("div.messages ul.root").live("click", function(event) {
+        $("div.conversations ul.conversation").live("click", function(event) {
             $(event.currentTarget).parent("div").next("div").slideToggle(150);
             return false;
         });
 
-        $("div.replies a.close").live("click", function(event) {
-            $(event.currentTarget).parents("div.replies").slideUp(150);
+        $("div.messages a.close").live("click", function(event) {
+            $(event.currentTarget).parents("div.messages").slideUp(150);
             return false;
         });
 

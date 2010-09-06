@@ -21,7 +21,7 @@ body.dashboard {
         }
     }
 
-    div.messages {
+    div.conversations {
         margin: 0 10px;
         width: 930px;
         border: 1px solid #ececec;
@@ -34,11 +34,11 @@ body.dashboard {
             color: #dadada;
         }
 
-        div.message {
+        div.conversation {
             height: 55px;
             background: url(/images/backgrounds/message_thread.png) repeat-x;
 
-            ul.root {
+            ul.conversation {
                 > li {
                     float: left;
                 }
@@ -83,11 +83,11 @@ body.dashboard {
 
         }
 
-        div.message:hover {
+        div.conversation:hover {
             background: url(/images/backgrounds/message_thread_hover.png) repeat-x;
         }
 
-        div.replies {
+        div.messages {
             ul {
                 padding: 10px;
                 > li {
@@ -105,31 +105,31 @@ body.dashboard {
                         font-weight: bold;
                         float: right;
                     }
-                }
-            }
 
-            form {
-                fieldset.inputs {
-                    width: 560px;
-                    li {
-                        textarea {
-                            height: 80px;
-                            width: 100%;
-                            margin-top: 5px;
-                            padding: 0.5em;
-                            color: #aaa;
+                    form {
+                        fieldset.inputs {
+                            width: 560px;
+                            li {
+                                textarea {
+                                    height: 80px;
+                                    width: 100%;
+                                    margin-top: 5px;
+                                    padding: 0.5em;
+                                    color: #aaa;
+                                }
+                            }
                         }
-                    }
-                }
 
-                fieldset.buttons {
-                    padding-left: 10px;
-                    li.commit {
-                        float: left;
-                        input {
-                            @include dark-blue-button;
-                            font-weight: 400;
-                            width: 80px;
+                        fieldset.buttons {
+                            padding-left: 10px;
+                            li.commit {
+                                float: left;
+                                input {
+                                    @include dark-blue-button;
+                                    font-weight: 400;
+                                    width: 80px;
+                                }
+                            }
                         }
                     }
                 }

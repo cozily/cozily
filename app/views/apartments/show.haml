@@ -57,7 +57,7 @@
           %span.phone=@apartment.user.phone
 
         -if can? :manage, Message
-          =render "messages/thread", :messages => @apartment.messages.for_user(current_user)
+          =render "messages/thread", :conversations => @apartment.conversations.for_user(current_user)
 
   .aside
     %ul.actions

@@ -1,0 +1,7 @@
+%div{ :'data-content-key' => "#{dom_id(conversation)}_messages" }
+  %ul
+    - conversation.messages.each do |message|
+      = render "dashboard/messages/message", :message => message
+    %li.reply
+      = render "dashboard/messages/reply", :conversation => conversation
+      %a.close{:href => "#"} close

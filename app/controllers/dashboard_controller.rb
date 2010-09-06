@@ -49,12 +49,12 @@ class DashboardController < ApplicationController
 
   def messages
     page, per_page = params[:page] || 1, params[:per_page] || 1
-    @messages = Message.for_user(current_user).root.paginate(:page => page, :per_page => per_page)
+    @conversations = Conversation.for_user(current_user).paginate(:page => page, :per_page => per_page)
     respond_to do |format|
       format.html
       format.js do
-        render :json => { :messages => render_to_string(:layout => "dashboard/messages",
-                                                        :locals => { :messages => @messages }) }
+        render :json => { :conversations => render_to_string(:layout => "dashboard/messages",
+                                                             :locals => { :conversations => @conversations }) }
       end
     end
   end

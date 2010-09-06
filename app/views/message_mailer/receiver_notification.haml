@@ -2,7 +2,7 @@
 
 
 ==--------------------
-==Re: #{@message.apartment.name}
+==Re: #{@message.conversation.apartment.name}
 
 
 =@message.body
@@ -10,4 +10,4 @@
 
 
 To reply to this message, follow the link below:
-=url_for({:controller => 'apartments', :action => 'show', :id => @message.apartment.to_param, :host => "cozi.ly"})
+=url_for({:controller => 'apartments', :action => 'show', :id => @message.conversation.apartment.to_param, :host => "cozi.ly"})

@@ -8,33 +8,29 @@
 
 .pagination
   %ul
-    %li.counts= pagination_summary(params[:page], Message.for_user(current_user).root)
-    %li.navigation= will_paginate((@messages), :renderer => AjaxPaginationLinkRenderer)
+    %li.counts= pagination_summary(params[:page], @conversations)
+    %li.navigation= will_paginate((@conversations), :renderer => AjaxPaginationLinkRenderer)
 
-.messages
-  - @messages.each do |message|
-    %div[message]
-      %ul.root
+.conversations
+  - @conversations.each do |conversation|
+    - first_message = conversation.messages.first
+    %div[conversation]
+      %ul.conversation
         %li.status.new &nbsp;
         %li.info
           %ul
-            %li.sender= message.sender.full_name
+            %li.sender= conversation.sender.full_name
             %li.details
-              = truncate(message.body)
+              = truncate(first_message.body)
               |
-              = message.created_at
+              = first_message.created_at
 
         %li.delete= image_tag "icons/delete_message.png"
         %li.photo
-          -if message.apartment.images.present?
-            =image_tag(message.apartment.images.first.asset.url(:micro))
+          -if conversation.apartment.images.present?
+            =image_tag(conversation.apartment.images.first.asset.url(:micro))
           -else
             &nbsp;
-        %li.name= message.apartment.address.street
-    %div.replies{:style => "display: none;"}
-      %ul
-        = render "dashboard/message", :message => message
-        = render "dashboard/messages/replies", :message => message
-        %li.reply
-          = render "dashboard/messages/reply", :message => message
-          %a.close{:href => "#"} close
+        %li.name= conversation.apartment.address.street
+    %div.messages{:style => "display: none;"}
+      = render "dashboard/messages/messages", :conversation => conversation

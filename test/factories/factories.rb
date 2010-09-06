@@ -23,6 +23,13 @@ Factory.define :apartment_feature do |a|
   a.association  :feature
 end
 
+Factory.define :conversation do |m|
+  m.association  :apartment
+  m.association  :sender, :factory => :user
+  m.association  :receiver, :factory => :user
+  m.body         { Faker::Lorem.paragraph }
+end
+
 Factory.define :favorite do |f|
   f.association  :user
   f.association  :apartment
@@ -42,10 +49,10 @@ Factory.define :image do |i|
 end
 
 Factory.define :message do |m|
+  m.association  :conversation
   m.association  :apartment
   m.association  :sender, :factory => :user
-  m.association  :receiver, :factory => :user
-  m.body         Faker::Lorem.paragraph
+  m.body         { Faker::Lorem.paragraph }
 end
 
 Factory.define :neighborhood do |n|

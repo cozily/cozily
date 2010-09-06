@@ -5,13 +5,11 @@ ActionController::Routing::Routes.draw do |map|
                 :member => { :order_images => :put,
                              :transition => :put } do |apartment|
     apartment.resources :images
-    apartment.resources :messages, :only => :create
+    apartment.resources :conversations, :only => :create
   end
   map.resources :feedback, :only => :create
 
-  map.resources :messages do |message|
-    message.resources :messages, :only => :create
-  end
+  map.resources :messages
 
   map.resources :neighborhoods,
                 :collection => { :search => :get }
@@ -21,8 +19,6 @@ ActionController::Routing::Routes.draw do |map|
     user.resources :apartments, :only => :index
     user.resources :favorites
     user.resources :flags
-    user.resources :messages,
-                   :controller => "users/messages"
     user.resource  :profile,
                    :controller => "users/profiles"
   end

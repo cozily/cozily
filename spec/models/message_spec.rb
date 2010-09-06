@@ -1,25 +1,25 @@
 require 'spec_helper'
 
 describe Message do
-  [:apartment, :sender, :receiver].each do |attr|
+  [:sender, :conversation].each do |attr|
     it { should belong_to(attr) }
   end
 
-  [:apartment, :body, :sender, :receiver].each do |attr|
+  [:body, :sender].each do |attr|
     it { should validate_presence_of(attr) }
   end
 
-  it "should validate that the sender is not the receiver" do
-    user = Factory(:user)
-    message = Factory.build(:message,
-                            :sender => user,
-                            :receiver => user)
-    message.should be_invalid
+  it "should e-mail the receiver after create" do
+    conversation = Factory.build(:conversation)
+    MessageMailer.should_receive(:deliver_receiver_notification)
+    conversation.save
   end
 
-  it "should e-mail the receiver after create" do
-    message = Factory.build(:message)
-    MessageMailer.should_receive(:deliver_receiver_notification).with(message)
-    message.save
+  describe "#recipient" do
+    it "returns the conversation user who is not the message's recipient" do
+      conversation = Factory(:conversation)
+      message = conversation.messages.first
+      message.receiver.should == conversation.receiver
+    end
   end
 end

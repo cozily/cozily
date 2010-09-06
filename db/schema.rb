@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100814185330) do
+ActiveRecord::Schema.define(:version => 20100906025229) do
 
   create_table "address_neighborhoods", :force => true do |t|
     t.integer  "address_id"
@@ -58,6 +58,14 @@ ActiveRecord::Schema.define(:version => 20100814185330) do
     t.integer  "favorites_count", :default => 0
   end
 
+  create_table "conversations", :force => true do |t|
+    t.integer  "apartment_id"
+    t.integer  "sender_id"
+    t.integer  "receiver_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "favorites", :force => true do |t|
     t.integer  "user_id"
     t.integer  "apartment_id"
@@ -91,14 +99,12 @@ ActiveRecord::Schema.define(:version => 20100814185330) do
   end
 
   create_table "messages", :force => true do |t|
-    t.integer  "apartment_id"
     t.integer  "sender_id"
-    t.integer  "receiver_id"
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.datetime "read_at"
-    t.integer  "parent_id"
+    t.integer  "conversation_id"
   end
 
   create_table "neighborhood_profiles", :force => true do |t|
