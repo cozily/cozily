@@ -56,21 +56,17 @@ body.dashboard, body.searches, body.neighborhoods.show {
             border-bottom: 3px solid black;
         }
 
-        p.profile_summary {
+        div.profile_summary {
             padding: 15px 10px 0 10px;
             margin: 0;
             text-align: right;
             font-style: italic;
-            float: left;
-            width: 80%;
-        }
 
-        p.profile_update {
-            float: left;
-            margin-left: 15px;
-            padding: 15px 10px 0 10px;
-            margin: 0;
-       }
+            span {
+                margin-left: 12px;
+                font-style: normal;
+            }
+        }
 
         p.empty {
             font-size: 18px;

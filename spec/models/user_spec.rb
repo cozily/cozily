@@ -24,11 +24,11 @@ describe User do
                       :bedrooms => 2,
                       :rent => 2100,
                       :state => "listed")
+      @user = Factory(:user)
     end
 
     context "when the user has a complete profile" do
       before do
-        @user = Factory(:user)
         @profile = Factory(:profile,
                            :user => @user,
                            :rent => 1500,
@@ -53,6 +53,70 @@ describe User do
       it "returns an empty array when neighborhood does not match" do
         @apt1.update_attribute(:address, Address.last)
         @user.matches.should == []
+      end
+    end
+
+    context "when profile is empty" do
+      before do
+        @profile = Factory(:profile,
+                           :user => @user,
+                           :rent => nil,
+                           :bedrooms => nil,
+                           :neighborhoods => [])
+      end
+
+      it "returns all listed apartments" do
+        @user.matches.should == [@apt1, @apt2]
+      end
+    end
+
+    context "when the user didn't specify rent" do
+      before do
+        before do
+          @profile = Factory(:profile,
+                             :user => @user,
+                             :rent => nil,
+                             :bedrooms => 1,
+                             :neighborhoods => [@apt1.neighborhoods.first])
+        end
+
+        it "ignores rent" do
+          @apt1.update_attribute(:rent, 1501)
+          @user.matches.should == [@apt1]
+        end
+      end
+    end
+
+    context "when the user didn't specify bedrooms" do
+      before do
+        before do
+          @profile = Factory(:profile,
+                             :user => @user,
+                             :rent => 1500,
+                             :bedrooms => nil,
+                             :neighborhoods => [@apt1.neighborhoods.first])
+        end
+
+        it "ignores bedrooms" do
+          @apt1.update_attribute(:bedrooms, 0)
+          @user.matches.should == [@apt1]
+        end
+      end
+    end
+
+    context "when the user didn't specify neighborhoods" do
+      before do
+        before do
+          @profile = Factory(:profile,
+                             :user => @user,
+                             :rent => 1500,
+                             :bedrooms => nil,
+                             :neighborhoods => [])
+        end
+
+        it "ignores neighborhood" do
+          @user.matches.should == [@apt1]
+        end
       end
     end
   end

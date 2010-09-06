@@ -32,9 +32,14 @@ class User < ActiveRecord::Base
   end
 
   def matches
-    return [] unless profile.try(:complete?)
-    apts = Apartment.rent_lte(profile.rent).bedrooms_gte(profile.bedrooms).with_state(:listed)
-    apts.select { |a| (a.neighborhoods & profile.neighborhoods).present? }
+    apts = Apartment.with_state(:listed)
+    apts = apts.rent_lte(profile.rent) if profile.try(:rent)
+    apts = apts.bedrooms_gte(profile.bedrooms) if profile.try(:bedrooms)
+    if profile.try(:neighborhoods).try(:present?)
+      apts.select { |a| (a.neighborhoods & profile.neighborhoods).present? }
+    else
+      apts
+    end
   end
 
   def role_symbols
