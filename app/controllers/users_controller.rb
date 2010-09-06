@@ -16,7 +16,7 @@ class UsersController < Clearance::UsersController
       (params[:role_ids] || []).each do |role_id|
         @user.roles << Role.find(role_id)
       end
-      redirect_to edit_user_path(@user)
+      redirect_to params[:return_to] || edit_user_path(@user)
     else
       render 'edit'
     end

@@ -343,6 +343,7 @@ function toggleRoleFields() {
                 });
             });
 
+            toggleRoleFields();
             initializeMap();
         });
     });
