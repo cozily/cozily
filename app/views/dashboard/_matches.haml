@@ -9,7 +9,7 @@
 .article
   .profile_summary
     =profile_summary(current_user.profile)
-    %span=link_to("update", edit_user_path(current_user))
+    %span=link_to("update", edit_user_profile_path(current_user))
   -if matches.present?
     =pagination_summary(params[:page], Apartment.with_state(:listed))
     =will_paginate(matches, :renderer => AjaxPaginationLinkRenderer)

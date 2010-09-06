@@ -1,4 +1,30 @@
-body.users.edit, body.users.update, body.users.new, body.users.create {
+body.users.edit, body.users.update, body.users.new, body.users.create, body.profiles.edit, body.profiles.update {
+    div.head {
+        background: url(/images/backgrounds/tab.png) repeat-x left bottom;
+
+        ul.tabs {
+            @include clearfix;
+            margin-left: 25px;
+            margin-bottom: 20px;
+
+            li {
+                float: left;
+                padding: 5px 20px 10px;
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 1.2em;
+                border-top: 4px solid white;
+            }
+
+            li.active {
+                border-top: 4px solid #A0C045;
+                border-left: 4px solid #DCDCDC;
+                border-right: 4px solid #DCDCDC;
+                background: url(/images/backgrounds/white.png) repeat-x left bottom;
+            }
+        }
+    }
+
     div[data-content-key=yield] {
         padding: 20px;
         h2 {
@@ -7,10 +33,11 @@ body.users.edit, body.users.update, body.users.new, body.users.create {
     }
 
     form.user {
-        background-color: #CCC;
+        background-color: #DDD;
         padding: 20px;
         margin-bottom: 15px;
         @include box-shadow;
+        @include border-radius;
         width: 70%;
         font-size: 1.2em;
 
@@ -50,6 +77,22 @@ body.users.edit, body.users.update, body.users.new, body.users.create {
             margin-bottom: 12px;
             font-size: 18px;
             border-bottom: 3px solid black;
+        }
+    }
+}
+
+body.users.edit, body.users.update, body.profiles.edit, body.profiles.update {
+    div[data-content-key=yield] {
+        padding: 0;
+    }
+
+    h2 {
+        padding: 20px 0 5px 20px;
+    }
+
+    div.article {
+        form.user {
+            margin-left: 20px;
         }
     }
 }

@@ -28,7 +28,7 @@ Then /^I can edit my profile$/ do
   current_path.should == edit_user_path(the.user)
 
   fill_in "Email", :with => "new@email.com"
-  click_button "Update Profile"
+  click_button "Update Account"
 
   the.user.reload.email.should == "new@email.com"
 end
@@ -48,7 +48,7 @@ Then /^I can sign in on the homepage$/ do
 end
 
 Then /^I can edit my roles$/ do
-  visit edit_user_path(the.user)
+  visit edit_user_profile_path(the.user)
 
   check "find apartments"
   uncheck "list apartments"
@@ -58,7 +58,7 @@ Then /^I can edit my roles$/ do
   page.should have_content("Matches")
   page.should_not have_content("My Listings")
 
-  visit edit_user_path(the.user)
+  visit edit_user_profile_path(the.user)
   uncheck "find apartments"
   check "list apartments"
   click_button "Update Profile"
@@ -67,7 +67,7 @@ Then /^I can edit my roles$/ do
   page.should_not have_content("Matches")
   page.should have_content("My Listings")
 
-  visit edit_user_path(the.user)
+  visit edit_user_profile_path(the.user)
   check "find apartments"
   check "list apartments"
   click_button "Update Profile"
@@ -76,7 +76,7 @@ Then /^I can edit my roles$/ do
   page.should have_content("Matches")
   page.should have_content("My Listings")
 
-  visit edit_user_path(the.user)
+  visit edit_user_profile_path(the.user)
   uncheck "find apartments"
   uncheck "list apartments"
   click_button "Update Profile"

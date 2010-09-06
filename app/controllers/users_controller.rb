@@ -2,6 +2,12 @@ class UsersController < Clearance::UsersController
   load_and_authorize_resource
 
   def edit
+    respond_to do |format|
+      format.html {}
+      format.js do
+        render :json => { :form => render_to_string(:partial => "users/edit") }
+      end
+    end
   end
 
   def update

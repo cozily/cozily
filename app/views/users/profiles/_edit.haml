@@ -1,0 +1,37 @@
+%div{:'data-content-key' => 'active-tab'}
+  .head
+    %ul.tabs
+      %li
+        =link_to "Account", edit_user_path(current_user), :'data-remote' => 'true', :'data-method' => 'get'
+      %li.active
+        =link_to "Profile", edit_user_profile_path(current_user), :'data-remote' => 'true', :'data-method' => 'get'
+
+  .article
+    -semantic_form_for current_user do |f|
+      =f.error_messages
+      - f.inputs do
+        I am here to:
+        %li.boolean.optional
+          %label{ :for => "role_ids_0" }
+            =check_box_tag "role_ids[]", Role.find_by_name("finder").id, f.object.role_symbols.include?(:finder), :id => "role_ids_0"
+            find apartments
+
+        %li.boolean.optional
+          %label{ :for => "role_ids_1" }
+            =check_box_tag "role_ids[]", Role.find_by_name("lister").id, f.object.role_symbols.include?(:lister), :id => "role_ids_1"
+            list apartments
+
+        %fieldset.finder
+          %legend Tell us about your needs.
+          - f.semantic_fields_for :profile do |profile_fields|
+            - profile_fields.inputs do
+              = profile_fields.input :bedrooms, :label => "Minimum bedrooms", :as => :select, :collection => (0..8)
+              = profile_fields.input :rent, :label => "Maximum rent"
+              = profile_fields.input :neighborhoods
+
+        %fieldset.lister
+          %legend We want to include a phone number with your listings.
+          = f.input :phone
+
+      - f.buttons do
+        = f.commit_button "Update Profile"

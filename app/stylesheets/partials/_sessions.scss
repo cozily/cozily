@@ -7,10 +7,11 @@ body.sessions, body.passwords {
     }
 
     form.session, form.password, form.user {
-        background-color: #CCC;
+        background-color: #DDD;
         padding: 20px;
         margin-bottom: 15px;
         @include box-shadow;
+        @include border-radius;
         width: 60%;
 
         label {
