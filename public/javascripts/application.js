@@ -56,9 +56,11 @@ function liveNeighborhoodAutocomplete() {
         minLength: 1,
         select: function(event, ui) {
             var form = $(event.target).closest("form");
-            var remove = "<a href='#' data-remove = 'li'>X</a>&nbsp;"
-            var input = "<input type='hidden' name='user[profile_attributes][neighborhood_ids][]' value='" + ui.item.id + "' />";
-            $("ul#selected_neighborhoods").append("<li>" + remove + ui.item.label + input + "</li>");
+            if ($("input[name='user[profile_attributes][neighborhood_ids][]'][value='" + ui.item.id + "']").length == 0) {
+                var remove = "<a href='#' data-remove = 'li'>X</a>&nbsp;"
+                var input = "<input type='hidden' name='user[profile_attributes][neighborhood_ids][]' value='" + ui.item.id + "' />";
+                $("ul#selected_neighborhoods").append("<li>" + remove + ui.item.label + input + "</li>");
+            }
             $("input#neighborhood_autocomplete").val('');
             return false;
         }
@@ -312,7 +314,7 @@ function liveNeighborhoodAutocomplete() {
                     }
                 });
             } else {
-                if(type == 'delete') {
+                if (type == 'delete') {
                     link.closest('.removeable').remove();
                 }
 
