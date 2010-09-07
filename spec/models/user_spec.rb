@@ -120,17 +120,4 @@ describe User do
       end
     end
   end
-
-  describe "#unread_message_count" do
-    it "should return the number of unread messages for the user" do
-      user = Factory(:user)
-      Factory(:message,
-              :receiver => user,
-              :read_at => Date.yesterday)
-      Factory(:message,
-              :receiver => user)
-
-      user.unread_message_count.should == 1
-    end
-  end
 end

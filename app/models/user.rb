@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   is_gravtastic!
   include Clearance::User
 
-  has_one  :profile, :dependent => :destroy
+  has_one :profile, :dependent => :destroy
   has_many :apartments, :dependent => :destroy
   has_many :favorites, :dependent => :destroy
   has_many :flags, :dependent => :destroy
@@ -43,10 +43,6 @@ class User < ActiveRecord::Base
   end
 
   def role_symbols
-     (roles || []).map {|r| r.name.to_sym}
-   end
-
-  def unread_message_count
-    received_messages.unread.count
+    (roles || []).map {|r| r.name.to_sym}
   end
 end
