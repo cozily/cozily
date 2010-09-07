@@ -7,9 +7,6 @@
   =render "dashboard/tabs", :active => :matches
 
 .article
-  .profile_summary
-    =profile_summary(current_user.profile)
-    %span=link_to("update", edit_user_profile_path(current_user))
   -if matches.present?
     .pagination
       %ul
