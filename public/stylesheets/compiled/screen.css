@@ -1268,7 +1268,7 @@ body.dashboard div.conversations div.conversation ul.conversation > li.name {
 /* line 50, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.conversations div.conversation ul.conversation > li.photo {
   float: right;
-  padding: 12px;
+  padding: 11px 11px 0 11px;
 }
 /* line 55, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.conversations div.conversation ul.conversation > li.delete {
