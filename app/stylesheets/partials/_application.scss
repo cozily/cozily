@@ -154,3 +154,28 @@ div#flash, div#loading {
     font-style: italic;
   }
 }
+
+div#body {
+  div.container {
+    div.internal_error {
+      margin: 50px 20px 0 20px;
+    }
+
+    div#four_oh_four {
+      background: url(/images/characters/lady.png) no-repeat;
+      height: 400px;
+      h1, h2 {
+        padding-left: 200px;
+      }
+    }
+
+    div#five_hundred {
+      background: url(/images/characters/man.png) no-repeat;
+      background-position: right top;
+      height: 400px;
+      h1, h2 {
+        padding-right: 200px;
+      }
+    }
+  }
+}

@@ -487,6 +487,30 @@ div#flash span, div#loading span {
   font-style: italic;
 }
 
+/* line 160, ../../../app/stylesheets/partials/_application.scss */
+div#body div.container div.internal_error {
+  margin: 50px 20px 0 20px;
+}
+/* line 164, ../../../app/stylesheets/partials/_application.scss */
+div#body div.container div#four_oh_four {
+  background: url(/images/characters/lady.png) no-repeat;
+  height: 400px;
+}
+/* line 167, ../../../app/stylesheets/partials/_application.scss */
+div#body div.container div#four_oh_four h1, div#body div.container div#four_oh_four h2 {
+  padding-left: 200px;
+}
+/* line 172, ../../../app/stylesheets/partials/_application.scss */
+div#body div.container div#five_hundred {
+  background: url(/images/characters/man.png) no-repeat;
+  background-position: right top;
+  height: 400px;
+}
+/* line 176, ../../../app/stylesheets/partials/_application.scss */
+div#body div.container div#five_hundred h1, div#body div.container div#five_hundred h2 {
+  padding-right: 200px;
+}
+
 /* line 2, ../../../app/stylesheets/partials/_search.scss */
 div#search div.container {
   overflow: visible;
