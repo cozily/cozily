@@ -24,6 +24,5 @@ class Conversation < ActiveRecord::Base
 
   def create_message
     messages << Message.create(:sender => sender, :body => body)
-    messages.inspect
   end
 end
