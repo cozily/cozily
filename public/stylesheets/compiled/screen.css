@@ -1134,130 +1134,130 @@ body.dashboard div.article div.apartment > ul li.contact ul li.favorite a.remove
   background: url(/images/icons/remove_small.png) no-repeat 0 3px;
 }
 /* line 271, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.aside, body.searches div.aside, body.neighborhoods.show div.aside {
-  width: 310px;
-  float: right;
-}
-/* line 275, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.aside h3, body.searches div.aside h3, body.neighborhoods.show div.aside h3 {
-  font-size: 2em;
-  padding-bottom: 8px;
-  margin-bottom: 0;
-}
-/* line 281, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.aside div#map_canvas, body.searches div.aside div#map_canvas, body.neighborhoods.show div.aside div#map_canvas {
-  width: 306px;
-  height: 306px;
-  margin-top: 4px;
-}
-/* line 287, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.aside div#activity_feed, body.searches div.aside div#activity_feed, body.neighborhoods.show div.aside div#activity_feed {
-  margin-top: 15px;
-}
-/* line 290, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.aside div#activity_feed h3, body.searches div.aside div#activity_feed h3, body.neighborhoods.show div.aside div#activity_feed h3 {
-  border-right: 4px solid #429E87;
-}
-/* line 294, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.aside div#activity_feed ul, body.searches div.aside div#activity_feed ul, body.neighborhoods.show div.aside div#activity_feed ul {
-  margin-top: 5px;
-  padding-right: 22px;
-}
-/* line 298, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.aside div#activity_feed ul li, body.searches div.aside div#activity_feed ul li, body.neighborhoods.show div.aside div#activity_feed ul li {
-  background-repeat: no-repeat;
-  background-position: 0 2px;
-  padding-left: 25px;
-  margin-bottom: 12px;
-}
-/* line 304, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.aside div#activity_feed ul li span.text, body.searches div.aside div#activity_feed ul li span.text, body.neighborhoods.show div.aside div#activity_feed ul li span.text {
-  font-weight: 500;
-}
-/* line 308, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.aside div#activity_feed ul li span.date, body.searches div.aside div#activity_feed ul li span.date, body.neighborhoods.show div.aside div#activity_feed ul li span.date {
-  display: block;
-  color: #888;
-}
-/* line 314, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.aside div#activity_feed ul li.favorite.created, body.searches div.aside div#activity_feed ul li.favorite.created, body.neighborhoods.show div.aside div#activity_feed ul li.favorite.created {
-  background: url(/images/icons/add.png) no-repeat 0 2px;
-}
-/* line 318, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.aside div#activity_feed ul li.favorite.destroyed, body.searches div.aside div#activity_feed ul li.favorite.destroyed, body.neighborhoods.show div.aside div#activity_feed ul li.favorite.destroyed {
-  background: url(/images/icons/remove.png) no-repeat 0 2px;
-}
-/* line 322, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.aside div#activity_feed ul li.message.created, body.searches div.aside div#activity_feed ul li.message.created, body.neighborhoods.show div.aside div#activity_feed ul li.message.created {
-  background: url(/images/icons/message.png) no-repeat 0 2px;
-}
-
-/* line 2, ../../../app/stylesheets/partials/_messages.scss */
-body.dashboard div.pagination {
+body.dashboard div.pagination, body.searches div.pagination, body.neighborhoods.show div.pagination {
   overflow: hidden;
   *zoom: 1;
   font-size: 1.2em;
   height: 36px;
   width: 100%;
 }
-/* line 7, ../../../app/stylesheets/partials/_messages.scss */
-body.dashboard div.pagination > ul {
+/* line 276, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.pagination > ul, body.searches div.pagination > ul, body.neighborhoods.show div.pagination > ul {
   padding: 9px 18px;
 }
-/* line 9, ../../../app/stylesheets/partials/_messages.scss */
-body.dashboard div.pagination > ul > li.counts {
+/* line 278, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.pagination > ul > li.counts, body.searches div.pagination > ul > li.counts, body.neighborhoods.show div.pagination > ul > li.counts {
   float: left;
 }
-/* line 12, ../../../app/stylesheets/partials/_messages.scss */
-body.dashboard div.pagination > ul > li.navigation {
+/* line 281, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.pagination > ul > li.navigation, body.searches div.pagination > ul > li.navigation, body.neighborhoods.show div.pagination > ul > li.navigation {
   float: right;
 }
-/* line 15, ../../../app/stylesheets/partials/_messages.scss */
-body.dashboard div.pagination > ul > li.navigation > ul.pagination > li {
+/* line 284, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.pagination > ul > li.navigation > ul.pagination > li, body.searches div.pagination > ul > li.navigation > ul.pagination > li, body.neighborhoods.show div.pagination > ul > li.navigation > ul.pagination > li {
   float: left;
   padding: 0 0 0 5px;
 }
-/* line 24, ../../../app/stylesheets/partials/_messages.scss */
+/* line 293, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.aside, body.searches div.aside, body.neighborhoods.show div.aside {
+  width: 310px;
+  float: right;
+}
+/* line 297, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.aside h3, body.searches div.aside h3, body.neighborhoods.show div.aside h3 {
+  font-size: 2em;
+  padding-bottom: 8px;
+  margin-bottom: 0;
+}
+/* line 303, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.aside div#map_canvas, body.searches div.aside div#map_canvas, body.neighborhoods.show div.aside div#map_canvas {
+  width: 306px;
+  height: 306px;
+  margin-top: 4px;
+}
+/* line 309, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.aside div#activity_feed, body.searches div.aside div#activity_feed, body.neighborhoods.show div.aside div#activity_feed {
+  margin-top: 15px;
+}
+/* line 312, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.aside div#activity_feed h3, body.searches div.aside div#activity_feed h3, body.neighborhoods.show div.aside div#activity_feed h3 {
+  border-right: 4px solid #429E87;
+}
+/* line 316, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.aside div#activity_feed ul, body.searches div.aside div#activity_feed ul, body.neighborhoods.show div.aside div#activity_feed ul {
+  margin-top: 5px;
+  padding-right: 22px;
+}
+/* line 320, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.aside div#activity_feed ul li, body.searches div.aside div#activity_feed ul li, body.neighborhoods.show div.aside div#activity_feed ul li {
+  background-repeat: no-repeat;
+  background-position: 0 2px;
+  padding-left: 25px;
+  margin-bottom: 12px;
+}
+/* line 326, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.aside div#activity_feed ul li span.text, body.searches div.aside div#activity_feed ul li span.text, body.neighborhoods.show div.aside div#activity_feed ul li span.text {
+  font-weight: 500;
+}
+/* line 330, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.aside div#activity_feed ul li span.date, body.searches div.aside div#activity_feed ul li span.date, body.neighborhoods.show div.aside div#activity_feed ul li span.date {
+  display: block;
+  color: #888;
+}
+/* line 336, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.aside div#activity_feed ul li.favorite.created, body.searches div.aside div#activity_feed ul li.favorite.created, body.neighborhoods.show div.aside div#activity_feed ul li.favorite.created {
+  background: url(/images/icons/add.png) no-repeat 0 2px;
+}
+/* line 340, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.aside div#activity_feed ul li.favorite.destroyed, body.searches div.aside div#activity_feed ul li.favorite.destroyed, body.neighborhoods.show div.aside div#activity_feed ul li.favorite.destroyed {
+  background: url(/images/icons/remove.png) no-repeat 0 2px;
+}
+/* line 344, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.aside div#activity_feed ul li.message.created, body.searches div.aside div#activity_feed ul li.message.created, body.neighborhoods.show div.aside div#activity_feed ul li.message.created {
+  background: url(/images/icons/message.png) no-repeat 0 2px;
+}
+
+/* line 2, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.conversations {
   margin: 0 10px;
   width: 930px;
   border: 1px solid #ececec;
 }
-/* line 29, ../../../app/stylesheets/partials/_messages.scss */
+/* line 7, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.conversations span.bold {
   font-weight: bold;
 }
-/* line 33, ../../../app/stylesheets/partials/_messages.scss */
+/* line 11, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.conversations span.light {
   color: #dadada;
 }
-/* line 37, ../../../app/stylesheets/partials/_messages.scss */
+/* line 15, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.conversations div.conversation {
   height: 55px;
   background: url(/images/backgrounds/message_thread.png) repeat-x;
 }
-/* line 42, ../../../app/stylesheets/partials/_messages.scss */
+/* line 20, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.conversations div.conversation ul.conversation > li {
   float: left;
 }
-/* line 46, ../../../app/stylesheets/partials/_messages.scss */
+/* line 24, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.conversations div.conversation ul.conversation > li.status {
   height: 100%;
   width: 55px;
 }
-/* line 51, ../../../app/stylesheets/partials/_messages.scss */
+/* line 29, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.conversations div.conversation ul.conversation > li.new {
   background: url(/images/backgrounds/new_message.png) no-repeat left center;
 }
-/* line 55, ../../../app/stylesheets/partials/_messages.scss */
+/* line 33, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.conversations div.conversation ul.conversation > li.info {
   padding-top: 0.5em;
 }
-/* line 58, ../../../app/stylesheets/partials/_messages.scss */
+/* line 36, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.conversations div.conversation ul.conversation > li.info > ul li.sender {
   font-size: 1.5em;
 }
-/* line 64, ../../../app/stylesheets/partials/_messages.scss */
+/* line 42, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.conversations div.conversation ul.conversation > li.name {
   float: right;
   font-size: 1.2em;
@@ -1265,50 +1265,50 @@ body.dashboard div.conversations div.conversation ul.conversation > li.name {
   color: #aaa;
   text-align: right;
 }
-/* line 72, ../../../app/stylesheets/partials/_messages.scss */
+/* line 50, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.conversations div.conversation ul.conversation > li.photo {
   float: right;
   padding: 12px;
 }
-/* line 77, ../../../app/stylesheets/partials/_messages.scss */
+/* line 55, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.conversations div.conversation ul.conversation > li.delete {
   float: right;
   padding: 20px 15px 16px 17px;
   background: url(/images/backgrounds/sideways_gradient_right.png) repeat-y left;
 }
-/* line 86, ../../../app/stylesheets/partials/_messages.scss */
+/* line 64, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.conversations div.conversation:hover {
   background: url(/images/backgrounds/message_thread_hover.png) repeat-x;
 }
-/* line 91, ../../../app/stylesheets/partials/_messages.scss */
+/* line 69, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.conversations div.messages ul {
   padding: 10px;
 }
-/* line 93, ../../../app/stylesheets/partials/_messages.scss */
+/* line 71, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.conversations div.messages ul > li {
   padding: 10px;
   border-bottom: 1px solid #ececec;
 }
-/* line 96, ../../../app/stylesheets/partials/_messages.scss */
+/* line 74, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.conversations div.messages ul > li p {
   line-height: 2em;
   margin: 0;
 }
-/* line 101, ../../../app/stylesheets/partials/_messages.scss */
+/* line 79, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.conversations div.messages ul > li.reply {
   padding-right: 0px;
   border-bottom: 0;
 }
-/* line 104, ../../../app/stylesheets/partials/_messages.scss */
+/* line 82, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.conversations div.messages ul > li.reply a {
   font-weight: bold;
   float: right;
 }
-/* line 110, ../../../app/stylesheets/partials/_messages.scss */
+/* line 88, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.conversations div.messages ul > li.reply form fieldset.inputs {
   width: 560px;
 }
-/* line 113, ../../../app/stylesheets/partials/_messages.scss */
+/* line 91, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.conversations div.messages ul > li.reply form fieldset.inputs li textarea {
   height: 80px;
   width: 100%;
@@ -1316,15 +1316,15 @@ body.dashboard div.conversations div.messages ul > li.reply form fieldset.inputs
   padding: 0.5em;
   color: #aaa;
 }
-/* line 123, ../../../app/stylesheets/partials/_messages.scss */
+/* line 101, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.conversations div.messages ul > li.reply form fieldset.buttons {
   padding-left: 10px;
 }
-/* line 125, ../../../app/stylesheets/partials/_messages.scss */
+/* line 103, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.conversations div.messages ul > li.reply form fieldset.buttons li.commit {
   float: left;
 }
-/* line 127, ../../../app/stylesheets/partials/_messages.scss */
+/* line 105, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.conversations div.messages ul > li.reply form fieldset.buttons li.commit input {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;

@@ -1,26 +1,4 @@
 body.dashboard {
-    div.pagination {
-        @include clearfix;
-        font-size: 1.2em;
-        height: 36px;
-        width: 100%;
-        > ul {
-            padding: 9px 18px;
-            > li.counts {
-                float: left;
-            }
-            > li.navigation {
-                float: right;
-                > ul.pagination {
-                    > li {
-                        float: left;
-                        padding: 0 0 0 5px;
-                    }
-                }
-            }
-        }
-    }
-
     div.conversations {
         margin: 0 10px;
         width: 930px;
