@@ -1,6 +1,7 @@
 source :gemcutter
 
 gem "aws-s3", "0.6.2"
+gem "bundler", "1.0.0"
 gem "cancan", "1.1.1"
 gem "clearance", "0.8.8"
 gem "compass", "0.10.5"

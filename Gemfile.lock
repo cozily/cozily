@@ -147,6 +147,7 @@ PLATFORMS
 
 DEPENDENCIES
   aws-s3 (= 0.6.2)
+  bundler (= 1.0.0)
   cancan (= 1.1.1)
   capybara (= 0.3.9)
   clearance (= 0.8.8)

@@ -14,6 +14,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :neighborhoods,
                 :collection => { :search => :get }
 
+  map.resources :neighborhood_profiles, :only => [:destroy]
+
   map.resource  :search
   map.resources :users, :controller => 'users', :only => [:edit, :update] do |user|
     user.resources :apartments, :only => :index

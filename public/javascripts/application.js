@@ -50,6 +50,21 @@ function toggleRoleFields() {
     }
 }
 
+function liveNeighborhoodAutocomplete() {
+    $("input#neighborhood_autocomplete").autocomplete({
+        source: neighborhoods,
+        minLength: 1,
+        select: function(event, ui) {
+            var form = $(event.target).closest("form");
+            var remove = "<a href='#' data-remove = 'li'>X</a>&nbsp;"
+            var input = "<input type='hidden' name='user[profile_attributes][neighborhood_ids][]' value='" + ui.item.id + "' />";
+            $("ul#selected_neighborhoods").append("<li>" + remove + ui.item.label + input + "</li>");
+            $("input#neighborhood_autocomplete").val('');
+            return false;
+        }
+    });
+}
+
 (function($) {
     $(function() {
         $("input[data-date=true]").datepicker();
@@ -86,6 +101,8 @@ function toggleRoleFields() {
             }
         });
 
+        liveNeighborhoodAutocomplete();
+
         $("[data-click-path]").live("click", function(event) {
             var element = $(event.currentTarget);
             document.location = element.attr('data-click-path');
@@ -110,6 +127,12 @@ function toggleRoleFields() {
             var element = $(event.currentTarget);
             $("img.active").attr('src', element.attr('data-large-image-path'));
             element.closest("li").addClass("active");
+        });
+
+        $("[data-remove]").live("click", function(event) {
+            var element = $(event.currentTarget);
+            element.closest(element.attr('data-remove')).remove();
+            return false;
         });
 
         $("ul.buttons li.save a").live("click", function() {
@@ -289,6 +312,10 @@ function toggleRoleFields() {
                     }
                 });
             } else {
+                if(type == 'delete') {
+                    link.closest('.removeable').remove();
+                }
+
                 ajaxRequests++;
                 showLoading();
                 $.ajax({
@@ -310,7 +337,7 @@ function toggleRoleFields() {
         }
 
         $(document).bind("content-received", function(event, data) {
-            if (data.flash) {
+            if (data && data.flash) {
                 var flash = data.flash;
                 if (flash && flash != "") {
                     $("div#flash span").html(flash);
@@ -344,6 +371,7 @@ function toggleRoleFields() {
             });
 
             toggleRoleFields();
+            liveNeighborhoodAutocomplete();
             initializeMap();
         });
     });

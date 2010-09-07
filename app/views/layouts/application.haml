@@ -82,6 +82,7 @@
       window._token = '#{form_authenticity_token}';
       var ip_lat = '#{ip_lat}';
       var ip_lng = '#{ip_lng}';
+      var neighborhoods = #{Neighborhood.to_autocomplete.to_json};
 
     :javascript
       var _gaq = _gaq || [];

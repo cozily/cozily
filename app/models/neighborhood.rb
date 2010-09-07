@@ -32,6 +32,10 @@ class Neighborhood < ActiveRecord::Base
       neighborhoods
     end
 
+    def to_autocomplete
+      all.map { |n| { :label => n.name, :id => n.id } }
+    end
+
     def to_dropdown
       Neighborhood.ascend_by_name.map {|n| [n.name, n.id]}
     end

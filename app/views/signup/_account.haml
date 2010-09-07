@@ -5,7 +5,7 @@
       %h2 Just tell us a little more to do.
 
       -semantic_form_for @user, :url => { :controller => "signup", :action => "create" } do |f|
-        =render "users/inputs", :form => f
+        =render "users/inputs", :f => f
 
         -f.buttons do
           =f.commit_button "Sign Up & Start Browsing"

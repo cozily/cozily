@@ -1551,16 +1551,29 @@ body.users.edit form.user legend, body.users.update form.user legend, body.users
   font-size: 18px;
   border-bottom: 3px solid black;
 }
-
+/* line 82, ../../../app/stylesheets/partials/_profile.scss */
+body.users.edit form.user ul#selected_neighborhoods, body.users.update form.user ul#selected_neighborhoods, body.users.new form.user ul#selected_neighborhoods, body.users.create form.user ul#selected_neighborhoods, body.profiles.edit form.user ul#selected_neighborhoods, body.profiles.update form.user ul#selected_neighborhoods {
+  padding-left: 25%;
+}
 /* line 85, ../../../app/stylesheets/partials/_profile.scss */
+body.users.edit form.user ul#selected_neighborhoods li, body.users.update form.user ul#selected_neighborhoods li, body.users.new form.user ul#selected_neighborhoods li, body.users.create form.user ul#selected_neighborhoods li, body.profiles.edit form.user ul#selected_neighborhoods li, body.profiles.update form.user ul#selected_neighborhoods li {
+  margin: 10px 0 5px 0;
+}
+/* line 86, ../../../app/stylesheets/partials/_profile.scss */
+body.users.edit form.user ul#selected_neighborhoods li a, body.users.update form.user ul#selected_neighborhoods li a, body.users.new form.user ul#selected_neighborhoods li a, body.users.create form.user ul#selected_neighborhoods li a, body.profiles.edit form.user ul#selected_neighborhoods li a, body.profiles.update form.user ul#selected_neighborhoods li a {
+  margin-right: 5px;
+  color: red;
+}
+
+/* line 98, ../../../app/stylesheets/partials/_profile.scss */
 body.users.edit div[data-content-key=yield], body.users.update div[data-content-key=yield], body.profiles.edit div[data-content-key=yield], body.profiles.update div[data-content-key=yield] {
   padding: 0;
 }
-/* line 89, ../../../app/stylesheets/partials/_profile.scss */
+/* line 102, ../../../app/stylesheets/partials/_profile.scss */
 body.users.edit h2, body.users.update h2, body.profiles.edit h2, body.profiles.update h2 {
   padding: 20px 0 5px 20px;
 }
-/* line 94, ../../../app/stylesheets/partials/_profile.scss */
+/* line 107, ../../../app/stylesheets/partials/_profile.scss */
 body.users.edit div.article form.user, body.users.update div.article form.user, body.profiles.edit div.article form.user, body.profiles.update div.article form.user {
   margin-left: 20px;
 }
