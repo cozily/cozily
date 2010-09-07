@@ -10,10 +10,10 @@
   -if matches.present?
     .pagination
       %ul
-        %li= pagination_summary(params[:page], Apartment.with_state(:listed))
+        %li= pagination_summary(params[:page], current_user.matches)
         %li= will_paginate(matches, :renderer => AjaxPaginationLinkRenderer)
     -matches.each do |apartment|
-      =render "dashboard/apartment", :apartment => apartment, :position => position_in_collection(apartment, Apartment.with_state(:listed))
+      =render "dashboard/apartment", :apartment => apartment, :position => position_in_collection(apartment, current_user.matches)
 
   -else
     %p.empty
