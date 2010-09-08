@@ -8,4 +8,4 @@
     %li{:class => "#{'active' if active == :favorites}"}
       =link_to "Favorites", dashboard_favorites_path, :'data-remote' => true
   %li{:class => "#{'active' if active == :messages}"}
-    =link_to "Inbox", dashboard_messages_path, :'data-remote' => true
+    =link_to "Inbox (#{current_user.unread_message_count})", dashboard_messages_path, :'data-remote' => true

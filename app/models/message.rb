@@ -6,6 +6,8 @@ class Message < ActiveRecord::Base
   validates_presence_of :sender, :body, :conversation
 
   named_scope :unread, :conditions => { :read_at => nil }
+  named_scope :sent_by, lambda { |user| { :conditions => ["sender_id = ?", user.id] } }
+  named_scope :not_sent_by, lambda { |user| { :conditions => ["sender_id != ?", user.id] } }
 
   after_create :notify_receiver
 

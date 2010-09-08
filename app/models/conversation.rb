@@ -17,6 +17,14 @@ class Conversation < ActiveRecord::Base
     (sender == user ? receiver : sender)
   end
 
+  def unread_message_count_for(user)
+    messages.select { |m| m.sender != user && m.read_at.nil? }.size
+  end
+
+  def mark_messages_as_read_by(user)
+    messages.each { |m| m.update_attribute(:read_at, Time.now) if user != m.sender }
+  end
+
   private
   def ensure_sender_is_not_receiver
     errors.add_to_base("You can't message yourself") if sender == receiver

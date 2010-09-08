@@ -8,13 +8,11 @@ class User < ActiveRecord::Base
   has_many :flags, :dependent => :destroy
   has_many :favorite_apartments, :through => :favorites, :source => :apartment
   has_many :flagged_apartments, :through => :flags, :source => :apartment
-  has_many :messages, :finder_sql => 'select * from messages where sender_id = #{id} or receiver_id = #{id}'
-  has_many :received_messages, :class_name => "Message", :foreign_key => "receiver_id"
   has_many :roles, :through => :user_roles
-  has_many :sent_messages, :class_name => "Message", :foreign_key => "sender_id"
   has_many :timeline_events, :foreign_key => "actor_id", :dependent => :destroy
   has_many :user_roles, :dependent => :destroy
-
+  has_many :conversations, :finder_sql => 'select * from conversations where sender_id = #{id} or receiver_id = #{id}'
+  has_many :messages, :through => :conversations
   validates_presence_of :first_name, :last_name
   validates_presence_of :phone, :if => Proc.new { |user| user.apartments.with_state(:listed).present? }
   validates_length_of :phone, :is => 10, :allow_nil => true, :allow_blank => true
@@ -54,5 +52,19 @@ class User < ActiveRecord::Base
   private
   def format_phone
     self.phone = phone.gsub(/[^0-9]/, "") if phone.present?
+  end
+
+  def received_messages
+    conversations.map(&:messages).flatten.select { |m| m.sender_id != id }
+#    messages.not_sent_by(self)
+  end
+
+  def sent_messages
+    conversations.map(&:messages).flatten.select { |m| m.sender_id == id }
+#    messages.sent_by(self)
+  end
+
+  def unread_message_count
+    received_messages.select { |m| m.read_at.nil? }.size
   end
 end
