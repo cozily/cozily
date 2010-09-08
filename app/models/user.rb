@@ -49,9 +49,8 @@ class User < ActiveRecord::Base
     (roles || []).map {|r| r.name.to_sym}
   end
 
-  private
-  def format_phone
-    self.phone = phone.gsub(/[^0-9]/, "") if phone.present?
+  def unread_message_count
+    received_messages.select { |m| m.read_at.nil? }.size
   end
 
   def received_messages
@@ -64,7 +63,8 @@ class User < ActiveRecord::Base
 #    messages.sent_by(self)
   end
 
-  def unread_message_count
-    received_messages.select { |m| m.read_at.nil? }.size
+  private
+  def format_phone
+    self.phone = phone.gsub(/[^0-9]/, "") if phone.present?
   end
 end
