@@ -1,6 +1,7 @@
 class Users::ProfilesController < ApplicationController
   def edit
-    current_user.profile ||= Profile.new
+    @user = User.find(params[:user_id])
+    @user.profile ||= Profile.new
     respond_to do |format|
       format.html {}
       format.js do

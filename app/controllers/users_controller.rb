@@ -18,7 +18,7 @@ class UsersController < Clearance::UsersController
       end
       redirect_to params[:return_to] || edit_user_path(@user)
     else
-      render 'edit'
+      render params[:return_to].present? ? 'users/profiles/edit' : 'edit'
     end
   end
 end

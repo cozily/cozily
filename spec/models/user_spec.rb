@@ -14,6 +14,15 @@ describe User do
   it { should validate_presence_of(:first_name) }
   it { should validate_presence_of(:last_name) }
 
+  describe "validations" do
+    it "be invalid if phone number is nil and there are listed apartments" do
+      @user = Factory(:user, :phone => nil)
+      Factory(:apartment, :user => @user, :state => "listed")
+      @user.should be_invalid
+      @user.should have(1).error_on(:phone)
+    end
+  end
+
   describe "#matches" do
     before do
       @apt1 = Factory(:apartment,

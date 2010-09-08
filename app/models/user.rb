@@ -16,6 +16,7 @@ class User < ActiveRecord::Base
   has_many :user_roles, :dependent => :destroy
 
   validates_presence_of :first_name, :last_name
+  validates_presence_of :phone, :if => Proc.new { |user| user.apartments.with_state(:listed).present? }
 
   accepts_nested_attributes_for :profile
 

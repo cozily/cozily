@@ -7,7 +7,7 @@
         =link_to "Profile", edit_user_profile_path(current_user), :'data-remote' => 'true', :'data-method' => 'get'
 
   .article
-    -semantic_form_for current_user do |f|
+    -semantic_form_for @user do |f|
       =hidden_field_tag "return_to", edit_user_profile_path(current_user)
       =f.error_messages
       =render "users/profiles/inputs", :f => f
