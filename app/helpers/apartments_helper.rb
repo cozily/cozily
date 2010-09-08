@@ -5,6 +5,14 @@ module ApartmentsHelper
     link_to text, path
   end
 
+  def name_for_apartment(apartment)
+    apartment.name.present? ? apartment.name : "Apartment ##{apartment.id}"
+  end
+
+  def path_for_apartment(apartment)
+    apartment.listed? ? apartment_path(apartment) : edit_apartment_path(apartment)
+  end
+
   def trains_for(station)
     return if station.trains.nil?
     "".tap do |trains|
