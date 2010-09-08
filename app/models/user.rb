@@ -17,6 +17,10 @@ class User < ActiveRecord::Base
 
   validates_presence_of :first_name, :last_name
   validates_presence_of :phone, :if => Proc.new { |user| user.apartments.with_state(:listed).present? }
+  validates_length_of :phone, :is => 10, :allow_nil => true, :allow_blank => true
+
+  before_validation_on_create :format_phone
+  before_validation_on_update :format_phone
 
   accepts_nested_attributes_for :profile
 
@@ -45,5 +49,10 @@ class User < ActiveRecord::Base
 
   def role_symbols
     (roles || []).map {|r| r.name.to_sym}
+  end
+
+  private
+  def format_phone
+    self.phone = phone.gsub(/[^0-9]/, "") if phone.present?
   end
 end

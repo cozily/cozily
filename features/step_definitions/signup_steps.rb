@@ -24,7 +24,7 @@ end
 Then /^I can sign up as an apartment lister$/ do
   page.find("a img.list").click
   fill_in 'Email', :with => Faker::Internet.email
-  fill_in 'Phone', :with => Faker::PhoneNumber.phone_number
+  fill_in 'Phone', :with => "800-555-1212"
 
   click_button 'Next'
 

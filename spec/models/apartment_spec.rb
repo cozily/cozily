@@ -112,7 +112,7 @@ describe Apartment do
   describe "#listable?" do
     before do
       @user = Factory(:user,
-                      :phone => Faker::PhoneNumber.phone_number)
+                      :phone => "800-555-1212")
       @apartment = Factory(:apartment,
                            :address => Factory.build(:address),
                            :user => @user,

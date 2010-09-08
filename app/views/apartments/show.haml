@@ -53,8 +53,7 @@
         %h3 Contact
         %span.name=@apartment.user.full_name
         %span.email=@apartment.user.email
-        -if false
-          %span.phone=@apartment.user.phone
+        %span.phone=number_to_phone(@apartment.user.phone, :area_code => true)
 
         -if can? :manage, Message
           =render "messages/thread", :conversations => @apartment.conversations.for_user(current_user)

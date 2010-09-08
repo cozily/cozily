@@ -106,7 +106,7 @@ Given /^all the features are present$/ do
 end
 
 Given /^I have an? ?(listed|unlisted)? apartment$/ do |state|
-  the.user.update_attribute(:phone, Faker::PhoneNumber.phone_number)
+  the.user.update_attribute(:phone, "800-555-1212")
   the.apartment = Factory(:apartment,
                           :user => the.user,
                           :images_count => 1,
