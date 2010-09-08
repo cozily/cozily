@@ -1,5 +1,3 @@
-var ajaxRequests = 0;
-
 function updateContent(content) {
     var $contentKeyElements = $(content).filter('[data-content-key]');
     $contentKeyElements.each(function() {
@@ -241,8 +239,6 @@ function liveNeighborhoodAutocomplete() {
         $("div.apartment ul li.status form input").live("change", function(event) {
             var element = $(event.target);
             var form = element.closest('form');
-            ajaxRequests++;
-            showLoading();
 
             $.ajax({
                 type     : 'put',
@@ -250,7 +246,6 @@ function liveNeighborhoodAutocomplete() {
                 dataType : 'json',
                 url      : form.attr('action'),
                 success  : function success(response) {
-                    ajaxRequests--;
                     $(document).trigger('content-received', response);
                 }
             });
@@ -289,14 +284,11 @@ function liveNeighborhoodAutocomplete() {
                     title: "Delete this item?",
                     buttons: {
                         'Yes': function() {
-                            ajaxRequests++;
-                            showLoading();
                             $.ajax({
                                 type      : type,
                                 url       : link.attr('href'),
                                 dataType  : 'json',
                                 success   : function success(response) {
-                                    ajaxRequests--;
                                     $(document).trigger('content-received', response);
                                 }
                             });
@@ -318,14 +310,11 @@ function liveNeighborhoodAutocomplete() {
                     link.closest('.removeable').remove();
                 }
 
-                ajaxRequests++;
-                showLoading();
                 $.ajax({
                     type      : type,
                     url       : link.attr('href'),
                     dataType  : 'json',
                     success   : function success(response) {
-                        ajaxRequests--;
                         $(document).trigger('content-received', response);
                     }
                 });
@@ -345,10 +334,6 @@ function liveNeighborhoodAutocomplete() {
                     $("div#flash span").html(flash);
                     showAndFadeFlash();
                 }
-            }
-
-            if (ajaxRequests == 0) {
-                hideLoading();
             }
         });
 
@@ -375,6 +360,14 @@ function liveNeighborhoodAutocomplete() {
             toggleRoleFields();
             liveNeighborhoodAutocomplete();
             initializeMap();
+        });
+
+        $(document).bind('ajaxStart', function() {
+            showLoading();
+        });
+
+        $(document).bind('ajaxStop', function() {
+            hideLoading();
         });
     });
 })(jQuery);
