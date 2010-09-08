@@ -109,7 +109,7 @@ Given /^I have an? ?(listed|unlisted)? apartment$/ do |state|
   the.user.update_attribute(:phone, "800-555-1212")
   the.apartment = Factory(:apartment,
                           :user => the.user,
-                          :images_count => 1,
+                          :images_count => 2,
                           :state => state || "unlisted")
   the.user.apartments(true).should be_present
 end

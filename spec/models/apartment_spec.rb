@@ -120,7 +120,7 @@ describe Apartment do
                            :bedrooms => 1,
                            :bathrooms => 1,
                            :square_footage => 500,
-                           :images_count => 1)
+                           :images_count => 2)
     end
 
     it "returns true when required fields are present" do
@@ -139,8 +139,8 @@ describe Apartment do
       end
     end
 
-    it "returns false when there are no images" do
-      @apartment.update_attribute(:images_count, 0)
+    it "returns false when there are fewer than two images" do
+      @apartment.update_attribute(:images_count, 1)
       @apartment.should_not be_listable
     end
 

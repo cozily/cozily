@@ -136,7 +136,7 @@ class Apartment < ActiveRecord::Base
   end
 
   def listable?
-    REQUIRED_FIELDS.all? { |attr| self.send(attr).present? } && (images_count > 0) && valid_sublet? && valid_user?
+    REQUIRED_FIELDS.all? { |attr| self.send(attr).present? } && (images_count > 1) && valid_sublet? && valid_user?
   end
 
   def listed_on

@@ -19,6 +19,6 @@ class Image < ActiveRecord::Base
 
   private
   def ensure_destroyable?
-    (apartment.listed? && apartment.images.count == 1) ? false : true
+    (apartment.listed? && apartment.images.count <= 2) ? false : true
   end
 end
