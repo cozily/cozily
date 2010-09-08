@@ -14,4 +14,11 @@ class Image < ActiveRecord::Base
   validates_presence_of :apartment
 
   acts_as_list :scope => :apartment
+
+  before_destroy :ensure_destroyable?
+
+  private
+  def ensure_destroyable?
+    (apartment.listed? && apartment.images.count == 1) ? false : true
+  end
 end

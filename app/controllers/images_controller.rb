@@ -11,7 +11,7 @@ class ImagesController < ApplicationController
   def destroy
     @image = @apartment.images.find(params[:id])
     @image.destroy
-    render :nothing => :true
+    render :json => {}
   end
 
   private
