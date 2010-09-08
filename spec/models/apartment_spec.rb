@@ -111,16 +111,24 @@ describe Apartment do
 
   describe "#listable?" do
     before do
+      @user = Factory(:user,
+                      :phone => Faker::PhoneNumber.phone_number)
       @apartment = Factory(:apartment,
                            :address => Factory.build(:address),
-                           :user => Factory.build(:user),
+                           :user => @user,
                            :rent => 1500,
                            :bedrooms => 1,
                            :bathrooms => 1,
-                           :square_footage => 500)
+                           :square_footage => 500,
+                           :images_count => 1)
     end
 
     it "returns true when required fields are present" do
+      @apartment.should be_listable
+    end
+
+    it "returns true when the apartment is a sublet" do
+      @apartment.update_attribute(:sublet, :true)
       @apartment.should be_listable
     end
 
@@ -129,6 +137,21 @@ describe Apartment do
         @apartment.send("#{attr}=", nil)
         @apartment.should_not be_listable
       end
+    end
+
+    it "returns false when there are no images" do
+      @apartment.update_attribute(:images_count, 0)
+      @apartment.should_not be_listable
+    end
+
+    it "returns false when a sublet doesn't have an end date" do
+      @apartment.update_attributes(:sublet => true, :end_date => nil)
+      @apartment.should_not be_listable
+    end
+
+    it "returns false when the user doesn't have a phone number" do
+      @user.update_attribute(:phone, nil)
+      @apartment.should_not be_listable
     end
   end
 

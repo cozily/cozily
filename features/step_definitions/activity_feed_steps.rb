@@ -1,5 +1,6 @@
 Then /^my activity feed should include apartments that were recently listed$/ do
-  apartment = Factory(:apartment, :user => the.user)
+  the.user.update_attribute(:phone, Faker::PhoneNumber.phone_number)
+  apartment = Factory(:apartment, :user => the.user, :images_count => 1)
   apartment.list!
 
   visit dashboard_path

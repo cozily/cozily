@@ -54,8 +54,18 @@ class Apartment < ActiveRecord::Base
       validates_presence_of :end_date, :if => Proc.new { |apartment| apartment.sublet? }
       validates_numericality_of :rent, :greater_than => 0, :only_integer => true
       validates_numericality_of :square_footage, :greater_than => 0, :only_integer => true
-      validates_numericality_of :bedrooms
-      validates_numericality_of :bathrooms
+      validates_numericality_of :bedrooms, :greater_than_or_equal_to => 0
+      validates_numericality_of :bathrooms, :greater_than_or_equal_to => 0
+      validates_uniqueness_of :address_id, :scope => [ :user_id, :unit ]
+    end
+
+    state :leased do
+      validates_presence_of :address, :user, :start_date
+      validates_presence_of :end_date, :if => Proc.new { |apartment| apartment.sublet? }
+      validates_numericality_of :rent, :greater_than => 0, :only_integer => true
+      validates_numericality_of :square_footage, :greater_than => 0, :only_integer => true
+      validates_numericality_of :bedrooms, :greater_than_or_equal_to => 0
+      validates_numericality_of :bathrooms, :greater_than_or_equal_to => 0
       validates_uniqueness_of :address_id, :scope => [ :user_id, :unit ]
     end
 
@@ -64,8 +74,8 @@ class Apartment < ActiveRecord::Base
       validates_presence_of :end_date, :if => Proc.new { |apartment| apartment.sublet? }
       validates_numericality_of :rent, :allow_nil => true, :greater_than => 0, :only_integer => true
       validates_numericality_of :square_footage, :allow_nil => true, :greater_than => 0, :only_integer => true
-      validates_numericality_of :bedrooms, :allow_nil => true
-      validates_numericality_of :bathrooms, :allow_nil => true
+      validates_numericality_of :bedrooms, :greater_than_or_equal_to => 0, :allow_nil => true
+      validates_numericality_of :bathrooms, :greater_than_or_equal_to => 0, :allow_nil => true
       validates_uniqueness_of :address_id, :scope => [ :user_id, :unit ], :allow_nil => true
     end
 
@@ -78,7 +88,7 @@ class Apartment < ActiveRecord::Base
     end
 
     event :lease do
-      transition [:listed, :unlisted] => :leased
+      transition [:listed, :unlisted] => :leased, :if => :listable?
     end
   end
 
@@ -89,6 +99,10 @@ class Apartment < ActiveRecord::Base
     def per_page
       10
     end
+  end
+
+  def as_json(options = {})
+    super(options)
   end
 
   def comparable_apartments
@@ -122,15 +136,19 @@ class Apartment < ActiveRecord::Base
   end
 
   def listable?
-    REQUIRED_FIELDS.all? { |attr| self.send(attr).present? }
+    REQUIRED_FIELDS.all? { |attr| self.send(attr).present? } && (images_count > 0) && valid_sublet? && valid_user?
   end
 
   def listed_on
     subject_timeline_events.event_type_equals("state_changed_to_listed").first.try(:created_at)
   end
 
-  def as_json(options = {})
-    super(options)
+  def valid_sublet?
+    !sublet || (start_date.present? && end_date.present?)
+  end
+
+  def valid_user?
+    user && user.phone.present?
   end
 
   private
