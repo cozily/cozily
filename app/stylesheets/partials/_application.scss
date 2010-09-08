@@ -140,13 +140,36 @@ div.feedback {
   background: #CCC;
   border: 1px solid #29216D;
 
-  form {
-    margin-bottom: 0;
+  p {
+    font-size: 14px;
   }
 
-  textarea {
-    width: 100%;
-    height: 100px;
+  form.formtastic {
+    margin-bottom: 0;
+
+      fieldset > ol > li {
+          label {
+            line-height: 30px;
+            font-weight: bold;
+          }
+
+          input[type=text] {
+            width: 180px;
+          }
+
+          textarea {
+            width: 180px;
+            height: 100px;
+            color: #888;
+            font-size: 15px;
+            padding: 5px;
+          }
+
+          input[type=submit] {
+            @include dark-blue-button;
+            width: 75px;
+          }
+      }
   }
 }
 
