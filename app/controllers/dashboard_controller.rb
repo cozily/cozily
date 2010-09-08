@@ -3,11 +3,9 @@ class DashboardController < ApplicationController
 
   def show
     if current_user.lister?
-      @apartments = current_user.apartments.paginate(:page => params[:page])
-      render "listings"
+      redirect_to :action => :listings
     else
-      @matches = Apartment.with_state(:listed).paginate(:page => params[:page])
-      render "matches"
+      redirect_to :action => :matches
     end
   end
 

@@ -121,12 +121,11 @@ Then /^I cannot edit another user's apartment$/ do
   page.should_not have_content("edit apartment")
 
   visit edit_apartment_path(apartment)
-  current_path.should == dashboard_path
+  current_path.should == dashboard_listings_path
 end
 
 Then /^I can view my apartments$/ do
   visit "/"
-  click_link "my listings"
   current_path.should == dashboard_listings_path
 
   the.user.apartments.each do |apartment|
