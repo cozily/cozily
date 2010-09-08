@@ -6,6 +6,11 @@ class ApartmentsController < ApplicationController
     @apartments = current_user.apartments
   end
 
+  def new
+    @apartment = current_user.apartments.create!
+    redirect_to edit_apartment_path(@apartment)
+  end
+
   def show
     @apartment = Apartment.find(params[:id])
     @apartment.update_attribute(:views_count, @apartment.views_count + 1) if current_user != @apartment.user
@@ -13,11 +18,6 @@ class ApartmentsController < ApplicationController
 
   def edit
     @apartment = Apartment.find(params[:id])
-  end
-
-  def create
-    @apartment = current_user.apartments.create!
-    redirect_to edit_apartment_path(@apartment)
   end
 
   def update
