@@ -110,6 +110,19 @@ body.welcome.index, body.signup.create {
 
             div.profile, div.account {
                 div.article {
+                    ul#selected_neighborhoods {
+                        padding-left: 50%;
+
+                        li {
+                            a {
+                                margin-right: 5px;
+                                color: red;
+                            }
+
+                            margin: 10px 0 0 0;
+                        }
+                    }
+
                     form.profile, form.user {
                         label {
                             width: 300px;
@@ -166,7 +179,7 @@ body.welcome.index, body.signup.create {
                 input[type=submit] {
                     width: 75px;
                 }
-            }            
+            }
         }
     }
 }

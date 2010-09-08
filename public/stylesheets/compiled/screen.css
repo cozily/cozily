@@ -304,6 +304,13 @@ body a:link, body a:visited, body a:hover, body a:active {
 body table {
   margin: 0;
 }
+/* line 26, ../../../app/stylesheets/partials/_reset.scss */
+body input[type=text], body input[type=password] {
+  color: #888;
+  font-size: 15px;
+  padding: 5px;
+  height: 35px;
+}
 
 /* line 1, ../../../app/stylesheets/partials/_application.scss */
 div.container {
@@ -809,7 +816,20 @@ body.welcome.index div#body div.container div.profile div.article h2, body.welco
   font-size: 1.7em;
   text-align: center;
 }
-/* line 114, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 113, ../../../app/stylesheets/partials/_unauthenticated.scss */
+body.welcome.index div#body div.container div.profile div.article ul#selected_neighborhoods, body.welcome.index div#body div.container div.account div.article ul#selected_neighborhoods, body.signup.create div#body div.container div.profile div.article ul#selected_neighborhoods, body.signup.create div#body div.container div.account div.article ul#selected_neighborhoods {
+  padding-left: 50%;
+}
+/* line 116, ../../../app/stylesheets/partials/_unauthenticated.scss */
+body.welcome.index div#body div.container div.profile div.article ul#selected_neighborhoods li, body.welcome.index div#body div.container div.account div.article ul#selected_neighborhoods li, body.signup.create div#body div.container div.profile div.article ul#selected_neighborhoods li, body.signup.create div#body div.container div.account div.article ul#selected_neighborhoods li {
+  margin: 10px 0 0 0;
+}
+/* line 117, ../../../app/stylesheets/partials/_unauthenticated.scss */
+body.welcome.index div#body div.container div.profile div.article ul#selected_neighborhoods li a, body.welcome.index div#body div.container div.account div.article ul#selected_neighborhoods li a, body.signup.create div#body div.container div.profile div.article ul#selected_neighborhoods li a, body.signup.create div#body div.container div.account div.article ul#selected_neighborhoods li a {
+  margin-right: 5px;
+  color: red;
+}
+/* line 127, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container div.profile div.article form.profile label, body.welcome.index div#body div.container div.profile div.article form.user label, body.welcome.index div#body div.container div.account div.article form.profile label, body.welcome.index div#body div.container div.account div.article form.user label, body.signup.create div#body div.container div.profile div.article form.profile label, body.signup.create div#body div.container div.profile div.article form.user label, body.signup.create div#body div.container div.account div.article form.profile label, body.signup.create div#body div.container div.account div.article form.user label {
   width: 300px;
   text-align: right;
@@ -817,16 +837,16 @@ body.welcome.index div#body div.container div.profile div.article form.profile l
   line-height: 32px;
   font-size: 1.2em;
 }
-/* line 122, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 135, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container div.profile div.article form.profile select, body.welcome.index div#body div.container div.profile div.article form.user select, body.welcome.index div#body div.container div.account div.article form.profile select, body.welcome.index div#body div.container div.account div.article form.user select, body.signup.create div#body div.container div.profile div.article form.profile select, body.signup.create div#body div.container div.profile div.article form.user select, body.signup.create div#body div.container div.account div.article form.profile select, body.signup.create div#body div.container div.account div.article form.user select {
   margin-top: 10px;
 }
-/* line 126, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 139, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container div.profile div.article form.profile input[type=text], body.welcome.index div#body div.container div.profile div.article form.profile input[type=password], body.welcome.index div#body div.container div.profile div.article form.user input[type=text], body.welcome.index div#body div.container div.profile div.article form.user input[type=password], body.welcome.index div#body div.container div.account div.article form.profile input[type=text], body.welcome.index div#body div.container div.account div.article form.profile input[type=password], body.welcome.index div#body div.container div.account div.article form.user input[type=text], body.welcome.index div#body div.container div.account div.article form.user input[type=password], body.signup.create div#body div.container div.profile div.article form.profile input[type=text], body.signup.create div#body div.container div.profile div.article form.profile input[type=password], body.signup.create div#body div.container div.profile div.article form.user input[type=text], body.signup.create div#body div.container div.profile div.article form.user input[type=password], body.signup.create div#body div.container div.account div.article form.profile input[type=text], body.signup.create div#body div.container div.account div.article form.profile input[type=password], body.signup.create div#body div.container div.account div.article form.user input[type=text], body.signup.create div#body div.container div.account div.article form.user input[type=password] {
   width: 250px;
   height: 35px;
 }
-/* line 131, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 144, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container div.profile div.article form.profile input[type=submit], body.welcome.index div#body div.container div.profile div.article form.user input[type=submit], body.welcome.index div#body div.container div.account div.article form.profile input[type=submit], body.welcome.index div#body div.container div.account div.article form.user input[type=submit], body.signup.create div#body div.container div.profile div.article form.profile input[type=submit], body.signup.create div#body div.container div.profile div.article form.user input[type=submit], body.signup.create div#body div.container div.account div.article form.profile input[type=submit], body.signup.create div#body div.container div.account div.article form.user input[type=submit] {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -844,31 +864,31 @@ body.welcome.index div#body div.container div.profile div.article form.profile i
   border: 1px solid #8EAC46;
   width: 75px;
 }
-/* line 136, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 149, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container div.profile div.article form.profile fieldset.inputs, body.welcome.index div#body div.container div.profile div.article form.user fieldset.inputs, body.welcome.index div#body div.container div.account div.article form.profile fieldset.inputs, body.welcome.index div#body div.container div.account div.article form.user fieldset.inputs, body.signup.create div#body div.container div.profile div.article form.profile fieldset.inputs, body.signup.create div#body div.container div.profile div.article form.user fieldset.inputs, body.signup.create div#body div.container div.account div.article form.profile fieldset.inputs, body.signup.create div#body div.container div.account div.article form.user fieldset.inputs {
   width: 100%;
 }
-/* line 140, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 153, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container div.profile div.article form.profile fieldset.buttons, body.welcome.index div#body div.container div.profile div.article form.user fieldset.buttons, body.welcome.index div#body div.container div.account div.article form.profile fieldset.buttons, body.welcome.index div#body div.container div.account div.article form.user fieldset.buttons, body.signup.create div#body div.container div.profile div.article form.profile fieldset.buttons, body.signup.create div#body div.container div.profile div.article form.user fieldset.buttons, body.signup.create div#body div.container div.account div.article form.profile fieldset.buttons, body.signup.create div#body div.container div.account div.article form.user fieldset.buttons {
   padding-left: 320px;
 }
-/* line 148, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 161, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container div.profile div.article form.user label, body.welcome.index div#body div.container div.account div.article form.user label, body.signup.create div#body div.container div.profile div.article form.user label, body.signup.create div#body div.container div.account div.article form.user label {
   width: 200px;
 }
-/* line 152, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 165, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container div.profile div.article form.user input[type=text], body.welcome.index div#body div.container div.profile div.article form.user input[type=password], body.welcome.index div#body div.container div.account div.article form.user input[type=text], body.welcome.index div#body div.container div.account div.article form.user input[type=password], body.signup.create div#body div.container div.profile div.article form.user input[type=text], body.signup.create div#body div.container div.profile div.article form.user input[type=password], body.signup.create div#body div.container div.account div.article form.user input[type=text], body.signup.create div#body div.container div.account div.article form.user input[type=password] {
   width: 350px;
 }
-/* line 156, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 169, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container div.profile div.article form.user input[type=submit], body.welcome.index div#body div.container div.account div.article form.user input[type=submit], body.signup.create div#body div.container div.profile div.article form.user input[type=submit], body.signup.create div#body div.container div.account div.article form.user input[type=submit] {
   width: 210px;
 }
-/* line 160, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 173, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container div.profile div.article form.user fieldset.buttons, body.welcome.index div#body div.container div.account div.article form.user fieldset.buttons, body.signup.create div#body div.container div.profile div.article form.user fieldset.buttons, body.signup.create div#body div.container div.account div.article form.user fieldset.buttons {
   padding-left: 220px;
 }
-/* line 166, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 179, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container div.profile div.article form.user input[type=submit], body.signup.create div#body div.container div.profile div.article form.user input[type=submit] {
   width: 75px;
 }

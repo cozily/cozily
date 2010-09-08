@@ -8,7 +8,10 @@
         -f.inputs do
           =f.input :bedrooms, :label => "How many bedrooms do you need?", :as => :select, :collection => (0..8)
           =f.input :rent, :label => "How much can you pay?"
-          = f.input :neighborhoods, :label => "Where do you want to live?"
+          %li
+            %label{:for => "neighborhood_autocomplete"} Neighborhoods*
+            =text_field_tag "neighborhood_autocomplete", "e.g., Alphabet City", :'data-default-value' => "e.g., Alphabet City"
+            %ul#selected_neighborhoods
 
         -f.buttons do
           =f.commit_button "Next"
