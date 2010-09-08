@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100906025229) do
+ActiveRecord::Schema.define(:version => 20100908022648) do
 
   create_table "address_neighborhoods", :force => true do |t|
     t.integer  "address_id"
@@ -49,7 +49,6 @@ ActiveRecord::Schema.define(:version => 20100906025229) do
     t.integer  "flags_count",     :default => 0
     t.integer  "user_id"
     t.date     "start_date"
-    t.integer  "contact_id"
     t.string   "unit"
     t.integer  "images_count",    :default => 0
     t.boolean  "sublet",          :default => false
