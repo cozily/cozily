@@ -13,9 +13,8 @@ class SignupController < ApplicationController
 
   def create
     params[:user].merge!(session[:user]) if session[:user]
-    @user = User.new(params[:user])
+    @user = User.new(params[:user].merge(:roles => [Role.find_by_name(session[:want])]))
     if @user.save
-      @user.roles << Role.find_by_name(session[:want])
       @user.create_profile(session[:profile])
       sign_in(@user)
       redirect_to dashboard_path

@@ -12,6 +12,7 @@ class Ability
       can :manage, User, :id => user.id
     else
       can :read, Apartment
+      can :create, User
     end
   end
 end
