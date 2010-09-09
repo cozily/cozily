@@ -13,11 +13,13 @@ class User < ActiveRecord::Base
   has_many :user_roles, :dependent => :destroy
   has_many :conversations, :finder_sql => 'select * from conversations where sender_id = #{id} or receiver_id = #{id}'
   has_many :messages, :through => :conversations
+
   validates_presence_of :first_name, :last_name
   validates_presence_of :phone, :if => Proc.new { |user| user.apartments.with_state(:listed).present? }
   validates_length_of :phone, :is => 10, :allow_nil => true, :allow_blank => true
+  validate :ensure_has_role, :ensure_lister_has_phone
 
-  before_validation_on_create :format_phone
+  before_validation_on_create :add_role_if_empty, :format_phone
   before_validation_on_update :format_phone
 
   accepts_nested_attributes_for :profile
@@ -64,6 +66,18 @@ class User < ActiveRecord::Base
   end
 
   private
+  def add_role_if_empty
+    roles << Role.find_by_name("finder") if roles.empty?
+  end
+
+  def ensure_lister_has_phone
+    errors.add(:phone, "You need to have a phone number to list apartments.") if lister? && phone.blank?
+  end
+
+  def ensure_has_role
+    errors.add(:roles, "You need at least one role.") if roles.empty?
+  end
+
   def format_phone
     self.phone = phone.gsub(/[^0-9]/, "") if phone.present?
   end

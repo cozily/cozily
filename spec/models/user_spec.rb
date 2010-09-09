@@ -15,11 +15,24 @@ describe User do
   it { should validate_presence_of(:last_name) }
 
   describe "validations" do
-    it "be invalid if phone number is nil and there are listed apartments" do
+    it "should be invalid if phone number is nil and there are listed apartments" do
       @user = Factory(:user, :phone => nil)
       Factory(:apartment, :user => @user, :state => "listed")
       @user.should be_invalid
       @user.should have(1).error_on(:phone)
+    end
+
+    it "should be invalid if the user is a lister and doesn't have a phone" do
+      @user = Factory.build(:user, :roles => [Role.find_by_name("lister")], :phone => nil)
+      @user.should be_invalid
+      @user.should have(1).error_on(:phone)
+    end
+  end
+
+  describe "#before_create" do
+    it "should add the finder role if roles is empty" do
+      @user = Factory(:user, :roles => [])
+      @user.roles.should == [Role.find_by_name("finder")]
     end
   end
 
