@@ -19,7 +19,7 @@ class User < ActiveRecord::Base
   validates_length_of :phone, :is => 10, :allow_nil => true, :allow_blank => true
   validate :ensure_has_role, :ensure_lister_has_phone
 
-  before_validation_on_create :add_role_if_empty, :format_phone
+  before_validation_on_create :format_phone
   before_validation_on_update :format_phone
 
   accepts_nested_attributes_for :profile
@@ -66,10 +66,6 @@ class User < ActiveRecord::Base
   end
 
   private
-  def add_role_if_empty
-    roles << Role.find_by_name("finder") if roles.empty?
-  end
-
   def ensure_lister_has_phone
     errors.add(:phone, "You need to have a phone number to list apartments.") if lister? && phone.blank?
   end

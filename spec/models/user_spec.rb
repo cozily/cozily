@@ -27,12 +27,11 @@ describe User do
       @user.should be_invalid
       @user.should have(1).error_on(:phone)
     end
-  end
 
-  describe "#before_create" do
-    it "should add the finder role if roles is empty" do
-      @user = Factory(:user, :roles => [])
-      @user.roles.should == [Role.find_by_name("finder")]
+    it "should be invalid if roles is empty" do
+      @user = Factory.build(:user, :roles => [])
+      @user.should be_invalid
+      @user.should have(1).error_on(:roles)
     end
   end
 
