@@ -566,6 +566,37 @@ div#body div.container div#five_hundred h1, div#body div.container div#five_hund
   padding-right: 200px;
 }
 
+/* line 221, ../../../app/stylesheets/partials/_application.scss */
+form.formtastic div.errorExplanation {
+  border: 1px solid red;
+  background-color: pink;
+  padding: 5px 15px;
+  margin-bottom: 20px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 228, ../../../app/stylesheets/partials/_application.scss */
+form.formtastic div.errorExplanation h2 {
+  display: none;
+}
+/* line 232, ../../../app/stylesheets/partials/_application.scss */
+form.formtastic div.errorExplanation ul {
+  list-style-type: disc;
+  margin: 5px 0 5px 30px;
+}
+/* line 239, ../../../app/stylesheets/partials/_application.scss */
+form.formtastic li.error input {
+  border: 1px solid red;
+}
+/* line 243, ../../../app/stylesheets/partials/_application.scss */
+form.formtastic li.error p.inline-errors {
+  display: none;
+}
+
 /* line 2, ../../../app/stylesheets/partials/_search.scss */
 div#search div.container {
   overflow: visible;

@@ -216,3 +216,32 @@ div#body {
     }
   }
 }
+
+form.formtastic {
+    div.errorExplanation {
+        border: 1px solid red;
+        background-color: pink;
+        padding: 5px 15px;
+        margin-bottom: 20px;
+        @include border-radius;
+
+        h2 {
+            display: none;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin: 5px 0 5px 30px;
+        }
+    }
+
+    li.error {
+        input {
+            border: 1px solid red;
+        }
+
+        p.inline-errors {
+            display: none;
+        }
+    }
+}

@@ -71,7 +71,7 @@ class User < ActiveRecord::Base
   end
 
   def ensure_has_role
-    errors.add(:roles, "You need at least one role.") if roles.empty?
+    errors.add(:roles, "can't be empty") if roles.empty?
   end
 
   def format_phone
