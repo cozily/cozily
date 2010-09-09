@@ -14,7 +14,9 @@
     %h1 View Listing
 
   %ul.tabs
-    -[["Edit Listing", edit_apartment_path(apartment)], ["View Listing", apartment_path(apartment)]].each do |text, path|
-      -klass = (request.request_uri == path) ? "active" : "inactive"
-      %li{:class => klass}
-        =link_to_unless_current text, path
+    -if type == :edit
+      %li.active Edit Listing
+      %li=link_to "View Listing", apartment_path(apartment)
+    -else
+      %li=link_to "Edit Listing", edit_apartment_path(apartment)
+      %li.active View Listing

@@ -1,4 +1,4 @@
-body.apartments.edit {
+body.apartments.edit, body.apartments.update {
     div.article {
         width: 600px;
         margin-right: 40px;
@@ -15,6 +15,10 @@ body.apartments.edit {
         }
 
         form.apartment {
+            div.errorExplanation {
+                margin-left: 20px;
+            }
+
             label {
                 width: 140px;
                 margin-right: 25px;

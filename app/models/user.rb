@@ -67,7 +67,7 @@ class User < ActiveRecord::Base
 
   private
   def ensure_lister_has_phone
-    errors.add(:phone, "You need to have a phone number to list apartments.") if lister? && phone.blank?
+    errors.add(:phone, "must be present to list apartments") if lister? && phone.blank?
   end
 
   def ensure_has_role
