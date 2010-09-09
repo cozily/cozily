@@ -103,12 +103,6 @@ function liveNeighborhoodAutocomplete() {
 
         liveNeighborhoodAutocomplete();
 
-        $("[data-click-path]").live("click", function(event) {
-            var element = $(event.currentTarget);
-            document.location = element.attr('data-click-path');
-            return false;
-        });
-
         $("[data-default-value]").live("click", function(event) {
             var element = $(event.currentTarget);
             if (element.val() == element.attr('data-default-value')) {
