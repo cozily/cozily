@@ -15,9 +15,9 @@ class User < ActiveRecord::Base
   has_many :messages, :through => :conversations
 
   validates_presence_of :first_name, :last_name
-  validates_presence_of :phone, :if => Proc.new { |user| user.apartments.with_state(:listed).present? }
+  validates_presence_of :phone, :if => Proc.new { |user| user.lister? }
   validates_length_of :phone, :is => 10, :allow_nil => true, :allow_blank => true
-  validate :ensure_has_role, :ensure_lister_has_phone
+  validate :ensure_has_role
 
   before_validation_on_create :format_phone
   before_validation_on_update :format_phone
@@ -66,10 +66,6 @@ class User < ActiveRecord::Base
   end
 
   private
-  def ensure_lister_has_phone
-    errors.add(:phone, "must be present to list apartments") if lister? && phone.blank?
-  end
-
   def ensure_has_role
     errors.add(:roles, "can't be empty") if roles.empty?
   end

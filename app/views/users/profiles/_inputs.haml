@@ -30,5 +30,6 @@
 
   %fieldset.lister
     %legend We want to include a phone number with your listings.
-    = f.input :phone
+    -f.inputs do
+      =f.input :phone
 

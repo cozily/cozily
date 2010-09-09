@@ -18,7 +18,7 @@ describe User do
     it "should be invalid if phone number is nil and there are listed apartments" do
       @user = Factory(:user, :phone => nil)
       Factory(:apartment, :user => @user, :state => "listed")
-      @user.should be_invalid
+      @user.reload.should be_invalid
       @user.should have(1).error_on(:phone)
     end
 
