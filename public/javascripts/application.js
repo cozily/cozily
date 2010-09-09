@@ -353,7 +353,9 @@ function liveNeighborhoodAutocomplete() {
 
             toggleRoleFields();
             liveNeighborhoodAutocomplete();
-            initializeMap();
+            if ($("div#map_canvas").length > 0) {
+                initializeMap();
+            }
         });
 
         $(document).bind('ajaxStart', function() {

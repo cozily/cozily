@@ -76,7 +76,7 @@ function updateMap(self, others) {
 
 (function($) {
     $(function() {
-        if (document.getElementById('map_canvas') != null) {
+        if ($('div#map_canvas').length > 0) {
             initializeMap();
         }
     });
