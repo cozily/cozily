@@ -204,17 +204,17 @@ function liveNeighborhoodAutocomplete() {
             $('div.feedback a.handle').click();
         });
 
-        $("form.apartment :input").live("blur", function(event) {
-            $.ajax({
-                type      : "put",
-                url       : $("form.apartment").attr('action'),
-                data      : $("form.apartment").serialize(),
-                dataType  : 'json',
-                success   : function success(response) {
-                    $(document).trigger('content-received', response);
-                }
-            });
-        });
+//        $("form.apartment :input").live("blur", function(event) {
+//            $.ajax({
+//                type      : "put",
+//                url       : $("form.apartment").attr('action'),
+//                data      : $("form.apartment").serialize(),
+//                dataType  : 'json',
+//                success   : function success(response) {
+//                    $(document).trigger('content-received', response);
+//                }
+//            });
+//        });
 
         if ($("div.business_search").length > 0) {
             var lat = $("div.business_search").attr('data-lat');
