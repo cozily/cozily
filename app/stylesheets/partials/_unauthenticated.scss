@@ -153,6 +153,10 @@ body.welcome.index, body.signup.create {
                         fieldset.buttons {
                             padding-left: 320px;
                         }
+
+                        div.errorExplanation {
+                            margin: 10px 20px 20px 20px;
+                        }
                     }
                 }
             }

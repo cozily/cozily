@@ -180,6 +180,7 @@ div#flash, div#loading {
   width: 100%;
   text-align: center;
   display: none;
+  z-index: 100;
 
   span {
     background-color: #E1B55E;
