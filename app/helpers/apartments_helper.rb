@@ -15,9 +15,10 @@ module ApartmentsHelper
     end
   end
 
-  def latest_state_change(apartment)
-    text, date = if apartment.listed_on.present?
-      ["Listed on", apartment.listed_on]
+  def last_state_change(apartment)
+    text, date = if apartment.last_state_change.present?
+      action = apartment.last_state_change.event_type.split("_")[3].titleize
+      ["#{action} on", apartment.last_state_change.created_at]
     else
       ["Created on", apartment.created_at]
     end

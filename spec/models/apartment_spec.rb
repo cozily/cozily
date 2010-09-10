@@ -109,6 +109,33 @@ describe Apartment do
     end
   end
 
+  describe "#last_state_change" do
+    before do
+      @apartment = Factory(:apartment)
+    end
+
+    it "returns the last state change" do
+      state_change1 = Factory(:timeline_event,
+                              :subject => @apartment,
+                              :event_type => "state_changed_to_listed",
+                              :created_at => 5.days.ago)
+      Factory(:timeline_event,
+              :subject => @apartment,
+              :event_type => "state_changed_to_unlisted",
+              :created_at => 10.days.ago)
+      Factory(:timeline_event,
+              :subject => @apartment,
+              :event_type => "deleted",
+              :created_at => 1.day.ago)
+
+      @apartment.last_state_change.should == state_change1
+    end
+
+    it "returns nil when there are no state changes" do
+      @apartment.last_state_change.should be_nil
+    end
+  end
+
   describe "#listable?" do
     before do
       @user = Factory(:user,
