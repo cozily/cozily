@@ -8,55 +8,36 @@ div#search {
         font-weight: 500;
         padding: 15px 0;
         float: left;
-        margin-right: 20px;
+        margin-right: 30px;
     }
 
     form {
         padding: 18px 0;
 
-        div.spicyselect {
-            float: left;
-            margin-right: 15px;
-            @include border-radius(5px);
-            background: url(/images/icons/search_arrow.png) no-repeat 95% center;
-            background-color: white;
-            padding: 5px 5px 5px 15px;
-            z-index: 100;
-
-            a {
-                display: block;
-                width: 100%;
-                text-decoration: none;
-                color: #999;
-                font-size: 1.2em;
-                font-weight: 200;
-            }
-        }
-
-        div.spicyselect.focus {
-            @include box-shadow(black, 0, 0, 5px);
-        }
-
-        div#q_min_bedrooms_mask {
-            width: 140px;
-        }
-
-        input#neighborhood_autocomplete {
+        input#neighborhood_autocomplete, input#q_min_bedrooms, input#q_max_rent {
             float: left;
             height: 32px;
             background-color: white;
             @include border-radius(5px);
+            @include box-shadow;
             padding: 5px 5px 5px 15px;
             border: none;
             color: #999;
             font-size: 1.2em;
             font-weight: 200;
             margin-right: 15px;
-            width: 230px;
         }
 
-        div#q_max_rent_mask {
-            width: 135px;
+        input#neighborhood_autocomplete {
+            width: 250px;
+        }
+
+        input#q_min_bedrooms {
+            width: 150px;
+        }
+
+        input#q_max_rent {
+            width: 145px;
         }
 
         input[type=submit] {

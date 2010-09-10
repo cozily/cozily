@@ -1,7 +1,5 @@
 class Search
-  BEDROOMS = (0..8).to_a
   BATHROOMS = (1..10).to_a.map { |x| x/2.0 }
-  RENTS = (100..4000).to_a.select { |x| x % 100 == 0 }
 
   attr_accessor :min_bedrooms, :max_bedrooms
   attr_accessor :min_bathrooms, :max_bathrooms
@@ -30,7 +28,7 @@ class Search
       condition << "bathrooms >= #{@min_bathrooms}"
       condition << "bathrooms <= #{@max_bathrooms}"
       condition << "rent >= #{@min_rent}"
-      condition << "rent <= #{@max_rent}" if @max_rent.present? && @max_rent.is_a?(Fixnum)
+      condition << "rent <= #{@max_rent}" if @max_rent.present?
       condition << "square_footage >= #{@min_square_footage}"
       condition << "square_footage <= #{@max_square_footage}"
       condition << "apartments.state = 'listed'"

@@ -105,6 +105,37 @@ function liveNeighborhoodAutocomplete() {
             }
         });
 
+        $("form.search input[type=text]").live("click", function(event) {
+            var element = $(event.currentTarget);
+            element.val('');
+
+            if (element.attr('id') == "neighborhood_autocomplete") {
+                $("input#q_neighborhood_ids").val('');
+            }
+        });
+
+        $("input#q_min_bedrooms").live("blur", function(event) {
+            var element = $(event.currentTarget);
+            var count = parseInt(element.val());
+
+            if (count) {
+                element.val(count + "+ Bedrooms");
+            } else {
+                element.val("All # Bedrooms");
+            }
+        });
+
+        $("input#q_max_rent").live("blur", function(event) {
+            var element = $(event.currentTarget);
+            var count = parseInt(element.val());
+
+            if (count) {
+                element.val("Under $" + count);
+            } else {
+                element.val("All Prices");
+            }
+        });
+
         liveNeighborhoodAutocomplete();
 
         $("[data-default-value]").live("click", function(event) {
