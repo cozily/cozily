@@ -668,62 +668,6 @@ div#search form input[type=submit] {
   margin-left: 20px;
 }
 
-/* line 51, ../../../app/stylesheets/partials/_search.scss */
-.spicyselect {
-  width: 200px;
-  position: relative;
-}
-
-/* line 56, ../../../app/stylesheets/partials/_search.scss */
-.spicyselect:hover {
-  cursor: default;
-}
-
-/* line 60, ../../../app/stylesheets/partials/_search.scss */
-.spicyselect > ol {
-  border-top: 1px solid black;
-  position: absolute;
-  background-color: white;
-  border: 1px solid black;
-}
-
-/* line 67, ../../../app/stylesheets/partials/_search.scss */
-.spicyselect ol {
-  margin: 0;
-  padding: 0;
-}
-
-/* line 72, ../../../app/stylesheets/partials/_search.scss */
-.spicyselect ol ol {
-  padding-left: 8px;
-}
-
-/* line 76, ../../../app/stylesheets/partials/_search.scss */
-.spicyselect ol ol li.optgroup_label {
-  margin-left: -8px;
-  font-weight: bold;
-  background-color: lightgray;
-}
-
-/* line 82, ../../../app/stylesheets/partials/_search.scss */
-.spicyselect ol ol li.optgroup_label:hover {
-  background-color: lightgray;
-  color: black;
-}
-
-/* line 87, ../../../app/stylesheets/partials/_search.scss */
-.spicyselect li {
-  border-bottom: 1px solid black;
-  list-style: none;
-  padding: 5px;
-}
-
-/* line 93, ../../../app/stylesheets/partials/_search.scss */
-.spicyselect li.current {
-  background-color: lightblue;
-  color: black;
-}
-
 /* line 2, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body, body.signup.create div#body {
   background: url(/images/backgrounds/unauthenticated_side.png) repeat-x;

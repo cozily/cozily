@@ -86,8 +86,6 @@ function liveNeighborhoodAutocomplete() {
         });
         toggleRoleFields();
 
-        $("div#search select").spicyselect();
-
         $("input#apartment_full_address").autocomplete({
             source: "/addresses/geocode",
             minLength: 3,
