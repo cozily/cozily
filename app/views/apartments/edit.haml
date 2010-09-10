@@ -1,3 +1,9 @@
+-content_for :page_title do
+  -if @apartment.name.present?
+    ==Cozily | #{@apartment.name}
+  -else
+    ==Cozily | Apartment ##{@apartment.id}
+
 :javascript
   var self = #{@apartment.as_json(:methods => :to_param, :include => :address).to_json};
   var apartments = #{(@apartment.comparable_apartments).as_json(:methods => :to_param, :include => :address).to_json};

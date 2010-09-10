@@ -1,3 +1,6 @@
+-content_for :page_title do
+  Cozily | Search
+
 - if @search.results.present?
   :javascript
     var apartments = #{@search.paginated_results.as_json(:methods => :to_param, :include => :address).to_json};

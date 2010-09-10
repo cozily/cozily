@@ -24,7 +24,7 @@
       try{Typekit.load();}catch(e){}
 
     %title
-      Cozily
+      =yield(:page_title) || "Cozily"
 
   %body{:class => "#{controller.controller_name} #{controller.action_name}"}
     #head

@@ -1,3 +1,6 @@
+-content_for :page_title do
+  Cozily | Dashboard
+
 :javascript
   var apartments = #{(current_user.apartments).as_json(:methods => :to_param, :include => :address).to_json};
 
