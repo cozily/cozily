@@ -54,13 +54,17 @@ function liveNeighborhoodAutocomplete() {
         minLength: 1,
         select: function(event, ui) {
             var form = $(event.target).closest("form");
-            if ($("input[name='user[profile_attributes][neighborhood_ids][]'][value='" + ui.item.id + "']").length == 0) {
-                var remove = "<a href='#' data-remove = 'li'>X</a>&nbsp;"
-                var input = "<input type='hidden' name='user[profile_attributes][neighborhood_ids][]' value='" + ui.item.id + "' />";
-                $("ul#selected_neighborhoods").append("<li>" + remove + ui.item.label + input + "</li>");
+            if (form.hasClass('search')) {
+                $("input#q_neighborhood_ids").val(ui.item.id);
+            } else {
+                if ($("input[name='user[profile_attributes][neighborhood_ids][]'][value='" + ui.item.id + "']").length == 0) {
+                    var remove = "<a href='#' data-remove = 'li'>X</a>&nbsp;"
+                    var input = "<input type='hidden' name='user[profile_attributes][neighborhood_ids][]' value='" + ui.item.id + "' />";
+                    $("ul#selected_neighborhoods").append("<li>" + remove + ui.item.label + input + "</li>");
+                }
+                $("input#neighborhood_autocomplete").val('');
+                return false;
             }
-            $("input#neighborhood_autocomplete").val('');
-            return false;
         }
     });
 }
@@ -204,17 +208,17 @@ function liveNeighborhoodAutocomplete() {
             $('div.feedback a.handle').click();
         });
 
-//        $("form.apartment :input").live("blur", function(event) {
-//            $.ajax({
-//                type      : "put",
-//                url       : $("form.apartment").attr('action'),
-//                data      : $("form.apartment").serialize(),
-//                dataType  : 'json',
-//                success   : function success(response) {
-//                    $(document).trigger('content-received', response);
-//                }
-//            });
-//        });
+        //        $("form.apartment :input").live("blur", function(event) {
+        //            $.ajax({
+        //                type      : "put",
+        //                url       : $("form.apartment").attr('action'),
+        //                data      : $("form.apartment").serialize(),
+        //                dataType  : 'json',
+        //                success   : function success(response) {
+        //                    $(document).trigger('content-received', response);
+        //                }
+        //            });
+        //        });
 
         if ($("div.business_search").length > 0) {
             var lat = $("div.business_search").attr('data-lat');

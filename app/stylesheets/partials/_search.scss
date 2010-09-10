@@ -16,11 +16,12 @@ div#search {
 
         div.spicyselect {
             float: left;
-            margin-right: 10px;
+            margin-right: 15px;
             @include border-radius(5px);
             background: url(/images/icons/search_arrow.png) no-repeat 95% center;
             background-color: white;
             padding: 5px 5px 5px 15px;
+            z-index: 100;
 
             a {
                 display: block;
@@ -36,27 +37,12 @@ div#search {
             @include box-shadow(black, 0, 0, 5px);
         }
 
-        div#q_neighborhood_ids_mask{
-            width: 230px;
-
-            ol {
-                width: 600px;
-                z-index: 100;
-                li {
-                    float: left;
-                    border: none;
-                    width: 140px;
-                }
-            }
-        }
-
         div#q_min_bedrooms_mask {
             width: 140px;
         }
 
-        input#q_max_rent {
+        input#neighborhood_autocomplete, input#q_max_rent {
             float: left;
-            width: 155px;
             height: 32px;
             background-color: white;
             @include border-radius(5px);
@@ -65,7 +51,15 @@ div#search {
             color: #999;
             font-size: 1.2em;
             font-weight: 200;
-            margin-right: 10px;
+            margin-right: 15px;
+        }
+
+        input#neighborhood_autocomplete {
+            width: 230px;
+        }
+
+        input#q_max_rent {
+            width: 155px;
         }
 
         input[type=submit] {

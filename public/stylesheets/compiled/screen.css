@@ -617,7 +617,7 @@ div#search form {
 /* line 17, ../../../app/stylesheets/partials/_search.scss */
 div#search form div.spicyselect {
   float: left;
-  margin-right: 10px;
+  margin-right: 15px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   -o-border-radius: 5px;
@@ -627,8 +627,9 @@ div#search form div.spicyselect {
   background: url(/images/icons/search_arrow.png) no-repeat 95% center;
   background-color: white;
   padding: 5px 5px 5px 15px;
+  z-index: 100;
 }
-/* line 25, ../../../app/stylesheets/partials/_search.scss */
+/* line 26, ../../../app/stylesheets/partials/_search.scss */
 div#search form div.spicyselect a {
   display: block;
   width: 100%;
@@ -637,36 +638,20 @@ div#search form div.spicyselect a {
   font-size: 1.2em;
   font-weight: 200;
 }
-/* line 35, ../../../app/stylesheets/partials/_search.scss */
+/* line 36, ../../../app/stylesheets/partials/_search.scss */
 div#search form div.spicyselect.focus {
   -moz-box-shadow: black 0 0 5px 0;
   -webkit-box-shadow: black 0 0 5px 0;
   -o-box-shadow: black 0 0 5px 0;
   box-shadow: black 0 0 5px 0;
 }
-/* line 39, ../../../app/stylesheets/partials/_search.scss */
-div#search form div#q_neighborhood_ids_mask {
-  width: 230px;
-}
-/* line 42, ../../../app/stylesheets/partials/_search.scss */
-div#search form div#q_neighborhood_ids_mask ol {
-  width: 600px;
-  z-index: 100;
-}
-/* line 45, ../../../app/stylesheets/partials/_search.scss */
-div#search form div#q_neighborhood_ids_mask ol li {
-  float: left;
-  border: none;
-  width: 140px;
-}
-/* line 53, ../../../app/stylesheets/partials/_search.scss */
+/* line 40, ../../../app/stylesheets/partials/_search.scss */
 div#search form div#q_min_bedrooms_mask {
   width: 140px;
 }
-/* line 57, ../../../app/stylesheets/partials/_search.scss */
-div#search form input#q_max_rent {
+/* line 44, ../../../app/stylesheets/partials/_search.scss */
+div#search form input#neighborhood_autocomplete, div#search form input#q_max_rent {
   float: left;
-  width: 155px;
   height: 32px;
   background-color: white;
   -moz-border-radius: 5px;
@@ -680,9 +665,17 @@ div#search form input#q_max_rent {
   color: #999;
   font-size: 1.2em;
   font-weight: 200;
-  margin-right: 10px;
+  margin-right: 15px;
 }
-/* line 71, ../../../app/stylesheets/partials/_search.scss */
+/* line 57, ../../../app/stylesheets/partials/_search.scss */
+div#search form input#neighborhood_autocomplete {
+  width: 230px;
+}
+/* line 61, ../../../app/stylesheets/partials/_search.scss */
+div#search form input#q_max_rent {
+  width: 155px;
+}
+/* line 65, ../../../app/stylesheets/partials/_search.scss */
 div#search form input[type=submit] {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -702,18 +695,18 @@ div#search form input[type=submit] {
   margin-left: 20px;
 }
 
-/* line 79, ../../../app/stylesheets/partials/_search.scss */
+/* line 73, ../../../app/stylesheets/partials/_search.scss */
 .spicyselect {
   width: 200px;
   position: relative;
 }
 
-/* line 84, ../../../app/stylesheets/partials/_search.scss */
+/* line 78, ../../../app/stylesheets/partials/_search.scss */
 .spicyselect:hover {
   cursor: default;
 }
 
-/* line 88, ../../../app/stylesheets/partials/_search.scss */
+/* line 82, ../../../app/stylesheets/partials/_search.scss */
 .spicyselect > ol {
   border-top: 1px solid black;
   position: absolute;
@@ -721,38 +714,38 @@ div#search form input[type=submit] {
   border: 1px solid black;
 }
 
-/* line 95, ../../../app/stylesheets/partials/_search.scss */
+/* line 89, ../../../app/stylesheets/partials/_search.scss */
 .spicyselect ol {
   margin: 0;
   padding: 0;
 }
 
-/* line 100, ../../../app/stylesheets/partials/_search.scss */
+/* line 94, ../../../app/stylesheets/partials/_search.scss */
 .spicyselect ol ol {
   padding-left: 8px;
 }
 
-/* line 104, ../../../app/stylesheets/partials/_search.scss */
+/* line 98, ../../../app/stylesheets/partials/_search.scss */
 .spicyselect ol ol li.optgroup_label {
   margin-left: -8px;
   font-weight: bold;
   background-color: lightgray;
 }
 
-/* line 110, ../../../app/stylesheets/partials/_search.scss */
+/* line 104, ../../../app/stylesheets/partials/_search.scss */
 .spicyselect ol ol li.optgroup_label:hover {
   background-color: lightgray;
   color: black;
 }
 
-/* line 115, ../../../app/stylesheets/partials/_search.scss */
+/* line 109, ../../../app/stylesheets/partials/_search.scss */
 .spicyselect li {
   border-bottom: 1px solid black;
   list-style: none;
   padding: 5px;
 }
 
-/* line 121, ../../../app/stylesheets/partials/_search.scss */
+/* line 115, ../../../app/stylesheets/partials/_search.scss */
 .spicyselect li.current {
   background-color: lightblue;
   color: black;
