@@ -41,7 +41,7 @@ div#search {
             width: 140px;
         }
 
-        input#neighborhood_autocomplete, input#q_max_rent {
+        input#neighborhood_autocomplete {
             float: left;
             height: 32px;
             background-color: white;
@@ -52,14 +52,11 @@ div#search {
             font-size: 1.2em;
             font-weight: 200;
             margin-right: 15px;
-        }
-
-        input#neighborhood_autocomplete {
             width: 230px;
         }
 
-        input#q_max_rent {
-            width: 155px;
+        div#q_max_rent_mask {
+            width: 135px;
         }
 
         input[type=submit] {

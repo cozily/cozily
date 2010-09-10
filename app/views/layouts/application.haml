@@ -50,10 +50,9 @@
             =text_field_tag :neighborhood_autocomplete, "All Neighborhoods", :'data-default-value' => "All Neighborhoods"
             =f.hidden_field :neighborhood_ids
             =f.select :min_bedrooms, Search::BEDROOMS, :prompt => "All # Bedrooms"
-            =f.text_field :max_rent, :'data-default-value' => "All Prices"
+            =f.select :max_rent, Search::RENTS, :prompt => "All Prices"
 
             =f.submit :search
-
 
       #breadcrumbs
         -if current_user.try(:finder?)
