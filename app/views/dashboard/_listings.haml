@@ -32,7 +32,7 @@
                 ==/ #{apartment.bedrooms.try(:prettify)}bd/#{apartment.bathrooms.try(:prettify)}ba / #{apartment.square_footage} sq. ft.
               -if apartment.address
                 %li.neighborhood==Neighborhood: #{neighborhood_links(apartment.neighborhoods)}
-              %li.listed_on==Listed on #{apartment.listed_on.try(:to_date).try(:to_s, :app_long)}
+              %li.listed_on=latest_state_change(apartment)
 
           %li.status
             %p Current Status of Listing:
