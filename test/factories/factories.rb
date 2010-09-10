@@ -80,6 +80,10 @@ Factory.define :station do |s|
   s.lng   -73.915163
 end
 
+Factory.define :timeline_event do |t|
+  t.association  :actor, :factory => :user
+end
+
 Factory.define :user_role do |u|
   u.association  :user
   u.association  :role

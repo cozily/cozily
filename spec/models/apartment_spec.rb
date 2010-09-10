@@ -155,6 +155,29 @@ describe Apartment do
     end
   end
 
+  describe "#listed_on" do
+    before do
+      @apartment = Factory(:apartment)
+    end
+
+    it "returns the latest date that the apartment was listed" do
+      Factory(:timeline_event,
+              :subject => @apartment,
+              :event_type => "state_changed_to_listed",
+              :created_at => date1 = 5.days.ago)
+      Factory(:timeline_event,
+              :subject => @apartment,
+              :event_type => "state_changed_to_listed",
+              :created_at => 10.days.ago)
+
+      @apartment.listed_on.should == date1
+    end
+
+    it "returns nil if the apartment hasn't been listed" do
+      @apartment.listed_on.should be_nil
+    end
+  end
+
   describe "#name" do
     it "should join address and unit" do
       @apartment = Factory(:apartment)
