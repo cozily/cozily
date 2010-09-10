@@ -95,7 +95,7 @@ describe Apartment do
     end
   end
 
-  describe "#before_validation_on_update" do
+  describe "#before_validation" do
     it "upcases unit" do
       @apartment = Factory.build(:apartment, :unit => "1c")
       @apartment.save

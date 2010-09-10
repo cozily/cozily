@@ -7,8 +7,7 @@ class Address < ActiveRecord::Base
   has_many :apartments, :dependent => :destroy
   has_many :neighborhoods, :through => :address_neighborhoods
 
-  before_validation_on_create :geocode, :neighborhood_search
-  before_validation_on_update :geocode, :neighborhood_search
+  before_validation :geocode, :neighborhood_search
 
   validates_presence_of :full_address,
                         :street,

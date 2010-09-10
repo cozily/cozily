@@ -19,8 +19,7 @@ class User < ActiveRecord::Base
   validates_length_of :phone, :is => 10, :allow_nil => true, :allow_blank => true
   validate :ensure_has_role
 
-  before_validation_on_create :format_phone
-  before_validation_on_update :format_phone
+  before_validation :format_phone
 
   accepts_nested_attributes_for :profile
 
