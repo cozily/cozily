@@ -37,7 +37,7 @@ Feature: Apartments
     Then I can list the apartment
     But I cannot list another user's apartment
 
-  Scenario: User unlistes an apartment
+  Scenario: User unlists an apartment
     Given I am a logged in user
     And I have an listed apartment
     Then I can unlist the apartment
