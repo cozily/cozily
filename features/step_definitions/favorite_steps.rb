@@ -25,8 +25,3 @@ Then /^I can view my favorites$/ do
     page.should have_css("a:contains('#{favorite.apartment.full_address}')")
   end
 end
-
-Then /^I cannot view another user's favorites$/ do
-  visit user_favorites_path(Factory(:user))
-  current_path.should == dashboard_matches_path
-end

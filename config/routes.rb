@@ -14,15 +14,14 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :neighborhoods,
                 :collection => { :search => :get }
 
-  map.resources :neighborhood_profiles, :only => [:destroy]
+  map.resources :neighborhood_profiles, :only => [ :destroy ]
 
   map.resource  :search
-  map.resources :users, :controller => 'users', :only => [:edit, :create, :update] do |user|
+  map.resources :users, :controller => 'users', :only => [ :edit, :create, :update ] do |user|
     user.resources :apartments, :only => :index
-    user.resources :favorites
+    user.resources :favorites, :only => [ :create, :destroy ]
     user.resources :flags
-    user.resource  :profile,
-                   :controller => "users/profiles"
+    user.resource  :profile, :controller => "users/profiles"
   end
 
   map.business_search "yelp/business_search", :controller => "yelp", :action => "business_search"

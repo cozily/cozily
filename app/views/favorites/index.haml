@@ -1,7 +1,0 @@
-=render "apartments/table", :apartments => @apartments, :type => "favorites"
-
--if @apartments.present?
-  :javascript
-    var apartments = #{@apartments.as_json(:methods => :to_param, :include => :address).to_json};
-
-  #map_canvas
