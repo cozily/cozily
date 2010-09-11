@@ -19,6 +19,8 @@ require 'cucumber/rails/capybara_javascript_emulation' # Lets you click links wi
 
 require 'factory_girl'
 require 'faker'
+require 'webmock/rspec'
+
 Dir.glob(File.join(File.dirname(__FILE__), '../../test/factories/*.rb')).each {|f| require f }
 Dir[File.expand_path(File.join(File.dirname(__FILE__), 'helpers', '**', '*.rb'))].each {|f| require f}
 
@@ -73,6 +75,12 @@ end
 After do
   DatabaseCleaner.clean
 end
+
+module WebMockWorld
+  include WebMock
+  include WebMock::Matchers
+end
+World(WebMockWorld)
 
 World(DefiniteArticleHelper)
 World(PathHelper)
