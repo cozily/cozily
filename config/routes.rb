@@ -44,6 +44,10 @@ ActionController::Routing::Routes.draw do |map|
     page.terms_of_service_page "/terms_of_service", :action => "terms_of_service"
   end
 
+  map.namespace :admin do |admin|
+    admin.resources :users
+  end
+
   Clearance::Routes.draw(map)
 
   map.root :controller => "welcome"
