@@ -1,18 +1,13 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :addresses,
-                :collection => { :geocode => :get }
-  map.resources :apartments,
-                :member => { :order_images => :put,
-                             :transition => :put } do |apartment|
+  map.resources :addresses, :collection => { :geocode => :get }
+  map.resources :apartments, :member => { :order_images => :put, :transition => :put } do |apartment|
     apartment.resources :images
-    apartment.resources :conversations, :only => :create
+    apartment.resources :conversations, :only => [ :create ]
   end
-  map.resources :feedback, :only => :create
 
+  map.resources :feedback, :only => [ :create ]
   map.resources :messages
-
-  map.resources :neighborhoods,
-                :collection => { :search => :get }
+  map.resources :neighborhoods, :collection => { :search => :get }
 
   map.resources :neighborhood_profiles, :only => [ :destroy ]
 
