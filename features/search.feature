@@ -1,5 +1,13 @@
 Feature: Search
 
-  Scenario: User searches for an apartment by number of bedrooms
-    Given there are searchable apartments
-    Then searching for apartments yields the correct results
+  Background:
+    Given I am a logged in user
+    And there are searchable apartments
+
+  @javascript
+  Scenario: User searches for an apartment without parameters
+    Then I can search for apartments without parameters
+
+  @javascript
+  Scenario: User searches for an apartment with parameters
+    Then I can search for apartments with parameters
