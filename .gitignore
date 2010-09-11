@@ -1,5 +1,5 @@
 .idea
 log/*.log
 tmp/**/*
-.bundle
+.bundle/
 tmp/restart.txt
