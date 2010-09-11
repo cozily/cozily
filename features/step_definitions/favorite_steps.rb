@@ -2,7 +2,7 @@ Then /^I can favorite the apartment$/ do
   apartment = Apartment.last
   visit apartment_path(apartment)
 
-  page.should_not have_css("a:contains('remove from my favorites')")
+  page.should have_no_css("a:contains('remove from my favorites')")
   click_link "add to my favorites"
 
   click_link "remove from my favorites"

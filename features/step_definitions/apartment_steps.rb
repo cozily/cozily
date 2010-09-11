@@ -26,7 +26,7 @@ end
 
 Then /^I cannot create an apartment$/ do
   visit "/"
-  page.should_not have_css("a:contains('new apartment')")
+  page.should have_no_css("a:contains('new apartment')")
 
   visit new_apartment_path
   current_path.should == "/"
