@@ -1,11 +1,6 @@
 class ApartmentsController < ApplicationController
   load_and_authorize_resource
 
-  def index
-    raise CanCan::AccessDenied unless current_user == User.find(params[:user_id])
-    @apartments = current_user.apartments
-  end
-
   def new
     @apartment = current_user.apartments.create!
     redirect_to edit_apartment_path(@apartment)

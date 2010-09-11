@@ -18,7 +18,6 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resource  :search
   map.resources :users, :controller => 'users', :only => [ :edit, :create, :update ] do |user|
-    user.resources :apartments, :only => :index
     user.resources :favorites, :only => [ :create, :destroy ]
     user.resources :flags
     user.resource  :profile, :controller => "users/profiles"
