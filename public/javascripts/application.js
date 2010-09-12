@@ -187,7 +187,7 @@ function liveNeighborhoodAutocomplete() {
 
         $("div.apartment li.message a").live("click", function(event) {
             var element = $(event.currentTarget);
-            var div = $("div#message_dialog_" + element.attr('data-apartment-id'));
+            var div = $("div#message_dialog_" + element.attr('data-apartment-id') + ":last");
             var dialog = div.dialog({
                 modal: true,
                 resizable: false,
