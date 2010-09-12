@@ -1,3 +1,5 @@
+var staleMap;
+
 function updateContent(content) {
     var $contentKeyElements = $(content).filter('[data-content-key]');
     $contentKeyElements.each(function() {
@@ -369,6 +371,9 @@ function liveNeighborhoodAutocomplete() {
         $(document).bind('content-received', function(e, content) {
             if (content.map_others) {
                 apartments = JSON.parse(content.map_others);
+                staleMap = true;
+            } else {
+                staleMap = false;
             }
 
             $.each(content, function(key, value) {
@@ -388,7 +393,7 @@ function liveNeighborhoodAutocomplete() {
 
             toggleRoleFields();
             liveNeighborhoodAutocomplete();
-            if ($("div#map_canvas").length > 0) {
+            if ($("div#map_canvas").length > 0 && staleMap) {
                 initializeMap();
             }
         });
