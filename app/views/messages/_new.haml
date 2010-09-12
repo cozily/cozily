@@ -1,8 +1,8 @@
--semantic_form_for [apartment, Conversation.new(:receiver => apartment.user, :body => "Contact Landlord/Agent...")], :html => { :'data-remote' => true } do |form|
+-semantic_form_for [apartment, Conversation.new(:receiver => apartment.user, :body => Message::DEFAULT_BODY)], :html => { :'data-remote' => true } do |form|
   =form.error_messages
 
   -form.inputs do
     =form.input :receiver_id, :as => :hidden
-    =form.input :body, :as => :text, :label => false, :input_html => { :'data-default-value' => "Contact Landlord/Agent..." }
+    =form.input :body, :as => :text, :label => false, :input_html => { :'data-default-value' => Message::DEFAULT_BODY }
   -form.buttons do
     =form.commit_button "Send Message"
