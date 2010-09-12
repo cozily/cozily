@@ -116,7 +116,7 @@ function liveNeighborhoodAutocomplete() {
 
         $("input#q_min_bedrooms").live("blur", function(event) {
             var element = $(event.currentTarget);
-            var count = parseInt(element.val());
+            var count = (element.val().replace(/[^\d]/g, ""));
 
             if (count) {
                 element.val(count + "+ Bedrooms");
@@ -127,7 +127,7 @@ function liveNeighborhoodAutocomplete() {
 
         $("input#q_max_rent").live("blur", function(event) {
             var element = $(event.currentTarget);
-            var count = parseInt(element.val());
+            var count = (element.val().replace(/[^\d]/g, ""));
 
             if (count) {
                 element.val("Under $" + count);

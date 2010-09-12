@@ -42,7 +42,11 @@ Then /^I can search for apartments with parameters$/ do
   current_path.should == search_path
 
   find("#neighborhood_autocomplete").value.should == "Greenpoint"
-  page.should have_content("We couldn't find anything like that.")
+
+  Apartment.with_state(:listed).bedrooms_gte(2).rent_lte(1800).each do |apartment|
+    next unless apartment.neighborhoods.include?(Neighborhood.find_by_name("Greenpoint"))
+    page.should have_content(apartment.street)
+  end
 end
 
 And /^the session should remember my parameters$/ do
@@ -55,5 +59,8 @@ And /^the session should remember my parameters$/ do
   click_button "search"
   current_path.should == search_path
 
-  page.should have_content("We couldn't find anything like that.")
+  Apartment.with_state(:listed).bedrooms_gte(2).rent_lte(1800).each do |apartment|
+    next unless apartment.neighborhoods.include?(Neighborhood.find_by_name("Greenpoint"))
+    page.should have_content(apartment.street)
+  end
 end
