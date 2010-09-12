@@ -9,12 +9,12 @@ class Search
   attr_accessor :page
 
   def initialize(options = {})
-    @min_bedrooms = (options[:min_bedrooms] || 0)
+    @min_bedrooms = (options[:min_bedrooms])
     @max_bedrooms = (options[:max_bedrooms] || 8).to_i
     @min_bathrooms = (options[:min_bathrooms] || 0.5).to_f
     @max_bathrooms = (options[:max_bathrooms] || 5).to_f
     @min_rent = (options[:min_rent] || 1500).to_i
-    @max_rent = (options[:max_rent] || 3000)
+    @max_rent = (options[:max_rent])
     @min_square_footage = (options[:min_square_footage] || 250).to_i
     @max_square_footage = (options[:max_square_footage] || 800).to_i
     @neighborhood_ids = (options[:neighborhood_ids] || []).collect {|n| n.to_i}

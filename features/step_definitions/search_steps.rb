@@ -22,18 +22,38 @@ Then /^I can search for apartments with parameters$/ do
   fill_in "q_min_bedrooms", :with => "2"
   fill_in "q_max_rent", :with => "1800"
 
-  page.driver.browser.execute_script("$('input#q_min_bedrooms').blur()");
-  page.driver.browser.execute_script("$('input#q_max_rent').blur()");
+  click_button "search"
 
+  find("#q_min_bedrooms").value.should == "2+ Bedrooms"
+  find("#q_max_rent").value.should == "Under $1800"
+  current_path.should == search_path
+
+  Apartment.with_state(:listed).bedrooms_gte(2).rent_lte(1800).each do |apartment|
+    page.should have_content(apartment.street)
+  end
+
+  fill_in "neighborhood_autocomplete", :with => "Green"
   sleep 1
 
+  page.driver.browser.execute_script(%Q{$("a.ui-corner-all:first").eq(0).mouseenter().click()})
+  find("#neighborhood_autocomplete").value.should == "Greenpoint"
+
+  click_button "search"
+  current_path.should == search_path
+
+  find("#neighborhood_autocomplete").value.should == "Greenpoint"
+  page.should have_content("We couldn't find anything like that.")
+end
+
+And /^the session should remember my parameters$/ do
+  visit root_path
+
+  find("#neighborhood_autocomplete").value.should == "Greenpoint"
   find("#q_min_bedrooms").value.should == "2+ Bedrooms"
   find("#q_max_rent").value.should == "Under $1800"
 
   click_button "search"
   current_path.should == search_path
 
-  Apartment.with_state(:listed).bedrooms_gte(2).rent_lte(1800).each do |apartment|
-    page.should have_content(apartment.street)
-  end
+  page.should have_content("We couldn't find anything like that.")
 end

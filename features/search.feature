@@ -11,3 +11,4 @@ Feature: Search
   @javascript
   Scenario: User searches for an apartment with parameters
     Then I can search for apartments with parameters
+    And the session should remember my parameters

@@ -134,6 +134,8 @@ function liveNeighborhoodAutocomplete() {
             }
         });
 
+        $("input#q_min_bedrooms, input#q_max_rent").blur();
+
         liveNeighborhoodAutocomplete();
 
         $("[data-default-value]").live("click", function(event) {

@@ -1,22 +1,22 @@
 class SearchesController < ApplicationController
   def show
-    @search = if params[:q].present?
-      params[:q][:min_bedrooms] = if(bedrooms = params[:q][:min_bedrooms].scan(/\d+/))
+    if params[:q].present?
+      session[:neighborhood_ids] = params[:q][:neighborhood_ids]
+
+      session[:min_bedrooms] = if (bedrooms = params[:q][:min_bedrooms].scan(/\d+/))
         bedrooms[0]
       else
         nil
       end
 
-      params[:q][:max_rent] = if(rent = params[:q][:max_rent].scan(/\d+/))
+      session[:max_rent] = if (rent = params[:q][:max_rent].scan(/\d+/))
         rent[0]
       else
         nil
       end
-
-      Search.new(params[:q].merge(:page => params[:page]))
-    else
-      Search.new
     end
+
+    load_search
 
     respond_to do |format|
       format.html {}

@@ -7,6 +7,8 @@ class ApplicationController < ActionController::Base
 
   geocode_ip_address
 
+  before_filter :load_search
+
   rescue_from CanCan::AccessDenied do |exception|
     flash[:error] = exception.message
     redirect_to root_url
@@ -42,4 +44,10 @@ class ApplicationController < ActionController::Base
     true
   end
 
+  def load_search
+    @search = Search.new(:neighborhood_ids => session[:neighborhood_ids],
+                         :min_bedrooms => session[:min_bedrooms],
+                         :max_rent => session[:max_rent],
+                         :page => params[:page])
+  end
 end

@@ -45,8 +45,8 @@
         .container
           %h2 Find Apartments
 
-          -form_for :q, Search.new(:min_bedrooms => "All # Bedrooms", :max_rent => "All Prices"), :url => search_path, :html => {:method => :get, :class => 'search'} do |f|
-            =text_field_tag :neighborhood_autocomplete, "All Neighborhoods", :'data-default-value' => "All Neighborhoods"
+          -form_for :q, @search, :url => search_path, :html => {:method => :get, :class => 'search'} do |f|
+            =text_field_tag :neighborhood_autocomplete, neighborhood_search_text, :'data-default-value' => "All Neighborhoods"
             =f.text_field :min_bedrooms, :'data-default-value' => "All # Bedrooms"
             =f.text_field :max_rent, :'data-default-value' => "All Prices"
             =f.hidden_field :neighborhood_ids
