@@ -336,3 +336,30 @@ body.dashboard, body.searches, body.neighborhoods.show {
         }
     }
 }
+
+div.message_dialog {
+    display: none;
+
+    p {
+        margin: 3px 0 10px;
+        font-weight: 600;
+    }
+
+    form.formtastic.conversation {
+        li {
+            margin: 0;
+        }
+
+        textarea {
+            height: 125px;
+            width: 100%;
+            padding: 5px;
+        }
+    }
+}
+
+div.ui-dialog {
+    div.ui-dialog-buttonpane {
+        text-align: right;
+    }
+}

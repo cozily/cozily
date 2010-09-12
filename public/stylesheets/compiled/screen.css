@@ -1243,6 +1243,31 @@ body.dashboard div.aside div#activity_feed ul li.message.created, body.searches 
   background: url(/images/icons/message.png) no-repeat 0 2px;
 }
 
+/* line 340, ../../../app/stylesheets/partials/_dashboard.scss */
+div.message_dialog {
+  display: none;
+}
+/* line 343, ../../../app/stylesheets/partials/_dashboard.scss */
+div.message_dialog p {
+  margin: 3px 0 10px;
+  font-weight: 600;
+}
+/* line 349, ../../../app/stylesheets/partials/_dashboard.scss */
+div.message_dialog form.formtastic.conversation li {
+  margin: 0;
+}
+/* line 353, ../../../app/stylesheets/partials/_dashboard.scss */
+div.message_dialog form.formtastic.conversation textarea {
+  height: 125px;
+  width: 100%;
+  padding: 5px;
+}
+
+/* line 362, ../../../app/stylesheets/partials/_dashboard.scss */
+div.ui-dialog div.ui-dialog-buttonpane {
+  text-align: right;
+}
+
 /* line 2, ../../../app/stylesheets/partials/_messages.scss */
 body.dashboard div.conversations {
   margin: 0 10px;

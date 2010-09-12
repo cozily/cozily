@@ -185,6 +185,31 @@ function liveNeighborhoodAutocomplete() {
             $.scrollTo("div#message_" + message_id, 800);
         }
 
+        $("div.apartment li.message a").live("click", function(event) {
+            var element = $(event.currentTarget);
+            var div = $("div#message_dialog_" + element.attr('data-apartment-id'));
+            var dialog = div.dialog({
+                modal: true,
+                resizable: false,
+                width: 400,
+                height: 325,
+                buttons: {
+                    'Cancel': function() {
+                        $(this).dialog('close');
+                    },
+
+                    'Send': function() {
+                        if (div.find('textarea').val() != '') {
+                            div.find("form").submit();
+                        }
+                        $(this).dialog('close');
+                    }
+                }
+            });
+
+            div.css("height", "175px");
+        });
+
         if ($("a[data-upload-path]").length > 0) {
             new AjaxUpload('upload', {
                 action: $("a[data-upload-path]").attr('data-upload-path'),

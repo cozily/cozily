@@ -1,0 +1,9 @@
+.message_dialog{:title => "Message about #{apartment.street}", :id => "message_dialog_#{apartment.id}"}
+  %p Contact Landlord
+
+  -semantic_form_for [apartment, Conversation.new(:receiver => apartment.user)], :html => { :'data-remote' => true } do |form|
+    =form.error_messages
+
+    -form.inputs do
+      =form.input :receiver_id, :as => :hidden
+      =form.input :body, :as => :text, :label => false
