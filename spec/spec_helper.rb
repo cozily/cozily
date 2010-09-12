@@ -5,8 +5,7 @@ require 'spec/rails'
 
 Dir[File.expand_path(File.join(File.dirname(__FILE__),'support','**','*.rb'))].each {|f| require f}
 
-require 'fakeweb'
-FakeWeb.allow_net_connect = false
+WebMock.disable_net_connect!(:allow_localhost => true)
 
 ["http://maps.google.com/maps/geo?q=546+Henry+St+11231&output=xml&key=ABQIAAAA9wWHEGNCfZW2F9-qCEHgohSNtFT0HrWdEyzoj3osWY55tZjYABRmZkmve1rwY6-nWvpT-N3MZcV_rg&oe=utf-8",
  "http://maps.google.com/maps/geo?q=151+Huron+St+11222&output=xml&key=ABQIAAAA9wWHEGNCfZW2F9-qCEHgohSNtFT0HrWdEyzoj3osWY55tZjYABRmZkmve1rwY6-nWvpT-N3MZcV_rg&oe=utf-8",
@@ -20,7 +19,7 @@ FakeWeb.allow_net_connect = false
  "http://api.yelp.com/neighborhood_search?long=-73.978437&lat=40.779237&ywsid=7a05VXb3EXz850ByvWF90w",
  "http://api.yelp.com/neighborhood_search?lat=40.723535&ywsid=7a05VXb3EXz850ByvWF90w&long=-73.993236",
  "http://api.yelp.com/neighborhood_search?lat=40.68244&long=-74.0003021&ywsid=7a05VXb3EXz850ByvWF90w"].each do |uri|
-  FakeWeb.register_uri(:get, uri, :response => `curl -is "#{uri}"`)
+  WebMock.stub_http_request(:get, uri).to_return(`curl -is "#{uri}"`)
 end
 
 Spec::Runner.configure do |config|
