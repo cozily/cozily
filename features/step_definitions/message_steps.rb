@@ -49,3 +49,19 @@ Then /^I can reply to a message$/ do
   click_button "Reply"
   page.should have_css("div.messages li:contains('Thanks for emailing me')")
 end
+
+Then /^I can message from the dashboard$/ do
+  apartment = Factory(:apartment,
+                      :state => "listed")
+
+  Factory(:favorite,
+          :apartment => apartment,
+          :user => the.user)
+
+  visit dashboard_favorites_path
+  click_link "send message"
+
+  page.should have_content("Message about #{apartment.street}")
+  fill_in "conversation_body", :with => "I am the walrus."
+  click_button "Send"
+end
