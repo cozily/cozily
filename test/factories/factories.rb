@@ -25,8 +25,8 @@ end
 
 Factory.define :conversation do |m|
   m.association  :apartment
-  m.association  :sender, :factory => :user
-  m.association  :receiver, :factory => :user
+  m.association  :sender, :factory => :email_confirmed_user
+  m.association  :receiver, :factory => :email_confirmed_user
   m.body         { Faker::Lorem.paragraph }
 end
 

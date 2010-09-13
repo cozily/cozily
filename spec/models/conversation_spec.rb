@@ -6,7 +6,7 @@ describe Conversation do
   end
 
   it { should have_many(:messages) }
-  
+
   [:apartment, :sender, :receiver].each do |attr|
     it { should validate_presence_of(attr) }
   end
@@ -17,6 +17,13 @@ describe Conversation do
                             :sender => user,
                             :receiver => user)
     conversation.should be_invalid
+  end
+
+  it "should be invalid if the sender hasn't confirmed their email" do
+    user = Factory(:user, :email_confirmed => false)
+    conversation = Factory.build(:conversation, :sender => user)
+    conversation.should be_invalid
+    conversation.should have(1).error_on(:sender)
   end
 
   it "should create a message and after it is created" do

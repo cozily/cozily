@@ -6,6 +6,7 @@ class Conversation < ActiveRecord::Base
 
   validates_presence_of :apartment, :sender, :receiver
   validate :ensure_sender_is_not_receiver
+  validate :ensure_sender_is_email_confirmed, :if => Proc.new { |conversation| conversation.sender.present? }
 
   named_scope :for_user, lambda { |user| { :conditions => ["sender_id = ? OR receiver_id = ?", user.id, user.id] } }
 
@@ -26,6 +27,10 @@ class Conversation < ActiveRecord::Base
   end
 
   private
+  def ensure_sender_is_email_confirmed
+    errors.add(:sender, "must confirm their email") unless sender.email_confirmed?
+  end
+
   def ensure_sender_is_not_receiver
     errors.add_to_base("You can't message yourself") if sender == receiver
   end
