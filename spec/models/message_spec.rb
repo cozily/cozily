@@ -15,8 +15,15 @@ describe Message do
     message.should have(1).error_on(:body)
   end
 
+  it "should be invalid if the sender hasn't confirmed their email" do
+    user = Factory(:user, :email_confirmed => false)
+    message = Factory.build(:message, :sender => user)
+    message.should be_invalid
+    message.should have(1).error_on(:sender)
+  end
+
   it "should e-mail the receiver after create" do
-    conversation = Factory.build(:conversation)
+    conversation = Factory.build(:message)
     MessageMailer.should_receive(:deliver_receiver_notification)
     conversation.save
   end
