@@ -44,6 +44,9 @@
     -
       lat: "40.68244"
       long: "-74.0003021"
+    -
+      lat:
+      long:
 -
   url: http://api.yelp.com/business_review_search
   params:

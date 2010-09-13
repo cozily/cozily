@@ -20,6 +20,7 @@ require 'cucumber/rails/capybara_javascript_emulation' # Lets you click links wi
 require 'factory_girl'
 require 'faker'
 require 'webmock/rspec'
+require File.join(File.dirname(__FILE__), '../../test/webmock_helper.rb')
 
 Dir.glob(File.join(File.dirname(__FILE__), '../../test/factories/*.rb')).each {|f| require f }
 Dir[File.expand_path(File.join(File.dirname(__FILE__), 'helpers', '**', '*.rb'))].each {|f| require f}
