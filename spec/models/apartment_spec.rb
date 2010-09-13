@@ -138,7 +138,7 @@ describe Apartment do
 
   describe "#listable?" do
     before do
-      @user = Factory(:user,
+      @user = Factory(:email_confirmed_user,
                       :phone => "800-555-1212")
       @apartment = Factory(:apartment,
                            :address => Factory.build(:address),
@@ -178,6 +178,11 @@ describe Apartment do
 
     it "returns false when the user doesn't have a phone number" do
       @user.update_attribute(:phone, nil)
+      @apartment.should_not be_listable
+    end
+
+    it "returns false when the user hasn't confirmed their email" do
+      @user.update_attribute(:email_confirmed, false)
       @apartment.should_not be_listable
     end
   end

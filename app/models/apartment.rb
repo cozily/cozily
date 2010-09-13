@@ -152,7 +152,7 @@ class Apartment < ActiveRecord::Base
   end
 
   def valid_user?
-    user && user.phone.present?
+    user && user.phone.present? && user.email_confirmed?
   end
 
   private
