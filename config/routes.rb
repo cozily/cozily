@@ -18,6 +18,8 @@ ActionController::Routing::Routes.draw do |map|
     user.resource  :profile, :controller => "users/profiles"
   end
 
+  map.resource :session, :controller => 'sessions', :only => [ :create ]
+
   map.business_search "yelp/business_search", :controller => "yelp", :action => "business_search"
 
   map.connect 'signup/:action', :controller => 'signup'
