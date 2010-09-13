@@ -24,14 +24,6 @@ Then /^I can create an? (apartment|sublet)$/ do |apartment_or_sublet|
   page.should have_content "balcony"
 end
 
-Then /^I cannot create an apartment$/ do
-  visit "/"
-  page.should have_no_css("a:contains('new apartment')")
-
-  visit new_apartment_path
-  current_path.should == "/"
-end
-
 Then /^I can view the apartment$/ do
   apartment = Apartment.last
   visit apartment_path(apartment)
@@ -112,16 +104,6 @@ Given /^I have an? ?(listed|unlisted)? apartment$/ do |state|
                           :images_count => 2,
                           :state => state || "unlisted")
   the.user.apartments(true).should be_present
-end
-
-Then /^I cannot edit another user's apartment$/ do
-  apartment = Factory(:apartment)
-
-  visit apartment_path(apartment)
-  page.should_not have_content("edit apartment")
-
-  visit edit_apartment_path(apartment)
-  current_path.should == dashboard_listings_path
 end
 
 Then /^I can view my apartments$/ do
