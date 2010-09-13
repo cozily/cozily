@@ -14,7 +14,7 @@ Feature: Sign in
       Given I signed up with "email@person.com/password"
       When I go to the sign in page
       And I sign in as "email@person.com/password"
-      Then I should see "Remember to confirm your email address."
+      Then I should see "remember to confirm your email address"
       And I should be signed in
 
    Scenario: User enters wrong password

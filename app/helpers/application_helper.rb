@@ -15,4 +15,14 @@ module ApplicationHelper
       "All Neighborhoods"
     end
   end
+
+  def lady_text
+    if !current_user.email_confirmed?
+      "Hey #{current_user.first_name}, remember to confirm your email address."
+    elsif action_name == "messages"
+      "Wow #{current_user.first_name}, people really seem to love talking to you!"
+    else
+      "Wow #{current_user.first_name}, that's a fabulous shirt you're wearing."
+    end
+  end
 end

@@ -8,11 +8,7 @@ class SessionsController < Clearance::SessionsController
     else
       sign_in(@user)
       redirect_back_or(url_after_create)
-      if @user.email_confirmed?
-        flash_success_after_create
-      else
-        flash[:notice] = "Remember to confirm your email address."
-      end
+      flash_success_after_create
     end
   end
 end

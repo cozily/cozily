@@ -2,7 +2,7 @@
   %h1==Hi, #{current_user.first_name}
 
   .lady
-    %span=="Wow #{current_user.first_name}, that's a fabulous shirt you're wearing"
+    %span=lady_text
 
   =render "dashboard/tabs", :active => :matches
 
