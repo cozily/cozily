@@ -20,7 +20,8 @@ Feature: Sign up
       And I fill in "Confirm password" with "password"
       And I check "find apartments"
       And I press "Sign up"
-      Then I should see "instructions for confirming"
+      Then I should see "Welcome to Cozily!"
+      And I should see "Welcome to Cozily!"
       And a confirmation message should be sent to "email@person.com"
 
     Scenario: User confirms his account

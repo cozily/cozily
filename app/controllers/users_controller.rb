@@ -14,7 +14,7 @@ class UsersController < Clearance::UsersController
     params[:user].merge!(:roles => params[:role_ids].map { |id| Role.find(id) }) if params[:role_ids].present?
     @user = User.new(params[:user])
     if @user.save
-      flash_notice_after_create
+      flash[:notice] = "Welcome to Cozily!"
       redirect_to(url_after_create)
     else
       render :template => 'users/new'

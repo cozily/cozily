@@ -32,6 +32,7 @@ class SignupController < ApplicationController
     @user = User.new(params[:user].merge(:roles => [Role.find_by_name(session[:want])]))
     if @user.save
       sign_in(@user)
+      flash[:notice] = "Welcome to Cozily!"
       redirect_to dashboard_path
     else
       render "_account"
