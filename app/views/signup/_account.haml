@@ -5,7 +5,7 @@
   -if session[:want] == 'finder'
     .article
       %h1 Almost done!
-      %h2 Just tell us a little more to do.
+      %h2 Just a little more to do.
 
       -semantic_form_for @user, :url => { :controller => "signup", :action => "create" } do |f|
         =render "users/inputs", :f => f
@@ -18,7 +18,7 @@
   -else
     .article
       %h1 Almost done!
-      %h2 Just tell us a little more to do.
+      %h2 Just a little more to do.
 
       -semantic_form_for @user, :url => { :controller => "signup", :action => "create" } do |f|
         -f.inputs do

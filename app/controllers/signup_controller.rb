@@ -6,12 +6,11 @@ class SignupController < ApplicationController
   end
 
   def account
-    if params.has_key?(:profile)
-      session[:profile] = params[:profile]
+    session[:user] = params[:user]
+    if session[:want] == "finder"
       @user = User.new
       render :json => { :account => render_to_string(:partial => "signup/account") }
     else
-      session[:user] = params[:user]
       @user = User.new(params[:user].merge(:roles => [Role.find_by_name("lister")]))
       @user.valid?
       if @user.errors.any? { |attr, msg| attr == "email" || attr == "phone" }
@@ -29,10 +28,9 @@ class SignupController < ApplicationController
   end
 
   def create
-    params[:user].merge!(session[:user]) if session[:user]
+    params[:user].merge!(session[:user])
     @user = User.new(params[:user].merge(:roles => [Role.find_by_name(session[:want])]))
     if @user.save
-      @user.create_profile(session[:profile])
       sign_in(@user)
       redirect_to dashboard_path
     else

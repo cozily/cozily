@@ -76,8 +76,6 @@ body.welcome.index, body.signup.create {
     }
 }
 
-
-
 body.welcome.index, body.signup.create {
     div#body {
         div.container {
@@ -123,7 +121,7 @@ body.welcome.index, body.signup.create {
                         }
                     }
 
-                    form.profile, form.user {
+                    form.formtastic.user {
                         label {
                             width: 300px;
                             text-align: right;
@@ -161,7 +159,7 @@ body.welcome.index, body.signup.create {
                 }
             }
 
-            div.profile div.article form.user, div.account div.article form.user {
+            div.profile div.article.lister form.user, div.account div.article form.formtastic.user {
                 label {
                     width: 200px;
                 }
@@ -170,18 +168,19 @@ body.welcome.index, body.signup.create {
                     width: 350px;
                 }
 
-                input[type=submit] {
-                    width: 210px;
-                }
-
                 fieldset.buttons {
                     padding-left: 220px;
+                    input[type=submit] {
+                        width: 210px;
+                    }
                 }
             }
 
-            div.profile div.article form.user {
-                input[type=submit] {
-                    width: 75px;
+            div.profile div.article.lister form.user {
+                fieldset.buttons {
+                    input[type=submit] {
+                        width: 75px;
+                    }
                 }
             }
         }

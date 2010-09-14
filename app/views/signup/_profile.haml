@@ -1,17 +1,19 @@
 .profile{ :'data-content-key' => 'yield' }
   -if session[:want] == 'finder'
-    .article
+    .article.finder
       %h1 Great! We'll help you find an apartment!
       %h2 Tell us a little about your needs.
 
-      -semantic_form_for Profile.new, :url => { :controller => "signup", :action => "account" }, :html => { :'data-remote' => true } do |f|
-        -f.inputs do
-          =f.input :bedrooms, :label => "How many bedrooms do you need?", :as => :select, :collection => (0..8)
-          =f.input :rent, :label => "How much can you pay?"
-          %li
-            %label{:for => "neighborhood_autocomplete"} Neighborhoods*
-            =text_field_tag "neighborhood_autocomplete", "e.g., Alphabet City", :'data-default-value' => "e.g., Alphabet City"
-            %ul#selected_neighborhoods
+      -semantic_form_for @user, :url => { :controller => "signup", :action => "account" }, :html => { :'data-remote' => true } do |f|
+        -f.object.build_profile unless f.object.profile.present?
+        -f.semantic_fields_for :profile do |profile_fields|
+          -profile_fields.inputs do
+            =profile_fields.input :bedrooms, :label => "How many bedrooms do you need?", :as => :select, :collection => (0..8)
+            =profile_fields.input :rent, :label => "How much can you pay?"
+            %li
+              %label{:for => "neighborhood_autocomplete"} Where do you want to live?
+              =text_field_tag "neighborhood_autocomplete", "e.g., Alphabet City", :'data-default-value' => "e.g., Alphabet City"
+              %ul#selected_neighborhoods
 
         -f.buttons do
           =f.commit_button "Next"
@@ -20,7 +22,7 @@
     =image_tag "characters/man.png", :class => "man", :'data-animate' => 'fade-out-and-shrink'
 
   -else
-    .article
+    .article.lister
       %h1 Great! We'll help you rent your apartment!
       %h2 Tell us a little about yourself.
 

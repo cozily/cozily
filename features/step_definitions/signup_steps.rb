@@ -1,7 +1,20 @@
 Then /^I can sign up as an apartment seeker$/ do
+  Factory(:neighborhood,
+          :name => "Greenpoint",
+          :city => "New York",
+          :state => "NY",
+          :country => "USA",
+          :borough => "Brooklyn")
+
+  visit root_path
+
   page.find("a img.find").click
   select '1', :from => 'How many bedrooms do you need?'
   fill_in 'How much can you pay?', :with => '1500'
+  fill_in "Where do you want to live?", :with => "Green"
+
+  sleep 1
+  page.driver.browser.execute_script(%Q{$("a.ui-corner-all:first").eq(0).mouseenter().click()})
 
   click_button 'Next'
 
@@ -14,6 +27,7 @@ Then /^I can sign up as an apartment seeker$/ do
   click_button 'Sign Up & Start Browsing'
 
   page.should have_content("Hi #{first_name}")
+  page.should have_content("matching 1 bedroom apartments under $1,500 in Greenpoint")
   page.should have_content("Sign out")
 
   page.should have_content("Matches")
