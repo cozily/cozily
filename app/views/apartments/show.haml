@@ -22,10 +22,10 @@
           %h1 Unknown Address
 
     .content
-      -if @apartment.images.present?
-        =image_tag @apartment.images.first.asset.url(:large), :class => "active"
-      -else
-        %img{:src => 'http://www.google.com', :class => "active"}
+      - if @apartment.images.present?
+        = image_tag @apartment.images.first.asset.url(:large), :class => "active"
+      - else
+        = image_tag "defaults/apartment.jpg", :class => "active"
 
       .info
         .demographic
