@@ -1,5 +1,5 @@
 class DashboardController < ApplicationController
-  before_filter :load_events
+  before_filter :authenticate, :load_events
 
   def show
     if current_user.lister?

@@ -1,7 +1,5 @@
 class NeighborhoodsController < ApplicationController
-  def index
-    @neighborhoods = Neighborhood.all
-  end
+  before_filter :authenticate
 
   def show
     @neighborhood = Neighborhood.find(params[:id])

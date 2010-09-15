@@ -1,21 +1,21 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :addresses, :collection => { :geocode => :get }
-  map.resources :apartments, :member => { :order_images => :put, :transition => :put } do |apartment|
-    apartment.resources :images
+  map.resources :apartments, :except => [ :index ], :member => { :order_images => :put, :transition => :put } do |apartment|
+    apartment.resources :images, :only => [ :create, :destroy ]
     apartment.resources :conversations, :only => [ :create ]
   end
 
   map.resources :feedback, :only => [ :create ]
   map.resources :messages
-  map.resources :neighborhoods, :collection => { :search => :get }
+  map.resources :neighborhoods, :only => [ :show ], :collection => { :search => :get }
 
   map.resources :neighborhood_profiles, :only => [ :destroy ]
 
-  map.resource  :search
+  map.resource  :search, :only => [ :show ]
   map.resources :users, :controller => 'users', :only => [ :edit, :create, :update ] do |user|
     user.resources :favorites, :only => [ :create, :destroy ]
-    user.resources :flags
-    user.resource  :profile, :controller => "users/profiles"
+    user.resources :flags, :only => [ :create, :destroy ]
+    user.resource  :profile, :only => [ :edit ], :controller => "users/profiles"
   end
 
   map.resource :session, :controller => 'sessions', :only => [ :create ]
@@ -40,7 +40,7 @@ ActionController::Routing::Routes.draw do |map|
   end
 
   map.namespace :admin do |admin|
-    admin.resources :users
+    admin.resources :users, :only => [ :index ]
   end
 
   Clearance::Routes.draw(map)

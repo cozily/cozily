@@ -8,7 +8,7 @@ feature "authorization" do
     page.should have_no_css("a:contains('new apartment')")
 
     visit new_apartment_path
-    current_path.should == root_path
+    current_path.should == sign_in_path
   end
 
   scenario "user cannot edit another user's apartment" do
@@ -20,6 +20,6 @@ feature "authorization" do
     page.should_not have_content("edit apartment")
 
     visit edit_apartment_path(apartment)
-    current_path.should == dashboard_matches_path
+    current_path.should == dashboard_listings_path
   end
 end

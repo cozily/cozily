@@ -11,7 +11,8 @@ Feature: Apartments
     Then I can create a sublet
 
   Scenario: User views an apartment
-    Given an apartment exists with state: "listed"
+    Given I am a logged in user
+    And an apartment exists with state: "listed"
     Then I can view the apartment
     When an apartment exists with state: "unlisted"
     Then I should see that the apartment is unlisted

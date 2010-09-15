@@ -1,4 +1,6 @@
 class SearchesController < ApplicationController
+  before_filter :authenticate
+
   def show
     if params[:q].present?
       session[:neighborhood_ids] = params[:q][:neighborhood_ids]
