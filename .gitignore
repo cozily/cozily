@@ -3,3 +3,4 @@ log/*.log
 tmp/**/*
 .bundle/
 tmp/restart.txt
+test/webmock/cache/
