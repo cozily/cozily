@@ -24,6 +24,7 @@ class UsersController < Clearance::UsersController
   def update
     params[:user].merge!(:roles => params[:role_ids].map { |id| Role.find(id) }) if params[:role_ids].present?
     if @user.update_attributes(params[:user])
+      @user.profile.neighborhood_profiles.destroy_all if params[:return_to].present? && !params[:user][:profile_attributes][:neighborhood_ids].present?
       redirect_to params[:return_to] || edit_user_path(@user)
     else
       render params[:return_to].present? ? 'users/profiles/edit' : 'edit'

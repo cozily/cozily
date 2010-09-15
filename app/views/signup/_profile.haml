@@ -13,7 +13,7 @@
             %li
               %label{:for => "neighborhood_autocomplete"} Where do you want to live?
               =text_field_tag "neighborhood_autocomplete", "e.g., Alphabet City", :'data-default-value' => "e.g., Alphabet City"
-              %ul#selected_neighborhoods
+              #selected_neighborhoods
 
         -f.buttons do
           =f.commit_button "Next"

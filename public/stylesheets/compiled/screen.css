@@ -793,19 +793,21 @@ body.welcome.index div#body div.container div.profile div.article h2, body.welco
   text-align: center;
 }
 /* line 111, ../../../app/stylesheets/partials/_unauthenticated.scss */
-body.welcome.index div#body div.container div.profile div.article ul#selected_neighborhoods, body.welcome.index div#body div.container div.account div.article ul#selected_neighborhoods, body.signup.create div#body div.container div.profile div.article ul#selected_neighborhoods, body.signup.create div#body div.container div.account div.article ul#selected_neighborhoods {
-  padding-left: 50%;
+body.welcome.index div#body div.container div.profile div.article div#selected_neighborhoods, body.welcome.index div#body div.container div.account div.article div#selected_neighborhoods, body.signup.create div#body div.container div.profile div.article div#selected_neighborhoods, body.signup.create div#body div.container div.account div.article div#selected_neighborhoods {
+  padding-left: 320px;
+  margin: 12px 0 0 0;
+  font-size: 16px;
+  width: 315px;
 }
-/* line 114, ../../../app/stylesheets/partials/_unauthenticated.scss */
-body.welcome.index div#body div.container div.profile div.article ul#selected_neighborhoods li, body.welcome.index div#body div.container div.account div.article ul#selected_neighborhoods li, body.signup.create div#body div.container div.profile div.article ul#selected_neighborhoods li, body.signup.create div#body div.container div.account div.article ul#selected_neighborhoods li {
-  margin: 10px 0 0 0;
+/* line 117, ../../../app/stylesheets/partials/_unauthenticated.scss */
+body.welcome.index div#body div.container div.profile div.article div#selected_neighborhoods div, body.welcome.index div#body div.container div.account div.article div#selected_neighborhoods div, body.signup.create div#body div.container div.profile div.article div#selected_neighborhoods div, body.signup.create div#body div.container div.account div.article div#selected_neighborhoods div {
+  font-weight: 500;
 }
-/* line 115, ../../../app/stylesheets/partials/_unauthenticated.scss */
-body.welcome.index div#body div.container div.profile div.article ul#selected_neighborhoods li a, body.welcome.index div#body div.container div.account div.article ul#selected_neighborhoods li a, body.signup.create div#body div.container div.profile div.article ul#selected_neighborhoods li a, body.signup.create div#body div.container div.account div.article ul#selected_neighborhoods li a {
-  margin-right: 5px;
+/* line 122, ../../../app/stylesheets/partials/_unauthenticated.scss */
+body.welcome.index div#body div.container div.profile div.article div#selected_neighborhoods span a, body.welcome.index div#body div.container div.account div.article div#selected_neighborhoods span a, body.signup.create div#body div.container div.profile div.article div#selected_neighborhoods span a, body.signup.create div#body div.container div.account div.article div#selected_neighborhoods span a {
   color: red;
 }
-/* line 125, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 129, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container div.profile div.article form.formtastic.user label, body.welcome.index div#body div.container div.account div.article form.formtastic.user label, body.signup.create div#body div.container div.profile div.article form.formtastic.user label, body.signup.create div#body div.container div.account div.article form.formtastic.user label {
   width: 300px;
   text-align: right;
@@ -813,16 +815,16 @@ body.welcome.index div#body div.container div.profile div.article form.formtasti
   line-height: 32px;
   font-size: 1.2em;
 }
-/* line 133, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 137, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container div.profile div.article form.formtastic.user select, body.welcome.index div#body div.container div.account div.article form.formtastic.user select, body.signup.create div#body div.container div.profile div.article form.formtastic.user select, body.signup.create div#body div.container div.account div.article form.formtastic.user select {
   margin-top: 10px;
 }
-/* line 137, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 141, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container div.profile div.article form.formtastic.user input[type=text], body.welcome.index div#body div.container div.profile div.article form.formtastic.user input[type=password], body.welcome.index div#body div.container div.account div.article form.formtastic.user input[type=text], body.welcome.index div#body div.container div.account div.article form.formtastic.user input[type=password], body.signup.create div#body div.container div.profile div.article form.formtastic.user input[type=text], body.signup.create div#body div.container div.profile div.article form.formtastic.user input[type=password], body.signup.create div#body div.container div.account div.article form.formtastic.user input[type=text], body.signup.create div#body div.container div.account div.article form.formtastic.user input[type=password] {
   width: 250px;
   height: 35px;
 }
-/* line 142, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 146, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container div.profile div.article form.formtastic.user input[type=submit], body.welcome.index div#body div.container div.account div.article form.formtastic.user input[type=submit], body.signup.create div#body div.container div.profile div.article form.formtastic.user input[type=submit], body.signup.create div#body div.container div.account div.article form.formtastic.user input[type=submit] {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -840,35 +842,35 @@ body.welcome.index div#body div.container div.profile div.article form.formtasti
   border: 1px solid #8EAC46;
   width: 75px;
 }
-/* line 147, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 151, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container div.profile div.article form.formtastic.user fieldset.inputs, body.welcome.index div#body div.container div.account div.article form.formtastic.user fieldset.inputs, body.signup.create div#body div.container div.profile div.article form.formtastic.user fieldset.inputs, body.signup.create div#body div.container div.account div.article form.formtastic.user fieldset.inputs {
   width: 100%;
 }
-/* line 151, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 155, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container div.profile div.article form.formtastic.user fieldset.buttons, body.welcome.index div#body div.container div.account div.article form.formtastic.user fieldset.buttons, body.signup.create div#body div.container div.profile div.article form.formtastic.user fieldset.buttons, body.signup.create div#body div.container div.account div.article form.formtastic.user fieldset.buttons {
   padding-left: 320px;
 }
-/* line 155, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 159, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container div.profile div.article form.formtastic.user div.errorExplanation, body.welcome.index div#body div.container div.account div.article form.formtastic.user div.errorExplanation, body.signup.create div#body div.container div.profile div.article form.formtastic.user div.errorExplanation, body.signup.create div#body div.container div.account div.article form.formtastic.user div.errorExplanation {
   margin: 10px 20px 20px 20px;
 }
-/* line 163, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 167, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container div.profile div.article.lister form.user label, body.welcome.index div#body div.container div.account div.article form.formtastic.user label, body.signup.create div#body div.container div.profile div.article.lister form.user label, body.signup.create div#body div.container div.account div.article form.formtastic.user label {
   width: 200px;
 }
-/* line 167, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 171, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container div.profile div.article.lister form.user input[type=text], body.welcome.index div#body div.container div.profile div.article.lister form.user input[type=password], body.welcome.index div#body div.container div.account div.article form.formtastic.user input[type=text], body.welcome.index div#body div.container div.account div.article form.formtastic.user input[type=password], body.signup.create div#body div.container div.profile div.article.lister form.user input[type=text], body.signup.create div#body div.container div.profile div.article.lister form.user input[type=password], body.signup.create div#body div.container div.account div.article form.formtastic.user input[type=text], body.signup.create div#body div.container div.account div.article form.formtastic.user input[type=password] {
   width: 350px;
 }
-/* line 171, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 175, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container div.profile div.article.lister form.user fieldset.buttons, body.welcome.index div#body div.container div.account div.article form.formtastic.user fieldset.buttons, body.signup.create div#body div.container div.profile div.article.lister form.user fieldset.buttons, body.signup.create div#body div.container div.account div.article form.formtastic.user fieldset.buttons {
   padding-left: 220px;
 }
-/* line 173, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 177, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container div.profile div.article.lister form.user fieldset.buttons input[type=submit], body.welcome.index div#body div.container div.account div.article form.formtastic.user fieldset.buttons input[type=submit], body.signup.create div#body div.container div.profile div.article.lister form.user fieldset.buttons input[type=submit], body.signup.create div#body div.container div.account div.article form.formtastic.user fieldset.buttons input[type=submit] {
   width: 210px;
 }
-/* line 181, ../../../app/stylesheets/partials/_unauthenticated.scss */
+/* line 185, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container div.profile div.article.lister form.user fieldset.buttons input[type=submit], body.signup.create div#body div.container div.profile div.article.lister form.user fieldset.buttons input[type=submit] {
   width: 75px;
 }
@@ -1583,28 +1585,28 @@ body.users.edit form.user legend, body.users.update form.user legend, body.users
   border-bottom: 3px solid black;
 }
 /* line 82, ../../../app/stylesheets/partials/_profile.scss */
-body.users.edit form.user ul#selected_neighborhoods, body.users.update form.user ul#selected_neighborhoods, body.users.new form.user ul#selected_neighborhoods, body.users.create form.user ul#selected_neighborhoods, body.profiles.edit form.user ul#selected_neighborhoods, body.profiles.update form.user ul#selected_neighborhoods {
+body.users.edit form.user div#selected_neighborhoods, body.users.update form.user div#selected_neighborhoods, body.users.new form.user div#selected_neighborhoods, body.users.create form.user div#selected_neighborhoods, body.profiles.edit form.user div#selected_neighborhoods, body.profiles.update form.user div#selected_neighborhoods {
   padding-left: 25%;
-}
-/* line 85, ../../../app/stylesheets/partials/_profile.scss */
-body.users.edit form.user ul#selected_neighborhoods li, body.users.update form.user ul#selected_neighborhoods li, body.users.new form.user ul#selected_neighborhoods li, body.users.create form.user ul#selected_neighborhoods li, body.profiles.edit form.user ul#selected_neighborhoods li, body.profiles.update form.user ul#selected_neighborhoods li {
-  margin: 10px 0 5px 0;
+  margin: 12px 0 5px 0;
 }
 /* line 86, ../../../app/stylesheets/partials/_profile.scss */
-body.users.edit form.user ul#selected_neighborhoods li a, body.users.update form.user ul#selected_neighborhoods li a, body.users.new form.user ul#selected_neighborhoods li a, body.users.create form.user ul#selected_neighborhoods li a, body.profiles.edit form.user ul#selected_neighborhoods li a, body.profiles.update form.user ul#selected_neighborhoods li a {
-  margin-right: 5px;
+body.users.edit form.user div#selected_neighborhoods div, body.users.update form.user div#selected_neighborhoods div, body.users.new form.user div#selected_neighborhoods div, body.users.create form.user div#selected_neighborhoods div, body.profiles.edit form.user div#selected_neighborhoods div, body.profiles.update form.user div#selected_neighborhoods div {
+  font-weight: 500;
+}
+/* line 91, ../../../app/stylesheets/partials/_profile.scss */
+body.users.edit form.user div#selected_neighborhoods span a, body.users.update form.user div#selected_neighborhoods span a, body.users.new form.user div#selected_neighborhoods span a, body.users.create form.user div#selected_neighborhoods span a, body.profiles.edit form.user div#selected_neighborhoods span a, body.profiles.update form.user div#selected_neighborhoods span a {
   color: red;
 }
 
-/* line 98, ../../../app/stylesheets/partials/_profile.scss */
+/* line 100, ../../../app/stylesheets/partials/_profile.scss */
 body.users.edit div[data-content-key=yield], body.users.update div[data-content-key=yield], body.profiles.edit div[data-content-key=yield], body.profiles.update div[data-content-key=yield] {
   padding: 0;
 }
-/* line 102, ../../../app/stylesheets/partials/_profile.scss */
+/* line 104, ../../../app/stylesheets/partials/_profile.scss */
 body.users.edit h2, body.users.update h2, body.profiles.edit h2, body.profiles.update h2 {
   padding: 20px 0 5px 20px;
 }
-/* line 107, ../../../app/stylesheets/partials/_profile.scss */
+/* line 109, ../../../app/stylesheets/partials/_profile.scss */
 body.users.edit div.article form.user, body.users.update div.article form.user, body.profiles.edit div.article form.user, body.profiles.update div.article form.user {
   margin-left: 20px;
 }

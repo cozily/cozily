@@ -20,13 +20,10 @@
         %li
           %label{:for => "neighborhood_autocomplete"} Neighborhoods*
           =text_field_tag "neighborhood_autocomplete", "e.g., Alphabet City", :'data-default-value' => "e.g., Alphabet City"
-          %ul#selected_neighborhoods
-            -if f.object.profile.present?
-              -f.object.profile.neighborhood_profiles.each do |neighborhood_profile|
-                %li.removeable
-                  =link_to "X", neighborhood_profile, :'data-remote' => true, :'data-method' => 'delete'
-                  =neighborhood_profile.neighborhood.name
-                  %input{:type => 'hidden', :name => 'user[profile_attributes][neighborhood_ids][]', :value => neighborhood_profile.neighborhood.id}
+          #selected_neighborhoods
+            -if f.object.profile.neighborhoods.present?
+              %div Selected Neighborhoods
+              =selected_neighborhood_links(f.object.profile.neighborhoods)
 
   %fieldset.lister
     %legend We want to include a phone number with your listings.

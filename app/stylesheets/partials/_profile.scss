@@ -79,16 +79,18 @@ body.users.edit, body.users.update, body.users.new, body.users.create, body.prof
             border-bottom: 3px solid black;
         }
 
-        ul#selected_neighborhoods {
+        div#selected_neighborhoods {
             padding-left: 25%;
+            margin: 12px 0 5px 0;
 
-            li {
+            div {
+                font-weight: 500;
+            }
+
+            span {
                 a {
-                    margin-right: 5px;
                     color: red;
                 }
-
-                margin: 10px 0 5px 0;
             }
         }
     }

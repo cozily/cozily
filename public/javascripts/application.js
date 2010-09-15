@@ -60,9 +60,13 @@ function liveNeighborhoodAutocomplete() {
                 $("input#q_neighborhood_ids").val(ui.item.id);
             } else {
                 if ($("input[name='user[profile_attributes][neighborhood_ids][]'][value='" + ui.item.id + "']").length == 0) {
-                    var remove = "<a href='#' data-remove = 'li'>X</a>&nbsp;"
+                    if ($("div#selected_neighborhoods div") .length == 0) {
+                        $("div#selected_neighborhoods").append("<div>Selected Neighborhoods</div>");
+                    }
+                    var link = "<a href='#' data-remove = 'span'>" + ui.item.label + "</a>"
                     var input = "<input type='hidden' name='user[profile_attributes][neighborhood_ids][]' value='" + ui.item.id + "' />";
-                    $("ul#selected_neighborhoods").append("<li>" + remove + ui.item.label + input + "</li>");
+                    var text = $("div#selected_neighborhoods span").length == 0 ? "<span>" + link + input + "</span>" : "<span>,&nbsp;" + link + input + "</span>";
+                    $("div#selected_neighborhoods").append(text);
                 }
                 $("input#neighborhood_autocomplete").val('');
                 return false;
@@ -163,6 +167,15 @@ function liveNeighborhoodAutocomplete() {
         $("[data-remove]").live("click", function(event) {
             var element = $(event.currentTarget);
             element.closest(element.attr('data-remove')).remove();
+
+            var spans = $("div#selected_neighborhoods span").length;
+            if(spans == 0) {
+                $("div#selected_neighborhoods").html('');
+            } else if (spans == 1) {
+                var html = $("div#selected_neighborhoods").html();
+                $("div#selected_neighborhoods").html(html.replace(",&nbsp;", ""));
+            }
+
             return false;
         });
 

@@ -108,16 +108,20 @@ body.welcome.index, body.signup.create {
 
             div.profile, div.account {
                 div.article {
-                    ul#selected_neighborhoods {
-                        padding-left: 50%;
+                    div#selected_neighborhoods {
+                        padding-left: 320px;
+                        margin: 12px 0 0 0;
+                        font-size: 16px;
+                        width: 315px;
 
-                        li {
+                        div {
+                            font-weight: 500;
+                        }
+
+                        span {
                             a {
-                                margin-right: 5px;
                                 color: red;
                             }
-
-                            margin: 10px 0 0 0;
                         }
                     }
 
