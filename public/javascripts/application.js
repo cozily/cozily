@@ -186,6 +186,7 @@ function liveNeighborhoodAutocomplete() {
 
         $("div.conversations ul.conversation").live("click", function(event) {
             $(event.currentTarget).parent("div").next("div").slideToggle(150);
+            $(event.currentTarget).find("li.status").removeClass("new");
             return false;
         });
 

@@ -6,7 +6,12 @@ WEBMOCK_SITES.each do |site|
     base_url = site["url"]
     querystring = site["params"].merge(query)
     url = "#{base_url}?#{querystring.to_query}"
-    hash = Digest::MD5.hexdigest(url)
-    WebMock.stub_http_request(:get, base_url).with(:query => querystring).to_return(`curl -is "#{url}"`)
+    if ENV["OFFLINE"]
+      hash = Digest::MD5.hexdigest(url)
+      response = File.read("#{Rails.root}/test/webmock/cache/#{hash}")
+      WebMock.stub_http_request(:get, base_url).with(:query => querystring).to_return(response)
+    else
+      WebMock.stub_http_request(:get, base_url).with(:query => querystring).to_return(`curl -is "#{url}"`)
+    end
   end
 end
