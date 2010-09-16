@@ -60,13 +60,10 @@ function liveNeighborhoodAutocomplete() {
                 $("input#q_neighborhood_ids").val(ui.item.id);
             } else {
                 if ($("input[name='user[profile_attributes][neighborhood_ids][]'][value='" + ui.item.id + "']").length == 0) {
-                    if ($("div#selected_neighborhoods div") .length == 0) {
-                        $("div#selected_neighborhoods").append("<div>Selected Neighborhoods</div>");
-                    }
                     var link = "<a href='#' data-remove = 'span'>" + ui.item.label + "</a>"
                     var input = "<input type='hidden' name='user[profile_attributes][neighborhood_ids][]' value='" + ui.item.id + "' />";
-                    var text = $("div#selected_neighborhoods span").length == 0 ? "<span>" + link + input + "</span>" : "<span>,&nbsp;" + link + input + "</span>";
-                    $("div#selected_neighborhoods").append(text);
+                    $("div#selected_neighborhoods").append("<span>" + link + input + "</span>");
+                    $("div#selected_neighborhoods").trigger("selected_neighborhood::change");
                 }
                 $("input#neighborhood_autocomplete").val('');
                 return false;
@@ -168,13 +165,7 @@ function liveNeighborhoodAutocomplete() {
             var element = $(event.currentTarget);
             element.closest(element.attr('data-remove')).remove();
 
-            var spans = $("div#selected_neighborhoods span").length;
-            if(spans == 0) {
-                $("div#selected_neighborhoods").html('');
-            } else if (spans == 1) {
-                var html = $("div#selected_neighborhoods").html();
-                $("div#selected_neighborhoods").html(html.replace(",&nbsp;", ""));
-            }
+            $("div#selected_neighborhoods").trigger("selected_neighborhood::change");
 
             return false;
         });
@@ -262,6 +253,29 @@ function liveNeighborhoodAutocomplete() {
                     url: "/apartments/" + self.apartment.id + "/order_images"});
             }
         });
+
+        $(document).bind("selected_neighborhood::change", function(event) {
+            var div = $(event.target);
+            var spans = div.find("span");
+
+            div.html('');
+            if (spans.length > 0) {
+                div.append("<div>Selected Neighborhoods</div>");
+            }
+
+            for (var i = 0; i < spans.length; i++) {
+                div.append(spans.eq(i));
+                if (i != spans.length - 1) {
+                    div.append(", ");
+                }
+            }
+
+            if(div.is(':hidden')) {
+                div.show('slide');
+            }
+        });
+
+        $("div#selected_neighborhoods").trigger("selected_neighborhood::change");
 
         $('.feedback').tabSlideOut({
             tabHandle: '.handle',                     //class of the element that will become your tab

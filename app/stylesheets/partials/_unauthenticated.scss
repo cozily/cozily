@@ -109,6 +109,7 @@ body.welcome.index, body.signup.create {
             div.profile, div.account {
                 div.article {
                     div#selected_neighborhoods {
+                        display: none;
                         padding-left: 320px;
                         margin: 12px 0 0 0;
                         font-size: 16px;
