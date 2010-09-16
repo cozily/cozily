@@ -210,6 +210,59 @@ describe Apartment do
     end
   end
 
+  describe "#match_for?" do
+    before do
+      @apartment = Factory(:apartment,
+                           :rent => 1800,
+                           :bedrooms => 1)
+      @user = Factory(:user)
+      @profile = Factory(:profile,
+                         :user => @user,
+                         :bedrooms => 1,
+                         :rent => 1800,
+                         :neighborhoods => [@apartment.neighborhoods.first])
+    end
+
+    it "returns true when the apartment matches the user's profile" do
+      @apartment.match_for?(@user).should be_true
+    end
+
+    it "returns true when the user hasn't specified rent" do
+      @profile.update_attribute(:rent, nil)
+      @apartment.match_for?(@user).should be_true
+    end
+
+    it "returns true when the user hasn't specified bedrooms" do
+      @profile.update_attribute(:bedrooms, nil)
+      @apartment.match_for?(@user).should be_true
+    end
+
+    it "returns true when the user hasn't specified neighborhoods" do
+      @profile.update_attribute(:neighborhoods, [])
+      @apartment.match_for?(@user).should be_true
+    end
+
+    it "returns false when the apartment does not match the user's rent" do
+      @apartment.update_attribute(:rent, 1801)
+      @apartment.match_for?(@user).should be_false
+    end
+
+    it "returns true when the apartment does not match the user's bedrooms" do
+      @apartment.update_attribute(:bedrooms, 0)
+      @apartment.match_for?(@user).should be_false
+    end
+
+    it "returns true when the apartment matches the user's neighborhoods" do
+      @apartment.update_attribute(:address, Factory(:address))
+      @apartment.reload.match_for?(@user).should be_false
+    end
+
+    it "returns false when the user doesn't have a profile" do
+      @profile.destroy
+      @apartment.match_for?(@user).should be_false
+    end
+  end
+
   describe "#name" do
     it "should join address and unit" do
       @apartment = Factory(:apartment)

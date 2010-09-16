@@ -147,6 +147,14 @@ class Apartment < ActiveRecord::Base
     subject_timeline_events.event_type_equals("state_changed_to_listed").first.try(:created_at)
   end
 
+  def match_for?(user)
+    return false unless user.profile
+
+    ( user.profile.bedrooms.blank? || bedrooms >= user.profile.bedrooms ) &&
+            ( user.profile.rent.blank? || rent <= user.profile.rent ) &&
+            ( user.profile.neighborhoods.empty? || (neighborhoods & user.profile.neighborhoods).present? )
+  end
+
   def valid_sublet?
     !sublet || (start_date.present? && end_date.present?)
   end
