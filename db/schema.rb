@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100917044816) do
+ActiveRecord::Schema.define(:version => 20100917145103) do
 
   create_table "address_neighborhoods", :force => true do |t|
     t.integer  "address_id"
@@ -119,6 +119,14 @@ ActiveRecord::Schema.define(:version => 20100917044816) do
     t.string   "state"
     t.string   "country"
     t.string   "borough"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "notifications", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "apartment_id"
+    t.string   "type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

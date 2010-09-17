@@ -49,8 +49,12 @@ class Apartment < ActiveRecord::Base
       end
 
       User.finder.receive_match_notifications.email_confirmed.each do |user|
-        next if user == apt.user
-        MatchMailer.deliver_new_match_notification(apt, user) if apt.match_for?(user)
+        next if user == apt.user || user.has_received_match_notification_for?(apt)
+
+        if apt.match_for?(user)
+          MatchMailer.deliver_new_match_notification(apt, user)
+          MatchNotification.create(:user => user, :apartment => apt)
+        end
       end
     end
 

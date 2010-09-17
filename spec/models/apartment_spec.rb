@@ -199,6 +199,12 @@ describe Apartment do
       @apartment.list!
     end
 
+    it "creates a MatchNotification record for the user and apartment" do
+      lambda {
+        @apartment.list!
+      }.should change(MatchNotification, :count).by(1)
+    end
+
     it "does not email matching users who have not confirmed their email" do
       @user.update_attribute(:email_confirmed, false)
       MatchMailer.should_not_receive(:deliver_new_match_notification)
@@ -207,6 +213,12 @@ describe Apartment do
 
     it "does not email matching users who do not want to be emailed" do
       @user.update_attribute(:receive_match_notifications, false)
+      MatchMailer.should_not_receive(:deliver_new_match_notification)
+      @apartment.list!
+    end
+
+    it "does not email matching users who have already been emailed" do
+      MatchNotification.create(:user => @user, :apartment => @apartment)
       MatchMailer.should_not_receive(:deliver_new_match_notification)
       @apartment.list!
     end

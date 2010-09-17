@@ -40,6 +40,10 @@ class User < ActiveRecord::Base
     [first_name, last_name].join(" ")
   end
 
+  def has_received_match_notification_for?(apartment)
+    MatchNotification.exists?(:user_id => self.id, :apartment_id => apartment.id)
+  end
+
   def lister?
     role_symbols.include?(:lister) || apartments.present?
   end

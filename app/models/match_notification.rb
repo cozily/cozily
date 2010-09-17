@@ -1,0 +1,2 @@
+class MatchNotification < Notification
+end
