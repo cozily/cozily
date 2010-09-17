@@ -2,7 +2,7 @@ include NeighborhoodsHelper
 
 module UsersHelper
   def profile_summary(profile)
-    summary = ["* matching"]
+    summary = ["matching"]
     summary << if profile.try(:bedrooms)
       "#{profile.bedrooms.prettify} bedroom apartments"
     else

@@ -56,7 +56,7 @@
       #breadcrumbs
         -if current_user.try(:finder?)
           .profile_summary
-            =profile_summary(current_user.profile)
+            ==* #{profile_summary(current_user.profile)}
             %span=link_to("update", edit_user_profile_path(current_user))
 
     #body
