@@ -271,7 +271,7 @@ function liveNeighborhoodAutocomplete() {
             }
 
             if(div.is(':hidden')) {
-                div.show('slide');
+                div.fadeIn();
             }
         });
 

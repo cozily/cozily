@@ -24,9 +24,10 @@
             -if f.object.profile.neighborhoods.present?
               %div Selected Neighborhoods
               =selected_neighborhood_links(f.object.profile.neighborhoods)
+        - unless f.object.new_record?
+          = f.input :receive_match_notifications, :label => "Receive email notifications about new matches"
 
   %fieldset.lister
     %legend We want to include a phone number with your listings.
     -f.inputs do
       =f.input :phone
-

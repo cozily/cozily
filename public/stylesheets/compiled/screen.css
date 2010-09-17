@@ -1589,7 +1589,7 @@ body.users.edit form.user legend, body.users.update form.user legend, body.users
 body.users.edit form.user div#selected_neighborhoods, body.users.update form.user div#selected_neighborhoods, body.users.new form.user div#selected_neighborhoods, body.users.create form.user div#selected_neighborhoods, body.profiles.edit form.user div#selected_neighborhoods, body.profiles.update form.user div#selected_neighborhoods {
   display: none;
   padding-left: 25%;
-  margin: 12px 0 5px 0;
+  margin: 12px 0 0 0;
 }
 /* line 87, ../../../app/stylesheets/partials/_profile.scss */
 body.users.edit form.user div#selected_neighborhoods div, body.users.update form.user div#selected_neighborhoods div, body.users.new form.user div#selected_neighborhoods div, body.users.create form.user div#selected_neighborhoods div, body.profiles.edit form.user div#selected_neighborhoods div, body.profiles.update form.user div#selected_neighborhoods div {
@@ -1599,16 +1599,20 @@ body.users.edit form.user div#selected_neighborhoods div, body.users.update form
 body.users.edit form.user div#selected_neighborhoods span a, body.users.update form.user div#selected_neighborhoods span a, body.users.new form.user div#selected_neighborhoods span a, body.users.create form.user div#selected_neighborhoods span a, body.profiles.edit form.user div#selected_neighborhoods span a, body.profiles.update form.user div#selected_neighborhoods span a {
   color: red;
 }
+/* line 98, ../../../app/stylesheets/partials/_profile.scss */
+body.users.edit form.user li#user_receive_match_notifications_input, body.users.update form.user li#user_receive_match_notifications_input, body.users.new form.user li#user_receive_match_notifications_input, body.users.create form.user li#user_receive_match_notifications_input, body.profiles.edit form.user li#user_receive_match_notifications_input, body.profiles.update form.user li#user_receive_match_notifications_input {
+  padding-top: 10px;
+}
 
-/* line 101, ../../../app/stylesheets/partials/_profile.scss */
+/* line 105, ../../../app/stylesheets/partials/_profile.scss */
 body.users.edit div[data-content-key=yield], body.users.update div[data-content-key=yield], body.profiles.edit div[data-content-key=yield], body.profiles.update div[data-content-key=yield] {
   padding: 0;
 }
-/* line 105, ../../../app/stylesheets/partials/_profile.scss */
+/* line 109, ../../../app/stylesheets/partials/_profile.scss */
 body.users.edit h2, body.users.update h2, body.profiles.edit h2, body.profiles.update h2 {
   padding: 20px 0 5px 20px;
 }
-/* line 110, ../../../app/stylesheets/partials/_profile.scss */
+/* line 114, ../../../app/stylesheets/partials/_profile.scss */
 body.users.edit div.article form.user, body.users.update div.article form.user, body.profiles.edit div.article form.user, body.profiles.update div.article form.user {
   margin-left: 20px;
 }

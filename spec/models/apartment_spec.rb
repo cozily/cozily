@@ -191,15 +191,28 @@ describe Apartment do
     before do
       @user, @apartment = Factory(:email_confirmed_user), Factory(:apartment)
       @apartment.should_receive(:listable?).and_return(true)
+      @apartment.stub!(:match_for?).and_return(true)
     end
 
     it "emails matching users when the apartment is listed" do
-      @apartment.stub!(:match_for?).and_return(true)
       MatchMailer.should_receive(:deliver_new_match_notification).with(@apartment, @user)
       @apartment.list!
     end
 
+    it "does not email matching users who have not confirmed their email" do
+      @user.update_attribute(:email_confirmed, false)
+      MatchMailer.should_not_receive(:deliver_new_match_notification)
+      @apartment.list!
+    end
+
+    it "does not email matching users who do not want to be emailed" do
+      @user.update_attribute(:receive_match_notifications, false)
+      MatchMailer.should_not_receive(:deliver_new_match_notification)
+      @apartment.list!
+    end
+
     it "does not email non-matching users when the apartment is listed" do
+      @apartment.stub!(:match_for?).and_return(false)
       MatchMailer.should_not_receive(:deliver_new_match_notification)
       @apartment.list!
     end

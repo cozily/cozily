@@ -24,6 +24,7 @@ class User < ActiveRecord::Base
   accepts_nested_attributes_for :profile
 
   named_scope :email_confirmed, :conditions => { :email_confirmed => true }
+  named_scope :receive_match_notifications, :conditions => { :receive_match_notifications => true }
 
   class << self
     def finder

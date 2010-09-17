@@ -82,7 +82,7 @@ body.users.edit, body.users.update, body.users.new, body.users.create, body.prof
         div#selected_neighborhoods {
             display: none;
             padding-left: 25%;
-            margin: 12px 0 5px 0;
+            margin: 12px 0 0 0;
 
             div {
                 font-weight: 500;
@@ -93,6 +93,10 @@ body.users.edit, body.users.update, body.users.new, body.users.create, body.prof
                     color: red;
                 }
             }
+        }
+
+        li#user_receive_match_notifications_input {
+            padding-top: 10px;
         }
     }
 }
