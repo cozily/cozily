@@ -23,6 +23,14 @@ class User < ActiveRecord::Base
 
   accepts_nested_attributes_for :profile
 
+  named_scope :email_confirmed, :conditions => { :email_confirmed => true }
+
+  class << self
+    def finder
+      User.scoped( { :joins => :roles, :conditions => [ "roles.id = ?", Role.find_by_name("finder") ] } )
+    end
+  end
+
   def finder?
     role_symbols.include?(:finder) || role_symbols.empty?
   end

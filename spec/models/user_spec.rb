@@ -35,6 +35,23 @@ describe User do
     end
   end
 
+  describe ".finder" do
+    before do
+      @user = Factory(:user)
+      @user.roles << Role.find_by_name("lister")
+      @user.roles.should include(Role.find_by_name("finder"))
+    end
+
+    it "returns users that have the finder role" do
+      User.finder.should == [@user]
+    end
+
+    it "does not return users that do not have the finder role" do
+      UserRole.find_by_user_id_and_role_id(@user.id, Role.find_by_name("finder").id).destroy
+      User.finder.should == []
+    end
+  end
+
   describe "#matches" do
     before do
       @apt1 = Factory(:apartment,

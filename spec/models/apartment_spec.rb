@@ -187,6 +187,24 @@ describe Apartment do
     end
   end
 
+  describe "#list!" do
+    before do
+      @user, @apartment = Factory(:email_confirmed_user), Factory(:apartment)
+      @apartment.should_receive(:listable?).and_return(true)
+    end
+
+    it "emails matching users when the apartment is listed" do
+      @apartment.stub!(:match_for?).and_return(true)
+      MatchMailer.should_receive(:deliver_new_match_notification).with(@apartment, @user)
+      @apartment.list!
+    end
+
+    it "does not email non-matching users when the apartment is listed" do
+      MatchMailer.should_not_receive(:deliver_new_match_notification)
+      @apartment.list!
+    end
+  end
+
   describe "#listed_on" do
     before do
       @apartment = Factory(:apartment)

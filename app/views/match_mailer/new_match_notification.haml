@@ -1,0 +1,10 @@
+=@apartment.name
+
+==--------------------
+==A new apartment in #{@apartment.neighborhoods.map(&:name).to_sentence} was listed on Cozily...
+
+==--------------------
+
+
+To view this listing, follow the link below:
+=url_for({:controller => 'apartments', :action => 'show', :id => @apartment.to_param, :host => "cozi.ly"})
