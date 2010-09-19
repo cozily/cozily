@@ -10,8 +10,13 @@ class ApplicationController < ActionController::Base
   before_filter :load_search
 
   rescue_from CanCan::AccessDenied do |exception|
-    flash[:error] = exception.message
+    flash[:failure] = exception.message
     redirect_to root_url
+  end
+
+  rescue_from FriendlyId::BlankError do
+    flash[:failure] = "The apartment needs an address."
+    redirect_to :back
   end
 
   def render_optional_error_file(status_code)
