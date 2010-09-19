@@ -193,6 +193,14 @@ div#flash, div#loading {
   }
 }
 
+div#loading {
+    span {
+        background-image: url('/images/spinner.gif');
+        background-repeat: no-repeat;
+        padding-left: 36px;
+    }
+}
+
 div#body {
   div.container {
     div.internal_error {
