@@ -194,10 +194,13 @@ div#flash, div#loading {
 }
 
 div#loading {
+    display:block;
     span {
         background-image: url('/images/spinner.gif');
         background-repeat: no-repeat;
-        padding-left: 36px;
+        background-position: 1;
+        padding: 6px 12px 6px 38px;
+        line-height: 30px;
     }
 }
 

@@ -543,38 +543,44 @@ div#flash span, div#loading span {
   font-style: italic;
 }
 
-/* line 197, ../../../app/stylesheets/partials/_application.scss */
+/* line 196, ../../../app/stylesheets/partials/_application.scss */
+div#loading {
+  display: block;
+}
+/* line 198, ../../../app/stylesheets/partials/_application.scss */
 div#loading span {
   background-image: url("/images/spinner.gif");
   background-repeat: no-repeat;
-  padding-left: 36px;
+  background-position: 1;
+  padding: 6px 12px 6px 38px;
+  line-height: 30px;
 }
 
-/* line 206, ../../../app/stylesheets/partials/_application.scss */
+/* line 209, ../../../app/stylesheets/partials/_application.scss */
 div#body div.container div.internal_error {
   margin: 50px 20px 0 20px;
 }
-/* line 210, ../../../app/stylesheets/partials/_application.scss */
+/* line 213, ../../../app/stylesheets/partials/_application.scss */
 div#body div.container div#four_oh_four {
   background: url(/images/characters/lady.png) no-repeat;
   height: 400px;
 }
-/* line 213, ../../../app/stylesheets/partials/_application.scss */
+/* line 216, ../../../app/stylesheets/partials/_application.scss */
 div#body div.container div#four_oh_four h1, div#body div.container div#four_oh_four h2 {
   padding-left: 200px;
 }
-/* line 218, ../../../app/stylesheets/partials/_application.scss */
+/* line 221, ../../../app/stylesheets/partials/_application.scss */
 div#body div.container div#five_hundred {
   background: url(/images/characters/man.png) no-repeat;
   background-position: right top;
   height: 400px;
 }
-/* line 222, ../../../app/stylesheets/partials/_application.scss */
+/* line 225, ../../../app/stylesheets/partials/_application.scss */
 div#body div.container div#five_hundred h1, div#body div.container div#five_hundred h2 {
   padding-right: 200px;
 }
 
-/* line 230, ../../../app/stylesheets/partials/_application.scss */
+/* line 233, ../../../app/stylesheets/partials/_application.scss */
 form.formtastic div.errorExplanation {
   border: 1px solid red;
   background-color: pink;
@@ -587,20 +593,20 @@ form.formtastic div.errorExplanation {
   -khtml-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 237, ../../../app/stylesheets/partials/_application.scss */
+/* line 240, ../../../app/stylesheets/partials/_application.scss */
 form.formtastic div.errorExplanation h2 {
   display: none;
 }
-/* line 241, ../../../app/stylesheets/partials/_application.scss */
+/* line 244, ../../../app/stylesheets/partials/_application.scss */
 form.formtastic div.errorExplanation ul {
   list-style-type: disc;
   margin: 5px 0 5px 30px;
 }
-/* line 248, ../../../app/stylesheets/partials/_application.scss */
+/* line 251, ../../../app/stylesheets/partials/_application.scss */
 form.formtastic li.error input {
   border: 1px solid red;
 }
-/* line 252, ../../../app/stylesheets/partials/_application.scss */
+/* line 255, ../../../app/stylesheets/partials/_application.scss */
 form.formtastic li.error p.inline-errors {
   display: none;
 }
