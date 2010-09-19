@@ -449,6 +449,8 @@ function liveNeighborhoodAutocomplete() {
             if ($("div#map_canvas").length > 0 && staleMap) {
                 initializeMap();
             }
+
+            $("div#selected_neighborhoods").trigger("selected_neighborhood::change");
         });
 
         $(document).bind('ajaxStart', function() {
