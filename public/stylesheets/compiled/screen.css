@@ -543,11 +543,7 @@ div#flash span, div#loading span {
   font-style: italic;
 }
 
-/* line 196, ../../../app/stylesheets/partials/_application.scss */
-div#loading {
-  display: block;
-}
-/* line 198, ../../../app/stylesheets/partials/_application.scss */
+/* line 197, ../../../app/stylesheets/partials/_application.scss */
 div#loading span {
   background-image: url("/images/spinner.gif");
   background-repeat: no-repeat;
@@ -556,31 +552,31 @@ div#loading span {
   line-height: 30px;
 }
 
-/* line 209, ../../../app/stylesheets/partials/_application.scss */
+/* line 208, ../../../app/stylesheets/partials/_application.scss */
 div#body div.container div.internal_error {
   margin: 50px 20px 0 20px;
 }
-/* line 213, ../../../app/stylesheets/partials/_application.scss */
+/* line 212, ../../../app/stylesheets/partials/_application.scss */
 div#body div.container div#four_oh_four {
   background: url(/images/characters/lady.png) no-repeat;
   height: 400px;
 }
-/* line 216, ../../../app/stylesheets/partials/_application.scss */
+/* line 215, ../../../app/stylesheets/partials/_application.scss */
 div#body div.container div#four_oh_four h1, div#body div.container div#four_oh_four h2 {
   padding-left: 200px;
 }
-/* line 221, ../../../app/stylesheets/partials/_application.scss */
+/* line 220, ../../../app/stylesheets/partials/_application.scss */
 div#body div.container div#five_hundred {
   background: url(/images/characters/man.png) no-repeat;
   background-position: right top;
   height: 400px;
 }
-/* line 225, ../../../app/stylesheets/partials/_application.scss */
+/* line 224, ../../../app/stylesheets/partials/_application.scss */
 div#body div.container div#five_hundred h1, div#body div.container div#five_hundred h2 {
   padding-right: 200px;
 }
 
-/* line 233, ../../../app/stylesheets/partials/_application.scss */
+/* line 232, ../../../app/stylesheets/partials/_application.scss */
 form.formtastic div.errorExplanation {
   border: 1px solid red;
   background-color: pink;
@@ -593,20 +589,20 @@ form.formtastic div.errorExplanation {
   -khtml-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 240, ../../../app/stylesheets/partials/_application.scss */
+/* line 239, ../../../app/stylesheets/partials/_application.scss */
 form.formtastic div.errorExplanation h2 {
   display: none;
 }
-/* line 244, ../../../app/stylesheets/partials/_application.scss */
+/* line 243, ../../../app/stylesheets/partials/_application.scss */
 form.formtastic div.errorExplanation ul {
   list-style-type: disc;
   margin: 5px 0 5px 30px;
 }
-/* line 251, ../../../app/stylesheets/partials/_application.scss */
+/* line 250, ../../../app/stylesheets/partials/_application.scss */
 form.formtastic li.error input {
   border: 1px solid red;
 }
-/* line 255, ../../../app/stylesheets/partials/_application.scss */
+/* line 254, ../../../app/stylesheets/partials/_application.scss */
 form.formtastic li.error p.inline-errors {
   display: none;
 }
