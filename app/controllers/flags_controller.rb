@@ -3,12 +3,16 @@ class FlagsController < ApplicationController
 
   def create
     @flag = @user.flags.create(params[:flag])
+    authorize! :create, @flag
+
     render :json => { :flag_link => render_to_string(:partial => "flags/link",
                                                      :locals => { :apartment => @flag.apartment }) }
   end
 
   def destroy
     @flag = @user.flags.find(params[:id])
+    authorize! :destroy, @flag
+
     @flag.destroy
     render :json => { :flag_link => render_to_string(:partial => "flags/link",
                                                      :locals => { :apartment => @flag.apartment }) }

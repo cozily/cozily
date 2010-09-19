@@ -2,12 +2,13 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    if user.present?
-      can :create, Apartment
-      can :read, Apartment
+    if user.try(:admin?)
+      can :manage, :all
+    elsif user.present?
+      can [:new, :create, :read], Apartment
       can [:edit, :order_images, :destroy, :transition, :update], Apartment, :user_id => user.id
-
-      can :manage, Favorite, :user_id => user.id
+      can [:create, :destroy], Favorite, :user_id => user.id
+      can [:create, :destroy], Flag, :user_id => user.id
       can :manage, Message
       can :manage, User, :id => user.id
     else

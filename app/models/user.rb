@@ -32,6 +32,10 @@ class User < ActiveRecord::Base
     end
   end
 
+  def admin?
+    roles.include?(Role.find_by_name("admin"))
+  end
+
   def finder?
     role_symbols.include?(:finder) || role_symbols.empty?
   end

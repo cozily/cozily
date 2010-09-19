@@ -22,4 +22,11 @@ feature "authorization" do
     visit edit_apartment_path(apartment)
     current_path.should == dashboard_listings_path
   end
+
+  scenario "non-admin cannot view admin pages" do
+    login_as(Factory(:user))
+
+    visit admin_users_path
+    current_path.should == dashboard_matches_path
+  end
 end
