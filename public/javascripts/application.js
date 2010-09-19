@@ -53,7 +53,7 @@ function toggleRoleFields() {
 function liveNeighborhoodAutocomplete() {
     $("input#neighborhood_autocomplete").autocomplete({
         source: neighborhoods,
-        minLength: 1,
+        minLength: 2,
         select: function(event, ui) {
             var form = $(event.target).closest("form");
             if (form.hasClass('search')) {
@@ -103,6 +103,8 @@ function liveNeighborhoodAutocomplete() {
                         $(document).trigger('content-received', response);
                     }
                 });
+
+                setPrimaryApartment(ui.item.lat, ui.item.lng, ui.item.label);
             }
         });
 

@@ -42,14 +42,19 @@ function initializeMap() {
     }
 }
 
+function setPrimaryApartment(lat, lng, title) {
+    var point = new google.maps.LatLng(lat, lng);
+    map.setCenter(point);
+
+    var marker = new google.maps.Marker({position: point, title: title, icon: '/images/icons/blue_marker.png'});
+    marker.setMap(map);
+
+    return marker;
+}
+
 function updateMap(self, others) {
     if (self.apartment != undefined && self.apartment.address != undefined) {
-        var point = new google.maps.LatLng(self.apartment.address.lat, self.apartment.address.lng);
-        map.setCenter(point);
-
-        var marker = new google.maps.Marker({position: point, title: self.apartment.address.full_address, icon: '/images/icons/blue_marker.png'});
-        marker.setMap(map);
-
+        var marker = setPrimaryApartment(self.apartment.address.lat, self.apartment.address.lng, self.apartment.address.full_address);
         attachClickToMarker(marker, self.apartment);
     } else {
         map.setCenter(new google.maps.LatLng(ip_lat, ip_lng));
