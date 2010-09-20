@@ -1,3 +1,4 @@
 %li.removeable[image]
   =image_tag(image.asset.url(:thumb))
-  =link_to "Remove", apartment_image_path(image.apartment, image), :'data-method' => 'delete', :'data-remote' => true, :'data-confirm' => true
+  -if image.destroyable?
+    =link_to "Remove", apartment_image_path(image.apartment, image), :'data-method' => 'delete', :'data-remote' => true, :'data-confirm' => true

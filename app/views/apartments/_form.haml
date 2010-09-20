@@ -25,9 +25,7 @@
       %a#upload{:'data-upload-path' => apartment_images_path(apartment)} Upload Photo
       #upload_status
 
-      %ul#images
-        -apartment.images.each do |image|
-          =render "images/thumbnail", :image => image
+      =render "apartments/images", :apartment => apartment
 
     %h2 Apartment Extras
     %ul.features

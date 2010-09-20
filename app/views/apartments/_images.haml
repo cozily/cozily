@@ -1,0 +1,3 @@
+%ul#images{:'data-content-key' => 'images'}
+  -apartment.images.each do |image|
+    =render "images/thumbnail", :image => image

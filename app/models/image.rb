@@ -17,8 +17,12 @@ class Image < ActiveRecord::Base
 
   before_destroy :ensure_destroyable?
 
+  def destroyable?
+    !apartment.listed? || apartment.images.count > 2
+  end
+
   private
   def ensure_destroyable?
-    (apartment.listed? && apartment.images.count <= 2) ? false : true
+    destroyable?
   end
 end
