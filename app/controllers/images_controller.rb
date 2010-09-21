@@ -5,7 +5,7 @@ class ImagesController < ApplicationController
     @image = @apartment.images.create(:asset => params[:userfile])
 
     # TODO : Make this work with JSON
-    render :text => render_to_string(:partial => "images/thumbnail", :locals => { :image => @image })
+    render :text => render_to_string(:partial => "apartments/images", :locals => { :apartment => @apartment })
   end
 
   def destroy

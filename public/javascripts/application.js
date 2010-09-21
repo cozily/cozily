@@ -235,7 +235,7 @@ function liveNeighborhoodAutocomplete() {
                 },
                 onComplete : function(file, extension) {
                     $("div#upload_status").text('');
-                    $("ul#images").append(extension);
+                    $("ul#images").replaceWith(extension);
                 }
             });
         }
