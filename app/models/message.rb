@@ -1,7 +1,6 @@
 class Message < ActiveRecord::Base
   DEFAULT_BODY = "Contact Landlord/Agent..."
 
-  belongs_to :apartment
   belongs_to :sender, :class_name => "User"
   belongs_to :conversation
 
