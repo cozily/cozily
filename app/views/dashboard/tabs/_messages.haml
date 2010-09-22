@@ -1,0 +1,3 @@
+- inbox_text = (current_user.unread_message_count.zero? ? "Inbox" : "Inbox (#{current_user.unread_message_count})")
+%li{:class => "#{'active' if active == :messages}", "data-content-key" => "inbox"}
+  =link_to inbox_text, dashboard_messages_path, :'data-remote' => true

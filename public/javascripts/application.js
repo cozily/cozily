@@ -5,7 +5,6 @@ function updateContent(content) {
     $contentKeyElements.each(function() {
         var node = $(this);
         var key = node.attr("data-content-key");
-
         $("[data-content-key=" + key + "]").replaceWith(node);
     });
 
@@ -178,8 +177,18 @@ function liveNeighborhoodAutocomplete() {
         });
 
         $("div.conversations ul.conversation").live("click", function(event) {
-            $(event.currentTarget).parent("div").next("div").slideToggle(150);
-            $(event.currentTarget).find("li.status").removeClass("new");
+            var element = $(event.currentTarget);
+            element.parent("div").next("div").slideToggle(150);
+            element.find("li.status").removeClass("new");
+            $.ajax({
+                type: 'put',
+                dataType: 'json',
+                url: "/conversations/" + element.attr('data-conversation-id') + "/read",
+                success  : function success(response) {
+                    $(document).trigger('content-received', response);
+                }
+
+            });
             return false;
         });
 

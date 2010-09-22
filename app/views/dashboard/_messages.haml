@@ -15,8 +15,8 @@
   - @conversations.each do |conversation|
     - first_message = conversation.messages.first
     %div[conversation]
-      %ul.conversation
-        %li.status.new &nbsp;
+      %ul.conversation{:'data-conversation-id' => conversation.id}
+        %li.status{:class => (conversation.unread_message_count_for(current_user).zero? ? "" : "new") } &nbsp;
         %li.info
           %ul
             %li.sender= conversation.sender.full_name
@@ -30,7 +30,7 @@
           -if conversation.apartment.images.present?
             =image_tag(conversation.apartment.images.first.asset.url(:micro))
           -else
-            =image_tag("defaults/apartments_micro.jpg")
+            =image_tag("defaults/apartment_micro.jpg")
         %li.name= conversation.apartment.address.street
     %div.messages{:style => "display: none;"}
       = render "dashboard/messages/messages", :conversation => conversation
