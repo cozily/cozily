@@ -50,7 +50,6 @@ end
 
 Factory.define :message do |m|
   m.association  :conversation
-  m.association  :apartment
   m.association  :sender, :factory => :email_confirmed_user
   m.body         { Faker::Lorem.paragraph }
 end
