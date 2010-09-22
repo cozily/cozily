@@ -61,9 +61,8 @@
         %span.email=@apartment.user.email
         %span.phone=number_to_phone(@apartment.user.phone, :area_code => true)
 
-        - unless signed_in? && current_user == @apartment.user
-          -if can? :manage, Message
-            =render "messages/thread", :apartment => @apartment
+        -if can? :manage, Message
+          =render "messages/thread", :apartment => @apartment
 
   .aside
     %ul.actions
