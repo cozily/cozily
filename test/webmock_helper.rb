@@ -4,7 +4,7 @@ WEBMOCK_SITES = YAML.load_file("#{Rails.root}/test/webmock/sites.yml")
 WEBMOCK_SITES.each do |site|
   site["queries"].each do |query|
     base_url = site["url"]
-    querystring = site["params"].merge(query)
+    querystring = (site["params"] || {}).merge(query)
     url = "#{base_url}?#{querystring.to_query}"
     if ENV["OFFLINE"]
       hash = Digest::MD5.hexdigest(url)
