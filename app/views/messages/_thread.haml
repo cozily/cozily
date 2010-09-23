@@ -1,7 +1,7 @@
 %div{ :'data-content-key' => 'thread' }
   =render "messages/new", :apartment => apartment
 
-  -if current_user && conversation = apartment.conversations.for_user(current_user).first
+  -if current_user && apartment.user != current_user
     .messages
       %h5 Messages
       - conversation.messages.each do |message|
