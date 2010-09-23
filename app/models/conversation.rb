@@ -9,7 +9,7 @@ class Conversation < ActiveRecord::Base
   validate :ensure_sender_is_email_confirmed, :if => Proc.new { |conversation| conversation.sender.present? }
   validate :ensure_first_message_is_valid
 
-  named_scope :for_user, lambda { |user| { :conditions => ["sender_id = ? OR receiver_id = ?", user.id, user.id] } }
+  named_scope :for_user, lambda { |user| { :conditions => ["(sender_id = ? AND sender_deleted_at IS NULL) OR (receiver_id = ? AND receiver_deleted_at IS NULL)", user.id, user.id] } }
 
   after_create :create_message
 
