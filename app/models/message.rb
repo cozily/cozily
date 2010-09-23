@@ -13,6 +13,7 @@ class Message < ActiveRecord::Base
   named_scope :not_sent_by, lambda { |user| { :conditions => ["sender_id != ?", user.id] } }
 
   after_create :notify_receiver
+  after_create :undelete_conversation
 
   def receiver
     conversation.the_party_who_is_not(sender)
@@ -29,5 +30,11 @@ class Message < ActiveRecord::Base
 
   def notify_receiver
     MessageMailer.deliver_receiver_notification(self)
+  end
+
+  def undelete_conversation
+    conversation.update_attributes(:sender_deleted_at => nil,
+                                   :receiver_deleted_at => nil)
+    conversation.save
   end
 end

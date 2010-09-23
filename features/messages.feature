@@ -17,6 +17,14 @@ Feature: Messages
     Given I am a logged in user
     Then I can reply to a message
 
+  Scenario: User can delete a conversation
+    Given I am a logged in user
+    Then I can delete a conversation
+
+  Scenario: User replies to a deleted conversation
+    Given I am a logged in user
+    Then I can reply to a deleted conversation
+
   Scenario: User messages from the dashboard
     Given I am a logged in user
     Then I can message from the dashboard

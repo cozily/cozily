@@ -1,4 +1,3 @@
-
 Then /^I can message the owner$/ do
   visit apartment_path(Apartment.last)
 
@@ -55,6 +54,38 @@ Then /^I can reply to a message$/ do
   click_button "Reply"
   page.should have_css("div.messages li:contains('Thanks for emailing me')")
 end
+
+Then /^I can delete a conversation$/ do
+  apartment = Factory(:apartment)
+  conversation = Factory(:conversation,
+                         :sender => the.user,
+                         :apartment => apartment)
+
+  visit dashboard_messages_path
+  current_path.should == dashboard_messages_path
+
+  find("div.conversations ul.conversation li.delete").click
+  page.should have_no_css("div.messages ul.conversation")
+  conversation.reload.sender_deleted_at.should_not == nil
+end
+
+Then /^I can reply to a deleted conversation$/ do
+  apartment = Factory(:apartment)
+  conversation = Factory(:conversation,
+                         :sender => the.user,
+                         :apartment => apartment)
+  conversation.update_attribute(:receiver_deleted_at, Time.now())
+
+  visit dashboard_messages_path
+  current_path.should == dashboard_messages_path
+
+  find("div.conversations ul.conversation li.info").click
+  fill_in "message_body", :with => "Thanks for emailing me."
+  lambda {
+    click_button "Reply"
+    page.should have_content("Message Sent")
+  }.should change(conversation, :receiver_deleted_at).to(nil)
+  end
 
 Then /^I can message from the dashboard$/ do
   apartment = Factory(:apartment,

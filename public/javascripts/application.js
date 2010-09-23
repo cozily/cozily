@@ -192,6 +192,21 @@ function liveNeighborhoodAutocomplete() {
             return false;
         });
 
+        $("div.conversations ul.conversation li.delete").live("click", function(event) {
+            var element = $(event.currentTarget);
+            element.parent("ul.conversation").parent("div.conversation").hide('explode');
+            $.ajax({
+                type: 'delete',
+                dataType: 'json',
+                url: "/conversations/" + element.parent("ul").attr('data-conversation-id'),
+                success  : function success(response) {
+                    $(document).trigger('content-received', response);
+                }
+
+            });
+            return false;
+        });
+
         $("div.messages a.close").live("click", function(event) {
             $(event.currentTarget).parents("div.messages").slideUp(150);
             return false;

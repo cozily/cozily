@@ -15,7 +15,8 @@ class MessagesController < ApplicationController
     elsif params[:conversation_id]
       @conversation = Conversation.find(params[:conversation_id])
       @conversation.messages.create(params[:message].merge(:sender_id => current_user.id))
-      render :json => { :replies => render_to_string(:partial => "dashboard/messages/messages",
+      render :json => { :flash => "Message Sent!",
+                        :replies => render_to_string(:partial => "dashboard/messages/messages",
                                                      :locals => { :conversation => @conversation })}
     else
       raise "You can't create a conversation without an Apartment or Conversation."

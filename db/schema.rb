@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100917145103) do
+ActiveRecord::Schema.define(:version => 20100922214127) do
 
   create_table "address_neighborhoods", :force => true do |t|
     t.integer  "address_id"
@@ -63,6 +63,8 @@ ActiveRecord::Schema.define(:version => 20100917145103) do
     t.integer  "receiver_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "sender_deleted_at"
+    t.datetime "receiver_deleted_at"
   end
 
   create_table "favorites", :force => true do |t|
