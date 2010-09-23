@@ -2,8 +2,6 @@ Role.create(:name => "finder")
 Role.create(:name => "lister")
 Role.create(:name => "admin")
 
-raise "bad seed" unless Role.count == 3
-
 ["Baychester",
  "Bedford Park",
  "Belmont",
@@ -314,8 +312,52 @@ end
                       :borough => "Staten Island")
 end
 
-["m9haddad@gmail.com", "todd.persen@gmail.com"].each do |email|
-  Role.all.each do |role|
-    UserRole.create(:user => User.find_by_email(email), :role => role)
+Station.destroy_all
+StationTrain.destroy_all
+Train.destroy_all
+
+FasterCSV.foreach("lib/mta_subway_info.csv", :headers => :first_row) do |row|
+  station = Station.create(:name => row["Station Name"],
+                           :line => row["Line"],
+                           :lat => row["Latitude"],
+                           :lng => row["Longitude"])
+  station = Station.find_by_lat_and_lng(row["Latitude"], row["Longitude"]) unless station
+
+  (1..9).each do |num|
+    name = row["Route#{num}"]
+    if name.present?
+      train = Train.find_or_create_by_name(name)
+      StationTrain.create(:station => station, :train => train)
+    end
   end
 end
+
+Feature.create(:name => "backyard")
+Feature.create(:name => "balcony")
+Feature.create(:name => "bathtub")
+Feature.create(:name => "cats allowed")
+Feature.create(:name => "dishwasher")
+Feature.create(:name => "dogs allowed")
+Feature.create(:name => "doorman")
+Feature.create(:name => "elevator")
+Feature.create(:name => "gym")
+Feature.create(:name => "pool")
+Feature.create(:name => "roof deck")
+Feature.create(:name => "washer/dryer in building")
+Feature.create(:name => "washer/dryer in unit")
+
+User.create(:first_name => "Michael",
+            :last_name => "Haddad",
+            :email => "m9haddad@gmail.com",
+            :password => "pass",
+            :password_confirmation => "pass",
+            :phone => "2022707370",
+            :roles => Role.all)
+
+User.create(:first_name => "Todd",
+            :last_name => "Persen",
+            :email => "todd.persen@gmail.com",
+            :password => "pass",
+            :password_confirmation => "pass",
+            :phone => "6462564810",
+            :roles => Role.all)
