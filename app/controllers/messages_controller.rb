@@ -6,6 +6,7 @@ class MessagesController < ApplicationController
       if @conversation.new_record?
         @conversation.update_attributes(params[:message].merge(:receiver_id => @apartment.user_id))
         @conversation.save
+        render :nothing => true and return unless @conversation.valid?
       else
         @conversation.messages.create(params[:message].merge(:sender_id => current_user.id))
       end
