@@ -68,7 +68,8 @@ class User < ActiveRecord::Base
   end
 
   def unread_message_count
-    received_messages.select { |m| m.read_at.nil? }.size
+#    received_messages.select { |m| m.read_at.nil? }.size
+    Conversation.for_user(self).map(&:messages).flatten.select { |m| m.sender_id != id }.size
   end
 
   def received_messages
