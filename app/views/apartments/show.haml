@@ -25,7 +25,7 @@
       - if @apartment.images.present?
         = image_tag @apartment.images.first.asset.url(:large), :class => "active"
       - else
-        = image_tag "defaults/apartment.jpg", :class => "active"
+        = image_tag "defaults/apartment/large.jpg", :class => "active"
 
       .info
         .demographic
@@ -54,6 +54,8 @@
         %ul
           -@apartment.images.each do |image|
             %li=image_tag(image.asset.url(:thumb), :'data-large-image-path' => image.asset.url(:large))
+          -if @apartment.images.empty?
+            %li=image_tag("defaults/apartment/thumb.jpg")
 
       .contact
         %h3 Contact

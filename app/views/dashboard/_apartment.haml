@@ -5,7 +5,7 @@
         -if apartment.images.present?
           =link_to(image_tag(apartment.images.first.asset.url(:medium)), apartment)
         -else
-          =link_to(image_tag("defaults/apartment_medium.jpg"), apartment)
+          =link_to(image_tag("defaults/apartment/medium.jpg"), apartment)
       .count=position
     %li.info
       %ul
