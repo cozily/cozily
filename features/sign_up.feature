@@ -21,7 +21,7 @@ Feature: Sign up
       And I check "find apartments"
       And I press "Sign up"
       Then I should see "Welcome to Cozily!"
-      And I should see "Welcome to Cozily!"
+      And I should see "Hi Barack"
       And a confirmation message should be sent to "email@person.com"
 
     Scenario: User confirms his account
