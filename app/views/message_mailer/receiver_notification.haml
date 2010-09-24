@@ -5,5 +5,5 @@
 %p=@message.body
 %p==--------------------
 %p To reply to this message, follow the link below:
-%p=url_for({:controller => 'apartments', :action => 'show', :id => @message.conversation.apartment.to_param, :host => "cozi.ly"})
+%p=dashboard_messages_url
 =render "shared/mailer_signature"
