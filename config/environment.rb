@@ -10,3 +10,6 @@ Rails::Initializer.run do |config|
 
   config.time_zone = 'UTC'
 end
+
+ActionMailer::Base.default_content_type = "text/html"
+
