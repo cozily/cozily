@@ -1,14 +1,9 @@
 =render "shared/mailer_salutation", :user => @message.receiver
-%br
 %p==#{@message.sender.full_name} sent you a message.
-%br%br
-==--------------------
+%p==--------------------
 %p==Re: #{@message.conversation.apartment.name}
-%br%br
 %p=@message.body
-==--------------------
-%br%br
+%p==--------------------
 %p To reply to this message, follow the link below:
-=url_for({:controller => 'apartments', :action => 'show', :id => @message.conversation.apartment.to_param, :host => "cozi.ly"})
-%br%br
+%p=url_for({:controller => 'apartments', :action => 'show', :id => @message.conversation.apartment.to_param, :host => "cozi.ly"})
 =render "shared/mailer_signature"

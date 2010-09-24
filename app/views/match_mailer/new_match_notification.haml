@@ -1,16 +1,10 @@
 =render "shared/mailer_salutation", :user => @user
-%br
 %p=@apartment.name
-%br
-==--------------------
+%p==--------------------
 %p==A new apartment in #{@apartment.neighborhoods.map(&:name).to_sentence} was listed on Cozily...
-%br
-==--------------------
-%br%br
+%p==--------------------
 %p To view this listing, follow the link below:
-=url_for({:controller => 'apartments', :action => 'show', :id => @apartment.to_param, :host => "cozi.ly"})
-%br
+%p =url_for({:controller => 'apartments', :action => 'show', :id => @apartment.to_param, :host => "cozi.ly"})
 %p==Based on your profile, Cozily is currently #{profile_summary(@user.profile)}.  To update your profile or opt out of email notifications, follow the link below:
-=url_for({:controller => 'users/profiles', :action => 'edit', :user_id => @user.id, :host => "cozi.ly"})
-%br%br
+%p=url_for({:controller => 'users/profiles', :action => 'edit', :user_id => @user.id, :host => "cozi.ly"})
 =render "shared/mailer_signature"

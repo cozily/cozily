@@ -1,8 +1,5 @@
 =render "shared/mailer_salutation", :user => @user
-%br
 %p Thanks for signing up at Cozily.  Please use the link below to confirm your email address.
-%br
-= new_user_confirmation_url( :user_id => @user, :token   => @user.confirmation_token, :encode  => false)
-%br
-==--------------------
+%p= new_user_confirmation_url( :user_id => @user, :token   => @user.confirmation_token, :encode  => false)
+%p==--------------------
 =render "shared/mailer_signature"
