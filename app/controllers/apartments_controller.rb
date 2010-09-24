@@ -19,6 +19,9 @@ class ApartmentsController < ApplicationController
   def update
     @apartment = Apartment.find(params[:id])
     if @apartment.update_attributes(params[:apartment])
+      if @apartment.address.try(:invalid?)
+        flash[:failure] = "We're currently only accepting apartment listings in New York City."
+      end
       respond_to do |format|
         format.html { redirect_to params[:return_to] || edit_apartment_path(@apartment) }
         format.js do

@@ -130,7 +130,7 @@ class Apartment < ActiveRecord::Base
   end
 
   def name
-    [full_address, unit].reject { |str| str.blank? }.join(" #") if address
+    [full_address, unit].reject { |str| str.blank? }.join(" #") if address && address.valid?
   end
 
   def nearby_stations

@@ -21,12 +21,8 @@ class Neighborhood < ActiveRecord::Base
       response = JSON.parse(Yelp.new.neighborhood_for_lat_and_lng(lat, lng))
       if response.has_key?("neighborhoods") && response["neighborhoods"].present?
         response["neighborhoods"].each do |res|
-          neighborhood = Neighborhood.find_or_initialize_by_name_and_city(res["name"], res["city"])
-          neighborhood.borough = res["borough"]
-          neighborhood.state = res["state"]
-          neighborhood.country = res["country"]
-          neighborhood.save if neighborhood.changed?
-          neighborhoods << neighborhood
+          neighborhood = Neighborhood.find_by_name_and_city_and_borough_and_state_and_country(res["name"], res["city"], res["borough"], res["state"], res["country"])
+          neighborhoods << neighborhood if neighborhood
         end
       end
       neighborhoods

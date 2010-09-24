@@ -18,6 +18,8 @@
     -
       q: New York City
     -
+      q: 1719 Q St NW 20009
+    -
       q: 546 Henry St 11231
       spn: 0.270637800000003,0.512237600000006
       ll: 40.7144983232441,-74.0064936541319
@@ -45,8 +47,12 @@
       lat: "40.68244"
       long: "-74.0003021"
     -
+      lat: "38.911385"
+      long: "-77.039474"
+    -
       lat:
       long:
+
 -
   url: http://api.yelp.com/business_review_search
   params:

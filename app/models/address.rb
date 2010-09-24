@@ -18,6 +18,7 @@ class Address < ActiveRecord::Base
                         :lng
 
   validates_uniqueness_of :lat, :scope => :lng
+  validate :ensure_at_least_one_neighborhood
 
   class << self
     def for_full_address(address)
@@ -57,5 +58,11 @@ class Address < ActiveRecord::Base
 
   def neighborhood_search
     self.neighborhoods = Neighborhood.for_lat_and_lng(lat, lng)
+  end
+
+  def ensure_at_least_one_neighborhood
+    unless neighborhoods.present?
+      errors.add_to_base("We're currently only accepting apartment listings in New York City.")
+    end
   end
 end
