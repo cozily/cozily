@@ -1,0 +1,8 @@
+=render "shared/mailer_salutation", :user => @user
+
+Thanks for signing up at Cozily.  Please use the link below to confirm your email address.
+
+= new_user_confirmation_url( :user_id => @user, :token   => @user.confirmation_token, :encode  => false)
+
+==--------------------
+=render "shared/mailer_signature"

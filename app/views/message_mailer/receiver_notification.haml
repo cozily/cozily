@@ -1,3 +1,5 @@
+=render "shared/mailer_salutation", :user => @message.receiver
+
 ==#{@message.sender.full_name} sent you a message.
 
 
@@ -11,3 +13,6 @@
 
 To reply to this message, follow the link below:
 =url_for({:controller => 'apartments', :action => 'show', :id => @message.conversation.apartment.to_param, :host => "cozi.ly"})
+
+
+=render "shared/mailer_signature"

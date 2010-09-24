@@ -23,6 +23,11 @@ describe MatchMailer do
       match_email.subject.should == "A new apartment in #{@apartment.neighborhoods.map(&:name).to_sentence} was listed on Cozily..."
     end
 
+    it "includes the user's first name" do
+      match_email = MatchMailer.deliver_new_match_notification(@apartment, @user)
+      match_email.body.should include("Hello #{@user.first_name}")
+    end
+
     it "includes the apartment's neighborhoods" do
       match_email = MatchMailer.deliver_new_match_notification(@apartment, @user)
       match_email.body.should include(@apartment.neighborhoods.map(&:name).to_sentence)
