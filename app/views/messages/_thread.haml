@@ -4,5 +4,6 @@
   -if current_user && apartment.user != current_user
     .messages
       %h5 Messages
-      - conversation.messages.each do |message|
-        =render "messages/show", :message => message
+      - if conversation = Conversation.for_user_and_apartment(current_user, apartment)
+        - conversation.messages.each do |message|
+          =render "messages/show", :message => message

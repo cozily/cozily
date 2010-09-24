@@ -15,6 +15,12 @@ class Conversation < ActiveRecord::Base
 
   attr_accessor :body
 
+  class << self
+    def for_user_and_apartment(user, apartment)
+      for_user(user).first(:conditions => {:apartment_id => apartment.id})
+    end
+  end
+
   def the_party_who_is_not(user)
     (sender == user ? receiver : sender)
   end
