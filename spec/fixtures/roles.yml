@@ -1,11 +1,16 @@
-finder:
-  id   : 1
-  name : finder
-
-lister:
-  id   : 2
-  name : lister
-
-admin:
-  id   : 3
-  name : admin
+--- 
+lister: 
+  name: lister
+  created_at: 2010-09-24 06:16:15.063857
+  updated_at: 2010-09-24 06:16:15.063857
+  id: "5"
+admin: 
+  name: admin
+  created_at: 2010-09-24 06:16:15.067929
+  updated_at: 2010-09-24 06:16:15.067929
+  id: "6"
+finder: 
+  name: finder
+  created_at: 2010-09-24 06:16:15.053781
+  updated_at: 2010-09-24 06:16:15.053781
+  id: "4"

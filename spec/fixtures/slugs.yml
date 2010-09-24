@@ -1,0 +1,2201 @@
+--- 
+richmond_hill: 
+  scope: 
+  name: richmond-hill
+  created_at: 2010-09-24 06:16:20.722842
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "486"
+  sluggable_id: "484"
+longwood: 
+  scope: 
+  name: longwood
+  created_at: 2010-09-24 06:16:15.728644
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "298"
+  sluggable_id: "296"
+melrose: 
+  scope: 
+  name: melrose
+  created_at: 2010-09-24 06:16:15.877562
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "299"
+  sluggable_id: "297"
+lower_east_side: 
+  scope: 
+  name: lower-east-side
+  created_at: 2010-09-24 06:16:19.04608
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "407"
+  sluggable_id: "405"
+kew_gardens: 
+  scope: 
+  name: kew-gardens
+  created_at: 2010-09-24 06:16:20.200712
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "467"
+  sluggable_id: "465"
+sea_gate: 
+  scope: 
+  name: sea-gate
+  created_at: 2010-09-24 06:16:17.476079
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "378"
+  sluggable_id: "376"
+concourse: 
+  scope: 
+  name: concourse
+  created_at: 2010-09-24 06:16:15.561748
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "286"
+  sluggable_id: "284"
+wingate: 
+  scope: 
+  name: wingate
+  created_at: 2010-09-24 06:16:17.752961
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "389"
+  sluggable_id: "387"
+flushing_meadows: 
+  scope: 
+  name: flushing-meadows
+  created_at: 2010-09-24 06:16:20.036696
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "453"
+  sluggable_id: "451"
+downtown_flushing: 
+  scope: 
+  name: downtown-flushing
+  created_at: 2010-09-24 06:16:19.813648
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "446"
+  sluggable_id: "444"
+civic_center: 
+  scope: 
+  name: civic-center
+  created_at: 2010-09-24 06:16:17.931241
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "394"
+  sluggable_id: "392"
+springfield_gardens: 
+  scope: 
+  name: springfield-gardens
+  created_at: 2010-09-24 06:16:20.811385
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "493"
+  sluggable_id: "491"
+greenpoint: 
+  scope: 
+  name: greenpoint
+  created_at: 2010-09-24 06:16:17.119888
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "360"
+  sluggable_id: "358"
+gerritson_beach: 
+  scope: 
+  name: gerritson-beach
+  created_at: 2010-09-24 06:16:17.083589
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "357"
+  sluggable_id: "355"
+forest_hills: 
+  scope: 
+  name: forest-hills
+  created_at: 2010-09-24 06:16:20.048404
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "454"
+  sluggable_id: "452"
+bensonhurst: 
+  scope: 
+  name: bensonhurst
+  created_at: 2010-09-24 06:16:16.467688
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "329"
+  sluggable_id: "327"
+north_corona: 
+  scope: 
+  name: north-corona
+  created_at: 2010-09-24 06:16:20.482398
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "479"
+  sluggable_id: "477"
+arrochar: 
+  scope: 
+  name: arrochar
+  created_at: 2010-09-24 06:16:21.1319
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "503"
+  sluggable_id: "501"
+eastchester: 
+  scope: 
+  name: eastchester
+  created_at: 2010-09-24 06:16:15.625944
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "290"
+  sluggable_id: "288"
+seaside: 
+  scope: 
+  name: seaside
+  created_at: 2010-09-24 06:16:20.783123
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "491"
+  sluggable_id: "489"
+east_flatbush: 
+  scope: 
+  name: east-flatbush
+  created_at: 2010-09-24 06:16:16.843819
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "349"
+  sluggable_id: "347"
+woodlawn: 
+  scope: 
+  name: woodlawn
+  created_at: 2010-09-24 06:16:16.420583
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "325"
+  sluggable_id: "323"
+east_village: 
+  scope: 
+  name: east-village
+  created_at: 2010-09-24 06:16:18.353614
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "396"
+  sluggable_id: "394"
+rosedale: 
+  scope: 
+  name: rosedale
+  created_at: 2010-09-24 06:16:20.770831
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "490"
+  sluggable_id: "488"
+new_dorp_beach: 
+  scope: 
+  name: new-dorp-beach
+  created_at: 2010-09-24 06:16:21.601234
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "529"
+  sluggable_id: "527"
+sheepshead_bay: 
+  scope: 
+  name: sheepshead-bay
+  created_at: 2010-09-24 06:16:17.487831
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "379"
+  sluggable_id: "377"
+claremont_village: 
+  scope: 
+  name: claremont-village
+  created_at: 2010-09-24 06:16:15.525714
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "283"
+  sluggable_id: "281"
+laguardia_airport: 
+  scope: 
+  name: laguardia-airport
+  created_at: 2010-09-24 06:16:20.363187
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "469"
+  sluggable_id: "467"
+prospect_park_south: 
+  scope: 
+  name: prospect-park-south
+  created_at: 2010-09-24 06:16:17.439733
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "375"
+  sluggable_id: "373"
+lefrak_city: 
+  scope: 
+  name: lefrak-city
+  created_at: 2010-09-24 06:16:20.387995
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "471"
+  sluggable_id: "469"
+manhattan_beach: 
+  scope: 
+  name: manhattan-beach
+  created_at: 2010-09-24 06:16:17.158779
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "363"
+  sluggable_id: "361"
+steinway: 
+  scope: 
+  name: steinway
+  created_at: 2010-09-24 06:16:20.823048
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "494"
+  sluggable_id: "492"
+eltingville: 
+  scope: 
+  name: eltingville
+  created_at: 2010-09-24 06:16:21.269248
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "514"
+  sluggable_id: "512"
+boerum_hill: 
+  scope: 
+  name: boerum-hill
+  created_at: 2010-09-24 06:16:16.480021
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "330"
+  sluggable_id: "328"
+theater_district: 
+  scope: 
+  name: theater-district
+  created_at: 2010-09-24 06:16:19.375659
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "422"
+  sluggable_id: "420"
+noho: 
+  scope: 
+  name: noho
+  created_at: 2010-09-24 06:16:19.151579
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "415"
+  sluggable_id: "413"
+chelsea: 
+  scope: 
+  name: chelsea
+  created_at: 2010-09-24 06:16:17.788441
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "392"
+  sluggable_id: "390"
+richmond_town: 
+  scope: 
+  name: richmond-town
+  created_at: 2010-09-24 06:16:21.842768
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "538"
+  sluggable_id: "536"
+jackson_heights: 
+  scope: 
+  name: jackson-heights
+  created_at: 2010-09-24 06:16:20.153578
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "463"
+  sluggable_id: "461"
+silver_lake: 
+  scope: 
+  name: silver-lake
+  created_at: 2010-09-24 06:16:21.902299
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "543"
+  sluggable_id: "541"
+far_rockaway: 
+  scope: 
+  name: far-rockaway
+  created_at: 2010-09-24 06:16:19.864124
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "450"
+  sluggable_id: "448"
+norwood: 
+  scope: 
+  name: norwood
+  created_at: 2010-09-24 06:16:16.045157
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "307"
+  sluggable_id: "305"
+belmont: 
+  scope: 
+  name: belmont
+  created_at: 2010-09-24 06:16:15.369298
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "280"
+  sluggable_id: "278"
+east_williamsburg: 
+  scope: 
+  name: east-williamsburg
+  created_at: 2010-09-24 06:16:17.009281
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "351"
+  sluggable_id: "349"
+bay_terrace_1: 
+  scope: 
+  name: bay-terrace
+  created_at: 2010-09-24 06:16:21.145517
+  sequence: "2"
+  sluggable_type: Neighborhood
+  id: "504"
+  sluggable_id: "502"
+bedford_stuyvesant: 
+  scope: 
+  name: bedford-stuyvesant
+  created_at: 2010-09-24 06:16:16.455694
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "328"
+  sluggable_id: "326"
+borough_park: 
+  scope: 
+  name: borough-park
+  created_at: 2010-09-24 06:16:16.491715
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "331"
+  sluggable_id: "329"
+van_nest: 
+  scope: 
+  name: van-nest
+  created_at: 2010-09-24 06:16:16.361845
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "320"
+  sluggable_id: "318"
+heartland_village: 
+  scope: 
+  name: heartland-village
+  created_at: 2010-09-24 06:16:21.502854
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "521"
+  sluggable_id: "519"
+lindenwood: 
+  scope: 
+  name: lindenwood
+  created_at: 2010-09-24 06:16:20.399784
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "472"
+  sluggable_id: "470"
+mill_basin: 
+  scope: 
+  name: mill-basin
+  created_at: 2010-09-24 06:16:17.194285
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "366"
+  sluggable_id: "364"
+chinatown: 
+  scope: 
+  name: chinatown
+  created_at: 2010-09-24 06:16:17.813591
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "393"
+  sluggable_id: "391"
+brighton_beach: 
+  scope: 
+  name: brighton-beach
+  created_at: 2010-09-24 06:16:16.505663
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "332"
+  sluggable_id: "330"
+whitestone: 
+  scope: 
+  name: whitestone
+  created_at: 2010-09-24 06:16:20.866651
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "497"
+  sluggable_id: "495"
+st_george: 
+  scope: 
+  name: st-george
+  created_at: 2010-09-24 06:16:21.913947
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "544"
+  sluggable_id: "542"
+port_morris: 
+  scope: 
+  name: port-morris
+  created_at: 2010-09-24 06:16:16.125757
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "312"
+  sluggable_id: "310"
+university_heights: 
+  scope: 
+  name: university-heights
+  created_at: 2010-09-24 06:16:16.348245
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "319"
+  sluggable_id: "317"
+canarsie: 
+  scope: 
+  name: canarsie
+  created_at: 2010-09-24 06:16:16.689171
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "336"
+  sluggable_id: "334"
+flatbush: 
+  scope: 
+  name: flatbush
+  created_at: 2010-09-24 06:16:17.021802
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "352"
+  sluggable_id: "350"
+queensborough_hill: 
+  scope: 
+  name: queensborough-hill
+  created_at: 2010-09-24 06:16:20.541617
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "484"
+  sluggable_id: "482"
+grymes_hill: 
+  scope: 
+  name: grymes-hill
+  created_at: 2010-09-24 06:16:21.490212
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "520"
+  sluggable_id: "518"
+douglaston: 
+  scope: 
+  name: douglaston
+  created_at: 2010-09-24 06:16:19.801179
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "445"
+  sluggable_id: "443"
+unionport: 
+  scope: 
+  name: unionport
+  created_at: 2010-09-24 06:16:16.333461
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "318"
+  sluggable_id: "316"
+hunts_point: 
+  scope: 
+  name: hunts-point
+  created_at: 2010-09-24 06:16:15.702615
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "296"
+  sluggable_id: "294"
+dongan_hills: 
+  scope: 
+  name: dongan-hills
+  created_at: 2010-09-24 06:16:21.244941
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "512"
+  sluggable_id: "510"
+queens_village: 
+  scope: 
+  name: queens-village
+  created_at: 2010-09-24 06:16:20.529931
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "483"
+  sluggable_id: "481"
+somerville: 
+  scope: 
+  name: somerville
+  created_at: 2010-09-24 06:16:20.796771
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "492"
+  sluggable_id: "490"
+midland_beach: 
+  scope: 
+  name: midland-beach
+  created_at: 2010-09-24 06:16:21.562003
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "526"
+  sluggable_id: "524"
+grant_city: 
+  scope: 
+  name: grant-city
+  created_at: 2010-09-24 06:16:21.305638
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "517"
+  sluggable_id: "515"
+two_bridges: 
+  scope: 
+  name: two-bridges
+  created_at: 2010-09-24 06:16:19.401269
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "424"
+  sluggable_id: "422"
+east_tremont: 
+  scope: 
+  name: east-tremont
+  created_at: 2010-09-24 06:16:15.612844
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "289"
+  sluggable_id: "287"
+bushwick: 
+  scope: 
+  name: bushwick
+  created_at: 2010-09-24 06:16:16.677084
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "335"
+  sluggable_id: "333"
+inwood: 
+  scope: 
+  name: inwood
+  created_at: 2010-09-24 06:16:18.998993
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "403"
+  sluggable_id: "401"
+elm_park: 
+  scope: 
+  name: elm-park
+  created_at: 2010-09-24 06:16:21.257031
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "513"
+  sluggable_id: "511"
+elmhurst: 
+  scope: 
+  name: elmhurst
+  created_at: 2010-09-24 06:16:19.850973
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "449"
+  sluggable_id: "447"
+olinville: 
+  scope: 
+  name: olinville
+  created_at: 2010-09-24 06:16:16.056438
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "308"
+  sluggable_id: "306"
+baychester: 
+  scope: 
+  name: baychester
+  created_at: 2010-09-24 06:16:15.33902
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "278"
+  sluggable_id: "276"
+soho: 
+  scope: 
+  name: soho
+  created_at: 2010-09-24 06:16:19.325937
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "418"
+  sluggable_id: "416"
+paedergat_basin: 
+  scope: 
+  name: paedergat-basin
+  created_at: 2010-09-24 06:16:17.392115
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "371"
+  sluggable_id: "369"
+kensington: 
+  scope: 
+  name: kensington
+  created_at: 2010-09-24 06:16:17.146073
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "362"
+  sluggable_id: "360"
+kew_gardens_hills: 
+  scope: 
+  name: kew-gardens-hills
+  created_at: 2010-09-24 06:16:20.349556
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "468"
+  sluggable_id: "466"
+concord: 
+  scope: 
+  name: concord
+  created_at: 2010-09-24 06:16:21.233421
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "511"
+  sluggable_id: "509"
+sunnyside: 
+  scope: 
+  name: sunnyside
+  created_at: 2010-09-24 06:16:20.837601
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "495"
+  sluggable_id: "493"
+roosevelt_island: 
+  scope: 
+  name: roosevelt-island
+  created_at: 2010-09-24 06:16:19.313556
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "417"
+  sluggable_id: "415"
+upper_west_side: 
+  scope: 
+  name: upper-west-side
+  created_at: 2010-09-24 06:16:19.437732
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "427"
+  sluggable_id: "425"
+new_dorp: 
+  scope: 
+  name: new-dorp
+  created_at: 2010-09-24 06:16:21.589099
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "528"
+  sluggable_id: "526"
+holliswood: 
+  scope: 
+  name: holliswood
+  created_at: 2010-09-24 06:16:20.118088
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "460"
+  sluggable_id: "458"
+ozone_park: 
+  scope: 
+  name: ozone-park
+  created_at: 2010-09-24 06:16:20.506428
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "481"
+  sluggable_id: "479"
+fort_hamilton: 
+  scope: 
+  name: fort-hamilton
+  created_at: 2010-09-24 06:16:17.057864
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "355"
+  sluggable_id: "353"
+auburndale: 
+  scope: 
+  name: auburndale
+  created_at: 2010-09-24 06:16:19.660145
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "434"
+  sluggable_id: "432"
+windsor_terrace: 
+  scope: 
+  name: windsor-terrace
+  created_at: 2010-09-24 06:16:17.741365
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "388"
+  sluggable_id: "386"
+greenwich_village: 
+  scope: 
+  name: greenwich-village
+  created_at: 2010-09-24 06:16:18.941014
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "400"
+  sluggable_id: "398"
+meatpacking_district: 
+  scope: 
+  name: meatpacking-district
+  created_at: 2010-09-24 06:16:19.082458
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "410"
+  sluggable_id: "408"
+west_farms: 
+  scope: 
+  name: west-farms
+  created_at: 2010-09-24 06:16:16.386266
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "322"
+  sluggable_id: "320"
+alphabet_city: 
+  scope: 
+  name: alphabet-city
+  created_at: 2010-09-24 06:16:17.765416
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "390"
+  sluggable_id: "388"
+high_bridge: 
+  scope: 
+  name: high-bridge
+  created_at: 2010-09-24 06:16:15.689161
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "295"
+  sluggable_id: "293"
+jamaica_estates: 
+  scope: 
+  name: jamaica-estates
+  created_at: 2010-09-24 06:16:20.176996
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "465"
+  sluggable_id: "463"
+financial_district: 
+  scope: 
+  name: financial-district
+  created_at: 2010-09-24 06:16:18.405899
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "397"
+  sluggable_id: "395"
+astoria: 
+  scope: 
+  name: astoria
+  created_at: 2010-09-24 06:16:19.498028
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "432"
+  sluggable_id: "430"
+pleasant_plains: 
+  scope: 
+  name: pleasant-plains
+  created_at: 2010-09-24 06:16:21.660203
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "534"
+  sluggable_id: "532"
+prospect_heights: 
+  scope: 
+  name: prospect-heights
+  created_at: 2010-09-24 06:16:17.415928
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "373"
+  sluggable_id: "371"
+arden_heights: 
+  scope: 
+  name: arden-heights
+  created_at: 2010-09-24 06:16:20.922272
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "501"
+  sluggable_id: "499"
+south_village: 
+  scope: 
+  name: south-village
+  created_at: 2010-09-24 06:16:19.351449
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "420"
+  sluggable_id: "418"
+fort_greene: 
+  scope: 
+  name: fort-greene
+  created_at: 2010-09-24 06:16:17.045229
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "354"
+  sluggable_id: "352"
+parkchester: 
+  scope: 
+  name: parkchester
+  created_at: 2010-09-24 06:16:16.068085
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "309"
+  sluggable_id: "307"
+briarwood: 
+  scope: 
+  name: briarwood
+  created_at: 2010-09-24 06:16:19.763509
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "442"
+  sluggable_id: "440"
+mott_haven: 
+  scope: 
+  name: mott-haven
+  created_at: 2010-09-24 06:16:15.92594
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "303"
+  sluggable_id: "301"
+gravesend: 
+  scope: 
+  name: gravesend
+  created_at: 2010-09-24 06:16:17.108542
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "359"
+  sluggable_id: "357"
+east_harlem: 
+  scope: 
+  name: east-harlem
+  created_at: 2010-09-24 06:16:18.222106
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "395"
+  sluggable_id: "393"
+hells_kitchen: 
+  scope: 
+  name: hells-kitchen
+  created_at: 2010-09-24 06:16:18.984352
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "402"
+  sluggable_id: "400"
+jamaica: 
+  scope: 
+  name: jamaica
+  created_at: 2010-09-24 06:16:20.164995
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "464"
+  sluggable_id: "462"
+mariner: 
+  scope: 
+  name: mariner
+  created_at: 2010-09-24 06:16:21.550745
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "525"
+  sluggable_id: "523"
+yorkville: 
+  scope: 
+  name: yorkville
+  created_at: 2010-09-24 06:16:19.473688
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "430"
+  sluggable_id: "428"
+lighthouse_hill: 
+  scope: 
+  name: lighthouse-hill
+  created_at: 2010-09-24 06:16:21.539101
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "524"
+  sluggable_id: "522"
+sunset_park: 
+  scope: 
+  name: sunset-park
+  created_at: 2010-09-24 06:16:17.539017
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "383"
+  sluggable_id: "381"
+georgetown: 
+  scope: 
+  name: georgetown
+  created_at: 2010-09-24 06:16:17.070497
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "356"
+  sluggable_id: "354"
+spring_creek: 
+  scope: 
+  name: spring-creek
+  created_at: 2010-09-24 06:16:17.515639
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "381"
+  sluggable_id: "379"
+coney_island: 
+  scope: 
+  name: coney-island
+  created_at: 2010-09-24 06:16:16.760541
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "342"
+  sluggable_id: "340"
+richmond_valley: 
+  scope: 
+  name: richmond-valley
+  created_at: 2010-09-24 06:16:21.854941
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "539"
+  sluggable_id: "537"
+sunnyside_1: 
+  scope: 
+  name: sunnyside
+  created_at: 2010-09-24 06:16:21.938733
+  sequence: "2"
+  sluggable_type: Neighborhood
+  id: "546"
+  sluggable_id: "544"
+tompkinsville: 
+  scope: 
+  name: tompkinsville
+  created_at: 2010-09-24 06:16:21.961537
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "548"
+  sluggable_id: "546"
+arverne: 
+  scope: 
+  name: arverne
+  created_at: 2010-09-24 06:16:19.486177
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "431"
+  sluggable_id: "429"
+oakwood: 
+  scope: 
+  name: oakwood
+  created_at: 2010-09-24 06:16:21.624927
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "531"
+  sluggable_id: "529"
+co_op_city: 
+  scope: 
+  name: co-op-city
+  created_at: 2010-09-24 06:16:15.549793
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "285"
+  sluggable_id: "283"
+soundview: 
+  scope: 
+  name: soundview
+  created_at: 2010-09-24 06:16:16.162141
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "315"
+  sluggable_id: "313"
+city_island: 
+  scope: 
+  name: city-island
+  created_at: 2010-09-24 06:16:15.51317
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "282"
+  sluggable_id: "280"
+howland_hook: 
+  scope: 
+  name: howland-hook
+  created_at: 2010-09-24 06:16:21.515969
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "522"
+  sluggable_id: "520"
+south_williamsburg: 
+  scope: 
+  name: south-williamsburg
+  created_at: 2010-09-24 06:16:17.502661
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "380"
+  sluggable_id: "378"
+murray_hill_1: 
+  scope: 
+  name: murray-hill
+  created_at: 2010-09-24 06:16:20.470822
+  sequence: "2"
+  sluggable_type: Neighborhood
+  id: "478"
+  sluggable_id: "476"
+dyker_heights: 
+  scope: 
+  name: dyker-heights
+  created_at: 2010-09-24 06:16:16.832113
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "348"
+  sluggable_id: "346"
+grasmere: 
+  scope: 
+  name: grasmere
+  created_at: 2010-09-24 06:16:21.45197
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "518"
+  sluggable_id: "516"
+cobble_hill: 
+  scope: 
+  name: cobble-hill
+  created_at: 2010-09-24 06:16:16.735717
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "340"
+  sluggable_id: "338"
+beechurst: 
+  scope: 
+  name: beechurst
+  created_at: 2010-09-24 06:16:19.701387
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "437"
+  sluggable_id: "435"
+ocean_parkway: 
+  scope: 
+  name: ocean-parkway
+  created_at: 2010-09-24 06:16:17.378955
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "370"
+  sluggable_id: "368"
+cambria_heights: 
+  scope: 
+  name: cambria-heights
+  created_at: 2010-09-24 06:16:19.776124
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "443"
+  sluggable_id: "441"
+stapleton: 
+  scope: 
+  name: stapleton
+  created_at: 2010-09-24 06:16:21.925651
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "545"
+  sluggable_id: "543"
+highland_park: 
+  scope: 
+  name: highland-park
+  created_at: 2010-09-24 06:16:17.134072
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "361"
+  sluggable_id: "359"
+glendale: 
+  scope: 
+  name: glendale
+  created_at: 2010-09-24 06:16:20.083424
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "457"
+  sluggable_id: "455"
+manhattan_valley: 
+  scope: 
+  name: manhattan-valley
+  created_at: 2010-09-24 06:16:19.058403
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "408"
+  sluggable_id: "406"
+tottenville: 
+  scope: 
+  name: tottenville
+  created_at: 2010-09-24 06:16:21.973518
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "549"
+  sluggable_id: "547"
+flatiron: 
+  scope: 
+  name: flatiron
+  created_at: 2010-09-24 06:16:18.742273
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "398"
+  sluggable_id: "396"
+murray_hill: 
+  scope: 
+  name: murray-hill
+  created_at: 2010-09-24 06:16:19.139413
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "414"
+  sluggable_id: "412"
+starret_city: 
+  scope: 
+  name: starret-city
+  created_at: 2010-09-24 06:16:17.527692
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "382"
+  sluggable_id: "380"
+red_hook: 
+  scope: 
+  name: red-hook
+  created_at: 2010-09-24 06:16:17.4513
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "376"
+  sluggable_id: "374"
+rockaway_park: 
+  scope: 
+  name: rockaway-park
+  created_at: 2010-09-24 06:16:20.759057
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "489"
+  sluggable_id: "487"
+howard_beach: 
+  scope: 
+  name: howard-beach
+  created_at: 2010-09-24 06:16:20.130006
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "461"
+  sluggable_id: "459"
+country_club: 
+  scope: 
+  name: country-club
+  created_at: 2010-09-24 06:16:15.59415
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "288"
+  sluggable_id: "286"
+princes_bay: 
+  scope: 
+  name: princes-bay
+  created_at: 2010-09-24 06:16:21.818454
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "536"
+  sluggable_id: "534"
+harlem: 
+  scope: 
+  name: harlem
+  created_at: 2010-09-24 06:16:18.953415
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "401"
+  sluggable_id: "399"
+fieldston: 
+  scope: 
+  name: fieldston
+  created_at: 2010-09-24 06:16:15.662529
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "293"
+  sluggable_id: "291"
+maspeth: 
+  scope: 
+  name: maspeth
+  created_at: 2010-09-24 06:16:20.446093
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "476"
+  sluggable_id: "474"
+tribeca: 
+  scope: 
+  name: tribeca
+  created_at: 2010-09-24 06:16:19.387474
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "423"
+  sluggable_id: "421"
+rossville: 
+  scope: 
+  name: rossville
+  created_at: 2010-09-24 06:16:21.877899
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "541"
+  sluggable_id: "539"
+marble_hill: 
+  scope: 
+  name: marble-hill
+  created_at: 2010-09-24 06:16:19.070519
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "409"
+  sluggable_id: "407"
+hollis: 
+  scope: 
+  name: hollis
+  created_at: 2010-09-24 06:16:20.106713
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "459"
+  sluggable_id: "457"
+bath_beach: 
+  scope: 
+  name: bath-beach
+  created_at: 2010-09-24 06:16:16.432162
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "326"
+  sluggable_id: "324"
+bellerose: 
+  scope: 
+  name: bellerose
+  created_at: 2010-09-24 06:16:19.738939
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "440"
+  sluggable_id: "438"
+castleton_corners: 
+  scope: 
+  name: castleton-corners
+  created_at: 2010-09-24 06:16:21.183702
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "507"
+  sluggable_id: "505"
+williamsburg_north_side: 
+  scope: 
+  name: williamsburg-north-side
+  created_at: 2010-09-24 06:16:17.71607
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "386"
+  sluggable_id: "384"
+carroll_gardens: 
+  scope: 
+  name: carroll-gardens
+  created_at: 2010-09-24 06:16:16.701459
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "337"
+  sluggable_id: "335"
+westerleigh: 
+  scope: 
+  name: westerleigh
+  created_at: 2010-09-24 06:16:21.998181
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "551"
+  sluggable_id: "549"
+upper_east_side: 
+  scope: 
+  name: upper-east-side
+  created_at: 2010-09-24 06:16:19.425798
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "426"
+  sluggable_id: "424"
+new_lots: 
+  scope: 
+  name: new-lots
+  created_at: 2010-09-24 06:16:17.35393
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "368"
+  sluggable_id: "366"
+morrisania: 
+  scope: 
+  name: morrisania
+  created_at: 2010-09-24 06:16:15.913476
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "302"
+  sluggable_id: "300"
+malba: 
+  scope: 
+  name: malba
+  created_at: 2010-09-24 06:16:20.434394
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "475"
+  sluggable_id: "473"
+breezy_point: 
+  scope: 
+  name: breezy-point
+  created_at: 2010-09-24 06:16:19.751118
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "441"
+  sluggable_id: "439"
+long_island_city: 
+  scope: 
+  name: long-island-city
+  created_at: 2010-09-24 06:16:20.423302
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "474"
+  sluggable_id: "472"
+brooklyn_heights: 
+  scope: 
+  name: brooklyn-heights
+  created_at: 2010-09-24 06:16:16.653234
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "333"
+  sluggable_id: "331"
+gramercy: 
+  scope: 
+  name: gramercy
+  created_at: 2010-09-24 06:16:18.792213
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "399"
+  sluggable_id: "397"
+bayside: 
+  scope: 
+  name: bayside
+  created_at: 2010-09-24 06:16:19.688307
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "436"
+  sluggable_id: "434"
+midwood: 
+  scope: 
+  name: midwood
+  created_at: 2010-09-24 06:16:17.181588
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "365"
+  sluggable_id: "363"
+new_springville: 
+  scope: 
+  name: new-springville
+  created_at: 2010-09-24 06:16:21.612591
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "530"
+  sluggable_id: "528"
+belle_harbor: 
+  scope: 
+  name: belle-harbor
+  created_at: 2010-09-24 06:16:19.726136
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "439"
+  sluggable_id: "437"
+vinegar_hill: 
+  scope: 
+  name: vinegar-hill
+  created_at: 2010-09-24 06:16:17.689843
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "384"
+  sluggable_id: "382"
+flushing: 
+  scope: 
+  name: flushing
+  created_at: 2010-09-24 06:16:20.024019
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "452"
+  sluggable_id: "450"
+randall_manor: 
+  scope: 
+  name: randall-manor
+  created_at: 2010-09-24 06:16:21.830384
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "537"
+  sluggable_id: "535"
+ocean_hill: 
+  scope: 
+  name: ocean-hill
+  created_at: 2010-09-24 06:16:17.366574
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "369"
+  sluggable_id: "367"
+shore_acres: 
+  scope: 
+  name: shore-acres
+  created_at: 2010-09-24 06:16:21.890384
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "542"
+  sluggable_id: "540"
+columbia_street_waterfront_district: 
+  scope: 
+  name: columbia-street-waterfront-district
+  created_at: 2010-09-24 06:16:16.749162
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "341"
+  sluggable_id: "339"
+rochdale: 
+  scope: 
+  name: rochdale
+  created_at: 2010-09-24 06:16:20.7474
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "488"
+  sluggable_id: "486"
+remsen_village: 
+  scope: 
+  name: remsen-village
+  created_at: 2010-09-24 06:16:17.464232
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "377"
+  sluggable_id: "375"
+pelham_gardens: 
+  scope: 
+  name: pelham-gardens
+  created_at: 2010-09-24 06:16:16.094545
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "311"
+  sluggable_id: "309"
+bellaire: 
+  scope: 
+  name: bellaire
+  created_at: 2010-09-24 06:16:19.713682
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "438"
+  sluggable_id: "436"
+washington_heights: 
+  scope: 
+  name: washington-heights
+  created_at: 2010-09-24 06:16:19.449571
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "428"
+  sluggable_id: "426"
+mill_island: 
+  scope: 
+  name: mill-island
+  created_at: 2010-09-24 06:16:17.341536
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "367"
+  sluggable_id: "365"
+mount_eden: 
+  scope: 
+  name: mount-eden
+  created_at: 2010-09-24 06:16:15.937503
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "304"
+  sluggable_id: "302"
+jamaica_hills: 
+  scope: 
+  name: jamaica-hills
+  created_at: 2010-09-24 06:16:20.189108
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "466"
+  sluggable_id: "464"
+south_street_seaport: 
+  scope: 
+  name: south-street-seaport
+  created_at: 2010-09-24 06:16:19.339011
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "419"
+  sluggable_id: "417"
+brownsville: 
+  scope: 
+  name: brownsville
+  created_at: 2010-09-24 06:16:16.665797
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "334"
+  sluggable_id: "332"
+middle_village: 
+  scope: 
+  name: middle-village
+  created_at: 2010-09-24 06:16:20.457745
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "477"
+  sluggable_id: "475"
+glen_oaks: 
+  scope: 
+  name: glen-oaks
+  created_at: 2010-09-24 06:16:20.072218
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "456"
+  sluggable_id: "454"
+midtown_west: 
+  scope: 
+  name: midtown-west
+  created_at: 2010-09-24 06:16:19.106317
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "412"
+  sluggable_id: "410"
+spuyten_duyvil: 
+  scope: 
+  name: spuyten-duyvil
+  created_at: 2010-09-24 06:16:16.308105
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "316"
+  sluggable_id: "314"
+little_italy: 
+  scope: 
+  name: little-italy
+  created_at: 2010-09-24 06:16:19.034496
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "406"
+  sluggable_id: "404"
+bedford_park: 
+  scope: 
+  name: bedford-park
+  created_at: 2010-09-24 06:16:15.356736
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "279"
+  sluggable_id: "277"
+clifton: 
+  scope: 
+  name: clifton
+  created_at: 2010-09-24 06:16:21.221103
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "510"
+  sluggable_id: "508"
+bullshead: 
+  scope: 
+  name: bullshead
+  created_at: 2010-09-24 06:16:21.170643
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "506"
+  sluggable_id: "504"
+annadale: 
+  scope: 
+  name: annadale
+  created_at: 2010-09-24 06:16:20.909469
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "500"
+  sluggable_id: "498"
+pomonok: 
+  scope: 
+  name: pomonok
+  created_at: 2010-09-24 06:16:20.518029
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "482"
+  sluggable_id: "480"
+nolita: 
+  scope: 
+  name: nolita
+  created_at: 2010-09-24 06:16:19.163607
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "416"
+  sluggable_id: "414"
+east_new_york: 
+  scope: 
+  name: east-new-york
+  created_at: 2010-09-24 06:16:16.996306
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "350"
+  sluggable_id: "348"
+arlington: 
+  scope: 
+  name: arlington
+  created_at: 2010-09-24 06:16:21.119462
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "502"
+  sluggable_id: "500"
+graniteville: 
+  scope: 
+  name: graniteville
+  created_at: 2010-09-24 06:16:21.29352
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "516"
+  sluggable_id: "514"
+schuylerville: 
+  scope: 
+  name: schuylerville
+  created_at: 2010-09-24 06:16:16.150163
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "314"
+  sluggable_id: "312"
+chelsea_1: 
+  scope: 
+  name: chelsea
+  created_at: 2010-09-24 06:16:21.209667
+  sequence: "2"
+  sluggable_type: Neighborhood
+  id: "509"
+  sluggable_id: "507"
+throgs_neck: 
+  scope: 
+  name: throgs-neck
+  created_at: 2010-09-24 06:16:16.320332
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "317"
+  sluggable_id: "315"
+morris_heights: 
+  scope: 
+  name: morris-heights
+  created_at: 2010-09-24 06:16:15.889568
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "300"
+  sluggable_id: "298"
+north_riverdale: 
+  scope: 
+  name: north-riverdale
+  created_at: 2010-09-24 06:16:15.961341
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "306"
+  sluggable_id: "304"
+cypress_hills: 
+  scope: 
+  name: cypress-hills
+  created_at: 2010-09-24 06:16:16.784154
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "344"
+  sluggable_id: "342"
+old_town: 
+  scope: 
+  name: old-town
+  created_at: 2010-09-24 06:16:21.636889
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "532"
+  sluggable_id: "530"
+park_slope: 
+  scope: 
+  name: park-slope
+  created_at: 2010-09-24 06:16:17.403821
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "372"
+  sluggable_id: "370"
+prospect_lefferts_gardens: 
+  scope: 
+  name: prospect-lefferts-gardens
+  created_at: 2010-09-24 06:16:17.428079
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "374"
+  sluggable_id: "372"
+woodside: 
+  scope: 
+  name: woodside
+  created_at: 2010-09-24 06:16:20.896589
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "499"
+  sluggable_id: "497"
+new_brighton: 
+  scope: 
+  name: new-brighton
+  created_at: 2010-09-24 06:16:21.574114
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "527"
+  sluggable_id: "525"
+mount_hope: 
+  scope: 
+  name: mount-hope
+  created_at: 2010-09-24 06:16:15.949267
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "305"
+  sluggable_id: "303"
+college_point: 
+  scope: 
+  name: college-point
+  created_at: 2010-09-24 06:16:19.789149
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "444"
+  sluggable_id: "442"
+clason_point: 
+  scope: 
+  name: clason-point
+  created_at: 2010-09-24 06:16:15.537826
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "284"
+  sluggable_id: "282"
+little_neck: 
+  scope: 
+  name: little-neck
+  created_at: 2010-09-24 06:16:20.411581
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "473"
+  sluggable_id: "471"
+west_village: 
+  scope: 
+  name: west-village
+  created_at: 2010-09-24 06:16:19.461242
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "429"
+  sluggable_id: "427"
+port_richmond: 
+  scope: 
+  name: port-richmond
+  created_at: 2010-09-24 06:16:21.806667
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "535"
+  sluggable_id: "533"
+city_line: 
+  scope: 
+  name: city-line
+  created_at: 2010-09-24 06:16:16.712431
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "338"
+  sluggable_id: "336"
+emerson_hill: 
+  scope: 
+  name: emerson-hill
+  created_at: 2010-09-24 06:16:21.281799
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "515"
+  sluggable_id: "513"
+hillcrest: 
+  scope: 
+  name: hillcrest
+  created_at: 2010-09-24 06:16:20.095119
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "458"
+  sluggable_id: "456"
+woodhaven: 
+  scope: 
+  name: woodhaven
+  created_at: 2010-09-24 06:16:20.879585
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "498"
+  sluggable_id: "496"
+pelham_bay: 
+  scope: 
+  name: pelham-bay
+  created_at: 2010-09-24 06:16:16.07982
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "310"
+  sluggable_id: "308"
+rosebank: 
+  scope: 
+  name: rosebank
+  created_at: 2010-09-24 06:16:21.866377
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "540"
+  sluggable_id: "538"
+bay_ridge: 
+  scope: 
+  name: bay-ridge
+  created_at: 2010-09-24 06:16:16.443111
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "327"
+  sluggable_id: "325"
+utopia: 
+  scope: 
+  name: utopia
+  created_at: 2010-09-24 06:16:20.852329
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "496"
+  sluggable_id: "494"
+floral_park: 
+  scope: 
+  name: floral-park
+  created_at: 2010-09-24 06:16:20.012179
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "451"
+  sluggable_id: "449"
+woodrow: 
+  scope: 
+  name: woodrow
+  created_at: 2010-09-24 06:16:22.143898
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "552"
+  sluggable_id: "550"
+west_brighton: 
+  scope: 
+  name: west-brighton
+  created_at: 2010-09-24 06:16:21.985445
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "550"
+  sluggable_id: "548"
+fresh_meadows: 
+  scope: 
+  name: fresh-meadows
+  created_at: 2010-09-24 06:16:20.060498
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "455"
+  sluggable_id: "453"
+fordham: 
+  scope: 
+  name: fordham
+  created_at: 2010-09-24 06:16:15.674551
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "294"
+  sluggable_id: "292"
+flatlands: 
+  scope: 
+  name: flatlands
+  created_at: 2010-09-24 06:16:17.033625
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "353"
+  sluggable_id: "351"
+williamsbridge: 
+  scope: 
+  name: williamsbridge
+  created_at: 2010-09-24 06:16:16.409416
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "324"
+  sluggable_id: "322"
+ditmas_park: 
+  scope: 
+  name: ditmas-park
+  created_at: 2010-09-24 06:16:16.806892
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "346"
+  sluggable_id: "344"
+concourse_village: 
+  scope: 
+  name: concourse-village
+  created_at: 2010-09-24 06:16:15.580512
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "287"
+  sluggable_id: "285"
+charleston: 
+  scope: 
+  name: charleston
+  created_at: 2010-09-24 06:16:21.197199
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "508"
+  sluggable_id: "506"
+downtown_brooklyn: 
+  scope: 
+  name: downtown-brooklyn
+  created_at: 2010-09-24 06:16:16.819174
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "347"
+  sluggable_id: "345"
+westchester_square: 
+  scope: 
+  name: westchester-square
+  created_at: 2010-09-24 06:16:16.398135
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "323"
+  sluggable_id: "321"
+rego_park: 
+  scope: 
+  name: rego-park
+  created_at: 2010-09-24 06:16:20.702437
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "485"
+  sluggable_id: "483"
+koreatown: 
+  scope: 
+  name: koreatown
+  created_at: 2010-09-24 06:16:19.022572
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "405"
+  sluggable_id: "403"
+union_square: 
+  scope: 
+  name: union-square
+  created_at: 2010-09-24 06:16:19.413915
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "425"
+  sluggable_id: "423"
+wakefield: 
+  scope: 
+  name: wakefield
+  created_at: 2010-09-24 06:16:16.373871
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "321"
+  sluggable_id: "319"
+stuyvesant_town: 
+  scope: 
+  name: stuyvesant-town
+  created_at: 2010-09-24 06:16:19.363696
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "421"
+  sluggable_id: "419"
+park_hill: 
+  scope: 
+  name: park-hill
+  created_at: 2010-09-24 06:16:21.648514
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "533"
+  sluggable_id: "531"
+todt_hill: 
+  scope: 
+  name: todt-hill
+  created_at: 2010-09-24 06:16:21.949837
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "547"
+  sluggable_id: "545"
+edenwald: 
+  scope: 
+  name: edenwald
+  created_at: 2010-09-24 06:16:15.637639
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "291"
+  sluggable_id: "289"
+huguenot: 
+  scope: 
+  name: huguenot
+  created_at: 2010-09-24 06:16:21.527308
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "523"
+  sluggable_id: "521"
+kips_bay: 
+  scope: 
+  name: kips-bay
+  created_at: 2010-09-24 06:16:19.011262
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "404"
+  sluggable_id: "402"
+edgemere: 
+  scope: 
+  name: edgemere
+  created_at: 2010-09-24 06:16:19.839011
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "448"
+  sluggable_id: "446"
+castle_hill: 
+  scope: 
+  name: castle-hill
+  created_at: 2010-09-24 06:16:15.382033
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "281"
+  sluggable_id: "279"
+laurelton: 
+  scope: 
+  name: laurelton
+  created_at: 2010-09-24 06:16:20.375457
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "470"
+  sluggable_id: "468"
+jfk_airport: 
+  scope: 
+  name: jfk-airport
+  created_at: 2010-09-24 06:16:20.141881
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "462"
+  sluggable_id: "460"
+kingsbridge: 
+  scope: 
+  name: kingsbridge
+  created_at: 2010-09-24 06:16:15.715961
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "297"
+  sluggable_id: "295"
+crown_heights: 
+  scope: 
+  name: crown-heights
+  created_at: 2010-09-24 06:16:16.772252
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "343"
+  sluggable_id: "341"
+bloomfield: 
+  scope: 
+  name: bloomfield
+  created_at: 2010-09-24 06:16:21.158229
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "505"
+  sluggable_id: "503"
+weeksville: 
+  scope: 
+  name: weeksville
+  created_at: 2010-09-24 06:16:17.702176
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "385"
+  sluggable_id: "383"
+astoria_heights: 
+  scope: 
+  name: astoria-heights
+  created_at: 2010-09-24 06:16:19.510118
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "433"
+  sluggable_id: "431"
+edgewater_park: 
+  scope: 
+  name: edgewater-park
+  created_at: 2010-09-24 06:16:15.650248
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "292"
+  sluggable_id: "290"
+east_elmhurst: 
+  scope: 
+  name: east-elmhurst
+  created_at: 2010-09-24 06:16:19.825983
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "447"
+  sluggable_id: "445"
+dumbo: 
+  scope: 
+  name: dumbo
+  created_at: 2010-09-24 06:16:16.795014
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "345"
+  sluggable_id: "343"
+gowanus: 
+  scope: 
+  name: gowanus
+  created_at: 2010-09-24 06:16:17.095999
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "358"
+  sluggable_id: "356"
+ridgewood: 
+  scope: 
+  name: ridgewood
+  created_at: 2010-09-24 06:16:20.735627
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "487"
+  sluggable_id: "485"
+midtown_east: 
+  scope: 
+  name: midtown-east
+  created_at: 2010-09-24 06:16:19.094122
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "411"
+  sluggable_id: "409"
+morningside_heights: 
+  scope: 
+  name: morningside-heights
+  created_at: 2010-09-24 06:16:19.126085
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "413"
+  sluggable_id: "411"
+williamsburg_south_side: 
+  scope: 
+  name: williamsburg-south-side
+  created_at: 2010-09-24 06:16:17.729727
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "387"
+  sluggable_id: "385"
+clinton_hill: 
+  scope: 
+  name: clinton-hill
+  created_at: 2010-09-24 06:16:16.724197
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "339"
+  sluggable_id: "337"
+marine_park: 
+  scope: 
+  name: marine-park
+  created_at: 2010-09-24 06:16:17.170458
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "364"
+  sluggable_id: "362"
+morris_park: 
+  scope: 
+  name: morris-park
+  created_at: 2010-09-24 06:16:15.901587
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "301"
+  sluggable_id: "299"
+oakland_gardens: 
+  scope: 
+  name: oakland-gardens
+  created_at: 2010-09-24 06:16:20.494459
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "480"
+  sluggable_id: "478"
+riverdale: 
+  scope: 
+  name: riverdale
+  created_at: 2010-09-24 06:16:16.138177
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "313"
+  sluggable_id: "311"
+bay_terrace: 
+  scope: 
+  name: bay-terrace
+  created_at: 2010-09-24 06:16:19.673775
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "435"
+  sluggable_id: "433"
+battery_park: 
+  scope: 
+  name: battery-park
+  created_at: 2010-09-24 06:16:17.77714
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "391"
+  sluggable_id: "389"
+great_kills: 
+  scope: 
+  name: great-kills
+  created_at: 2010-09-24 06:16:21.477893
+  sequence: "1"
+  sluggable_type: Neighborhood
+  id: "519"
+  sluggable_id: "517"

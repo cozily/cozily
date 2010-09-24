@@ -9,10 +9,9 @@ describe Neighborhood do
   describe ".for_lat_and_lng" do
     it "finds a neighorhood based on the response from Yelp" do
       lambda {
-        @neighborhood = Neighborhood.for_lat_and_lng(40.6824793, -74.0003197)
+        @neighborhood = Neighborhood.for_lat_and_lng(40.6824793, -74.0003197).first
       }.should_not change(Neighborhood, :count)
 
-      @neighborhood = Neighborhood.last
       @neighborhood.name.should == "Carroll Gardens"
       @neighborhood.city.should == "New York"
       @neighborhood.state.should == "NY"
@@ -22,7 +21,7 @@ describe Neighborhood do
 
     it "should not create a new neighborhood outside of New York" do
       lambda {
-        @neighborhood = Neighborhood.for_lat_and_lng(38.911385, -77.039474)
+        Neighborhood.for_lat_and_lng(38.911385, -77.039474)
       }.should_not change(Neighborhood, :count)
     end
   end

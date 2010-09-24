@@ -1,10 +1,12 @@
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path(File.join(File.dirname(__FILE__),'..','config','environment'))
+require File.join(File.dirname(__FILE__), '../test/webmock_helper.rb')
 require 'spec/autorun'
 require 'spec/rails'
 
 Dir[File.expand_path(File.join(File.dirname(__FILE__),'support','**','*.rb'))].each {|f| require f}
-require File.join(File.dirname(__FILE__), '../test/webmock_helper.rb')
+
+DatabaseCleaner.strategy = :truncation
 
 Spec::Runner.configure do |config|
   config.use_transactional_fixtures = true
