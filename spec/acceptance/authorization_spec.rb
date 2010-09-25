@@ -26,7 +26,11 @@ feature "authorization" do
   scenario "non-admin cannot view admin pages" do
     login_as(Factory(:user))
 
-    visit admin_users_path
-    current_path.should == dashboard_matches_path
+    [admin_users_path,
+     admin_apartments_path].each do |path|
+      visit path
+
+      current_path.should == dashboard_matches_path
+    end
   end
 end
