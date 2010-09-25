@@ -1,17 +1,10 @@
 Then /^I can sign up as an apartment seeker$/ do
-  Factory(:neighborhood,
-          :name => "Greenpoint",
-          :city => "New York",
-          :state => "NY",
-          :country => "USA",
-          :borough => "Brooklyn")
-
   visit root_path
 
   page.find("a img.find").click
   select '1', :from => 'How many bedrooms do you need?'
   fill_in 'How much can you pay?', :with => '1500'
-  fill_in "Where do you want to live?", :with => "Green"
+  fill_in "Where do you want to live?", :with => "Greenp"
 
   sleep 1
   page.driver.browser.execute_script(%Q{$("a.ui-corner-all:first").eq(0).mouseenter().click()})
