@@ -11,6 +11,10 @@ class Image < ActiveRecord::Base
                     :path => "/:id/:style/:filename",
                     :default_url => "/images/defaults/:style.png"
 
+  validates_attachment_content_type :asset,
+                                    :content_type => ['image/jpg', 'image/jpeg', 'image/pjpeg', 'image/gif', 'image/png', 'image/x-png'],
+                                    :message => "only images are allowed"
+
   validates_presence_of :apartment
 
   acts_as_list :scope => :apartment

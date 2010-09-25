@@ -249,7 +249,7 @@ function liveNeighborhoodAutocomplete() {
             new AjaxUpload('upload', {
                 action: $("a[data-upload-path]").attr('data-upload-path'),
                 onSubmit : function(file, ext) {
-                    if (ext && /^(jpg|png|jpeg|gif)$/.test(ext)) {
+                    if (ext && /^(jpg|png|jpeg|gif)$/i.test(ext)) {
                         this.setData({
                             'authenticity_token': window._token
                         });
