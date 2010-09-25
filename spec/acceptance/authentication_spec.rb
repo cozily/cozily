@@ -3,7 +3,7 @@ require File.dirname(__FILE__) + '/acceptance_helper'
 feature "authentication" do
   scenario "some paths requires authentication" do
     @apartment = Factory(:apartment)
-    @neighborhood = Factory(:neighborhood)
+    @neighborhood = Neighborhood.first
     @user = Factory(:user)
 
     [dashboard_path,

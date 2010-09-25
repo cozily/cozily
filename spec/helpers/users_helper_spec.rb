@@ -3,8 +3,7 @@ require 'spec_helper'
 describe UsersHelper do
   describe "profile_summary" do
     before do
-      @neighborhood = Factory(:neighborhood,
-                              :name => "Red Hook")
+      @neighborhood = Neighborhood.first
       @profile = Factory(:profile,
                          :bedrooms => 1,
                          :rent => 1500,
