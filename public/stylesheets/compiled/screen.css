@@ -1682,7 +1682,6 @@ body.apartments ul.buttons li.save a, body.apartments ul.buttons li.list a {
 /* line 22, ../../../app/stylesheets/partials/apartments/_apartments.scss */
 body.apartments ul.buttons li.list {
   font-size: 1.6em;
-  margin-top: 0;
 }
 
 /* line 2, ../../../app/stylesheets/partials/apartments/_show.sass */
