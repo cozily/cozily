@@ -2,29 +2,6 @@ var infowindow, map;
 
 function attachClickToMarker(marker, apt) {
     google.maps.event.addListener(marker, 'click', function() {
-        //        var contentString = "<div class='apartment_info'>" +
-        //                            "<h3><a href='/apartments/" + apt.to_param + "'>" + apt.address.full_address + "</a></h3>" +
-        //                            "<dl>" +
-        //                            "<dt>Rent</dt>" +
-        //                            "<dd>" + apt.rent + "</dd>" +
-        //                            "<dt>Bedrooms</dt>" +
-        //                            "<dd>" + apt.bedrooms + "</dd>" +
-        //                            "<dt>Bathrooms</dt>" +
-        //                            "<dd>" + apt.bathrooms + "</dd>" +
-        //                            "<dt>Square footage</dt>" +
-        //                            "<dd>" + apt.square_footage + "</dd>" +
-        //                            "<dt>Start date</dt>" +
-        //                            "<dd>" + apt.start_date + "</dd>" +
-        //                            "</dl>" +
-        //                            "</div>";
-        //
-        //        if (infowindow) infowindow.close();
-        //
-        //        infowindow = new google.maps.InfoWindow({
-        //            content: contentString
-        //        });
-        //
-        //        infowindow.open(map, marker);
         document.location = '/apartments/' + apt.to_param;
     });
 }
