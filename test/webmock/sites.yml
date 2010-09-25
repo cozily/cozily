@@ -76,3 +76,14 @@
     -
       lat: "40.68244"
       long: "-74.0003021"
+-
+  url: http://www.geoplugin.net/xml.gp
+  queries:
+    -
+      ip: "127.0.0.1"
+-
+  url: http://api.hostip.info/get_html.php
+  queries:
+    -
+      ip: "127.0.0.1"
+      position: true
