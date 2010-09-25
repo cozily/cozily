@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
 
   geocode_ip_address
 
+  before_filter :perform_basic_authentication_on_staging
   before_filter :load_search
 
   rescue_from CanCan::AccessDenied do |exception|
@@ -47,6 +48,14 @@ class ApplicationController < ActionController::Base
       type.all { render :nothing => true, :status => 500 }
     end
     true
+  end
+
+  def perform_basic_authentication_on_staging
+    if Rails.env.staging?
+      authenticate_or_request_with_http_basic do |username, password|
+        username == "cozily" && password == "marathon69"
+      end
+    end
   end
 
   def load_search
