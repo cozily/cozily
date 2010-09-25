@@ -1,5 +1,13 @@
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
+  def body_classes
+    classes = []
+    classes << "admin" if controller.controller_path =~ /admin/
+    classes << controller.controller_name
+    classes << controller.action_name
+    classes.join(" ")
+  end
+
   def ip_lat
     session[:geo_location].try(:lat) || 40.7142691
   end

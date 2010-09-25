@@ -1,3 +1,18 @@
-%ol
-  -@users.each do |user|
-    %li=user.full_name
+%h1 Users
+
+%table.datatable
+  %thead
+    %tr
+      %th Name
+      %th Email
+      %th Confirmed
+      %th Joined
+      %th Role(s)
+  %tbody
+    -@users.each do |user|
+      %tr
+        %td=user.full_name
+        %td=user.email
+        %td=user.email_confirmed
+        %td=user.created_at
+        %td=user.roles.map(&:name).map(&:titleize).join(", ")

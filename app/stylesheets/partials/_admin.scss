@@ -1,0 +1,65 @@
+body.admin {
+    div[data-content-key=yield] {
+        padding: 20px;
+
+        h1 {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+div.dataTables_wrapper {
+    div.ui-toolbar {
+        padding: 5px;
+
+        div.dataTables_length {
+            float: left;
+            width: 40%;
+            padding: 3px 0 0 3px;
+        }
+
+        div.dataTables_filter {
+            float: right;
+            width: 50%;
+            text-align: right;
+
+            input[type=text] {
+                height: 24px;
+                font-size: 12px;
+                padding: 2px;
+            }
+        }
+
+        div.dataTables_info {
+            float: left;
+            width: 50%;
+            padding: 3px 0 0 3px;
+        }
+
+        div.dataTables_paginate {
+            float: right;
+            text-align: right;
+
+            span.ui-button {
+                margin-right: -0.1em;
+                padding: 2px 6px;
+            }
+        }
+    }
+
+    table {
+        th {
+            div.DataTables_sort_wrapper {
+                position: relative;
+                padding-right: 20px;
+
+                span {
+                    margin-top: -8px;
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                }
+            }
+        }
+    }
+}

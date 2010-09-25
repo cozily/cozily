@@ -74,6 +74,10 @@ function liveNeighborhoodAutocomplete() {
 (function($) {
     $(function() {
         $("input[data-date=true]").datepicker();
+        $("table.datatable").dataTable({
+            "bJQueryUI": true,
+            "sPaginationType": "full_numbers"
+        });
 
         $("input[name=apartment[sublet]]").live("change", function(event) {
             if ($("input#apartment_sublet_true").attr('checked')) {
@@ -296,7 +300,7 @@ function liveNeighborhoodAutocomplete() {
                 }
             }
 
-            if(div.is(':hidden')) {
+            if (div.is(':hidden')) {
                 div.fadeIn();
             }
         });
