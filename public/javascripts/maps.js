@@ -57,7 +57,7 @@ function updateMap(self, others) {
         var marker = setPrimaryApartment(self.apartment.address.lat, self.apartment.address.lng, self.apartment.address.full_address);
         attachClickToMarker(marker, self.apartment);
     } else {
-        map.setCenter(new google.maps.LatLng(ip_lat, ip_lng));
+        map.setCenter(new google.maps.LatLng(40.7144843, -74.0072444));
         var bounds = new google.maps.LatLngBounds();
     }
 
