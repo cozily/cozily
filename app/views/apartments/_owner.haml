@@ -9,7 +9,7 @@
         %li=link_to "Mark as 'Leased'", transition_apartment_path(apartment, :event => "lease"), :method => :put
       %li.save=link_to "Save Changes", "#"
       -if apartment.can_list?
-        %li.list=link_to "List Apartment", transition_apartment_path(apartment, :event => "list"), :method => :put
+        %li.list=link_to "List Apartment", transition_apartment_path(apartment, :event => "list", :return_to => apartment_path(apartment)), :method => :put
   -else
     %h1 View Listing
 

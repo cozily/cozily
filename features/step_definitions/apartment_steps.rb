@@ -81,6 +81,12 @@ Then /^I can (list|unlist) the apartment$/ do |action|
 
   apartment.reload.send("#{action}ed?").should be_true
   page.should_not have_css("input[type='submit'][value='#{action}']")
+
+  current_path.should == if action == "list"
+    apartment_path(apartment)
+  else
+    edit_apartment_path(apartment)
+  end
 end
 
 But /^I cannot (list|unlist) another user's apartment$/ do |action|
