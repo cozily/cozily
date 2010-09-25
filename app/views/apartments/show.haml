@@ -77,13 +77,17 @@
     #nearby_stations
       %h3 Nearby Stations
       %table
-        -@apartment.nearby_stations.each do |station|
+        -if @nearby_stations.present?
+          -@nearby_stations.each do |station|
+            %tr
+              %td
+                .name= station.name
+                - station.trains.each do |train|
+                  = image_tag "mta/#{train.name}.gif"
+              %td==#{number_with_precision(station.distance, :precision => 2)}mi
+        -else
           %tr
-            %td
-              .name= station.name
-              - station.trains.each do |train|
-                = image_tag "mta/#{train.name}.gif"
-            %td==#{number_with_precision(station.distance, :precision => 2)}mi
+            %td None
     =image_tag "backgrounds/shadow.png", :class => "shadow"
 
     -if @apartment.address
@@ -91,4 +95,3 @@
 
 -else
   %p This apartment is unlisted.
-
