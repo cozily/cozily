@@ -32,7 +32,7 @@ Then /^I can search for apartments with parameters$/ do
     page.should have_content(apartment.street)
   end
 
-  fill_in "neighborhood_autocomplete", :with => "Green"
+  fill_in "neighborhood_autocomplete", :with => "Greenp"
   sleep 1
 
   page.driver.browser.execute_script(%Q{$("a.ui-corner-all:first").eq(0).mouseenter().click()})
