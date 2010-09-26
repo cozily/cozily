@@ -43,6 +43,7 @@ ActionController::Routing::Routes.draw do |map|
   end
 
   map.namespace :admin do |admin|
+    admin.home "", :controller => "base"
     admin.resources :apartments, :only => [ :index ]
     admin.resources :users, :only => [ :index ]
   end
