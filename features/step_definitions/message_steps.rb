@@ -85,7 +85,7 @@ Then /^I can reply to a deleted conversation$/ do
     click_button "Reply"
     page.should have_content("Message Sent")
   }.should change(conversation, :receiver_deleted_at).to(nil)
-  end
+end
 
 Then /^I can message from the dashboard$/ do
   apartment = Factory(:apartment,
