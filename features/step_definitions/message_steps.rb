@@ -81,10 +81,9 @@ Then /^I can reply to a deleted conversation$/ do
 
   find("div.conversations ul.conversation li.info").click
   fill_in "message_body", :with => "Thanks for emailing me."
-  lambda {
-    click_button "Reply"
-    page.should have_content("Message Sent")
-  }.should change(conversation, :receiver_deleted_at).to(nil)
+  click_button "Reply"
+  page.should have_content("Message Sent")
+  conversation.reload.receiver_deleted_at.should == nil
 end
 
 Then /^I can message from the dashboard$/ do
