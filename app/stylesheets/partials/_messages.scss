@@ -1,4 +1,11 @@
 body.dashboard {
+    p.empty {
+        font-size: 18px;
+        padding: 18px;
+        text-align: center;
+        clear: both;
+    }
+
     div.conversations {
         margin: 0 10px;
         width: 930px;

@@ -6,31 +6,35 @@
 
   =render "dashboard/tabs", :active => :messages
 
-.pagination
-  %ul
-    %li.counts= pagination_summary(params[:page], @conversations)
-    %li.navigation= will_paginate((@conversations), :renderer => AjaxPaginationLinkRenderer)
+- if @conversations.present?
+  .pagination
+    %ul
+      %li.counts= pagination_summary(params[:page], @conversations)
+      %li.navigation= will_paginate((@conversations), :renderer => AjaxPaginationLinkRenderer)
 
-.conversations
-  - @conversations.each do |conversation|
-    - first_message = conversation.messages.first
-    %div[conversation]
-      %ul.conversation{:'data-conversation-id' => conversation.id}
-        %li.status{:class => (conversation.unread_message_count_for(current_user).zero? ? "" : "new") } &nbsp;
-        %li.info
-          %ul
-            %li.sender= conversation.sender.full_name
-            %li.details
-              = truncate(first_message.body)
-              |
-              = first_message.created_at
+  .conversations
+    - @conversations.each do |conversation|
+      - first_message = conversation.messages.first
+      %div[conversation]
+        %ul.conversation{:'data-conversation-id' => conversation.id}
+          %li.status{:class => (conversation.unread_message_count_for(current_user).zero? ? "" : "new") } &nbsp;
+          %li.info
+            %ul
+              %li.sender= conversation.sender.full_name
+              %li.details
+                = truncate(first_message.body)
+                |
+                = first_message.created_at
 
-        %li.delete= image_tag "icons/delete_message.png"
-        %li.photo
-          -if conversation.apartment.images.present?
-            =image_tag(conversation.apartment.images.first.asset.url(:micro))
-          -else
-            =image_tag("defaults/apartment/micro.jpg")
-        %li.name= conversation.apartment.address.street
-    %div.messages{:style => "display: none;"}
-      = render "dashboard/messages/messages", :conversation => conversation
+          %li.delete= image_tag "icons/delete_message.png"
+          %li.photo
+            -if conversation.apartment.images.present?
+              =image_tag(conversation.apartment.images.first.asset.url(:micro))
+            -else
+              =image_tag("defaults/apartment/micro.jpg")
+          %li.name= conversation.apartment.address.street
+      %div.messages{:style => "display: none;"}
+        = render "dashboard/messages/messages", :conversation => conversation
+- else
+  %p.empty
+    Your inbox is empty.  You should be more talkative.
