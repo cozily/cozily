@@ -35,7 +35,7 @@ class Conversation < ActiveRecord::Base
 
   private
   def ensure_first_message_is_valid
-    unless Message.new(:conversation => self, :sender => sender, :body => body).valid?
+    unless messages.present? || Message.new(:conversation => self, :sender => sender, :body => body).valid?
       errors.add_to_base("The first message is invalid")
     end
   end

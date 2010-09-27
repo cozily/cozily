@@ -56,8 +56,9 @@ describe Conversation do
   describe "#mark_messages_read_by" do
     it "should mark all of a conversations messages as read by the given user" do
       conversation = Factory(:conversation)
-      Factory(:message, :sender => conversation.receiver, :conversation => conversation)
+      message = Factory(:message, :sender => conversation.receiver, :conversation => conversation)
 
+      conversation.messages.reload.count.should == 2
       conversation.unread_message_count_for(conversation.sender).should == 1
       conversation.unread_message_count_for(conversation.receiver).should == 1
 
