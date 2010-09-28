@@ -1,5 +1,5 @@
 %li[message]
-  %span.bold= message.created_at
+  %span.bold= message.created_at.strftime("%b %d, %l:%M%p")
   %span.light &#124;
   %span.bold
     From:

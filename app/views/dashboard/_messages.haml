@@ -24,7 +24,7 @@
               %li.details
                 = truncate(first_message.body)
                 |
-                = first_message.created_at
+                = first_message.created_at.strftime("%b %d, %l:%M%p")
 
           %li.delete= image_tag "icons/delete_message.png"
           %li.photo
