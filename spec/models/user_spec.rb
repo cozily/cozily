@@ -78,6 +78,11 @@ describe User do
         @user.matches.should == [@apt1]
       end
 
+      it "does not return matching apartments that the user created" do
+        @apt1.update_attribute(:user, @user)
+        @user.matches.should == []
+      end
+
       it "returns an empty array when rent does not match" do
         @apt1.update_attribute(:rent, 1501)
         @user.matches.should == []
