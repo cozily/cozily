@@ -11,6 +11,7 @@ class Ability
       can [:create, :destroy], Flag, :user_id => user.id
       can :manage, Message
       can :manage, User, :id => user.id
+      can :manage, Profile, :id => user.id
     else
       can :read, Apartment
       can :create, User

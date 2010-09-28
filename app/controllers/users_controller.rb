@@ -1,4 +1,5 @@
 class UsersController < Clearance::UsersController
+  before_filter :authenticate, :except => [ :create ]
   load_and_authorize_resource
 
   def edit

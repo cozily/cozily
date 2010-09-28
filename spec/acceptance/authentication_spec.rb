@@ -21,8 +21,9 @@ feature "authentication" do
      sign_out_path,
      search_path].each do |path|
       visit path
+
+      current_path.should == sign_in_path
+      page.should have_content("Sign in")
     end
-    current_path.should == sign_in_path
-    page.should have_content("Sign in")
   end
 end

@@ -1,4 +1,7 @@
 class Users::ProfilesController < ApplicationController
+  before_filter :authenticate
+  load_and_authorize_resource
+
   def edit
     @user = User.find(params[:user_id])
     @user.profile ||= Profile.new
