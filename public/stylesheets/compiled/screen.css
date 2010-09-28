@@ -2199,13 +2199,32 @@ body.apartments.edit div.aside div#map_canvas, body.apartments.update div.aside 
   height: 306px;
 }
 /* line 158, ../../../app/stylesheets/partials/apartments/_edit.scss */
+body.apartments.edit div.aside div[data-content-key=missing-information], body.apartments.update div.aside div[data-content-key=missing-information] {
+  overflow: hidden;
+  *zoom: 1;
+  margin-top: 10px;
+}
+/* line 162, ../../../app/stylesheets/partials/apartments/_edit.scss */
+body.apartments.edit div.aside div[data-content-key=missing-information] p, body.apartments.update div.aside div[data-content-key=missing-information] p {
+  margin: 10px 0;
+  font-size: 16px;
+  width: 95%;
+}
+/* line 168, ../../../app/stylesheets/partials/apartments/_edit.scss */
+body.apartments.edit div.aside div[data-content-key=missing-information] ul, body.apartments.update div.aside div[data-content-key=missing-information] ul {
+  list-style-type: disc;
+  font-size: 16px;
+  font-style: italic;
+  margin-left: 40px;
+}
+/* line 176, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.aside div[data-content-key=comparables], body.apartments.update div.aside div[data-content-key=comparables] {
   overflow: hidden;
   *zoom: 1;
   margin-top: 10px;
   background: url(/images/backgrounds/comparables.png) no-repeat 0 0;
 }
-/* line 163, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 181, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.aside div[data-content-key=comparables] h6, body.apartments.update div.aside div[data-content-key=comparables] h6 {
   color: #647378;
   text-align: center;
@@ -2213,36 +2232,36 @@ body.apartments.edit div.aside div[data-content-key=comparables] h6, body.apartm
   padding: 25px 0;
   width: 295px;
 }
-/* line 171, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 189, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.aside div[data-content-key=comparables] table, body.apartments.update div.aside div[data-content-key=comparables] table {
   width: 306px;
   padding: 0 10px;
 }
-/* line 176, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 194, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.aside div[data-content-key=comparables] table tr td.marker, body.apartments.update div.aside div[data-content-key=comparables] table tr td.marker {
   vertical-align: top;
   padding-top: 7px;
 }
-/* line 181, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 199, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.aside div[data-content-key=comparables] table tr td, body.apartments.update div.aside div[data-content-key=comparables] table tr td {
   border-bottom: 1px solid #CCCCCC;
   padding: 5px 0 10px;
 }
-/* line 185, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 203, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.aside div[data-content-key=comparables] table tr td span.street, body.apartments.update div.aside div[data-content-key=comparables] table tr td span.street {
   display: block;
   font-size: 1.1em;
 }
-/* line 189, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 207, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.aside div[data-content-key=comparables] table tr td span.street a, body.apartments.update div.aside div[data-content-key=comparables] table tr td span.street a {
   color: black;
   font-weight: 500;
 }
-/* line 195, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 213, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.aside div[data-content-key=comparables] table tr td span.info, body.apartments.update div.aside div[data-content-key=comparables] table tr td span.info {
   color: #666;
 }
-/* line 200, ../../../app/stylesheets/partials/apartments/_edit.scss */
+/* line 218, ../../../app/stylesheets/partials/apartments/_edit.scss */
 body.apartments.edit div.aside div[data-content-key=comparables] table tr td.rent, body.apartments.update div.aside div[data-content-key=comparables] table tr td.rent {
   font-size: 1.1em;
   font-weight: 500;

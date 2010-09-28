@@ -306,6 +306,45 @@ describe Apartment do
     end
   end
 
+  describe "#missing_fields" do
+    before do
+      @apartment = Factory(:apartment)
+    end
+
+    Apartment::REQUIRED_FIELDS.each do |field|
+      it "includes #{field} when it is missing" do
+        @apartment.send("#{field}=", nil)
+        @apartment.missing_fields.should include(field)
+      end
+    end
+
+    it "includes end date when the apartment is a sublet and end date is blank" do
+      @apartment.update_attributes(:sublet => true, :end_date => nil)
+      @apartment.missing_fields.should include(:end_date)
+    end
+  end
+
+  describe "#missing_associations" do
+    before do
+      @apartment = Factory(:apartment)
+    end
+
+    it "includes images when there a fewer than two images" do
+      @apartment.images.should == []
+      @apartment.missing_associations.should include(:images)
+    end
+
+    it "includes phone when the user doesn't have a phone" do
+      @apartment.user.update_attribute(:phone, nil)
+      @apartment.missing_associations.should include(:phone)
+    end
+
+    it "includes email_confirmed when the user hasn't confirmed their email" do
+      @apartment.user.update_attribute(:email_confirmed, false)
+      @apartment.missing_associations.should include(:email_confirmed)
+    end
+  end
+
   describe "#name" do
     it "should join address and unit" do
       @apartment = Factory(:apartment)

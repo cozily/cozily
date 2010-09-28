@@ -1,0 +1,15 @@
+-if apartment.missing_fields.present? || apartment.missing_associations.present?
+  %div{ :'data-content-key' => "missing-information" }
+    %h2 Missing Information
+
+    -if apartment.missing_fields.present?
+      %p We need to know the following:
+      %ul
+        -apartment.missing_fields.each do |field|
+          %li=field.to_s.humanize.downcase
+
+    -if apartment.missing_associations.present?
+      %p=missing_associations(apartment)
+
+    %p Other than that, you're good to go!
+

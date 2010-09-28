@@ -18,8 +18,8 @@
   =render "apartments/form", :apartment => @apartment
 
 .aside
-  %h2 Comparables in the Area
+  %h2 Nearby Apartments
 
   #map_canvas
 
-  =render "apartments/comparables", :apartments => @apartment.comparable_apartments
+  =render "apartments/missing_information", :apartment => @apartment

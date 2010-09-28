@@ -40,10 +40,10 @@ class Apartment < ActiveRecord::Base
     after_transition :on => :list do |apt|
       component(:tweet_apartments) do
         client = TwitterOAuth::Client.new(
-          :consumer_key => 'voDmOvIReD71vENQJRR1g',
-          :consumer_secret => 'SnK9IbDfrXxz862ImcIOmjqvfrleWRrWN1Km0vrGyds',
-          :token => '154155384-9Vaj2QiXa998sIVn8XicaSVrQOM1rzvkRfAcYjHf',
-          :secret => 'yicMo06MlgUMHSGgC5Q6lk0EicPqUZiNRrt4'
+                :consumer_key => 'voDmOvIReD71vENQJRR1g',
+                :consumer_secret => 'SnK9IbDfrXxz862ImcIOmjqvfrleWRrWN1Km0vrGyds',
+                :token => '154155384-9Vaj2QiXa998sIVn8XicaSVrQOM1rzvkRfAcYjHf',
+                :secret => 'yicMo06MlgUMHSGgC5Q6lk0EicPqUZiNRrt4'
         )
         client.update("#{apt.user.first_name} just listed a #{apt.bedrooms.prettify} bedroom apt in #{apt.neighborhood.name} for $#{apt.rent} #{apartment_url(apt)}")
       end
@@ -119,10 +119,22 @@ class Apartment < ActiveRecord::Base
     Apartment.with_state(:listed).bedrooms_near(bedrooms).rent_near(rent).to_a.sort_by_distance_from(self) - [self]
   end
 
-  def fields_remaining_for_listing
-    [].tap do |fields|
-      REQUIRED_FIELDS.each { |attr| fields << attr.to_s.humanize.downcase unless self.send(attr).present? }
+  def missing_associations
+    missing_associations = []
+    missing_associations << :images unless images.count > 1
+    missing_associations << :phone unless user && user.phone.present?
+    missing_associations << :email_confirmed unless user && user.email_confirmed?
+    missing_associations
+  end
+
+  def missing_fields
+    missing_fields = []
+    REQUIRED_FIELDS.each do |attr|
+      missing_fields << attr unless self.send(attr).present?
     end
+
+    missing_fields << :end_date if self.sublet? && self.end_date.blank?
+    missing_fields
   end
 
   def full_address=(address)
@@ -136,12 +148,12 @@ class Apartment < ActiveRecord::Base
   def nearby_stations
     return [] unless address
     nearest_stations = Station.find(:all, :origin => [lat, lng], :within => 0.4, :order => 'distance')
-    station_names =  nearest_stations.map(&:name).uniq
+    station_names = nearest_stations.map(&:name).uniq
     [].tap do |stations|
       station_names.each do |station_name|
-        stations << nearest_stations.select { |s| s.name == station_name }.max{ |a,b| a.distance <=> b.distance }
+        stations << nearest_stations.select { |s| s.name == station_name }.max{ |a, b| a.distance <=> b.distance }
       end
-    end.sort { |a,b| a.distance <=> b.distance }
+    end.sort { |a, b| a.distance <=> b.distance }
   end
 
   def last_state_change

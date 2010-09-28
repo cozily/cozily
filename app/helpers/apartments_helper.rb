@@ -41,4 +41,19 @@ module ApartmentsHelper
       end
     end
   end
+
+  def missing_associations(apartment)
+    associations = apartment.missing_associations
+
+    text = []
+    text << "upload at least two photos" if associations.include?(:images)
+    text << link_to('provide your phone number', edit_user_profile_path(apartment.user)) if associations.include?(:phone)
+    text << "confirm your email" if associations.include?(:email_confirmed)
+
+    if apartment.missing_fields.present?
+      "Also, you need to " + text.to_sentence + "."
+    else
+      "You need to " + text.to_sentence + "."
+    end
+  end
 end
