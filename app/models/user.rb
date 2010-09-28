@@ -8,9 +8,9 @@ class User < ActiveRecord::Base
   has_many :flags, :dependent => :destroy
   has_many :favorite_apartments, :through => :favorites, :source => :apartment
   has_many :flagged_apartments, :through => :flags, :source => :apartment
+  has_many :user_roles, :dependent => :destroy
   has_many :roles, :through => :user_roles
   has_many :timeline_events, :foreign_key => "actor_id", :dependent => :destroy
-  has_many :user_roles, :dependent => :destroy
   has_many :conversations, :finder_sql => 'select * from conversations where sender_id = #{id} or receiver_id = #{id}'
   has_many :messages, :through => :conversations
 

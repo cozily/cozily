@@ -48,28 +48,22 @@ Then /^I can sign in on the homepage$/ do
 end
 
 Then /^I can edit my roles$/ do
-  visit edit_user_profile_path(the.user)
-
-  check "find apartments"
-  uncheck "list apartments"
-  click_button "Update Profile"
-
   visit root_path
   page.should have_content("Matches")
-  page.should_not have_content("My Listings")
+  page.should have_no_content("My Listings")
 
   visit edit_user_profile_path(the.user)
   uncheck "find apartments"
   check "list apartments"
+  fill_in "user_phone", :with => "123-456-7890"
   click_button "Update Profile"
 
   visit root_path
-  page.should_not have_content("Matches")
+  page.should have_no_content("Matches")
   page.should have_content("My Listings")
 
   visit edit_user_profile_path(the.user)
   check "find apartments"
-  check "list apartments"
   click_button "Update Profile"
 
   visit root_path

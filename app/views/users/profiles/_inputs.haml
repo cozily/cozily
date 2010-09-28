@@ -1,5 +1,6 @@
 - f.inputs do
   I am here to:
+  =hidden_field_tag :assign_roles, true
   %li.boolean.optional
     %label{ :for => "role_ids_0" }
       =check_box_tag "role_ids[]", Role.find_by_name("finder").id, f.object.finder?, :id => "role_ids_0"

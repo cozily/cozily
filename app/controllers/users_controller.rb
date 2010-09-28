@@ -12,7 +12,7 @@ class UsersController < Clearance::UsersController
   end
 
   def create
-    params[:user].merge!(:roles => params[:role_ids].map { |id| Role.find(id) }) if params[:role_ids].present?
+    params[:user].merge!(:roles => (params[:role_ids] || []).map { |id| Role.find(id) }) if params[:assign_roles]
     @user = User.new(params[:user])
     if @user.save
       sign_in(@user)
@@ -24,7 +24,7 @@ class UsersController < Clearance::UsersController
   end
 
   def update
-    params[:user].merge!(:roles => params[:role_ids].map { |id| Role.find(id) }) if params[:role_ids].present?
+    params[:user].merge!(:roles => (params[:role_ids] || []).map { |id| Role.find(id) }) if params[:assign_roles]
     if @user.update_attributes(params[:user])
       @user.profile.neighborhood_profiles.destroy_all if params[:return_to].present? && !params[:user][:profile_attributes][:neighborhood_ids].present?
       redirect_to params[:return_to] || edit_user_path(@user)
