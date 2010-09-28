@@ -4,6 +4,7 @@
 %p==Re: #{@message.conversation.apartment.name}
 %p=@message.body
 %p==--------------------
-%p To reply to this message, follow the link below:
-%p=dashboard_messages_url
+%p
+  To reply to this message, follow the link below:<br />
+  =dashboard_messages_url
 =render "shared/mailer_signature"
