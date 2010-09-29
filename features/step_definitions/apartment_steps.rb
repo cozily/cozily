@@ -1,8 +1,10 @@
 Then /^I can create an? (apartment|sublet)$/ do |apartment_or_sublet|
   Given %Q{all the features are present}
 
+  visit dashboard_listings_path
+
   lambda {
-    click_link "New Listing"
+    click_link "List one"
   }.should change(Apartment, :count).by(1)
   apartment = Apartment.last
 
