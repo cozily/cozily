@@ -7,4 +7,8 @@ class Business
     self.photo_url = options[:photo_url]
     self.url       = options[:url]
   end
+
+  def id
+    nil
+  end
 end
