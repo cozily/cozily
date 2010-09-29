@@ -8,6 +8,8 @@
 
 .article
   -if apartments.present?
+    .new=link_to "Create New Listing", new_apartment_path
+
     .pagination
       %ul
         %li.counts= pagination_summary(params[:page], current_user.apartments)

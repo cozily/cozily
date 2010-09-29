@@ -63,6 +63,12 @@ body.dashboard, body.searches, body.neighborhoods.show {
             clear: both;
         }
 
+        div.new > a {
+            width: 160px;
+            margin: 20px auto 0;
+            @include green-link;
+        }
+
         div.apartment.listing {
             height: 140px;
             margin-bottom: 45px;
