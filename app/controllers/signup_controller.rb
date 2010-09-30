@@ -28,6 +28,7 @@ class SignupController < ApplicationController
   end
 
   def create
+    params[:user] ||= {}
     params[:user].merge!(session[:user])
     @user = User.new(params[:user].merge(:roles => [Role.find_by_name(session[:want])]))
     if @user.save
