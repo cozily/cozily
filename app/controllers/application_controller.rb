@@ -64,4 +64,11 @@ class ApplicationController < ActionController::Base
                          :max_rent => session[:max_rent],
                          :page => params[:page])
   end
+
+  def unauthenticate
+    if current_user
+      redirect_to sign_out_path
+      return false
+    end
+  end
 end

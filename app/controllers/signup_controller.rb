@@ -1,4 +1,6 @@
 class SignupController < ApplicationController
+  before_filter :unauthenticate
+
   def profile
     session[:want] = params[:want]
     @user = User.new
@@ -28,7 +30,8 @@ class SignupController < ApplicationController
   end
 
   def create
-    params[:user] ||= {}
+    redirect_to root_url and return unless params[:user].present?
+
     params[:user].merge!(session[:user])
     @user = User.new(params[:user].merge(:roles => [Role.find_by_name(session[:want])]))
     if @user.save
