@@ -8,7 +8,7 @@ Rails::Initializer.run do |config|
     config.autoload_paths << "#{RAILS_ROOT}/app/#{subdir}"
   end
 
-  config.time_zone = 'UTC'
+  config.time_zone = 'Eastern Time (US & Canada)'
 end
 
 ActionMailer::Base.default_content_type = "text/html"
