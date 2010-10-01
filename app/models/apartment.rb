@@ -28,6 +28,7 @@ class Apartment < ActiveRecord::Base
   default_scope :order => "apartments.created_at"
 
   before_validation :format_unit
+  after_create :email_owner
 
   [:unlisted, :listed, :leased].each do |state|
     fires :"state_changed_to_#{state}",
@@ -185,6 +186,13 @@ class Apartment < ActiveRecord::Base
   end
 
   private
+  def email_owner
+    unless user.has_received_first_apartment_notification?
+      UserMailer.deliver_first_apartment_notification(user)
+      FirstApartmentNotification.create(:user => user)
+    end
+  end
+
   def format_unit
     return unless self.unit
     self.unit = self.unit.delete("#").upcase

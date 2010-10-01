@@ -1,0 +1,2 @@
+class FirstApartmentNotification < Notification
+end

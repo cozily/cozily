@@ -38,6 +38,29 @@ describe Apartment do
     @apartment.should have(1).error_on(:end_date)
   end
 
+  describe "#after_create" do
+    before do
+      @user = Factory(:user)
+    end
+
+    it "should email the owner after they create their first apartment" do
+      UserMailer.should_receive(:deliver_first_apartment_notification).with(@user)
+      Apartment.create!(:user => @user)
+    end
+
+    it "should remember that the owner has received the first apartment email" do
+      lambda {
+        Factory(:apartment)
+      }.should change(FirstApartmentNotification, :count).by(1)
+    end
+
+    it "should not email the owner after they create their second apartment" do
+      FirstApartmentNotification.create!(:user => @user)
+      UserMailer.should_not_receive(:deliver_first_apartment_notification)
+      Apartment.create!(:user => @user)
+    end
+  end
+
   describe ".bedrooms_near" do
     it "returns apartments with bedrooms within 0.5 of the given value" do
       @apartment1 = Factory(:apartment, :bedrooms => 2)
