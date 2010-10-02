@@ -24,13 +24,7 @@ class Search
   def results
     conditions = [].tap do |condition|
       condition << "bedrooms >= #{@min_bedrooms}" if @min_bedrooms.present?
-      condition << "bedrooms <= #{@max_bedrooms}"
-      condition << "bathrooms >= #{@min_bathrooms}"
-      condition << "bathrooms <= #{@max_bathrooms}"
-      condition << "rent >= #{@min_rent}"
       condition << "rent <= #{@max_rent}" if @max_rent.present?
-      condition << "square_footage >= #{@min_square_footage}"
-      condition << "square_footage <= #{@max_square_footage}"
       condition << "apartments.state = 'listed'"
     end.join(" AND ")
     apartments = Apartment.all(:conditions => conditions, :joins => :address)
