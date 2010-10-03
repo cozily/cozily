@@ -49,7 +49,7 @@ class Apartment < ActiveRecord::Base
         client.update("#{apt.user.first_name} just listed a #{apt.bedrooms.prettify} bedroom apt in #{apt.neighborhood.name} for $#{apt.rent} #{apartment_url(apt)}")
       end
 
-      User.finder.receive_match_notifications.email_confirmed.each do |user|
+      User.finder.receive_match_notifications.each do |user|
         next if user == apt.user || user.has_received_match_notification_for?(apt)
 
         if apt.match_for?(user)
