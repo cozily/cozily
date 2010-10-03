@@ -2,6 +2,26 @@ body.admin {
     div[data-content-key=yield] {
         padding: 20px;
 
+        ul.nav {
+            @include clearfix;
+            @include border-radius;
+            @include box-shadow;
+            padding: 5px 5px 5px 15px;
+            margin-bottom: 25px;
+            background-color: #87B6D9;
+
+            li {
+                float: left;
+                margin-right: 20px;
+                font-size: 20px;
+                color: white;
+
+                a {
+                    color: white;
+                }
+            }
+        }
+
         h1 {
             margin-bottom: 15px;
         }

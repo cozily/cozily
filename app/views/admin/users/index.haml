@@ -1,5 +1,9 @@
-%h1 Users
+-content_for :page_title do
+  ==Cozily | Admin | Users
 
+=render "admin/base/nav"
+
+%h1 Users
 %table.datatable
   %thead
     %tr
@@ -11,8 +15,8 @@
   %tbody
     -@users.each do |user|
       %tr
-        %td=user.full_name
+        %td=link_to user.full_name, admin_user_path(user)
         %td=user.email
         %td=user.email_confirmed
         %td=user.created_at
-        %td=user.roles.map(&:name).map(&:titleize).join(", ")
+        %td=roles(user)

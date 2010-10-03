@@ -4,7 +4,7 @@ module UsersHelper
   def profile_summary(profile)
     summary = ["matching"]
     summary << if profile.try(:bedrooms)
-      "#{profile.bedrooms.prettify} bedroom apartments"
+      "apartments with at least #{pluralize(profile.bedrooms.prettify, "bedroom")}"
     else
       "apartments with any number of bedrooms"
     end
@@ -22,5 +22,9 @@ module UsersHelper
     end
 
     summary.join(" ")
+  end
+
+  def roles(user)
+    user.roles.map(&:name).map(&:titleize).join(", ")
   end
 end

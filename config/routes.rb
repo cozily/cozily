@@ -45,7 +45,7 @@ ActionController::Routing::Routes.draw do |map|
   map.namespace :admin do |admin|
     admin.home "", :controller => "base"
     admin.resources :apartments, :only => [ :index ]
-    admin.resources :users, :only => [ :index ]
+    admin.resources :users, :only => [ :index, :show ]
   end
 
   Clearance::Routes.draw(map)

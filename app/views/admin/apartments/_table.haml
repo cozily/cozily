@@ -1,0 +1,26 @@
+%table.datatable
+  %thead
+    %tr
+      -if show_user
+        %th User
+      %th Name
+      %th Neighborhoods
+      %th State
+      %th Rent
+      %th Bedrooms
+      %th Bathrooms
+      %th Created At
+  %tbody
+    -apartments.each do |apartment|
+      %tr
+        -if show_user
+          %td=link_to(apartment.user.full_name, admin_user_path(apartment.user))
+        %td=apartment.name
+        %td
+          -if apartment.address.present?
+            =apartment.neighborhoods.map(&:name).join(", ")
+        %td=apartment.state
+        %td=apartment.rent
+        %td=apartment.bedrooms
+        %td=apartment.bathrooms
+        %td=apartment.created_at

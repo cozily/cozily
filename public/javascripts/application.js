@@ -76,7 +76,8 @@ function liveNeighborhoodAutocomplete() {
         $("input[data-date=true]").datepicker();
         $("table.datatable").dataTable({
             "bJQueryUI": true,
-            "sPaginationType": "full_numbers"
+            "sPaginationType": "full_numbers",
+            "iDisplayLength": 50
         });
 
         $("input[name=apartment[sublet]]").live("change", function(event) {

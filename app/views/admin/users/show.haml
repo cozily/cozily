@@ -1,0 +1,32 @@
+-content_for :page_title do
+  ==Cozily | Admin | Users | #{@user.full_name}
+
+=render "admin/base/nav"
+
+%h1=@user.full_name
+%dl
+  %dt Role(s)
+  %dd=roles(@user)
+  %dt Email
+  %dd=@user.email
+  %dt Confirmed
+  %dd=@user.email_confirmed
+  -if @user.phone.present?
+    %dt Phone
+    %dd=@user.phone
+  %dt Joined
+  %dd=@user.created_at
+  -if @user.finder?
+    %dt Receive match notifications?
+    %dd=@user.receive_match_notifications
+    %dt Matches count
+    %dd=@user.matches.count
+    %dt Favorites count
+    %dd=@user.favorites.count
+
+-if @user.finder?
+  %p==#{@user.first_name} is #{profile_summary(@user.profile)}
+
+-if @user.lister?
+  %h2==#{@user.first_name}'s Apartments
+  =render "admin/apartments/table", :apartments => @user.apartments, :show_user => false

@@ -20,7 +20,7 @@ Then /^I can sign up as an apartment seeker$/ do
   click_button 'Sign Up & Start Browsing'
 
   page.should have_content("Hi #{first_name}")
-  page.should have_content("matching 1 bedroom apartments under $1,500 in Greenpoint")
+  page.should have_content("matching apartments with at least 1 bedroom under $1,500 in Greenpoint")
   page.should have_content("Sign out")
 
   page.should have_content("Matches")
