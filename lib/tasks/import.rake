@@ -45,13 +45,15 @@ namespace :import do
     end
 
     task :user => :environment do
-      User.create(:first_name => "Jakobson",
+      @user = User.create(:first_name => "Jakobson",
             :last_name => "Properties",
             :email => "todd+jakobson@cozi.ly",
             :password => "pass",
             :password_confirmation => "pass",
             :phone => "2125331300",
             :roles => Role.find_all_by_name("lister"))
+      puts @user.valid?
+      puts @user.errors.full_messages
     end
   end
 end
