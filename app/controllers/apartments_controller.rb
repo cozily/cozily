@@ -20,6 +20,7 @@ class ApartmentsController < ApplicationController
 
   def update
     @apartment = Apartment.find(params[:id])
+    params[:apartment][:rent].gsub!(/[^0-9]/, "")
     if @apartment.update_attributes(params[:apartment])
       if @apartment.address.try(:invalid?)
         flash[:failure] = "We're currently only accepting apartment listings in New York City."

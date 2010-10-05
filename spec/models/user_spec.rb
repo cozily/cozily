@@ -35,6 +35,12 @@ describe User do
     end
   end
 
+  it "should strip non-digit characters from phone" do
+    user = Factory.build(:user, :phone => "(202) 270 - 7370")
+    user.save
+    user.phone.should == "2022707370"
+  end
+ 
   describe ".finder" do
     before do
       @user = Factory(:user)
