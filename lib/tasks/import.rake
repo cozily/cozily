@@ -52,8 +52,6 @@ namespace :import do
             :password_confirmation => "pass",
             :phone => "2125331300",
             :roles => Role.find_all_by_name("lister"))
-      puts @user.valid?
-      puts @user.errors.full_messages
     end
   end
 end
