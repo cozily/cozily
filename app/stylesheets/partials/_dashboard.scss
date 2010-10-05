@@ -215,6 +215,11 @@ body.dashboard, body.searches, body.neighborhoods.show {
                                 input[type=radio] {
                                     margin-right: 5px;
                                 }
+
+                                &.active {
+                                    background-color: #1982A0;
+                                    color: white;
+                                }
                             }
                         }
                     }
