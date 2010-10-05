@@ -15,7 +15,7 @@
       %tr
         -if show_user
           %td=link_to(apartment.user.full_name, admin_user_path(apartment.user))
-        %td=apartment.name
+        %td=apartment.quick_name
         %td
           -if apartment.address.present?
             =apartment.neighborhoods.map(&:name).join(", ")
