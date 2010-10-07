@@ -5,8 +5,8 @@ describe Image do
   it { should validate_presence_of(:apartment) }
 
   describe "validations" do
-    it "should not change Image.count if it's destroyed and it's the only image for a listed apartment" do
-      apartment = Factory(:apartment, :state => 'listed')
+    it "should not change Image.count if it's destroyed and it's the only image for a published apartment" do
+      apartment = Factory(:apartment, :state => 'published')
       image = Factory(:image, :apartment => apartment)
 
       lambda {
@@ -17,21 +17,21 @@ describe Image do
 
   describe "#destroyable?" do
     before do
-      @apartment = Factory(:apartment, :state => 'listed')
+      @apartment = Factory(:apartment, :state => 'published')
       2.times { Factory(:image, :apartment => @apartment) }
     end
 
-    it "returns true if the apartment is listed and has more than two images" do
+    it "returns true if the apartment is published and has more than two images" do
       Factory(:image, :apartment => @apartment)
       @apartment.images.first.should be_destroyable
     end
 
-    it "returns true if the apartment is not listed" do
-      @apartment.update_attribute(:state, 'unlisted')
+    it "returns true if the apartment is not published" do
+      @apartment.update_attribute(:state, 'unpublished')
       @apartment.images.first.should be_destroyable
     end
 
-    it "returns false if the apartment is listed and has fewer than two images" do
+    it "returns false if the apartment is published and has fewer than two images" do
       @apartment.images.first.should_not be_destroyable
     end
   end

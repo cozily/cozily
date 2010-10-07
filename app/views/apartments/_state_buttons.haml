@@ -2,14 +2,14 @@
   -form_tag transition_apartment_path(apartment), :class => 'formtastic' do
     %fieldset.inputs
       %ol
-        %li{:class => "#{'active' if apartment.unlisted?}"}
-          %label{:for => "event_unlist_#{apartment.id}"}
-            =radio_button_tag("event", "unlist", apartment.unlisted?, :id => "event_unlist_#{apartment.id}", :disabled => !apartment.can_unlist? && !apartment.unlisted?)
-            Unlisted
-        %li{:class => "#{'active' if apartment.listed?}"}
-          %label{:for => "event_list_#{apartment.id}"}
-            =radio_button_tag("event", "list", apartment.listed?, :id => "event_list_#{apartment.id}", :disabled => !apartment.can_list? && !apartment.listed?)
-            Listed
+        %li{:class => "#{'active' if apartment.unpublished?}"}
+          %label{:for => "event_unpublish_#{apartment.id}"}
+            =radio_button_tag("event", "unpublish", apartment.unpublished?, :id => "event_unpublish_#{apartment.id}", :disabled => !apartment.can_unpublish? && !apartment.unpublished?)
+            Unpublished
+        %li{:class => "#{'active' if apartment.published?}"}
+          %label{:for => "event_publish_#{apartment.id}"}
+            =radio_button_tag("event", "publish", apartment.published?, :id => "event_publish_#{apartment.id}", :disabled => !apartment.can_publish? && !apartment.published?)
+            Published
         %li{:class => "#{'active' if apartment.leased?}"}
           %label{:for => "event_lease_#{apartment.id}"}
             =radio_button_tag("event", "lease", apartment.leased?, :id => "event_lease_#{apartment.id}", :disabled => !apartment.can_lease? && !apartment.leased?)

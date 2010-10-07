@@ -25,7 +25,7 @@ class Search
     conditions = [].tap do |condition|
       condition << "bedrooms >= #{@min_bedrooms}" if @min_bedrooms.present?
       condition << "rent <= #{@max_rent}" if @max_rent.present?
-      condition << "apartments.state = 'listed'"
+      condition << "apartments.state = 'published'"
     end.join(" AND ")
     apartments = Apartment.all(:conditions => conditions, :joins => :address)
     unless @neighborhood_ids.empty?

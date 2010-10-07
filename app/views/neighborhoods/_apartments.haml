@@ -1,12 +1,12 @@
 %div{:'data-content-key' => 'neighborhood-apartments'}
-  - if @neighborhood.listed_apartments.present?
+  - if @neighborhood.published_apartments.present?
     .pagination
       %ul
-        %li.counts= pagination_summary(params[:page], @neighborhood.listed_apartments)
+        %li.counts= pagination_summary(params[:page], @neighborhood.published_apartments)
         %li.navigation= will_paginate(apartments, :renderer => AjaxPaginationLinkRenderer)
 
     -apartments.each do |apartment|
-      =render "dashboard/apartment", :apartment => apartment, :position => position_in_collection(apartment, @neighborhood.listed_apartments)
+      =render "dashboard/apartment", :apartment => apartment, :position => position_in_collection(apartment, @neighborhood.published_apartments)
 
   -else
     %p.empty

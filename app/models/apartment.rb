@@ -30,15 +30,15 @@ class Apartment < ActiveRecord::Base
   before_validation :format_unit
   after_create :email_owner
 
-  [:unlisted, :listed, :leased].each do |state|
+  [:unpublished, :published, :leased].each do |state|
     fires :"state_changed_to_#{state}",
           :on => :update,
           :actor => :user,
           :if => lambda { |apartment| apartment.state_changed? && apartment.state_name == state }
   end
 
-  state_machine :state, :initial => :unlisted do
-    after_transition :on => :list do |apt|
+  state_machine :state, :initial => :unpublished do
+    after_transition :on => :publish do |apt|
       component(:tweet_apartments) do
         client = TwitterOAuth::Client.new(
                 :consumer_key => 'voDmOvIReD71vENQJRR1g',
@@ -46,7 +46,7 @@ class Apartment < ActiveRecord::Base
                 :token => '154155384-9Vaj2QiXa998sIVn8XicaSVrQOM1rzvkRfAcYjHf',
                 :secret => 'yicMo06MlgUMHSGgC5Q6lk0EicPqUZiNRrt4'
         )
-        client.update("#{apt.user.first_name} just listed a #{apt.bedrooms.prettify} bedroom apt in #{apt.neighborhood.name} for $#{apt.rent} #{apartment_url(apt)}")
+        client.update("#{apt.user.first_name} just published a #{apt.bedrooms.prettify} bedroom apt in #{apt.neighborhood.name} for $#{apt.rent} #{apartment_url(apt)}")
       end
 
       User.finder.receive_match_notifications.each do |user|
@@ -59,7 +59,7 @@ class Apartment < ActiveRecord::Base
       end
     end
 
-    state :listed do
+    state :published do
       validates_presence_of :address, :user, :start_date
       validates_presence_of :end_date, :if => Proc.new { |apartment| apartment.sublet? }
       validates_numericality_of :rent, :greater_than => 0, :only_integer => true
@@ -79,7 +79,7 @@ class Apartment < ActiveRecord::Base
       validates_uniqueness_of :address_id, :scope => [ :user_id, :unit ]
     end
 
-    state :unlisted do
+    state :unpublished do
       validates_presence_of :user
       validates_presence_of :end_date, :if => Proc.new { |apartment| apartment.sublet? }
       validates_numericality_of :rent, :allow_nil => true, :greater_than => 0, :only_integer => true
@@ -89,16 +89,16 @@ class Apartment < ActiveRecord::Base
       validates_uniqueness_of :address_id, :scope => [ :user_id, :unit ], :allow_nil => true
     end
 
-    event :list do
-      transition [:unlisted, :leased] => :listed, :if => :listable?
+    event :publish do
+      transition [:unpublished, :leased] => :published, :if => :publishable?
     end
 
-    event :unlist do
-      transition [:listed, :leased] => :unlisted
+    event :unpublish do
+      transition [:published, :leased] => :unpublished
     end
 
     event :lease do
-      transition [:listed, :unlisted] => :leased, :if => :listable?
+      transition [:published, :unpublished] => :leased, :if => :publishable?
     end
   end
 
@@ -117,7 +117,7 @@ class Apartment < ActiveRecord::Base
 
   def comparable_apartments
     return [] unless bedrooms && rent && address
-    Apartment.with_state(:listed).bedrooms_near(bedrooms).rent_near(rent).to_a.sort_by_distance_from(self) - [self]
+    Apartment.with_state(:published).bedrooms_near(bedrooms).rent_near(rent).to_a.sort_by_distance_from(self) - [self]
   end
 
   def missing_associations
@@ -165,12 +165,12 @@ class Apartment < ActiveRecord::Base
     subject_timeline_events.event_type_like("state_changed").first
   end
 
-  def listable?
+  def publishable?
     REQUIRED_FIELDS.all? { |attr| self.send(attr).present? } && (images_count > 1) && valid_sublet? && valid_user?
   end
 
-  def listed_on
-    subject_timeline_events.event_type_equals("state_changed_to_listed").first.try(:created_at)
+  def published_on
+    subject_timeline_events.event_type_equals("state_changed_to_published").first.try(:created_at)
   end
 
   def match_for?(user)

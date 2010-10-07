@@ -15,9 +15,9 @@ describe User do
   it { should validate_presence_of(:last_name) }
 
   describe "validations" do
-    it "should be invalid if phone number is nil and there are listed apartments" do
+    it "should be invalid if phone number is nil and there are published apartments" do
       @user = Factory(:user, :phone => nil)
-      Factory(:apartment, :user => @user, :state => "listed")
+      Factory(:apartment, :user => @user, :state => "published")
       @user.reload.should be_invalid
       @user.should have(1).error_on(:phone)
     end
@@ -63,11 +63,11 @@ describe User do
       @apt1 = Factory(:apartment,
                       :bedrooms => 1,
                       :rent => 1500,
-                      :state => "listed")
+                      :state => "published")
       @apt2 = Factory(:apartment,
                       :bedrooms => 2,
                       :rent => 2100,
-                      :state => "listed")
+                      :state => "published")
       @user = Factory(:user)
     end
 
@@ -114,7 +114,7 @@ describe User do
                            :neighborhoods => [])
       end
 
-      it "returns all listed apartments" do
+      it "returns all published apartments" do
         @user.matches.should == [@apt1, @apt2]
       end
     end

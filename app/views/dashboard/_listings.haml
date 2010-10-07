@@ -34,7 +34,7 @@
                 ==/ #{apartment.bedrooms.try(:prettify)}bd/#{apartment.bathrooms.try(:prettify)}ba / #{apartment.square_footage} sq. ft.
               -if apartment.address
                 %li.neighborhood==Neighborhood: #{neighborhood_links(apartment.neighborhoods)}
-              %li.listed_on=last_state_change(apartment)
+              %li.published_on=last_state_change(apartment)
 
           %li.status
             %p Current Status of Listing:
@@ -50,4 +50,4 @@
 
   -else
     %p.empty
-      ==You haven't listed any apartments.  #{link_to("List one", new_apartment_path)}.
+      ==You haven't published any apartments.  #{link_to("List one", new_apartment_path)}.

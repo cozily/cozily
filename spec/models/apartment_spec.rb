@@ -86,13 +86,13 @@ describe Apartment do
   end
 
   describe "#after_update" do
-    ['unlisted', 'listed'].each do |state|
+    ['unpublished', 'published'].each do |state|
       it "creates a status_changed_to_#{state} TimelineEvent when the state has changed" do
         initial_state = case state
-          when 'unlisted' then
-            'listed'
-          when 'listed' then
-            'unlisted'
+          when 'unpublished' then
+            'published'
+          when 'published' then
+            'unpublished'
         end
 
         apartment = Factory(:apartment, :state => initial_state)
@@ -140,11 +140,11 @@ describe Apartment do
     it "returns the last state change" do
       state_change1 = Factory(:timeline_event,
                               :subject => @apartment,
-                              :event_type => "state_changed_to_listed",
+                              :event_type => "state_changed_to_published",
                               :created_at => 5.days.ago)
       Factory(:timeline_event,
               :subject => @apartment,
-              :event_type => "state_changed_to_unlisted",
+              :event_type => "state_changed_to_unpublished",
               :created_at => 10.days.ago)
       Factory(:timeline_event,
               :subject => @apartment,
@@ -159,7 +159,7 @@ describe Apartment do
     end
   end
 
-  describe "#listable?" do
+  describe "#publishable?" do
     before do
       @user = Factory(:email_confirmed_user,
                       :phone => "800-555-1212")
@@ -174,99 +174,99 @@ describe Apartment do
     end
 
     it "returns true when required fields are present" do
-      @apartment.should be_listable
+      @apartment.should be_publishable
     end
 
     it "returns true when the apartment is a sublet" do
       @apartment.update_attribute(:sublet, :true)
-      @apartment.should be_listable
+      @apartment.should be_publishable
     end
 
     [:address, :user, :rent, :bedrooms, :bathrooms, :square_footage].each do |attr|
       it "returns false when #{attr} is missing" do
         @apartment.send("#{attr}=", nil)
-        @apartment.should_not be_listable
+        @apartment.should_not be_publishable
       end
     end
 
     it "returns false when there are fewer than two images" do
       @apartment.update_attribute(:images_count, 1)
-      @apartment.should_not be_listable
+      @apartment.should_not be_publishable
     end
 
     it "returns false when a sublet doesn't have an end date" do
       @apartment.update_attributes(:sublet => true, :end_date => nil)
-      @apartment.should_not be_listable
+      @apartment.should_not be_publishable
     end
 
     it "returns false when the user doesn't have a phone number" do
       @user.update_attribute(:phone, nil)
-      @apartment.should_not be_listable
+      @apartment.should_not be_publishable
     end
 
     it "returns false when the user hasn't confirmed their email" do
       @user.update_attribute(:email_confirmed, false)
-      @apartment.should_not be_listable
+      @apartment.should_not be_publishable
     end
   end
 
-  describe "#list!" do
+  describe "#publish!" do
     before do
       @user, @apartment = Factory(:email_confirmed_user), Factory(:apartment)
-      @apartment.should_receive(:listable?).and_return(true)
+      @apartment.should_receive(:publishable?).and_return(true)
       @apartment.stub!(:match_for?).and_return(true)
     end
 
-    it "emails matching users when the apartment is listed" do
+    it "emails matching users when the apartment is published" do
       MatchMailer.should_receive(:deliver_new_match_notification).with(@apartment, @user)
-      @apartment.list!
+      @apartment.publish!
     end
 
     it "creates a MatchNotification record for the user and apartment" do
       lambda {
-        @apartment.list!
+        @apartment.publish!
       }.should change(MatchNotification, :count).by(1)
     end
 
     it "does not email matching users who do not want to be emailed" do
       @user.update_attribute(:receive_match_notifications, false)
       MatchMailer.should_not_receive(:deliver_new_match_notification)
-      @apartment.list!
+      @apartment.publish!
     end
 
     it "does not email matching users who have already been emailed" do
       MatchNotification.create(:user => @user, :apartment => @apartment)
       MatchMailer.should_not_receive(:deliver_new_match_notification)
-      @apartment.list!
+      @apartment.publish!
     end
 
-    it "does not email non-matching users when the apartment is listed" do
+    it "does not email non-matching users when the apartment is published" do
       @apartment.stub!(:match_for?).and_return(false)
       MatchMailer.should_not_receive(:deliver_new_match_notification)
-      @apartment.list!
+      @apartment.publish!
     end
   end
 
-  describe "#listed_on" do
+  describe "#published_on" do
     before do
       @apartment = Factory(:apartment)
     end
 
-    it "returns the latest date that the apartment was listed" do
+    it "returns the latest date that the apartment was published" do
       Factory(:timeline_event,
               :subject => @apartment,
-              :event_type => "state_changed_to_listed",
+              :event_type => "state_changed_to_published",
               :created_at => date1 = 5.days.ago)
       Factory(:timeline_event,
               :subject => @apartment,
-              :event_type => "state_changed_to_listed",
+              :event_type => "state_changed_to_published",
               :created_at => 10.days.ago)
 
-      @apartment.listed_on.should == date1
+      @apartment.published_on.should == date1
     end
 
-    it "returns nil if the apartment hasn't been listed" do
-      @apartment.listed_on.should be_nil
+    it "returns nil if the apartment hasn't been published" do
+      @apartment.published_on.should be_nil
     end
   end
 

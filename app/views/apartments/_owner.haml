@@ -3,13 +3,13 @@
     %h1 Edit Listing
     %ul.buttons
       %li=link_to "Delete Apartment", apartment_path(apartment), :method => :delete, :confirm => "Are you sure?"
-      -if apartment.can_unlist?
-        %li=link_to "Unlist Apartment", transition_apartment_path(apartment, :event => "unlist"), :method => :put
+      -if apartment.can_unpublish?
+        %li=link_to "Unpublish Apartment", transition_apartment_path(apartment, :event => "unpublish"), :method => :put
       -if apartment.can_lease?
         %li=link_to "Mark as 'Leased'", transition_apartment_path(apartment, :event => "lease"), :method => :put
       %li.save=link_to "Save Changes", "#"
-      -if apartment.can_list?
-        %li.list=link_to "List Apartment", transition_apartment_path(apartment, :event => "list", :return_to => apartment_path(apartment)), :method => :put
+      -if apartment.can_publish?
+        %li.publish=link_to "Publish Apartment", transition_apartment_path(apartment, :event => "publish", :return_to => apartment_path(apartment)), :method => :put
   -else
     %h1 View Listing
 

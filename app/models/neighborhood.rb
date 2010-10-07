@@ -37,7 +37,7 @@ class Neighborhood < ActiveRecord::Base
     end
   end
 
-  def listed_apartments
-    apartments.select { |a| a.listed? }
+  def published_apartments
+    apartments.select { |a| a.published? }
   end
 end

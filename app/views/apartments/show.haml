@@ -4,10 +4,10 @@
   -else
     ==Cozily | Apartment ##{@apartment.id}
 
--if @apartment.listed? || (signed_in? && current_user.apartments.include?(@apartment))
+-if @apartment.published? || (signed_in? && current_user.apartments.include?(@apartment))
   :javascript
     var self = #{@apartment.as_json(:methods => :to_param, :include => :address).to_json};
-    var apartments = #{(Apartment.with_state(:listed) - [@apartment]).as_json(:methods => :to_param, :include => :address).to_json};
+    var apartments = #{(Apartment.with_state(:published) - [@apartment]).as_json(:methods => :to_param, :include => :address).to_json};
 
   -if signed_in? && current_user.apartments.include?(@apartment)
     =render "apartments/owner", :apartment => @apartment, :type => :show
@@ -94,4 +94,4 @@
       .business_search{:'data-lat' => @apartment.lat, :'data-lng' => @apartment.lng}
 
 -else
-  %p This apartment is unlisted.
+  %p This apartment is unpublished.

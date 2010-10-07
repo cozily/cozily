@@ -13,13 +13,13 @@ body.apartments {
             }
         }
 
-        li.save, li.list {
+        li.save, li.publish {
             a {
                 @include green-link;
             }
         }
 
-        li.list {
+        li.publish {
             font-size: 1.6em;
         }
     }

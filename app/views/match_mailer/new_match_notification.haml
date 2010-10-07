@@ -1,7 +1,7 @@
 =render "shared/mailer_salutation", :user => @user
 %p=@apartment.name
 %p==--------------------
-%p==A new apartment in #{@apartment.neighborhoods.map(&:name).to_sentence} was listed on Cozily...
+%p==A new apartment in #{@apartment.neighborhoods.map(&:name).to_sentence} was published on Cozily...
 %p==--------------------
 %p
   To view this listing, follow the link below:<br />

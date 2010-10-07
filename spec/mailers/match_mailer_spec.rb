@@ -20,7 +20,7 @@ describe MatchMailer do
 
     it "sets the subject appropriately" do
       match_email = MatchMailer.deliver_new_match_notification(@apartment, @user)
-      match_email.subject.should == "A new apartment in #{@apartment.neighborhoods.map(&:name).to_sentence} was listed on Cozily..."
+      match_email.subject.should == "A new apartment in #{@apartment.neighborhoods.map(&:name).to_sentence} was published on Cozily..."
     end
 
     it "includes the user's first name" do

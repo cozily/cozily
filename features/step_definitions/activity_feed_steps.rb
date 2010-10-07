@@ -1,11 +1,11 @@
-Then /^my activity feed should include apartments that were recently listed$/ do
+Then /^my activity feed should include apartments that were recently published$/ do
   the.user.update_attribute(:phone, "800-555-1212")
   apartment = Factory(:apartment, :user => the.user, :images_count => 2)
-  apartment.list!
+  apartment.publish!
 
   visit dashboard_path
 
-  page.should have_content("You listed a #{apartment.bedrooms.prettify} bedroom apartment in #{apartment.neighborhoods.map(&:name).join(", ")}")
+  page.should have_content("You published a #{apartment.bedrooms.prettify} bedroom apartment in #{apartment.neighborhoods.map(&:name).join(", ")}")
 end
 
 Then /^my activity feed should include apartments that I (flagged|unflagged)$/ do |flagged_or_unflagged|

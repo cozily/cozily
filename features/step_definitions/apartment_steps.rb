@@ -75,7 +75,7 @@ Then /^I can delete the apartment$/ do
   current_path.should == dashboard_listings_path
 end
 
-Then /^I can (list|unlist) the apartment$/ do |action|
+Then /^I can (publish|unpublish) the apartment$/ do |action|
   apartment = Apartment.last
 
   visit edit_apartment_path(apartment)
@@ -84,16 +84,16 @@ Then /^I can (list|unlist) the apartment$/ do |action|
   apartment.reload.send("#{action}ed?").should be_true
   page.should_not have_css("input[type='submit'][value='#{action}']")
 
-  current_path.should == if action == "list"
+  current_path.should == if action == "publish"
     apartment_path(apartment)
   else
     edit_apartment_path(apartment)
   end
 end
 
-But /^I cannot (list|unlist) another user's apartment$/ do |action|
+But /^I cannot (publish|unpublish) another user's apartment$/ do |action|
   visit apartment_path(Factory(:apartment,
-                               :state => action == "list" ? "unlisted" : "listed"))
+                               :state => action == "publish" ? "unpublished" : "published"))
 
   page.should_not have_css("input[type='submit'][value='#{action}']")
 end
@@ -105,12 +105,12 @@ Given /^all the features are present$/ do
   end
 end
 
-Given /^I have an? ?(listed|unlisted)? apartment$/ do |state|
+Given /^I have an? ?(published|unpublished)? apartment$/ do |state|
   the.user.update_attribute(:phone, "800-555-1212")
   the.apartment = Factory(:apartment,
                           :user => the.user,
                           :images_count => 2,
-                          :state => state || "unlisted")
+                          :state => state || "unpublished")
   the.user.apartments(true).should be_present
 end
 
@@ -123,7 +123,7 @@ Then /^I can view my apartments$/ do
   end
 end
 
-Then /^I should see that the apartment is unlisted$/ do
+Then /^I should see that the apartment is unpublished$/ do
   visit apartment_path(Apartment.last)
-  page.should have_content("This apartment is unlisted")
+  page.should have_content("This apartment is unpublished")
 end

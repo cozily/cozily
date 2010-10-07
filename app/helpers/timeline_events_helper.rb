@@ -1,19 +1,19 @@
 module TimelineEventsHelper
   def event_text(event)
     case event.event_type
-      when "state_changed_to_listed"
+      when "state_changed_to_published"
         apartment = event.subject
         actor = current_user && current_user == apartment.user ? "You" : apartment.user.first_name
-        verb = "listed"
+        verb = "published"
         subject = if apartment.bedrooms.present?
           "a #{link_to "#{apartment.bedrooms.prettify} bedroom apartment", apartment} in #{apartment.neighborhoods.map(&:name).join(", ")}"
         else
           "an #{link_to "apartment", apartment} in #{apartment.neighborhoods.map(&:name).join(", ")}"
         end
-      when "state_changed_to_unlisted"
+      when "state_changed_to_unpublished"
         apartment = event.subject
         actor = current_user && current_user == apartment.user ? "You" : apartment.user.first_name
-        verb = "unlisted"
+        verb = "unpublished"
         subject = if apartment.bedrooms.present?
           "a #{link_to "#{apartment.bedrooms.prettify} bedroom apartment", apartment} in #{apartment.neighborhoods.map(&:name).join(", ")}"
         else

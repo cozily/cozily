@@ -88,7 +88,7 @@ end
 
 Then /^I can message from the dashboard$/ do
   apartment = Factory(:apartment,
-                      :state => "listed")
+                      :state => "published")
 
   Factory(:favorite,
           :apartment => apartment,

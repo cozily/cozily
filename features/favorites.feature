@@ -3,7 +3,7 @@ Feature: Favorites
   @javascript
   Scenario: User favorites an apartment
     Given I am a logged in user
-    And an apartment exists with state: "listed"
+    And an apartment exists with state: "published"
     Then I can favorite the apartment
 
   Scenario: User views their favorites
