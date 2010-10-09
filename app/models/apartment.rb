@@ -53,7 +53,7 @@ class Apartment < ActiveRecord::Base
         next if user == apt.user || user.has_received_match_notification_for?(apt)
 
         if apt.match_for?(user)
-          MatchMailer.deliver_new_match_notification(apt, user)
+          MatchMailer.send_later(:deliver_new_match_notification, apt, user)
           MatchNotification.create(:user => user, :apartment => apt)
         end
       end
@@ -192,7 +192,7 @@ class Apartment < ActiveRecord::Base
   private
   def email_owner
     unless user.has_received_first_apartment_notification?
-      UserMailer.deliver_first_apartment_notification(user)
+      UserMailer.send_later(:deliver_first_apartment_notification, user)
       FirstApartmentNotification.create(:user => user)
     end
   end

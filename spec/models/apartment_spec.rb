@@ -44,8 +44,10 @@ describe Apartment do
     end
 
     it "should email the owner after they create their first apartment" do
-      UserMailer.should_receive(:deliver_first_apartment_notification).with(@user)
-      Apartment.create!(:user => @user)
+      lambda {
+        Factory(:apartment, :user => @user)
+      }.should change(Delayed::Job, :count).by(1)
+      Delayed::Job.last.handler.should =~ /:deliver_first_apartment_notification/
     end
 
     it "should remember that the owner has received the first apartment email" do
@@ -56,8 +58,9 @@ describe Apartment do
 
     it "should not email the owner after they create their second apartment" do
       FirstApartmentNotification.create!(:user => @user)
-      UserMailer.should_not_receive(:deliver_first_apartment_notification)
-      Apartment.create!(:user => @user)
+      lambda {      
+        Apartment.create!(:user => @user)
+      }.should_not change(Delayed::Job, :count)
     end
   end
 
@@ -218,8 +221,11 @@ describe Apartment do
     end
 
     it "emails matching users when the apartment is published" do
-      MatchMailer.should_receive(:deliver_new_match_notification).with(@apartment, @user)
-      @apartment.publish!
+#      MatchMailer.should_receive(:deliver_new_match_notification).with(@apartment, @user)
+      lambda {
+        @apartment.publish!
+      }.should change(Delayed::Job, :count).by(1)
+      Delayed::Job.last.handler.should =~ /:deliver_new_match_notification/
     end
 
     it "creates a MatchNotification record for the user and apartment" do
@@ -230,20 +236,23 @@ describe Apartment do
 
     it "does not email matching users who do not want to be emailed" do
       @user.update_attribute(:receive_match_notifications, false)
-      MatchMailer.should_not_receive(:deliver_new_match_notification)
-      @apartment.publish!
+      lambda {
+        @apartment.publish!
+      }.should_not change(Delayed::Job, :count)
     end
 
     it "does not email matching users who have already been emailed" do
       MatchNotification.create(:user => @user, :apartment => @apartment)
-      MatchMailer.should_not_receive(:deliver_new_match_notification)
-      @apartment.publish!
+      lambda {
+        @apartment.publish!
+      }.should_not change(Delayed::Job, :count)
     end
 
     it "does not email non-matching users when the apartment is published" do
       @apartment.stub!(:match_for?).and_return(false)
-      MatchMailer.should_not_receive(:deliver_new_match_notification)
-      @apartment.publish!
+      lambda {
+        @apartment.publish!
+      }.should_not change(Delayed::Job, :count)
     end
   end
 

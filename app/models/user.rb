@@ -23,12 +23,12 @@ class User < ActiveRecord::Base
 
   accepts_nested_attributes_for :profile
 
-  named_scope :email_confirmed, :conditions => { :email_confirmed => true }
-  named_scope :receive_match_notifications, :conditions => { :receive_match_notifications => true }
+  named_scope :email_confirmed, :conditions => {:email_confirmed => true}
+  named_scope :receive_match_notifications, :conditions => {:receive_match_notifications => true}
 
   class << self
     def finder
-      User.scoped( { :joins => :roles, :conditions => [ "roles.id = ?", Role.find_by_name("finder") ] } )
+      User.scoped({:joins => :roles, :conditions => ["roles.id = ?", Role.find_by_name("finder")]})
     end
   end
 
@@ -68,7 +68,7 @@ class User < ActiveRecord::Base
   end
 
   def role_symbols
-    (roles || []).map {|r| r.name.to_sym}
+    (roles || []).map { |r| r.name.to_sym }
   end
 
   def unread_message_count
@@ -83,6 +83,11 @@ class User < ActiveRecord::Base
   def sent_messages
     conversations.map(&:messages).flatten.select { |m| m.sender_id == id }
 #    messages.sent_by(self)
+  end
+
+  protected
+  def send_confirmation_email
+    ClearanceMailer.send_later(:deliver_confirmation, self)
   end
 
   private

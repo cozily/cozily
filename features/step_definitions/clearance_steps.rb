@@ -51,13 +51,8 @@ end
 Then /^a confirmation message should be sent to "(.*)"$/ do |email|
   user = User.find_by_email(email)
   assert !user.confirmation_token.blank?
-  assert !ActionMailer::Base.deliveries.empty?
-  result = ActionMailer::Base.deliveries.any? do |email|
-    email.to == [user.email] &&
-    email.subject =~ /confirm/i &&
-    email.body =~ /#{user.confirmation_token}/
-  end
-  assert result
+  Delayed::Job.count.should > 0
+  Delayed::Job.last.handler.should =~ /:deliver_confirmation/
 end
 
 When /^I follow the confirmation link sent to "(.*)"$/ do |email|

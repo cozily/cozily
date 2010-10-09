@@ -24,8 +24,10 @@ describe Message do
 
   it "should e-mail the receiver after create" do
     conversation = Factory.build(:message)
-    MessageMailer.should_receive(:deliver_receiver_notification)
-    conversation.save
+    lambda {
+      conversation.save
+    }.should change(Delayed::Job, :count).by(1)
+    Delayed::Job.last.handler.should =~ /:deliver_receiver_notification/
   end
 
   describe "#recipient" do

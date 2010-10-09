@@ -43,6 +43,8 @@ GEM
     culerity (0.2.12)
     daemons (1.1.0)
     database_cleaner (0.5.2)
+    delayed_job (2.0.3)
+      daemons
     diff-lcs (1.1.2)
     factory_girl (1.2.4)
     faker (0.3.1)
@@ -162,6 +164,7 @@ DEPENDENCIES
   cucumber (= 0.8.5)
   cucumber-rails (= 0.3.2)
   database_cleaner (= 0.5.2)
+  delayed_job (= 2.0.3)
   factory_girl (= 1.2.4)
   faker (= 0.3.1)
   fastercsv (= 1.5.3)

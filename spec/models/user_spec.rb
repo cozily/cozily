@@ -35,12 +35,22 @@ describe User do
     end
   end
 
+  describe "#after_create" do
+    it "should send a confirmation email later" do
+      lambda {
+        Factory(:user)
+      }.should change(Delayed::Job, :count).by(1)
+
+      Delayed::Job.last.handler.should =~ /:deliver_confirmation/
+    end
+  end
+
   it "should strip non-digit characters from phone" do
     user = Factory.build(:user, :phone => "(202) 270 - 7370")
     user.save
     user.phone.should == "2022707370"
   end
- 
+
   describe ".finder" do
     before do
       @user = Factory(:user)
