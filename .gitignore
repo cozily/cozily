@@ -1,6 +1,7 @@
 .idea
 log/*.log
+tmp/**
 tmp/**/*
 .bundle/
-tmp/restart.txt
 test/webmock/cache/
+spec/fixtures/**
