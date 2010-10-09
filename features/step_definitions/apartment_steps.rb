@@ -4,7 +4,7 @@ Then /^I can create an? (apartment|sublet)$/ do |apartment_or_sublet|
   visit dashboard_listings_path
 
   lambda {
-    click_link "List one"
+    click_link "Create one"
   }.should change(Apartment, :count).by(1)
   apartment = Apartment.last
 
