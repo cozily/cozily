@@ -9,3 +9,4 @@ require 'rake/rdoctask'
 
 require 'tasks/rails'
 require 'heroku_san/tasks'
+require 'delayed/tasks'
