@@ -2,7 +2,7 @@ include ActionController::UrlWriter
 default_url_options[:host] = "cozi.ly"
 
 class Apartment < ActiveRecord::Base
-  REQUIRED_FIELDS = [:address, :user, :rent, :bedrooms, :bathrooms, :square_footage, :start_date]
+  REQUIRED_FIELDS = [:address, :user, :rent, :bedrooms, :bathrooms, :start_date]
 
   include Eventable
 
@@ -56,7 +56,7 @@ class Apartment < ActiveRecord::Base
       validates_presence_of :address, :user, :start_date
       validates_presence_of :end_date, :if => Proc.new { |apartment| apartment.sublet? }
       validates_numericality_of :rent, :greater_than => 0, :only_integer => true
-      validates_numericality_of :square_footage, :greater_than => 0, :only_integer => true
+      validates_numericality_of :square_footage, :allow_nil => true, :greater_than => 0, :only_integer => true
       validates_numericality_of :bedrooms, :greater_than_or_equal_to => 0
       validates_numericality_of :bathrooms, :greater_than_or_equal_to => 0
       validates_uniqueness_of :address_id, :scope => [ :user_id, :unit ]
@@ -66,7 +66,7 @@ class Apartment < ActiveRecord::Base
       validates_presence_of :address, :user, :start_date
       validates_presence_of :end_date, :if => Proc.new { |apartment| apartment.sublet? }
       validates_numericality_of :rent, :greater_than => 0, :only_integer => true
-      validates_numericality_of :square_footage, :greater_than => 0, :only_integer => true
+      validates_numericality_of :square_footage, :allow_nil => true, :greater_than => 0, :only_integer => true
       validates_numericality_of :bedrooms, :greater_than_or_equal_to => 0
       validates_numericality_of :bathrooms, :greater_than_or_equal_to => 0
       validates_uniqueness_of :address_id, :scope => [ :user_id, :unit ]

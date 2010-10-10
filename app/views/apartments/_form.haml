@@ -10,7 +10,7 @@
     =f.input :rent, :label => "Rent ($)"
     =f.input :bedrooms, :label => "Bedrooms (#)"
     =f.input :bathrooms, :label => "Bathrooms (#)"
-    =f.input :square_footage
+    =f.input :square_footage, :required => false
     =f.input :start_date, :as => :string, :input_html => { :'data-date' => true }
     =f.input :sublet, :label => "Is this a Sublet?", :as => :radio, :collection => { "Yes" => true, "No" => false }
 

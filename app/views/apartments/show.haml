@@ -35,7 +35,9 @@
             ==$#{number_with_delimiter(@apartment.rent)}
 
           %ul
-            %li==#{@apartment.square_footage} sq. ft.
+            - unless @apartment.square_footage.blank?
+              %li
+                ==#{@apartment.square_footage} sq. ft.
             %li
               -if @apartment.address && @apartment.neighborhoods
                 ==Neighborhood: #{neighborhood_links(@apartment.neighborhoods)}
