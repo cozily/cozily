@@ -215,44 +215,15 @@ describe Apartment do
 
   describe "#publish!" do
     before do
-      @user, @apartment = Factory(:email_confirmed_user), Factory(:apartment)
+      @apartment = Factory(:apartment)
       @apartment.should_receive(:publishable?).and_return(true)
-      @apartment.stub!(:match_for?).and_return(true)
     end
 
-    it "emails matching users when the apartment is published" do
-#      MatchMailer.should_receive(:deliver_new_match_notification).with(@apartment, @user)
+    it "enqueues a MatchNotifierJob when published" do
       lambda {
         @apartment.publish!
       }.should change(Delayed::Job, :count).by(1)
-      Delayed::Job.last.handler.should =~ /:deliver_new_match_notification/
-    end
-
-    it "creates a MatchNotification record for the user and apartment" do
-      lambda {
-        @apartment.publish!
-      }.should change(MatchNotification, :count).by(1)
-    end
-
-    it "does not email matching users who do not want to be emailed" do
-      @user.update_attribute(:receive_match_notifications, false)
-      lambda {
-        @apartment.publish!
-      }.should_not change(Delayed::Job, :count)
-    end
-
-    it "does not email matching users who have already been emailed" do
-      MatchNotification.create(:user => @user, :apartment => @apartment)
-      lambda {
-        @apartment.publish!
-      }.should_not change(Delayed::Job, :count)
-    end
-
-    it "does not email non-matching users when the apartment is published" do
-      @apartment.stub!(:match_for?).and_return(false)
-      lambda {
-        @apartment.publish!
-      }.should_not change(Delayed::Job, :count)
+      Delayed::Job.last.handler.should =~ /:MatchNotifierJob/
     end
   end
 

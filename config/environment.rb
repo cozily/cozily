@@ -4,7 +4,7 @@ require File.join(File.dirname(__FILE__), 'boot')
 require 'geokit'
 
 Rails::Initializer.run do |config|
-  ["mailers", "shared"].each do |subdir|
+  ["jobs", "mailers", "shared"].each do |subdir|
     config.autoload_paths << "#{RAILS_ROOT}/app/#{subdir}"
   end
 
