@@ -58,7 +58,7 @@ describe Apartment do
 
     it "should not email the owner after they create their second apartment" do
       FirstApartmentNotification.create!(:user => @user)
-      lambda {      
+      lambda {
         Apartment.create!(:user => @user)
       }.should_not change(Delayed::Job, :count)
     end
@@ -185,7 +185,7 @@ describe Apartment do
       @apartment.should be_publishable
     end
 
-    [:address, :user, :rent, :bedrooms, :bathrooms, :square_footage].each do |attr|
+    [:address, :user, :rent, :bedrooms, :bathrooms].each do |attr|
       it "returns false when #{attr} is missing" do
         @apartment.send("#{attr}=", nil)
         @apartment.should_not be_publishable
