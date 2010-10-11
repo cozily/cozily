@@ -32,4 +32,10 @@ class UsersController < Clearance::UsersController
       render params[:return_to].present? ? 'users/profiles/edit' : 'edit'
     end
   end
+
+  def resend_confirmation
+    @user = User.find(params[:id])
+    @user.send_confirmation_email
+    render :json => { :flash => "Resent confirmation email to #{@user.email}" }
+  end
 end

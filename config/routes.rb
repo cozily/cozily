@@ -15,7 +15,10 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :neighborhood_profiles, :only => [ :destroy ]
 
   map.resource  :search, :only => [ :show ]
-  map.resources :users, :controller => 'users', :only => [ :edit, :create, :update ] do |user|
+  map.resources :users,
+                :controller => 'users',
+                :only => [ :edit, :create, :update ],
+                :member => { :resend_confirmation => :post } do |user|
     user.resources :favorites, :only => [ :create, :destroy ]
     user.resources :flags, :only => [ :create, :destroy ]
     user.resource  :profile, :only => [ :edit ], :controller => "users/profiles"

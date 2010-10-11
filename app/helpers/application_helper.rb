@@ -26,7 +26,7 @@ module ApplicationHelper
 
   def lady_text
     if !current_user.email_confirmed?
-      "Hey #{current_user.first_name}, remember to confirm your email address."
+      "Hey #{current_user.first_name}, remember to confirm your email address. #{link_to("Resend link", resend_confirmation_user_path(current_user), :'data-remote' => true)}."
     elsif action_name == "messages"
       "Wow #{current_user.first_name}, people really seem to love talking to you!"
     else

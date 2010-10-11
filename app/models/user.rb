@@ -85,7 +85,6 @@ class User < ActiveRecord::Base
 #    messages.sent_by(self)
   end
 
-  protected
   def send_confirmation_email
     ClearanceMailer.send_later(:deliver_confirmation, self)
   end
