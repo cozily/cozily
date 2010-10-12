@@ -68,7 +68,7 @@ class ApplicationController < ActionController::Base
 
   def save_user_activity
     return unless current_user && !current_user.has_activity_today?
-    UserActivity.create(:user => current_user, :date => Date.today)
+    current_user.activities.create(:date => Date.today)
   end
 
   def unauthenticate

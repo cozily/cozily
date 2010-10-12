@@ -16,6 +16,8 @@
     %dd=@user.phone
   %dt Joined
   %dd=@user.created_at
+  %dt Last Activity
+  %dd=@user.activities.first.try(:date)
   -if @user.finder?
     %dt Receive match notifications?
     %dd=@user.receive_match_notifications

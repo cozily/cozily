@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   include Clearance::User
 
   has_one :profile, :dependent => :destroy
+  has_many :activities, :class_name => "UserActivity", :dependent => :destroy
   has_many :apartments, :dependent => :destroy
   has_many :favorites, :dependent => :destroy
   has_many :flags, :dependent => :destroy
