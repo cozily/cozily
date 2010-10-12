@@ -44,6 +44,10 @@ class User < ActiveRecord::Base
     [first_name, last_name].join(" ")
   end
 
+  def has_activity_today?
+    UserActivity.exists?(:user_id => self, :date => Date.today)
+  end
+
   def has_received_first_apartment_notification?
     FirstApartmentNotification.exists?(:user_id => self.id)
   end

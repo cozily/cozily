@@ -9,6 +9,7 @@ class ApplicationController < ActionController::Base
 
   before_filter :perform_basic_authentication_on_staging
   before_filter :load_search
+  before_filter :save_user_activity
 
   rescue_from CanCan::AccessDenied do |exception|
     flash[:failure] = exception.message
@@ -63,6 +64,11 @@ class ApplicationController < ActionController::Base
                          :min_bedrooms => session[:min_bedrooms],
                          :max_rent => session[:max_rent],
                          :page => params[:page])
+  end
+
+  def save_user_activity
+    return unless current_user && !current_user.has_activity_today?
+    UserActivity.create(:user => current_user, :date => Date.today)
   end
 
   def unauthenticate

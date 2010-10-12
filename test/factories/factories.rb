@@ -83,6 +83,11 @@ Factory.define :timeline_event do |t|
   t.association  :actor, :factory => :user
 end
 
+Factory.define :user_activity do |u|
+  u.association :user
+  u.date        { Date.today }
+end
+
 Factory.define :user_role do |u|
   u.association  :user
   u.association  :role
