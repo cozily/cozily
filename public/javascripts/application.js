@@ -380,7 +380,7 @@ function liveNeighborhoodAutocomplete() {
                 data      : data,
                 dataType  : 'json',
                 success   : function success(response) {
-                    form.find(":input").not(":submit").val("");
+                    form.find(":input").not(":submit").not(":hidden").val("");
                     $(document).trigger('content-received', response);
                 }
             });

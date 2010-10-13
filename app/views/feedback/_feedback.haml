@@ -6,9 +6,15 @@
     %fieldset.inputs
       %ol
         %li.string
-          %label
-            Email
-          =text_field 'feedback', 'email'
+          -unless signed_in?
+            %label
+              Email
+            =text_field 'feedback', 'email'
+          -else
+            %label Email
+            %label=current_user.email
+            =hidden_field 'feedback', 'email', :value => current_user.email
+
         %li.text
           %label
             Message
