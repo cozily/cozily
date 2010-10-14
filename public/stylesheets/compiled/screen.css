@@ -1645,7 +1645,7 @@ body.users.edit form.user div#selected_neighborhoods span a, body.users.update f
   color: red;
 }
 /* line 98, ../../../app/stylesheets/partials/_profile.scss */
-body.users.edit form.user li#user_receive_match_notifications_input, body.users.update form.user li#user_receive_match_notifications_input, body.users.new form.user li#user_receive_match_notifications_input, body.users.create form.user li#user_receive_match_notifications_input, body.profiles.edit form.user li#user_receive_match_notifications_input, body.profiles.update form.user li#user_receive_match_notifications_input {
+body.users.edit form.user li#user_receive_match_notifications_input, body.users.edit form.user li#user_receive_listing_summaries_input, body.users.update form.user li#user_receive_match_notifications_input, body.users.update form.user li#user_receive_listing_summaries_input, body.users.new form.user li#user_receive_match_notifications_input, body.users.new form.user li#user_receive_listing_summaries_input, body.users.create form.user li#user_receive_match_notifications_input, body.users.create form.user li#user_receive_listing_summaries_input, body.profiles.edit form.user li#user_receive_match_notifications_input, body.profiles.edit form.user li#user_receive_listing_summaries_input, body.profiles.update form.user li#user_receive_match_notifications_input, body.profiles.update form.user li#user_receive_listing_summaries_input {
   padding-top: 10px;
 }
 
