@@ -69,6 +69,62 @@ describe User do
     end
   end
 
+  describe ".lister" do
+    before do
+      @user = Factory(:lister)
+      @user.roles.should include(Role.find_by_name("lister"))
+    end
+
+    it "returns users that have the lister role" do
+      User.lister.should == [@user]
+    end
+
+    it "does not return users that do not have the lister role" do
+      UserRole.find_by_user_id_and_role_id(@user.id, Role.find_by_name("lister").id).destroy
+      User.lister.should == []
+    end
+  end
+
+  describe ".send_finder_summary_emails" do
+    before do
+      @finder = Factory(:user)
+    end
+
+    it "should email finders" do
+      lambda {
+        User.send_finder_summary_emails
+      }.should change(Delayed::Job, :count).by(1)
+      Delayed::Job.last.handler.should =~ /:deliver_finder_summary/
+    end
+
+    it "should not email finders who have opted out of weekly summaries" do
+      @finder.update_attribute(:receive_match_summaries, false)
+      lambda {
+        User.send_finder_summary_emails
+      }.should_not change(Delayed::Job, :count)
+    end
+  end
+
+  describe ".send_lister_summary_emails" do
+    before do
+      @lister = Factory(:lister)
+    end
+
+    it "should email listers" do
+      lambda {
+        User.send_lister_summary_emails
+      }.should change(Delayed::Job, :count).by(1)
+      Delayed::Job.last.handler.should =~ /:deliver_lister_summary/
+    end
+
+    it "should not email listers who have opted out of weekly summaries" do
+      @lister.update_attribute(:receive_listing_summaries, false)
+      lambda {
+        User.send_lister_summary_emails
+      }.should_not change(Delayed::Job, :count)
+    end
+  end
+
   describe "#matches" do
     before do
       @apt1 = Factory(:apartment,

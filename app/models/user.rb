@@ -26,10 +26,27 @@ class User < ActiveRecord::Base
 
   named_scope :email_confirmed, :conditions => {:email_confirmed => true}
   named_scope :receive_match_notifications, :conditions => {:receive_match_notifications => true}
+  named_scope :receive_listing_summaries, :conditions => {:receive_listing_summaries => true}
 
   class << self
     def finder
       User.scoped({:joins => :roles, :conditions => ["roles.id = ?", Role.find_by_name("finder")]})
+    end
+
+    def lister
+      User.scoped({:joins => :roles, :conditions => ["roles.id = ?", Role.find_by_name("lister")]})
+    end
+
+    def send_finder_summary_emails
+      User.finder.receive_match_summaries.each do |user|
+        UserMailer.send_later(:deliver_finder_summary, user)
+      end
+    end
+
+    def send_lister_summary_emails
+      User.lister.receive_listing_summaries.each do |user|
+        UserMailer.send_later(:deliver_lister_summary, user)
+      end
     end
   end
 
