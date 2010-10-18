@@ -12,7 +12,7 @@ class Yelp
   def restaurants_for_lat_and_lng(lat, lng)
     options = { :query => { :lat => lat,
                             :long => lng,
-                            :radius => 0.1,
+                            :radius => 0.33,
                             :category => "restaurants",
                             :limit => 10,
                             :ywsid => '7a05VXb3EXz850ByvWF90w' } }
