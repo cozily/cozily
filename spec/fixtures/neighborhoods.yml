@@ -1,2476 +1,2476 @@
---- 
-richmond_hill: 
+---
+richmond_hill:
   city: New York
   name: Richmond Hill
-  created_at: 2010-09-24 06:16:20.716616
+  created_at: 2010-10-18 03:58:17.66059
   country: USA
-  updated_at: 2010-09-24 06:16:20.716616
+  updated_at: 2010-10-18 03:58:17.66059
   borough: Queens
-  id: "484"
+  id: "759"
   state: NY
-la_guardia_airport: 
+la_guardia_airport:
   city: New York
   name: LaGuardia Airport
-  created_at: 2010-09-24 06:16:20.356982
+  created_at: 2010-10-18 03:58:17.312592
   country: USA
-  updated_at: 2010-09-24 06:16:20.356982
+  updated_at: 2010-10-18 03:58:17.312592
   borough: Queens
-  id: "467"
+  id: "742"
   state: NY
-longwood: 
+longwood:
   city: New York
   name: Longwood
-  created_at: 2010-09-24 06:16:15.72241
+  created_at: 2010-10-18 03:58:14.511921
   country: USA
-  updated_at: 2010-09-24 06:16:15.72241
+  updated_at: 2010-10-18 03:58:14.511921
   borough: Bronx
-  id: "296"
+  id: "571"
   state: NY
-melrose: 
+melrose:
   city: New York
   name: Melrose
-  created_at: 2010-09-24 06:16:15.734414
+  created_at: 2010-10-18 03:58:14.523055
   country: USA
-  updated_at: 2010-09-24 06:16:15.734414
+  updated_at: 2010-10-18 03:58:14.523055
   borough: Bronx
-  id: "297"
+  id: "572"
   state: NY
-lower_east_side: 
+lower_east_side:
   city: New York
   name: Lower East Side
-  created_at: 2010-09-24 06:16:19.040354
+  created_at: 2010-10-18 03:58:16.318411
   country: USA
-  updated_at: 2010-09-24 06:16:19.040354
+  updated_at: 2010-10-18 03:58:16.318411
   borough: Manhattan
-  id: "405"
+  id: "680"
   state: NY
-kew_gardens: 
+kew_gardens:
   city: New York
   name: Kew Gardens
-  created_at: 2010-09-24 06:16:20.195078
+  created_at: 2010-10-18 03:58:17.290584
   country: USA
-  updated_at: 2010-09-24 06:16:20.195078
+  updated_at: 2010-10-18 03:58:17.290584
   borough: Queens
-  id: "465"
+  id: "740"
   state: NY
-sea_gate: 
+sea_gate:
   city: New York
   name: Sea Gate
-  created_at: 2010-09-24 06:16:17.470177
+  created_at: 2010-10-18 03:58:15.847558
   country: USA
-  updated_at: 2010-09-24 06:16:17.470177
+  updated_at: 2010-10-18 03:58:15.847558
   borough: Brooklyn
-  id: "376"
+  id: "651"
   state: NY
-concourse: 
+concourse:
   city: New York
   name: Concourse
-  created_at: 2010-09-24 06:16:15.555873
+  created_at: 2010-10-18 03:58:14.375536
   country: USA
-  updated_at: 2010-09-24 06:16:15.555873
+  updated_at: 2010-10-18 03:58:14.375536
   borough: Bronx
-  id: "284"
+  id: "559"
   state: NY
-wingate: 
+wingate:
   city: New York
   name: Wingate
-  created_at: 2010-09-24 06:16:17.747397
+  created_at: 2010-10-18 03:58:16.043983
   country: USA
-  updated_at: 2010-09-24 06:16:17.747397
+  updated_at: 2010-10-18 03:58:16.043983
   borough: Brooklyn
-  id: "387"
+  id: "662"
   state: NY
-flushing_meadows: 
+flushing_meadows:
   city: New York
   name: Flushing Meadows
-  created_at: 2010-09-24 06:16:20.030482
+  created_at: 2010-10-18 03:58:17.135173
   country: USA
-  updated_at: 2010-09-24 06:16:20.030482
+  updated_at: 2010-10-18 03:58:17.135173
   borough: Queens
-  id: "451"
+  id: "726"
   state: NY
-downtown_flushing: 
+downtown_flushing:
   city: New York
   name: Downtown Flushing
-  created_at: 2010-09-24 06:16:19.808103
+  created_at: 2010-10-18 03:58:17.057102
   country: USA
-  updated_at: 2010-09-24 06:16:19.808103
+  updated_at: 2010-10-18 03:58:17.057102
   borough: Queens
-  id: "444"
+  id: "719"
   state: NY
-civic_center: 
+civic_center:
   city: New York
   name: Civic Center
-  created_at: 2010-09-24 06:16:17.925003
+  created_at: 2010-10-18 03:58:16.159886
   country: USA
-  updated_at: 2010-09-24 06:16:17.925003
+  updated_at: 2010-10-18 03:58:16.159886
   borough: Manhattan
-  id: "392"
+  id: "667"
   state: NY
-springfield_gardens: 
+springfield_gardens:
   city: New York
   name: Springfield Gardens
-  created_at: 2010-09-24 06:16:20.803253
+  created_at: 2010-10-18 03:58:17.746944
   country: USA
-  updated_at: 2010-09-24 06:16:20.803253
+  updated_at: 2010-10-18 03:58:17.746944
   borough: Queens
-  id: "491"
+  id: "766"
   state: NY
-greenpoint: 
+greenpoint:
   city: New York
   name: Greenpoint
-  created_at: 2010-09-24 06:16:17.114252
+  created_at: 2010-10-18 03:58:15.488695
   country: USA
-  updated_at: 2010-09-24 06:16:17.114252
+  updated_at: 2010-10-18 03:58:15.488695
   borough: Brooklyn
-  id: "358"
+  id: "633"
   state: NY
-gerritson_beach: 
+gerritson_beach:
   city: New York
   name: Gerritson Beach
-  created_at: 2010-09-24 06:16:17.076999
+  created_at: 2010-10-18 03:58:15.458774
   country: USA
-  updated_at: 2010-09-24 06:16:17.076999
+  updated_at: 2010-10-18 03:58:15.458774
   borough: Brooklyn
-  id: "355"
+  id: "630"
   state: NY
-forest_hills: 
+forest_hills:
   city: New York
   name: Forest Hills
-  created_at: 2010-09-24 06:16:20.042851
+  created_at: 2010-10-18 03:58:17.14566
   country: USA
-  updated_at: 2010-09-24 06:16:20.042851
+  updated_at: 2010-10-18 03:58:17.14566
   borough: Queens
-  id: "452"
+  id: "727"
   state: NY
-bensonhurst: 
+bensonhurst:
   city: New York
   name: Bensonhurst
-  created_at: 2010-09-24 06:16:16.462065
+  created_at: 2010-10-18 03:58:14.996377
   country: USA
-  updated_at: 2010-09-24 06:16:16.462065
+  updated_at: 2010-10-18 03:58:14.996377
   borough: Brooklyn
-  id: "327"
+  id: "602"
   state: NY
-north_corona: 
+north_corona:
   city: New York
   name: North Corona
-  created_at: 2010-09-24 06:16:20.477016
+  created_at: 2010-10-18 03:58:17.42311
   country: USA
-  updated_at: 2010-09-24 06:16:20.477016
+  updated_at: 2010-10-18 03:58:17.42311
   borough: Queens
-  id: "477"
+  id: "752"
   state: NY
-arrochar: 
+arrochar:
   city: New York
   name: Arrochar
-  created_at: 2010-09-24 06:16:21.12545
+  created_at: 2010-10-18 03:58:17.851575
   country: USA
-  updated_at: 2010-09-24 06:16:21.12545
+  updated_at: 2010-10-18 03:58:17.851575
   borough: Staten Island
-  id: "501"
+  id: "776"
   state: NY
-eastchester: 
+eastchester:
   city: New York
   name: Eastchester
-  created_at: 2010-09-24 06:16:15.619439
+  created_at: 2010-10-18 03:58:14.421129
   country: USA
-  updated_at: 2010-09-24 06:16:15.619439
+  updated_at: 2010-10-18 03:58:14.421129
   borough: Bronx
-  id: "288"
+  id: "563"
   state: NY
-seaside: 
+seaside:
   city: New York
   name: Seaside
-  created_at: 2010-09-24 06:16:20.777086
+  created_at: 2010-10-18 03:58:17.725467
   country: USA
-  updated_at: 2010-09-24 06:16:20.777086
+  updated_at: 2010-10-18 03:58:17.725467
   borough: Queens
-  id: "489"
+  id: "764"
   state: NY
-east_flatbush: 
+east_flatbush:
   city: New York
   name: East Flatbush
-  created_at: 2010-09-24 06:16:16.838202
+  created_at: 2010-10-18 03:58:15.373299
   country: USA
-  updated_at: 2010-09-24 06:16:16.838202
+  updated_at: 2010-10-18 03:58:15.373299
   borough: Brooklyn
-  id: "347"
+  id: "622"
   state: NY
-woodlawn: 
+woodlawn:
   city: New York
   name: Woodlawn
-  created_at: 2010-09-24 06:16:16.415291
+  created_at: 2010-10-18 03:58:14.95392
   country: USA
-  updated_at: 2010-09-24 06:16:16.415291
+  updated_at: 2010-10-18 03:58:14.95392
   borough: Bronx
-  id: "323"
+  id: "598"
   state: NY
-east_village: 
+east_village:
   city: New York
   name: East Village
-  created_at: 2010-09-24 06:16:18.29673
+  created_at: 2010-10-18 03:58:16.199037
   country: USA
-  updated_at: 2010-09-24 06:16:18.29673
+  updated_at: 2010-10-18 03:58:16.199037
   borough: Manhattan
-  id: "394"
+  id: "669"
   state: NY
-hell_s_kitchen: 
+hell_s_kitchen:
   city: New York
   name: Hell's Kitchen
-  created_at: 2010-09-24 06:16:18.974676
+  created_at: 2010-10-18 03:58:16.262987
   country: USA
-  updated_at: 2010-09-24 06:16:18.974676
+  updated_at: 2010-10-18 03:58:16.262987
   borough: Manhattan
-  id: "400"
+  id: "675"
   state: NY
-rosedale: 
+rosedale:
   city: New York
   name: Rosedale
-  created_at: 2010-09-24 06:16:20.765279
+  created_at: 2010-10-18 03:58:17.714805
   country: USA
-  updated_at: 2010-09-24 06:16:20.765279
+  updated_at: 2010-10-18 03:58:17.714805
   borough: Queens
-  id: "488"
+  id: "763"
   state: NY
-new_dorp_beach: 
+new_dorp_beach:
   city: New York
   name: New Dorp Beach
-  created_at: 2010-09-24 06:16:21.595133
+  created_at: 2010-10-18 03:58:18.308306
   country: USA
-  updated_at: 2010-09-24 06:16:21.595133
+  updated_at: 2010-10-18 03:58:18.308306
   borough: Staten Island
-  id: "527"
+  id: "802"
   state: NY
-sheepshead_bay: 
+sheepshead_bay:
   city: New York
   name: Sheepshead Bay
-  created_at: 2010-09-24 06:16:17.482295
+  created_at: 2010-10-18 03:58:15.859132
   country: USA
-  updated_at: 2010-09-24 06:16:17.482295
+  updated_at: 2010-10-18 03:58:15.859132
   borough: Brooklyn
-  id: "377"
+  id: "652"
   state: NY
-claremont_village: 
+claremont_village:
   city: New York
   name: Claremont Village
-  created_at: 2010-09-24 06:16:15.519346
+  created_at: 2010-10-18 03:58:14.339416
   country: USA
-  updated_at: 2010-09-24 06:16:15.519346
+  updated_at: 2010-10-18 03:58:14.339416
   borough: Bronx
-  id: "281"
+  id: "556"
   state: NY
-prospect_park_south: 
+prospect_park_south:
   city: New York
   name: Prospect Park South
-  created_at: 2010-09-24 06:16:17.433954
+  created_at: 2010-10-18 03:58:15.814215
   country: USA
-  updated_at: 2010-09-24 06:16:17.433954
+  updated_at: 2010-10-18 03:58:15.814215
   borough: Brooklyn
-  id: "373"
+  id: "648"
   state: NY
-manhattan_beach: 
+manhattan_beach:
   city: New York
   name: Manhattan Beach
-  created_at: 2010-09-24 06:16:17.151999
+  created_at: 2010-10-18 03:58:15.521267
   country: USA
-  updated_at: 2010-09-24 06:16:17.151999
+  updated_at: 2010-10-18 03:58:15.521267
   borough: Brooklyn
-  id: "361"
+  id: "636"
   state: NY
-steinway: 
+steinway:
   city: New York
   name: Steinway
-  created_at: 2010-09-24 06:16:20.817486
+  created_at: 2010-10-18 03:58:17.757678
   country: USA
-  updated_at: 2010-09-24 06:16:20.817486
+  updated_at: 2010-10-18 03:58:17.757678
   borough: Queens
-  id: "492"
+  id: "767"
   state: NY
-eltingville: 
+eltingville:
   city: New York
   name: Eltingville
-  created_at: 2010-09-24 06:16:21.263085
+  created_at: 2010-10-18 03:58:17.982136
   country: USA
-  updated_at: 2010-09-24 06:16:21.263085
+  updated_at: 2010-10-18 03:58:17.982136
   borough: Staten Island
-  id: "512"
+  id: "787"
   state: NY
-boerum_hill: 
+boerum_hill:
   city: New York
   name: Boerum Hill
-  created_at: 2010-09-24 06:16:16.473819
+  created_at: 2010-10-18 03:58:15.007514
   country: USA
-  updated_at: 2010-09-24 06:16:16.473819
+  updated_at: 2010-10-18 03:58:15.007514
   borough: Brooklyn
-  id: "328"
+  id: "603"
   state: NY
-theater_district: 
+theater_district:
   city: New York
   name: Theater District
-  created_at: 2010-09-24 06:16:19.370294
+  created_at: 2010-10-18 03:58:16.636422
   country: USA
-  updated_at: 2010-09-24 06:16:19.370294
+  updated_at: 2010-10-18 03:58:16.636422
   borough: Manhattan
-  id: "420"
+  id: "695"
   state: NY
-chelsea: 
+chelsea:
   city: New York
   name: Chelsea
-  created_at: 2010-09-24 06:16:17.782811
+  created_at: 2010-10-18 03:58:16.11195
   country: USA
-  updated_at: 2010-09-24 06:16:17.782811
+  updated_at: 2010-10-18 03:58:16.11195
   borough: Manhattan
-  id: "390"
+  id: "665"
   state: NY
-richmond_town: 
+richmond_town:
   city: New York
   name: Richmond Town
-  created_at: 2010-09-24 06:16:21.83689
+  created_at: 2010-10-18 03:58:18.405076
   country: USA
-  updated_at: 2010-09-24 06:16:21.83689
+  updated_at: 2010-10-18 03:58:18.405076
   borough: Staten Island
-  id: "536"
+  id: "811"
   state: NY
-jackson_heights: 
+jackson_heights:
   city: New York
   name: Jackson Heights
-  created_at: 2010-09-24 06:16:20.147832
+  created_at: 2010-10-18 03:58:17.24135
   country: USA
-  updated_at: 2010-09-24 06:16:20.147832
+  updated_at: 2010-10-18 03:58:17.24135
   borough: Queens
-  id: "461"
+  id: "736"
   state: NY
-silver_lake: 
+silver_lake:
   city: New York
   name: Silver Lake
-  created_at: 2010-09-24 06:16:21.896719
+  created_at: 2010-10-18 03:58:18.457893
   country: USA
-  updated_at: 2010-09-24 06:16:21.896719
+  updated_at: 2010-10-18 03:58:18.457893
   borough: Staten Island
-  id: "541"
+  id: "816"
   state: NY
-far_rockaway: 
+far_rockaway:
   city: New York
   name: Far Rockaway
-  created_at: 2010-09-24 06:16:19.858175
+  created_at: 2010-10-18 03:58:17.100074
   country: USA
-  updated_at: 2010-09-24 06:16:19.858175
+  updated_at: 2010-10-18 03:58:17.100074
   borough: Queens
-  id: "448"
+  id: "723"
   state: NY
-norwood: 
+norwood:
   city: New York
   name: Norwood
-  created_at: 2010-09-24 06:16:16.039345
+  created_at: 2010-10-18 03:58:14.751139
   country: USA
-  updated_at: 2010-09-24 06:16:16.039345
+  updated_at: 2010-10-18 03:58:14.751139
   borough: Bronx
-  id: "305"
+  id: "580"
   state: NY
-belmont: 
+belmont:
   city: New York
   name: Belmont
-  created_at: 2010-09-24 06:16:15.362942
+  created_at: 2010-10-18 03:58:14.304661
   country: USA
-  updated_at: 2010-09-24 06:16:15.362942
+  updated_at: 2010-10-18 03:58:14.304661
   borough: Bronx
-  id: "278"
+  id: "553"
   state: NY
-east_williamsburg: 
+east_williamsburg:
   city: New York
   name: East Williamsburg
-  created_at: 2010-09-24 06:16:17.003113
+  created_at: 2010-10-18 03:58:15.396183
   country: USA
-  updated_at: 2010-09-24 06:16:17.003113
+  updated_at: 2010-10-18 03:58:15.396183
   borough: Brooklyn
-  id: "349"
+  id: "624"
   state: NY
-bay_terrace_1: 
+bay_terrace_1:
   city: New York
   name: Bay Terrace
-  created_at: 2010-09-24 06:16:21.138142
+  created_at: 2010-10-18 03:58:17.863787
   country: USA
-  updated_at: 2010-09-24 06:16:21.138142
+  updated_at: 2010-10-18 03:58:17.863787
   borough: Staten Island
-  id: "502"
+  id: "777"
   state: NY
-bedford_stuyvesant: 
+bedford_stuyvesant:
   city: New York
   name: Bedford Stuyvesant
-  created_at: 2010-09-24 06:16:16.449648
+  created_at: 2010-10-18 03:58:14.985608
   country: USA
-  updated_at: 2010-09-24 06:16:16.449648
+  updated_at: 2010-10-18 03:58:14.985608
   borough: Brooklyn
-  id: "326"
+  id: "601"
   state: NY
-borough_park: 
+borough_park:
   city: New York
   name: Borough Park
-  created_at: 2010-09-24 06:16:16.486058
+  created_at: 2010-10-18 03:58:15.018923
   country: USA
-  updated_at: 2010-09-24 06:16:16.486058
+  updated_at: 2010-10-18 03:58:15.018923
   borough: Brooklyn
-  id: "329"
+  id: "604"
   state: NY
-van_nest: 
+van_nest:
   city: New York
   name: Van Nest
-  created_at: 2010-09-24 06:16:16.35519
+  created_at: 2010-10-18 03:58:14.896506
   country: USA
-  updated_at: 2010-09-24 06:16:16.35519
+  updated_at: 2010-10-18 03:58:14.896506
   borough: Bronx
-  id: "318"
+  id: "593"
   state: NY
-heartland_village: 
+heartland_village:
   city: New York
   name: Heartland Village
-  created_at: 2010-09-24 06:16:21.496481
+  created_at: 2010-10-18 03:58:18.216593
   country: USA
-  updated_at: 2010-09-24 06:16:21.496481
+  updated_at: 2010-10-18 03:58:18.216593
   borough: Staten Island
-  id: "519"
+  id: "794"
   state: NY
-lindenwood: 
+lindenwood:
   city: New York
   name: Lindenwood
-  created_at: 2010-09-24 06:16:20.394324
+  created_at: 2010-10-18 03:58:17.345155
   country: USA
-  updated_at: 2010-09-24 06:16:20.394324
+  updated_at: 2010-10-18 03:58:17.345155
   borough: Queens
-  id: "470"
+  id: "745"
   state: NY
-mill_basin: 
+mill_basin:
   city: New York
   name: Mill Basin
-  created_at: 2010-09-24 06:16:17.188202
+  created_at: 2010-10-18 03:58:15.55071
   country: USA
-  updated_at: 2010-09-24 06:16:17.188202
+  updated_at: 2010-10-18 03:58:15.55071
   borough: Brooklyn
-  id: "364"
+  id: "639"
   state: NY
-chinatown: 
+chinatown:
   city: New York
   name: Chinatown
-  created_at: 2010-09-24 06:16:17.807138
+  created_at: 2010-10-18 03:58:16.136077
   country: USA
-  updated_at: 2010-09-24 06:16:17.807138
+  updated_at: 2010-10-18 03:58:16.136077
   borough: Manhattan
-  id: "391"
+  id: "666"
   state: NY
-brighton_beach: 
+brighton_beach:
   city: New York
   name: Brighton Beach
-  created_at: 2010-09-24 06:16:16.499371
+  created_at: 2010-10-18 03:58:15.02965
   country: USA
-  updated_at: 2010-09-24 06:16:16.499371
+  updated_at: 2010-10-18 03:58:15.02965
   borough: Brooklyn
-  id: "330"
+  id: "605"
   state: NY
-whitestone: 
+whitestone:
   city: New York
   name: Whitestone
-  created_at: 2010-09-24 06:16:20.858135
+  created_at: 2010-10-18 03:58:17.789566
   country: USA
-  updated_at: 2010-09-24 06:16:20.858135
+  updated_at: 2010-10-18 03:58:17.789566
   borough: Queens
-  id: "495"
+  id: "770"
   state: NY
-st_george: 
+st_george:
   city: New York
   name: St. George
-  created_at: 2010-09-24 06:16:21.908569
+  created_at: 2010-10-18 03:58:18.468353
   country: USA
-  updated_at: 2010-09-24 06:16:21.908569
+  updated_at: 2010-10-18 03:58:18.468353
   borough: Staten Island
-  id: "542"
+  id: "817"
   state: NY
-port_morris: 
+port_morris:
   city: New York
   name: Port Morris
-  created_at: 2010-09-24 06:16:16.119738
+  created_at: 2010-10-18 03:58:14.804726
   country: USA
-  updated_at: 2010-09-24 06:16:16.119738
+  updated_at: 2010-10-18 03:58:14.804726
   borough: Bronx
-  id: "310"
+  id: "585"
   state: NY
-university_heights: 
+university_heights:
   city: New York
   name: University Heights
-  created_at: 2010-09-24 06:16:16.339626
+  created_at: 2010-10-18 03:58:14.884388
   country: USA
-  updated_at: 2010-09-24 06:16:16.339626
+  updated_at: 2010-10-18 03:58:14.884388
   borough: Bronx
-  id: "317"
+  id: "592"
   state: NY
-canarsie: 
+canarsie:
   city: New York
   name: Canarsie
-  created_at: 2010-09-24 06:16:16.683563
+  created_at: 2010-10-18 03:58:15.074943
   country: USA
-  updated_at: 2010-09-24 06:16:16.683563
+  updated_at: 2010-10-18 03:58:15.074943
   borough: Brooklyn
-  id: "334"
+  id: "609"
   state: NY
-flatbush: 
+flatbush:
   city: New York
   name: Flatbush
-  created_at: 2010-09-24 06:16:17.015439
+  created_at: 2010-10-18 03:58:15.407123
   country: USA
-  updated_at: 2010-09-24 06:16:17.015439
+  updated_at: 2010-10-18 03:58:15.407123
   borough: Brooklyn
-  id: "350"
+  id: "625"
   state: NY
-queensborough_hill: 
+queensborough_hill:
   city: New York
   name: Queensborough Hill
-  created_at: 2010-09-24 06:16:20.535888
+  created_at: 2010-10-18 03:58:17.633939
   country: USA
-  updated_at: 2010-09-24 06:16:20.535888
+  updated_at: 2010-10-18 03:58:17.633939
   borough: Queens
-  id: "482"
+  id: "757"
   state: NY
-grymes_hill: 
+grymes_hill:
   city: New York
   name: Grymes Hill
-  created_at: 2010-09-24 06:16:21.484291
+  created_at: 2010-10-18 03:58:18.205639
   country: USA
-  updated_at: 2010-09-24 06:16:21.484291
+  updated_at: 2010-10-18 03:58:18.205639
   borough: Staten Island
-  id: "518"
+  id: "793"
   state: NY
-douglaston: 
+douglaston:
   city: New York
   name: Douglaston
-  created_at: 2010-09-24 06:16:19.79513
+  created_at: 2010-10-18 03:58:16.883082
   country: USA
-  updated_at: 2010-09-24 06:16:19.79513
+  updated_at: 2010-10-18 03:58:16.883082
   borough: Queens
-  id: "443"
+  id: "718"
   state: NY
-unionport: 
+unionport:
   city: New York
   name: Unionport
-  created_at: 2010-09-24 06:16:16.326163
+  created_at: 2010-10-18 03:58:14.871581
   country: USA
-  updated_at: 2010-09-24 06:16:16.326163
+  updated_at: 2010-10-18 03:58:14.871581
   borough: Bronx
-  id: "316"
+  id: "591"
   state: NY
-hunts_point: 
+hunts_point:
   city: New York
   name: Hunts Point
-  created_at: 2010-09-24 06:16:15.696289
+  created_at: 2010-10-18 03:58:14.487038
   country: USA
-  updated_at: 2010-09-24 06:16:15.696289
+  updated_at: 2010-10-18 03:58:14.487038
   borough: Bronx
-  id: "294"
+  id: "569"
   state: NY
-dongan_hills: 
+dongan_hills:
   city: New York
   name: Dongan Hills
-  created_at: 2010-09-24 06:16:21.23941
+  created_at: 2010-10-18 03:58:17.95942
   country: USA
-  updated_at: 2010-09-24 06:16:21.23941
+  updated_at: 2010-10-18 03:58:17.95942
   borough: Staten Island
-  id: "510"
+  id: "785"
   state: NY
-queens_village: 
+queens_village:
   city: New York
   name: Queens Village
-  created_at: 2010-09-24 06:16:20.52438
+  created_at: 2010-10-18 03:58:17.623196
   country: USA
-  updated_at: 2010-09-24 06:16:20.52438
+  updated_at: 2010-10-18 03:58:17.623196
   borough: Queens
-  id: "481"
+  id: "756"
   state: NY
-somerville: 
+somerville:
   city: New York
   name: Somerville
-  created_at: 2010-09-24 06:16:20.789615
+  created_at: 2010-10-18 03:58:17.735775
   country: USA
-  updated_at: 2010-09-24 06:16:20.789615
+  updated_at: 2010-10-18 03:58:17.735775
   borough: Queens
-  id: "490"
+  id: "765"
   state: NY
-midland_beach: 
+midland_beach:
   city: New York
   name: Midland Beach
-  created_at: 2010-09-24 06:16:21.556608
+  created_at: 2010-10-18 03:58:18.271831
   country: USA
-  updated_at: 2010-09-24 06:16:21.556608
+  updated_at: 2010-10-18 03:58:18.271831
   borough: Staten Island
-  id: "524"
+  id: "799"
   state: NY
-grant_city: 
+grant_city:
   city: New York
   name: Grant City
-  created_at: 2010-09-24 06:16:21.300043
+  created_at: 2010-10-18 03:58:18.17146
   country: USA
-  updated_at: 2010-09-24 06:16:21.300043
+  updated_at: 2010-10-18 03:58:18.17146
   borough: Staten Island
-  id: "515"
+  id: "790"
   state: NY
-two_bridges: 
+two_bridges:
   city: New York
   name: Two Bridges
-  created_at: 2010-09-24 06:16:19.393509
+  created_at: 2010-10-18 03:58:16.656902
   country: USA
-  updated_at: 2010-09-24 06:16:19.393509
+  updated_at: 2010-10-18 03:58:16.656902
   borough: Manhattan
-  id: "422"
+  id: "697"
   state: NY
-east_tremont: 
+east_tremont:
   city: New York
   name: East Tremont
-  created_at: 2010-09-24 06:16:15.606242
+  created_at: 2010-10-18 03:58:14.409266
   country: USA
-  updated_at: 2010-09-24 06:16:15.606242
+  updated_at: 2010-10-18 03:58:14.409266
   borough: Bronx
-  id: "287"
+  id: "562"
   state: NY
-bushwick: 
+bushwick:
   city: New York
   name: Bushwick
-  created_at: 2010-09-24 06:16:16.671642
+  created_at: 2010-10-18 03:58:15.063671
   country: USA
-  updated_at: 2010-09-24 06:16:16.671642
+  updated_at: 2010-10-18 03:58:15.063671
   borough: Brooklyn
-  id: "333"
+  id: "608"
   state: NY
-inwood: 
+inwood:
   city: New York
   name: Inwood
-  created_at: 2010-09-24 06:16:18.990721
+  created_at: 2010-10-18 03:58:16.273244
   country: USA
-  updated_at: 2010-09-24 06:16:18.990721
+  updated_at: 2010-10-18 03:58:16.273244
   borough: Manhattan
-  id: "401"
+  id: "676"
   state: NY
-elm_park: 
+elm_park:
   city: New York
   name: Elm Park
-  created_at: 2010-09-24 06:16:21.251177
+  created_at: 2010-10-18 03:58:17.970651
   country: USA
-  updated_at: 2010-09-24 06:16:21.251177
+  updated_at: 2010-10-18 03:58:17.970651
   borough: Staten Island
-  id: "511"
+  id: "786"
   state: NY
-elmhurst: 
+elmhurst:
   city: New York
   name: Elmhurst
-  created_at: 2010-09-24 06:16:19.845266
+  created_at: 2010-10-18 03:58:17.089386
   country: USA
-  updated_at: 2010-09-24 06:16:19.845266
+  updated_at: 2010-10-18 03:58:17.089386
   borough: Queens
-  id: "447"
+  id: "722"
   state: NY
-olinville: 
+olinville:
   city: New York
   name: Olinville
-  created_at: 2010-09-24 06:16:16.051049
+  created_at: 2010-10-18 03:58:14.761444
   country: USA
-  updated_at: 2010-09-24 06:16:16.051049
+  updated_at: 2010-10-18 03:58:14.761444
   borough: Bronx
-  id: "306"
+  id: "581"
   state: NY
-baychester: 
+baychester:
   city: New York
   name: Baychester
-  created_at: 2010-09-24 06:16:15.328264
+  created_at: 2010-10-18 03:58:14.268631
   country: USA
-  updated_at: 2010-09-24 06:16:15.328264
+  updated_at: 2010-10-18 03:58:14.268631
   borough: Bronx
-  id: "276"
+  id: "551"
   state: NY
-paedergat_basin: 
+paedergat_basin:
   city: New York
   name: Paedergat Basin
-  created_at: 2010-09-24 06:16:17.385117
+  created_at: 2010-10-18 03:58:15.603191
   country: USA
-  updated_at: 2010-09-24 06:16:17.385117
+  updated_at: 2010-10-18 03:58:15.603191
   borough: Brooklyn
-  id: "369"
+  id: "644"
   state: NY
-kensington: 
+kensington:
   city: New York
   name: Kensington
-  created_at: 2010-09-24 06:16:17.140445
+  created_at: 2010-10-18 03:58:15.509803
   country: USA
-  updated_at: 2010-09-24 06:16:17.140445
+  updated_at: 2010-10-18 03:58:15.509803
   borough: Brooklyn
-  id: "360"
+  id: "635"
   state: NY
-kew_gardens_hills: 
+kew_gardens_hills:
   city: New York
   name: Kew Gardens Hills
-  created_at: 2010-09-24 06:16:20.207088
+  created_at: 2010-10-18 03:58:17.30204
   country: USA
-  updated_at: 2010-09-24 06:16:20.207088
+  updated_at: 2010-10-18 03:58:17.30204
   borough: Queens
-  id: "466"
+  id: "741"
   state: NY
-concord: 
+concord:
   city: New York
   name: Concord
-  created_at: 2010-09-24 06:16:21.22689
+  created_at: 2010-10-18 03:58:17.948794
   country: USA
-  updated_at: 2010-09-24 06:16:21.22689
+  updated_at: 2010-10-18 03:58:17.948794
   borough: Staten Island
-  id: "509"
+  id: "784"
   state: NY
-sunnyside: 
+sunnyside:
   city: New York
   name: Sunnyside
-  created_at: 2010-09-24 06:16:20.831798
+  created_at: 2010-10-18 03:58:17.768354
   country: USA
-  updated_at: 2010-09-24 06:16:20.831798
+  updated_at: 2010-10-18 03:58:17.768354
   borough: Queens
-  id: "493"
+  id: "768"
   state: NY
-roosevelt_island: 
+roosevelt_island:
   city: New York
   name: Roosevelt Island
-  created_at: 2010-09-24 06:16:19.169904
+  created_at: 2010-10-18 03:58:16.582858
   country: USA
-  updated_at: 2010-09-24 06:16:19.169904
+  updated_at: 2010-10-18 03:58:16.582858
   borough: Manhattan
-  id: "415"
+  id: "690"
   state: NY
-upper_west_side: 
+upper_west_side:
   city: New York
   name: Upper West Side
-  created_at: 2010-09-24 06:16:19.431928
+  created_at: 2010-10-18 03:58:16.688434
   country: USA
-  updated_at: 2010-09-24 06:16:19.431928
+  updated_at: 2010-10-18 03:58:16.688434
   borough: Manhattan
-  id: "425"
+  id: "700"
   state: NY
-new_dorp: 
+new_dorp:
   city: New York
   name: New Dorp
-  created_at: 2010-09-24 06:16:21.579857
+  created_at: 2010-10-18 03:58:18.296308
   country: USA
-  updated_at: 2010-09-24 06:16:21.579857
+  updated_at: 2010-10-18 03:58:18.296308
   borough: Staten Island
-  id: "526"
+  id: "801"
   state: NY
-holliswood: 
+holliswood:
   city: New York
   name: Holliswood
-  created_at: 2010-09-24 06:16:20.112762
+  created_at: 2010-10-18 03:58:17.209628
   country: USA
-  updated_at: 2010-09-24 06:16:20.112762
+  updated_at: 2010-10-18 03:58:17.209628
   borough: Queens
-  id: "458"
+  id: "733"
   state: NY
-ozone_park: 
+ozone_park:
   city: New York
   name: Ozone Park
-  created_at: 2010-09-24 06:16:20.500483
+  created_at: 2010-10-18 03:58:17.44518
   country: USA
-  updated_at: 2010-09-24 06:16:20.500483
+  updated_at: 2010-10-18 03:58:17.44518
   borough: Queens
-  id: "479"
+  id: "754"
   state: NY
-no_ho: 
+no_ho:
   city: New York
   name: NoHo
-  created_at: 2010-09-24 06:16:19.145183
+  created_at: 2010-10-18 03:58:16.562076
   country: USA
-  updated_at: 2010-09-24 06:16:19.145183
+  updated_at: 2010-10-18 03:58:16.562076
   borough: Manhattan
-  id: "413"
+  id: "688"
   state: NY
-fort_hamilton: 
+fort_hamilton:
   city: New York
   name: Fort Hamilton
-  created_at: 2010-09-24 06:16:17.051181
+  created_at: 2010-10-18 03:58:15.438562
   country: USA
-  updated_at: 2010-09-24 06:16:17.051181
+  updated_at: 2010-10-18 03:58:15.438562
   borough: Brooklyn
-  id: "353"
+  id: "628"
   state: NY
-auburndale: 
+auburndale:
   city: New York
   name: Auburndale
-  created_at: 2010-09-24 06:16:19.516899
+  created_at: 2010-10-18 03:58:16.760282
   country: USA
-  updated_at: 2010-09-24 06:16:19.516899
+  updated_at: 2010-10-18 03:58:16.760282
   borough: Queens
-  id: "432"
+  id: "707"
   state: NY
-windsor_terrace: 
+windsor_terrace:
   city: New York
   name: Windsor Terrace
-  created_at: 2010-09-24 06:16:17.735939
+  created_at: 2010-10-18 03:58:16.026239
   country: USA
-  updated_at: 2010-09-24 06:16:17.735939
+  updated_at: 2010-10-18 03:58:16.026239
   borough: Brooklyn
-  id: "386"
+  id: "661"
   state: NY
-greenwich_village: 
+greenwich_village:
   city: New York
   name: Greenwich Village
-  created_at: 2010-09-24 06:16:18.798375
+  created_at: 2010-10-18 03:58:16.242032
   country: USA
-  updated_at: 2010-09-24 06:16:18.798375
+  updated_at: 2010-10-18 03:58:16.242032
   borough: Manhattan
-  id: "398"
+  id: "673"
   state: NY
-meatpacking_district: 
+meatpacking_district:
   city: New York
   name: Meatpacking District
-  created_at: 2010-09-24 06:16:19.076644
+  created_at: 2010-10-18 03:58:16.507707
   country: USA
-  updated_at: 2010-09-24 06:16:19.076644
+  updated_at: 2010-10-18 03:58:16.507707
   borough: Manhattan
-  id: "408"
+  id: "683"
   state: NY
-west_farms: 
+west_farms:
   city: New York
   name: West Farms
-  created_at: 2010-09-24 06:16:16.380506
+  created_at: 2010-10-18 03:58:14.923082
   country: USA
-  updated_at: 2010-09-24 06:16:16.380506
+  updated_at: 2010-10-18 03:58:14.923082
   borough: Bronx
-  id: "320"
+  id: "595"
   state: NY
-alphabet_city: 
+alphabet_city:
   city: New York
   name: Alphabet City
-  created_at: 2010-09-24 06:16:17.759267
+  created_at: 2010-10-18 03:58:16.065231
   country: USA
-  updated_at: 2010-09-24 06:16:17.759267
+  updated_at: 2010-10-18 03:58:16.065231
   borough: Manhattan
-  id: "388"
+  id: "663"
   state: NY
-high_bridge: 
+high_bridge:
   city: New York
   name: High Bridge
-  created_at: 2010-09-24 06:16:15.681791
+  created_at: 2010-10-18 03:58:14.476252
   country: USA
-  updated_at: 2010-09-24 06:16:15.681791
+  updated_at: 2010-10-18 03:58:14.476252
   borough: Bronx
-  id: "293"
+  id: "568"
   state: NY
-jamaica_estates: 
+jamaica_estates:
   city: New York
   name: Jamaica Estates
-  created_at: 2010-09-24 06:16:20.171357
+  created_at: 2010-10-18 03:58:17.26195
   country: USA
-  updated_at: 2010-09-24 06:16:20.171357
+  updated_at: 2010-10-18 03:58:17.26195
   borough: Queens
-  id: "463"
+  id: "738"
   state: NY
-financial_district: 
+financial_district:
   city: New York
   name: Financial District
-  created_at: 2010-09-24 06:16:18.399375
+  created_at: 2010-10-18 03:58:16.209985
   country: USA
-  updated_at: 2010-09-24 06:16:18.399375
+  updated_at: 2010-10-18 03:58:16.209985
   borough: Manhattan
-  id: "395"
+  id: "670"
   state: NY
-astoria: 
+astoria:
   city: New York
   name: Astoria
-  created_at: 2010-09-24 06:16:19.492026
+  created_at: 2010-10-18 03:58:16.739163
   country: USA
-  updated_at: 2010-09-24 06:16:19.492026
+  updated_at: 2010-10-18 03:58:16.739163
   borough: Queens
-  id: "430"
+  id: "705"
   state: NY
-tri_be_ca: 
+tri_be_ca:
   city: New York
   name: TriBeCa
-  created_at: 2010-09-24 06:16:19.381532
+  created_at: 2010-10-18 03:58:16.646967
   country: USA
-  updated_at: 2010-09-24 06:16:19.381532
+  updated_at: 2010-10-18 03:58:16.646967
   borough: Manhattan
-  id: "421"
+  id: "696"
   state: NY
-pleasant_plains: 
+pleasant_plains:
   city: New York
   name: Pleasant Plains
-  created_at: 2010-09-24 06:16:21.654877
+  created_at: 2010-10-18 03:58:18.362309
   country: USA
-  updated_at: 2010-09-24 06:16:21.654877
+  updated_at: 2010-10-18 03:58:18.362309
   borough: Staten Island
-  id: "532"
+  id: "807"
   state: NY
-prospect_heights: 
+prospect_heights:
   city: New York
   name: Prospect Heights
-  created_at: 2010-09-24 06:16:17.410345
+  created_at: 2010-10-18 03:58:15.625257
   country: USA
-  updated_at: 2010-09-24 06:16:17.410345
+  updated_at: 2010-10-18 03:58:15.625257
   borough: Brooklyn
-  id: "371"
+  id: "646"
   state: NY
-arden_heights: 
+arden_heights:
   city: New York
   name: Arden Heights
-  created_at: 2010-09-24 06:16:20.915795
+  created_at: 2010-10-18 03:58:17.830771
   country: USA
-  updated_at: 2010-09-24 06:16:20.915795
+  updated_at: 2010-10-18 03:58:17.830771
   borough: Staten Island
-  id: "499"
+  id: "774"
   state: NY
-south_village: 
+south_village:
   city: New York
   name: South Village
-  created_at: 2010-09-24 06:16:19.3453
+  created_at: 2010-10-18 03:58:16.614906
   country: USA
-  updated_at: 2010-09-24 06:16:19.3453
+  updated_at: 2010-10-18 03:58:16.614906
   borough: Manhattan
-  id: "418"
+  id: "693"
   state: NY
-fort_greene: 
+fort_greene:
   city: New York
   name: Fort Greene
-  created_at: 2010-09-24 06:16:17.039649
+  created_at: 2010-10-18 03:58:15.42806
   country: USA
-  updated_at: 2010-09-24 06:16:17.039649
+  updated_at: 2010-10-18 03:58:15.42806
   borough: Brooklyn
-  id: "352"
+  id: "627"
   state: NY
-parkchester: 
+parkchester:
   city: New York
   name: Parkchester
-  created_at: 2010-09-24 06:16:16.062734
+  created_at: 2010-10-18 03:58:14.772179
   country: USA
-  updated_at: 2010-09-24 06:16:16.062734
+  updated_at: 2010-10-18 03:58:14.772179
   borough: Bronx
-  id: "307"
+  id: "582"
   state: NY
-briarwood: 
+briarwood:
   city: New York
   name: Briarwood
-  created_at: 2010-09-24 06:16:19.757346
+  created_at: 2010-10-18 03:58:16.844025
   country: USA
-  updated_at: 2010-09-24 06:16:19.757346
+  updated_at: 2010-10-18 03:58:16.844025
   borough: Queens
-  id: "440"
+  id: "715"
   state: NY
-mott_haven: 
+mott_haven:
   city: New York
   name: Mott Haven
-  created_at: 2010-09-24 06:16:15.919881
+  created_at: 2010-10-18 03:58:14.707372
   country: USA
-  updated_at: 2010-09-24 06:16:15.919881
+  updated_at: 2010-10-18 03:58:14.707372
   borough: Bronx
-  id: "301"
+  id: "576"
   state: NY
-gravesend: 
+gravesend:
   city: New York
   name: Gravesend
-  created_at: 2010-09-24 06:16:17.103041
+  created_at: 2010-10-18 03:58:15.478382
   country: USA
-  updated_at: 2010-09-24 06:16:17.103041
+  updated_at: 2010-10-18 03:58:15.478382
   borough: Brooklyn
-  id: "357"
+  id: "632"
   state: NY
-east_harlem: 
+east_harlem:
   city: New York
   name: East Harlem
-  created_at: 2010-09-24 06:16:18.215735
+  created_at: 2010-10-18 03:58:16.183089
   country: USA
-  updated_at: 2010-09-24 06:16:18.215735
+  updated_at: 2010-10-18 03:58:16.183089
   borough: Manhattan
-  id: "393"
+  id: "668"
   state: NY
-jamaica: 
+jamaica:
   city: New York
   name: Jamaica
-  created_at: 2010-09-24 06:16:20.15942
+  created_at: 2010-10-18 03:58:17.251937
   country: USA
-  updated_at: 2010-09-24 06:16:20.15942
+  updated_at: 2010-10-18 03:58:17.251937
   borough: Queens
-  id: "462"
+  id: "737"
   state: NY
-mariner: 
+mariner:
   city: New York
   name: Mariner
-  created_at: 2010-09-24 06:16:21.544872
+  created_at: 2010-10-18 03:58:18.261264
   country: USA
-  updated_at: 2010-09-24 06:16:21.544872
+  updated_at: 2010-10-18 03:58:18.261264
   borough: Staten Island
-  id: "523"
+  id: "798"
   state: NY
-yorkville: 
+yorkville:
   city: New York
   name: Yorkville
-  created_at: 2010-09-24 06:16:19.467913
+  created_at: 2010-10-18 03:58:16.719287
   country: USA
-  updated_at: 2010-09-24 06:16:19.467913
+  updated_at: 2010-10-18 03:58:16.719287
   borough: Manhattan
-  id: "428"
+  id: "703"
   state: NY
-lighthouse_hill: 
+lighthouse_hill:
   city: New York
   name: Lighthouse Hill
-  created_at: 2010-09-24 06:16:21.533373
+  created_at: 2010-10-18 03:58:18.250562
   country: USA
-  updated_at: 2010-09-24 06:16:21.533373
+  updated_at: 2010-10-18 03:58:18.250562
   borough: Staten Island
-  id: "522"
+  id: "797"
   state: NY
-sunset_park: 
+sunset_park:
   city: New York
   name: Sunset Park
-  created_at: 2010-09-24 06:16:17.533455
+  created_at: 2010-10-18 03:58:15.929354
   country: USA
-  updated_at: 2010-09-24 06:16:17.533455
+  updated_at: 2010-10-18 03:58:15.929354
   borough: Brooklyn
-  id: "381"
+  id: "656"
   state: NY
-georgetown: 
+georgetown:
   city: New York
   name: Georgetown
-  created_at: 2010-09-24 06:16:17.06469
+  created_at: 2010-10-18 03:58:15.448532
   country: USA
-  updated_at: 2010-09-24 06:16:17.06469
+  updated_at: 2010-10-18 03:58:15.448532
   borough: Brooklyn
-  id: "354"
+  id: "629"
   state: NY
-spring_creek: 
+spring_creek:
   city: New York
   name: Spring Creek
-  created_at: 2010-09-24 06:16:17.509862
+  created_at: 2010-10-18 03:58:15.895752
   country: USA
-  updated_at: 2010-09-24 06:16:17.509862
+  updated_at: 2010-10-18 03:58:15.895752
   borough: Brooklyn
-  id: "379"
+  id: "654"
   state: NY
-coney_island: 
+coney_island:
   city: New York
   name: Coney Island
-  created_at: 2010-09-24 06:16:16.75511
+  created_at: 2010-10-18 03:58:15.295136
   country: USA
-  updated_at: 2010-09-24 06:16:16.75511
+  updated_at: 2010-10-18 03:58:15.295136
   borough: Brooklyn
-  id: "340"
+  id: "615"
   state: NY
-richmond_valley: 
+richmond_valley:
   city: New York
   name: Richmond Valley
-  created_at: 2010-09-24 06:16:21.849065
+  created_at: 2010-10-18 03:58:18.41525
   country: USA
-  updated_at: 2010-09-24 06:16:21.849065
+  updated_at: 2010-10-18 03:58:18.41525
   borough: Staten Island
-  id: "537"
+  id: "812"
   state: NY
-sunnyside_1: 
+sunnyside_1:
   city: New York
   name: Sunnyside
-  created_at: 2010-09-24 06:16:21.931379
+  created_at: 2010-10-18 03:58:18.488587
   country: USA
-  updated_at: 2010-09-24 06:16:21.931379
+  updated_at: 2010-10-18 03:58:18.488587
   borough: Staten Island
-  id: "544"
+  id: "819"
   state: NY
-tompkinsville: 
+tompkinsville:
   city: New York
   name: Tompkinsville
-  created_at: 2010-09-24 06:16:21.956055
+  created_at: 2010-10-18 03:58:18.510387
   country: USA
-  updated_at: 2010-09-24 06:16:21.956055
+  updated_at: 2010-10-18 03:58:18.510387
   borough: Staten Island
-  id: "546"
+  id: "821"
   state: NY
-arverne: 
+arverne:
   city: New York
   name: Arverne
-  created_at: 2010-09-24 06:16:19.479392
+  created_at: 2010-10-18 03:58:16.729401
   country: USA
-  updated_at: 2010-09-24 06:16:19.479392
+  updated_at: 2010-10-18 03:58:16.729401
   borough: Queens
-  id: "429"
+  id: "704"
   state: NY
-oakwood: 
+oakwood:
   city: New York
   name: Oakwood
-  created_at: 2010-09-24 06:16:21.619505
+  created_at: 2010-10-18 03:58:18.328965
   country: USA
-  updated_at: 2010-09-24 06:16:21.619505
+  updated_at: 2010-10-18 03:58:18.328965
   borough: Staten Island
-  id: "529"
+  id: "804"
   state: NY
-co_op_city: 
+co_op_city:
   city: New York
   name: Co-op City
-  created_at: 2010-09-24 06:16:15.544195
+  created_at: 2010-10-18 03:58:14.36471
   country: USA
-  updated_at: 2010-09-24 06:16:15.544195
+  updated_at: 2010-10-18 03:58:14.36471
   borough: Bronx
-  id: "283"
+  id: "558"
   state: NY
-soundview: 
+soundview:
   city: New York
   name: Soundview
-  created_at: 2010-09-24 06:16:16.15592
+  created_at: 2010-10-18 03:58:14.835892
   country: USA
-  updated_at: 2010-09-24 06:16:16.15592
+  updated_at: 2010-10-18 03:58:14.835892
   borough: Bronx
-  id: "313"
+  id: "588"
   state: NY
-city_island: 
+city_island:
   city: New York
   name: City Island
-  created_at: 2010-09-24 06:16:15.388587
+  created_at: 2010-10-18 03:58:14.328346
   country: USA
-  updated_at: 2010-09-24 06:16:15.388587
+  updated_at: 2010-10-18 03:58:14.328346
   borough: Bronx
-  id: "280"
+  id: "555"
   state: NY
-howland_hook: 
+howland_hook:
   city: New York
   name: Howland Hook
-  created_at: 2010-09-24 06:16:21.509076
+  created_at: 2010-10-18 03:58:18.227495
   country: USA
-  updated_at: 2010-09-24 06:16:21.509076
+  updated_at: 2010-10-18 03:58:18.227495
   borough: Staten Island
-  id: "520"
+  id: "795"
   state: NY
-south_williamsburg: 
+south_williamsburg:
   city: New York
   name: South Williamsburg
-  created_at: 2010-09-24 06:16:17.496906
+  created_at: 2010-10-18 03:58:15.873983
   country: USA
-  updated_at: 2010-09-24 06:16:17.496906
+  updated_at: 2010-10-18 03:58:15.873983
   borough: Brooklyn
-  id: "378"
+  id: "653"
   state: NY
-murray_hill_1: 
+murray_hill_1:
   city: New York
   name: Murray Hill
-  created_at: 2010-09-24 06:16:20.463917
+  created_at: 2010-10-18 03:58:17.409952
   country: USA
-  updated_at: 2010-09-24 06:16:20.463917
+  updated_at: 2010-10-18 03:58:17.409952
   borough: Queens
-  id: "476"
+  id: "751"
   state: NY
-dyker_heights: 
+dyker_heights:
   city: New York
   name: Dyker Heights
-  created_at: 2010-09-24 06:16:16.825247
+  created_at: 2010-10-18 03:58:15.361333
   country: USA
-  updated_at: 2010-09-24 06:16:16.825247
+  updated_at: 2010-10-18 03:58:15.361333
   borough: Brooklyn
-  id: "346"
+  id: "621"
   state: NY
-grasmere: 
+grasmere:
   city: New York
   name: Grasmere
-  created_at: 2010-09-24 06:16:21.311553
+  created_at: 2010-10-18 03:58:18.182993
   country: USA
-  updated_at: 2010-09-24 06:16:21.311553
+  updated_at: 2010-10-18 03:58:18.182993
   borough: Staten Island
-  id: "516"
+  id: "791"
   state: NY
-cobble_hill: 
+cobble_hill:
   city: New York
   name: Cobble Hill
-  created_at: 2010-09-24 06:16:16.730003
+  created_at: 2010-10-18 03:58:15.273215
   country: USA
-  updated_at: 2010-09-24 06:16:16.730003
+  updated_at: 2010-10-18 03:58:15.273215
   borough: Brooklyn
-  id: "338"
+  id: "613"
   state: NY
-beechurst: 
+beechurst:
   city: New York
   name: Beechurst
-  created_at: 2010-09-24 06:16:19.694801
+  created_at: 2010-10-18 03:58:16.791247
   country: USA
-  updated_at: 2010-09-24 06:16:19.694801
+  updated_at: 2010-10-18 03:58:16.791247
   borough: Queens
-  id: "435"
+  id: "710"
   state: NY
-ocean_parkway: 
+ocean_parkway:
   city: New York
   name: Ocean Parkway
-  created_at: 2010-09-24 06:16:17.372979
+  created_at: 2010-10-18 03:58:15.592771
   country: USA
-  updated_at: 2010-09-24 06:16:17.372979
+  updated_at: 2010-10-18 03:58:15.592771
   borough: Brooklyn
-  id: "368"
+  id: "643"
   state: NY
-cambria_heights: 
+cambria_heights:
   city: New York
   name: Cambria Heights
-  created_at: 2010-09-24 06:16:19.769933
+  created_at: 2010-10-18 03:58:16.855103
   country: USA
-  updated_at: 2010-09-24 06:16:19.769933
+  updated_at: 2010-10-18 03:58:16.855103
   borough: Queens
-  id: "441"
+  id: "716"
   state: NY
-stapleton: 
+stapleton:
   city: New York
   name: Stapleton
-  created_at: 2010-09-24 06:16:21.920172
+  created_at: 2010-10-18 03:58:18.478263
   country: USA
-  updated_at: 2010-09-24 06:16:21.920172
+  updated_at: 2010-10-18 03:58:18.478263
   borough: Staten Island
-  id: "543"
+  id: "818"
   state: NY
-highland_park: 
+highland_park:
   city: New York
   name: Highland Park
-  created_at: 2010-09-24 06:16:17.127865
+  created_at: 2010-10-18 03:58:15.498586
   country: USA
-  updated_at: 2010-09-24 06:16:17.127865
+  updated_at: 2010-10-18 03:58:15.498586
   borough: Brooklyn
-  id: "359"
+  id: "634"
   state: NY
-glendale: 
+glendale:
   city: New York
   name: Glendale
-  created_at: 2010-09-24 06:16:20.078113
+  created_at: 2010-10-18 03:58:17.178276
   country: USA
-  updated_at: 2010-09-24 06:16:20.078113
+  updated_at: 2010-10-18 03:58:17.178276
   borough: Queens
-  id: "455"
+  id: "730"
   state: NY
-manhattan_valley: 
+manhattan_valley:
   city: New York
   name: Manhattan Valley
-  created_at: 2010-09-24 06:16:19.052903
+  created_at: 2010-10-18 03:58:16.329709
   country: USA
-  updated_at: 2010-09-24 06:16:19.052903
+  updated_at: 2010-10-18 03:58:16.329709
   borough: Manhattan
-  id: "406"
+  id: "681"
   state: NY
-tottenville: 
+tottenville:
   city: New York
   name: Tottenville
-  created_at: 2010-09-24 06:16:21.96758
+  created_at: 2010-10-18 03:58:18.521763
   country: USA
-  updated_at: 2010-09-24 06:16:21.96758
+  updated_at: 2010-10-18 03:58:18.521763
   borough: Staten Island
-  id: "547"
+  id: "822"
   state: NY
-flatiron: 
+flatiron:
   city: New York
   name: Flatiron
-  created_at: 2010-09-24 06:16:18.73562
+  created_at: 2010-10-18 03:58:16.220822
   country: USA
-  updated_at: 2010-09-24 06:16:18.73562
+  updated_at: 2010-10-18 03:58:16.220822
   borough: Manhattan
-  id: "396"
+  id: "671"
   state: NY
-murray_hill: 
+murray_hill:
   city: New York
   name: Murray Hill
-  created_at: 2010-09-24 06:16:19.133585
+  created_at: 2010-10-18 03:58:16.551278
   country: USA
-  updated_at: 2010-09-24 06:16:19.133585
+  updated_at: 2010-10-18 03:58:16.551278
   borough: Manhattan
-  id: "412"
+  id: "687"
   state: NY
-starret_city: 
+starret_city:
   city: New York
   name: Starret City
-  created_at: 2010-09-24 06:16:17.521951
+  created_at: 2010-10-18 03:58:15.911892
   country: USA
-  updated_at: 2010-09-24 06:16:17.521951
+  updated_at: 2010-10-18 03:58:15.911892
   borough: Brooklyn
-  id: "380"
+  id: "655"
   state: NY
-le_frak_city: 
+le_frak_city:
   city: New York
   name: LeFrak City
-  created_at: 2010-09-24 06:16:20.381408
+  created_at: 2010-10-18 03:58:17.334605
   country: USA
-  updated_at: 2010-09-24 06:16:20.381408
+  updated_at: 2010-10-18 03:58:17.334605
   borough: Queens
-  id: "469"
+  id: "744"
   state: NY
-red_hook: 
+red_hook:
   city: New York
   name: Red Hook
-  created_at: 2010-09-24 06:16:17.445968
+  created_at: 2010-10-18 03:58:15.825457
   country: USA
-  updated_at: 2010-09-24 06:16:17.445968
+  updated_at: 2010-10-18 03:58:15.825457
   borough: Brooklyn
-  id: "374"
+  id: "649"
   state: NY
-rockaway_park: 
+rockaway_park:
   city: New York
   name: Rockaway Park
-  created_at: 2010-09-24 06:16:20.753361
+  created_at: 2010-10-18 03:58:17.704135
   country: USA
-  updated_at: 2010-09-24 06:16:20.753361
+  updated_at: 2010-10-18 03:58:17.704135
   borough: Queens
-  id: "487"
+  id: "762"
   state: NY
-howard_beach: 
+howard_beach:
   city: New York
   name: Howard Beach
-  created_at: 2010-09-24 06:16:20.124486
+  created_at: 2010-10-18 03:58:17.220272
   country: USA
-  updated_at: 2010-09-24 06:16:20.124486
+  updated_at: 2010-10-18 03:58:17.220272
   borough: Queens
-  id: "459"
+  id: "734"
   state: NY
-williamsburg___south_side: 
+williamsburg___south_side:
   city: New York
   name: Williamsburg - South Side
-  created_at: 2010-09-24 06:16:17.722642
+  created_at: 2010-10-18 03:58:16.003855
   country: USA
-  updated_at: 2010-09-24 06:16:17.722642
+  updated_at: 2010-10-18 03:58:16.003855
   borough: Brooklyn
-  id: "385"
+  id: "660"
   state: NY
-country_club: 
+country_club:
   city: New York
   name: Country Club
-  created_at: 2010-09-24 06:16:15.586809
+  created_at: 2010-10-18 03:58:14.398255
   country: USA
-  updated_at: 2010-09-24 06:16:15.586809
+  updated_at: 2010-10-18 03:58:14.398255
   borough: Bronx
-  id: "286"
+  id: "561"
   state: NY
-princes_bay: 
+princes_bay:
   city: New York
   name: Princes Bay
-  created_at: 2010-09-24 06:16:21.812744
+  created_at: 2010-10-18 03:58:18.384306
   country: USA
-  updated_at: 2010-09-24 06:16:21.812744
+  updated_at: 2010-10-18 03:58:18.384306
   borough: Staten Island
-  id: "534"
+  id: "809"
   state: NY
-harlem: 
+harlem:
   city: New York
   name: Harlem
-  created_at: 2010-09-24 06:16:18.947882
+  created_at: 2010-10-18 03:58:16.251828
   country: USA
-  updated_at: 2010-09-24 06:16:18.947882
+  updated_at: 2010-10-18 03:58:16.251828
   borough: Manhattan
-  id: "399"
+  id: "674"
   state: NY
-fieldston: 
+fieldston:
   city: New York
   name: Fieldston
-  created_at: 2010-09-24 06:16:15.656112
+  created_at: 2010-10-18 03:58:14.455058
   country: USA
-  updated_at: 2010-09-24 06:16:15.656112
+  updated_at: 2010-10-18 03:58:14.455058
   borough: Bronx
-  id: "291"
+  id: "566"
   state: NY
-maspeth: 
+maspeth:
   city: New York
   name: Maspeth
-  created_at: 2010-09-24 06:16:20.440494
+  created_at: 2010-10-18 03:58:17.388028
   country: USA
-  updated_at: 2010-09-24 06:16:20.440494
+  updated_at: 2010-10-18 03:58:17.388028
   borough: Queens
-  id: "474"
+  id: "749"
   state: NY
-rossville: 
+rossville:
   city: New York
   name: Rossville
-  created_at: 2010-09-24 06:16:21.872507
+  created_at: 2010-10-18 03:58:18.436827
   country: USA
-  updated_at: 2010-09-24 06:16:21.872507
+  updated_at: 2010-10-18 03:58:18.436827
   borough: Staten Island
-  id: "539"
+  id: "814"
   state: NY
-marble_hill: 
+marble_hill:
   city: New York
   name: Marble Hill
-  created_at: 2010-09-24 06:16:19.064931
+  created_at: 2010-10-18 03:58:16.340571
   country: USA
-  updated_at: 2010-09-24 06:16:19.064931
+  updated_at: 2010-10-18 03:58:16.340571
   borough: Manhattan
-  id: "407"
+  id: "682"
   state: NY
-hollis: 
+hollis:
   city: New York
   name: Hollis
-  created_at: 2010-09-24 06:16:20.100904
+  created_at: 2010-10-18 03:58:17.198837
   country: USA
-  updated_at: 2010-09-24 06:16:20.100904
+  updated_at: 2010-10-18 03:58:17.198837
   borough: Queens
-  id: "457"
+  id: "732"
   state: NY
-bath_beach: 
+bath_beach:
   city: New York
   name: Bath Beach
-  created_at: 2010-09-24 06:16:16.426231
+  created_at: 2010-10-18 03:58:14.964876
   country: USA
-  updated_at: 2010-09-24 06:16:16.426231
+  updated_at: 2010-10-18 03:58:14.964876
   borough: Brooklyn
-  id: "324"
+  id: "599"
   state: NY
-bellerose: 
+bellerose:
   city: New York
   name: Bellerose
-  created_at: 2010-09-24 06:16:19.732194
+  created_at: 2010-10-18 03:58:16.821763
   country: USA
-  updated_at: 2010-09-24 06:16:19.732194
+  updated_at: 2010-10-18 03:58:16.821763
   borough: Queens
-  id: "438"
+  id: "713"
   state: NY
-castleton_corners: 
+castleton_corners:
   city: New York
   name: Castleton Corners
-  created_at: 2010-09-24 06:16:21.176739
+  created_at: 2010-10-18 03:58:17.904512
   country: USA
-  updated_at: 2010-09-24 06:16:21.176739
+  updated_at: 2010-10-18 03:58:17.904512
   borough: Staten Island
-  id: "505"
+  id: "780"
   state: NY
-carroll_gardens: 
+carroll_gardens:
   city: New York
   name: Carroll Gardens
-  created_at: 2010-09-24 06:16:16.695278
+  created_at: 2010-10-18 03:58:15.086321
   country: USA
-  updated_at: 2010-09-24 06:16:16.695278
+  updated_at: 2010-10-18 03:58:15.086321
   borough: Brooklyn
-  id: "335"
+  id: "610"
   state: NY
-westerleigh: 
+westerleigh:
   city: New York
   name: Westerleigh
-  created_at: 2010-09-24 06:16:21.992415
+  created_at: 2010-10-18 03:58:18.543832
   country: USA
-  updated_at: 2010-09-24 06:16:21.992415
+  updated_at: 2010-10-18 03:58:18.543832
   borough: Staten Island
-  id: "549"
+  id: "824"
   state: NY
-upper_east_side: 
+upper_east_side:
   city: New York
   name: Upper East Side
-  created_at: 2010-09-24 06:16:19.42039
+  created_at: 2010-10-18 03:58:16.678469
   country: USA
-  updated_at: 2010-09-24 06:16:19.42039
+  updated_at: 2010-10-18 03:58:16.678469
   borough: Manhattan
-  id: "424"
+  id: "699"
   state: NY
-new_lots: 
+new_lots:
   city: New York
   name: New Lots
-  created_at: 2010-09-24 06:16:17.348048
+  created_at: 2010-10-18 03:58:15.571373
   country: USA
-  updated_at: 2010-09-24 06:16:17.348048
+  updated_at: 2010-10-18 03:58:15.571373
   borough: Brooklyn
-  id: "366"
+  id: "641"
   state: NY
-morrisania: 
+morrisania:
   city: New York
   name: Morrisania
-  created_at: 2010-09-24 06:16:15.907653
+  created_at: 2010-10-18 03:58:14.69604
   country: USA
-  updated_at: 2010-09-24 06:16:15.907653
+  updated_at: 2010-10-18 03:58:14.69604
   borough: Bronx
-  id: "300"
+  id: "575"
   state: NY
-malba: 
+malba:
   city: New York
   name: Malba
-  created_at: 2010-09-24 06:16:20.428983
+  created_at: 2010-10-18 03:58:17.377298
   country: USA
-  updated_at: 2010-09-24 06:16:20.428983
+  updated_at: 2010-10-18 03:58:17.377298
   borough: Queens
-  id: "473"
+  id: "748"
   state: NY
-breezy_point: 
+breezy_point:
   city: New York
   name: Breezy Point
-  created_at: 2010-09-24 06:16:19.745065
+  created_at: 2010-10-18 03:58:16.832996
   country: USA
-  updated_at: 2010-09-24 06:16:19.745065
+  updated_at: 2010-10-18 03:58:16.832996
   borough: Queens
-  id: "439"
+  id: "714"
   state: NY
-long_island_city: 
+long_island_city:
   city: New York
   name: Long Island City
-  created_at: 2010-09-24 06:16:20.417507
+  created_at: 2010-10-18 03:58:17.366858
   country: USA
-  updated_at: 2010-09-24 06:16:20.417507
+  updated_at: 2010-10-18 03:58:17.366858
   borough: Queens
-  id: "472"
+  id: "747"
   state: NY
-brooklyn_heights: 
+brooklyn_heights:
   city: New York
   name: Brooklyn Heights
-  created_at: 2010-09-24 06:16:16.64654
+  created_at: 2010-10-18 03:58:15.041026
   country: USA
-  updated_at: 2010-09-24 06:16:16.64654
+  updated_at: 2010-10-18 03:58:15.041026
   borough: Brooklyn
-  id: "331"
+  id: "606"
   state: NY
-gramercy: 
+gramercy:
   city: New York
   name: Gramercy
-  created_at: 2010-09-24 06:16:18.786111
+  created_at: 2010-10-18 03:58:16.231942
   country: USA
-  updated_at: 2010-09-24 06:16:18.786111
+  updated_at: 2010-10-18 03:58:16.231942
   borough: Manhattan
-  id: "397"
+  id: "672"
   state: NY
-bayside: 
+bayside:
   city: New York
   name: Bayside
-  created_at: 2010-09-24 06:16:19.680638
+  created_at: 2010-10-18 03:58:16.781311
   country: USA
-  updated_at: 2010-09-24 06:16:19.680638
+  updated_at: 2010-10-18 03:58:16.781311
   borough: Queens
-  id: "434"
+  id: "709"
   state: NY
-midwood: 
+midwood:
   city: New York
   name: Midwood
-  created_at: 2010-09-24 06:16:17.176195
+  created_at: 2010-10-18 03:58:15.541042
   country: USA
-  updated_at: 2010-09-24 06:16:17.176195
+  updated_at: 2010-10-18 03:58:15.541042
   borough: Brooklyn
-  id: "363"
+  id: "638"
   state: NY
-new_springville: 
+new_springville:
   city: New York
   name: New Springville
-  created_at: 2010-09-24 06:16:21.607186
+  created_at: 2010-10-18 03:58:18.318891
   country: USA
-  updated_at: 2010-09-24 06:16:21.607186
+  updated_at: 2010-10-18 03:58:18.318891
   borough: Staten Island
-  id: "528"
+  id: "803"
   state: NY
-belle_harbor: 
+belle_harbor:
   city: New York
   name: Belle Harbor
-  created_at: 2010-09-24 06:16:19.719922
+  created_at: 2010-10-18 03:58:16.811304
   country: USA
-  updated_at: 2010-09-24 06:16:19.719922
+  updated_at: 2010-10-18 03:58:16.811304
   borough: Queens
-  id: "437"
+  id: "712"
   state: NY
-vinegar_hill: 
+vinegar_hill:
   city: New York
   name: Vinegar Hill
-  created_at: 2010-09-24 06:16:17.683814
+  created_at: 2010-10-18 03:58:15.945493
   country: USA
-  updated_at: 2010-09-24 06:16:17.683814
+  updated_at: 2010-10-18 03:58:15.945493
   borough: Brooklyn
-  id: "382"
+  id: "657"
   state: NY
-flushing: 
+flushing:
   city: New York
   name: Flushing
-  created_at: 2010-09-24 06:16:20.018177
+  created_at: 2010-10-18 03:58:17.123348
   country: USA
-  updated_at: 2010-09-24 06:16:20.018177
+  updated_at: 2010-10-18 03:58:17.123348
   borough: Queens
-  id: "450"
+  id: "725"
   state: NY
-randall_manor: 
+randall_manor:
   city: New York
   name: Randall Manor
-  created_at: 2010-09-24 06:16:21.824639
+  created_at: 2010-10-18 03:58:18.394457
   country: USA
-  updated_at: 2010-09-24 06:16:21.824639
+  updated_at: 2010-10-18 03:58:18.394457
   borough: Staten Island
-  id: "535"
+  id: "810"
   state: NY
-ocean_hill: 
+ocean_hill:
   city: New York
   name: Ocean Hill
-  created_at: 2010-09-24 06:16:17.360715
+  created_at: 2010-10-18 03:58:15.58173
   country: USA
-  updated_at: 2010-09-24 06:16:17.360715
+  updated_at: 2010-10-18 03:58:15.58173
   borough: Brooklyn
-  id: "367"
+  id: "642"
   state: NY
-shore_acres: 
+shore_acres:
   city: New York
   name: Shore Acres
-  created_at: 2010-09-24 06:16:21.883819
+  created_at: 2010-10-18 03:58:18.447491
   country: USA
-  updated_at: 2010-09-24 06:16:21.883819
+  updated_at: 2010-10-18 03:58:18.447491
   borough: Staten Island
-  id: "540"
+  id: "815"
   state: NY
-columbia_street_waterfront_district: 
+columbia_street_waterfront_district:
   city: New York
   name: Columbia Street Waterfront District
-  created_at: 2010-09-24 06:16:16.742052
+  created_at: 2010-10-18 03:58:15.284288
   country: USA
-  updated_at: 2010-09-24 06:16:16.742052
+  updated_at: 2010-10-18 03:58:15.284288
   borough: Brooklyn
-  id: "339"
+  id: "614"
   state: NY
-rochdale: 
+rochdale:
   city: New York
   name: Rochdale
-  created_at: 2010-09-24 06:16:20.741684
+  created_at: 2010-10-18 03:58:17.689574
   country: USA
-  updated_at: 2010-09-24 06:16:20.741684
+  updated_at: 2010-10-18 03:58:17.689574
   borough: Queens
-  id: "486"
+  id: "761"
   state: NY
-remsen_village: 
+remsen_village:
   city: New York
   name: Remsen Village
-  created_at: 2010-09-24 06:16:17.458021
+  created_at: 2010-10-18 03:58:15.836282
   country: USA
-  updated_at: 2010-09-24 06:16:17.458021
+  updated_at: 2010-10-18 03:58:15.836282
   borough: Brooklyn
-  id: "375"
+  id: "650"
   state: NY
-pelham_gardens: 
+pelham_gardens:
   city: New York
   name: Pelham Gardens
-  created_at: 2010-09-24 06:16:16.085834
+  created_at: 2010-10-18 03:58:14.793574
   country: USA
-  updated_at: 2010-09-24 06:16:16.085834
+  updated_at: 2010-10-18 03:58:14.793574
   borough: Bronx
-  id: "309"
+  id: "584"
   state: NY
-bellaire: 
+bellaire:
   city: New York
   name: Bellaire
-  created_at: 2010-09-24 06:16:19.708108
+  created_at: 2010-10-18 03:58:16.801472
   country: USA
-  updated_at: 2010-09-24 06:16:19.708108
+  updated_at: 2010-10-18 03:58:16.801472
   borough: Queens
-  id: "436"
+  id: "711"
   state: NY
-mill_island: 
+mill_island:
   city: New York
   name: Mill Island
-  created_at: 2010-09-24 06:16:17.335226
+  created_at: 2010-10-18 03:58:15.561169
   country: USA
-  updated_at: 2010-09-24 06:16:17.335226
+  updated_at: 2010-10-18 03:58:15.561169
   borough: Brooklyn
-  id: "365"
+  id: "640"
   state: NY
-washington_heights: 
+washington_heights:
   city: New York
   name: Washington Heights
-  created_at: 2010-09-24 06:16:19.443683
+  created_at: 2010-10-18 03:58:16.699026
   country: USA
-  updated_at: 2010-09-24 06:16:19.443683
+  updated_at: 2010-10-18 03:58:16.699026
   borough: Manhattan
-  id: "426"
+  id: "701"
   state: NY
-mount_eden: 
+mount_eden:
   city: New York
   name: Mount Eden
-  created_at: 2010-09-24 06:16:15.93192
+  created_at: 2010-10-18 03:58:14.718514
   country: USA
-  updated_at: 2010-09-24 06:16:15.93192
+  updated_at: 2010-10-18 03:58:14.718514
   borough: Bronx
-  id: "302"
+  id: "577"
   state: NY
-jamaica_hills: 
+jamaica_hills:
   city: New York
   name: Jamaica Hills
-  created_at: 2010-09-24 06:16:20.183003
+  created_at: 2010-10-18 03:58:17.275208
   country: USA
-  updated_at: 2010-09-24 06:16:20.183003
+  updated_at: 2010-10-18 03:58:17.275208
   borough: Queens
-  id: "464"
+  id: "739"
   state: NY
-south_street_seaport: 
+south_street_seaport:
   city: New York
   name: South Street Seaport
-  created_at: 2010-09-24 06:16:19.3332
+  created_at: 2010-10-18 03:58:16.604014
   country: USA
-  updated_at: 2010-09-24 06:16:19.3332
+  updated_at: 2010-10-18 03:58:16.604014
   borough: Manhattan
-  id: "417"
+  id: "692"
   state: NY
-brownsville: 
+brownsville:
   city: New York
   name: Brownsville
-  created_at: 2010-09-24 06:16:16.659757
+  created_at: 2010-10-18 03:58:15.05245
   country: USA
-  updated_at: 2010-09-24 06:16:16.659757
+  updated_at: 2010-10-18 03:58:15.05245
   borough: Brooklyn
-  id: "332"
+  id: "607"
   state: NY
-middle_village: 
+middle_village:
   city: New York
   name: Middle Village
-  created_at: 2010-09-24 06:16:20.451904
+  created_at: 2010-10-18 03:58:17.398545
   country: USA
-  updated_at: 2010-09-24 06:16:20.451904
+  updated_at: 2010-10-18 03:58:17.398545
   borough: Queens
-  id: "475"
+  id: "750"
   state: NY
-glen_oaks: 
+glen_oaks:
   city: New York
   name: Glen Oaks
-  created_at: 2010-09-24 06:16:20.066383
+  created_at: 2010-10-18 03:58:17.167978
   country: USA
-  updated_at: 2010-09-24 06:16:20.066383
+  updated_at: 2010-10-18 03:58:17.167978
   borough: Queens
-  id: "454"
+  id: "729"
   state: NY
-midtown_west: 
+midtown_west:
   city: New York
   name: Midtown West
-  created_at: 2010-09-24 06:16:19.100425
+  created_at: 2010-10-18 03:58:16.530005
   country: USA
-  updated_at: 2010-09-24 06:16:19.100425
+  updated_at: 2010-10-18 03:58:16.530005
   borough: Manhattan
-  id: "410"
+  id: "685"
   state: NY
-spuyten_duyvil: 
+spuyten_duyvil:
   city: New York
   name: Spuyten Duyvil
-  created_at: 2010-09-24 06:16:16.168364
+  created_at: 2010-10-18 03:58:14.845816
   country: USA
-  updated_at: 2010-09-24 06:16:16.168364
+  updated_at: 2010-10-18 03:58:14.845816
   borough: Bronx
-  id: "314"
+  id: "589"
   state: NY
-little_italy: 
+little_italy:
   city: New York
   name: Little Italy
-  created_at: 2010-09-24 06:16:19.028628
+  created_at: 2010-10-18 03:58:16.30779
   country: USA
-  updated_at: 2010-09-24 06:16:19.028628
+  updated_at: 2010-10-18 03:58:16.30779
   borough: Manhattan
-  id: "404"
+  id: "679"
   state: NY
-bedford_park: 
+bedford_park:
   city: New York
   name: Bedford Park
-  created_at: 2010-09-24 06:16:15.349925
+  created_at: 2010-10-18 03:58:14.292145
   country: USA
-  updated_at: 2010-09-24 06:16:15.349925
+  updated_at: 2010-10-18 03:58:14.292145
   borough: Bronx
-  id: "277"
+  id: "552"
   state: NY
-clifton: 
+clifton:
   city: New York
   name: Clifton
-  created_at: 2010-09-24 06:16:21.215595
+  created_at: 2010-10-18 03:58:17.938102
   country: USA
-  updated_at: 2010-09-24 06:16:21.215595
+  updated_at: 2010-10-18 03:58:17.938102
   borough: Staten Island
-  id: "508"
+  id: "783"
   state: NY
-bullshead: 
+bullshead:
   city: New York
   name: Bullshead
-  created_at: 2010-09-24 06:16:21.165068
+  created_at: 2010-10-18 03:58:17.894251
   country: USA
-  updated_at: 2010-09-24 06:16:21.165068
+  updated_at: 2010-10-18 03:58:17.894251
   borough: Staten Island
-  id: "504"
+  id: "779"
   state: NY
-annadale: 
+annadale:
   city: New York
   name: Annadale
-  created_at: 2010-09-24 06:16:20.902913
+  created_at: 2010-10-18 03:58:17.820135
   country: USA
-  updated_at: 2010-09-24 06:16:20.902913
+  updated_at: 2010-10-18 03:58:17.820135
   borough: Staten Island
-  id: "498"
+  id: "773"
   state: NY
-pomonok: 
+pomonok:
   city: New York
   name: Pomonok
-  created_at: 2010-09-24 06:16:20.512537
+  created_at: 2010-10-18 03:58:17.611247
   country: USA
-  updated_at: 2010-09-24 06:16:20.512537
+  updated_at: 2010-10-18 03:58:17.611247
   borough: Queens
-  id: "480"
+  id: "755"
   state: NY
-nolita: 
+nolita:
   city: New York
   name: Nolita
-  created_at: 2010-09-24 06:16:19.157455
+  created_at: 2010-10-18 03:58:16.572214
   country: USA
-  updated_at: 2010-09-24 06:16:19.157455
+  updated_at: 2010-10-18 03:58:16.572214
   borough: Manhattan
-  id: "414"
+  id: "689"
   state: NY
-east_new_york: 
+east_new_york:
   city: New York
   name: East New York
-  created_at: 2010-09-24 06:16:16.989314
+  created_at: 2010-10-18 03:58:15.383303
   country: USA
-  updated_at: 2010-09-24 06:16:16.989314
+  updated_at: 2010-10-18 03:58:15.383303
   borough: Brooklyn
-  id: "348"
+  id: "623"
   state: NY
-arlington: 
+arlington:
   city: New York
   name: Arlington
-  created_at: 2010-09-24 06:16:21.113712
+  created_at: 2010-10-18 03:58:17.841859
   country: USA
-  updated_at: 2010-09-24 06:16:21.113712
+  updated_at: 2010-10-18 03:58:17.841859
   borough: Staten Island
-  id: "500"
+  id: "775"
   state: NY
-graniteville: 
+graniteville:
   city: New York
   name: Graniteville
-  created_at: 2010-09-24 06:16:21.287864
+  created_at: 2010-10-18 03:58:18.00342
   country: USA
-  updated_at: 2010-09-24 06:16:21.287864
+  updated_at: 2010-10-18 03:58:18.00342
   borough: Staten Island
-  id: "514"
+  id: "789"
   state: NY
-schuylerville: 
+schuylerville:
   city: New York
   name: Schuylerville
-  created_at: 2010-09-24 06:16:16.144504
+  created_at: 2010-10-18 03:58:14.825409
   country: USA
-  updated_at: 2010-09-24 06:16:16.144504
+  updated_at: 2010-10-18 03:58:14.825409
   borough: Bronx
-  id: "312"
+  id: "587"
   state: NY
-chelsea_1: 
+chelsea_1:
   city: New York
   name: Chelsea
-  created_at: 2010-09-24 06:16:21.203016
+  created_at: 2010-10-18 03:58:17.926692
   country: USA
-  updated_at: 2010-09-24 06:16:21.203016
+  updated_at: 2010-10-18 03:58:17.926692
   borough: Staten Island
-  id: "507"
+  id: "782"
   state: NY
-throgs_neck: 
+throgs_neck:
   city: New York
   name: Throgs Neck
-  created_at: 2010-09-24 06:16:16.314586
+  created_at: 2010-10-18 03:58:14.858758
   country: USA
-  updated_at: 2010-09-24 06:16:16.314586
+  updated_at: 2010-10-18 03:58:14.858758
   borough: Bronx
-  id: "315"
+  id: "590"
   state: NY
-morris_heights: 
+morris_heights:
   city: New York
   name: Morris Heights
-  created_at: 2010-09-24 06:16:15.883973
+  created_at: 2010-10-18 03:58:14.535345
   country: USA
-  updated_at: 2010-09-24 06:16:15.883973
+  updated_at: 2010-10-18 03:58:14.535345
   borough: Bronx
-  id: "298"
+  id: "573"
   state: NY
-north_riverdale: 
+north_riverdale:
   city: New York
   name: North Riverdale
-  created_at: 2010-09-24 06:16:15.955172
+  created_at: 2010-10-18 03:58:14.740252
   country: USA
-  updated_at: 2010-09-24 06:16:15.955172
+  updated_at: 2010-10-18 03:58:14.740252
   borough: Bronx
-  id: "304"
+  id: "579"
   state: NY
-cypress_hills: 
+cypress_hills:
   city: New York
   name: Cypress Hills
-  created_at: 2010-09-24 06:16:16.778116
+  created_at: 2010-10-18 03:58:15.318033
   country: USA
-  updated_at: 2010-09-24 06:16:16.778116
+  updated_at: 2010-10-18 03:58:15.318033
   borough: Brooklyn
-  id: "342"
+  id: "617"
   state: NY
-old_town: 
+old_town:
   city: New York
   name: Old Town
-  created_at: 2010-09-24 06:16:21.630955
+  created_at: 2010-10-18 03:58:18.340305
   country: USA
-  updated_at: 2010-09-24 06:16:21.630955
+  updated_at: 2010-10-18 03:58:18.340305
   borough: Staten Island
-  id: "530"
+  id: "805"
   state: NY
-park_slope: 
+park_slope:
   city: New York
   name: Park Slope
-  created_at: 2010-09-24 06:16:17.398428
+  created_at: 2010-10-18 03:58:15.614146
   country: USA
-  updated_at: 2010-09-24 06:16:17.398428
+  updated_at: 2010-10-18 03:58:15.614146
   borough: Brooklyn
-  id: "370"
+  id: "645"
   state: NY
-prospect_lefferts_gardens: 
+prospect_lefferts_gardens:
   city: New York
   name: Prospect Lefferts Gardens
-  created_at: 2010-09-24 06:16:17.422435
+  created_at: 2010-10-18 03:58:15.802467
   country: USA
-  updated_at: 2010-09-24 06:16:17.422435
+  updated_at: 2010-10-18 03:58:15.802467
   borough: Brooklyn
-  id: "372"
+  id: "647"
   state: NY
-woodside: 
+woodside:
   city: New York
   name: Woodside
-  created_at: 2010-09-24 06:16:20.889459
+  created_at: 2010-10-18 03:58:17.810553
   country: USA
-  updated_at: 2010-09-24 06:16:20.889459
+  updated_at: 2010-10-18 03:58:17.810553
   borough: Queens
-  id: "497"
+  id: "772"
   state: NY
-new_brighton: 
+new_brighton:
   city: New York
   name: New Brighton
-  created_at: 2010-09-24 06:16:21.568714
+  created_at: 2010-10-18 03:58:18.283544
   country: USA
-  updated_at: 2010-09-24 06:16:21.568714
+  updated_at: 2010-10-18 03:58:18.283544
   borough: Staten Island
-  id: "525"
+  id: "800"
   state: NY
-mount_hope: 
+mount_hope:
   city: New York
   name: Mount Hope
-  created_at: 2010-09-24 06:16:15.943729
+  created_at: 2010-10-18 03:58:14.728846
   country: USA
-  updated_at: 2010-09-24 06:16:15.943729
+  updated_at: 2010-10-18 03:58:14.728846
   borough: Bronx
-  id: "303"
+  id: "578"
   state: NY
-college_point: 
+college_point:
   city: New York
   name: College Point
-  created_at: 2010-09-24 06:16:19.782422
+  created_at: 2010-10-18 03:58:16.870329
   country: USA
-  updated_at: 2010-09-24 06:16:19.782422
+  updated_at: 2010-10-18 03:58:16.870329
   borough: Queens
-  id: "442"
+  id: "717"
   state: NY
-clason_point: 
+clason_point:
   city: New York
   name: Clason Point
-  created_at: 2010-09-24 06:16:15.532198
+  created_at: 2010-10-18 03:58:14.350899
   country: USA
-  updated_at: 2010-09-24 06:16:15.532198
+  updated_at: 2010-10-18 03:58:14.350899
   borough: Bronx
-  id: "282"
+  id: "557"
   state: NY
-little_neck: 
+little_neck:
   city: New York
   name: Little Neck
-  created_at: 2010-09-24 06:16:20.406018
+  created_at: 2010-10-18 03:58:17.355018
   country: USA
-  updated_at: 2010-09-24 06:16:20.406018
+  updated_at: 2010-10-18 03:58:17.355018
   borough: Queens
-  id: "471"
+  id: "746"
   state: NY
-west_village: 
+west_village:
   city: New York
   name: West Village
-  created_at: 2010-09-24 06:16:19.455445
+  created_at: 2010-10-18 03:58:16.709076
   country: USA
-  updated_at: 2010-09-24 06:16:19.455445
+  updated_at: 2010-10-18 03:58:16.709076
   borough: Manhattan
-  id: "427"
+  id: "702"
   state: NY
-port_richmond: 
+port_richmond:
   city: New York
   name: Port Richmond
-  created_at: 2010-09-24 06:16:21.666569
+  created_at: 2010-10-18 03:58:18.373827
   country: USA
-  updated_at: 2010-09-24 06:16:21.666569
+  updated_at: 2010-10-18 03:58:18.373827
   borough: Staten Island
-  id: "533"
+  id: "808"
   state: NY
-city_line: 
+city_line:
   city: New York
   name: City Line
-  created_at: 2010-09-24 06:16:16.707136
+  created_at: 2010-10-18 03:58:15.251301
   country: USA
-  updated_at: 2010-09-24 06:16:16.707136
+  updated_at: 2010-10-18 03:58:15.251301
   borough: Brooklyn
-  id: "336"
+  id: "611"
   state: NY
-emerson_hill: 
+emerson_hill:
   city: New York
   name: Emerson Hill
-  created_at: 2010-09-24 06:16:21.275273
+  created_at: 2010-10-18 03:58:17.992839
   country: USA
-  updated_at: 2010-09-24 06:16:21.275273
+  updated_at: 2010-10-18 03:58:17.992839
   borough: Staten Island
-  id: "513"
+  id: "788"
   state: NY
-pelham_bay: 
+pelham_bay:
   city: New York
   name: Pelham Bay
-  created_at: 2010-09-24 06:16:16.073681
+  created_at: 2010-10-18 03:58:14.78292
   country: USA
-  updated_at: 2010-09-24 06:16:16.073681
+  updated_at: 2010-10-18 03:58:14.78292
   borough: Bronx
-  id: "308"
+  id: "583"
   state: NY
-woodhaven: 
+woodhaven:
   city: New York
   name: Woodhaven
-  created_at: 2010-09-24 06:16:20.873231
+  created_at: 2010-10-18 03:58:17.799827
   country: USA
-  updated_at: 2010-09-24 06:16:20.873231
+  updated_at: 2010-10-18 03:58:17.799827
   borough: Queens
-  id: "496"
+  id: "771"
   state: NY
-hillcrest: 
+hillcrest:
   city: New York
   name: Hillcrest
-  created_at: 2010-09-24 06:16:20.089504
+  created_at: 2010-10-18 03:58:17.188736
   country: USA
-  updated_at: 2010-09-24 06:16:20.089504
+  updated_at: 2010-10-18 03:58:17.188736
   borough: Queens
-  id: "456"
+  id: "731"
   state: NY
-floral_park: 
+floral_park:
   city: New York
   name: Floral Park
-  created_at: 2010-09-24 06:16:19.871063
+  created_at: 2010-10-18 03:58:17.111523
   country: USA
-  updated_at: 2010-09-24 06:16:19.871063
+  updated_at: 2010-10-18 03:58:17.111523
   borough: Queens
-  id: "449"
+  id: "724"
   state: NY
-utopia: 
+utopia:
   city: New York
   name: Utopia
-  created_at: 2010-09-24 06:16:20.846311
+  created_at: 2010-10-18 03:58:17.77899
   country: USA
-  updated_at: 2010-09-24 06:16:20.846311
+  updated_at: 2010-10-18 03:58:17.77899
   borough: Queens
-  id: "494"
+  id: "769"
   state: NY
-bay_ridge: 
+bay_ridge:
   city: New York
   name: Bay Ridge
-  created_at: 2010-09-24 06:16:16.437841
+  created_at: 2010-10-18 03:58:14.975487
   country: USA
-  updated_at: 2010-09-24 06:16:16.437841
+  updated_at: 2010-10-18 03:58:14.975487
   borough: Brooklyn
-  id: "325"
+  id: "600"
   state: NY
-rosebank: 
+rosebank:
   city: New York
   name: Rosebank
-  created_at: 2010-09-24 06:16:21.860663
+  created_at: 2010-10-18 03:58:18.425888
   country: USA
-  updated_at: 2010-09-24 06:16:21.860663
+  updated_at: 2010-10-18 03:58:18.425888
   borough: Staten Island
-  id: "538"
+  id: "813"
   state: NY
-woodrow: 
+woodrow:
   city: New York
   name: Woodrow
-  created_at: 2010-09-24 06:16:22.004573
+  created_at: 2010-10-18 03:58:18.554923
   country: USA
-  updated_at: 2010-09-24 06:16:22.004573
+  updated_at: 2010-10-18 03:58:18.554923
   borough: Staten Island
-  id: "550"
+  id: "825"
   state: NY
-west_brighton: 
+west_brighton:
   city: New York
   name: West Brighton
-  created_at: 2010-09-24 06:16:21.979617
+  created_at: 2010-10-18 03:58:18.533037
   country: USA
-  updated_at: 2010-09-24 06:16:21.979617
+  updated_at: 2010-10-18 03:58:18.533037
   borough: Staten Island
-  id: "548"
+  id: "823"
   state: NY
-concourse_village: 
+concourse_village:
   city: New York
   name: Concourse Village
-  created_at: 2010-09-24 06:16:15.568058
+  created_at: 2010-10-18 03:58:14.38696
   country: USA
-  updated_at: 2010-09-24 06:16:15.568058
+  updated_at: 2010-10-18 03:58:14.38696
   borough: Bronx
-  id: "285"
+  id: "560"
   state: NY
-ditmas_park: 
+ditmas_park:
   city: New York
   name: Ditmas Park
-  created_at: 2010-09-24 06:16:16.801258
+  created_at: 2010-10-18 03:58:15.338483
   country: USA
-  updated_at: 2010-09-24 06:16:16.801258
+  updated_at: 2010-10-18 03:58:15.338483
   borough: Brooklyn
-  id: "344"
+  id: "619"
   state: NY
-williamsbridge: 
+williamsbridge:
   city: New York
   name: Williamsbridge
-  created_at: 2010-09-24 06:16:16.40413
+  created_at: 2010-10-18 03:58:14.943737
   country: USA
-  updated_at: 2010-09-24 06:16:16.40413
+  updated_at: 2010-10-18 03:58:14.943737
   borough: Bronx
-  id: "322"
+  id: "597"
   state: NY
-flatlands: 
+flatlands:
   city: New York
   name: Flatlands
-  created_at: 2010-09-24 06:16:17.02787
+  created_at: 2010-10-18 03:58:15.417784
   country: USA
-  updated_at: 2010-09-24 06:16:17.02787
+  updated_at: 2010-10-18 03:58:15.417784
   borough: Brooklyn
-  id: "351"
+  id: "626"
   state: NY
-fordham: 
+fordham:
   city: New York
   name: Fordham
-  created_at: 2010-09-24 06:16:15.668231
+  created_at: 2010-10-18 03:58:14.465779
   country: USA
-  updated_at: 2010-09-24 06:16:15.668231
+  updated_at: 2010-10-18 03:58:14.465779
   borough: Bronx
-  id: "292"
+  id: "567"
   state: NY
-fresh_meadows: 
+fresh_meadows:
   city: New York
   name: Fresh Meadows
-  created_at: 2010-09-24 06:16:20.054866
+  created_at: 2010-10-18 03:58:17.156845
   country: USA
-  updated_at: 2010-09-24 06:16:20.054866
+  updated_at: 2010-10-18 03:58:17.156845
   borough: Queens
-  id: "453"
+  id: "728"
   state: NY
-charleston: 
+charleston:
   city: New York
   name: Charleston
-  created_at: 2010-09-24 06:16:21.19022
+  created_at: 2010-10-18 03:58:17.916343
   country: USA
-  updated_at: 2010-09-24 06:16:21.19022
+  updated_at: 2010-10-18 03:58:17.916343
   borough: Staten Island
-  id: "506"
+  id: "781"
   state: NY
-westchester_square: 
+westchester_square:
   city: New York
   name: Westchester Square
-  created_at: 2010-09-24 06:16:16.392183
+  created_at: 2010-10-18 03:58:14.933437
   country: USA
-  updated_at: 2010-09-24 06:16:16.392183
+  updated_at: 2010-10-18 03:58:14.933437
   borough: Bronx
-  id: "321"
+  id: "596"
   state: NY
-downtown_brooklyn: 
+downtown_brooklyn:
   city: New York
   name: Downtown Brooklyn
-  created_at: 2010-09-24 06:16:16.812982
+  created_at: 2010-10-18 03:58:15.349155
   country: USA
-  updated_at: 2010-09-24 06:16:16.812982
+  updated_at: 2010-10-18 03:58:15.349155
   borough: Brooklyn
-  id: "345"
+  id: "620"
   state: NY
-rego_park: 
+rego_park:
   city: New York
   name: Rego Park
-  created_at: 2010-09-24 06:16:20.696547
+  created_at: 2010-10-18 03:58:17.646405
   country: USA
-  updated_at: 2010-09-24 06:16:20.696547
+  updated_at: 2010-10-18 03:58:17.646405
   borough: Queens
-  id: "483"
+  id: "758"
   state: NY
-stuyvesant_town: 
+stuyvesant_town:
   city: New York
   name: Stuyvesant Town
-  created_at: 2010-09-24 06:16:19.35767
+  created_at: 2010-10-18 03:58:16.625881
   country: USA
-  updated_at: 2010-09-24 06:16:19.35767
+  updated_at: 2010-10-18 03:58:16.625881
   borough: Manhattan
-  id: "419"
+  id: "694"
   state: NY
-wakefield: 
+wakefield:
   city: New York
   name: Wakefield
-  created_at: 2010-09-24 06:16:16.368141
+  created_at: 2010-10-18 03:58:14.912452
   country: USA
-  updated_at: 2010-09-24 06:16:16.368141
+  updated_at: 2010-10-18 03:58:14.912452
   borough: Bronx
-  id: "319"
+  id: "594"
   state: NY
-union_square: 
+union_square:
   city: New York
   name: Union Square
-  created_at: 2010-09-24 06:16:19.407715
+  created_at: 2010-10-18 03:58:16.667535
   country: USA
-  updated_at: 2010-09-24 06:16:19.407715
+  updated_at: 2010-10-18 03:58:16.667535
   borough: Manhattan
-  id: "423"
+  id: "698"
   state: NY
-koreatown: 
+koreatown:
   city: New York
   name: Koreatown
-  created_at: 2010-09-24 06:16:19.017196
+  created_at: 2010-10-18 03:58:16.296797
   country: USA
-  updated_at: 2010-09-24 06:16:19.017196
+  updated_at: 2010-10-18 03:58:16.296797
   borough: Manhattan
-  id: "403"
+  id: "678"
   state: NY
-park_hill: 
+park_hill:
   city: New York
   name: Park Hill
-  created_at: 2010-09-24 06:16:21.642966
+  created_at: 2010-10-18 03:58:18.350557
   country: USA
-  updated_at: 2010-09-24 06:16:21.642966
+  updated_at: 2010-10-18 03:58:18.350557
   borough: Staten Island
-  id: "531"
+  id: "806"
   state: NY
-todt_hill: 
+todt_hill:
   city: New York
   name: Todt Hill
-  created_at: 2010-09-24 06:16:21.944532
+  created_at: 2010-10-18 03:58:18.499637
   country: USA
-  updated_at: 2010-09-24 06:16:21.944532
+  updated_at: 2010-10-18 03:58:18.499637
   borough: Staten Island
-  id: "545"
+  id: "820"
   state: NY
-edgemere: 
+edgemere:
   city: New York
   name: Edgemere
-  created_at: 2010-09-24 06:16:19.832178
+  created_at: 2010-10-18 03:58:17.078615
   country: USA
-  updated_at: 2010-09-24 06:16:19.832178
+  updated_at: 2010-10-18 03:58:17.078615
   borough: Queens
-  id: "446"
+  id: "721"
   state: NY
-edenwald: 
+edenwald:
   city: New York
   name: Edenwald
-  created_at: 2010-09-24 06:16:15.631958
+  created_at: 2010-10-18 03:58:14.432627
   country: USA
-  updated_at: 2010-09-24 06:16:15.631958
+  updated_at: 2010-10-18 03:58:14.432627
   borough: Bronx
-  id: "289"
+  id: "564"
   state: NY
-kips_bay: 
+kips_bay:
   city: New York
   name: Kips Bay
-  created_at: 2010-09-24 06:16:19.005144
+  created_at: 2010-10-18 03:58:16.284356
   country: USA
-  updated_at: 2010-09-24 06:16:19.005144
+  updated_at: 2010-10-18 03:58:16.284356
   borough: Manhattan
-  id: "402"
+  id: "677"
   state: NY
-huguenot: 
+huguenot:
   city: New York
   name: Huguenot
-  created_at: 2010-09-24 06:16:21.521993
+  created_at: 2010-10-18 03:58:18.238436
   country: USA
-  updated_at: 2010-09-24 06:16:21.521993
+  updated_at: 2010-10-18 03:58:18.238436
   borough: Staten Island
-  id: "521"
+  id: "796"
   state: NY
-williamsburg___north_side: 
+williamsburg___north_side:
   city: New York
   name: Williamsburg - North Side
-  created_at: 2010-09-24 06:16:17.71015
+  created_at: 2010-10-18 03:58:15.986576
   country: USA
-  updated_at: 2010-09-24 06:16:17.71015
+  updated_at: 2010-10-18 03:58:15.986576
   borough: Brooklyn
-  id: "384"
+  id: "659"
   state: NY
-castle_hill: 
+castle_hill:
   city: New York
   name: Castle Hill
-  created_at: 2010-09-24 06:16:15.376043
+  created_at: 2010-10-18 03:58:14.317203
   country: USA
-  updated_at: 2010-09-24 06:16:15.376043
+  updated_at: 2010-10-18 03:58:14.317203
   borough: Bronx
-  id: "279"
+  id: "554"
   state: NY
-laurelton: 
+laurelton:
   city: New York
   name: Laurelton
-  created_at: 2010-09-24 06:16:20.369287
+  created_at: 2010-10-18 03:58:17.323985
   country: USA
-  updated_at: 2010-09-24 06:16:20.369287
+  updated_at: 2010-10-18 03:58:17.323985
   borough: Queens
-  id: "468"
+  id: "743"
   state: NY
-jfk_airport: 
+jfk_airport:
   city: New York
   name: JFK Airport
-  created_at: 2010-09-24 06:16:20.136016
+  created_at: 2010-10-18 03:58:17.230235
   country: USA
-  updated_at: 2010-09-24 06:16:20.136016
+  updated_at: 2010-10-18 03:58:17.230235
   borough: Queens
-  id: "460"
+  id: "735"
   state: NY
-kingsbridge: 
+kingsbridge:
   city: New York
   name: Kingsbridge
-  created_at: 2010-09-24 06:16:15.709914
+  created_at: 2010-10-18 03:58:14.4993
   country: USA
-  updated_at: 2010-09-24 06:16:15.709914
+  updated_at: 2010-10-18 03:58:14.4993
   borough: Bronx
-  id: "295"
+  id: "570"
   state: NY
-crown_heights: 
+crown_heights:
   city: New York
   name: Crown Heights
-  created_at: 2010-09-24 06:16:16.766936
+  created_at: 2010-10-18 03:58:15.307393
   country: USA
-  updated_at: 2010-09-24 06:16:16.766936
+  updated_at: 2010-10-18 03:58:15.307393
   borough: Brooklyn
-  id: "341"
+  id: "616"
   state: NY
-bloomfield: 
+bloomfield:
   city: New York
   name: Bloomfield
-  created_at: 2010-09-24 06:16:21.15277
+  created_at: 2010-10-18 03:58:17.878161
   country: USA
-  updated_at: 2010-09-24 06:16:21.15277
+  updated_at: 2010-10-18 03:58:17.878161
   borough: Staten Island
-  id: "503"
+  id: "778"
   state: NY
-weeksville: 
+weeksville:
   city: New York
   name: Weeksville
-  created_at: 2010-09-24 06:16:17.696344
+  created_at: 2010-10-18 03:58:15.964014
   country: USA
-  updated_at: 2010-09-24 06:16:17.696344
+  updated_at: 2010-10-18 03:58:15.964014
   borough: Brooklyn
-  id: "383"
+  id: "658"
   state: NY
-astoria_heights: 
+astoria_heights:
   city: New York
   name: Astoria Heights
-  created_at: 2010-09-24 06:16:19.504373
+  created_at: 2010-10-18 03:58:16.749471
   country: USA
-  updated_at: 2010-09-24 06:16:19.504373
+  updated_at: 2010-10-18 03:58:16.749471
   borough: Queens
-  id: "431"
+  id: "706"
   state: NY
-edgewater_park: 
+edgewater_park:
   city: New York
   name: Edgewater Park
-  created_at: 2010-09-24 06:16:15.644436
+  created_at: 2010-10-18 03:58:14.443479
   country: USA
-  updated_at: 2010-09-24 06:16:15.644436
+  updated_at: 2010-10-18 03:58:14.443479
   borough: Bronx
-  id: "290"
+  id: "565"
   state: NY
-east_elmhurst: 
+east_elmhurst:
   city: New York
   name: East Elmhurst
-  created_at: 2010-09-24 06:16:19.820358
+  created_at: 2010-10-18 03:58:17.068249
   country: USA
-  updated_at: 2010-09-24 06:16:19.820358
+  updated_at: 2010-10-18 03:58:17.068249
   borough: Queens
-  id: "445"
+  id: "720"
   state: NY
-dumbo: 
+dumbo:
   city: New York
   name: DUMBO
-  created_at: 2010-09-24 06:16:16.789694
+  created_at: 2010-10-18 03:58:15.328041
   country: USA
-  updated_at: 2010-09-24 06:16:16.789694
+  updated_at: 2010-10-18 03:58:15.328041
   borough: Brooklyn
-  id: "343"
+  id: "618"
   state: NY
-gowanus: 
+gowanus:
   city: New York
   name: Gowanus
-  created_at: 2010-09-24 06:16:17.090334
+  created_at: 2010-10-18 03:58:15.468289
   country: USA
-  updated_at: 2010-09-24 06:16:17.090334
+  updated_at: 2010-10-18 03:58:15.468289
   borough: Brooklyn
-  id: "356"
+  id: "631"
   state: NY
-ridgewood: 
+ridgewood:
   city: New York
   name: Ridgewood
-  created_at: 2010-09-24 06:16:20.729966
+  created_at: 2010-10-18 03:58:17.674475
   country: USA
-  updated_at: 2010-09-24 06:16:20.729966
+  updated_at: 2010-10-18 03:58:17.674475
   borough: Queens
-  id: "485"
+  id: "760"
   state: NY
-midtown_east: 
+midtown_east:
   city: New York
   name: Midtown East
-  created_at: 2010-09-24 06:16:19.088455
+  created_at: 2010-10-18 03:58:16.518586
   country: USA
-  updated_at: 2010-09-24 06:16:19.088455
+  updated_at: 2010-10-18 03:58:16.518586
   borough: Manhattan
-  id: "409"
+  id: "684"
   state: NY
-so_ho: 
+so_ho:
   city: New York
   name: SoHo
-  created_at: 2010-09-24 06:16:19.320161
+  created_at: 2010-10-18 03:58:16.593393
   country: USA
-  updated_at: 2010-09-24 06:16:19.320161
+  updated_at: 2010-10-18 03:58:16.593393
   borough: Manhattan
-  id: "416"
+  id: "691"
   state: NY
-morningside_heights: 
+morningside_heights:
   city: New York
   name: Morningside Heights
-  created_at: 2010-09-24 06:16:19.119891
+  created_at: 2010-10-18 03:58:16.540998
   country: USA
-  updated_at: 2010-09-24 06:16:19.119891
+  updated_at: 2010-10-18 03:58:16.540998
   borough: Manhattan
-  id: "411"
+  id: "686"
   state: NY
-clinton_hill: 
+clinton_hill:
   city: New York
   name: Clinton Hill
-  created_at: 2010-09-24 06:16:16.718596
+  created_at: 2010-10-18 03:58:15.261745
   country: USA
-  updated_at: 2010-09-24 06:16:16.718596
+  updated_at: 2010-10-18 03:58:15.261745
   borough: Brooklyn
-  id: "337"
+  id: "612"
   state: NY
-marine_park: 
+marine_park:
   city: New York
   name: Marine Park
-  created_at: 2010-09-24 06:16:17.164716
+  created_at: 2010-10-18 03:58:15.531177
   country: USA
-  updated_at: 2010-09-24 06:16:17.164716
+  updated_at: 2010-10-18 03:58:15.531177
   borough: Brooklyn
-  id: "362"
+  id: "637"
   state: NY
-morris_park: 
+morris_park:
   city: New York
   name: Morris Park
-  created_at: 2010-09-24 06:16:15.895809
+  created_at: 2010-10-18 03:58:14.546099
   country: USA
-  updated_at: 2010-09-24 06:16:15.895809
+  updated_at: 2010-10-18 03:58:14.546099
   borough: Bronx
-  id: "299"
+  id: "574"
   state: NY
-oakland_gardens: 
+oakland_gardens:
   city: New York
   name: Oakland Gardens
-  created_at: 2010-09-24 06:16:20.488829
+  created_at: 2010-10-18 03:58:17.433875
   country: USA
-  updated_at: 2010-09-24 06:16:20.488829
+  updated_at: 2010-10-18 03:58:17.433875
   borough: Queens
-  id: "478"
+  id: "753"
   state: NY
-riverdale: 
+riverdale:
   city: New York
   name: Riverdale
-  created_at: 2010-09-24 06:16:16.132569
+  created_at: 2010-10-18 03:58:14.814891
   country: USA
-  updated_at: 2010-09-24 06:16:16.132569
+  updated_at: 2010-10-18 03:58:14.814891
   borough: Bronx
-  id: "311"
+  id: "586"
   state: NY
-bay_terrace: 
+bay_terrace:
   city: New York
   name: Bay Terrace
-  created_at: 2010-09-24 06:16:19.666637
+  created_at: 2010-10-18 03:58:16.770677
   country: USA
-  updated_at: 2010-09-24 06:16:19.666637
+  updated_at: 2010-10-18 03:58:16.770677
   borough: Queens
-  id: "433"
+  id: "708"
   state: NY
-battery_park: 
+battery_park:
   city: New York
   name: Battery Park
-  created_at: 2010-09-24 06:16:17.771253
+  created_at: 2010-10-18 03:58:16.085812
   country: USA
-  updated_at: 2010-09-24 06:16:17.771253
+  updated_at: 2010-10-18 03:58:16.085812
   borough: Manhattan
-  id: "389"
+  id: "664"
   state: NY
-great_kills: 
+great_kills:
   city: New York
   name: Great Kills
-  created_at: 2010-09-24 06:16:21.471557
+  created_at: 2010-10-18 03:58:18.194682
   country: USA
-  updated_at: 2010-09-24 06:16:21.471557
+  updated_at: 2010-10-18 03:58:18.194682
   borough: Staten Island
-  id: "517"
+  id: "792"
   state: NY

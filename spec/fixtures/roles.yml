@@ -1,16 +1,16 @@
---- 
-lister: 
+---
+lister:
   name: lister
-  created_at: 2010-09-24 06:16:15.063857
-  updated_at: 2010-09-24 06:16:15.063857
-  id: "5"
-admin: 
+  created_at: 2010-10-18 03:58:13.994414
+  updated_at: 2010-10-18 03:58:13.994414
+  id: "8"
+admin:
   name: admin
-  created_at: 2010-09-24 06:16:15.067929
-  updated_at: 2010-09-24 06:16:15.067929
-  id: "6"
-finder: 
+  created_at: 2010-10-18 03:58:13.997513
+  updated_at: 2010-10-18 03:58:13.997513
+  id: "9"
+finder:
   name: finder
-  created_at: 2010-09-24 06:16:15.053781
-  updated_at: 2010-09-24 06:16:15.053781
-  id: "4"
+  created_at: 2010-10-18 03:58:13.985876
+  updated_at: 2010-10-18 03:58:13.985876
+  id: "7"

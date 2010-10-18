@@ -3,7 +3,7 @@ FixtureBuilder.configure do |config|
   config.select_sql = %Q{ SELECT * FROM %s }
   config.delete_sql = %Q{ DELETE FROM %s }
 
-  config.factory do |factory|
+  config.factory do
     finder_role = Factory(:role, :name => "finder")
     lister_role = Factory(:role, :name => "lister")
     admin_role = Factory(:role, :name => "admin")
@@ -317,5 +317,30 @@ FixtureBuilder.configure do |config|
                           :country => "USA",
                           :borough => "Staten Island")
     end
+
+    Feature.create(:name => "furnished", :category => "apartment")
+    Feature.create(:name => "exposed brick", :category => "apartment")
+    Feature.create(:name => "sleeping loft", :category => "apartment")
+    Feature.create(:name => "high ceilings", :category => "apartment")
+    Feature.create(:name => "air conditioning", :category => "apartment")
+    Feature.create(:name => "backyard", :category => "apartment")
+    Feature.create(:name => "balcony", :category => "apartment")
+    Feature.create(:name => "bathtub", :category => "apartment")
+    Feature.create(:name => "dishwasher", :category => "apartment")
+    Feature.create(:name => "washer/dryer", :category => "apartment")
+
+    Feature.create(:name => "high-rise", :category => "building")
+    Feature.create(:name => "live-in super", :category => "building")
+    Feature.create(:name => "doorman", :category => "building")
+    Feature.create(:name => "elevator", :category => "building")
+    Feature.create(:name => "gym", :category => "building")
+    Feature.create(:name => "pool", :category => "building")
+    Feature.create(:name => "roof deck", :category => "building")
+    Feature.create(:name => "washer/dryer", :category => "building")
+
+    Feature.create(:name => "cats allowed", :category => "pet")
+    Feature.create(:name => "dogs allowed", :category => "pet")
+    Feature.create(:name => "case-by-case", :category => "pet")
+    Feature.create(:name => "unknown", :category => "pet")
   end
 end
