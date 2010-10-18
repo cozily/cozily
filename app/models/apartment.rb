@@ -145,7 +145,7 @@ class Apartment < ActiveRecord::Base
 
   def nearby_stations
     return [] unless address
-    nearest_stations = Station.find(:all, :origin => [lat, lng], :within => 0.4, :order => 'distance')
+    nearest_stations = Station.find(:all, :origin => [lat, lng], :within => 0.5, :order => 'distance')
     station_names = nearest_stations.map(&:name).uniq
     [].tap do |stations|
       station_names.each do |station_name|
