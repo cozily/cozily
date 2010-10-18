@@ -28,12 +28,14 @@
       =render "apartments/images", :apartment => apartment
 
     %h2 Apartment Extras
-    %ul.features
-      -Feature.all.each do |feature|
-        %li.feature
-          -field_id = "feature_#{feature.id}"
-          =check_box_tag("apartment[feature_ids][]", feature.id, apartment.features.include?(feature), { :id => field_id })
-          =label_tag field_id, feature.name
+    - ["apartment", "building", "pet"].each do |category|
+      %h3== #{category} features
+      %ul.features
+        - Feature.find_all_by_category(category, :order => "name").each do |feature|
+          %li.feature
+            - field_id = "feature_#{feature.id}"
+            = check_box_tag("apartment[feature_ids][]", feature.id, apartment.features.include?(feature), { :id => field_id })
+            = label_tag field_id, feature.name
 
   -f.buttons do
     %ul.buttons

@@ -6,4 +6,5 @@ describe Feature do
   end
 
   it { should validate_uniqueness_of(:name) }
+  it { should have_many(:apartment_features) }
 end

@@ -332,19 +332,30 @@ FasterCSV.foreach("lib/mta_subway_info.csv", :headers => :first_row) do |row|
   end
 end
 
-Feature.create(:name => "backyard")
-Feature.create(:name => "balcony")
-Feature.create(:name => "bathtub")
-Feature.create(:name => "cats allowed")
-Feature.create(:name => "dishwasher")
-Feature.create(:name => "dogs allowed")
-Feature.create(:name => "doorman")
-Feature.create(:name => "elevator")
-Feature.create(:name => "gym")
-Feature.create(:name => "pool")
-Feature.create(:name => "roof deck")
-Feature.create(:name => "washer/dryer in building")
-Feature.create(:name => "washer/dryer in unit")
+Feature.create(:name => "furnished", :category => "apartment")
+Feature.create(:name => "exposed brick", :category => "apartment")
+Feature.create(:name => "sleeping loft", :category => "apartment")
+Feature.create(:name => "high ceilings", :category => "apartment")
+Feature.create(:name => "air conditioning", :category => "apartment")
+Feature.create(:name => "backyard", :category => "apartment")
+Feature.create(:name => "balcony", :category => "apartment")
+Feature.create(:name => "bathtub", :category => "apartment")
+Feature.create(:name => "dishwasher", :category => "apartment")
+Feature.create(:name => "washer/dryer", :category => "apartment")
+
+Feature.create(:name => "high-rise", :category => "building")
+Feature.create(:name => "live-in super", :category => "building")
+Feature.create(:name => "doorman", :category => "building")
+Feature.create(:name => "elevator", :category => "building")
+Feature.create(:name => "gym", :category => "building")
+Feature.create(:name => "pool", :category => "building")
+Feature.create(:name => "roof deck", :category => "building")
+Feature.create(:name => "washer/dryer", :category => "building")
+
+Feature.create(:name => "cats allowed", :category => "pet")
+Feature.create(:name => "dogs allowed", :category => "pet")
+Feature.create(:name => "case-by-case", :category => "pet")
+Feature.create(:name => "unknown", :category => "pet")
 
 User.create(:first_name => "Michael",
             :last_name => "Haddad",
