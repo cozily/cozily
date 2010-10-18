@@ -47,6 +47,10 @@
         %p.summary
           ==Number of Views: <span>#{apartment.views_count}</span>
           ==Number of Favorites: <span>#{apartment.favorites_count}</span>
+    .pagination
+      %ul
+        %li.counts= pagination_summary(params[:page], current_user.apartments)
+        %li.navigation= will_paginate(apartments, :renderer => AjaxPaginationLinkRenderer)
 
   -else
     %p.empty
