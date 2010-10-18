@@ -67,7 +67,7 @@
   params:
     ywsid: 7a05VXb3EXz850ByvWF90w
     category: restaurants
-    radius: "0.1"
+    radius: "0.33"
     limit: "10"
   queries:
     -
