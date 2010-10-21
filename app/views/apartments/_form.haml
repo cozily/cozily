@@ -19,10 +19,10 @@
 
     %h2 Upload Photos
     #upload_photos
+      %a#upload{:'data-upload-path' => apartment_images_path(apartment)} Upload Photo
       %p
         Research shows that most renters won't even view a listing without photos.  We require that you upload at least two:
 
-      %a#upload{:'data-upload-path' => apartment_images_path(apartment)} Upload Photo
       #upload_status
 
       =render "apartments/images", :apartment => apartment

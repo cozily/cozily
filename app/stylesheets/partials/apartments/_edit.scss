@@ -73,47 +73,74 @@ body.apartments.edit, body.apartments.update {
 
             div#upload_photos {
                 background-color: #EBEBEB;
-                padding: 15px;
+                padding: 15px 15px 0 15px;
                 border-left: 4px solid white;
 
                 p {
                     font-weight: 500;
-                    margin-bottom: 15px;
+                    margin-left: 10px;
                 }
 
                 a#upload {
                     @include dark-blue-link;
                     width: 130px;
-                    margin-left: 140px;
+                    margin-right: 10px;
+                    float: left;
                 }
 
                 div#upload_status {
-                    float: right;
-                    margin-right: 165px;
-                    margin-top: -26px;
+                    margin-top: 10px;
                     font-style: italic;
-                    overflow: hidden;
                 }
 
                 ul#images {
                     @include clearfix;
-                    margin: 25px 0 0 140px;
+                    margin-top: 10px;
+                    height: 115px;
 
                     li {
                         float: left;
-                        margin-right: 25px;
+                        margin-right: 10px;
+                        width: 85px;
+                        height: 85px;
 
                         img {
-                            width: 55px;
-                            height: 55px;
                             display: block;
                             margin-bottom: 5px;
                         }
 
                         a {
                             font-size: 0.85em;
-                            margin-left: 7px;
+                            margin-left: 25px;
                         }
+                    }
+
+                    li.empty {
+                        background-color: #ddd;
+                        color: white;
+                        font-size: 32px;
+                        line-height: 0.75em;
+                        text-align: center;
+                        padding-top: 30px;
+                        width: 81px;
+                        height: 51px;
+                        border: 2px dashed #ccc;
+                    }
+
+                    li.empty.required {
+                        background-color: #999;
+                        border: 2px dashed #666;
+                        span.number {
+                            display: block;
+                        }
+
+                        span.required {
+                            font-size: 11px;
+                        }
+                    }
+
+                    li:last-child {
+                        margin-right: 0;
                     }
                 }
             }
