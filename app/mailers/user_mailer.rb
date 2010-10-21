@@ -9,6 +9,7 @@ class UserMailer < ActionMailer::Base
   end
 
   def finder_summary(user)
+    css :email
     from "cozily-noreply@cozi.ly"
     recipients user.email
     subject "Your Weekly Match Summary from Cozily"

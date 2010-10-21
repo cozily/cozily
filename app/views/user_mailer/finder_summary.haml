@@ -2,8 +2,14 @@
 
 -if @user.matches.present?
   %p==You currently have #{pluralize(@user.matches.count, "match")} on #{link_to("Cozily", root_url)}.  Check them out.
-  -@user.matches.each do |apt|
-    %p==#{link_to(apt.name, apartment_url(apt))}, a #{apt.bedrooms.try(:prettify)}bd for $#{number_with_delimiter(apt.rent)} in #{apt.neighborhoods.map(&:name).to_sentence}
+  %table
+    -@user.matches.each do |apt|
+      %tr
+        %td.image=link_to(image_tag(apt.images.first.asset.url(:thumb)), apartment_url(apt))
+        %td=link_to(apt.name, apartment_url(apt))
+        %td==#{apt.bedrooms.try(:prettify)}bd/#{apt.bathrooms.try(:prettify)}ba
+        %td==$#{number_with_delimiter(apt.rent)}
+        %td=apt.neighborhoods.map { |n| link_to(n.name, neighborhood_url(n)) }.to_sentence
 -else
   %p==You don't currently have any matches on #{link_to("Cozily", root_url)}, but we're working on it!
 
