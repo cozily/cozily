@@ -15,163 +15,167 @@ body.apartments.edit, body.apartments.update {
         }
 
         form.apartment {
-            div.errorExplanation {
-                margin-left: 20px;
-            }
+            fieldset.inputs {
+                width: 600px;
 
-            label {
-                width: 140px;
-                margin-right: 25px;
-                font-size: 1.1em;
-                font-weight: 500;
-                line-height: 31px;
-                text-align: right;
-                text-transform: capitalize;
-            }
-
-            input[type=text] {
-                height: 35px;
-                width: 435px;
-                padding: 5px;
-                font-size: 1.3em;
-                color: $input-grey;
-            }
-
-            div[data-content-key=neighborhood] {
-                margin: 0 0 1.5em 164px;
-
-                > span {
-                    background-color: #DDE7E9;
-                    padding: 5px 10px;
-                    color: #666;
-                    @include border-radius(3px);
-
-                    span {
-                        font-weight: 500;
-                    }
-                }
-            }
-
-            li.radio {
-                height: 35px;
-                legend label {
-                    text-transform: none;
+                div.errorExplanation {
+                    margin-left: 20px;
                 }
 
-                ol {
-                    width: 600px;
-                    li {
-                        float: left;
-                        label {
-                            width: 55px;
-                            margin-right: 0px;
-                            text-transform: uppercase;
-                        }
-                    }
-                }
-            }
-
-            div#upload_photos {
-                background-color: #EBEBEB;
-                padding: 15px 15px 0 15px;
-                border-left: 4px solid white;
-
-                p {
+                label {
+                    width: 140px;
+                    margin-right: 25px;
+                    font-size: 1.1em;
                     font-weight: 500;
-                    margin-left: 10px;
+                    line-height: 31px;
+                    text-align: right;
+                    text-transform: capitalize;
                 }
 
-                a#upload {
-                    @include dark-blue-link;
-                    width: 130px;
-                    margin-right: 10px;
-                    float: left;
+                input[type=text] {
+                    height: 35px;
+                    width: 435px;
+                    padding: 5px;
+                    font-size: 1.3em;
+                    color: $input-grey;
                 }
 
-                div#upload_status {
-                    margin-top: 10px;
-                    font-style: italic;
+                div[data-content-key=neighborhood] {
+                    margin: 0 0 1.5em 164px;
+
+                    > span {
+                        background-color: #DDE7E9;
+                        padding: 5px 10px;
+                        color: #666;
+                        @include border-radius(3px);
+
+                        span {
+                            font-weight: 500;
+                        }
+                    }
                 }
 
-                ul#images {
-                    @include clearfix;
-                    margin-top: 10px;
-                    height: 115px;
+                li.radio {
+                    height: 35px;
+                    legend label {
+                        text-transform: none;
+                    }
 
-                    li {
-                        float: left;
+                    ol {
+                        width: 600px;
+                        li {
+                            float: left;
+                            label {
+                                width: 55px;
+                                margin-right: 0px;
+                                text-transform: uppercase;
+                            }
+                        }
+                    }
+                }
+
+                div#upload_photos {
+                    background-color: #EBEBEB;
+                    padding: 15px 15px 0 15px;
+                    border-left: 4px solid white;
+
+                    p {
+                        font-weight: 500;
+                        margin-left: 10px;
+                    }
+
+                    a#upload {
+                        @include dark-blue-link;
+                        width: 130px;
                         margin-right: 10px;
-                        width: 85px;
-                        height: 85px;
-
-                        img {
-                            display: block;
-                            margin-bottom: 5px;
-                        }
-
-                        a {
-                            font-size: 0.85em;
-                            margin-left: 25px;
-                        }
+                        float: left;
                     }
 
-                    li.empty {
-                        background-color: #ddd;
-                        color: white;
-                        font-size: 32px;
-                        line-height: 0.75em;
-                        text-align: center;
-                        padding-top: 30px;
-                        width: 81px;
-                        height: 51px;
-                        border: 2px dashed #ccc;
+                    div#upload_status {
+                        margin-top: 10px;
+                        font-style: italic;
                     }
 
-                    li.empty.required {
-                        background-color: #999;
-                        border: 2px dashed #666;
-                        span.number {
-                            display: block;
+                    ul#images {
+                        @include clearfix;
+                        margin-top: 10px;
+                        height: 115px;
+
+                        li {
+                            float: left;
+                            margin-right: 10px;
+                            width: 85px;
+                            height: 85px;
+
+                            img {
+                                display: block;
+                                margin-bottom: 5px;
+                            }
+
+                            a {
+                                font-size: 0.85em;
+                                margin-left: 25px;
+                            }
                         }
 
-                        span.required {
-                            font-size: 11px;
+                        li.empty {
+                            background-color: #ddd;
+                            color: white;
+                            font-size: 32px;
+                            line-height: 0.75em;
+                            text-align: center;
+                            padding-top: 30px;
+                            width: 81px;
+                            height: 51px;
+                            border: 2px dashed #ccc;
                         }
-                    }
 
-                    li:last-child {
-                        margin-right: 0;
+                        li.empty.required {
+                            background-color: #999;
+                            border: 2px dashed #666;
+                            span.number {
+                                display: block;
+                            }
+
+                            span.required {
+                                font-size: 11px;
+                            }
+                        }
+
+                        li:last-child {
+                            margin-right: 0;
+                        }
                     }
                 }
-            }
 
-            h3 {
-                border-bottom: 1px solid #ccc;
-                margin: 0 0 0.5em 30px;
-                clear: both;
-            }
+                h3 {
+                    border-bottom: 1px solid #ccc;
+                    margin: 0 0 0.5em 30px;
+                    clear: both;
+                }
 
-            ul.features {
-                margin-left: 40px;
+                ul.features {
+                    margin-left: 40px;
 
-                li.feature {
-                    float: left;
-                    width: 185px;
-
-                    input[type=checkbox] {
+                    li.feature {
                         float: left;
-                        margin: 5px 10px 0 0;
-                    }
+                        width: 185px;
 
-                    label {
-                        text-transform: capitalize;
-                        font-size: 1.2em;
-                        float: none;
-                        text-align: left;
-                        padding-top: 0;
-                        line-height: 24px;
-                        margin-right: 10px;
-                        width: 175px;
+                        input[type=checkbox] {
+                            float: left;
+                            margin: 5px 10px 0 0;
+                        }
+
+                        label {
+                            text-transform: capitalize;
+                            font-size: 1.2em;
+                            float: none;
+                            text-align: left;
+                            padding-top: 0;
+                            line-height: 24px;
+                            margin-right: 10px;
+                            width: 175px;
+                        }
                     }
                 }
             }
