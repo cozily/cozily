@@ -17,6 +17,7 @@ class UserMailer < ActionMailer::Base
   end
 
   def lister_summary(user)
+    css :email
     from "cozily-noreply@cozi.ly"
     recipients user.email
     subject "Your Weekly Listing Summary from Cozily"

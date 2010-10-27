@@ -1,16 +1,31 @@
 =render "shared/mailer_salutation", :user => @user
 
--published_apts = @user.apartments.with_state(:published)
--if published_apts.present?
-  %p==You currently have #{published_apts.count} published #{pluralize(published_apts.count, "apartment").split(" ").last} on #{link_to("Cozily", root_url)}.  Check them out.
-  -published_apts.each do |apt|
-    %p==#{link_to(apt.name, apartment_url(apt))}, a #{apt.bedrooms.try(:prettify)}bd for $#{number_with_delimiter(apt.rent)} with #{pluralize(apt.views_count, "view")}
+-apts = @user.apartments.with_state(:published)
+-if apts.present?
+  %p==You currently have #{apts.count} published #{pluralize(apts.count, "apartment").split(" ").last} on #{link_to("Cozily", root_url)}.  Check them out.
+  %table
+    -apts.each do |apt|
+      %tr
+        %td=link_to(image_tag(apt.images.first.asset.url(:thumb)), apartment_url(apt))
+        %td=link_to(apt.name, apartment_url(apt))
+        %td==#{apt.bedrooms.try(:prettify)}bd/#{apt.bathrooms.try(:prettify)}ba
+        %td==$#{number_with_delimiter(apt.rent)}
+        %td=pluralize(apt.views_count, "view")
 
 -apts = @user.apartments.with_state(:unpublished)
 -if apts.present?
-  %p==You currently have #{apts.count} unpublished #{pluralize(apts.count, "apartment").split(" ").last} on #{link_to("Cozily", root_url)}.  Check them out.  Note that unpublished apartments are not visible to other users.  Publish your listings to rent your apartment!
-  -apts.each do |apt|
-    %p==#{link_to(apt.name, apartment_url(apt))}
+  %p==You currently have #{apts.count} unpublished #{pluralize(apts.count, "apartment").split(" ").last} on #{link_to("Cozily", root_url)}.  Check them out.  Note that unpublished apartments are not visible to other users.  Make sure you publish your listings in order to rent your apartment!
+  %table
+    -apts.each do |apt|
+      %tr
+        %td
+          -if apt.images.present?
+            =link_to(image_tag(apt.images.first.asset.url(:thumb)), apartment_url(apt))
+          -else
+            =link_to(image_tag("defaults/apartment/thumb.jpg"), apartment_url(apt))
+        %td==#{link_to(apt.name, apartment_url(apt))}
+        %td==#{apt.bedrooms.try(:prettify)}bd/#{apt.bathrooms.try(:prettify)}ba
+        %td==$#{number_with_delimiter(apt.rent)}
 
 -if @user.apartments.empty?
   %p==You've yet to create any apartments on #{link_to("Cozily", root_url)}.  Give it a try!
