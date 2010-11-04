@@ -79,7 +79,7 @@ class User < ActiveRecord::Base
   end
 
   def matches
-    apts = Apartment.user_id_does_not_equal(self.id).with_state(:published)
+    apts = Apartment.descend_by_published_at.user_id_does_not_equal(self.id).with_state(:published)
     apts = apts.rent_lte(profile.rent) if profile.try(:rent)
     apts = apts.bedrooms_gte(profile.bedrooms) if profile.try(:bedrooms)
     if profile.try(:neighborhoods).try(:present?)

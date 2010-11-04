@@ -225,28 +225,13 @@ describe Apartment do
       }.should change(Delayed::Job, :count).by(1)
       Delayed::Job.last.handler.should =~ /:MatchNotifierJob/
     end
-  end
 
-  describe "#published_on" do
-    before do
-      @apartment = Factory(:apartment)
-    end
-
-    it "returns the latest date that the apartment was published" do
-      Factory(:timeline_event,
-              :subject => @apartment,
-              :event_type => "state_changed_to_published",
-              :created_at => date1 = 5.days.ago)
-      Factory(:timeline_event,
-              :subject => @apartment,
-              :event_type => "state_changed_to_published",
-              :created_at => 10.days.ago)
-
-      @apartment.published_on.should == date1
-    end
-
-    it "returns nil if the apartment hasn't been published" do
-      @apartment.published_on.should be_nil
+    it "updates published_on" do
+      @apartment.published_at.should be_nil
+      lambda {
+        @apartment.publish!
+      }.should change(@apartment, :published_at)
+      @apartment.published_at.should_not be_nil
     end
   end
 

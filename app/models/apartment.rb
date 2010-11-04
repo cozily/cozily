@@ -48,7 +48,7 @@ class Apartment < ActiveRecord::Base
         )
         client.update("#{apt.user.first_name} just published a #{apt.bedrooms.prettify} bedroom apt in #{apt.neighborhood.name} for $#{apt.rent} #{apartment_url(apt)}")
       end
-
+      apt.update_attribute(:published_at, Time.now)
       Delayed::Job.enqueue(MatchNotifierJob.new(apt))
     end
 
@@ -160,10 +160,6 @@ class Apartment < ActiveRecord::Base
 
   def publishable?
     REQUIRED_FIELDS.all? { |attr| self.send(attr).present? } && (images_count > 1) && valid_sublet? && valid_user?
-  end
-
-  def published_on
-    subject_timeline_events.event_type_equals("state_changed_to_published").first.try(:created_at)
   end
 
   def match_for?(user)
