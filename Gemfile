@@ -45,7 +45,7 @@ end
 
 group :development do
   gem "heroku", "1.10.4"
-  gem "heroku_san", "0.2.4"
+  gem "heroku_san", "1.0.3"
   gem "mongrel", "1.1.5"
   gem "taps", "0.3.9"
 end
