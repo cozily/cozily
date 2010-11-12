@@ -38,6 +38,10 @@ ActionController::Routing::Routes.draw do |map|
     page.dashboard_messages "dashboard/messages", :action => "messages"
   end
 
+  map.with_options :controller => "browse" do |page|
+    page.browse "browse", :action => "index"
+  end
+
   map.with_options :controller => "pages" do |page|
     page.about_page "/about", :action => "about"
     page.faq_page "/faq", :action => "faq"

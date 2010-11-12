@@ -25,12 +25,24 @@ module ApplicationHelper
   end
 
   def lady_text
-    if !current_user.email_confirmed?
+    if signed_out?
+      "Thanks for checking out Cozily.  #{link_to "Sign up", sign_up_path} if you like what see!"
+    elsif !current_user.email_confirmed?
       "Hey #{current_user.first_name}, remember to confirm your email address. #{link_to("Resend link", resend_confirmation_user_path(current_user), :'data-remote' => true)}."
     elsif action_name == "messages"
       "Wow #{current_user.first_name}, people really seem to love talking to you!"
     else
       "Wow #{current_user.first_name}, that's a fabulous shirt you're wearing."
     end
+  end
+
+  def show_search?
+    controller_name, action_name = controller.controller_name, controller.action_name
+    (["welcome",
+      "pages",
+      "sessions",
+      "passwords",
+      "signup"].all? { |name| controller_name != name }) &&
+           ! (controller_name == "users" && action_name == "new")
   end
 end

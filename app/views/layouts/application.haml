@@ -32,6 +32,8 @@
         =link_to image_tag("logos/logo.png"), root_url
 
         %ul.nav
+          -if signed_out?
+            %li=link_to "browse", browse_path
           -if current_user.try(:lister?)
             %li=link_to "my listings (#{current_user.apartments.count})", dashboard_listings_path
           -if current_user.try(:finder?)
@@ -42,7 +44,7 @@
 
         =render "sessions/nav_actions"
 
-    -if current_user
+    -if show_search?
       #search
         .container
           %h2 Find Apartments
@@ -56,10 +58,10 @@
             =f.submit :search
 
       #breadcrumbs
-        -if current_user.try(:finder?)
+        -if signed_out? || current_user.finder?
           .profile_summary
-            ==* #{profile_summary(current_user.profile)}
-            %span=link_to("update", edit_user_profile_path(current_user))
+            ==* #{profile_summary(current_user.try(:profile))}
+            %span=link_to("update", signed_in? ? edit_user_profile_path(current_user) : sign_up_path)
 
     #body
       .container

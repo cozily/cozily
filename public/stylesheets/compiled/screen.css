@@ -1,4 +1,4 @@
-/* line 4, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 4, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 html, body {
   margin: 0;
   padding: 0;
@@ -10,12 +10,12 @@ html, body {
   vertical-align: baseline;
 }
 
-/* line 6, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 6, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 html {
   font-size: 100.01%;
 }
 
-/* line 16, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 16, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
 pre, a, abbr, acronym, address, code, del, dfn, em, img,
 dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead, tr {
@@ -29,7 +29,7 @@ dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, th
   vertical-align: baseline;
 }
 
-/* line 18, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 18, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 blockquote, q {
   margin: 0;
   padding: 0;
@@ -41,12 +41,12 @@ blockquote, q {
   vertical-align: baseline;
   quotes: "" "";
 }
-/* line 45, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 45, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 blockquote:before, blockquote:after, q:before, q:after {
   content: "";
 }
 
-/* line 20, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 20, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 th, td, caption {
   margin: 0;
   padding: 0;
@@ -61,7 +61,7 @@ th, td, caption {
   vertical-align: middle;
 }
 
-/* line 22, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 22, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 table {
   margin: 0;
   padding: 0;
@@ -76,7 +76,7 @@ table {
   vertical-align: middle;
 }
 
-/* line 24, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 24, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 a img {
   border: none;
 }
@@ -88,197 +88,197 @@ body {
   color: #333333;
   font-size: 75%;
 }
-/* line 68, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 68, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body h1, body h2, body h3, body h4, body h5, body h6 {
   font-weight: normal;
   color: #222222;
 }
-/* line 69, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 69, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body h1 img, body h2 img, body h3 img, body h4 img, body h5 img, body h6 img {
   margin: 0;
 }
-/* line 70, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 70, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body h1 {
   font-size: 3em;
   line-height: 1;
   margin-bottom: 0.50em;
 }
-/* line 71, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 71, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body h2 {
   font-size: 2em;
   margin-bottom: 0.75em;
 }
-/* line 72, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 72, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body h3 {
   font-size: 1.5em;
   line-height: 1;
   margin-bottom: 1.00em;
 }
-/* line 73, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 73, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body h4 {
   font-size: 1.2em;
   line-height: 1.25;
   margin-bottom: 1.25em;
 }
-/* line 74, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 74, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body h5 {
   font-size: 1em;
   font-weight: bold;
   margin-bottom: 1.50em;
 }
-/* line 75, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 75, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body h6 {
   font-size: 1em;
   font-weight: bold;
 }
-/* line 76, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 76, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body p {
   margin: 0 0 1.5em;
 }
-/* line 77, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 77, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body p img.left {
   display: inline;
   float: left;
   margin: 1.5em 1.5em 1.5em 0;
   padding: 0;
 }
-/* line 78, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 78, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body p img.right {
   display: inline;
   float: right;
   margin: 1.5em 0 1.5em 1.5em;
   padding: 0;
 }
-/* line 80, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 80, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body a {
   text-decoration: underline;
   color: #000099;
 }
-/* line 18, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
+/* line 18, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
 body a:visited {
   color: #000066;
 }
-/* line 22, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
+/* line 22, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
 body a:focus {
   color: black;
 }
-/* line 26, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
+/* line 26, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
 body a:hover {
   color: black;
 }
-/* line 30, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
+/* line 30, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
 body a:active {
   color: #cc0099;
 }
-/* line 81, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 81, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body blockquote {
   margin: 1.5em;
   color: #666666;
   font-style: italic;
 }
-/* line 82, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 82, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body strong {
   font-weight: bold;
 }
-/* line 83, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 83, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body em {
   font-style: italic;
 }
-/* line 84, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 84, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body dfn {
   font-style: italic;
   font-weight: bold;
 }
-/* line 85, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 85, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body sup, body sub {
   line-height: 0;
 }
-/* line 86, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 86, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body abbr, body acronym {
   border-bottom: 1px dotted #666666;
 }
-/* line 87, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 87, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body address {
   margin: 0 0 1.5em;
   font-style: italic;
 }
-/* line 88, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 88, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body del {
   color: #666666;
 }
-/* line 89, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 89, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body pre {
   margin: 1.5em 0;
   white-space: pre;
 }
-/* line 90, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 90, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body pre, body code, body tt {
   font: 1em "andale mono", "lucida console", monospace;
   line-height: 1.5;
 }
-/* line 91, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 91, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body li ul, body li ol {
   margin: 0;
 }
-/* line 92, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 92, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body ul, body ol {
   margin: 0 1.5em 1.5em 0;
   padding-left: 3.333em;
 }
-/* line 93, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 93, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body ul {
   list-style-type: disc;
 }
-/* line 94, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 94, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body ol {
   list-style-type: decimal;
 }
-/* line 95, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 95, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body dl {
   margin: 0 0 1.5em 0;
 }
-/* line 96, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 96, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body dl dt {
   font-weight: bold;
 }
-/* line 97, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 97, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body dd {
   margin-left: 1.5em;
 }
-/* line 98, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 98, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body table {
   margin-bottom: 1.4em;
   width: 100%;
 }
-/* line 99, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 99, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body th {
   font-weight: bold;
 }
-/* line 100, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 100, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body thead th {
   background: #c3d9ff;
 }
-/* line 101, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 101, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body th, body td, body caption {
   padding: 4px 10px 4px 5px;
 }
-/* line 102, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 102, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body tr.even td {
   background: #e5ecf9;
 }
-/* line 103, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 103, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body tfoot {
   font-style: italic;
 }
-/* line 104, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 104, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body caption {
   background: #eeeeee;
 }
-/* line 105, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 105, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body .quiet {
   color: #666666;
 }
-/* line 106, ../../../../../../../opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+/* line 106, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body .loud {
   color: #111111;
 }
@@ -886,24 +886,24 @@ body.welcome.index div#body div.container div.profile div.article.lister form.us
 }
 
 /* line 2, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.head, body.searches div.head, body.neighborhoods.show div.head {
+body.dashboard div.head, body.searches div.head, body.neighborhoods.show div.head, body.browse div.head {
   background: url(/images/backgrounds/tab.png) repeat-x left bottom;
 }
 /* line 5, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.head h1, body.searches div.head h1, body.neighborhoods.show div.head h1 {
+body.dashboard div.head h1, body.searches div.head h1, body.neighborhoods.show div.head h1, body.browse div.head h1 {
   font-weight: 500;
   float: left;
   margin: -55px 0 0 25px;
 }
 /* line 11, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.head div.lady, body.searches div.head div.lady, body.neighborhoods.show div.head div.lady {
+body.dashboard div.head div.lady, body.searches div.head div.lady, body.neighborhoods.show div.head div.lady, body.browse div.head div.lady {
   float: right;
   margin: -60px 12px 0 0;
   background: url(/images/characters/lady_head.png) no-repeat right center;
   height: 84px;
 }
 /* line 17, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.head div.lady span, body.searches div.head div.lady span, body.neighborhoods.show div.head div.lady span {
+body.dashboard div.head div.lady span, body.searches div.head div.lady span, body.neighborhoods.show div.head div.lady span, body.browse div.head div.lady span {
   font-size: 1.2em;
   font-style: italic;
   width: 220px;
@@ -912,14 +912,14 @@ body.dashboard div.head div.lady span, body.searches div.head div.lady span, bod
   display: block;
 }
 /* line 27, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.head ul.tabs, body.searches div.head ul.tabs, body.neighborhoods.show div.head ul.tabs {
+body.dashboard div.head ul.tabs, body.searches div.head ul.tabs, body.neighborhoods.show div.head ul.tabs, body.browse div.head ul.tabs {
   overflow: hidden;
   *zoom: 1;
   margin-top: 70px;
   margin-left: 25px;
 }
 /* line 31, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.head ul.tabs li, body.searches div.head ul.tabs li, body.neighborhoods.show div.head ul.tabs li {
+body.dashboard div.head ul.tabs li, body.searches div.head ul.tabs li, body.neighborhoods.show div.head ul.tabs li, body.browse div.head ul.tabs li {
   float: left;
   padding: 5px 20px 10px;
   text-transform: uppercase;
@@ -928,32 +928,32 @@ body.dashboard div.head ul.tabs li, body.searches div.head ul.tabs li, body.neig
   border-top: 4px solid white;
 }
 /* line 40, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.head ul.tabs li.active, body.searches div.head ul.tabs li.active, body.neighborhoods.show div.head ul.tabs li.active {
+body.dashboard div.head ul.tabs li.active, body.searches div.head ul.tabs li.active, body.neighborhoods.show div.head ul.tabs li.active, body.browse div.head ul.tabs li.active {
   border-top: 4px solid #A0C045;
   border-left: 4px solid #DCDCDC;
   border-right: 4px solid #DCDCDC;
   background: url(/images/backgrounds/white.png) repeat-x left bottom;
 }
 /* line 49, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.article, body.searches div.article, body.neighborhoods.show div.article {
+body.dashboard div.article, body.searches div.article, body.neighborhoods.show div.article, body.browse div.article {
   width: 630px;
   margin-right: 10px;
   float: left;
 }
 /* line 54, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.article h2, body.searches div.article h2, body.neighborhoods.show div.article h2 {
+body.dashboard div.article h2, body.searches div.article h2, body.neighborhoods.show div.article h2, body.browse div.article h2 {
   margin: 15px;
   border-bottom: 3px solid black;
 }
 /* line 59, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.article p.empty, body.searches div.article p.empty, body.neighborhoods.show div.article p.empty {
+body.dashboard div.article p.empty, body.searches div.article p.empty, body.neighborhoods.show div.article p.empty, body.browse div.article p.empty {
   font-size: 18px;
   padding: 18px;
   text-align: center;
   clear: both;
 }
 /* line 66, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.article div.new > a, body.searches div.article div.new > a, body.neighborhoods.show div.article div.new > a {
+body.dashboard div.article div.new > a, body.searches div.article div.new > a, body.neighborhoods.show div.article div.new > a, body.browse div.article div.new > a {
   width: 160px;
   margin: 20px auto 0;
   display: block;
@@ -977,12 +977,12 @@ body.dashboard div.article div.new > a, body.searches div.article div.new > a, b
   border: 1px solid #8EAC46;
 }
 /* line 72, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.article div.apartment.listing, body.searches div.article div.apartment.listing, body.neighborhoods.show div.article div.apartment.listing {
+body.dashboard div.article div.apartment.listing, body.searches div.article div.apartment.listing, body.neighborhoods.show div.article div.apartment.listing, body.browse div.article div.apartment.listing {
   height: 140px;
   margin-bottom: 45px;
 }
 /* line 76, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.article div.apartment.listing p.summary, body.searches div.article div.apartment.listing p.summary, body.neighborhoods.show div.article div.apartment.listing p.summary {
+body.dashboard div.article div.apartment.listing p.summary, body.searches div.article div.apartment.listing p.summary, body.neighborhoods.show div.article div.apartment.listing p.summary, body.browse div.article div.apartment.listing p.summary {
   background-color: #F0F4F7;
   border-bottom: 1px solid #CCCCCC;
   height: 32px;
@@ -993,40 +993,40 @@ body.dashboard div.article div.apartment.listing p.summary, body.searches div.ar
   padding-left: 10px;
 }
 /* line 86, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.article div.apartment.listing p.summary span, body.searches div.article div.apartment.listing p.summary span, body.neighborhoods.show div.article div.apartment.listing p.summary span {
+body.dashboard div.article div.apartment.listing p.summary span, body.searches div.article div.apartment.listing p.summary span, body.neighborhoods.show div.article div.apartment.listing p.summary span, body.browse div.article div.apartment.listing p.summary span {
   margin-right: 30px;
   font-weight: bold;
 }
 /* line 93, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.article div.apartment, body.searches div.article div.apartment, body.neighborhoods.show div.article div.apartment {
+body.dashboard div.article div.apartment, body.searches div.article div.apartment, body.neighborhoods.show div.article div.apartment, body.browse div.article div.apartment {
   height: 130px;
   margin-left: 3px;
   border-bottom: 1px solid #CCC;
   padding: 3px 0;
 }
 /* line 100, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.article div.apartment > ul > li, body.searches div.article div.apartment > ul > li, body.neighborhoods.show div.article div.apartment > ul > li {
+body.dashboard div.article div.apartment > ul > li, body.searches div.article div.apartment > ul > li, body.neighborhoods.show div.article div.apartment > ul > li, body.browse div.article div.apartment > ul > li {
   float: left;
   margin-right: 10px;
   height: 100%;
 }
 /* line 106, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.article div.apartment > ul li.photo, body.searches div.article div.apartment > ul li.photo, body.neighborhoods.show div.article div.apartment > ul li.photo {
+body.dashboard div.article div.apartment > ul li.photo, body.searches div.article div.apartment > ul li.photo, body.neighborhoods.show div.article div.apartment > ul li.photo, body.browse div.article div.apartment > ul li.photo {
   width: 150px;
 }
 /* line 109, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.article div.apartment > ul li.photo div, body.searches div.article div.apartment > ul li.photo div, body.neighborhoods.show div.article div.apartment > ul li.photo div {
+body.dashboard div.article div.apartment > ul li.photo div, body.searches div.article div.apartment > ul li.photo div, body.neighborhoods.show div.article div.apartment > ul li.photo div, body.browse div.article div.apartment > ul li.photo div {
   float: left;
 }
 /* line 113, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.article div.apartment > ul li.photo div.image, body.searches div.article div.apartment > ul li.photo div.image, body.neighborhoods.show div.article div.apartment > ul li.photo div.image {
+body.dashboard div.article div.apartment > ul li.photo div.image, body.searches div.article div.apartment > ul li.photo div.image, body.neighborhoods.show div.article div.apartment > ul li.photo div.image, body.browse div.article div.apartment > ul li.photo div.image {
   width: 110px;
   height: 110px;
   float: left;
   padding: 5px 0 5px 5px;
 }
 /* line 120, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.article div.apartment > ul li.photo div.count, body.searches div.article div.apartment > ul li.photo div.count, body.neighborhoods.show div.article div.apartment > ul li.photo div.count {
+body.dashboard div.article div.apartment > ul li.photo div.count, body.searches div.article div.apartment > ul li.photo div.count, body.neighborhoods.show div.article div.apartment > ul li.photo div.count, body.browse div.article div.apartment > ul li.photo div.count {
   width: 35px;
   height: 35px;
   background-color: #E1B55E;
@@ -1038,65 +1038,65 @@ body.dashboard div.article div.apartment > ul li.photo div.count, body.searches 
   top: -105px;
 }
 /* line 133, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.article div.apartment > ul li.info, body.searches div.article div.apartment > ul li.info, body.neighborhoods.show div.article div.apartment > ul li.info {
+body.dashboard div.article div.apartment > ul li.info, body.searches div.article div.apartment > ul li.info, body.neighborhoods.show div.article div.apartment > ul li.info, body.browse div.article div.apartment > ul li.info {
   border-right: 1px solid #CCC;
   width: 265px;
   font-weight: 500;
 }
 /* line 139, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.article div.apartment > ul li.info ul li.street, body.searches div.article div.apartment > ul li.info ul li.street, body.neighborhoods.show div.article div.apartment > ul li.info ul li.street {
+body.dashboard div.article div.apartment > ul li.info ul li.street, body.searches div.article div.apartment > ul li.info ul li.street, body.neighborhoods.show div.article div.apartment > ul li.info ul li.street, body.browse div.article div.apartment > ul li.info ul li.street {
   padding-top: 10px;
   margin-bottom: 4px;
 }
 /* line 142, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.article div.apartment > ul li.info ul li.street a, body.searches div.article div.apartment > ul li.info ul li.street a, body.neighborhoods.show div.article div.apartment > ul li.info ul li.street a {
+body.dashboard div.article div.apartment > ul li.info ul li.street a, body.searches div.article div.apartment > ul li.info ul li.street a, body.neighborhoods.show div.article div.apartment > ul li.info ul li.street a, body.browse div.article div.apartment > ul li.info ul li.street a {
   font-size: 1.8em;
   font-weight: 600;
 }
 /* line 148, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.article div.apartment > ul li.info ul li.neighborhood a, body.searches div.article div.apartment > ul li.info ul li.neighborhood a, body.neighborhoods.show div.article div.apartment > ul li.info ul li.neighborhood a {
+body.dashboard div.article div.apartment > ul li.info ul li.neighborhood a, body.searches div.article div.apartment > ul li.info ul li.neighborhood a, body.neighborhoods.show div.article div.apartment > ul li.info ul li.neighborhood a, body.browse div.article div.apartment > ul li.info ul li.neighborhood a {
   font-size: 1em;
 }
 /* line 152, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.article div.apartment > ul li.info ul li.basic, body.searches div.article div.apartment > ul li.info ul li.basic, body.neighborhoods.show div.article div.apartment > ul li.info ul li.basic {
+body.dashboard div.article div.apartment > ul li.info ul li.basic, body.searches div.article div.apartment > ul li.info ul li.basic, body.neighborhoods.show div.article div.apartment > ul li.info ul li.basic, body.browse div.article div.apartment > ul li.info ul li.basic {
   font-size: 1.2em;
 }
 /* line 154, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.article div.apartment > ul li.info ul li.basic span.rent, body.searches div.article div.apartment > ul li.info ul li.basic span.rent, body.neighborhoods.show div.article div.apartment > ul li.info ul li.basic span.rent {
+body.dashboard div.article div.apartment > ul li.info ul li.basic span.rent, body.searches div.article div.apartment > ul li.info ul li.basic span.rent, body.neighborhoods.show div.article div.apartment > ul li.info ul li.basic span.rent, body.browse div.article div.apartment > ul li.info ul li.basic span.rent {
   font-weight: 600;
 }
 /* line 159, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.article div.apartment > ul li.info ul li.neighborhood, body.dashboard div.article div.apartment > ul li.info ul li.published_on, body.searches div.article div.apartment > ul li.info ul li.neighborhood, body.searches div.article div.apartment > ul li.info ul li.published_on, body.neighborhoods.show div.article div.apartment > ul li.info ul li.neighborhood, body.neighborhoods.show div.article div.apartment > ul li.info ul li.published_on {
+body.dashboard div.article div.apartment > ul li.info ul li.neighborhood, body.dashboard div.article div.apartment > ul li.info ul li.published_on, body.searches div.article div.apartment > ul li.info ul li.neighborhood, body.searches div.article div.apartment > ul li.info ul li.published_on, body.neighborhoods.show div.article div.apartment > ul li.info ul li.neighborhood, body.neighborhoods.show div.article div.apartment > ul li.info ul li.published_on, body.browse div.article div.apartment > ul li.info ul li.neighborhood, body.browse div.article div.apartment > ul li.info ul li.published_on {
   font-size: 0.95em;
 }
 /* line 166, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.article div.apartment > ul li.status div, body.searches div.article div.apartment > ul li.status div, body.neighborhoods.show div.article div.apartment > ul li.status div {
+body.dashboard div.article div.apartment > ul li.status div, body.searches div.article div.apartment > ul li.status div, body.neighborhoods.show div.article div.apartment > ul li.status div, body.browse div.article div.apartment > ul li.status div {
   height: 62px;
 }
 /* line 170, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.article div.apartment > ul li.status p, body.searches div.article div.apartment > ul li.status p, body.neighborhoods.show div.article div.apartment > ul li.status p {
+body.dashboard div.article div.apartment > ul li.status p, body.searches div.article div.apartment > ul li.status p, body.neighborhoods.show div.article div.apartment > ul li.status p, body.browse div.article div.apartment > ul li.status p {
   font-weight: bold;
   font-size: 1.1em;
   margin-bottom: 3px;
   padding-top: 2px;
 }
 /* line 177, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.article div.apartment > ul li.status ul.buttons, body.searches div.article div.apartment > ul li.status ul.buttons, body.neighborhoods.show div.article div.apartment > ul li.status ul.buttons {
+body.dashboard div.article div.apartment > ul li.status ul.buttons, body.searches div.article div.apartment > ul li.status ul.buttons, body.neighborhoods.show div.article div.apartment > ul li.status ul.buttons, body.browse div.article div.apartment > ul li.status ul.buttons {
   padding-left: 12px;
   margin-top: 10px;
 }
 /* line 181, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.article div.apartment > ul li.status ul.buttons li, body.searches div.article div.apartment > ul li.status ul.buttons li, body.neighborhoods.show div.article div.apartment > ul li.status ul.buttons li {
+body.dashboard div.article div.apartment > ul li.status ul.buttons li, body.searches div.article div.apartment > ul li.status ul.buttons li, body.neighborhoods.show div.article div.apartment > ul li.status ul.buttons li, body.browse div.article div.apartment > ul li.status ul.buttons li {
   float: left;
   margin-right: 10px;
   width: 70px;
 }
 /* line 186, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.article div.apartment > ul li.status ul.buttons li a, body.searches div.article div.apartment > ul li.status ul.buttons li a, body.neighborhoods.show div.article div.apartment > ul li.status ul.buttons li a {
+body.dashboard div.article div.apartment > ul li.status ul.buttons li a, body.searches div.article div.apartment > ul li.status ul.buttons li a, body.neighborhoods.show div.article div.apartment > ul li.status ul.buttons li a, body.browse div.article div.apartment > ul li.status ul.buttons li a {
   color: white;
 }
 /* line 191, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.article div.apartment > ul li.status ul.buttons li.edit, body.searches div.article div.apartment > ul li.status ul.buttons li.edit, body.neighborhoods.show div.article div.apartment > ul li.status ul.buttons li.edit {
+body.dashboard div.article div.apartment > ul li.status ul.buttons li.edit, body.searches div.article div.apartment > ul li.status ul.buttons li.edit, body.neighborhoods.show div.article div.apartment > ul li.status ul.buttons li.edit, body.browse div.article div.apartment > ul li.status ul.buttons li.edit {
   display: block;
   text-decoration: none;
   text-align: center;
@@ -1120,7 +1120,7 @@ body.dashboard div.article div.apartment > ul li.status ul.buttons li.edit, body
   line-height: 26px;
 }
 /* line 197, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.article div.apartment > ul li.status ul.buttons li.delete, body.searches div.article div.apartment > ul li.status ul.buttons li.delete, body.neighborhoods.show div.article div.apartment > ul li.status ul.buttons li.delete {
+body.dashboard div.article div.apartment > ul li.status ul.buttons li.delete, body.searches div.article div.apartment > ul li.status ul.buttons li.delete, body.neighborhoods.show div.article div.apartment > ul li.status ul.buttons li.delete, body.browse div.article div.apartment > ul li.status ul.buttons li.delete {
   display: block;
   text-decoration: none;
   text-align: center;
@@ -1144,64 +1144,64 @@ body.dashboard div.article div.apartment > ul li.status ul.buttons li.delete, bo
   line-height: 26px;
 }
 /* line 206, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.article div.apartment > ul li.status fieldset.inputs ol li, body.searches div.article div.apartment > ul li.status fieldset.inputs ol li, body.neighborhoods.show div.article div.apartment > ul li.status fieldset.inputs ol li {
+body.dashboard div.article div.apartment > ul li.status fieldset.inputs ol li, body.searches div.article div.apartment > ul li.status fieldset.inputs ol li, body.neighborhoods.show div.article div.apartment > ul li.status fieldset.inputs ol li, body.browse div.article div.apartment > ul li.status fieldset.inputs ol li {
   padding-left: 10px;
   margin-bottom: 1px;
 }
 /* line 209, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.article div.apartment > ul li.status fieldset.inputs ol li label, body.searches div.article div.apartment > ul li.status fieldset.inputs ol li label, body.neighborhoods.show div.article div.apartment > ul li.status fieldset.inputs ol li label {
+body.dashboard div.article div.apartment > ul li.status fieldset.inputs ol li label, body.searches div.article div.apartment > ul li.status fieldset.inputs ol li label, body.neighborhoods.show div.article div.apartment > ul li.status fieldset.inputs ol li label, body.browse div.article div.apartment > ul li.status fieldset.inputs ol li label {
   display: inline;
   float: none;
   font-size: 1.1em;
 }
 /* line 215, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.article div.apartment > ul li.status fieldset.inputs ol li input[type=radio], body.searches div.article div.apartment > ul li.status fieldset.inputs ol li input[type=radio], body.neighborhoods.show div.article div.apartment > ul li.status fieldset.inputs ol li input[type=radio] {
+body.dashboard div.article div.apartment > ul li.status fieldset.inputs ol li input[type=radio], body.searches div.article div.apartment > ul li.status fieldset.inputs ol li input[type=radio], body.neighborhoods.show div.article div.apartment > ul li.status fieldset.inputs ol li input[type=radio], body.browse div.article div.apartment > ul li.status fieldset.inputs ol li input[type=radio] {
   margin-right: 5px;
 }
 /* line 219, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.article div.apartment > ul li.status fieldset.inputs ol li.active, body.searches div.article div.apartment > ul li.status fieldset.inputs ol li.active, body.neighborhoods.show div.article div.apartment > ul li.status fieldset.inputs ol li.active {
+body.dashboard div.article div.apartment > ul li.status fieldset.inputs ol li.active, body.searches div.article div.apartment > ul li.status fieldset.inputs ol li.active, body.neighborhoods.show div.article div.apartment > ul li.status fieldset.inputs ol li.active, body.browse div.article div.apartment > ul li.status fieldset.inputs ol li.active {
   background-color: #1982A0;
   color: white;
 }
 /* line 228, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.article div.apartment > ul li.contact, body.searches div.article div.apartment > ul li.contact, body.neighborhoods.show div.article div.apartment > ul li.contact {
+body.dashboard div.article div.apartment > ul li.contact, body.searches div.article div.apartment > ul li.contact, body.neighborhoods.show div.article div.apartment > ul li.contact, body.browse div.article div.apartment > ul li.contact {
   width: 180px;
   margin-right: 0;
 }
 /* line 232, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.article div.apartment > ul li.contact ul, body.searches div.article div.apartment > ul li.contact ul, body.neighborhoods.show div.article div.apartment > ul li.contact ul {
+body.dashboard div.article div.apartment > ul li.contact ul, body.searches div.article div.apartment > ul li.contact ul, body.neighborhoods.show div.article div.apartment > ul li.contact ul, body.browse div.article div.apartment > ul li.contact ul {
   position: relative;
   top: 20px;
 }
 /* line 236, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.article div.apartment > ul li.contact ul li, body.searches div.article div.apartment > ul li.contact ul li, body.neighborhoods.show div.article div.apartment > ul li.contact ul li {
+body.dashboard div.article div.apartment > ul li.contact ul li, body.searches div.article div.apartment > ul li.contact ul li, body.neighborhoods.show div.article div.apartment > ul li.contact ul li, body.browse div.article div.apartment > ul li.contact ul li {
   padding-left: 15px;
 }
 /* line 240, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.article div.apartment > ul li.contact ul li.phone, body.searches div.article div.apartment > ul li.contact ul li.phone, body.neighborhoods.show div.article div.apartment > ul li.contact ul li.phone {
+body.dashboard div.article div.apartment > ul li.contact ul li.phone, body.searches div.article div.apartment > ul li.contact ul li.phone, body.neighborhoods.show div.article div.apartment > ul li.contact ul li.phone, body.browse div.article div.apartment > ul li.contact ul li.phone {
   font-weight: 500;
   font-size: 1.7em;
   margin-bottom: 5px;
 }
 /* line 246, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.article div.apartment > ul li.contact ul li.message a, body.dashboard div.article div.apartment > ul li.contact ul li.favorite a, body.searches div.article div.apartment > ul li.contact ul li.message a, body.searches div.article div.apartment > ul li.contact ul li.favorite a, body.neighborhoods.show div.article div.apartment > ul li.contact ul li.message a, body.neighborhoods.show div.article div.apartment > ul li.contact ul li.favorite a {
+body.dashboard div.article div.apartment > ul li.contact ul li.message a, body.dashboard div.article div.apartment > ul li.contact ul li.favorite a, body.searches div.article div.apartment > ul li.contact ul li.message a, body.searches div.article div.apartment > ul li.contact ul li.favorite a, body.neighborhoods.show div.article div.apartment > ul li.contact ul li.message a, body.neighborhoods.show div.article div.apartment > ul li.contact ul li.favorite a, body.browse div.article div.apartment > ul li.contact ul li.message a, body.browse div.article div.apartment > ul li.contact ul li.favorite a {
   padding-left: 15px;
   font-size: 0.95em;
 }
 /* line 251, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.article div.apartment > ul li.contact ul li.message a, body.searches div.article div.apartment > ul li.contact ul li.message a, body.neighborhoods.show div.article div.apartment > ul li.contact ul li.message a {
+body.dashboard div.article div.apartment > ul li.contact ul li.message a, body.searches div.article div.apartment > ul li.contact ul li.message a, body.neighborhoods.show div.article div.apartment > ul li.contact ul li.message a, body.browse div.article div.apartment > ul li.contact ul li.message a {
   background: url(/images/icons/message_small.png) no-repeat 0 4px;
 }
 /* line 256, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.article div.apartment > ul li.contact ul li.favorite a.add, body.searches div.article div.apartment > ul li.contact ul li.favorite a.add, body.neighborhoods.show div.article div.apartment > ul li.contact ul li.favorite a.add {
+body.dashboard div.article div.apartment > ul li.contact ul li.favorite a.add, body.searches div.article div.apartment > ul li.contact ul li.favorite a.add, body.neighborhoods.show div.article div.apartment > ul li.contact ul li.favorite a.add, body.browse div.article div.apartment > ul li.contact ul li.favorite a.add {
   background: url(/images/icons/add_small.png) no-repeat 0 3px;
 }
 /* line 260, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.article div.apartment > ul li.contact ul li.favorite a.remove, body.searches div.article div.apartment > ul li.contact ul li.favorite a.remove, body.neighborhoods.show div.article div.apartment > ul li.contact ul li.favorite a.remove {
+body.dashboard div.article div.apartment > ul li.contact ul li.favorite a.remove, body.searches div.article div.apartment > ul li.contact ul li.favorite a.remove, body.neighborhoods.show div.article div.apartment > ul li.contact ul li.favorite a.remove, body.browse div.article div.apartment > ul li.contact ul li.favorite a.remove {
   background: url(/images/icons/remove_small.png) no-repeat 0 3px;
 }
 /* line 270, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.pagination, body.searches div.pagination, body.neighborhoods.show div.pagination {
+body.dashboard div.pagination, body.searches div.pagination, body.neighborhoods.show div.pagination, body.browse div.pagination {
   overflow: hidden;
   *zoom: 1;
   font-size: 1.2em;
@@ -1209,78 +1209,78 @@ body.dashboard div.pagination, body.searches div.pagination, body.neighborhoods.
   width: 100%;
 }
 /* line 275, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.pagination > ul, body.searches div.pagination > ul, body.neighborhoods.show div.pagination > ul {
+body.dashboard div.pagination > ul, body.searches div.pagination > ul, body.neighborhoods.show div.pagination > ul, body.browse div.pagination > ul {
   padding: 9px 18px;
 }
 /* line 277, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.pagination > ul > li.counts, body.searches div.pagination > ul > li.counts, body.neighborhoods.show div.pagination > ul > li.counts {
+body.dashboard div.pagination > ul > li.counts, body.searches div.pagination > ul > li.counts, body.neighborhoods.show div.pagination > ul > li.counts, body.browse div.pagination > ul > li.counts {
   float: left;
 }
 /* line 280, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.pagination > ul > li.navigation, body.searches div.pagination > ul > li.navigation, body.neighborhoods.show div.pagination > ul > li.navigation {
+body.dashboard div.pagination > ul > li.navigation, body.searches div.pagination > ul > li.navigation, body.neighborhoods.show div.pagination > ul > li.navigation, body.browse div.pagination > ul > li.navigation {
   float: right;
 }
 /* line 283, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.pagination > ul > li.navigation > ul.pagination > li, body.searches div.pagination > ul > li.navigation > ul.pagination > li, body.neighborhoods.show div.pagination > ul > li.navigation > ul.pagination > li {
+body.dashboard div.pagination > ul > li.navigation > ul.pagination > li, body.searches div.pagination > ul > li.navigation > ul.pagination > li, body.neighborhoods.show div.pagination > ul > li.navigation > ul.pagination > li, body.browse div.pagination > ul > li.navigation > ul.pagination > li {
   float: left;
   padding: 0 0 0 5px;
 }
 /* line 292, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.aside, body.searches div.aside, body.neighborhoods.show div.aside {
+body.dashboard div.aside, body.searches div.aside, body.neighborhoods.show div.aside, body.browse div.aside {
   width: 310px;
   float: right;
 }
 /* line 296, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.aside h3, body.searches div.aside h3, body.neighborhoods.show div.aside h3 {
+body.dashboard div.aside h3, body.searches div.aside h3, body.neighborhoods.show div.aside h3, body.browse div.aside h3 {
   font-size: 2em;
   padding-bottom: 8px;
   margin-bottom: 0;
 }
 /* line 302, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.aside div#map_canvas, body.searches div.aside div#map_canvas, body.neighborhoods.show div.aside div#map_canvas {
+body.dashboard div.aside div#map_canvas, body.searches div.aside div#map_canvas, body.neighborhoods.show div.aside div#map_canvas, body.browse div.aside div#map_canvas {
   width: 306px;
   height: 306px;
   margin-top: 4px;
 }
 /* line 308, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.aside div#activity_feed, body.searches div.aside div#activity_feed, body.neighborhoods.show div.aside div#activity_feed {
+body.dashboard div.aside div#activity_feed, body.searches div.aside div#activity_feed, body.neighborhoods.show div.aside div#activity_feed, body.browse div.aside div#activity_feed {
   margin-top: 15px;
 }
 /* line 311, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.aside div#activity_feed h3, body.searches div.aside div#activity_feed h3, body.neighborhoods.show div.aside div#activity_feed h3 {
+body.dashboard div.aside div#activity_feed h3, body.searches div.aside div#activity_feed h3, body.neighborhoods.show div.aside div#activity_feed h3, body.browse div.aside div#activity_feed h3 {
   border-right: 4px solid #429E87;
 }
 /* line 315, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.aside div#activity_feed ul, body.searches div.aside div#activity_feed ul, body.neighborhoods.show div.aside div#activity_feed ul {
+body.dashboard div.aside div#activity_feed ul, body.searches div.aside div#activity_feed ul, body.neighborhoods.show div.aside div#activity_feed ul, body.browse div.aside div#activity_feed ul {
   margin-top: 5px;
   padding-right: 22px;
 }
 /* line 319, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.aside div#activity_feed ul li, body.searches div.aside div#activity_feed ul li, body.neighborhoods.show div.aside div#activity_feed ul li {
+body.dashboard div.aside div#activity_feed ul li, body.searches div.aside div#activity_feed ul li, body.neighborhoods.show div.aside div#activity_feed ul li, body.browse div.aside div#activity_feed ul li {
   background-repeat: no-repeat;
   background-position: 0 2px;
   padding-left: 25px;
   margin-bottom: 12px;
 }
 /* line 325, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.aside div#activity_feed ul li span.text, body.searches div.aside div#activity_feed ul li span.text, body.neighborhoods.show div.aside div#activity_feed ul li span.text {
+body.dashboard div.aside div#activity_feed ul li span.text, body.searches div.aside div#activity_feed ul li span.text, body.neighborhoods.show div.aside div#activity_feed ul li span.text, body.browse div.aside div#activity_feed ul li span.text {
   font-weight: 500;
 }
 /* line 329, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.aside div#activity_feed ul li span.date, body.searches div.aside div#activity_feed ul li span.date, body.neighborhoods.show div.aside div#activity_feed ul li span.date {
+body.dashboard div.aside div#activity_feed ul li span.date, body.searches div.aside div#activity_feed ul li span.date, body.neighborhoods.show div.aside div#activity_feed ul li span.date, body.browse div.aside div#activity_feed ul li span.date {
   display: block;
   color: #888;
 }
 /* line 335, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.aside div#activity_feed ul li.favorite.created, body.searches div.aside div#activity_feed ul li.favorite.created, body.neighborhoods.show div.aside div#activity_feed ul li.favorite.created {
+body.dashboard div.aside div#activity_feed ul li.favorite.created, body.searches div.aside div#activity_feed ul li.favorite.created, body.neighborhoods.show div.aside div#activity_feed ul li.favorite.created, body.browse div.aside div#activity_feed ul li.favorite.created {
   background: url(/images/icons/add.png) no-repeat 0 2px;
 }
 /* line 339, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.aside div#activity_feed ul li.favorite.destroyed, body.searches div.aside div#activity_feed ul li.favorite.destroyed, body.neighborhoods.show div.aside div#activity_feed ul li.favorite.destroyed {
+body.dashboard div.aside div#activity_feed ul li.favorite.destroyed, body.searches div.aside div#activity_feed ul li.favorite.destroyed, body.neighborhoods.show div.aside div#activity_feed ul li.favorite.destroyed, body.browse div.aside div#activity_feed ul li.favorite.destroyed {
   background: url(/images/icons/remove.png) no-repeat 0 2px;
 }
 /* line 343, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.aside div#activity_feed ul li.message.created, body.searches div.aside div#activity_feed ul li.message.created, body.neighborhoods.show div.aside div#activity_feed ul li.message.created {
+body.dashboard div.aside div#activity_feed ul li.message.created, body.searches div.aside div#activity_feed ul li.message.created, body.neighborhoods.show div.aside div#activity_feed ul li.message.created, body.browse div.aside div#activity_feed ul li.message.created {
   background: url(/images/icons/message.png) no-repeat 0 2px;
 }
 

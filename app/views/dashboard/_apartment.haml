@@ -19,8 +19,9 @@
     %li.contact
       %ul
         %li.phone=number_to_phone(apartment.user.phone, :area_code => true)
-        %li.message
-          =link_to "send message", "#", :'data-apartment-id' => apartment.id
-          =render "messages/dialog", :apartment => apartment
-        %li.favorite=render "favorites/link", :apartment => apartment, :count => position
+        -if signed_in?
+          %li.message
+            =link_to "send message", "#", :'data-apartment-id' => apartment.id
+            =render "messages/dialog", :apartment => apartment
+          %li.favorite=render "favorites/link", :apartment => apartment, :count => position
 

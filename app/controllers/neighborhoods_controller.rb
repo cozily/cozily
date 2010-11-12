@@ -1,6 +1,4 @@
 class NeighborhoodsController < ApplicationController
-  before_filter :authenticate
-
   def show
     @neighborhood = Neighborhood.find(params[:id])
     @apartments = @neighborhood.published_apartments.paginate(:page => params[:page], :per_page => Apartment.per_page)

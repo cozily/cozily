@@ -27,7 +27,7 @@ class Search
       condition << "rent <= #{@max_rent}" if @max_rent.present?
       condition << "apartments.state = 'published'"
     end.join(" AND ")
-    apartments = Apartment.all(:conditions => conditions, :joins => :address)
+    apartments = Apartment.all(:conditions => conditions, :joins => :address, :order => "published_at desc")
     unless @neighborhood_ids.empty?
       apartments = apartments.select { |a| (a.neighborhoods.map(&:id) & @neighborhood_ids).present? }
     end

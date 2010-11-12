@@ -1,5 +1,5 @@
 class ApartmentsController < ApplicationController
-  before_filter :authenticate
+  before_filter :authenticate, :except => [:show]
   load_and_authorize_resource
 
   def new

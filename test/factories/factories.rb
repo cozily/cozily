@@ -18,6 +18,10 @@ Factory.define :apartment do |a|
   a.start_date      1.month.from_now
 end
 
+Factory.define :published_apartment, :parent => :apartment do |a|
+  a.state  'published'
+end
+
 Factory.define :apartment_feature do |a|
   a.association  :apartment
   a.association  :feature
