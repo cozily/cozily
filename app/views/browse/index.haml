@@ -21,7 +21,7 @@
           %li.counts= pagination_summary(params[:page], Apartment.with_state(:published))
           %li.navigation= will_paginate(@apartments, :renderer => AjaxPaginationLinkRenderer)
       -@apartments.each do |apartment|
-        =render "dashboard/apartment", :apartment => apartment, :position => position_in_collection(apartment, Apartment.with_state(:published))
+        =render "dashboard/apartment", :apartment => apartment, :position => position_in_collection(apartment, Apartment.descend_by_published_at.with_state(:published))
       .pagination
         %ul
           %li.counts= pagination_summary(params[:page], Apartment.with_state(:published))
