@@ -1,127 +1,127 @@
----
-live_in_super:
+--- 
+live_in_super: 
   name: live-in super
   category: building
-  created_at: 2010-10-18 03:58:18.764311
-  updated_at: 2010-10-18 03:58:18.764311
+  created_at: 2010-11-13 06:34:36.452839
+  updated_at: 2010-11-13 06:34:36.452839
   id: "12"
-case_by_case:
+case_by_case: 
   name: case-by-case
   category: pet
-  created_at: 2010-10-18 03:58:18.791791
-  updated_at: 2010-10-18 03:58:18.791791
+  created_at: 2010-11-13 06:34:36.479321
+  updated_at: 2010-11-13 06:34:36.479321
   id: "20"
-roof_deck:
+roof_deck: 
   name: roof deck
   category: building
-  created_at: 2010-10-18 03:58:18.780312
-  updated_at: 2010-10-18 03:58:18.780312
+  created_at: 2010-11-13 06:34:36.468232
+  updated_at: 2010-11-13 06:34:36.468232
   id: "17"
-doorman:
+doorman: 
   name: doorman
   category: building
-  created_at: 2010-10-18 03:58:18.767562
-  updated_at: 2010-10-18 03:58:18.767562
+  created_at: 2010-11-13 06:34:36.456074
+  updated_at: 2010-11-13 06:34:36.456074
   id: "13"
-backyard:
+backyard: 
   name: backyard
   category: apartment
-  created_at: 2010-10-18 03:58:18.744132
-  updated_at: 2010-10-18 03:58:18.744132
+  created_at: 2010-11-13 06:34:36.433639
+  updated_at: 2010-11-13 06:34:36.433639
   id: "6"
-dogs_allowed:
+dogs_allowed: 
   name: dogs allowed
   category: pet
-  created_at: 2010-10-18 03:58:18.788708
-  updated_at: 2010-10-18 03:58:18.788708
+  created_at: 2010-11-13 06:34:36.47608
+  updated_at: 2010-11-13 06:34:36.47608
   id: "19"
-exposed_brick:
+exposed_brick: 
   name: exposed brick
   category: apartment
-  created_at: 2010-10-18 03:58:18.73001
-  updated_at: 2010-10-18 03:58:18.73001
+  created_at: 2010-11-13 06:34:36.420409
+  updated_at: 2010-11-13 06:34:36.420409
   id: "2"
-gym:
+gym: 
   name: gym
   category: building
-  created_at: 2010-10-18 03:58:18.773995
-  updated_at: 2010-10-18 03:58:18.773995
+  created_at: 2010-11-13 06:34:36.462256
+  updated_at: 2010-11-13 06:34:36.462256
   id: "15"
-sleeping_loft:
+sleeping_loft: 
   name: sleeping loft
   category: apartment
-  created_at: 2010-10-18 03:58:18.734016
-  updated_at: 2010-10-18 03:58:18.734016
+  created_at: 2010-11-13 06:34:36.423836
+  updated_at: 2010-11-13 06:34:36.423836
   id: "3"
-furnished:
+furnished: 
   name: furnished
   category: apartment
-  created_at: 2010-10-18 03:58:18.72336
-  updated_at: 2010-10-18 03:58:18.72336
+  created_at: 2010-11-13 06:34:36.413876
+  updated_at: 2010-11-13 06:34:36.413876
   id: "1"
-bathtub:
+bathtub: 
   name: bathtub
   category: apartment
-  created_at: 2010-10-18 03:58:18.750634
-  updated_at: 2010-10-18 03:58:18.750634
+  created_at: 2010-11-13 06:34:36.439787
+  updated_at: 2010-11-13 06:34:36.439787
   id: "8"
-elevator:
+elevator: 
   name: elevator
   category: building
-  created_at: 2010-10-18 03:58:18.770904
-  updated_at: 2010-10-18 03:58:18.770904
+  created_at: 2010-11-13 06:34:36.459311
+  updated_at: 2010-11-13 06:34:36.459311
   id: "14"
-balcony:
+balcony: 
   name: balcony
   category: apartment
-  created_at: 2010-10-18 03:58:18.747293
-  updated_at: 2010-10-18 03:58:18.747293
+  created_at: 2010-11-13 06:34:36.436715
+  updated_at: 2010-11-13 06:34:36.436715
   id: "7"
-cats_allowed:
+cats_allowed: 
   name: cats allowed
   category: pet
-  created_at: 2010-10-18 03:58:18.785365
-  updated_at: 2010-10-18 03:58:18.785365
+  created_at: 2010-11-13 06:34:36.472872
+  updated_at: 2010-11-13 06:34:36.472872
   id: "18"
-dishwasher:
+dishwasher: 
   name: dishwasher
   category: apartment
-  created_at: 2010-10-18 03:58:18.754888
-  updated_at: 2010-10-18 03:58:18.754888
+  created_at: 2010-11-13 06:34:36.442918
+  updated_at: 2010-11-13 06:34:36.442918
   id: "9"
-air_conditioning:
+air_conditioning: 
   name: air conditioning
   category: apartment
-  created_at: 2010-10-18 03:58:18.741001
-  updated_at: 2010-10-18 03:58:18.741001
+  created_at: 2010-11-13 06:34:36.430536
+  updated_at: 2010-11-13 06:34:36.430536
   id: "5"
-pool:
+pool: 
   name: pool
   category: building
-  created_at: 2010-10-18 03:58:18.777222
-  updated_at: 2010-10-18 03:58:18.777222
+  created_at: 2010-11-13 06:34:36.465185
+  updated_at: 2010-11-13 06:34:36.465185
   id: "16"
-washer_dryer:
+washer_dryer: 
   name: washer/dryer
   category: apartment
-  created_at: 2010-10-18 03:58:18.758099
-  updated_at: 2010-10-18 03:58:18.758099
+  created_at: 2010-11-13 06:34:36.446282
+  updated_at: 2010-11-13 06:34:36.446282
   id: "10"
-unknown:
+unknown: 
   name: unknown
   category: pet
-  created_at: 2010-10-18 03:58:18.794736
-  updated_at: 2010-10-18 03:58:18.794736
+  created_at: 2010-11-13 06:34:36.482337
+  updated_at: 2010-11-13 06:34:36.482337
   id: "21"
-high_rise:
+high_rise: 
   name: high-rise
   category: building
-  created_at: 2010-10-18 03:58:18.76117
-  updated_at: 2010-10-18 03:58:18.76117
+  created_at: 2010-11-13 06:34:36.449407
+  updated_at: 2010-11-13 06:34:36.449407
   id: "11"
-high_ceilings:
+high_ceilings: 
   name: high ceilings
   category: apartment
-  created_at: 2010-10-18 03:58:18.737725
-  updated_at: 2010-10-18 03:58:18.737725
+  created_at: 2010-11-13 06:34:36.427122
+  updated_at: 2010-11-13 06:34:36.427122
   id: "4"
