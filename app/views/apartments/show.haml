@@ -23,6 +23,8 @@
 
     .content
       - if @apartment.images.present?
+        - if @apartment.sublet?
+          %h3.sublet sublet
         = image_tag @apartment.images.first.asset.url(:large), :class => "active"
       - else
         = image_tag "defaults/apartment/large.jpg", :class => "active"
