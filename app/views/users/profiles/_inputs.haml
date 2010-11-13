@@ -31,7 +31,6 @@
 
   %fieldset.lister
     %legend We want to include a phone number with your listings.
-    -unless f.object.new_record?
-      -f.inputs do
-        = f.input :phone
-        = f.input :receive_listing_summaries, :label => "Receive weekly summary emails about your listings"
+    -f.inputs do
+      = f.input :phone
+      = f.input :receive_listing_summaries, :label => "Receive weekly summary emails about your listings"
