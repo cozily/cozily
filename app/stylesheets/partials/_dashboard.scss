@@ -158,6 +158,12 @@ body.dashboard, body.searches, body.neighborhoods.show, body.browse {
 
                         li.neighborhood, li.published_on {
                             font-size: 0.95em;
+
+                            span {
+                                font-style: italic;
+                                font-weight: 600;
+                                margin-left: 5px;
+                            }
                         }
                     }
                 }
