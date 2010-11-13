@@ -50,12 +50,8 @@ describe UserMailer do
   describe "#deliver_lister_summary" do
     before do
       @user = Factory(:user)
-      @published_apartment = Factory(:apartment,
-                                     :user => @user,
-                                     :state => 'published')
-      @unpublished_apartment = Factory(:apartment,
-                                       :user => @user,
-                                       :state => 'unpublished')
+      @published_apartment = Factory(:published_apartment, :user => @user)
+      @unpublished_apartment = Factory(:apartment, :user => @user)
       @email = UserMailer.deliver_lister_summary(@user)
     end
 

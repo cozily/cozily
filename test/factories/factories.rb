@@ -20,6 +20,9 @@ end
 
 Factory.define :published_apartment, :parent => :apartment do |a|
   a.state  'published'
+  a.after_create do |apartment|
+    2.times { Factory(:image, :apartment => apartment) }
+  end
 end
 
 Factory.define :apartment_feature do |a|
