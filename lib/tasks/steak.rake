@@ -1,5 +1,7 @@
 unless ARGV.any? {|a| a =~ /^gems/} # Don't load anything when running the gems:* tasks
 
+require 'spec/rake/spectask'
+
 namespace :spec do
   desc "Run the code examples in spec/acceptance"
   Spec::Rake::SpecTask.new(:acceptance => "db:test:prepare") do |t|
