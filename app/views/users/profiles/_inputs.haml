@@ -16,21 +16,21 @@
     - f.object.build_profile unless f.object.profile.present?
     - f.semantic_fields_for :profile do |profile_fields|
       - profile_fields.inputs do
-        = profile_fields.input :bedrooms, :label => "Minimum bedrooms", :as => :select, :collection => (0..8)
-        = profile_fields.input :rent, :label => "Maximum rent"
+        = profile_fields.input :bedrooms, :label => "Minimum bedrooms", :as => :select, :collection => (0..8), :required => false
+        = profile_fields.input :rent, :label => "Maximum rent", :required => false
         %li
-          %label{:for => "neighborhood_autocomplete"} Neighborhoods*
+          %label{:for => "neighborhood_autocomplete"} Neighborhoods
           =text_field_tag "neighborhood_autocomplete", "e.g., Alphabet City", :'data-default-value' => "e.g., Alphabet City"
           #selected_neighborhoods
             -if f.object.profile.neighborhoods.present?
               %div Selected Neighborhoods
               =selected_neighborhood_links(f.object.profile.neighborhoods)
         - unless f.object.new_record?
-          = f.input :receive_match_notifications, :label => "Receive email notifications about new matches"
-          = f.input :receive_match_summaries, :label => "Receive weekly summary emails about your matches"
+          = f.input :receive_match_notifications, :label => "Receive email notifications about new matches", :required => false
+          = f.input :receive_match_summaries, :label => "Receive weekly summary emails about your matches", :required => false
 
   %fieldset.lister
     %legend We want to include a phone number with your listings.
     -f.inputs do
       = f.input :phone
-      = f.input :receive_listing_summaries, :label => "Receive weekly summary emails about your listings"
+      = f.input :receive_listing_summaries, :label => "Receive weekly summary emails about your listings", :required => false
