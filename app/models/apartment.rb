@@ -158,6 +158,10 @@ class Apartment < ActiveRecord::Base
     subject_timeline_events.event_type_like("state_changed").first
   end
 
+  def owned_by?(user)
+    self.user == user
+  end
+
   def publishable?
     REQUIRED_FIELDS.all? { |attr| self.send(attr).present? } && (images_count > 1) && valid_sublet? && valid_user?
   end
