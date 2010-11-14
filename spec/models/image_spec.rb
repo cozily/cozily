@@ -6,19 +6,17 @@ describe Image do
 
   describe "validations" do
     it "should not change Image.count if it's destroyed and it's the only image for a published apartment" do
-      apartment = Factory(:apartment, :state => 'published')
-      image = Factory(:image, :apartment => apartment)
+      apartment = Factory(:published_apartment)
 
       lambda {
-        image.destroy
+        apartment.images.first.destroy
       }.should_not change(Image, :count)
     end
   end
 
   describe "#destroyable?" do
     before do
-      @apartment = Factory(:apartment, :state => 'published')
-      2.times { Factory(:image, :apartment => @apartment) }
+      @apartment = Factory(:published_apartment)
     end
 
     it "returns true if the apartment is published and has more than two images" do

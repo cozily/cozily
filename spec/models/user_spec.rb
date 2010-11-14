@@ -18,7 +18,7 @@ describe User do
   describe "validations" do
     it "should be invalid if phone number is nil and there are published apartments" do
       @user = Factory(:user, :phone => nil)
-      Factory(:apartment, :user => @user, :state => "published")
+      Factory(:published_apartment, :user => @user)
       @user.reload.should be_invalid
       @user.should have(1).error_on(:phone)
     end
@@ -127,14 +127,12 @@ describe User do
 
   describe "#matches" do
     before do
-      @apt1 = Factory(:apartment,
+      @apt1 = Factory(:published_apartment,
                       :bedrooms => 1,
-                      :rent => 1500,
-                      :state => "published")
-      @apt2 = Factory(:apartment,
+                      :rent => 1500)
+      @apt2 = Factory(:published_apartment,
                       :bedrooms => 2,
-                      :rent => 2100,
-                      :state => "published")
+                      :rent => 2100)
       @user = Factory(:user)
     end
 
