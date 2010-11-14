@@ -12,7 +12,9 @@
         %li.street=link_to apartment.street, apartment
         %li.basic
           %span.rent==$#{number_with_delimiter(apartment.rent)}
-          ==/ #{apartment.bedrooms.prettify}bd/#{apartment.bathrooms.prettify}ba / #{apartment.square_footage} sq. ft.
+          ==/ #{apartment.bedrooms.prettify}bd/#{apartment.bathrooms.prettify}ba
+          -if apartment.square_footage
+            ==/ #{apartment.square_footage} sq. ft.
         %li.neighborhood==Neighborhood: #{neighborhood_links(apartment.neighborhoods)}
         %li.published_on
           ==Published on #{apartment.published_at.try(:to_date).try(:to_s, :app_long)}
