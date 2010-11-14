@@ -1,8 +1,8 @@
 Given /^there are searchable apartments$/ do
-  Factory.create(:apartment, :bedrooms => 2, :bathrooms => 1, :rent => 2000, :state => 'unpublished')
-  Factory.create(:apartment, :bedrooms => 2, :bathrooms => 0.5, :rent => 1700, :state => 'published')
-  Factory.create(:apartment, :bedrooms => 1, :bathrooms => 1, :rent => 1800, :state => 'unpublished')
-  Factory.create(:apartment, :bedrooms => 2, :bathrooms => 1, :rent => 2300, :state => 'published')
+  Factory(:apartment, :bedrooms => 2, :bathrooms => 1, :rent => 2000)
+  Factory(:published_apartment, :bedrooms => 2, :bathrooms => 0.5, :rent => 1700)
+  Factory(:apartment, :bedrooms => 1, :bathrooms => 1, :rent => 1800)
+  Factory(:published_apartment, :bedrooms => 2, :bathrooms => 1, :rent => 2300)
 end
 
 Given /^I can search for apartments without parameters$/ do

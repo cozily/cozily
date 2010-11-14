@@ -31,7 +31,7 @@ Factory.define :apartment_feature do |a|
 end
 
 Factory.define :conversation do |m|
-  m.association  :apartment
+  m.association  :apartment, :factory => :published_apartment
   m.association  :sender, :factory => :email_confirmed_user
   m.association  :receiver, :factory => :email_confirmed_user
   m.body         { Faker::Lorem.paragraph }
@@ -39,7 +39,7 @@ end
 
 Factory.define :favorite do |f|
   f.association  :user
-  f.association  :apartment
+  f.association  :apartment, :factory => :published_apartment
 end
 
 Factory.define :feature do |f|
@@ -48,7 +48,7 @@ end
 
 Factory.define :flag do |f|
   f.association  :user
-  f.association  :apartment
+  f.association  :apartment, :factory => :published_apartment
 end
 
 Factory.define :image do |i|

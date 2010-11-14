@@ -87,8 +87,7 @@ Then /^I can reply to a deleted conversation$/ do
 end
 
 Then /^I can message from the dashboard$/ do
-  apartment = Factory(:apartment,
-                      :state => "published")
+  apartment = Factory(:published_apartment)
 
   Factory(:favorite,
           :apartment => apartment,

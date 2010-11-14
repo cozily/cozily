@@ -11,10 +11,7 @@ Then /^I can favorite the apartment$/ do
 end
 
 Given /^I have favorites$/ do
-  Factory(:favorite,
-          :apartment => Factory(:apartment,
-                                :state => "published"),
-          :user => the.user)
+  Factory(:favorite, :user => the.user)
 end
 
 Then /^I can view my favorites$/ do

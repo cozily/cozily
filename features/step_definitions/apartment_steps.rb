@@ -92,8 +92,11 @@ Then /^I can (publish|unpublish) the apartment$/ do |action|
 end
 
 But /^I cannot (publish|unpublish) another user's apartment$/ do |action|
-  visit apartment_path(Factory(:apartment,
-                               :state => action == "publish" ? "unpublished" : "published"))
+  if action == "publish"
+    visit apartment_path(Factory(:apartment))
+  else
+    visit apartment_path(Factory(:published_apartment))
+  end
 
   page.should_not have_css("input[type='submit'][value='#{action}']")
 end
