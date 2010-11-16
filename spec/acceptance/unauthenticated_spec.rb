@@ -19,4 +19,15 @@ feature "unauthenticated" do
     current_path.should == neighborhood_path(neighborhood)
     page.should have_content(neighborhood.name)
   end
+
+  scenario "user can sign in on the homepage" do
+    user = Factory(:email_confirmed_user)
+    visit root_path
+
+    fill_in "session_email", :with => user.email
+    fill_in "session_password", :with => user.password
+    click_button "Sign in"
+
+    page.should have_content "Hi #{user.first_name}"
+  end
 end

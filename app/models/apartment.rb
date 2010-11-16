@@ -163,7 +163,7 @@ class Apartment < ActiveRecord::Base
   end
 
   def publishable?
-    REQUIRED_FIELDS.all? { |attr| self.send(attr).present? } && (images_count > 1) && valid_sublet? && valid_user?
+    REQUIRED_FIELDS.all? { |attr| self.send(attr).present? } && (images.count > 1) && valid_sublet? && valid_user?
   end
 
   def match_for?(user)

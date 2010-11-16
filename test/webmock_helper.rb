@@ -15,3 +15,6 @@ WEBMOCK_SITES.each do |site|
     end
   end
 end
+
+url = "http://api.hostip.info/get_html.php?ip=127.0.0.1&position=true"
+WebMock.stub_http_request(:get, url).to_return(`curl -is "#{url}"`)

@@ -1,3 +1,3 @@
 namespace :suite do
-  task :all => ["spec", "spec:acceptance", "cucumber"]
+  task :all => ["spec", "spec:acceptance"]
 end
