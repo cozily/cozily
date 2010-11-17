@@ -36,8 +36,8 @@ group :test do
   gem "pickle", "0.2.11"
   gem "remarkable", "3.1.13"
   gem "remarkable_rails", "3.1.13"
-  gem "rspec", "1.3.0"
-  gem "rspec-rails", "1.3.2"
+  gem "rspec", "1.3.1"
+  gem "rspec-rails", "1.3.3"
   gem "steak", "0.3.8"
   gem "webmock", "1.3.5"
 end
