@@ -192,7 +192,7 @@ describe Apartment do
     end
 
     it "returns false when there are fewer than two images" do
-      @apartment.update_attribute(:images_count, 1)
+      @apartment.images.first.destroy
       @apartment.should_not be_publishable
     end
 
