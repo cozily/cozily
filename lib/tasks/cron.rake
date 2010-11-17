@@ -5,7 +5,5 @@ task :cron => :environment do
     User.send_later(:send_lister_summary_emails)
   end
 
-  Apartment.with_state(:published).end_date_lt(Date.today).each do |apartment|
-    apartment.unpublish!
-  end
+  Apartment.send_later(:unpublish_stale_apartments)
 end

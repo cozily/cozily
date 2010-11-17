@@ -88,6 +88,28 @@ describe Apartment do
     end
   end
 
+  describe ".unpublish_stale_apartments" do
+    it "unpublishes apartments that were listed more than 3 weeks ago" do
+      apartment1 = Factory(:published_apartment, :published_at => 22.days.ago)
+      apartment2 = Factory(:published_apartment, :published_at => 20.days.ago)
+
+      Apartment.unpublish_stale_apartments
+
+      apartment1.reload.should be_unpublished
+      apartment2.reload.should be_published
+    end
+
+    it "unpublishes apartments when their end date has passed" do
+      apartment1 = Factory(:published_apartment, :end_date => Date.yesterday)
+      apartment2 = Factory(:published_apartment, :end_date => Date.today)
+
+      Apartment.unpublish_stale_apartments
+
+      apartment1.reload.should be_unpublished
+      apartment2.reload.should be_published
+    end
+  end
+
   describe "#after_update" do
     ['unpublished', 'published'].each do |state|
       it "creates a status_changed_to_#{state} TimelineEvent when the state has changed" do

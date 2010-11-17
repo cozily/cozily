@@ -102,6 +102,13 @@ class Apartment < ActiveRecord::Base
     def per_page
       10
     end
+
+    def unpublish_stale_apartments
+      apts = Apartment.all(:conditions => ["state = 'published' AND (end_date < ? OR published_at < ?)", Date.today, 3.weeks.ago])
+      apts.each do |apartment|
+        apartment.unpublish!
+      end
+    end
   end
 
   def as_json(options = {})
