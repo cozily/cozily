@@ -9,13 +9,19 @@ end
 
 Factory.define :apartment do |a|
   a.association     :address
-  a.association     :user
+  a.association     :user, :factory => :lister
   a.unit            { (rand(100) + 1).to_s }
   a.rent            1500
   a.bedrooms        1
   a.bathrooms       1
   a.square_footage  500
   a.start_date      1.month.from_now
+end
+
+Factory.define :publishable_apartment, :parent => :apartment do |a|
+  a.after_create do |apartment|
+    2.times { Factory(:image, :apartment => apartment) }
+  end
 end
 
 Factory.define :published_apartment, :parent => :apartment do |a|

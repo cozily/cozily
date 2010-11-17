@@ -91,7 +91,7 @@ feature "apartments" do
     end
 
     scenario "user publishes an apartment" do
-      apartment = Factory(:apartment, :user => @user)
+      apartment = Factory(:publishable_apartment, :user => @user)
 
       visit edit_apartment_path(apartment)
       click_link "Publish Apartment"

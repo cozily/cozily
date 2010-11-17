@@ -20,11 +20,11 @@ feature "password reset" do
 
     assert !user.confirmation_token.blank?
     assert !ActionMailer::Base.deliveries.empty?
-    
+
     result = ActionMailer::Base.deliveries.any? do |email|
       email.to == [user.email] &&
               email.subject =~ /password/i &&
-              email.body =~ /#{user.confirmation_token}/
+              email.body =~ /#{user.reload.confirmation_token}/
     end
     assert result
   end
