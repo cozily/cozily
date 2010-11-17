@@ -164,16 +164,15 @@ describe Apartment do
 
   describe "#publishable?" do
     before do
-      @user = Factory(:email_confirmed_user,
-                      :phone => "800-555-1212")
+      @user = Factory(:email_confirmed_user, :phone => "800-555-1212")
       @apartment = Factory(:apartment,
                            :address => Factory.build(:address),
                            :user => @user,
                            :rent => 1500,
                            :bedrooms => 1,
                            :bathrooms => 1,
-                           :square_footage => 500,
-                           :images_count => 2)
+                           :square_footage => 500)
+      2.times { Factory(:image, :apartment => @apartment) }
     end
 
     it "returns true when required fields are present" do
