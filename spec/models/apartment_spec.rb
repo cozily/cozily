@@ -108,6 +108,16 @@ describe Apartment do
       apartment1.reload.should be_unpublished
       apartment2.reload.should be_published
     end
+
+    it "emails the lister when their apartment is unpublished" do
+      Factory(:published_apartment, :end_date => Date.yesterday)
+
+      lambda {
+        Apartment.unpublish_stale_apartments
+      }.should change(Delayed::Job, :count).by(1)
+
+      Delayed::Job.last.handler.should =~ /:deliver_unpublished_stale_apartment_notification/
+    end
   end
 
   describe "#after_update" do

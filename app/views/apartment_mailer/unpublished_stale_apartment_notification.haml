@@ -1,0 +1,14 @@
+=render "shared/mailer_salutation", :user => @user
+
+%p=@apartment.name
+%p==--------------------
+-if @apartment.end_date && @apartment.end_date < Date.today
+  %p==We unpublish apartments when the end date has passed.  If your apartment is still on the market, change the end date and publish your listing again.
+-else
+  %p==We unpublish apartments three weeks after they are published.  If your apartment is still on the market, please publish your listing again.
+%p==--------------------
+%p
+  To view this apartment, follow the link below:<br />
+  =url_for({:controller => 'apartments', :action => 'edit', :id => @apartment.to_param, :host => "cozi.ly"})
+
+=render "shared/mailer_signature"

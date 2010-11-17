@@ -107,6 +107,7 @@ class Apartment < ActiveRecord::Base
       apts = Apartment.all(:conditions => ["state = 'published' AND (end_date < ? OR published_at < ?)", Date.today, 3.weeks.ago])
       apts.each do |apartment|
         apartment.unpublish!
+        ApartmentMailer.send_later(:deliver_unpublished_stale_apartment_notification, apartment)
       end
     end
   end
