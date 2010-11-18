@@ -23,6 +23,7 @@ gem "rails", "2.3.10"
 gem "rdiscount", "1.6.5"
 gem "searchlogic", "2.4.19"
 gem "state_machine", "0.9.2"
+gem "steak", "0.3.8"
 gem "timeline_fu", "0.3.0"
 gem "twitter_oauth", "0.4.0"
 gem "will_paginate", "2.3.15"
@@ -38,7 +39,6 @@ group :test do
   gem "remarkable_rails", "3.1.13"
   gem "rspec", "1.3.1"
   gem "rspec-rails", "1.3.3"
-  gem "steak", "0.3.8"
   gem "webmock", "1.3.5"
 end
 
