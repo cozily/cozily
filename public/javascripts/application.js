@@ -1,4 +1,19 @@
 var staleMap;
+var sortableOptions = {
+    axis: 'x',
+    dropOnEmpty:false,
+    cursor: 'crosshair',
+    items: 'li',
+    opacity: 0.4,
+    scroll: true,
+    update: function() {
+        $.ajax({
+            type: 'put',
+            data: $('ul#images').sortable('serialize'),
+            dataType: 'script',
+            url: "/apartments/" + self.apartment.id + "/order_images"});
+    }
+};
 
 function updateContent(content) {
     var $contentKeyElements = $(content).filter('[data-content-key]');
@@ -6,6 +21,9 @@ function updateContent(content) {
         var node = $(this);
         var key = node.attr("data-content-key");
         $("[data-content-key=" + key + "]").replaceWith(node);
+        if (node.is("ul#images")) {
+            node.sortable(sortableOptions);
+        }
     });
 
     $(document).trigger('content-updated');
@@ -260,30 +278,16 @@ function liveNeighborhoodAutocomplete() {
                         $('#upload_status').text('Error: only images are allowed');
                         return false;
                     }
-
                 },
-                onComplete : function(file, extension) {
+                onComplete : function(file, response) {
                     $("div#upload_status").text('');
-                    $("ul#images").replaceWith(extension);
+                    $("ul#images").replaceWith(response);
+                    $("ul#images").sortable(sortableOptions);
                 }
             });
         }
 
-        $('ul#images').sortable({
-            axis: 'x',
-            dropOnEmpty:false,
-            cursor: 'crosshair',
-            items: 'li',
-            opacity: 0.4,
-            scroll: true,
-            update: function() {
-                $.ajax({
-                    type: 'put',
-                    data: $('ul#images').sortable('serialize'),
-                    dataType: 'script',
-                    url: "/apartments/" + self.apartment.id + "/order_images"});
-            }
-        });
+        $('ul#images').sortable(sortableOptions);
 
         $(document).bind("selected_neighborhood::change", function(event) {
             var div = $(event.target);

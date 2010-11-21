@@ -4,7 +4,6 @@ class ImagesController < ApplicationController
   def create
     @image = @apartment.images.create(:asset => params[:userfile])
 
-    # TODO : Make this work with JSON
     render :text => render_to_string(:partial => "apartments/images", :locals => { :apartment => @apartment })
   end
 
