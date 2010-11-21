@@ -85,7 +85,7 @@
           %li=link_to "Terms of Service", terms_of_service_page_path
           %li.twitter=link_to image_tag("icons/twitter.png"), "http://twitter.com/cozidotly", :target => "_blank"
           %li.facebook=link_to image_tag("icons/facebook.png"), "http://facebook.com/cozily", :target => "_blank"
-          %li.copyright="&copy; #{Time.now.year} Cozily All Rights Reserved"
+          %li.copyright==&copy; #{Time.now.year} Cozily All Rights Reserved
 
     =render "feedback/feedback"
 
