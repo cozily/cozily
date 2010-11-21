@@ -49,10 +49,14 @@
 
         -if @apartment.features.present?
           .highlights
-            %h4 Apartment Highlights
-            %ul
-              -@apartment.features.each do |feature|
-                %li=feature.name
+            %h4 Highlights
+            %dl
+              - ["apartment", "building", "pet"].each do |category|
+                - category_features = @apartment.features.all(:conditions => {:category => category})
+                - if category_features.present?
+                  %dt= "#{category.titleize} Features:"
+                  - category_features.each do |feature|
+                    %dd= feature.name
 
       .images
         %ul
