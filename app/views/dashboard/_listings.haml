@@ -1,57 +1,56 @@
-.head
-  %h1==Hi, #{current_user.first_name}
+%div{:'data-content-key' => 'active-tab'}
+  .article
+    -if apartments.present?
+      .new=link_to "Create New Listing", new_apartment_path
 
-  .lady
-    %span=lady_text
-
-  =render "dashboard/tabs", :active => :listings
-
-.article
-  -if apartments.present?
-    .new=link_to "Create New Listing", new_apartment_path
-
-    .pagination
-      %ul
-        %li.counts= pagination_summary(params[:page], current_user.apartments)
-        %li.navigation= will_paginate(apartments, :renderer => AjaxPaginationLinkRenderer)
-    -apartments.each do |apartment|
-      -position = position_in_collection(apartment, current_user.apartments)
-      .listing[apartment]
+      .pagination
         %ul
-          %li.photo
-            .image
-              -if apartment.images.present?
-                =link_to(image_tag(apartment.images.first.asset.url(:medium)), path_for_apartment(apartment))
-              -else
-                =link_to(image_tag("defaults/apartment/medium.jpg"), path_for_apartment(apartment))
-            .count=position
-          %li.info
-            %ul
-              %li.street
-                =link_to apartment.address.present? ? apartment.street : name_for_apartment(apartment), path_for_apartment(apartment)
-              %li.basic
-                %span.rent==$#{number_with_delimiter(apartment.rent)}
-                ==/ #{apartment.bedrooms.try(:prettify)}bd/#{apartment.bathrooms.try(:prettify)}ba / #{apartment.square_footage} sq. ft.
-              -if apartment.address
-                %li.neighborhood==Neighborhood: #{neighborhood_links(apartment.neighborhoods)}
-              %li.published_on=last_state_change(apartment)
+          %li.counts= pagination_summary(params[:page], current_user.apartments)
+          %li.navigation= will_paginate(apartments)
+      -apartments.each do |apartment|
+        -position = position_in_collection(apartment, current_user.apartments)
+        .listing[apartment]
+          %ul
+            %li.photo
+              .image
+                -if apartment.images.present?
+                  =link_to(image_tag(apartment.images.first.asset.url(:medium)), path_for_apartment(apartment))
+                -else
+                  =link_to(image_tag("defaults/apartment/medium.jpg"), path_for_apartment(apartment))
+              .count=position
+            %li.info
+              %ul
+                %li.street
+                  =link_to apartment.address.present? ? apartment.street : name_for_apartment(apartment), path_for_apartment(apartment)
+                %li.basic
+                  %span.rent==$#{number_with_delimiter(apartment.rent)}
+                  ==/ #{apartment.bedrooms.try(:prettify)}bd/#{apartment.bathrooms.try(:prettify)}ba / #{apartment.square_footage} sq. ft.
+                -if apartment.address
+                  %li.neighborhood==Neighborhood: #{neighborhood_links(apartment.neighborhoods)}
+                %li.published_on=last_state_change(apartment)
 
-          %li.status
-            %p Current Status of Listing:
-            =render "apartments/state_buttons", :apartment => apartment
+            %li.status
+              %p Current Status of Listing:
+              =render "apartments/state_buttons", :apartment => apartment
 
-            %ul.buttons
-              %li.edit=link_to "Edit", edit_apartment_path(apartment)
-              %li.delete=link_to "Delete", apartment_path(apartment), :method => :delete, :confirm => "Are you sure?"
+              %ul.buttons
+                %li.edit=link_to "Edit", edit_apartment_path(apartment)
+                %li.delete=link_to "Delete", apartment_path(apartment), :method => :delete, :confirm => "Are you sure?"
 
-        %p.summary
-          ==Number of Views: <span>#{apartment.views_count}</span>
-          ==Number of Favorites: <span>#{apartment.favorites_count}</span>
-    .pagination
-      %ul
-        %li.counts= pagination_summary(params[:page], current_user.apartments)
-        %li.navigation= will_paginate(apartments, :renderer => AjaxPaginationLinkRenderer)
+          %p.summary
+            ==Number of Views: <span>#{apartment.views_count}</span>
+            ==Number of Favorites: <span>#{apartment.favorites_count}</span>
+      .pagination
+        %ul
+          %li.counts= pagination_summary(params[:page], current_user.apartments)
+          %li.navigation= will_paginate(apartments)
 
-  -else
-    %p.empty
-      ==You haven't created any apartments.  #{link_to("Create one", new_apartment_path)}.
+    -else
+      %p.empty
+        ==You haven't created any apartments.  #{link_to("Create one", new_apartment_path)}.
+
+  .aside
+    #map_canvas
+    =image_tag "backgrounds/shadow.png", :class => "shadow"
+
+    =render "shared/activity_feed", :events => @events

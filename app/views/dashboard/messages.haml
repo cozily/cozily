@@ -1,5 +1,12 @@
 -content_for :page_title do
   Cozily | Dashboard
 
-%div{:'data-content-key' => 'active-tab'}
-  =render "dashboard/messages", :messages => @messages
+.head
+  %h1==Hi, #{current_user.first_name}
+
+  .lady
+    %span=lady_text
+
+  =render "dashboard/tabs", :active => :messages
+
+=render "dashboard/messages", :messages => @messages

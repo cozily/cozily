@@ -168,11 +168,11 @@ module FixtureBuilder
     end
 
     def fixtures_dir(path = '')
-      File.join(RAILS_ROOT, spec_or_test_dir, 'fixtures', path)
+      File.join(Rails.root.to_s, spec_or_test_dir, 'fixtures', path)
     end
 
     def spec_or_test_dir
-      File.exists?(File.join(RAILS_ROOT, 'spec')) ? 'spec' : 'test'
+      File.exists?(File.join(Rails.root.to_s, 'spec')) ? 'spec' : 'test'
     end
 
     def file_hashes

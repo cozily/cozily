@@ -45,6 +45,6 @@ module TimelineEventsHelper
       else
         raise "no event text defined for #{event.event_type}"
     end
-    [actor, verb, subject].join(" ")
+    [actor, verb, subject].join(" ").html_safe
   end
 end

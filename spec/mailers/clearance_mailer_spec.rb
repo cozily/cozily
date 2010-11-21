@@ -4,7 +4,7 @@ describe ClearanceMailer do
   describe "#deliver_confirmation" do
     before do
       @user = Factory(:user)
-      @email = ClearanceMailer.deliver_confirmation(@user)
+      @email = ClearanceMailer.confirmation(@user).deliver
     end
 
     it "queues the email" do

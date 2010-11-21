@@ -1,12 +1,12 @@
 class BrowseController < ApplicationController
   def index
-    @apartments = Apartment.descend_by_published_at.with_state(:published).paginate(:page => params[:page])
+    @all_apartments = Apartment.order("published_at desc").with_state(:published)
+    @paginated_apartments = @all_apartments.paginate(:page => params[:page], :per_page => Apartment.per_page)
     respond_to do |format|
       format.html
       format.js do
-        render :json => {:apartments => render_to_string(:layout => "browse/index",
-                                                         :locals => {:apartments => @apartments}),
-                         :map_others => @apartments.as_json(:methods => :to_param, :include => :address).to_json}
+        render :json => {:apartments => render_to_string(:partial => "browse/index"),
+                         :map_others => @paginated_apartments.as_json(:methods => :to_param, :include => :address).to_json}
       end
     end
   end

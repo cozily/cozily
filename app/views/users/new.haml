@@ -3,11 +3,11 @@
 
 %h2 Sign up
 
--semantic_form_for @user do |f|
+= semantic_form_for @user do |f|
   = f.error_messages
   = render "users/inputs", :f => f
   = render "users/profiles/inputs", :f => f
 
-  -f.buttons do
+  = f.buttons do
     = f.commit_button "Sign up"
 

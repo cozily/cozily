@@ -25,8 +25,8 @@ module ApplicationHelper
   end
 
   def lady_text
-    if signed_out?
-      "Thanks for checking out Cozily.  #{link_to "Sign up", sign_up_path} if you like what see!"
+    text = if signed_out?
+      "Thanks for checking out Cozily.  #{link_to("Sign up", sign_up_path)} if you like what see!"
     elsif !current_user.email_confirmed?
       "Hey #{current_user.first_name}, remember to confirm your email address. #{link_to("Resend link", resend_confirmation_user_path(current_user), :'data-remote' => true)}."
     elsif action_name == "messages"
@@ -34,6 +34,8 @@ module ApplicationHelper
     else
       "Wow #{current_user.first_name}, that's a fabulous shirt you're wearing."
     end
+
+    text.html_safe
   end
 
   def show_search?

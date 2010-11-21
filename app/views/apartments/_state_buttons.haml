@@ -1,5 +1,5 @@
 %div{:'data-content-key' => "state_buttons_#{apartment.id}"}
-  -form_tag transition_apartment_path(apartment), :class => 'formtastic' do
+  = form_tag transition_apartment_path(apartment), :class => 'formtastic' do
     %fieldset.inputs
       %ol
         %li{:class => "#{'active' if apartment.unpublished?}"}

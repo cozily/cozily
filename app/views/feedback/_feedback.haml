@@ -2,23 +2,23 @@
   <a class="handle" href="http://link-for-non-js-users.html">Content</a>
   %p
     Thanks for your feedback.  We are interested in your thoughts.
-  -form_tag '/feedback', :'data-remote' => true, :class => 'formtastic' do
+  = form_tag '/feedback', :'data-remote' => true, :class => 'formtastic' do
     %fieldset.inputs
       %ol
         %li.string
-          -unless signed_in?
+          - unless signed_in?
             %label
               Email
-            =text_field 'feedback', 'email'
-          -else
+            = text_field 'feedback', 'email'
+          - else
             %label Email
-            %label=current_user.email
-            =hidden_field 'feedback', 'email', :value => current_user.email
+            %label= current_user.email
+            = hidden_field 'feedback', 'email', :value => current_user.email
 
         %li.text
           %label
             Message
-          =text_area 'feedback', 'message'
+          = text_area 'feedback', 'message'
     %fieldset.buttons
       %ol
         %li.commit=submit_tag 'send'

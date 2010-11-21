@@ -8,7 +8,7 @@ Factory.define :user do |user|
   user.email                 { Factory.next :email }
   user.password              { "password" }
   user.password_confirmation { "password" }
-  user.roles                 { [Role.find_by_name("finder")] }
+  user.role_ids                 { [Role.find_by_name("finder").id] }
 end
 
 Factory.define :email_confirmed_user, :parent => :user do |user|
@@ -16,6 +16,6 @@ Factory.define :email_confirmed_user, :parent => :user do |user|
 end
 
 Factory.define :lister, :parent => :email_confirmed_user do |user|
-  user.roles { [Role.find_by_name("lister")] }
+  user.role_ids { [Role.find_by_name("lister").id] }
   user.phone { "202-270-7370" }
 end

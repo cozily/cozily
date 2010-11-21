@@ -1,10 +1,11 @@
 namespace :webmock do
-  task :update_cache => :environment do
+  desc "Cache webmock fixtures"
+  task :cache_fixtures => :environment do
     WEBMOCK_SITES = YAML.load_file("#{Rails.root}/test/webmock/sites.yml")
     WEBMOCK_SITES.each do |site|
       site["queries"].each do |query|
         base_url = site["url"]
-        querystring = site["params"].merge(query)
+        querystring = (site["params"] || {}).merge(query)
         url = "#{base_url}?#{querystring.to_query}"
         response = `curl -is "#{url}"`
         hash = Digest::MD5.hexdigest(url)
@@ -14,6 +15,5 @@ namespace :webmock do
         end
       end
     end
-
   end
 end

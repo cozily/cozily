@@ -4,11 +4,12 @@
 :javascript
   var apartments = #{(current_user.matches).as_json(:methods => :to_param, :include => :address).to_json};
 
-%div{:'data-content-key' => 'active-tab'}
-  =render "dashboard/matches", :matches => @matches
+.head
+  %h1==Hi, #{current_user.first_name}
 
-  .aside
-    #map_canvas
-    =image_tag "backgrounds/shadow.png", :class => "shadow"
+  .lady
+    %span=lady_text
 
-    =render "shared/activity_feed", :events => @events
+  =render "dashboard/tabs", :active => :matches
+
+=render "dashboard/matches", :matches => @matches

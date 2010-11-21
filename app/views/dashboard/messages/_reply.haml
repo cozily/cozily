@@ -1,8 +1,8 @@
 %span.bold Reply
-- semantic_form_for [conversation, Message.new], :html => { :'data-remote' => true } do |form|
+= semantic_form_for [conversation, Message.new], :html => { :'data-remote' => true } do |form|
   = form.error_messages
 
-  - form.inputs do
+  = form.inputs do
     = form.input :body, :label => false, :input_html => { :'data-default-value' => "Post a reply..." }
-  - form.buttons do
+  = form.buttons do
     = form.commit_button "Reply"

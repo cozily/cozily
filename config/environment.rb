@@ -1,15 +1,5 @@
-RAILS_GEM_VERSION = '2.3.10' unless defined? RAILS_GEM_VERSION
+# Load the rails application
+require File.expand_path('../application', __FILE__)
 
-require File.join(File.dirname(__FILE__), 'boot')
-require 'geokit'
-
-Rails::Initializer.run do |config|
-  ["jobs", "mailers", "shared"].each do |subdir|
-    config.autoload_paths << "#{RAILS_ROOT}/app/#{subdir}"
-  end
-
-  config.time_zone = 'Eastern Time (US & Canada)'
-end
-
-ActionMailer::Base.default_content_type = "text/html"
-
+# Initialize the rails application
+Cozily::Application.initialize!

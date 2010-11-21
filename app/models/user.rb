@@ -24,19 +24,15 @@ class User < ActiveRecord::Base
 
   accepts_nested_attributes_for :profile
 
-  named_scope :email_confirmed, :conditions => {:email_confirmed => true}
-  named_scope :receive_match_notifications, :conditions => {:receive_match_notifications => true}
-  named_scope :receive_listing_summaries, :conditions => {:receive_listing_summaries => true}
+  scope :email_confirmed, where(:email_confirmed => true)
+  scope :receive_match_notifications, where(:receive_match_notifications => true)
+  scope :receive_match_summaries, where(:receive_match_summaries => true)
+  scope :receive_listing_summaries, where(:receive_listing_summaries => true)
+
+  scope :finder, lambda { joins(:roles).where("roles.id = ?", Role.find_by_name("finder")) }
+  scope :lister, lambda { joins(:roles).where("roles.id = ?", Role.find_by_name("lister")) }
 
   class << self
-    def finder
-      User.scoped({:joins => :roles, :conditions => ["roles.id = ?", Role.find_by_name("finder")]})
-    end
-
-    def lister
-      User.scoped({:joins => :roles, :conditions => ["roles.id = ?", Role.find_by_name("lister")]})
-    end
-
     def send_finder_summary_emails
       User.finder.receive_match_summaries.each do |user|
         UserMailer.send_later(:deliver_finder_summary, user)
@@ -79,9 +75,9 @@ class User < ActiveRecord::Base
   end
 
   def matches
-    apts = Apartment.descend_by_published_at.user_id_does_not_equal(self.id).with_state(:published)
-    apts = apts.rent_lte(profile.rent) if profile.try(:rent)
-    apts = apts.bedrooms_gte(profile.bedrooms) if profile.try(:bedrooms)
+    apts = Apartment.order("published_at desc").where("user_id != ?", self.id).with_state(:published)
+    apts = apts.where("rent <= ?", profile.rent) if profile.try(:rent)
+    apts = apts.where("bedrooms >= ? ", profile.bedrooms) if profile.try(:bedrooms)
     if profile.try(:neighborhoods).try(:present?)
       apts.select { |a| (a.neighborhoods & profile.neighborhoods).present? }
     else

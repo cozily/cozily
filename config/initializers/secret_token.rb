@@ -2,6 +2,6 @@
 
 # Your secret key for verifying the integrity of signed cookies.
 # If you change this key, all old signed cookies will become invalid!
-# Make sure the secret is at least 30 characters and all random, 
+# Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-ActionController::Base.cookie_verifier_secret = 'cd118ab377fabaf384a765572b2f807c611f629089a4df365c1c1709f8517e5e553136cc80d4cfde8b969fb79a72baa8892d76020312acc66c1d41ac5f93e9fd';
+Cozily::Application.config.secret_token = 'f4b4088dd9f10bafe8e4cb853e30563be40d9a818b04e8b0729ca6101349a666f170f5cd9760637f9bf59b499062d9f73c673afeccb4511e05431bb8f938f57e'

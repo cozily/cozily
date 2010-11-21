@@ -1,4 +1,4 @@
-ActiveSupport::CoreExtensions::Date::Conversions::DATE_FORMATS.merge!(
+Date::DATE_FORMATS.merge!(
     :app_short => "%b %e, %Y",
     :app_long => "%b %e, %Y",
     :app_pretty => "%B %e, %Y",
@@ -10,7 +10,7 @@ ActiveSupport::CoreExtensions::Date::Conversions::DATE_FORMATS.merge!(
     :xml => "%Y-%m-%d"
 )
 
-ActiveSupport::CoreExtensions::Time::Conversions::DATE_FORMATS.merge!(
+Time::DATE_FORMATS.merge!(
     :app_mdy => "%m/%d/%Y, %I:%M %p",
     :app_short => "%b %e, %Y",
     :app_long => "%b %e, %Y %I:%M %p",

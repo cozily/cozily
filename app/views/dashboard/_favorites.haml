@@ -1,20 +1,19 @@
-.head
-  %h1==Hi, #{current_user.first_name}
+%div{:'data-content-key' => 'active-tab'}
+  .article
+    -if favorites.present?
+      .pagination
+        %ul
+          %li.counts= pagination_summary(params[:page], current_user.favorite_apartments)
+          %li.navigation= will_paginate(favorites)
+      -favorites.each do |apartment|
+        =render "dashboard/apartment", :apartment => apartment, :position => position_in_collection(apartment, current_user.favorite_apartments)
 
-  .lady
-    %span=lady_text
+    -else
+      %p.empty
+        You haven't favorited any apartments.  What gives?
 
-  =render "dashboard/tabs", :active => :favorites
+  .aside
+    #map_canvas
+    =image_tag "backgrounds/shadow.png", :class => "shadow"
 
-.article
-  -if favorites.present?
-    .pagination
-      %ul
-        %li.counts= pagination_summary(params[:page], current_user.favorite_apartments)
-        %li.navigation= will_paginate(favorites, :renderer => AjaxPaginationLinkRenderer)
-    -favorites.each do |apartment|
-      =render "dashboard/apartment", :apartment => apartment, :position => position_in_collection(apartment, current_user.favorite_apartments)
-
-  -else
-    %p.empty
-      You haven't favorited any apartments.  What gives?
+    =render "shared/activity_feed", :events => @events

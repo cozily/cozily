@@ -11,4 +11,4 @@ module HelperMethods
   end
 end
 
-Spec::Runner.configuration.include(HelperMethods)
+RSpec.configuration.include HelperMethods, :type => :acceptance

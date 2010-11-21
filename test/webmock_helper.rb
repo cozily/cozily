@@ -1,5 +1,11 @@
 WebMock.disable_net_connect!(:allow_localhost => true)
 
+if ENV["OFFLINE"]
+  puts "Using cached Webmock fixtures"
+else
+  puts "Retrieving Webmock responses for this run only"
+end
+
 WEBMOCK_SITES = YAML.load_file("#{Rails.root}/test/webmock/sites.yml")
 WEBMOCK_SITES.each do |site|
   site["queries"].each do |query|

@@ -11,7 +11,7 @@ When using an object mother such as factory_girl it can be setup like the follow
 FixtureBuilder.configure do |config|
   config.factory do
     include Girl
-    
+
   end
 end
 
@@ -27,7 +27,7 @@ delete_sql: sql string to use for deletes
 
 By default these are set as:
 files_to_check: %w{ db/schema.rb }
-fixture_builder_file: RAILS_ROOT/tmp/fixture_builder.yml
+fixture_builder_file: Rails.root.to_s/tmp/fixture_builder.yml
 record_name_fields: %w{ schema_migrations }
 skip_tables: %w{ schema_migrations }
 select_sql: SELECT * FROM `%s`

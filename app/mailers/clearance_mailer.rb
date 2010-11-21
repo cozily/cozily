@@ -1,5 +1,4 @@
 class ClearanceMailer < ActionMailer::Base
-
   def change_password(user)
     @user = user
     from       Clearance.configuration.mailer_sender
@@ -17,5 +16,4 @@ class ClearanceMailer < ActionMailer::Base
                       :scope   => [:clearance, :models, :clearance_mailer],
                       :default => "Confirm your email address")
   end
-
 end

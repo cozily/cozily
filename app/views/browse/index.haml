@@ -2,35 +2,19 @@
   Cozily | Browse
 
 :javascript
-  var apartments = #{(@apartments).as_json(:methods => :to_param, :include => :address).to_json};
+  var apartments = #{(@paginated_apartments).as_json(:methods => :to_param, :include => :address).to_json};
 
-%div{:'data-content-key' => 'active-tab'}
-  .head
-    %h1==Hi, friend
+.head
+  %h1==Hi, friend
 
-    .lady
-      %span=lady_text
+  .lady
+    %span=lady_text
 
-    %ul.tabs
-      %li.active=link_to "Matches (#{Apartment.with_state(:published).count})", browse_path, :'data-remote' => true
+  %ul.tabs
+    %li.active=link_to "Matches (#{@all_apartments.count})", browse_path, :'data-remote' => true
 
-  .article
-    -if @apartments.present?
-      .pagination
-        %ul
-          %li.counts= pagination_summary(params[:page], Apartment.with_state(:published))
-          %li.navigation= will_paginate(@apartments, :renderer => AjaxPaginationLinkRenderer)
-      -@apartments.each do |apartment|
-        =render "dashboard/apartment", :apartment => apartment, :position => position_in_collection(apartment, Apartment.descend_by_published_at.with_state(:published))
-      .pagination
-        %ul
-          %li.counts= pagination_summary(params[:page], Apartment.with_state(:published))
-          %li.navigation= will_paginate(@apartments, :renderer => AjaxPaginationLinkRenderer)
+= render "browse/index"
 
-    -else
-      %p.empty
-        You don't have any matches.  We're working on it.
-
-  .aside
-    #map_canvas
-    =image_tag "backgrounds/shadow.png", :class => "shadow"
+.aside
+  #map_canvas
+  =image_tag "backgrounds/shadow.png", :class => "shadow"

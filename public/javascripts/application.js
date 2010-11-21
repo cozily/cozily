@@ -91,6 +91,7 @@ function liveNeighborhoodAutocomplete() {
 
 (function($) {
     $(function() {
+        $('.pagination a').attr('data-remote', 'true');
         $("input[data-date=true]").datepicker();
         $("table.datatable").dataTable({
             "bJQueryUI": true,
@@ -98,7 +99,7 @@ function liveNeighborhoodAutocomplete() {
             "iDisplayLength": 50
         });
 
-        $("input[name=apartment[sublet]]").live("change", function(event) {
+        $("input[name='apartment[sublet]']").live("change", function(event) {
             if ($("input#apartment_sublet_true").attr('checked')) {
                 $("li#apartment_end_date_input").show();
             } else {
@@ -485,6 +486,7 @@ function liveNeighborhoodAutocomplete() {
                 initializeMap();
             }
 
+            $('.pagination a').attr('data-remote', 'true');
             $("div#selected_neighborhoods").trigger("selected_neighborhood::change");
         });
 

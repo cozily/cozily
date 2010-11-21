@@ -11,8 +11,8 @@
 
 #login
   %h6 Already have an account?
-  -semantic_form_for :session, :url => session_path do |form|
-    -form.inputs do
+  = semantic_form_for :session, :url => session_path do |form|
+    = form.inputs do
       =form.input :email, :label => false
       =form.input :password, :as => :password, :label => false
       =form.commit_button "Sign in"

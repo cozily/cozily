@@ -4,7 +4,7 @@ module NeighborhoodsHelper
     neighborhoods.each do |neighborhood|
       links << link_to(neighborhood.name, neighborhood)
     end
-    links.to_sentence
+    links.to_sentence.html_safe
   end
 
   def selected_neighborhood_links(neighborhoods)
@@ -16,6 +16,6 @@ module NeighborhoodsHelper
       span += "</span>"
       spans << span
     end
-    spans.to_s
+    spans.to_s.html_safe
   end
 end

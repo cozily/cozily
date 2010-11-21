@@ -1,0 +1,17 @@
+%div{:'data-content-key' => 'active-tab'}
+  .article
+    -if @paginated_apartments.present?
+      .pagination
+        %ul
+          %li.counts= pagination_summary(params[:page], @all_apartments)
+          %li.navigation= will_paginate(@paginated_apartments)
+      -@paginated_apartments.each do |apartment|
+        =render "dashboard/apartment", :apartment => apartment, :position => position_in_collection(apartment, @all_apartments)
+      .pagination
+        %ul
+          %li.counts= pagination_summary(params[:page], @all_apartments)
+          %li.navigation= will_paginate(@paginated_apartments)
+
+    -else
+      %p.empty
+        You don't have any matches.  We're working on it.

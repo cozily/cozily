@@ -21,7 +21,7 @@ module UsersHelper
       "in all neighborhoods"
     end
 
-    summary.join(" ")
+    summary.join(" ").html_safe
   end
 
   def roles(user)

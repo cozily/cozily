@@ -9,7 +9,7 @@ class Conversation < ActiveRecord::Base
   validate :ensure_sender_is_email_confirmed, :if => Proc.new { |conversation| conversation.sender.present? }
   validate :ensure_first_message_is_valid
 
-  named_scope :for_user, lambda { |user| { :conditions => ["(sender_id = ? AND sender_deleted_at IS NULL) OR (receiver_id = ? AND receiver_deleted_at IS NULL)", user.id, user.id] } }
+  scope :for_user, lambda { |user| where("(sender_id = ? AND sender_deleted_at IS NULL) OR (receiver_id = ? AND receiver_deleted_at IS NULL)", user.id, user.id) }
 
   after_create :create_message
 
@@ -36,7 +36,7 @@ class Conversation < ActiveRecord::Base
   private
   def ensure_first_message_is_valid
     unless messages.present? || Message.new(:conversation => self, :sender => sender, :body => body).valid?
-      errors.add_to_base("The first message is invalid")
+      errors.add(:base, "The first message is invalid")
     end
   end
 
@@ -45,7 +45,7 @@ class Conversation < ActiveRecord::Base
   end
 
   def ensure_sender_is_not_receiver
-    errors.add_to_base("You can't message yourself") if sender == receiver
+    errors.add(:base, "You can't message yourself") if sender == receiver
   end
 
   def create_message

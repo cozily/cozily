@@ -24,13 +24,13 @@ describe User do
     end
 
     it "should be invalid if the user is a lister and doesn't have a phone" do
-      @user = Factory.build(:user, :roles => [Role.find_by_name("lister")], :phone => nil)
+      @user = Factory.build(:lister, :phone => nil)
       @user.should be_invalid
       @user.should have(1).error_on(:phone)
     end
 
     it "should be invalid if roles is empty" do
-      @user = Factory.build(:user, :roles => [])
+      @user = Factory.build(:user, :role_ids => [])
       @user.should be_invalid
       @user.should have(1).error_on(:roles)
     end

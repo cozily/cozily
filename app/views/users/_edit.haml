@@ -7,8 +7,8 @@
         =link_to "Profile", edit_user_profile_path(current_user), :'data-remote' => 'true', :'data-method' => 'get'
 
   .article
-    - semantic_form_for @user do |f|
+    = semantic_form_for @user do |f|
       = f.error_messages
       = render "users/inputs", :f => f
-      - f.buttons do
+      = f.buttons do
         = f.commit_button "Update Account"

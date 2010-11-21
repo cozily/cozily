@@ -34,7 +34,7 @@ feature "search" do
     find("#q_max_rent").value.should == "Under $1800"
     current_path.should == search_path
 
-    Apartment.with_state(:published).bedrooms_gte(2).rent_lte(1800).each do |apartment|
+    Apartment.with_state(:published).where("bedrooms >= 2 AND rent <= 1800").each do |apartment|
       page.should have_content(apartment.street)
     end
 
@@ -49,7 +49,7 @@ feature "search" do
 
     find("#neighborhood_autocomplete").value.should == "Greenpoint"
 
-    Apartment.with_state(:published).bedrooms_gte(2).rent_lte(1800).each do |apartment|
+    Apartment.with_state(:published).where("bedrooms >= 2 AND rent <= 1800").each do |apartment|
       next unless apartment.neighborhoods.include?(Neighborhood.find_by_name("Greenpoint"))
       page.should have_content(apartment.street)
     end
@@ -63,7 +63,7 @@ feature "search" do
     click_button "search"
     current_path.should == search_path
 
-    Apartment.with_state(:published).bedrooms_gte(2).rent_lte(1800).each do |apartment|
+    Apartment.with_state(:published).where("bedrooms >= 2 AND rent <= 1800").each do |apartment|
       next unless apartment.neighborhoods.include?(Neighborhood.find_by_name("Greenpoint"))
       page.should have_content(apartment.street)
     end

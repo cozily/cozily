@@ -1,6 +1,8 @@
 %html
   %head
     <meta name="google-site-verification" content="ngNx19GIfLCZM5M7JswVdccMH_hpwAOOdIj5sU-ieMQ" />
+    %meta{:name => 'csrf-token', :content => form_authenticity_token}
+    %meta{:name => 'csrf-param', :content => 'authenticity_token'}
 
     = stylesheet_link_tag 'formtastic'
     = stylesheet_link_tag 'formtastic_changes'
@@ -18,6 +20,7 @@
     = javascript_include_tag 'jquery.tabSlideOut'
     = javascript_include_tag 'jquery.dataTables'
     = javascript_include_tag 'ajaxupload'
+    = javascript_include_tag 'rails'
     = javascript_include_tag 'application'
     = javascript_include_tag 'maps'
 
@@ -50,7 +53,7 @@
         .container
           %h2 Find Apartments
 
-          -form_for :q, @search, :url => search_path, :html => {:method => :get, :class => 'search'} do |f|
+          = form_for @search, :as => :q, :url => search_path, :html => {:method => :get, :class => 'search'} do |f|
             =text_field_tag :neighborhood_autocomplete, neighborhood_search_text, :'data-default-value' => "All Neighborhoods"
             =f.text_field :min_bedrooms, :'data-default-value' => "All # Bedrooms"
             =f.text_field :max_rent, :'data-default-value' => "All Prices"

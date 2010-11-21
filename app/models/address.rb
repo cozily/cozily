@@ -62,7 +62,7 @@ class Address < ActiveRecord::Base
 
   def ensure_at_least_one_neighborhood
     unless neighborhoods.present?
-      errors.add_to_base("We're currently only accepting apartment listings in New York City.")
+      errors.add(:base, "We're currently only accepting apartment listings in New York City.")
     end
   end
 end

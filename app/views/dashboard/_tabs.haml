@@ -1,4 +1,4 @@
-%ul.tabs
+%ul.tabs{ :'data-content-key' => "dashboard-tabs" }
   -if current_user.lister?
     %li{:class => "#{'active' if active == :listings}"}
       =link_to "My Listings (#{current_user.apartments.count})", dashboard_listings_path, :'data-remote' => true

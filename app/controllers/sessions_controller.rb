@@ -7,8 +7,8 @@ class SessionsController < Clearance::SessionsController
       render :template => 'sessions/new', :status => :unauthorized
     else
       sign_in(@user)
-      redirect_back_or(url_after_create)
       flash_success_after_create
+      redirect_back_or(dashboard_path)
     end
   end
 end

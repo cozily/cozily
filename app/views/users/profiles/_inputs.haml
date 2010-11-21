@@ -1,9 +1,9 @@
-- f.inputs do
+= f.inputs do
   I am here to:
-  =hidden_field_tag :assign_roles, true
+  = hidden_field_tag :assign_roles, true
   %li.boolean.optional
     %label{ :for => "role_ids_0" }
-      =check_box_tag "role_ids[]", Role.find_by_name("finder").id, f.object.finder?, :id => "role_ids_0"
+      = check_box_tag "role_ids[]", Role.find_by_name("finder").id, f.object.finder?, :id => "role_ids_0"
       find apartments
 
   %li.boolean.optional
@@ -14,23 +14,23 @@
   %fieldset.finder
     %legend Tell us about your needs.
     - f.object.build_profile unless f.object.profile.present?
-    - f.semantic_fields_for :profile do |profile_fields|
-      - profile_fields.inputs do
+    = f.semantic_fields_for :profile do |profile_fields|
+      = profile_fields.inputs do
         = profile_fields.input :bedrooms, :label => "Minimum bedrooms", :as => :select, :collection => (0..8), :required => false
         = profile_fields.input :rent, :label => "Maximum rent", :required => false
         %li
           %label{:for => "neighborhood_autocomplete"} Neighborhoods
-          =text_field_tag "neighborhood_autocomplete", "e.g., Alphabet City", :'data-default-value' => "e.g., Alphabet City"
+          = text_field_tag "neighborhood_autocomplete", "e.g., Alphabet City", :'data-default-value' => "e.g., Alphabet City"
           #selected_neighborhoods
-            -if f.object.profile.neighborhoods.present?
+            - if f.object.profile.neighborhoods.present?
               %div Selected Neighborhoods
-              =selected_neighborhood_links(f.object.profile.neighborhoods)
+              = selected_neighborhood_links(f.object.profile.neighborhoods)
         - unless f.object.new_record?
           = f.input :receive_match_notifications, :label => "Receive email notifications about new matches", :required => false
           = f.input :receive_match_summaries, :label => "Receive weekly summary emails about your matches", :required => false
 
   %fieldset.lister
     %legend We want to include a phone number with your listings.
-    -f.inputs do
-      = f.input :phone
+    = f.inputs do
+      = f.input :phone, :as => :string
       = f.input :receive_listing_summaries, :label => "Receive weekly summary emails about your listings", :required => false

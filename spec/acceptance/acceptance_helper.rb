@@ -10,12 +10,12 @@ if defined?(ActiveRecord::Base)
   end
 end
 
-Spec::Runner.configure do |config|
-  config.include Capybara
+RSpec.configuration.include Capybara, :type => :acceptance
+RSpec.configure do |config|
   config.use_transactional_fixtures = false
   config.before(:all) do
     Fixtures.reset_cache
-    fixtures_folder = File.join(RAILS_ROOT, 'spec', 'fixtures')
+    fixtures_folder = File.join(Rails.root.to_s, 'spec', 'fixtures')
     fixtures = Dir[File.join(fixtures_folder, '*.yml')].map {|f| File.basename(f, '.yml') }
     Fixtures.create_fixtures(fixtures_folder, fixtures)
   end

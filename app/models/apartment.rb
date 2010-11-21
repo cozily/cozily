@@ -1,4 +1,4 @@
-include ActionController::UrlWriter
+include Rails.application.routes.url_helpers
 default_url_options[:host] = "cozi.ly"
 
 class Apartment < ActiveRecord::Base
@@ -24,8 +24,6 @@ class Apartment < ActiveRecord::Base
   has_friendly_id :name, :use_slug => true, :allow_nil => true
 
   delegate :full_address, :lat, :lng, :street, :to => :address
-
-  default_scope :order => "apartments.created_at"
 
   before_validation :format_unit
   after_create :email_owner
@@ -95,8 +93,8 @@ class Apartment < ActiveRecord::Base
     end
   end
 
-  named_scope :bedrooms_near, lambda { |count| { :conditions => ["bedrooms >= ? and bedrooms <= ?", count - 0.5, count + 0.5] } }
-  named_scope :rent_near, lambda { |amount| { :conditions => ["rent >= ? and rent <= ?", amount * 0.8, amount * 1.2] } }
+  scope :bedrooms_near, lambda { |count| where("bedrooms >= ? and bedrooms <= ?", count - 0.5, count + 0.5) }
+  scope :rent_near, lambda { |amount| where("rent >= ? and rent <= ?", amount * 0.8, amount * 1.2) }
 
   class << self
     def per_page
@@ -163,7 +161,7 @@ class Apartment < ActiveRecord::Base
   end
 
   def last_state_change
-    subject_timeline_events.event_type_like("state_changed").first
+    subject_timeline_events.where("event_type LIKE '%state_changed%'").first
   end
 
   def owned_by?(user)

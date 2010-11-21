@@ -1,40 +1,33 @@
-.head
-  %h1==Hi, #{current_user.first_name}
+%div{:'data-content-key' => 'active-tab'}
+  - if @conversations.present?
+    .pagination
+      %ul
+        %li.counts= pagination_summary(params[:page], @conversations)
+        %li.navigation= will_paginate((@conversations))
 
-  .lady
-    %span=lady_text
-
-  =render "dashboard/tabs", :active => :messages
-
-- if @conversations.present?
-  .pagination
-    %ul
-      %li.counts= pagination_summary(params[:page], @conversations)
-      %li.navigation= will_paginate((@conversations), :renderer => AjaxPaginationLinkRenderer)
-
-  .conversations
-    - @conversations.each do |conversation|
-      - first_message = conversation.messages.first
-      %div[conversation]
-        %ul.conversation{:'data-conversation-id' => conversation.id}
-          %li.status{:class => (conversation.unread_message_count_for(current_user).zero? ? "" : "new") } &nbsp;
-          %li.info
-            %ul
-              %li.sender= conversation.sender.full_name
-              %li.details
-                = truncate(first_message.body)
-                |
-                = first_message.created_at.strftime("%b %d, %l:%M%p")
-
-          %li.delete= image_tag "icons/delete_message.png"
-          %li.photo
-            -if conversation.apartment.images.present?
-              =image_tag(conversation.apartment.images.first.asset.url(:micro))
-            -else
-              =image_tag("defaults/apartment/micro.jpg")
-          %li.name= conversation.apartment.address.street
-      %div.messages{:style => "display: none;"}
-        = render "dashboard/messages/messages", :conversation => conversation
-- else
-  %p.empty
-    Your inbox is empty.  You should be more talkative.
+    .conversations
+      - @conversations.each do |conversation|
+        - first_message = conversation.messages.first
+        %div[conversation]
+          %ul.conversation{:'data-conversation-id' => conversation.id}
+            %li.status{:class => (conversation.unread_message_count_for(current_user).zero? ? "" : "new") } &nbsp;
+            %li.info
+              %ul
+                %li.sender= conversation.sender.full_name
+                %li.details
+                  = truncate(first_message.body)
+                  |
+                  = first_message.created_at.strftime("%b %d, %l:%M%p")
+  
+            %li.delete= image_tag "icons/delete_message.png"
+            %li.photo
+              -if conversation.apartment.images.present?
+                =image_tag(conversation.apartment.images.first.asset.url(:micro))
+              -else
+                =image_tag("defaults/apartment/micro.jpg")
+            %li.name= conversation.apartment.address.street
+        %div.messages{:style => "display: none;"}
+          = render "dashboard/messages/messages", :conversation => conversation
+  - else
+    %p.empty
+      Your inbox is empty.  You should be more talkative.

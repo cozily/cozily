@@ -8,9 +8,9 @@ class Message < ActiveRecord::Base
   validate :ensure_body_is_not_default_body
   validate :ensure_sender_is_email_confirmed, :if => Proc.new { |message| message.sender.present? }
 
-  named_scope :unread, :conditions => { :read_at => nil }
-  named_scope :sent_by, lambda { |user| { :conditions => ["sender_id = ?", user.id] } }
-  named_scope :not_sent_by, lambda { |user| { :conditions => ["sender_id != ?", user.id] } }
+  scope :unread, where(:read_at => nil)
+  scope :sent_by, lambda { |user| where("sender_id = ?", user.id) }
+  scope :not_sent_by, lambda { |user| where("sender_id != ?", user.id) }
 
   after_create :notify_receiver
   after_create :undelete_conversation

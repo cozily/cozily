@@ -1,24 +1,23 @@
-.head
-  %h1==Hi, #{current_user.first_name}
+%div{:'data-content-key' => 'active-tab'}
+  .article
+    -if matches.present?
+      .pagination
+        %ul
+          %li.counts= pagination_summary(params[:page], current_user.matches)
+          %li.navigation= will_paginate(matches)
+      -matches.each do |apartment|
+        =render "dashboard/apartment", :apartment => apartment, :position => position_in_collection(apartment, current_user.matches)
+      .pagination
+        %ul
+          %li.counts= pagination_summary(params[:page], current_user.matches)
+          %li.navigation= will_paginate(matches)
 
-  .lady
-    %span=lady_text
+    -else
+      %p.empty
+        You don't have any matches.  We're working on it.
 
-  =render "dashboard/tabs", :active => :matches
+  .aside
+    #map_canvas
+    =image_tag "backgrounds/shadow.png", :class => "shadow"
 
-.article
-  -if matches.present?
-    .pagination
-      %ul
-        %li.counts= pagination_summary(params[:page], current_user.matches)
-        %li.navigation= will_paginate(matches, :renderer => AjaxPaginationLinkRenderer)
-    -matches.each do |apartment|
-      =render "dashboard/apartment", :apartment => apartment, :position => position_in_collection(apartment, current_user.matches)
-    .pagination
-      %ul
-        %li.counts= pagination_summary(params[:page], current_user.matches)
-        %li.navigation= will_paginate(matches, :renderer => AjaxPaginationLinkRenderer)
-
-  -else
-    %p.empty
-      You don't have any matches.  We're working on it.
+    =render "shared/activity_feed", :events => @events

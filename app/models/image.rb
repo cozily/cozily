@@ -7,7 +7,7 @@ class Image < ActiveRecord::Base
                                  :thumb => "85x85#",
                                  :micro => "32x32#" },
                     :storage => :s3,
-                    :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
+                    :s3_credentials => "#{Rails.root.to_s}/config/s3.yml",
                     :path => "/:id/:style/:filename",
                     :default_url => "/images/defaults/:style.png"
 
