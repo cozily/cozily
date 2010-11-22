@@ -233,5 +233,32 @@ describe User do
         end
       end
     end
+
+    describe "sublet preference" do
+      before do
+        @apt1.update_attributes(:sublet => true,
+                                :end_date => 1.month.from_now)
+
+        @profile = Factory(:profile,
+                           :user => @user,
+                           :bedrooms => nil,
+                           :rent => nil)
+      end
+
+      it "returns sublets when the user includes them" do
+        @profile.update_attribute(:sublets, Profile::SUBLETS["include them"])
+        @user.matches.should include(@apt1, @apt2)
+      end
+
+      it "only returns sublets when the user includes them exclusively" do
+        @profile.update_attribute(:sublets, Profile::SUBLETS["only show them"])
+        @user.matches.should == [@apt1]
+      end
+
+      it "excludes sublets when the user excludes them" do
+        @profile.update_attribute(:sublets, Profile::SUBLETS["exclude them"])
+        @user.matches.should == [@apt2]
+      end
+    end
   end
 end

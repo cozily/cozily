@@ -78,6 +78,13 @@ class User < ActiveRecord::Base
     apts = Apartment.order("published_at desc").where("user_id != ?", self.id).with_state(:published)
     apts = apts.where("rent <= ?", profile.rent) if profile.try(:rent)
     apts = apts.where("bedrooms >= ? ", profile.bedrooms) if profile.try(:bedrooms)
+
+    if profile.try(:only_sublets?)
+      apts = apts.where(:sublet => true)
+    elsif profile.try(:exclude_sublets?)
+      apts = apts.where(:sublet => false)
+    end
+
     if profile.try(:neighborhoods).try(:present?)
       apts.select { |a| (a.neighborhoods & profile.neighborhoods).present? }
     else
@@ -94,12 +101,12 @@ class User < ActiveRecord::Base
   end
 
   def received_messages
-    conversations.map(&:messages).flatten.select { |m| m.sender_id != id }
+    conversations.map(& :messages).flatten.select { |m| m.sender_id != id }
 #    messages.not_sent_by(self)
   end
 
   def sent_messages
-    conversations.map(&:messages).flatten.select { |m| m.sender_id == id }
+    conversations.map(& :messages).flatten.select { |m| m.sender_id == id }
 #    messages.sent_by(self)
   end
 
