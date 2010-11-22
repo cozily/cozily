@@ -10,4 +10,5 @@ describe Profile do
 
   it { should validate_numericality_of(:bedrooms, :only_integer => true, :allow_nil => true) }
   it { should validate_numericality_of(:rent, :only_integer => true, :allow_nil => true) }
+  it { should validate_numericality_of(:sublets, :only_integer => true) }
 end
