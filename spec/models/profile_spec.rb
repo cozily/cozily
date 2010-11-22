@@ -7,4 +7,7 @@ describe Profile do
 
   it { should belong_to :user }
   it { should have_many :neighborhoods }
+
+  it { should validate_numericality_of(:bedrooms, :only_integer => true, :allow_nil => true) }
+  it { should validate_numericality_of(:rent, :only_integer => true, :allow_nil => true) }
 end

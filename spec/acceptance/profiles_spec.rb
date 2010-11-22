@@ -13,7 +13,7 @@ feature "profiles" do
     check "Receive weekly summary emails about your matches"
 
     select "2", :from => "Minimum bedrooms"
-    fill_in "Maximum rent", :with => "2000.00"
+    fill_in "Maximum rent", :with => "2000"
   #  fill_in "Neighborhoods", :with => neighborhood.name
 
     check "role_ids_1"
@@ -22,8 +22,8 @@ feature "profiles" do
 
     click_button "Update Profile"
     user.profile.should_not be_nil
-    user.profile.bedrooms.should == 2.0
-    user.profile.rent.should == 2000.00
+    user.profile.bedrooms.should == 2
+    user.profile.rent.should == 2000
   #  the.user.profile.neighborhoods.should == [Apartment.last.neighborhoods.first]
   end
 end
