@@ -241,16 +241,31 @@ function liveNeighborhoodAutocomplete() {
 
         $("div.conversations ul.conversation li.delete").live("click", function(event) {
             var element = $(event.currentTarget);
-            element.parent("ul.conversation").parent("div.conversation").hide('explode');
-            $.ajax({
-                type: 'delete',
-                dataType: 'json',
-                url: "/conversations/" + element.parent("ul").attr('data-conversation-id'),
-                success  : function success(response) {
-                    $(document).trigger('content-received', response);
-                }
 
+            $("<div>Are you sure?</div>").dialog({
+                resizable: false,
+                height:140,
+                modal: true,
+                title: "Delete this conversation?",
+                buttons: {
+                    'Yes': function() {
+                        $.ajax({
+                            type: 'delete',
+                            dataType: 'json',
+                            url: "/conversations/" + element.parent("ul").attr('data-conversation-id'),
+                            success  : function success(response) {
+                                $(document).trigger('content-received', response);
+                            }
+                        });
+                        element.parent("ul.conversation").parent().hide("explode").next().hide("explode");
+                        $(this).dialog('close');
+                    },
+                    'Cancel': function() {
+                        $(this).dialog('close');
+                    }
+                }
             });
+
             return false;
         });
 
