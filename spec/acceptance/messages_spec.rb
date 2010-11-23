@@ -74,6 +74,7 @@ feature "messages" do
     current_path.should == dashboard_messages_path
 
     find("div.conversations ul.conversation li.delete").click
+    click_button "Yes"
     page.should have_no_css("div.messages ul.conversation")
     conversation.reload.sender_deleted_at.should_not == nil
   end
