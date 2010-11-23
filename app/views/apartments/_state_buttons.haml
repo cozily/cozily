@@ -10,7 +10,3 @@
           %label{:for => "event_publish_#{apartment.id}"}
             =radio_button_tag("event", "publish", apartment.published?, :id => "event_publish_#{apartment.id}", :disabled => !apartment.can_publish? && !apartment.published?)
             Published
-        %li{:class => "#{'active' if apartment.leased?}"}
-          %label{:for => "event_lease_#{apartment.id}"}
-            =radio_button_tag("event", "lease", apartment.leased?, :id => "event_lease_#{apartment.id}", :disabled => !apartment.can_lease? && !apartment.leased?)
-            Leased

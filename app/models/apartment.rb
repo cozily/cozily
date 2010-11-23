@@ -28,7 +28,7 @@ class Apartment < ActiveRecord::Base
   before_validation :format_unit
   after_create :email_owner
 
-  [:unpublished, :published, :leased].each do |state|
+  [:unpublished, :published].each do |state|
     fires :"state_changed_to_#{state}",
           :on => :update,
           :actor => :user,
@@ -61,17 +61,6 @@ class Apartment < ActiveRecord::Base
       validates_uniqueness_of :address_id, :scope => [ :user_id, :unit ]
     end
 
-    state :leased do
-      validates_presence_of :address, :user, :start_date
-      validates_presence_of :end_date, :if => Proc.new { |apartment| apartment.sublet? }
-      validates_length_of :unit, :maximum => 5
-      validates_numericality_of :rent, :greater_than => 0, :only_integer => true
-      validates_numericality_of :square_footage, :greater_than => 0, :only_integer => true
-      validates_numericality_of :bedrooms, :greater_than_or_equal_to => 0
-      validates_numericality_of :bathrooms, :greater_than_or_equal_to => 0
-      validates_uniqueness_of :address_id, :scope => [ :user_id, :unit ]
-    end
-
     state :unpublished do
       validates_presence_of :user
       validates_presence_of :end_date, :if => Proc.new { |apartment| apartment.sublet? }
@@ -84,15 +73,11 @@ class Apartment < ActiveRecord::Base
     end
 
     event :publish do
-      transition [:unpublished, :leased] => :published, :if => :publishable?
+      transition :unpublished => :published, :if => :publishable?
     end
 
     event :unpublish do
-      transition [:published, :leased] => :unpublished
-    end
-
-    event :lease do
-      transition [:published, :unpublished] => :leased, :if => :publishable?
+      transition :published => :unpublished
     end
   end
 
