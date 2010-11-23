@@ -3,5 +3,5 @@ log/*.log
 tmp/**
 tmp/**/*
 .bundle/
-test/webmock/cache/
+spec/support/webmock/cache/
 spec/fixtures/**

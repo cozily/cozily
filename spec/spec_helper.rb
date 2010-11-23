@@ -1,7 +1,6 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
-require File.join(File.dirname(__FILE__), '../test/webmock_helper.rb')
 require 'rspec/rails'
 require 'remarkable/active_record'
 
