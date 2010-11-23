@@ -3,7 +3,6 @@
 
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
-require 'heroku_san/tasks'
 require 'delayed/tasks'
 
 Cozily::Application.load_tasks
