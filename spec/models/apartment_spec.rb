@@ -12,6 +12,7 @@ describe Apartment do
   it { should have_many(:conversations, :dependent => :destroy) }
 
   it { should validate_presence_of(:user) }
+  it { should validate_length_of(:unit, :maximum => 5) }
 
   [:rent, :square_footage].each do |attr|
     it { should validate_numericality_of(attr, :allow_nil => true, :greater_than => 0, :only_integer => true) }
@@ -162,6 +163,12 @@ describe Apartment do
 
     it "deletes pounds from unit" do
       @apartment = Factory.build(:apartment, :unit => "#1c")
+      @apartment.save
+      @apartment.reload.unit.should == "1C"
+    end
+
+    it "deletes hyphens from unit" do
+      @apartment = Factory.build(:apartment, :unit => "#1-c")
       @apartment.save
       @apartment.reload.unit.should == "1C"
     end

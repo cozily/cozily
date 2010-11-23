@@ -53,6 +53,7 @@ class Apartment < ActiveRecord::Base
     state :published do
       validates_presence_of :address, :user, :start_date
       validates_presence_of :end_date, :if => Proc.new { |apartment| apartment.sublet? }
+      validates_length_of :unit, :maximum => 5
       validates_numericality_of :rent, :greater_than => 0, :only_integer => true
       validates_numericality_of :square_footage, :greater_than => 0, :only_integer => true
       validates_numericality_of :bedrooms, :greater_than_or_equal_to => 0
@@ -63,6 +64,7 @@ class Apartment < ActiveRecord::Base
     state :leased do
       validates_presence_of :address, :user, :start_date
       validates_presence_of :end_date, :if => Proc.new { |apartment| apartment.sublet? }
+      validates_length_of :unit, :maximum => 5
       validates_numericality_of :rent, :greater_than => 0, :only_integer => true
       validates_numericality_of :square_footage, :greater_than => 0, :only_integer => true
       validates_numericality_of :bedrooms, :greater_than_or_equal_to => 0
@@ -73,6 +75,7 @@ class Apartment < ActiveRecord::Base
     state :unpublished do
       validates_presence_of :user
       validates_presence_of :end_date, :if => Proc.new { |apartment| apartment.sublet? }
+      validates_length_of :unit, :maximum => 5
       validates_numericality_of :rent, :allow_nil => true, :greater_than => 0, :only_integer => true
       validates_numericality_of :square_footage, :allow_nil => true, :greater_than => 0, :only_integer => true
       validates_numericality_of :bedrooms, :greater_than_or_equal_to => 0, :allow_nil => true
@@ -198,6 +201,6 @@ class Apartment < ActiveRecord::Base
 
   def format_unit
     return unless self.unit
-    self.unit = self.unit.delete("#").upcase
+    self.unit = self.unit.delete("#-").upcase
   end
 end
