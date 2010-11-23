@@ -341,6 +341,5 @@ FixtureBuilder.configure do |config|
     Feature.create(:name => "cats allowed", :category => "pet")
     Feature.create(:name => "dogs allowed", :category => "pet")
     Feature.create(:name => "case-by-case", :category => "pet")
-    Feature.create(:name => "unknown", :category => "pet")
   end
 end

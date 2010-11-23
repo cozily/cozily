@@ -355,7 +355,6 @@ Feature.create(:name => "washer/dryer", :category => "building")
 Feature.create(:name => "cats allowed", :category => "pet")
 Feature.create(:name => "dogs allowed", :category => "pet")
 Feature.create(:name => "case-by-case", :category => "pet")
-Feature.create(:name => "unknown", :category => "pet")
 
 User.create(:first_name => "Michael",
             :last_name => "Haddad",
