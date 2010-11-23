@@ -10,7 +10,7 @@
       %li.save=link_to "Save Changes", "#"
       -if apartment.can_publish?
         %li.publish=link_to "Publish Apartment", transition_apartment_path(apartment, :event => "publish", :return_to => apartment_path(apartment)), :method => :put
-      -else
+      -elsif !apartment.published?
         %li.publish=link_to "Publish Apartment", "#", :'data-tip' => "your apartment isn't quite ready for publishing.  complete the missing fields and save your changes."
 
   -else
