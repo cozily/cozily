@@ -8,8 +8,8 @@ class Admin::UsersController < Admin::BaseController
   end
 
   def activity
-    a = UserActivity.first(:order => "date").date
-    b = UserActivity.last(:order => "date").date
+    a = UserActivity.order("date").limit(1).last.date
+    b = UserActivity.order("date").limit(1).first.date
 
     @activities = (a..b).map do |date|
       [date, UserActivity.count(:conditions => {:date => date})]
