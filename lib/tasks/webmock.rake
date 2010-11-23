@@ -9,7 +9,9 @@ namespace :webmock do
         url = "#{base_url}?#{querystring.to_query}"
         response = `curl -is "#{url}"`
         hash = Digest::MD5.hexdigest(url)
-        File.open("#{Rails.root}/spec/support/webmock/cache/#{hash}", "w") do |f|
+        cache_dir = "#{Rails.root}/spec/support/webmock/cache"
+        Dir.mkdir(cache_dir) unless File.exist?(cache_dir)
+        File.open("#{cache_dir}/#{hash}", "w") do |f|
           f.puts response
           f.close
         end
