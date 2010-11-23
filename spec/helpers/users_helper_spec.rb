@@ -34,6 +34,21 @@ describe UsersHelper do
       helper.profile_summary(@profile).should == "matching apartments with any number of bedrooms under $1,500 in all neighborhoods"
     end
 
+    it "returns an appropriate summary when only sublets are matched" do
+      @profile.update_attribute(:sublets, Profile::SUBLETS["only show them"])
+      helper.profile_summary(@profile).should == "matching sublets with at least 1 bedroom under $1,500 in #{link_to(@neighborhood.name, @neighborhood)}"
+    end
+
+    it "returns an appropriate summary when sublets are included" do
+      @profile.update_attribute(:sublets, Profile::SUBLETS["include them"])
+      helper.profile_summary(@profile).should == "matching apartments with at least 1 bedroom under $1,500 in #{link_to(@neighborhood.name, @neighborhood)}"
+    end
+
+    it "returns an appropriate summary when sublets are excluded" do
+      @profile.update_attribute(:sublets, Profile::SUBLETS["exclude them"])
+      helper.profile_summary(@profile).should == "matching non-sublets with at least 1 bedroom under $1,500 in #{link_to(@neighborhood.name, @neighborhood)}"
+    end
+
     it "returns an appropraite summary when profile is nil" do
       helper.profile_summary(nil).should == "matching apartments with any number of bedrooms regardless of rent in all neighborhoods"
     end

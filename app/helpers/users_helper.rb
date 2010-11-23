@@ -3,10 +3,24 @@ include NeighborhoodsHelper
 module UsersHelper
   def profile_summary(profile)
     summary = ["matching"]
-    summary << if profile.try(:bedrooms)
-      "apartments with at least #{pluralize(profile.bedrooms, "bedroom")}"
+
+    summary << if profile.try(:sublets)
+      case profile.sublets
+        when Profile::SUBLETS["include them"]
+          "apartments"
+        when Profile::SUBLETS["exclude them"]
+          "non-sublets"
+        when Profile::SUBLETS["only show them"]
+          "sublets"
+      end
     else
-      "apartments with any number of bedrooms"
+      "apartments"
+    end
+
+    summary << if profile.try(:bedrooms)
+      "with at least #{pluralize(profile.bedrooms, "bedroom")}"
+    else
+      "with any number of bedrooms"
     end
 
     summary << if profile.try(:rent)
