@@ -99,6 +99,29 @@ function liveNeighborhoodAutocomplete() {
             "iDisplayLength": 50
         });
 
+        $("[data-tip]").each(function() {
+            $(this).qtip({
+                content: $(this).attr('data-tip'),
+                show: 'mouseover',
+                hide: 'mouseout',
+                style: {
+                    'font-size': '14px',
+                    'font-weight': '500',
+                    color: 'white',
+                    border: {
+                        width: 7,
+                        radius: 5
+                    },
+                    name: 'dark'
+                },
+                position: {
+                    adjust: {
+                        screen: true
+                    }
+                }
+            });
+        });
+
         $("input[name='apartment[sublet]']").live("change", function(event) {
             if ($("input#apartment_sublet_true").attr('checked')) {
                 $("li#apartment_end_date_input").show();

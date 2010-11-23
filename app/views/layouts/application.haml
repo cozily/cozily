@@ -19,6 +19,7 @@
     = javascript_include_tag 'jquery.scrollTo'
     = javascript_include_tag 'jquery.tabSlideOut'
     = javascript_include_tag 'jquery.dataTables'
+    = javascript_include_tag 'jquery.qtip'
     = javascript_include_tag 'ajaxupload'
     = javascript_include_tag 'rails'
     = javascript_include_tag 'application'
@@ -65,7 +66,7 @@
         -if signed_out? || current_user.finder?
           .profile_summary
             ==* #{profile_summary(current_user.try(:profile))}
-            %span=link_to("update", signed_in? ? edit_user_profile_path(current_user) : sign_up_path)
+            %span=link_to("update", signed_in? ? edit_user_profile_path(current_user) : sign_up_path, :'data-tip' => "click here to change how Cozily finds your matches")
 
     #body
       .container
