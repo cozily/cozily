@@ -2,7 +2,7 @@
   Cozily | Dashboard
 
 :javascript
-  var apartments = #{(current_user.apartments).as_json(:methods => :to_param, :include => :address).to_json};
+  var apartments = #{@apartments.as_json(:methods => :to_param, :include => :address).to_json};
 
 .head
   %h1==Hi, #{current_user.first_name}
