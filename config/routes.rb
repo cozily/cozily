@@ -85,5 +85,6 @@ ActionController::Routing::Routes.draw do |map|
                :action     => 'destroy',
                :method     => :delete
 
+  map.sitemap 'sitemap.xml', :controller => 'sitemap', :action => 'index'
   map.root :controller => "welcome"
 end

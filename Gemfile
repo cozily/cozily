@@ -25,6 +25,7 @@ gem "steak", "1.0.0.rc.3"
 gem "timeline_fu", "0.3.0"
 gem "twitter_oauth", "0.4.0"
 gem "will_paginate", "3.0.pre2"
+gem "xml-sitemap", "1.0.5"
 
 group :test do
   gem "capybara", "0.3.9"
