@@ -1,0 +1,22 @@
+gzip_assets: false
+
+javascripts:
+  common:
+    - public/javascripts/jquery.js
+    - public/javascripts/jquery-ui.js
+    - public/javascripts/jquery.scrollTo.js
+    - public/javascripts/jquery.tabSlideOut.js
+    - public/javascripts/jquery.dataTables.js
+    - public/javascripts/jquery.qtip.js
+    - public/javascripts/ajaxupload.js
+    - public/javascripts/rails.js
+    - public/javascripts/application.js
+    - public/javascripts/maps.js
+
+stylesheets:
+  common:
+    - public/stylesheets/formtastic.css
+    - public/stylesheets/formtastic_changes.css
+    - public/stylesheets/jquery-ui.css
+    - public/stylesheets/compiled/screen.css
+    - public/stylesheets/compiled/print.css
