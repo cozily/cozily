@@ -28,14 +28,13 @@ class Apartment < ActiveRecord::Base
   before_validation :format_unit
   after_create :email_owner
 
-  [:unpublished, :published].each do |state|
-    fires :"state_changed_to_#{state}",
-          :on => :update,
-          :actor => :user,
-          :if => lambda { |apartment| apartment.state_changed? && apartment.state_name == state }
-  end
-
   state_machine :state, :initial => :unpublished do
+    after_transition :on => :unpublish do |apt|
+      TimelineEvent.create(:event_type => "state_changed_to_unpublished",
+                           :subject => apt,
+                           :actor => apt.user)
+    end
+
     after_transition :on => :publish do |apt|
       component(:tweet_apartments) do
         client = TwitterOAuth::Client.new(
@@ -47,6 +46,9 @@ class Apartment < ActiveRecord::Base
         client.update("#{apt.user.first_name} just published a #{apt.bedrooms.prettify} bedroom apt in #{apt.neighborhood.name} for $#{apt.rent} #{apartment_url(apt)}")
       end
       apt.update_attribute(:published_at, Time.now)
+      TimelineEvent.create(:event_type => "state_changed_to_published",
+                           :subject => apt,
+                           :actor => apt.user)
       Delayed::Job.enqueue(MatchNotifierJob.new(apt))
     end
 

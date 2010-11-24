@@ -121,39 +121,6 @@ describe Apartment do
     end
   end
 
-  describe "#after_update" do
-    ['unpublished', 'published'].each do |state|
-      it "creates a status_changed_to_#{state} TimelineEvent when the state has changed" do
-        initial_state = case state
-          when 'unpublished' then
-            'published'
-          when 'published' then
-            'unpublished'
-        end
-
-        apartment = Factory(:apartment, :state => initial_state)
-
-        lambda {
-          apartment.state = state
-          apartment.save!
-        }.should change(TimelineEvent, :count).by(1)
-
-        event = TimelineEvent.last
-        event.event_type.should == "state_changed_to_#{state}"
-        event.subject.should == apartment
-        event.actor.should == apartment.user
-      end
-    end
-
-    it "does not create a status_changed TimelineEvent when the state has not changed" do
-      apartment = Factory(:apartment)
-
-      lambda {
-        apartment.touch
-      }.should_not change(TimelineEvent, :count)
-    end
-  end
-
   describe "#before_validation" do
     it "upcases unit" do
       @apartment = Factory.build(:apartment, :unit => "1c")
@@ -271,6 +238,17 @@ describe Apartment do
       }.should change(@apartment, :published_at)
       @apartment.published_at.should_not be_nil
     end
+
+    it "creates a TimelineEvent" do
+      lambda {
+        @apartment.publish!
+      }.should change(TimelineEvent, :count).by(1)
+
+      event = TimelineEvent.last
+      event.event_type.should == "state_changed_to_published"
+      event.subject.should == @apartment
+      event.actor.should == @apartment.user
+    end
   end
 
   describe "#match_for?" do
@@ -369,6 +347,23 @@ describe Apartment do
     it "should join address and unit" do
       @apartment = Factory(:apartment)
       @apartment.name.should == [@apartment.full_address, @apartment.unit].compact.join(" #")
+    end
+  end
+
+  describe "#unpublish!" do
+    before do
+      @apartment = Factory(:published_apartment)
+    end
+
+    it "creates a TimelineEvent" do
+      lambda {
+        @apartment.unpublish!
+      }.should change(TimelineEvent, :count).by(1)
+
+      event = TimelineEvent.last
+      event.event_type.should == "state_changed_to_unpublished"
+      event.subject.should == @apartment
+      event.actor.should == @apartment.user
     end
   end
 end
