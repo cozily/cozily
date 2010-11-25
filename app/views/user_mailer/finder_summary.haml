@@ -9,7 +9,7 @@
         %td=link_to(apt.name, apartment_url(apt))
         %td==#{apt.bedrooms.try(:prettify)}bd/#{apt.bathrooms.try(:prettify)}ba
         %td==$#{number_with_delimiter(apt.rent)}
-        %td=apt.neighborhoods.map { |n| link_to(n.name, neighborhood_url(n)) }.to_sentence
+        %td=apt.neighborhoods.map { |n| link_to(n.name, neighborhood_url(n)) }.to_sentence.html_safe
 -else
   %p==You don't currently have any matches on #{link_to("Cozily", root_url)}, but we're working on it!
 
