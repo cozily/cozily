@@ -1,7 +1,7 @@
 desc "Callback before deploys"
 task :before_deploy do
   `bundle exec compass compile`
-  `bundle exec jammit --force`
+  `bundle exec jammit`
 
   status = `git status`
   if status =~ /public\/assets/
