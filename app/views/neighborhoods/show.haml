@@ -7,6 +7,7 @@
 
 .article
   %h2==Matches in #{@neighborhood.name}
+  =render "users/profiles/neighborhood_link", :neighborhood => @neighborhood
 
   =render "apartments", :apartments => @apartments
 

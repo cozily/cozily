@@ -38,6 +38,17 @@ module UsersHelper
     summary.join(" ").html_safe
   end
 
+  def profile_link_for_user_and_neighborhood(user, neighborhood)
+    return unless user.profile
+    text = if user.profile.neighborhoods.include?(neighborhood)
+      "remove this neighborhood from your profile"
+    else
+      "add this neighborhood to your profile"
+    end
+
+    link_to text, neighborhood_profiles_path(:neighborhood_id => neighborhood.id), :'data-remote' => true
+  end
+
   def roles(user)
     user.roles.map(&:name).map(&:titleize).join(", ")
   end

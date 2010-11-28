@@ -12,7 +12,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :feedback, :only => [:create]
   map.resources :neighborhoods, :only => [:show], :collection => {:search => :get}
 
-  map.resources :neighborhood_profiles, :only => [:destroy]
+  map.resources :neighborhood_profiles, :only => [:create, :destroy]
 
   map.resource :search, :only => [:show]
   map.resources :users,

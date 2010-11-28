@@ -1668,6 +1668,12 @@ body.users.edit div.article form.user, body.users.update div.article form.user, 
   margin-left: 20px;
 }
 
+/* line 2, ../../../app/stylesheets/partials/_neighborhood.scss */
+body.neighborhoods div[data-content-key=neighborhood-link] {
+  text-align: right;
+  padding-right: 16px;
+}
+
 /* line 3, ../../../app/stylesheets/partials/apartments/_apartments.scss */
 body.apartments ul.buttons li {
   float: left;
