@@ -16,6 +16,14 @@ class SitemapController < ApplicationController
           :period => :daily
         )
       end
+      Neighborhood.all.each do |neighborhood|
+        m.add(
+          :url => neighborhood_path(neighborhood),
+          :updated => neighborhood.updated_at,
+          :priority => 1.0,
+          :period => :hourly
+        )
+      end
     end
     render :text => sitemap.render
   end
