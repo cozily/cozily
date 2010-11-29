@@ -21,30 +21,28 @@ class ApplicationController < ActionController::Base
     redirect_to :back
   end
 
-  def render_optional_error_file(status_code)
-    if status_code == :not_found
-      render_404
-    elsif status_code == :internal_server_error
-      render_500
-    else
-      super
-    end
+  unless ActionController::Base.consider_all_requests_local
+    rescue_from Exception,                            :with => :render_error
+    rescue_from ActiveRecord::RecordNotFound,         :with => :render_not_found
+    rescue_from ActionController::RoutingError,       :with => :render_not_found
+    rescue_from ActionController::UnknownController,  :with => :render_not_found
+    rescue_from ActionController::UnknownAction,      :with => :render_not_found
   end
 
-  def render_404
+  def render_not_found(e)
     respond_to do |type|
       type.html {
-        render :template => "errors/404", :layout => 'application', :status => 404
+        render :template => "errors/404", :layout => 'error', :status => 404
       }
       type.all { render :nothing => true, :status => 404 }
     end
     true
   end
 
-  def render_500
+  def render_error(e)
     respond_to do |type|
       type.html {
-        render :template => "errors/500", :layout => 'application', :status => 500
+        render :template => "errors/500", :layout => 'error', :status => 500
       }
       type.all { render :nothing => true, :status => 500 }
     end
