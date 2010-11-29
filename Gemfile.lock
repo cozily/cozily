@@ -95,7 +95,7 @@ GEM
       json_pure (>= 1.2.0, < 1.5.0)
       launchy (~> 0.3.2)
       rest-client (>= 1.4.0, < 1.7.0)
-    heroku_san (1.0.5)
+    heroku_san (1.0.6)
       heroku
     httparty (0.6.1)
       crack (= 0.1.8)
@@ -226,7 +226,7 @@ DEPENDENCIES
   gravtastic (= 2.2.0)
   haml (= 3.0.18)
   heroku (= 1.14.3)
-  heroku_san (= 1.0.5)
+  heroku_san (= 1.0.6)
   httparty (= 0.6.1)
   jammit (= 0.5.4)
   launchy (= 0.3.5)
