@@ -13,7 +13,6 @@ feature "neighborhoods" do
 
   scenario "user adds and removes a neighborhood from their profile", :js => true do
     user = Factory(:user, :profile => Profile.new)
-#    profile = Factory(:profile, :user => user)
     apartment = Factory(:published_apartment)
 
     login_as(user)
@@ -21,7 +20,11 @@ feature "neighborhoods" do
     neighborhood = apartment.neighborhoods.first
     visit neighborhood_path(neighborhood)
 
+    page.should have_content("in all neighborhoods")
     click_link "add this neighborhood to your profile"
+    page.should have_no_content("in all neighborhoods")
+    page.should have_content("in #{neighborhood.name}")
     click_link "remove this neighborhood from your profile"
+    page.should have_content("in all neighborhoods")
   end
 end

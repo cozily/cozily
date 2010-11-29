@@ -8,7 +8,8 @@ class NeighborhoodProfilesController < ApplicationController
                                  :profile => current_user.profile)
     end
     render :json => {:neighborhood_profile_link => render_to_string(:partial => "users/profiles/neighborhood_link",
-                                                                    :locals => {:neighborhood => neighborhood})}
+                                                                    :locals => {:neighborhood => neighborhood}),
+                     :profile_summary => render_to_string(:partial => "users/profiles/summary")}
   end
 
   def destroy

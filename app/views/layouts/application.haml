@@ -52,9 +52,7 @@
 
       #breadcrumbs
         -if signed_out? || current_user.finder?
-          .profile_summary
-            ==* #{profile_summary(current_user.try(:profile))}
-            %span=link_to("update", signed_in? ? edit_user_profile_path(current_user) : sign_up_path, :'data-tip' => "click here to change how Cozily finds your matches")
+          = render "users/profiles/summary"
 
     #body
       .container
