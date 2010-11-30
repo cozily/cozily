@@ -2039,8 +2039,8 @@ body.apartments.show div.aside h3 {
 /* line 235, ../../../app/stylesheets/partials/apartments/_show.sass */
 body.apartments.show div.aside ul.actions {
   float: right;
-  height: 100px;
-  margin-top: 0px;
+  height: 90px;
+  padding-top: 10px;
 }
 /* line 239, ../../../app/stylesheets/partials/apartments/_show.sass */
 body.apartments.show div.aside ul.actions li {
