@@ -79,7 +79,7 @@
       %li.flag=render "flags/link", :apartment => @apartment
       %li.favorite=render "favorites/link", :apartment => @apartment
       %li.facebook
-        %iframe{ :src =>"http://www.facebook.com/widgets/like.php?href=#{apartment_url(@apartment)}&layout=standard&action=recommend&show_faces=false" }
+        %iframe{ :src =>"http://www.facebook.com/widgets/like.php?href=#{apartment_url(@apartment)}&layout=standard&action=like&show_faces=false" }
 
     #map_canvas
     =image_tag "backgrounds/shadow.png", :class => "shadow"
