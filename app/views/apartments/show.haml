@@ -104,4 +104,8 @@
       .business_search{:'data-lat' => @apartment.lat, :'data-lng' => @apartment.lng}
 
 -else
-  %p This apartment is unpublished.
+  %p.unpublished
+    -if @apartment.address.present?
+      ==Oops, this apartment is unpublished.  Why not check out other places in #{neighborhood_links(@apartment.neighborhoods)}?
+    -else
+      ==Oops, this apartment is unpublished.  Why not check out this #{link_to("random apartment", Apartment.with_state(:published).first(:order => "RANDOM()"))}?
