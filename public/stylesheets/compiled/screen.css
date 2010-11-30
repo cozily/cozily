@@ -2039,8 +2039,8 @@ body.apartments.show div.aside h3 {
 /* line 235, ../../../app/stylesheets/partials/apartments/_show.sass */
 body.apartments.show div.aside ul.actions {
   float: right;
-  height: 95px;
-  margin-top: 5px;
+  height: 100px;
+  margin-top: 0px;
 }
 /* line 239, ../../../app/stylesheets/partials/apartments/_show.sass */
 body.apartments.show div.aside ul.actions li {
@@ -2075,7 +2075,7 @@ body.apartments.show div.aside ul.actions li.favorite a.remove {
 }
 /* line 262, ../../../app/stylesheets/partials/apartments/_show.sass */
 body.apartments.show div.aside ul.actions li.facebook {
-  margin-top: 8px;
+  margin-top: 0px;
 }
 /* line 266, ../../../app/stylesheets/partials/apartments/_show.sass */
 body.apartments.show div.aside div#map_canvas {
