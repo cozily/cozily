@@ -8,6 +8,7 @@ class SitemapController < ApplicationController
       m.add(:url => faq_page_path, :period => :weekly, :priority => 0.5)
       m.add(:url => terms_of_service_page_path, :period => :weekly, :priority => 0.5)
       m.add(:url => privacy_policy_page_path, :period => :weekly, :priority => 0.5)
+      m.add(:url => neighborhoods_path, :period => :weekly, :priority => 0.5)
       Apartment.with_state(:published).each do |apartment|
         m.add(
           :url => apartment_path(apartment),

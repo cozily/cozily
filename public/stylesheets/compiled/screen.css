@@ -1674,31 +1674,31 @@ body.neighborhoods div[data-content-key=neighborhood-link] {
   padding-right: 16px;
 }
 
-/* line 11, ../../../app/stylesheets/partials/_neighborhood.scss */
+/* line 10, ../../../app/stylesheets/partials/_neighborhood.scss */
 body.neighborhoods.show div.article p.empty {
   text-align: left;
 }
-/* line 15, ../../../app/stylesheets/partials/_neighborhood.scss */
+/* line 14, ../../../app/stylesheets/partials/_neighborhood.scss */
 body.neighborhoods.show div.article a.neighborhoods {
   float: left;
   padding-left: 16px;
 }
 
-/* line 23, ../../../app/stylesheets/partials/_neighborhood.scss */
+/* line 22, ../../../app/stylesheets/partials/_neighborhood.scss */
 body.neighborhoods.index div[data-content-key=yield] {
   padding: 20px;
 }
-/* line 26, ../../../app/stylesheets/partials/_neighborhood.scss */
+/* line 25, ../../../app/stylesheets/partials/_neighborhood.scss */
 body.neighborhoods.index div[data-content-key=yield] h2 {
   font-size: 24px;
   margin-bottom: 5px;
 }
-/* line 31, ../../../app/stylesheets/partials/_neighborhood.scss */
+/* line 30, ../../../app/stylesheets/partials/_neighborhood.scss */
 body.neighborhoods.index div[data-content-key=yield] ul {
   overflow: hidden;
   margin-bottom: 20px;
 }
-/* line 35, ../../../app/stylesheets/partials/_neighborhood.scss */
+/* line 34, ../../../app/stylesheets/partials/_neighborhood.scss */
 body.neighborhoods.index div[data-content-key=yield] ul li {
   float: left;
   width: 205px;
