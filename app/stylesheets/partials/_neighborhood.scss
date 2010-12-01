@@ -4,3 +4,43 @@ body.neighborhoods {
         padding-right: 16px;
     }
 }
+
+body.neighborhoods.show {
+    div.article {
+        p.empty {
+            text-align: left;
+        }
+
+        a.neighborhoods {
+            float: left;
+            padding-left: 16px;
+        }
+    }
+}
+
+body.neighborhoods.index {
+    div[data-content-key=yield] {
+        padding: 20px;
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        ul {
+            overflow: hidden;
+            margin-bottom: 20px;
+
+            li {
+                float: left;
+                width: 205px;
+                margin-right: 20px;
+                font-size: 18px;
+
+                a {
+
+                }
+            }
+        }
+    }
+}

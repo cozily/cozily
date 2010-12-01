@@ -1,4 +1,5 @@
-%ul
-  -@neighborhoods.each do |neighborhood|
-    -next unless neighborhood.published_apartments.present?
-    %li=link_to "#{neighborhood.name} (#{neighborhood.published_apartments.count})", neighborhood
+- @neighborhoods.each_key do |borough|
+  %h2= borough
+  %ul
+    - @neighborhoods[borough].each do |neighborhood|
+      %li= link_to neighborhood.name, neighborhood

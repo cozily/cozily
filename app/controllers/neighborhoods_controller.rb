@@ -1,4 +1,11 @@
 class NeighborhoodsController < ApplicationController
+  def index
+    @neighborhoods = ActiveSupport::OrderedHash.new
+    ["Manhattan", "Brooklyn", "Queens", "Bronx", "Staten Island"].each do |borough|
+      @neighborhoods[borough] = Neighborhood.where(:borough => borough)
+    end
+  end
+
   def show
     @neighborhood = Neighborhood.find(params[:id])
     @apartments = @neighborhood.published_apartments.paginate(:page => params[:page], :per_page => Apartment.per_page)

@@ -11,6 +11,17 @@ feature "neighborhoods" do
     page.should have_css("a:contains('#{apartment.street}')")
   end
 
+  scenario "user views a neighborhood index page" do
+    visit neighborhood_path(Neighborhood.first)
+
+    click_link "see all neighborhoods"
+
+    current_path.should == neighborhoods_path
+    Neighborhood.all.each do |neighborhood|
+      page.should have_content(neighborhood.name)
+    end
+  end
+
   scenario "user adds and removes a neighborhood from their profile", :js => true do
     user = Factory(:user, :profile => Profile.new)
     apartment = Factory(:published_apartment)
