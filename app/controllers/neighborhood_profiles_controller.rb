@@ -7,7 +7,9 @@ class NeighborhoodProfilesController < ApplicationController
       NeighborhoodProfile.create(:neighborhood => neighborhood,
                                  :profile => current_user.profile)
     end
-    render :json => {:neighborhood_profile_link => render_to_string(:partial => "users/profiles/neighborhood_link",
+    render :json => {:neighborhood_link => render_to_string(:partial => "neighborhoods/link",
+                                                            :locals => {:neighborhood => neighborhood}),
+                     :neighborhood_profile_link => render_to_string(:partial => "users/profiles/neighborhood_link",
                                                                     :locals => {:neighborhood => neighborhood}),
                      :profile_summary => render_to_string(:partial => "users/profiles/summary")}
   end

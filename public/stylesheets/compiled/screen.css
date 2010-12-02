@@ -1702,8 +1702,16 @@ body.neighborhoods.index div[data-content-key=yield] ul {
 body.neighborhoods.index div[data-content-key=yield] ul li {
   float: left;
   width: 205px;
-  margin-right: 20px;
+  margin-right: 15px;
+  margin-bottom: 3px;
   font-size: 18px;
+  padding-left: 5px;
+}
+/* line 42, ../../../app/stylesheets/partials/_neighborhood.scss */
+body.neighborhoods.index div[data-content-key=yield] ul li.active {
+  text-shadow: #aaaaaa 1px 1px 1px;
+  font-weight: bold;
+  font-style: italic;
 }
 
 /* line 3, ../../../app/stylesheets/partials/apartments/_apartments.scss */

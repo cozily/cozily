@@ -7,4 +7,4 @@
   %h2= borough
   %ul
     - @neighborhoods[borough].each do |neighborhood|
-      %li= link_to neighborhood.name, neighborhood
+      =render "neighborhoods/link", :neighborhood => neighborhood

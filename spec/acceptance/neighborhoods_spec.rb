@@ -22,7 +22,7 @@ feature "neighborhoods" do
     end
   end
 
-  scenario "user adds and removes a neighborhood from their profile", :js => true do
+  scenario "user adds and removes a neighborhood from the neighborhood show page", :js => true do
     user = Factory(:user, :profile => Profile.new)
     apartment = Factory(:published_apartment)
 
@@ -36,6 +36,22 @@ feature "neighborhoods" do
     page.should have_no_content("in all neighborhoods")
     page.should have_content("in #{neighborhood.name}")
     click_link "remove this neighborhood from your profile"
+    page.should have_content("in all neighborhoods")
+  end
+
+  scenario "user adds and removes a neighborhood from the neighborhood index page", :js => true do
+    neighborhood = Neighborhood.first
+    user = Factory(:user, :profile => Profile.new)
+
+    login_as(user)
+
+    visit neighborhoods_path
+
+    page.should have_content("in all neighborhoods")
+    click_link "match apartments in #{neighborhood.name}"
+    page.should have_no_content("in all neighborhoods")
+    page.should have_content("in #{neighborhood.name}")
+    click_link "stop matching apartments in #{neighborhood.name}"
     page.should have_content("in all neighborhoods")
   end
 end
