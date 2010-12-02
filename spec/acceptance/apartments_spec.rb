@@ -145,7 +145,7 @@ feature "apartments" do
       end
 
       visit apartment_path(Factory(:apartment))
-      page.should have_content("This apartment is unpublished")
+      page.should have_content("this apartment is unpublished")
     end
   end
 end
