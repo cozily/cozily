@@ -1457,6 +1457,41 @@ body.pages div.page {
 body.pages div.page p {
   font-size: 1.2em;
 }
+/* line 9, ../../../app/stylesheets/partials/_pages.scss */
+body.pages div.page div#bios {
+  border-top: 5px dashed black;
+  padding-top: 15px;
+}
+/* line 13, ../../../app/stylesheets/partials/_pages.scss */
+body.pages div.page div#bios div.bio {
+  float: left;
+  width: 50%;
+}
+/* line 17, ../../../app/stylesheets/partials/_pages.scss */
+body.pages div.page div#bios div.bio h2 {
+  margin-right: 5px;
+  display: inline;
+}
+/* line 22, ../../../app/stylesheets/partials/_pages.scss */
+body.pages div.page div#bios div.bio h3 {
+  font-style: italic;
+  margin-top: -3px;
+}
+/* line 27, ../../../app/stylesheets/partials/_pages.scss */
+body.pages div.page div#bios div.bio img {
+  margin-right: 5px;
+}
+/* line 32, ../../../app/stylesheets/partials/_pages.scss */
+body.pages div.page div#bios div.bio p img {
+  width: 80px;
+  height: 80px;
+  float: left;
+  margin-right: 12px;
+  -moz-box-shadow: #333333 1px 1px 5px 0;
+  -webkit-box-shadow: #333333 1px 1px 5px 0;
+  -o-box-shadow: #333333 1px 1px 5px 0;
+  box-shadow: #333333 1px 1px 5px 0;
+}
 
 /* line 2, ../../../app/stylesheets/partials/_sessions.scss */
 body.sessions div[data-content-key=yield], body.passwords div[data-content-key=yield] {
