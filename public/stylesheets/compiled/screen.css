@@ -1465,7 +1465,7 @@ body.pages div.page div#bios {
 /* line 13, ../../../app/stylesheets/partials/_pages.scss */
 body.pages div.page div#bios div.bio {
   float: left;
-  width: 50%;
+  width: 440px;
 }
 /* line 17, ../../../app/stylesheets/partials/_pages.scss */
 body.pages div.page div#bios div.bio h2 {
@@ -1491,6 +1491,14 @@ body.pages div.page div#bios div.bio p img {
   -webkit-box-shadow: #333333 1px 1px 5px 0;
   -o-box-shadow: #333333 1px 1px 5px 0;
   box-shadow: #333333 1px 1px 5px 0;
+}
+/* line 41, ../../../app/stylesheets/partials/_pages.scss */
+body.pages div.page div#bios div.bio#todd {
+  padding-right: 10px;
+}
+/* line 45, ../../../app/stylesheets/partials/_pages.scss */
+body.pages div.page div#bios div.bio#mike {
+  padding-left: 10px;
 }
 
 /* line 2, ../../../app/stylesheets/partials/_sessions.scss */

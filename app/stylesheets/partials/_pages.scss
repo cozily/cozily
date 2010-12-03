@@ -12,7 +12,7 @@ body.pages {
 
             div.bio {
                 float: left;
-                width: 50%;
+                width: 440px;
 
                 h2 {
                     margin-right: 5px;
@@ -36,6 +36,14 @@ body.pages {
                         margin-right: 12px;
                         @include box-shadow;
                     }
+                }
+
+                &#todd {
+                    padding-right: 10px;
+                }
+
+                &#mike {
+                    padding-left: 10px;
                 }
             }
         }
