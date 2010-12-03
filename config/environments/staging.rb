@@ -47,7 +47,11 @@ Cozily::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
-  config.action_mailer.default_url_options = { :host => 'cozily-staging.heroku.com' }
+  config.action_mailer.default_url_options = { :host => 'staging.cozi.ly' }
 
   Sass::Plugin.options[:never_update] = true
+
+  config.middleware.insert_before(Rack::Lock, Rack::Rewrite) do
+    r301 %r{.*}, 'http://staging.cozi.ly$&'
+  end
 end

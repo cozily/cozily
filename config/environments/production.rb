@@ -50,4 +50,8 @@ Cozily::Application.configure do
   config.action_mailer.default_url_options = {:host => 'cozi.ly'}
 
   Sass::Plugin.options[:never_update] = true
+
+  config.middleware.insert_before(Rack::Lock, Rack::Rewrite) do
+    r301 %r{.*}, 'http://cozi.ly$&'
+  end
 end
