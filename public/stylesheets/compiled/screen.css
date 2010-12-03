@@ -2150,20 +2150,32 @@ body.apartments.show div.aside ul.actions li.favorite a.remove {
   background: url(/images/icons/remove.png) no-repeat 0 0px;
 }
 /* line 263, ../../../app/stylesheets/partials/apartments/_show.sass */
-body.apartments.show div.aside ul.actions li.facebook {
-  margin-top: 0px;
+body.apartments.show div.aside ul.actions li.twitter {
+  margin-top: 5px;
 }
-/* line 267, ../../../app/stylesheets/partials/apartments/_show.sass */
+/* line 266, ../../../app/stylesheets/partials/apartments/_show.sass */
+body.apartments.show div.aside ul.actions li.facebook {
+  margin-top: 5px;
+  width: 99px;
+}
+/* line 269, ../../../app/stylesheets/partials/apartments/_show.sass */
+body.apartments.show div.aside ul.actions li.facebook iframe {
+  border: none;
+  overflow: hidden;
+  width: 99px;
+  height: 21px;
+}
+/* line 275, ../../../app/stylesheets/partials/apartments/_show.sass */
 body.apartments.show div.aside div#map_canvas {
   width: 311px;
   height: 311px;
 }
-/* line 271, ../../../app/stylesheets/partials/apartments/_show.sass */
+/* line 279, ../../../app/stylesheets/partials/apartments/_show.sass */
 body.apartments.show p.unpublished {
   padding: 24px 32px;
   font-size: 32px;
 }
-/* line 275, ../../../app/stylesheets/partials/apartments/_show.sass */
+/* line 283, ../../../app/stylesheets/partials/apartments/_show.sass */
 body.apartments.show dl {
   clear: both;
 }

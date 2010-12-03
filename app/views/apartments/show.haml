@@ -79,7 +79,12 @@
       %li.flag=render "flags/link", :apartment => @apartment
       %li.favorite=render "favorites/link", :apartment => @apartment
       %li.facebook
-        %iframe{ :src =>"http://www.facebook.com/widgets/like.php?href=#{apartment_url(@apartment)}&layout=standard&action=like&show_faces=false" }
+        %iframe{ :src =>"http://www.facebook.com/widgets/like.php?href=#{apartment_url(@apartment)}&layout=button_count&action=like&show_faces=false&width=99&height=21",
+                 :scrolling => "no",
+                 :frameborder => "0",
+                 :allowTransparency => "true" }
+      %li.twitter
+        <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="cozidotly">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 
     #map_canvas
     =image_tag "backgrounds/shadow.png", :class => "shadow"
