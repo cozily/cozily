@@ -52,6 +52,8 @@ Cozily::Application.configure do
   Sass::Plugin.options[:never_update] = true
 
   config.middleware.insert_before(Rack::Lock, Rack::Rewrite) do
-#    r301 %r{.*}, 'http://cozi.ly$&'
+    r301 %r{.*}, 'http://cozi.ly$&', :if => Proc.new { |rack_env|
+      rack_env['SERVER_NAME'] != 'cozi.ly'
+    }
   end
 end
