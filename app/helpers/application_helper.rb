@@ -26,14 +26,14 @@ module ApplicationHelper
 
   def lady_text
     text = if signed_out?
-      "Thanks for checking out Cozily.  #{link_to("Sign up", sign_up_path)} if you like what see!"
-    elsif !current_user.email_confirmed?
-      "Hey #{current_user.first_name}, remember to confirm your email address. #{link_to("Resend link", resend_confirmation_user_path(current_user), :'data-remote' => true)}."
-    elsif action_name == "messages"
-      "Wow #{current_user.first_name}, people really seem to love talking to you!"
-    else
-      "Wow #{current_user.first_name}, that's a fabulous shirt you're wearing."
-    end
+             "Thanks for checking out Cozily.  #{link_to("Sign up", sign_up_path)} if you like what see!"
+           elsif !current_user.email_confirmed?
+             "Hey #{current_user.first_name}, remember to confirm your email address. #{link_to("Resend link", resend_confirmation_user_path(current_user), :'data-remote' => true)}."
+           elsif action_name == "messages"
+             "Wow #{current_user.first_name}, people really seem to love talking to you!"
+           else
+             lady_messages.sort_by(&:rand).first
+           end
 
     text.html_safe
   end
@@ -45,6 +45,26 @@ module ApplicationHelper
       "sessions",
       "passwords",
       "signup"].all? { |name| controller_name != name }) &&
-           ! (controller_name == "users" && action_name == "new")
+        !(controller_name == "users" && action_name == "new")
+  end
+
+  def lady_messages
+    bedrooms     = 1 + rand(3)
+    apartments   = Apartment.where(:bedrooms => bedrooms, :sublet => false, :state => "published")
+
+    neighborhood = Apartment.where(:state => "published").first(:order => "RANDOM()").try(:neighborhoods).try(:first)
+
+    messages = ["Wow #{current_user.first_name}, that's a fabulous shirt you're wearing."]
+
+    if apartments.present?
+      messages << "The median rent of a #{bedrooms} bedroom apartment on Cozily is $#{number_with_delimiter(number_with_precision(apartments.map(&:rent).median, :precision => 0))}."
+      messages << "The median square footage of #{bedrooms} bedroom apartments on Cozily is #{apartments.map(&:square_footage).median}."
+    end
+
+    if neighborhood.present?
+      messages << "Maybe you'd like to check out some apartments in #{link_to(neighborhood.name, neighborhood)}?"
+    end
+
+    messages
   end
 end
