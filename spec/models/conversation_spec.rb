@@ -5,7 +5,7 @@ describe Conversation do
     it { should belong_to(attr) }
   end
 
-  it { should have_many(:messages) }
+  it { should have_many(:messages, :order => "created_at") }
 
   [:apartment, :sender, :receiver].each do |attr|
     it { should validate_presence_of(attr) }

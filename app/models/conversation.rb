@@ -2,7 +2,7 @@ class Conversation < ActiveRecord::Base
   belongs_to :apartment
   belongs_to :sender, :class_name => "User"
   belongs_to :receiver, :class_name => "User"
-  has_many :messages
+  has_many :messages, :order => "created_at"
 
   validates_presence_of :apartment, :sender, :receiver
   validate :ensure_sender_is_not_receiver
