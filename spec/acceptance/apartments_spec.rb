@@ -123,6 +123,17 @@ feature "apartments" do
       @user.apartments.each do |apartment|
         page.should have_content(apartment.street)
       end
+
+      apartment = @user.apartments.first
+      click_link apartment.street
+
+      current_path.should == edit_apartment_path(apartment)
+
+      lambda {
+        click_link "View Listing"
+      }.should_not change(apartment, :views_count)
+
+      current_path.should == apartment_path(apartment)
     end
   end
 
