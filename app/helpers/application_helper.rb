@@ -50,18 +50,16 @@ module ApplicationHelper
 
   def lady_messages
     bedrooms     = 1 + rand(3)
-    apartments   = Apartment.where(:bedrooms => bedrooms, :sublet => false, :state => "published")
 
-    neighborhood = Apartment.where(:state => "published").first(:order => "RANDOM()").try(:neighborhoods).try(:first)
+    apartments   = Apartment.where(:bedrooms => bedrooms, :sublet => false, :state => "published").order("RANDOM()")
+    apartment = apartments.first
+    neighborhood = apartment.neighborhoods.first
 
     messages = ["Wow #{current_user.first_name}, that's a fabulous shirt you're wearing."]
 
     if apartments.present?
-      messages << "The median rent of a #{bedrooms} bedroom apartment on Cozily is $#{number_with_delimiter(number_with_precision(apartments.map(&:rent).median, :precision => 0))}."
+      messages << "The median rent of #{bedrooms} bedroom apartments on Cozily is $#{number_with_delimiter(number_with_precision(apartments.map(&:rent).median, :precision => 0))}."
       messages << "The median square footage of #{bedrooms} bedroom apartments on Cozily is #{apartments.map(&:square_footage).median}."
-    end
-
-    if neighborhood.present?
       messages << "Maybe you'd like to check out some apartments in #{link_to(neighborhood.name, neighborhood)}?"
     end
 
