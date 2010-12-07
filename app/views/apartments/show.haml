@@ -7,7 +7,7 @@
 -if @apartment.published? || (signed_in? && @apartment.owned_by?(current_user))
   :javascript
     var self = #{@apartment.as_json(:methods => :to_param, :include => :address).to_json};
-    var apartments = #{(Apartment.with_state(:published) - [@apartment]).as_json(:methods => :to_param, :include => :address).to_json};
+    var apartments = #{@apartment.comparable_apartments.as_json(:methods => :to_param, :include => :address).to_json};
 
   -if signed_in? && @apartment.owned_by?(current_user)
     =render "apartments/owner", :apartment => @apartment, :type => :show

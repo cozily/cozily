@@ -6,7 +6,7 @@
 
 :javascript
   var self = #{@apartment.as_json(:methods => :to_param, :include => :address).to_json};
-  var apartments = #{(@apartment.comparable_apartments).as_json(:methods => :to_param, :include => :address).to_json};
+  var apartments = #{@apartment.comparable_apartments.as_json(:methods => :to_param, :include => :address).to_json};
 
 =render "apartments/owner", :apartment => @apartment, :type => :edit
 
