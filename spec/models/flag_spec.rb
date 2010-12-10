@@ -32,6 +32,16 @@ describe Flag do
       event.secondary_subject.should == flag.apartment
       event.actor.should == flag.user
     end
+
+    it "transitions the apartment to flagged when there are at least #{Flag::THRESHOLD} flags" do
+      apartment = Factory(:published_apartment)
+      (Flag::THRESHOLD - 1).times { Factory(:flag, :apartment => apartment) }
+      flag = Factory.build(:flag, :apartment => apartment)
+
+      lambda {
+        flag.save
+      }.should change { apartment.state }.from('published').to('flagged')
+    end
   end
 
   describe "#after_destroy" do

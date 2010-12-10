@@ -81,6 +81,10 @@ class Apartment < ActiveRecord::Base
     event :unpublish do
       transition :published => :unpublished
     end
+
+    event :flag do
+      transition [:unpublished, :published] => :flagged
+    end
   end
 
   scope :bedrooms_near, lambda { |count| where("bedrooms >= ? and bedrooms <= ?", count - 0.5, count + 0.5) }
