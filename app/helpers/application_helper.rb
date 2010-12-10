@@ -51,11 +51,13 @@ module ApplicationHelper
   def lady_messages
     bedrooms     = 1 + rand(3)
 
+    messages = ["Wow #{current_user.first_name}, that's a fabulous shirt you're wearing."]
+
     apartments   = Apartment.where(:bedrooms => bedrooms, :sublet => false, :state => "published").order("RANDOM()")
+    return messages if apartments.empty?
+
     apartment = apartments.first
     neighborhood = apartment.neighborhoods.first
-
-    messages = ["Wow #{current_user.first_name}, that's a fabulous shirt you're wearing."]
 
     if apartments.present?
       messages << "The median rent of #{bedrooms} bedroom apartments on Cozily is $#{number_with_delimiter(number_with_precision(apartments.map(&:rent).median, :precision => 0))}."

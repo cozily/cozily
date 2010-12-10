@@ -24,7 +24,7 @@ feature "favorites" do
     current_path.should == dashboard_favorites_path
 
     user.favorites.each do |favorite|
-      page.should have_css("a:contains('#{favorite.apartment.full_address}')")
+      page.should have_css("a:contains('#{favorite.apartment.street}')")
     end
   end
 end
