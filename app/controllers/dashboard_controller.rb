@@ -68,6 +68,8 @@ class DashboardController < ApplicationController
 
   private
   def load_events
-    @events = current_user.timeline_events[0...5]
+    component(:activity_feed) do
+      @events = current_user.timeline_events[0...5]
+    end
   end
 end
