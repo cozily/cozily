@@ -3,9 +3,8 @@
   = f.inputs do
     =hidden_field_tag "apartment[feature_ids][]"
 
-    -f.object.build_address unless f.object.address.present?
     =f.input :full_address, :label => "Address"
-    =render "apartments/neighborhood", :neighborhoods => apartment.address.new_record? ? [] : apartment.neighborhoods
+    =render "apartments/neighborhood", :neighborhoods => apartment.address.nil? ? [] : apartment.neighborhoods
     =f.input :unit, :label => "Unit No."
     =f.input :rent, :label => "Rent ($)"
     =f.input :bedrooms, :label => "Bedrooms (#)"

@@ -131,6 +131,10 @@ class Apartment < ActiveRecord::Base
     missing_fields
   end
 
+  def full_address
+    address.try(:full_address)
+  end
+
   def full_address=(address)
     self.address = Address.for_full_address(address)
   end
