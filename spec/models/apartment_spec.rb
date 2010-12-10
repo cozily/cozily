@@ -139,6 +139,12 @@ describe Apartment do
       @apartment.save
       @apartment.reload.unit.should == "1C"
     end
+
+    it "strips whitespace from unit" do
+      @apartment = Factory.build(:apartment, :unit => " #1-c  ")
+      @apartment.save
+      @apartment.reload.unit.should == "1C"
+    end
   end
 
   describe "#last_state_change" do

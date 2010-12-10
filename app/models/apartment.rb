@@ -196,6 +196,6 @@ class Apartment < ActiveRecord::Base
 
   def format_unit
     return unless self.unit
-    self.unit = self.unit.delete("#-").upcase
+    self.unit = self.unit.delete("#-").upcase.strip
   end
 end
