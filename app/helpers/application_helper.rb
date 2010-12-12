@@ -32,7 +32,7 @@ module ApplicationHelper
            elsif action_name == "messages"
              "Wow #{current_user.first_name}, people really seem to love talking to you!"
            else
-             lady_messages.sort_by(&:rand).first
+             lady_messages.first
            end
 
     text.html_safe
@@ -49,22 +49,20 @@ module ApplicationHelper
   end
 
   def lady_messages
-    bedrooms     = 1 + rand(3)
-
     messages = ["Wow #{current_user.first_name}, that's a fabulous shirt you're wearing."]
 
-    apartments   = Apartment.where(:bedrooms => bedrooms, :sublet => false, :state => "published").order("RANDOM()")
-    return messages if apartments.empty?
+    Apartment.distinct_bedrooms.each do |bedrooms|
+      apartments = Apartment.where(:bedrooms => bedrooms, :sublet => false, :state => "published").order("RANDOM()")
+      next if apartments.empty?
 
-    apartment = apartments.first
-    neighborhood = apartment.neighborhoods.first
+      apartment    = apartments.first
+      neighborhood = apartment.neighborhoods.first
 
-    if apartments.present?
-      messages << "The median rent of #{bedrooms} bedroom apartments on Cozily is $#{number_with_delimiter(number_with_precision(apartments.map(&:rent).median, :precision => 0))}."
-      messages << "The median square footage of #{bedrooms} bedroom apartments on Cozily is #{apartments.map(&:square_footage).median}."
+      messages << "The median rent of #{number_with_precision(bedrooms, :precision => 0)} bedroom apartments on Cozily is $#{number_with_delimiter(number_with_precision(apartments.map(&:rent).median, :precision => 0))}."
+      messages << "The median square footage of #{number_with_precision(bedrooms, :precision => 0)} bedroom apartments on Cozily is #{apartments.map(&:square_footage).median}."
       messages << "Maybe you'd like to check out some apartments in #{link_to(neighborhood.name, neighborhood)}?"
     end
 
-    messages
+    messages.sort_by(&:rand)
   end
 end

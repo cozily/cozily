@@ -95,6 +95,10 @@ class Apartment < ActiveRecord::Base
       10
     end
 
+    def distinct_bedrooms
+      where(:state => "published").select('DISTINCT bedrooms').map(&:bedrooms).sort
+    end
+
     def unpublish_stale_apartments
       apts = Apartment.all(:conditions => ["state = 'published' AND (end_date < ? OR published_at < ?)", Date.today, 3.weeks.ago])
       apts.each do |apartment|

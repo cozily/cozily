@@ -1,4 +1,5 @@
 var staleMap;
+var updates = 0;
 var sortableOptions = {
     axis: 'x',
     dropOnEmpty:false,
@@ -534,6 +535,10 @@ function liveNeighborhoodAutocomplete() {
 
         $(document).bind('ajaxStop', function() {
             hideLoading();
+
+            updates += 1;
+            if(updates == lady_messages.length) { updates = 0; }
+            $("div.head div.lady span").hide().html(lady_messages[updates]).fadeIn();
         });
     });
 })(jQuery);
