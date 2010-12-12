@@ -19,5 +19,6 @@
   .aside
     #map_canvas
     =image_tag "backgrounds/shadow.png", :class => "shadow"
+    =link_to "view on larger map", dashboard_map_path, :'data-remote' => true
 
     =render "shared/activity_feed", :events => @events

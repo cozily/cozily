@@ -15,10 +15,10 @@ class DashboardController < ApplicationController
     respond_to do |format|
       format.html
       format.js do
-        render :json => {:listings => render_to_string(:partial => "dashboard/listings",
-                                                       :locals => {:apartments => @apartments}),
-                         :tabs => render_to_string(:partial => "dashboard/tabs",
-                                                   :locals => {:active => :listings}),
+        render :json => {:listings   => render_to_string(:partial => "dashboard/listings",
+                                                         :locals  => {:apartments => @apartments}),
+                         :tabs       => render_to_string(:partial => "dashboard/tabs",
+                                                         :locals  => {:active => :listings}),
                          :map_others => @apartments.as_json(:methods => :to_param, :include => :address).to_json}
       end
     end
@@ -29,10 +29,10 @@ class DashboardController < ApplicationController
     respond_to do |format|
       format.html
       format.js do
-        render :json => {:matches => render_to_string(:partial => "dashboard/matches",
-                                                      :locals => {:matches => @matches}),
-                         :tabs => render_to_string(:partial => "dashboard/tabs",
-                                                   :locals => {:active => :matches}),
+        render :json => {:matches    => render_to_string(:partial => "dashboard/matches",
+                                                         :locals  => {:matches => @matches}),
+                         :tabs       => render_to_string(:partial => "dashboard/tabs",
+                                                         :locals  => {:active => :matches}),
                          :map_others => @matches.as_json(:methods => :to_param, :include => :address).to_json}
       end
     end
@@ -43,10 +43,10 @@ class DashboardController < ApplicationController
     respond_to do |format|
       format.html
       format.js do
-        render :json => {:favorites => render_to_string(:partial => "dashboard/favorites",
-                                                        :locals => {:favorites => @favorites}),
-                         :tabs => render_to_string(:partial => "dashboard/tabs",
-                                                   :locals => {:active => :favorites}),
+        render :json => {:favorites  => render_to_string(:partial => "dashboard/favorites",
+                                                         :locals  => {:favorites => @favorites}),
+                         :tabs       => render_to_string(:partial => "dashboard/tabs",
+                                                         :locals  => {:active => :favorites}),
                          :map_others => @favorites.as_json(:methods => :to_param, :include => :address).to_json}
       end
     end
@@ -58,12 +58,18 @@ class DashboardController < ApplicationController
       format.html
       format.js do
         render :json => {:conversations => render_to_string(:partial => "dashboard/messages",
-                                                            :locals => {:conversations => @conversations}),
-                         :tabs => render_to_string(:partial => "dashboard/tabs",
-                                                   :locals => {:active => :messages})
+                                                            :locals  => {:conversations => @conversations}),
+                         :tabs          => render_to_string(:partial => "dashboard/tabs",
+                                                            :locals  => {:active => :messages})
         }
       end
     end
+  end
+
+  def map
+    @matches = current_user.matches
+    render :json => {:map        => render_to_string(:partial => "dashboard/map"),
+                     :map_others => @matches.as_json(:methods => :to_param, :include => :address).to_json}
   end
 
   private

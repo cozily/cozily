@@ -295,6 +295,13 @@ body.dashboard, body.searches, body.neighborhoods.show, body.browse {
         }
     }
 
+    div[data-content-key=active-tab] {
+        div#map_canvas.full {
+            margin: 10px;
+            width: 930px;
+        }
+    }
+
     div.aside {
         width: 310px;
         float: right;
