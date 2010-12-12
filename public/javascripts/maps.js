@@ -17,6 +17,8 @@ function initializeMap() {
     if (typeof(apartments) != 'undefined') {
         updateMap(self, apartments);
     }
+
+    $("#map_canvas").hide().fadeIn();
 }
 
 function setPrimaryApartment(lat, lng, title) {
