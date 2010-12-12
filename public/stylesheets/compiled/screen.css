@@ -1158,7 +1158,7 @@ body.dashboard div.article div.apartment > ul li.status fieldset.inputs ol li, b
 body.dashboard div.article div.apartment > ul li.status fieldset.inputs ol li label, body.searches div.article div.apartment > ul li.status fieldset.inputs ol li label, body.neighborhoods.show div.article div.apartment > ul li.status fieldset.inputs ol li label, body.browse div.article div.apartment > ul li.status fieldset.inputs ol li label {
   display: inline;
   float: none;
-  font-size: 1.1em;
+  font-size: 18px;
 }
 /* line 221, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.status fieldset.inputs ol li input[type=radio], body.searches div.article div.apartment > ul li.status fieldset.inputs ol li input[type=radio], body.neighborhoods.show div.article div.apartment > ul li.status fieldset.inputs ol li input[type=radio], body.browse div.article div.apartment > ul li.status fieldset.inputs ol li input[type=radio] {
@@ -1166,8 +1166,8 @@ body.dashboard div.article div.apartment > ul li.status fieldset.inputs ol li in
 }
 /* line 225, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.status fieldset.inputs ol li.active, body.searches div.article div.apartment > ul li.status fieldset.inputs ol li.active, body.neighborhoods.show div.article div.apartment > ul li.status fieldset.inputs ol li.active, body.browse div.article div.apartment > ul li.status fieldset.inputs ol li.active {
-  background-color: #1982A0;
-  color: white;
+  font-style: italic;
+  font-weight: 600;
 }
 /* line 234, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article div.apartment > ul li.contact, body.searches div.article div.apartment > ul li.contact, body.neighborhoods.show div.article div.apartment > ul li.contact, body.browse div.article div.apartment > ul li.contact {

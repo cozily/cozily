@@ -215,7 +215,7 @@ body.dashboard, body.searches, body.neighborhoods.show, body.browse {
                                 label {
                                     display: inline;
                                     float: none;
-                                    font-size: 1.1em;
+                                    font-size: 18px;
                                 }
 
                                 input[type=radio] {
@@ -223,8 +223,8 @@ body.dashboard, body.searches, body.neighborhoods.show, body.browse {
                                 }
 
                                 &.active {
-                                    background-color: #1982A0;
-                                    color: white;
+                                    font-style: italic;
+                                    font-weight: 600;
                                 }
                             }
                         }
