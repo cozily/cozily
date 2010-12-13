@@ -18,7 +18,7 @@ function initializeMap() {
         updateMap(self, apartments);
     }
 
-    $("#map_canvas").hide().fadeIn();
+    $(".aside").hide().fadeIn();
 }
 
 function setPrimaryApartment(lat, lng, title) {
