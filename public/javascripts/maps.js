@@ -25,7 +25,7 @@ function setPrimaryApartment(lat, lng, title) {
     var point = new google.maps.LatLng(lat, lng);
     map.setCenter(point);
 
-    var marker = new google.maps.Marker({position: point, title: title, icon: '/images/icons/blue_marker.png'});
+    var marker = new google.maps.Marker({position: point, title: title, icon: '/images/icons/blue_marker.png', animation: google.maps.Animation.DROP });
     marker.setMap(map);
 
     return marker;
