@@ -44,7 +44,12 @@ function updateMap(self, others) {
         var apartment = others[i].apartment;
         if (apartment.address != undefined) {
             point = new google.maps.LatLng(apartment.address.lat, apartment.address.lng);
-            marker = new google.maps.Marker({position: point, param: apartment.to_param});
+            marker = new google.maps.Marker({
+                position: point,
+                param: apartment.to_param,
+                title: apartment.address.street,
+                animation: google.maps.Animation.DROP
+            });
 
             attachClickToMarker(marker, apartment);
 
