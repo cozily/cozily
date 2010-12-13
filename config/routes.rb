@@ -33,11 +33,11 @@ ActionController::Routing::Routes.draw do |map|
 
   map.with_options :controller => "dashboard" do |page|
     page.dashboard "dashboard", :action => "show"
-    page.dashboard_listings "dashboard/listings", :action => "listings"
-    page.dashboard_matches "dashboard/matches", :action => "matches"
-    page.dashboard_map "dashboard/map", :action => "map"
-    page.dashboard_favorites "dashboard/favorites", :action => "favorites"
-    page.dashboard_messages "dashboard/messages", :action => "messages"
+    page.dashboard_listings "listings", :action => "listings"
+    page.dashboard_matches "matches", :action => "matches"
+    page.dashboard_map "map", :action => "map"
+    page.dashboard_favorites "favorites", :action => "favorites"
+    page.dashboard_messages "messages", :action => "messages"
   end
 
   map.with_options :controller => "browse" do |page|
