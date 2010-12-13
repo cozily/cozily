@@ -77,6 +77,10 @@ class DashboardController < ApplicationController
     end
   end
 
+  def fail
+    raise Exception
+  end
+
   private
   def load_events
     component(:activity_feed) do

@@ -38,6 +38,7 @@ ActionController::Routing::Routes.draw do |map|
     page.dashboard_map "map", :action => "map"
     page.dashboard_favorites "favorites", :action => "favorites"
     page.dashboard_messages "messages", :action => "messages"
+    page.dashboard_fail "fail", :action => "fail"
   end
 
   map.with_options :controller => "browse" do |page|
