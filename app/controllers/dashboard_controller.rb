@@ -68,8 +68,13 @@ class DashboardController < ApplicationController
 
   def map
     @matches = current_user.matches
-    render :json => {:map        => render_to_string(:partial => "dashboard/map"),
-                     :map_others => @matches.as_json(:methods => :to_param, :include => :address).to_json}
+    respond_to do |format|
+      format.html
+      format.js do
+        render :json => {:map        => render_to_string(:partial => "dashboard/map"),
+                         :map_others => @matches.as_json(:methods => :to_param, :include => :address).to_json}
+      end
+    end
   end
 
   private
