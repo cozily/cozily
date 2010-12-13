@@ -1,10 +1,15 @@
-%ul.tabs{ :'data-content-key' => "dashboard-tabs" }
-  -if current_user.lister?
-    %li{:class => "#{'active' if active == :listings}"}
-      =link_to "My Listings (#{current_user.apartments.count})", dashboard_listings_path, :'data-remote' => true
-  -if current_user.finder?
-    %li{:class => "#{'active' if active == :matches}"}
-      =link_to "Matches (#{current_user.matches.count})", dashboard_matches_path, :'data-remote' => true
-    %li{:class => "#{'active' if active == :favorites}"}
-      =link_to "Favorites (#{current_user.favorites.count})", dashboard_favorites_path, :'data-remote' => true
-  = render "dashboard/tabs/messages", :active => active
+-if signed_in?
+  %ul.tabs{ :'data-content-key' => "dashboard-tabs" }
+    -if current_user.lister?
+      %li{:class => "#{'active' if active == :listings}"}
+        =link_to "My Listings (#{current_user.apartments.count})", dashboard_listings_path, :'data-remote' => true
+    -if current_user.finder?
+      %li{:class => "#{'active' if active == :matches}"}
+        =link_to "Matches (#{current_user.matches.count})", dashboard_matches_path, :'data-remote' => true
+      %li{:class => "#{'active' if active == :favorites}"}
+        =link_to "Favorites (#{current_user.favorites.count})", dashboard_favorites_path, :'data-remote' => true
+    = render "dashboard/tabs/messages", :active => active
+
+-else
+  %ul.tabs{ :'data-content-key' => "dashboard-tabs" }
+    %li.active=link_to "Matches (#{Apartment.with_state(:published).count})", browse_path, :'data-remote' => true

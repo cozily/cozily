@@ -15,3 +15,9 @@
     -else
       %p.empty
         You don't have any matches.  We're working on it.
+
+  .aside
+    #map_canvas
+    =image_tag "backgrounds/shadow.png", :class => "shadow"
+
+    =link_to "view on larger map", dashboard_map_path, :'data-remote' => true

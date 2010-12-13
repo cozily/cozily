@@ -10,11 +10,6 @@
   .lady
     %span=lady_text
 
-  %ul.tabs
-    %li.active=link_to "Matches (#{@all_apartments.count})", browse_path, :'data-remote' => true
+  = render "dashboard/tabs"
 
 = render "browse/index"
-
-.aside
-  #map_canvas
-  =image_tag "backgrounds/shadow.png", :class => "shadow"

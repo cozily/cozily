@@ -5,7 +5,7 @@
   var apartments = #{@matches.as_json(:methods => :to_param, :include => :address).to_json};
 
 .head
-  %h1==Hi, #{current_user.first_name}
+  %h1==Hi, #{signed_in? ? current_user.first_name : "friend"}
 
   .lady
     %span=lady_text

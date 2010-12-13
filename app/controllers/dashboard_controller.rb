@@ -1,5 +1,6 @@
 class DashboardController < ApplicationController
-  before_filter :authenticate, :load_events
+  before_filter :authenticate, :except => [ :fail, :map ]
+  before_filter :load_events
 
   def show
     flash.keep
@@ -67,7 +68,7 @@ class DashboardController < ApplicationController
   end
 
   def map
-    @matches = current_user.matches
+    @matches = signed_in? ? current_user.matches : Apartment.with_state(:published)
     respond_to do |format|
       format.html
       format.js do
