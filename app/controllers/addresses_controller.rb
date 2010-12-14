@@ -4,6 +4,7 @@ class AddressesController < ApplicationController
     response = GoogleGeocoder.geocode(params[:term], :bias => nyc_bounds)
     results = []
     response.all.each do |result|
+      next unless result.accuracy >= 8
       results << { :label => result.full_address,
                    :lat => result.lat,
                    :lng => result.lng }

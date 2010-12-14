@@ -25,13 +25,13 @@ class Address < ActiveRecord::Base
     def for_full_address(address)
       return unless address
       location = GoogleGeocoder.geocode(address)
-      if location.full_address.present?
-        address = Address.find_or_initialize_by_lat_and_lng(location.lat, location.lng)
+      if location.full_address.present? && location.accuracy >= 8
+        address              = Address.find_or_initialize_by_lat_and_lng(location.lat, location.lng)
         address.full_address = location.full_address
-        address.street = location.street_address
-        address.city = location.city
-        address.state = location.state
-        address.zip = location.zip
+        address.street       = location.street_address
+        address.city         = location.city
+        address.state        = location.state
+        address.zip          = location.zip
         address.accuracy     = location.accuracy
         address.save if address.changed?
         address
@@ -49,12 +49,12 @@ class Address < ActiveRecord::Base
     location = GoogleGeocoder.geocode(full_address)
     if location.full_address.present?
       self.full_address = location.full_address
-      self.street = location.street_address
-      self.city = location.city
-      self.state = location.state
-      self.zip = location.zip
-      self.lat = location.lat
-      self.lng = location.lng
+      self.street       = location.street_address
+      self.city         = location.city
+      self.state        = location.state
+      self.zip          = location.zip
+      self.lat          = location.lat
+      self.lng          = location.lng
       self.accuracy     = location.accuracy
     end
   end
