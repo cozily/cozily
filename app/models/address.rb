@@ -15,7 +15,8 @@ class Address < ActiveRecord::Base
                         :state,
                         :zip,
                         :lat,
-                        :lng
+                        :lng,
+                        :accuracy
 
   validates_uniqueness_of :lat, :scope => :lng
   validate :ensure_at_least_one_neighborhood
@@ -31,6 +32,7 @@ class Address < ActiveRecord::Base
         address.city = location.city
         address.state = location.state
         address.zip = location.zip
+        address.accuracy     = location.accuracy
         address.save if address.changed?
         address
       end
@@ -53,6 +55,7 @@ class Address < ActiveRecord::Base
       self.zip = location.zip
       self.lat = location.lat
       self.lng = location.lng
+      self.accuracy     = location.accuracy
     end
   end
 
