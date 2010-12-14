@@ -11,7 +11,9 @@ class ApartmentsController < ApplicationController
     @apartment = Apartment.find(params[:id])
     @nearby_stations = @apartment.nearby_stations
 
-    @apartment.update_attribute(:views_count, @apartment.views_count + 1) if current_user != @apartment.user
+    if @apartment.published? && !@apartment.owned_by?(current_user)
+      @apartment.increment(:views_count)
+    end
   end
 
   def edit
