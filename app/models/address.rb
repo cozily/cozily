@@ -25,7 +25,7 @@ class Address < ActiveRecord::Base
     def for_full_address(address)
       return unless address
       location = GoogleGeocoder.geocode(address)
-      if location.full_address.present? && location.accuracy >= 8
+      if location.full_address.present? && location.accuracy == 8
         address              = Address.find_or_initialize_by_lat_and_lng(location.lat, location.lng)
         address.full_address = location.full_address
         address.street       = location.street_address
