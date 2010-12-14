@@ -1,31 +1,55 @@
+%div.head
+  %h1 Cozily
+
 =render "shared/mailer_salutation", :user => @user
 
 -apts = @user.apartments.with_state(:published)
 -if apts.present?
-  %p==You currently have #{apts.count} published #{pluralize(apts.count, "apartment").split(" ").last} on #{link_to("Cozily", root_url)}.  Check them out.
+  %p==You currently have <span class='highlight'>#{apts.count} published #{pluralize(apts.count, "apartment").split(" ").last}</span> on #{link_to("Cozily", root_url)}.  Check them out.
   %table
     -apts.each do |apt|
       %tr
-        %td=link_to(image_tag(apt.images.first.asset.url(:thumb)), apartment_url(apt))
-        %td=link_to(apt.name, apartment_url(apt))
-        %td==#{apt.bedrooms.try(:prettify)}bd/#{apt.bathrooms.try(:prettify)}ba
-        %td==$#{number_with_delimiter(apt.rent)}
+        %td.image=link_to(image_tag(apt.images.first.asset.url(:thumb)), apartment_url(apt))
+        %td
+          .street= link_to(apt.street, apartment_url(apt))
+          .info
+            ==$#{number_with_delimiter(apt.rent)}
+            ==/ #{apt.bedrooms.prettify}bd/#{apt.bathrooms.prettify}ba
+            - if apt.square_footage
+              ==/ #{apt.square_footage} sq. ft.
+          .neighborhoods== Neighborhood: #{neighborhood_links(apt.neighborhoods)}
+          .published_on
+            ==Published on #{apt.published_at.try(:to_date).try(:to_s, :app_long)}
+            -if apt.sublet?
+              %span (sublet)
         %td=pluralize(apt.views_count, "view")
 
 -apts = @user.apartments.with_state(:unpublished)
 -if apts.present?
-  %p==You currently have #{apts.count} unpublished #{pluralize(apts.count, "apartment").split(" ").last} on #{link_to("Cozily", root_url)}.  Check them out.  Note that unpublished apartments are not visible to other users.  Make sure you publish your listings in order to rent your apartment!
+  %p==You currently have <span class='highlight'>#{apts.count} unpublished #{pluralize(apts.count, "apartment").split(" ").last}</span> on #{link_to("Cozily", root_url)}.  Note that unpublished apartments are not visible to other users.  Make sure you publish your listings in order to rent your apartment!
   %table
     -apts.each do |apt|
       %tr
-        %td
+        %td.image
           -if apt.images.present?
             =link_to(image_tag(apt.images.first.asset.url(:thumb)), apartment_url(apt))
           -else
             =link_to(image_tag("defaults/apartment/thumb.jpg"), apartment_url(apt))
-        %td==#{link_to(apt.name, apartment_url(apt))}
-        %td==#{apt.bedrooms.try(:prettify)}bd/#{apt.bathrooms.try(:prettify)}ba
-        %td==$#{number_with_delimiter(apt.rent)}
+        %td
+          .street= link_to(apt.address.present? ? apt.street : name_for_apartment(apt), apartment_url(apt))
+          .info
+            ==$#{number_with_delimiter(apt.rent)}
+            ==/ #{apt.bedrooms.try(:prettify)}bd/#{apt.bathrooms.try(:prettify)}ba
+            - if apt.square_footage
+              ==/ #{apt.square_footage} sq. ft.
+
+          -if apt.address
+            .neighborhoods== Neighborhood: #{neighborhood_links(apt.neighborhoods)}
+          .published_on
+            =last_state_change(apt)
+            -if apt.sublet?
+              %span (sublet)
+        %td=pluralize(apt.views_count, "view")
 
 -if @user.apartments.empty?
   %p==You've yet to create any apartments on #{link_to("Cozily", root_url)}.  Give it a try!

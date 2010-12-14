@@ -1,0 +1,57 @@
+@import "compass/css3";
+
+body {
+    font-family: "Helvetica", "Arial";
+    color: black;
+    font-size: 12px;
+}
+
+a {
+    color: black;
+}
+
+img {
+    border: 0;
+}
+
+p {
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+div.head {
+    background-color: black;
+    @include box-shadow;
+
+    h1 {
+        font-size: 24px;
+        text-transform: uppercase;
+        color: white;
+        padding: 5px 0 5px 10px;
+    }
+}
+
+table {
+    width: 75%;
+    padding: 0 10px 10px 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    @include box-shadow;
+
+    tr {
+        td {
+            border-bottom: 1px dashed #888;
+            padding: 10px 0 10px 10px;
+
+            &.image {
+                width: 90px;
+                @include box-shadow;
+            }
+        }
+    }
+}
+
+span.highlight {
+    background-color: #E6C481;
+    padding: 2px 5px;
+}

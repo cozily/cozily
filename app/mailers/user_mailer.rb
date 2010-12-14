@@ -1,3 +1,4 @@
+include ApartmentsHelper
 include UsersHelper
 
 class UserMailer < ActionMailer::Base
@@ -10,6 +11,7 @@ class UserMailer < ActionMailer::Base
 
   def finder_summary(user)
     @user = user
+    @latest_matches = user.matches.where(["published_at >= ?", 1.week.ago])
     mail(:from => "cozily-noreply@cozi.ly",
          :to => user.email,
          :subject => "Your Weekly Match Summary from Cozily",
