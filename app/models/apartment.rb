@@ -57,7 +57,7 @@ class Apartment < ActiveRecord::Base
       validates_presence_of :end_date, :if => Proc.new { |apartment| apartment.sublet? }
       validates_length_of :unit, :maximum => 5
       validates_numericality_of :rent, :greater_than => 0, :only_integer => true
-      validates_numericality_of :square_footage, :greater_than => 0, :less_than => 10_000, :only_integer => true
+      validates_numericality_of :square_footage, :greater_than => 0, :less_than_or_equal_to => 10_000, :only_integer => true
       validates_numericality_of :bedrooms, :greater_than_or_equal_to => 0
       validates_numericality_of :bathrooms, :greater_than_or_equal_to => 0
       validates_uniqueness_of :address_id, :scope => [ :user_id, :unit ]

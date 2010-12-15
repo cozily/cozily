@@ -18,7 +18,7 @@ describe Apartment do
   it { should validate_numericality_of(:square_footage,
                                        :allow_nil => true,
                                        :greater_than => 0,
-                                       :less_than => 10_000,
+                                       :less_than_or_equal_to => 10_000,
                                        :only_integer => true) }
 
   [:bedrooms, :bathrooms].each do |attr|
