@@ -1505,6 +1505,15 @@ body.pages div.page div#bios div.bio#todd {
 body.pages div.page div#bios div.bio#mike {
   padding-left: 10px;
 }
+/* line 51, ../../../app/stylesheets/partials/_pages.scss */
+body.pages div.page div.faq {
+  float: left;
+  width: 70%;
+}
+/* line 56, ../../../app/stylesheets/partials/_pages.scss */
+body.pages div.page img.man {
+  margin: 30px 0 0 15px;
+}
 
 /* line 2, ../../../app/stylesheets/partials/_sessions.scss */
 body.sessions div[data-content-key=yield], body.passwords div[data-content-key=yield] {
