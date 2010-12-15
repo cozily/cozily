@@ -14,9 +14,12 @@ describe Apartment do
   it { should validate_presence_of(:user) }
   it { should validate_length_of(:unit, :maximum => 5) }
 
-  [:rent, :square_footage].each do |attr|
-    it { should validate_numericality_of(attr, :allow_nil => true, :greater_than => 0, :only_integer => true) }
-  end
+  it { should validate_numericality_of(:rent, :allow_nil => true, :greater_than => 0, :only_integer => true) }
+  it { should validate_numericality_of(:square_footage,
+                                       :allow_nil => true,
+                                       :greater_than => 0,
+                                       :less_than => 10_000,
+                                       :only_integer => true) }
 
   [:bedrooms, :bathrooms].each do |attr|
     it { should validate_numericality_of(attr, :allow_nil => true) }
