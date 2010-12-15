@@ -1,5 +1,5 @@
--if apartment.missing_fields.present? || apartment.missing_associations.present?
-  %div{ :'data-content-key' => "missing-information" }
+%div{ :'data-content-key' => "missing-information" }
+  -if apartment.missing_fields.present? || apartment.missing_associations.present?
     %h2 Missing Information
 
     -if apartment.missing_fields.present?

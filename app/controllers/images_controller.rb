@@ -10,8 +10,13 @@ class ImagesController < ApplicationController
   def destroy
     @image = @apartment.images.find(params[:id])
     @image.destroy
-    render :json => { :images => render_to_string(:partial => "apartments/images",
-                                                  :locals => { :apartment => @apartment }) }
+    render :json => {:images              => render_to_string(:partial => "apartments/images",
+                                                              :locals  => {:apartment => @apartment}),
+                     :owner_buttons       => render_to_string(:partial => "apartments/owner_buttons",
+                                                              :locals  => {:apartment => @apartment}),
+                     :missing_information => render_to_string(:partial => "apartments/missing_information",
+                                                              :locals  => {:apartment => @apartment})
+    }
   end
 
   private

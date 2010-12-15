@@ -139,8 +139,10 @@ class Apartment < ActiveRecord::Base
     address.try(:full_address)
   end
 
-  def full_address=(address)
-    self.address = Address.for_full_address(address)
+  def full_address=(full_address)
+    unless full_address == self.address.try(:full_address)
+      self.address = Address.for_full_address(full_address)
+    end
   end
 
   def name

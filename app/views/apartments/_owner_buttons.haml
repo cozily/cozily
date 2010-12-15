@@ -1,0 +1,9 @@
+%ul.buttons{ :'data-content-key' => 'owner-buttons' }
+  %li=link_to "Delete Apartment", apartment_path(apartment), :method => :delete, :confirm => "Are you sure?"
+  -if apartment.can_unpublish?
+    %li=link_to "Unpublish Apartment", transition_apartment_path(apartment, :event => "unpublish"), :method => :put
+  %li.save=link_to "Save Changes", "#"
+  -if apartment.can_publish?
+    %li.publish=link_to "Publish Apartment", transition_apartment_path(apartment, :event => "publish", :return_to => apartment_path(apartment)), :method => :put
+  -elsif !apartment.published?
+    %li.publish=link_to "Publish Apartment", "#", :'data-tip' => "your apartment isn't quite ready for publishing.  complete the missing fields and save your changes."

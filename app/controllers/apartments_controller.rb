@@ -33,8 +33,10 @@ class ApartmentsController < ApplicationController
         format.html { redirect_to params[:return_to] || edit_apartment_path(@apartment) }
         format.js do
           render :json => {
-                  :comparables => render_to_string(:partial => "apartments/missing_information",
-                                                   :locals => { :apartments => @apartment })
+              :owner_buttons       => render_to_string(:partial => "apartments/owner_buttons",
+                                                       :locals  => {:apartment => @apartment}),
+              :missing_information => render_to_string(:partial => "apartments/missing_information",
+                                                       :locals  => {:apartment => @apartment})
           }
         end
       end

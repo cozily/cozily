@@ -90,6 +90,34 @@ function liveNeighborhoodAutocomplete() {
     });
 }
 
+function attachTips() {
+    $('[data-tip]').filter(
+                        function() {
+                            return $(this).data('qtip') == undefined;
+                        }).each(function() {
+        $(this).qtip({
+            content: $(this).attr('data-tip'),
+            show: 'mouseover',
+            hide: 'mouseout',
+            style: {
+                'font-size': '14px',
+                'font-weight': '500',
+                color: 'white',
+                border: {
+                    width: 7,
+                    radius: 5
+                },
+                name: 'dark'
+            },
+            position: {
+                adjust: {
+                    screen: true
+                }
+            }
+        });
+    });
+}
+
 (function($) {
     $(function() {
         $('.pagination a').attr('data-remote', 'true');
@@ -101,28 +129,7 @@ function liveNeighborhoodAutocomplete() {
             "iDisplayLength": 50
         });
 
-        $("[data-tip]").each(function() {
-            $(this).qtip({
-                content: $(this).attr('data-tip'),
-                show: 'mouseover',
-                hide: 'mouseout',
-                style: {
-                    'font-size': '14px',
-                    'font-weight': '500',
-                    color: 'white',
-                    border: {
-                        width: 7,
-                        radius: 5
-                    },
-                    name: 'dark'
-                },
-                position: {
-                    adjust: {
-                        screen: true
-                    }
-                }
-            });
-        });
+        attachTips();
 
         $("input[name='apartment[sublet]']").live("change", function(event) {
             if ($("input#apartment_sublet_true").attr('checked')) {
@@ -324,6 +331,7 @@ function liveNeighborhoodAutocomplete() {
                     $("div#upload_status").text('');
                     $("ul#images").replaceWith(response);
                     $("ul#images").sortable(sortableOptions);
+                    $("form.apartment :input:first").trigger("blur");
                 }
             });
         }
@@ -370,17 +378,17 @@ function liveNeighborhoodAutocomplete() {
             $('div.feedback a.handle').click();
         });
 
-        //        $("form.apartment :input").live("blur", function(event) {
-        //            $.ajax({
-        //                type      : "put",
-        //                url       : $("form.apartment").attr('action'),
-        //                data      : $("form.apartment").serialize(),
-        //                dataType  : 'json',
-        //                success   : function success(response) {
-        //                    $(document).trigger('content-received', response);
-        //                }
-        //            });
-        //        });
+        $("form.apartment :input").live("blur", function(event) {
+            $.ajax({
+                type      : "put",
+                url       : $("form.apartment").attr('action'),
+                data      : $("form.apartment").serialize(),
+                dataType  : 'json',
+                success   : function success(response) {
+                    $(document).trigger('content-received', response);
+                }
+            });
+        });
 
         if ($("div.business_search").length > 0) {
             var lat = $("div.business_search").attr('data-lat');
@@ -522,6 +530,7 @@ function liveNeighborhoodAutocomplete() {
 
             toggleRoleFields();
             liveNeighborhoodAutocomplete();
+            attachTips();
             if ($("div#map_canvas").length > 0 && staleMap) {
                 initializeMap();
             }
@@ -538,9 +547,11 @@ function liveNeighborhoodAutocomplete() {
         $(document).bind('ajaxStop', function() {
             hideLoading();
 
-            if(typeof(lady_messages) != 'undefined') {
+            if (typeof(lady_messages) != 'undefined') {
                 updates += 1;
-                if(updates == lady_messages.length) { updates = 0; }
+                if (updates == lady_messages.length) {
+                    updates = 0;
+                }
                 $("div.head div.lady span").hide().html(lady_messages[updates]).fadeIn();
             }
         });
