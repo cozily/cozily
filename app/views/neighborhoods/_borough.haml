@@ -1,0 +1,4 @@
+%h2= neighborhoods.first.borough
+%ul
+  - neighborhoods.each do |neighborhood|
+    =render "neighborhoods/link", :neighborhood => neighborhood

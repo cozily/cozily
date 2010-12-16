@@ -404,6 +404,19 @@ function attachTips() {
             });
         }
 
+        $("div.borough_profile").each(function() {
+            var element = $(this);
+            $.ajax({
+                type      : 'get',
+                url       : '/neighborhoods',
+                data      : { "borough" : element.attr('data-borough') },
+                dataType  : 'json',
+                success   : function success(response) {
+                    element.hide().html(response.borough).show("blind");
+                }
+            });
+        });
+
         $("div.apartment ul li.status form input").live("change", function(event) {
             var element = $(event.target);
             var form = element.closest('form');

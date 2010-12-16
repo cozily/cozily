@@ -3,8 +3,7 @@
 
 %h1 Neighborhoods
 
-- @neighborhoods.each_key do |borough|
-  %h2= borough
-  %ul
-    - @neighborhoods[borough].each do |neighborhood|
-      =render "neighborhoods/link", :neighborhood => neighborhood
+- ["Manhattan", "Brooklyn", "Queens", "Bronx", "Staten Island"].each do |borough|
+  .borough_profile{:'data-borough' => borough}
+    %h2= borough
+    =image_tag("white_spinner.gif")

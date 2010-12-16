@@ -1,8 +1,12 @@
 class NeighborhoodsController < ApplicationController
   def index
-    @neighborhoods = ActiveSupport::OrderedHash.new
-    ["Manhattan", "Brooklyn", "Queens", "Bronx", "Staten Island"].each do |borough|
-      @neighborhoods[borough] = Neighborhood.where(:borough => borough)
+    respond_to do |format|
+      format.html
+      format.js do
+        render :json => {:borough => render_to_string(:partial => "neighborhoods/borough",
+                                                      :locals  => {:neighborhoods => Neighborhood.where(:borough => params[:borough])})
+        }
+      end
     end
   end
 
