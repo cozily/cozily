@@ -69,7 +69,7 @@ function toggleRoleFields() {
 }
 
 function liveNeighborhoodAutocomplete() {
-    $("input#neighborhood_autocomplete").autocomplete({
+    $("input#neighborhood_autocomplete, input#profile_neighborhood_autocomplete").autocomplete({
         source: neighborhoods,
         minLength: 2,
         select: function(event, ui) {
@@ -83,7 +83,7 @@ function liveNeighborhoodAutocomplete() {
                     $("div#selected_neighborhoods").append("<span>" + link + input + "</span>");
                     $("div#selected_neighborhoods").trigger("selected_neighborhood::change");
                 }
-                $("input#neighborhood_autocomplete").val('');
+                $(event.target).val('');
                 return false;
             }
         }
