@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101217054530) do
+ActiveRecord::Schema.define(:version => 20101217055236) do
 
   create_table "address_neighborhoods", :force => true do |t|
     t.integer  "address_id"
@@ -18,6 +18,9 @@ ActiveRecord::Schema.define(:version => 20101217054530) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "address_neighborhoods", ["address_id"], :name => "index_address_neighborhoods_on_address_id"
+  add_index "address_neighborhoods", ["neighborhood_id"], :name => "index_address_neighborhoods_on_neighborhood_id"
 
   create_table "addresses", :force => true do |t|
     t.string   "street"
@@ -38,6 +41,9 @@ ActiveRecord::Schema.define(:version => 20101217054530) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "apartment_features", ["apartment_id"], :name => "index_apartment_features_on_apartment_id"
+  add_index "apartment_features", ["feature_id"], :name => "index_apartment_features_on_feature_id"
 
   create_table "apartments", :force => true do |t|
     t.integer  "address_id"
@@ -60,6 +66,9 @@ ActiveRecord::Schema.define(:version => 20101217054530) do
     t.datetime "published_at"
   end
 
+  add_index "apartments", ["address_id"], :name => "index_apartments_on_address_id"
+  add_index "apartments", ["user_id"], :name => "index_apartments_on_user_id"
+
   create_table "conversations", :force => true do |t|
     t.integer  "apartment_id"
     t.integer  "sender_id"
@@ -69,6 +78,10 @@ ActiveRecord::Schema.define(:version => 20101217054530) do
     t.datetime "sender_deleted_at"
     t.datetime "receiver_deleted_at"
   end
+
+  add_index "conversations", ["apartment_id"], :name => "index_conversations_on_apartment_id"
+  add_index "conversations", ["receiver_id"], :name => "index_conversations_on_receiver_id"
+  add_index "conversations", ["sender_id"], :name => "index_conversations_on_sender_id"
 
   create_table "delayed_jobs", :force => true do |t|
     t.integer  "priority",   :default => 0
@@ -92,6 +105,9 @@ ActiveRecord::Schema.define(:version => 20101217054530) do
     t.datetime "updated_at"
   end
 
+  add_index "favorites", ["apartment_id"], :name => "index_favorites_on_apartment_id"
+  add_index "favorites", ["user_id"], :name => "index_favorites_on_user_id"
+
   create_table "features", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
@@ -106,6 +122,9 @@ ActiveRecord::Schema.define(:version => 20101217054530) do
     t.datetime "updated_at"
   end
 
+  add_index "flags", ["apartment_id"], :name => "index_flags_on_apartment_id"
+  add_index "flags", ["user_id"], :name => "index_flags_on_user_id"
+
   create_table "images", :force => true do |t|
     t.integer  "apartment_id"
     t.string   "caption"
@@ -118,6 +137,8 @@ ActiveRecord::Schema.define(:version => 20101217054530) do
     t.integer  "position"
   end
 
+  add_index "images", ["apartment_id"], :name => "index_images_on_apartment_id"
+
   create_table "messages", :force => true do |t|
     t.integer  "sender_id"
     t.text     "body"
@@ -127,12 +148,18 @@ ActiveRecord::Schema.define(:version => 20101217054530) do
     t.integer  "conversation_id"
   end
 
+  add_index "messages", ["conversation_id"], :name => "index_messages_on_conversation_id"
+  add_index "messages", ["sender_id"], :name => "index_messages_on_sender_id"
+
   create_table "neighborhood_profiles", :force => true do |t|
     t.integer  "neighborhood_id"
     t.integer  "profile_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "neighborhood_profiles", ["neighborhood_id"], :name => "index_neighborhood_profiles_on_neighborhood_id"
+  add_index "neighborhood_profiles", ["profile_id"], :name => "index_neighborhood_profiles_on_profile_id"
 
   create_table "neighborhoods", :force => true do |t|
     t.string   "name"
@@ -165,6 +192,8 @@ ActiveRecord::Schema.define(:version => 20101217054530) do
     t.integer  "sublets",    :default => 0
   end
 
+  add_index "profiles", ["user_id"], :name => "index_profiles_on_user_id"
+
   create_table "roles", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
@@ -190,6 +219,9 @@ ActiveRecord::Schema.define(:version => 20101217054530) do
     t.datetime "updated_at"
   end
 
+  add_index "station_trains", ["station_id"], :name => "index_station_trains_on_station_id"
+  add_index "station_trains", ["train_id"], :name => "index_station_trains_on_train_id"
+
   create_table "stations", :force => true do |t|
     t.string   "name"
     t.decimal  "lat",        :precision => 15, :scale => 10
@@ -211,6 +243,10 @@ ActiveRecord::Schema.define(:version => 20101217054530) do
     t.datetime "updated_at"
   end
 
+  add_index "timeline_events", ["actor_id", "actor_type"], :name => "index_timeline_events_on_actor_id_and_actor_type"
+  add_index "timeline_events", ["secondary_subject_id", "secondary_subject_type"], :name => "index_timeline_events_on_ss_id_and_ss_type"
+  add_index "timeline_events", ["subject_id", "subject_type"], :name => "index_timeline_events_on_subject_id_and_subject_type"
+
   create_table "trains", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
@@ -224,12 +260,17 @@ ActiveRecord::Schema.define(:version => 20101217054530) do
     t.datetime "updated_at"
   end
 
+  add_index "user_activities", ["user_id"], :name => "index_user_activities_on_user_id"
+
   create_table "user_roles", :force => true do |t|
     t.integer  "user_id"
     t.integer  "role_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "user_roles", ["role_id"], :name => "index_user_roles_on_role_id"
+  add_index "user_roles", ["user_id"], :name => "index_user_roles_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email"
