@@ -180,7 +180,6 @@ ActiveRecord::Schema.define(:version => 20101217055236) do
   end
 
   add_index "notifications", ["apartment_id"], :name => "index_notifications_on_apartment_id"
-  add_index "notifications", ["id", "type"], :name => "index_notifications_on_id_and_type"
   add_index "notifications", ["user_id"], :name => "index_notifications_on_user_id"
 
   create_table "profiles", :force => true do |t|
