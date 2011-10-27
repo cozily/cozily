@@ -1,9 +1,6 @@
 %ul#images{:'data-content-key' => 'images'}
-  -apartment.images.each do |image|
-    =render "images/thumbnail", :image => image
+  - apartment.images.each do |image|
+    = render "images/thumbnail", :image => image
   - for num in apartment.images.count+1..6
-    - required_image = num < 3
-    %li.empty{:class => ( required_image ? "required" : nil)}
+    %li.empty
       %span.number= num
-      - if required_image
-        %span.required (required)

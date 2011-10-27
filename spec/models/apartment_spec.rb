@@ -206,11 +206,6 @@ describe Apartment do
       end
     end
 
-    it "returns false when there are fewer than two images" do
-      @apartment.images.first.destroy
-      @apartment.should_not be_publishable
-    end
-
     it "returns false when a sublet doesn't have an end date" do
       @apartment.update_attributes(:sublet => true, :end_date => nil)
       @apartment.should_not be_publishable
@@ -334,11 +329,6 @@ describe Apartment do
   describe "#missing_associations" do
     before do
       @apartment = Factory(:apartment)
-    end
-
-    it "includes images when there a fewer than two images" do
-      @apartment.images.should == []
-      @apartment.missing_associations.should include(:images)
     end
 
     it "includes phone when the user doesn't have a phone" do

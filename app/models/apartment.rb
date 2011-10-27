@@ -119,7 +119,6 @@ class Apartment < ActiveRecord::Base
 
   def missing_associations
     missing_associations = []
-    missing_associations << :images unless images.count > 1
     missing_associations << :phone unless user && user.phone.present?
     missing_associations << :email_confirmed unless user && user.email_confirmed?
     missing_associations
@@ -173,7 +172,7 @@ class Apartment < ActiveRecord::Base
   end
 
   def publishable?
-    REQUIRED_FIELDS.all? { |attr| self.send(attr).present? } && (images.count > 1) && valid_sublet? && valid_user?
+    REQUIRED_FIELDS.all? { |attr| self.send(attr).present? } && valid_sublet? && valid_user?
   end
 
   def match_for?(user)
