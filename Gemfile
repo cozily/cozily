@@ -1,5 +1,6 @@
 source :gemcutter
 
+gem "airbrake"
 gem "aws-s3", "0.6.2"
 gem "cancan", "1.3.4"
 gem "clearance", "0.9.0.rc9"
@@ -11,8 +12,7 @@ gem "friendly_id", "3.1.6"
 gem "geokit", "1.5.0"
 gem "gravtastic", "2.2.0"
 gem "haml", "3.0.18"
-gem "heroku_san", "1.0.6"
-gem "hoptoad_notifier", "2.3.12"
+gem "heroku_san"
 gem "httparty", "0.6.1"
 gem "jammit", "0.5.4"
 gem "roadie", "1.0.0.pre2"
@@ -42,7 +42,7 @@ group :test do
 end
 
 group :development do
-  gem "heroku", "1.14.3"
+  gem "heroku"
   gem "mongrel", "1.1.5"
   gem "rspec-rails", "2.1.0"
   gem "taps", "0.3.14"
