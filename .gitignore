@@ -5,3 +5,4 @@ tmp/**/*
 .bundle/
 spec/support/webmock/cache/
 spec/fixtures/**
+.DS_Store
