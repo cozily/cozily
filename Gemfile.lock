@@ -1,12 +1,3 @@
-GIT
-  remote: git://github.com/Mange/mail_style.git
-  revision: 3a344b15299510e3c88ad545fc7744460172851a
-  specs:
-    mail_style (1.0.0.pre1)
-      actionmailer (~> 3.0.0)
-      css_parser
-      nokogiri
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -66,7 +57,8 @@ GEM
       haml (>= 3.0.4)
     configuration (1.2.0)
     crack (0.1.8)
-    css_parser (1.1.4)
+    css_parser (1.2.5)
+      addressable
     culerity (0.2.12)
     daemons (1.1.0)
     database_cleaner (0.5.2)
@@ -165,6 +157,10 @@ GEM
       rspec (>= 2.0.0.alpha11)
     rest-client (1.6.1)
       mime-types (>= 1.16)
+    roadie (1.0.0.pre2)
+      actionmailer (~> 3.0.0)
+      css_parser
+      nokogiri
     rspec (2.1.0)
       rspec-core (~> 2.1.0)
       rspec-expectations (~> 2.1.0)
@@ -240,7 +236,6 @@ DEPENDENCIES
   httparty (= 0.6.1)
   jammit (= 0.5.4)
   launchy (= 0.3.5)
-  mail_style (= 1.0.0.pre1)!
   mongrel (= 1.1.5)
   padlock (= 0.1.0)
   paperclip (= 2.3.5)
@@ -249,6 +244,7 @@ DEPENDENCIES
   rails (= 3.0.3)
   rdiscount (= 1.6.5)
   remarkable_activerecord (= 4.0.0.alpha4)
+  roadie (= 1.0.0.pre2)
   rspec-rails (= 2.1.0)
   state_machine (= 0.9.4)
   steak (= 1.0.0)
