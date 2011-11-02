@@ -45,5 +45,5 @@ group :development do
   gem "heroku"
   gem "mongrel", "1.1.5"
   gem "rspec-rails", "2.1.0"
-  gem "taps", "0.3.14"
+  gem "taps"
 end
