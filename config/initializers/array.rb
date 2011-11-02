@@ -6,6 +6,7 @@ class Array
   end
 
   def median
+    compact!
     sort!
 
     n  = (self.length - 1) / 2
