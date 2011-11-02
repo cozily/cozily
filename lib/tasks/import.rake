@@ -53,7 +53,7 @@ end
 namespace :import do
   namespace :jakobson do
     task :all => :environment do
-      @user = User.find_by_email("ybriones@jakobson.com")
+      @user = User.find_by_email("todd.persen@gmail.com")
       raise "User not found!" if @user.nil?
 
       doc = Nokogiri::HTML(open("http://nofeerentals.com/apartments.asp"))
