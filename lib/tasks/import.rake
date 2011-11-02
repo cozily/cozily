@@ -103,6 +103,8 @@ namespace :import do
         assign_building_features(@apartment, apartment["building_features"].downcase)
         assign_apartment_features(@apartment, apartment["features"].downcase)
 
+        puts @apartment.inspect
+
         @apartment.save
         puts %Q{Fetching #{apartment["url"]}..}
         doc = Nokogiri::HTML(open(apartment["url"]))
@@ -115,6 +117,9 @@ namespace :import do
           image = open(URI.parse(image_url))
           Image.create(:apartment => @apartment, :asset => image)
         end
+
+        puts @apartment.valid?
+        puts @apartment.errors.full_messages
 
         begin
           @apartment.publish!
