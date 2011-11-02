@@ -84,7 +84,7 @@ namespace :import do
                                   :bathrooms => 1,
                                   :square_footage => (/(\d+)(.*)sq/i.match(apartment["features"])[1].to_i rescue nil),
                                   :start_date => Date.parse(apartment["start_date"]),
-                                  :user => nil)
+                                  :user => @user)
 
         case apartment["features"]
         when /studio|studio conv/
