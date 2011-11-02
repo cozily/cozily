@@ -36,20 +36,20 @@ class Apartment < ActiveRecord::Base
     end
 
     after_transition :on => :publish do |apt|
-      component(:tweet_apartments) do
-        client = TwitterOAuth::Client.new(
-                :consumer_key => 'voDmOvIReD71vENQJRR1g',
-                :consumer_secret => 'SnK9IbDfrXxz862ImcIOmjqvfrleWRrWN1Km0vrGyds',
-                :token => '154155384-9Vaj2QiXa998sIVn8XicaSVrQOM1rzvkRfAcYjHf',
-                :secret => 'yicMo06MlgUMHSGgC5Q6lk0EicPqUZiNRrt4'
-        )
-        client.update("#{apt.user.first_name} just published a #{apt.bedrooms.prettify} bedroom apt in #{apt.neighborhood.name} for $#{apt.rent} #{apartment_url(apt)}")
-      end
+      # component(:tweet_apartments) do
+        # client = TwitterOAuth::Client.new(
+                # :consumer_key => 'voDmOvIReD71vENQJRR1g',
+                # :consumer_secret => 'SnK9IbDfrXxz862ImcIOmjqvfrleWRrWN1Km0vrGyds',
+                # :token => '154155384-9Vaj2QiXa998sIVn8XicaSVrQOM1rzvkRfAcYjHf',
+                # :secret => 'yicMo06MlgUMHSGgC5Q6lk0EicPqUZiNRrt4'
+        # )
+        # client.update("#{apt.user.first_name} just published a #{apt.bedrooms.prettify} bedroom apt in #{apt.neighborhood.name} for $#{apt.rent} #{apartment_url(apt)}")
+      # end
       apt.update_attribute(:published_at, Time.now)
       TimelineEvent.create(:event_type => "state_changed_to_published",
                            :subject => apt,
                            :actor => apt.user)
-      Delayed::Job.enqueue(MatchNotifierJob.new(apt))
+      # Delayed::Job.enqueue(MatchNotifierJob.new(apt))
     end
 
     state :published do
