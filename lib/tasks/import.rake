@@ -53,7 +53,7 @@ end
 namespace :import do
   namespace :jakobson do
     task :all => :environment do
-      @user = User.find_by_email("todd.persen@gmail.com")
+      @user = User.find_by_email("ybriones@jakobson.com")
       raise "User not found!" if @user.nil?
 
       doc = Nokogiri::HTML(open("http://nofeerentals.com/apartments.asp"))
@@ -65,8 +65,8 @@ namespace :import do
             @building_features = tr.css("font").last.content
           when "#ffffff", "#eeeeee"
             apartment = {}
-            apartment["full_address"] = @street
-            apartment["start_date"] = tr.css("td")[0].content.gsub("IMED","2010-10-01")
+            apartment["full_address"] = "#{@street}, New York, NY"
+            apartment["start_date"] = tr.css("td")[0].content.gsub("IMED","2011-11-01")
             apartment["unit"] = tr.css("td")[1].content.strip
             apartment["features"] = tr.css("td")[2].content
             apartment["building_features"] = @building_features
@@ -87,7 +87,7 @@ namespace :import do
                                   :user => @user)
 
         case apartment["features"]
-        when /studio|studio conv/
+        when /studio|studio conv/i
           @apartment.bedrooms = 0
         when /1 bed|one bed|1 conv|one conv/i
           @apartment.bedrooms = 1
