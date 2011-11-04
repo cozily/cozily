@@ -9,6 +9,9 @@ class Array
     compact!
     sort!
 
+    return 0 if self.length.zero?
+    return self.first if self.length == 1
+
     n  = (self.length - 1) / 2
     n2 = (self.length) / 2
 
