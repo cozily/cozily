@@ -15,7 +15,7 @@
   .article
     .head
       .name
-        -if @apartment.address
+        -if @apartment.address_name
           %h1=@apartment.address.street
           %h2==#{@apartment.address.city}, #{@apartment.address.state} #{@apartment.address.zip}
         -else

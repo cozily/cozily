@@ -152,6 +152,10 @@ class Apartment < ActiveRecord::Base
     [full_address, unit].reject { |str| str.blank? }.join(" #") if address && address.geocoded?
   end
 
+  def address_name
+    full_address.split(",").first if address && address.geocoded?
+  end
+
   def nearby_stations
     return [] unless address
     nearest_stations = Station.find(:all, :origin => [lat, lng], :within => 0.5, :order => 'distance')

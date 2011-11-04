@@ -9,7 +9,7 @@
       .count=position
     %li.info
       %ul
-        %li.street=link_to apartment.street, apartment
+        %li.street=link_to apartment.address_name, apartment
         %li.basic
           %span.rent==$#{number_with_delimiter(apartment.rent)}
           ==/ #{apartment.bedrooms.prettify}bd/#{apartment.bathrooms.prettify}ba
