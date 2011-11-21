@@ -1,1 +1,5 @@
 rvm use ree@cozily
+
+if ! command -v bundle ; then
+  gem install bundler
+fi
