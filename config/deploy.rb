@@ -118,6 +118,14 @@ namespace :deploy do
   end
 end
 
+namespace :rvm do
+  task :trust_rvmrc do
+    run "rvm rvmrc trust #{release_path}"
+  end
+end
+
+after "deploy", "rvm:trust_rvmrc"
+
 def run_rake(cmd)
   run "cd #{current_path}; #{rake} #{cmd}"
 end

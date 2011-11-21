@@ -1,4 +1,4 @@
-rvm use ree@cozily
+rvm use ruby-1.9.3-p0@cozily --create
 
 if ! command -v bundle ; then
   gem install bundler
