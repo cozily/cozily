@@ -26,6 +26,7 @@ gem "state_machine", "0.9.4"
 gem "steak", "1.0.0"
 gem "timeline_fu", "0.3.0"
 gem "twitter_oauth", "0.4.0"
+gem "unicorn"
 gem "will_paginate", "3.0.pre2"
 gem "xml-sitemap", "1.0.5"
 
@@ -42,8 +43,10 @@ group :test do
 end
 
 group :development do
+  gem "capistrano"
+  gem "capistrano-unicorn"
   gem "heroku"
-  gem "mongrel", "1.1.5"
+  gem "passenger"
   gem "rspec-rails", "2.1.0"
   gem "taps"
 end
