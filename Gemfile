@@ -44,6 +44,7 @@ end
 
 group :development do
   gem "capistrano"
+  gem "capistrano-ext"
   gem "capistrano-unicorn"
   gem "heroku"
   gem "passenger"

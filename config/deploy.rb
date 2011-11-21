@@ -1,7 +1,5 @@
-$:.unshift(File.expand_path('./lib', ENV['rvm_path']))
-
 require "bundler/capistrano"
-require "rvm/capistrano"
+# require "capistrano/ext/multistage"
 
 set :scm,             :git
 set :application,     "cozily"
@@ -14,7 +12,8 @@ set :deploy_to,       "/srv/#{application}"
 set :user,            "deploy"
 set :group,           "deploy"
 set :use_sudo,        false
-set :rvm_ruby_string, "ruby-1.9.3-p0"
+
+require "capistrano-unicorn"
 
 role :web, "208.85.150.121" #"app01.cozi.ly"
 role :app, "208.85.150.121" #"app01.cozi.ly"
@@ -29,10 +28,6 @@ set(:latest_revision)   { capture("cd #{current_path}; git rev-parse --short HEA
 set(:previous_revision) { capture("cd #{current_path}; git rev-parse --short HEAD@{1}").strip }
 
 default_environment["RAILS_ENV"] = 'production'
-
-# Use our ruby-1.9.2-p290@my_site gemset
-default_environment["RUBY_VERSION"] = "ruby-1.9.3-p0"
-
 default_run_options[:shell] = 'bash'
 
 namespace :deploy do
@@ -69,18 +64,12 @@ namespace :deploy do
 
   desc "Update the database (overwritten to avoid symlink)"
   task :migrations do
-    transaction do
-      update_code
-    end
+    update
     migrate
     unicorn.reload
   end
 
   task :finalize_update, :except => { :no_release => true } do
-    run "chmod -R g+w #{latest_release}" if fetch(:group_writable, true)
-
-    # mkdir -p is making sure that the directories are there for some SCM's that don't
-    # save empty folders
     run <<-CMD
       rm -rf #{latest_release}/log #{latest_release}/public/system #{latest_release}/tmp/pids &&
       mkdir -p #{latest_release}/public &&
@@ -118,15 +107,14 @@ namespace :deploy do
   end
 end
 
-namespace :rvm do
-  task :trust_rvmrc do
-    run "rvm rvmrc trust #{release_path}"
+namespace :bundler do
+  task :install do
+    run "sudo gem install bundler --no-rdoc --no-ri --conservative --version 1.0.21"
   end
 end
 
-after "deploy", "rvm:trust_rvmrc"
+before "bundle:install", "bundler:install"
 
 def run_rake(cmd)
   run "cd #{current_path}; #{rake} #{cmd}"
 end
-
