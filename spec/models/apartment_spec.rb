@@ -199,7 +199,7 @@ describe Apartment do
       @apartment.should be_publishable
     end
 
-    [:address, :user, :rent, :bedrooms, :bathrooms, :square_footage].each do |attr|
+    [:address, :user, :rent, :bedrooms, :bathrooms].each do |attr|
       it "returns false when #{attr} is missing" do
         @apartment.send("#{attr}=", nil)
         @apartment.should_not be_publishable

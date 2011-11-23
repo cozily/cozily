@@ -20,7 +20,7 @@ feature "authorization" do
     page.should_not have_content("edit apartment")
 
     visit edit_apartment_path(apartment)
-    current_path.should == dashboard_listings_path
+    current_path.should == dashboard_matches_path
   end
 
   scenario "non-admin cannot view admin pages" do
