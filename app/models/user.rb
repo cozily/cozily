@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
   has_many :user_roles, :dependent => :destroy
   has_many :roles, :through => :user_roles
   has_many :timeline_events, :foreign_key => "actor_id", :dependent => :destroy
-  has_many :conversations, :finder_sql => 'select * from conversations where sender_id = #{id} or receiver_id = #{id}'
+  has_many :conversations, :finder_sql => proc { "select * from conversations where sender_id = #{id} or receiver_id = #{id}" }
   has_many :messages, :through => :conversations
 
   validates_presence_of :first_name, :last_name
@@ -101,12 +101,12 @@ class User < ActiveRecord::Base
   end
 
   def received_messages
-    conversations.map(& :messages).flatten.select { |m| m.sender_id != id }
+    conversations.map(&:messages).flatten.select { |m| m.sender_id != id }
 #    messages.not_sent_by(self)
   end
 
   def sent_messages
-    conversations.map(& :messages).flatten.select { |m| m.sender_id == id }
+    conversations.map(&:messages).flatten.select { |m| m.sender_id == id }
 #    messages.sent_by(self)
   end
 

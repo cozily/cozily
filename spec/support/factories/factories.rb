@@ -68,7 +68,7 @@ Factory.define :message do |m|
 end
 
 Factory.define :neighborhood do |n|
-  n.name { ["Upper West Side", "Greenpoint", "Williamsburg"].rand }
+  n.name { ["Upper West Side", "Greenpoint", "Williamsburg"].sample }
 end
 
 Factory.define :neighborhood_profile do |n|

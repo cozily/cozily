@@ -17,7 +17,13 @@ class Search
     @max_rent = (options[:max_rent])
     @min_square_footage = (options[:min_square_footage] || 250).to_i
     @max_square_footage = (options[:max_square_footage] || 800).to_i
-    @neighborhood_ids = (options[:neighborhood_ids] || []).collect {|n| n.to_i}
+    @neighborhood_ids = if options[:neighborhood_ids].is_a?(String)
+                          [(eval(options[:neighborhood_ids]) rescue [])].flatten
+                        elsif options[:neighborhood_ids].is_a?(Array)
+                          options[:neighborhood_ids]
+                        else
+                          []
+                        end
     @page = options[:page]
   end
 
@@ -31,7 +37,6 @@ class Search
     unless @neighborhood_ids.empty?
       apartments = apartments.select { |a| (a.neighborhoods.map(&:id) & @neighborhood_ids).present? }
     end
-
     apartments
   end
 

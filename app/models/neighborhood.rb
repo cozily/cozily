@@ -3,10 +3,10 @@ class Neighborhood < ActiveRecord::Base
   has_many :addresses, :through => :address_neighborhoods
   has_many :apartments,
            :include => :addresses,
-           :finder_sql => 'select a1.* from apartments a1
+           :finder_sql => proc { "select a1.* from apartments a1
                             inner join addresses a2 on a2.id = a1.address_id
                               inner join address_neighborhoods a3 on a3.address_id = a2.id
-                                where a3.neighborhood_id = #{id} order by published_at desc'
+                                where a3.neighborhood_id = #{id} order by published_at desc" }
 
   has_friendly_id :name, :use_slug => true
 

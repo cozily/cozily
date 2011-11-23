@@ -1,5 +1,3 @@
-require 'faster_csv'
-
 namespace :stations do
   desc "Populate station data with CSV from the MTA"
   task :populate => :environment do
@@ -9,7 +7,7 @@ namespace :stations do
     Train.delete_all
 
     puts "Loading new station data.."
-    FasterCSV.foreach("lib/mta_subway_info.csv", :headers => :first_row) do |row|
+    CSV.foreach("lib/mta_subway_info.csv", :headers => :first_row) do |row|
       station = Station.create(:name => row["Station Name"],
                                :line => row["Line"],
                                :lat => row["Latitude"],

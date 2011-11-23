@@ -10,7 +10,7 @@ if defined?(ActiveRecord::Base)
   end
 end
 
-RSpec.configuration.include Capybara, :type => :acceptance
+RSpec.configuration.include Capybara::DSL, :type => :acceptance
 RSpec.configure do |config|
   config.use_transactional_fixtures = false
   config.before(:all) do
