@@ -1,5 +1,7 @@
 source :gemcutter
 
+gem "rails", "3.0.11"
+
 gem "cancan", "1.3.4"
 gem "clearance", "0.9.1"
 gem "compass", "0.10.5"
@@ -17,7 +19,6 @@ gem "roadie", "1.0.0.pre2"
 gem "padlock", "0.1.0"
 gem "paperclip", "2.3.5"
 gem "pg", "0.11.0"
-gem "rails", "3.0.11"
 gem "rdiscount", "1.6.8"
 gem "sass"
 gem "state_machine", "0.9.4"
@@ -48,5 +49,4 @@ group :development do
   gem "passenger"
   gem "pony"
   gem "rspec-rails"
-  gem "taps"
 end
