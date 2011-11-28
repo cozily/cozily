@@ -6,7 +6,6 @@ class Image < ActiveRecord::Base
                                  :medium => "115x115#",
                                  :thumb => "85x85#",
                                  :micro => "32x32#" },
-                    :url => "/system/:attachment/:id/:style/:filename",
                     :default_url => "/images/defaults/:style.png"
 
   validates_presence_of :apartment
