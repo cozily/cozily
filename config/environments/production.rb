@@ -50,4 +50,16 @@ Cozily::Application.configure do
   config.action_mailer.default_url_options = {:host => 'cozi.ly'}
 
   Sass::Plugin.options[:never_update] = true
+
+  ActionMailer::Base.default_content_type = "text/html"
+  ActionMailer::Base.delivery_method = :smtp
+  ActionMailer::Base.smtp_settings = {
+          :enable_starttls_auto => true,
+          :address => "smtp.sendgrid.net",
+          :port => 587,
+          :domain => "cozi.ly",
+          :authentication => :plain,
+          :user_name => "cozily",
+          :password => "marathon69"
+  }
 end
