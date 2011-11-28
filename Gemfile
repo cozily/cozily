@@ -46,6 +46,7 @@ group :development do
   gem "capistrano-ext"
   gem "capistrano-unicorn"
   gem "passenger"
+  gem "pony"
   gem "rspec-rails"
   gem "taps"
 end

@@ -1,4 +1,5 @@
 require "bundler/capistrano"
+require "pony"
 
 set :stages, %w(staging production)
 set :default_stage, "production"
@@ -66,7 +67,7 @@ namespace :deploy do
   desc "Update the deployed code."
   task :update_code, :except => { :no_release => true } do
     run "cd #{current_path}; git fetch origin; git reset --hard #{branch}"
-    finalize_update
+    symlink
   end
 
   desc "Update the database (overwritten to avoid symlink)"
@@ -76,7 +77,7 @@ namespace :deploy do
     unicorn.reload
   end
 
-  task :finalize_update, :except => { :no_release => true } do
+  task :symlink, :except => { :no_release => true } do
     run <<-CMD
       rm -rf #{latest_release}/log #{latest_release}/public/system #{latest_release}/tmp/pids &&
       mkdir -p #{latest_release}/public &&
@@ -92,6 +93,23 @@ namespace :deploy do
       asset_paths = fetch(:public_children, %w(images stylesheets javascripts)).map { |p| "#{latest_release}/public/#{p}" }.join(" ")
       run "find #{asset_paths} -exec touch -t #{stamp} {} ';'; true", :env => { "TZ" => "UTC" }
     end
+  end
+
+  task :notify do
+    Pony.mail(:to => 'dev@cozi.ly',
+              :from => 'dev@cozi.ly',
+              :subject => "Cozily deployed to #{stage}",
+              :via => :smtp,
+              :via_options => {
+                :enable_starttls_auto => true,
+                :address => "smtp.sendgrid.net",
+                :port => 587,
+                :domain => "cozi.ly",
+                :authentication => :plain,
+                :user_name => "cozily",
+                :password => "marathon69"
+    })
+
   end
 
   namespace :rollback do
@@ -121,6 +139,7 @@ namespace :bundler do
 end
 
 before "bundle:install", "bundler:install"
+after "deploy", "deploy:notify"
 
 def run_rake(cmd)
   run "cd #{current_path}; #{rake} #{cmd}"
