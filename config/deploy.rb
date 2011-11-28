@@ -1,5 +1,8 @@
 require "bundler/capistrano"
-# require "capistrano/ext/multistage"
+
+set :stages, %w(staging production)
+set :default_stage, "production"
+require "capistrano/ext/multistage"
 
 set :scm,             :git
 set :application,     "cozily"
@@ -14,6 +17,10 @@ set :group,           "deploy"
 set :use_sudo,        false
 
 require "capistrano-unicorn"
+
+set :whenever_command, "bundle exec whenever"
+set :whenever_environment, defer { stage }
+require "whenever/capistrano"
 
 role :web, "208.85.150.121" #"app01.cozi.ly"
 role :app, "208.85.150.121" #"app01.cozi.ly"
