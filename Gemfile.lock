@@ -33,9 +33,6 @@ GEM
       activesupport (= 3.0.11)
     activesupport (3.0.11)
     addressable (2.2.2)
-    airbrake (3.0.4)
-      activesupport
-      builder
     arel (2.0.10)
     babosa (0.3.5)
     builder (2.1.2)
@@ -59,6 +56,7 @@ GEM
       xpath (~> 0.1.4)
     childprocess (0.2.2)
       ffi (~> 1.0.6)
+    chronic (0.6.6)
     clearance (0.9.1)
       rails (~> 3.0.0)
     closure-compiler (0.3.3)
@@ -75,6 +73,8 @@ GEM
     diff-lcs (1.1.3)
     erubis (2.6.6)
       abstract (>= 1.0.0)
+    exceptional (2.0.32)
+      rack
     factory_girl (1.3.2)
     factory_girl_rails (1.0)
       factory_girl (~> 1.3)
@@ -221,6 +221,9 @@ GEM
     webmock (1.3.5)
       addressable (>= 2.1.1)
       crack (>= 0.1.7)
+    whenever (0.7.0)
+      activesupport (>= 2.3.4)
+      chronic (~> 0.6.3)
     will_paginate (3.0.2)
     xml-sitemap (1.2.2)
       builder (>= 2.0)
@@ -233,7 +236,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  airbrake
   cancan (= 1.3.4)
   capistrano
   capistrano-ext
@@ -243,6 +245,7 @@ DEPENDENCIES
   compass (= 0.10.5)
   database_cleaner (= 0.5.2)
   delayed_job (= 2.0.3)
+  exceptional
   factory_girl (= 1.3.2)
   factory_girl_rails (= 1.0)
   ffaker
@@ -271,5 +274,6 @@ DEPENDENCIES
   twitter_oauth (= 0.4.0)
   unicorn
   webmock (= 1.3.5)
+  whenever
   will_paginate (= 3.0.2)
   xml-sitemap (= 1.2.2)

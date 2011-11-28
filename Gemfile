@@ -1,10 +1,10 @@
 source :gemcutter
 
-gem "airbrake"
 gem "cancan", "1.3.4"
 gem "clearance", "0.9.1"
 gem "compass", "0.10.5"
 gem "delayed_job", "2.0.3"
+gem "exceptional"
 gem "formtastic", "2.0.2"
 gem "friendly_id"
 gem "geokit"
@@ -24,6 +24,7 @@ gem "steak", "2.0.0"
 gem "timeline_fu", "0.3.0"
 gem "twitter_oauth", "0.4.0"
 gem "unicorn"
+gem "whenever"
 gem "will_paginate", "3.0.2"
 gem "xml-sitemap", "1.2.2"
 
