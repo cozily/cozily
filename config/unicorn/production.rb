@@ -6,7 +6,7 @@ listen "/tmp/cozily.socket", :backlog => 64
 
 preload_app true
 timeout 30
-pid "/tmp/unicorn.cozily.pid"
+pid "/srv/cozily/shared/pids/unicorn.pid"
 
 if env == "production"
   working_directory "/srv/cozily/current"
@@ -23,7 +23,7 @@ before_fork do |server, worker|
     ActiveRecord::Base.connection.disconnect!
   end
 
-  old_pid = "/tmp/unicorn.cozily.pid.oldbin"
+  old_pid = "/srv/cozily/shared/pids/unicorn.pid.oldbin"
   if File.exists?(old_pid) && server.pid != old_pid
     begin
       Process.kill("QUIT", File.read(old_pid).to_i)
