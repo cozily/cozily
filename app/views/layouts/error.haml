@@ -56,8 +56,6 @@
           %li.facebook=link_to image_tag("icons/facebook.png"), "http://facebook.com/cozily", :target => "_blank"
           %li.copyright==&copy; #{Time.now.year} Cozily All Rights Reserved
 
-    =render "feedback/feedback"
-
     :javascript
       window._token = '#{form_authenticity_token}';
       var ip_lat = '#{ip_lat}';
