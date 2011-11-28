@@ -67,7 +67,7 @@ namespace :deploy do
   desc "Update the deployed code."
   task :update_code, :except => { :no_release => true } do
     run "cd #{current_path}; git fetch origin; git reset --hard #{branch}"
-    symlink
+    finalize_update
   end
 
   desc "Update the database (overwritten to avoid symlink)"
@@ -77,7 +77,7 @@ namespace :deploy do
     unicorn.reload
   end
 
-  task :symlink, :except => { :no_release => true } do
+  task :finalize_update, :except => { :no_release => true } do
     run <<-CMD
       rm -rf #{latest_release}/log #{latest_release}/public/system #{latest_release}/tmp/pids &&
       mkdir -p #{latest_release}/public &&
@@ -139,6 +139,7 @@ namespace :bundler do
 end
 
 before "bundle:install", "bundler:install"
+after "deploy:update", "whenever:update_crontab"
 after "deploy", "deploy:notify"
 
 def run_rake(cmd)
