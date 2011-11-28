@@ -86,8 +86,8 @@ class User < ActiveRecord::Base
     end
 
     if profile.try(:neighborhoods).try(:present?)
-      apts.select { |a| (a.neighborhoods & profile.neighborhoods).present? }
-      Apartment.where(:id => apts.map(&:id))
+      ids = apts.select! { |a| (a.neighborhoods & profile.neighborhoods).present? }.map(&:id)
+      Apartment.where(:id => ids)
     else
       apts
     end
