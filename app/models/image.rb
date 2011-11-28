@@ -6,9 +6,6 @@ class Image < ActiveRecord::Base
                                  :medium => "115x115#",
                                  :thumb => "85x85#",
                                  :micro => "32x32#" },
-                    :storage => :s3,
-                    :s3_credentials => "#{Rails.root.to_s}/config/s3.yml",
-                    :path => "/:id/:style/:filename",
                     :default_url => "/images/defaults/:style.png"
 
   validates_presence_of :apartment
