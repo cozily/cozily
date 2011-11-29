@@ -1,3 +1,3 @@
-# every 1.day do
-  # rake "cron:daily"
-# end
+every 1.day do
+  rake "cron:daily"
+end
