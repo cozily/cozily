@@ -63,6 +63,6 @@ module ApplicationHelper
       messages << "Maybe you'd like to check out some apartments in #{link_to(neighborhood.name, neighborhood)}?"
     end
 
-    messages.sample
+    messages.shuffle
   end
 end
