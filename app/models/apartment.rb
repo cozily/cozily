@@ -56,7 +56,7 @@ class Apartment < ActiveRecord::Base
       validates_presence_of :address, :user, :start_date
       validates_presence_of :end_date, :if => Proc.new { |apartment| apartment.sublet? }
       validates_length_of :unit, :maximum => 5
-      validates_numericality_of :rent, :greater_than => 0, :only_integer => true
+      validates_numericality_of :rent, :greater_than => 500, :less_than => 50_000, :only_integer => true
       validates_numericality_of :square_footage, :allow_nil => true, :greater_than => 0, :less_than_or_equal_to => 10_000, :only_integer => true
       validates_numericality_of :bedrooms, :greater_than_or_equal_to => 0
       validates_numericality_of :bathrooms, :greater_than_or_equal_to => 0
@@ -67,7 +67,7 @@ class Apartment < ActiveRecord::Base
       validates_presence_of :user
       validates_presence_of :end_date, :if => Proc.new { |apartment| apartment.sublet? }
       validates_length_of :unit, :maximum => 5
-      validates_numericality_of :rent, :allow_nil => true, :greater_than => 0, :only_integer => true
+      validates_numericality_of :rent, :allow_nil => true, :greater_than => 500, :less_than => 50_000, :only_integer => true
       validates_numericality_of :square_footage, :allow_nil => true, :greater_than => 0, :less_than => 10_000, :only_integer => true
       validates_numericality_of :bedrooms, :greater_than_or_equal_to => 0, :allow_nil => true
       validates_numericality_of :bathrooms, :greater_than_or_equal_to => 0, :allow_nil => true

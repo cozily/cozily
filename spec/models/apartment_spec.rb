@@ -14,7 +14,11 @@ describe Apartment do
   it { should validate_presence_of(:user) }
   it { should validate_length_of(:unit, :maximum => 5) }
 
-  it { should validate_numericality_of(:rent, :allow_nil => true, :greater_than => 0, :only_integer => true) }
+  it { should validate_numericality_of(:rent,
+                                       :allow_nil => true,
+                                       :greater_than => 500,
+                                       :less_than => 50_000,
+                                       :only_integer => true) }
   it { should validate_numericality_of(:square_footage,
                                        :allow_nil => true,
                                        :greater_than => 0,
