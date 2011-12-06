@@ -1,6 +1,23 @@
 require 'nokogiri'
 require 'open-uri'
 
+def assign_bedrooms(apartment, features)
+  case features
+  when /studio|studio conv/i
+    apartment.bedrooms = 0
+  when /1 bed|one bed|1 conv|one conv/i
+    apartment.bedrooms = 1
+  when /2 bed|two bed|2 conv|two conv|2 wing|two wing|/i
+    apartment.bedrooms = 2
+  when /3 bed|three bed|3 conv|three conv/i
+    apartment.bedrooms = 3
+  when /4 bed|four bed|4 conv|four conv/i
+    apartment.bedrooms = 4
+  else
+    apartment.bedrooms = 0
+  end
+end
+
 def assign_pet_features(apartment)
   apartment.features << Feature.find_by_name_and_category("case-by-case", :pet)
 end
@@ -53,7 +70,7 @@ end
 namespace :import do
   namespace :jakobson do
     task :all => :environment do
-      @user = User.find_by_email("ybriones@jakobson.com")
+      @user = User.find_by_email("todd.persen@gmail.com")
       raise "User not found!" if @user.nil?
 
       doc = Nokogiri::HTML(open("http://nofeerentals.com/apartments.asp"))
@@ -66,7 +83,7 @@ namespace :import do
           when "#ffffff", "#eeeeee"
             apartment = {}
             apartment["full_address"] = "#{@street}, New York, NY"
-            apartment["start_date"] = tr.css("td")[0].content.gsub("IMED","2011-11-01")
+            apartment["start_date"] = tr.css("td")[0].content.gsub("IMED","12/05/2011")
             apartment["unit"] = tr.css("td")[1].content.strip
             apartment["features"] = tr.css("td")[2].content
             apartment["building_features"] = @building_features
@@ -78,54 +95,61 @@ namespace :import do
       puts %Q{#{apartments.count} apartments found.}
 
       apartments.each do |apartment|
-        @apartment = Apartment.new(:full_address => apartment["full_address"],
-                                  :unit => apartment["unit"],
-                                  :rent => apartment["rent"],
-                                  :bathrooms => 1,
-                                  :square_footage => (/(\d+)(.*)sq/i.match(apartment["features"])[1].to_i rescue nil),
-                                  :start_date => Date.parse(apartment["start_date"]),
-                                  :user => @user)
+        address = Address.for_full_address(apartment["full_address"])
+        next if address.nil?
 
-        case apartment["features"]
-        when /studio|studio conv/i
-          @apartment.bedrooms = 0
-        when /1 bed|one bed|1 conv|one conv/i
-          @apartment.bedrooms = 1
-        when /2 bed|two bed|2 conv|two conv/i
-          @apartment.bedrooms = 2
-        when /3 bed|three bed|3 conv|three conv/i
-          @apartment.bedrooms = 3
-        when /4 bed|four bed|4 conv|four conv/i
-          @apartment.bedrooms = 4
+        @apartment = Apartment.find_by_address_id_and_unit(address.id, apartment["unit"])
+
+        unless @apartment.nil?
+          puts "Apartment already exists - updating! (#{@apartment.id})"
+          @apartment.rent = apartment["rent"]
+          @apartment.published_at = Time.now
+          assign_bedrooms(@apartment, apartment["features"])
+          @apartment.bathrooms = 1
+
+          @apartment.save
+          @apartment.publish! unless @apartment.published?
+        else
+          begin
+            @apartment = Apartment.new(:full_address => apartment["full_address"],
+                                      :unit => apartment["unit"],
+                                      :rent => apartment["rent"],
+                                      :bathrooms => 1,
+                                      :square_footage => (/(\d+)(.*)sq/i.match(apartment["features"])[1].to_i rescue nil),
+                                      :start_date => Date.strptime(apartment["start_date"], "%m/%d/%Y"),
+                                      :user => @user)
+          rescue
+            raise apartment.inspect
+          end
+
+          assign_bedrooms(@apartment, apartment["features"])
+          assign_pet_features(@apartment)
+          assign_building_features(@apartment, apartment["building_features"].downcase)
+          assign_apartment_features(@apartment, apartment["features"].downcase)
+          @apartment.save
+
+          puts %Q{Fetching #{apartment["url"]}..}
+          doc = Nokogiri::HTML(open(apartment["url"]))
+
+          images = doc.css(%Q{td[align=left] > img})
+          puts "#{images.count} images found."
+          images.each do |img|
+            image_url = %Q{http://nofeerentals.com#{img["src"].gsub(" ", "%20")}}
+            puts image_url
+            image = open(URI.parse(image_url))
+            Image.create(:apartment => @apartment, :asset => image)
+          end
+
+          puts @apartment.valid?
+          puts @apartment.errors.full_messages
+
+          begin
+            @apartment.publish!
+          rescue
+            puts "Couldn't publish apartment ##{@apartment.id}!!"
+          end
         end
 
-        assign_pet_features(@apartment)
-        assign_building_features(@apartment, apartment["building_features"].downcase)
-        assign_apartment_features(@apartment, apartment["features"].downcase)
-
-        puts @apartment.inspect
-
-        @apartment.save
-        puts %Q{Fetching #{apartment["url"]}..}
-        doc = Nokogiri::HTML(open(apartment["url"]))
-
-        images = doc.css(%Q{td[align=left] > img})
-        puts "#{images.count} images found."
-        images.each do |img|
-          image_url = %Q{http://nofeerentals.com#{img["src"].gsub(" ", "%20")}}
-          puts image_url
-          image = open(URI.parse(image_url))
-          Image.create(:apartment => @apartment, :asset => image)
-        end
-
-        puts @apartment.valid?
-        puts @apartment.errors.full_messages
-
-        begin
-          @apartment.publish!
-        rescue
-          puts "Couldn't publish apartment ##{@apartment.id}!!"
-        end
       end
     end
 
