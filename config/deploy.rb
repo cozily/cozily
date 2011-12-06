@@ -7,7 +7,7 @@ require "capistrano/ext/multistage"
 
 set :scm,             :git
 set :application,     "cozily"
-set :repository,      "git@github.com:mrhaddad/cozily.git"
+set :repository,      "git@github.com:cozily/cozily.git"
 set :branch,          "origin/master"
 set :migrate_target,  :current
 set :ssh_options,     { :forward_agent => true }
