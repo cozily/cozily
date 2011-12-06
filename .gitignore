@@ -7,3 +7,4 @@ spec/support/webmock/cache/
 spec/fixtures/**
 .DS_Store
 .vimlog
+public/system/**
