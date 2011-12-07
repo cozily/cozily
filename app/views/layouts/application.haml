@@ -1,9 +1,10 @@
 %html
   %head
-    <meta name="google-site-verification" content="ngNx19GIfLCZM5M7JswVdccMH_hpwAOOdIj5sU-ieMQ" />
+    %meta{:name => "google-site-verification", :content => "ngNx19GIfLCZM5M7JswVdccMH_hpwAOOdIj5sU-ieMQ"}
     %meta{:name => 'csrf-token', :content => form_authenticity_token}
     %meta{:name => 'csrf-param', :content => 'authenticity_token'}
     %meta{name: 'alexaVerifyID', content: 'A7qvDRR7U1YVqNHsGmXuHAQq6MU'}
+    %link{:rel => "shortcut icon", :href => "/favicon.ico"}
 
     = include_stylesheets :common, :media => 'all'
     /[if lt IE 8]
