@@ -11,7 +11,6 @@ set :repository,      "git@github.com:cozily/cozily.git"
 set :branch,          "origin/master"
 set :migrate_target,  :current
 set :ssh_options,     { :forward_agent => true }
-set :rails_env,       "production"
 set :deploy_to,       "/srv/#{application}"
 set :user,            "deploy"
 set :group,           "deploy"
@@ -22,10 +21,6 @@ require "capistrano-unicorn"
 set :whenever_command, "bundle exec whenever"
 set :whenever_environment, defer { stage }
 require "whenever/capistrano"
-
-role :web, "208.85.150.121" #"app01.cozi.ly"
-role :app, "208.85.150.121" #"app01.cozi.ly"
-role :db,  "208.85.150.121", :primary => true
 
 set(:latest_release)  { fetch(:current_path) }
 set(:release_path)    { fetch(:current_path) }
@@ -72,6 +67,9 @@ namespace :deploy do
 
   desc "Update the database (overwritten to avoid symlink)"
   task :migrations do
+    # transaction do
+      # update_code
+    # end
     update
     migrate
     unicorn.reload
@@ -109,7 +107,6 @@ namespace :deploy do
                 :user_name => "cozily",
                 :password => "marathon69"
     })
-
   end
 
   namespace :rollback do
