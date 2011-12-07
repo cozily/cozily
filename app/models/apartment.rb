@@ -49,7 +49,7 @@ class Apartment < ActiveRecord::Base
       TimelineEvent.create(:event_type => "state_changed_to_published",
                            :subject => apt,
                            :actor => apt.user)
-      Delayed::Job.enqueue(MatchNotifierJob.new(apt))
+      Delayed::Job.enqueue(MatchNotifierJob.new(apt)) unless defined?(Rake)
     end
 
     state :published do
