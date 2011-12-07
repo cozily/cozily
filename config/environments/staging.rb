@@ -50,10 +50,4 @@ Cozily::Application.configure do
   config.action_mailer.default_url_options = { :host => 'staging.cozi.ly' }
 
   Sass::Plugin.options[:never_update] = true
-
-  config.middleware.insert_before(Rack::Lock, Rack::Rewrite) do
-    r301 %r{.*}, 'http://staging.cozi.ly$&', :if => Proc.new { |rack_env|
-      rack_env['SERVER_NAME'] != 'staging.cozi.ly'
-    }
-  end
 end
