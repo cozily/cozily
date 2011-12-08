@@ -2,7 +2,7 @@ require "bundler/capistrano"
 require "pony"
 
 set :stages, %w(staging production)
-set :default_stage, "production"
+set :default_stage, "staging"
 require "capistrano/ext/multistage"
 
 set :scm,             :git
@@ -12,6 +12,8 @@ set :branch,          "origin/master"
 set :migrate_target,  :current
 set :ssh_options,     { :forward_agent => true }
 set :deploy_to,       "/srv/#{application}"
+set :rails_env,       defer { stage }
+set :unicorn_env,     defer { stage }
 set :user,            "deploy"
 set :group,           "deploy"
 set :use_sudo,        false
@@ -30,7 +32,6 @@ set(:current_revision)  { capture("cd #{current_path}; git rev-parse --short HEA
 set(:latest_revision)   { capture("cd #{current_path}; git rev-parse --short HEAD").strip }
 set(:previous_revision) { capture("cd #{current_path}; git rev-parse --short HEAD@{1}").strip }
 
-default_environment["RAILS_ENV"] = 'production'
 default_run_options[:shell] = 'bash'
 
 namespace :deploy do
