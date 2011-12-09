@@ -68,6 +68,7 @@ GEM
     crack (0.1.8)
     css_parser (1.2.5)
       addressable
+    daemon-spawn (0.4.2)
     daemon_controller (0.2.6)
     daemons (1.1.0)
     database_cleaner (0.5.2)
@@ -236,6 +237,7 @@ DEPENDENCIES
   capybara (= 1.1.2)
   clearance (= 0.9.1)
   compass (= 0.11.5)
+  daemon-spawn (= 0.4.2)
   database_cleaner (= 0.5.2)
   delayed_job (= 2.0.3)
   exceptional
