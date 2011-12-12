@@ -138,7 +138,7 @@ end
 
 namespace :homerun do
   task :install do
-    run "sudo bundle exec home_run --install"
+    run "cd #{current_path}; sudo bundle exec home_run --install"
   end
 end
 
