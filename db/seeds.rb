@@ -1,3 +1,5 @@
+require 'csv'
+
 Role.create(:name => "finder")
 Role.create(:name => "lister")
 Role.create(:name => "admin")
@@ -316,7 +318,7 @@ Station.destroy_all
 StationTrain.destroy_all
 Train.destroy_all
 
-FasterCSV.foreach("lib/mta_subway_info.csv", :headers => :first_row) do |row|
+CSV.foreach("lib/mta_subway_info.csv", :headers => :first_row) do |row|
   station = Station.create(:name => row["Station Name"],
                            :line => row["Line"],
                            :lat => row["Latitude"],
