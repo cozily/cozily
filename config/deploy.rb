@@ -136,8 +136,15 @@ namespace :bundler do
   end
 end
 
+namespace :homerun do
+  task :install do
+    run "sudo bundle exec home_run --install"
+  end
+end
+
 before "bundle:install", "bundler:install"
 after "deploy:update", "whenever:update_crontab"
+after "deploy:update", "homerun:install"
 after "deploy", "deploy:notify"
 
 def run_rake(cmd)
