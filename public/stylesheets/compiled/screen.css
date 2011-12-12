@@ -877,7 +877,7 @@ body.dashboard div.head div.lady, body.searches div.head div.lady, body.neighbor
 body.dashboard div.head div.lady span, body.searches div.head div.lady span, body.neighborhoods.show div.head div.lady span, body.browse div.head div.lady span {
   font-size: 1.2em;
   font-style: italic;
-  width: 220px;
+  width: 350px;
   padding: 15px 85px 0 0;
   text-align: center;
   display: block;
