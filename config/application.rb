@@ -11,7 +11,7 @@ module Cozily
     end
     config.autoload_paths += %W(#{config.root}/lib)
 
-    config.time_zone = 'Eastern Time (US & Canada)'
+    config.time_zone = "Eastern Time (US & Canada)"
     config.encoding = "utf-8"
     config.filter_parameters += [:password]
   end
