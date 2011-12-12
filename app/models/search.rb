@@ -28,14 +28,13 @@ class Search
   end
 
   def results
-    conditions = [].tap do |condition|
-      condition << "bedrooms >= #{@min_bedrooms}" if @min_bedrooms.present?
-      condition << "rent <= #{@max_rent}" if @max_rent.present?
-      condition << "apartments.state = 'published'"
-    end.join(" AND ")
-    apartments = Apartment.all(:conditions => conditions, :joins => :address, :order => "published_at desc")
+    apartments = Apartment.where(:state => "published")
+    apartments = apartments.where("bedrooms >= #{@min_bedrooms}") if @min_bedrooms.present?
+    apartments = apartments.where("rent <= #{@max_rent}") if @max_rent.present?
+    apartments = apartments.joins(:address).order("published_at desc")
     unless @neighborhood_ids.empty?
-      apartments = apartments.select { |a| (a.neighborhoods.map(&:id) & @neighborhood_ids).present? }
+      apts = apartments.select { |a| (a.neighborhoods.map(&:id) & @neighborhood_ids).present? }
+      apartments = Apartment.where(:id => apts.map(&:id))
     end
     apartments
   end
