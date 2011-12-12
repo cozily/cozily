@@ -29,6 +29,7 @@ class ApplicationController < ActionController::Base
   end
 
   def render_not_found(e)
+    Exceptional.handle(e)
     respond_to do |type|
       type.html {
         render :template => "errors/404", :layout => 'error', :status => 404
@@ -39,6 +40,7 @@ class ApplicationController < ActionController::Base
   end
 
   def render_error(e)
+    Exceptional.handle(e)
     respond_to do |type|
       type.html {
         render :template => "errors/500", :layout => 'error', :status => 500
