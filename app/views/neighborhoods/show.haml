@@ -3,7 +3,7 @@
 
 -if @apartments.present?
   :javascript
-    var apartments = #{@apartments.as_json(:methods => :to_param, :include => :address).to_json};
+    var apartments = #{@apartments.as_json(:methods => :to_param).to_json};
 
 .article
   %h2==Matches in #{@neighborhood.name}

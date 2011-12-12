@@ -15,10 +15,6 @@ class Apartment < ActiveRecord::Base
   has_many :flags, :dependent => :destroy
   has_many :images, :order => "position", :dependent => :destroy
   has_many :conversations, :dependent => :destroy, :order => "created_at desc"
-  has_many :neighborhoods, :finder_sql => proc { "select n.* from neighborhoods n
-                                            inner join address_neighborhoods a1 on a1.neighborhood_id = n.id
-                                             inner join addresses a2 on a2.id = a1.address_id
-                                              where a2.id = #{address_id}" }
 
   acts_as_mappable :through => :address
   has_friendly_id :name, :use_slug => true, :allow_nil => true
@@ -106,6 +102,10 @@ class Apartment < ActiveRecord::Base
         ApartmentMailer.send_later(:deliver_unpublished_stale_apartment_notification, apartment)
       end
     end
+  end
+
+  def neighborhoods
+    Neighborhood.joins(:addresses => :apartments).where("apartments.id" => self.id)
   end
 
   def as_json(options = {})

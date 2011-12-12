@@ -25,4 +25,15 @@ describe Neighborhood do
       }.should_not change(Neighborhood, :count)
     end
   end
+
+  describe "#published_apartments" do
+    it "should return a list of published apartments" do
+      address = Factory.create(:address)
+
+      apartment1 = Factory.create(:published_apartment, :address => address)
+      apartment2 = Factory.create(:apartment, :address => address)
+
+      address.neighborhoods.first.published_apartments.should == [apartment1]
+    end
+  end
 end
