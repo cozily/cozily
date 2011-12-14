@@ -42,7 +42,7 @@ describe User do
         Factory(:user)
       }.should change(Delayed::Job, :count).by(1)
 
-      Delayed::Job.last.handler.should =~ /:deliver_confirmation/
+      Delayed::Job.last.handler.should =~ /:confirmation/
     end
   end
 
@@ -94,7 +94,7 @@ describe User do
       lambda {
         User.send_finder_summary_emails
       }.should change(Delayed::Job, :count).by(1)
-      Delayed::Job.last.handler.should =~ /:deliver_finder_summary/
+      Delayed::Job.last.handler.should =~ /:finder_summary/
     end
 
     it "should not email finders who have opted out of weekly summaries" do
@@ -114,7 +114,7 @@ describe User do
       lambda {
         User.send_lister_summary_emails
       }.should change(Delayed::Job, :count).by(1)
-      Delayed::Job.last.handler.should =~ /:deliver_lister_summary/
+      Delayed::Job.last.handler.should =~ /:lister_summary/
     end
 
     it "should not email listers who have opted out of weekly summaries" do

@@ -55,7 +55,7 @@ describe Apartment do
       lambda {
         Factory(:apartment, :user => @user)
       }.should change(Delayed::Job, :count).by(1)
-      Delayed::Job.last.handler.should =~ /:deliver_first_apartment_notification/
+      Delayed::Job.last.handler.should =~ /:first_apartment_notification/
     end
 
     it "should remember that the owner has received the first apartment email" do
@@ -124,7 +124,7 @@ describe Apartment do
         Apartment.unpublish_stale_apartments
       }.should change(Delayed::Job, :count).by(1)
 
-      Delayed::Job.last.handler.should =~ /:deliver_unpublished_stale_apartment_notification/
+      Delayed::Job.last.handler.should =~ /:unpublished_stale_apartment_notification/
     end
   end
 

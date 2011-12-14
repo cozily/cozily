@@ -25,7 +25,7 @@ feature "sign up" do
     user = User.find_by_email("email@person.com")
     assert !user.confirmation_token.blank?
     Delayed::Job.count.should > 0
-    Delayed::Job.last.handler.should =~ /:deliver_confirmation/
+    Delayed::Job.last.handler.should =~ /:confirmation/
   end
 
   scenario "user confirms his account" do

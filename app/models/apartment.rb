@@ -99,7 +99,7 @@ class Apartment < ActiveRecord::Base
       apts = Apartment.all(:conditions => ["state = 'published' AND (end_date < ? OR published_at < ?)", Date.today, 3.weeks.ago])
       apts.each do |apartment|
         apartment.unpublish!
-        ApartmentMailer.send_later(:deliver_unpublished_stale_apartment_notification, apartment)
+        ApartmentMailer.delay.unpublished_stale_apartment_notification(apartment)
       end
     end
   end
@@ -198,7 +198,7 @@ class Apartment < ActiveRecord::Base
   private
   def email_owner
     unless user.has_received_first_apartment_notification?
-      UserMailer.send_later(:deliver_first_apartment_notification, user)
+      UserMailer.delay.first_apartment_notification(user)
       FirstApartmentNotification.create(:user => user)
     end
   end

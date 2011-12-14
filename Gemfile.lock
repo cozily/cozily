@@ -70,9 +70,10 @@ GEM
       addressable
     daemon-spawn (0.4.2)
     daemon_controller (0.2.6)
-    daemons (1.1.0)
+    daemons (1.1.4)
     database_cleaner (0.5.2)
-    delayed_job (2.0.3)
+    delayed_job (2.1.4)
+      activesupport (~> 3.0)
       daemons
     diff-lcs (1.1.3)
     erubis (2.6.6)
@@ -80,10 +81,11 @@ GEM
     escape_utils (0.2.4)
     exceptional (2.0.32)
       rack
-    factory_girl (1.3.2)
-    factory_girl_rails (1.0)
-      factory_girl (~> 1.3)
-      rails (>= 3.0.0.beta4)
+    factory_girl (2.3.2)
+      activesupport
+    factory_girl_rails (1.4.0)
+      factory_girl (~> 2.3.0)
+      railties (>= 3.0.0)
     fastthread (1.0.7)
     ffaker (1.10.1)
     ffi (1.0.11)
@@ -241,11 +243,10 @@ DEPENDENCIES
   compass (= 0.11.5)
   daemon-spawn (= 0.4.2)
   database_cleaner (= 0.5.2)
-  delayed_job (= 2.0.3)
+  delayed_job
   escape_utils
   exceptional
-  factory_girl (= 1.3.2)
-  factory_girl_rails (= 1.0)
+  factory_girl_rails
   ffaker
   fixture_builder
   formtastic (= 2.0.2)

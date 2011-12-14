@@ -35,13 +35,13 @@ class User < ActiveRecord::Base
   class << self
     def send_finder_summary_emails
       User.finder.receive_match_summaries.each do |user|
-        UserMailer.send_later(:deliver_finder_summary, user)
+        UserMailer.delay.finder_summary(user)
       end
     end
 
     def send_lister_summary_emails
       User.lister.receive_listing_summaries.each do |user|
-        UserMailer.send_later(:deliver_lister_summary, user)
+        UserMailer.delay.lister_summary(user)
       end
     end
   end
@@ -112,7 +112,7 @@ class User < ActiveRecord::Base
   end
 
   def send_confirmation_email
-    ClearanceMailer.send_later(:deliver_confirmation, self)
+    ClearanceMailer.delay.confirmation(self)
   end
 
   private

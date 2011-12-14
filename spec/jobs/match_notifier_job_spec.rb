@@ -13,7 +13,7 @@ describe MatchNotifierJob do
       lambda {
         @match_notifier_job.perform
       }.should change(Delayed::Job, :count).by(1)
-      Delayed::Job.last.handler.should =~ /:deliver_new_match_notification/
+      Delayed::Job.last.handler.should =~ /:new_match_notification/
     end
 
     it "creates a MatchNotification record for the user and apartment" do
@@ -41,6 +41,6 @@ describe MatchNotifierJob do
       lambda {
         @match_notifier_job.perform
       }.should_not change(Delayed::Job, :count)
-    end    
-  end  
+    end
+  end
 end

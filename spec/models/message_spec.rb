@@ -27,7 +27,7 @@ describe Message do
     lambda {
       conversation.save
     }.should change(Delayed::Job, :count).by(1)
-    Delayed::Job.last.handler.should =~ /:deliver_receiver_notification/
+    Delayed::Job.last.handler.should =~ /:receiver_notification/
   end
 
   describe "#recipient" do

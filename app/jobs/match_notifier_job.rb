@@ -12,7 +12,7 @@ class MatchNotifierJob
       next if user == apt.user || user.has_received_match_notification_for?(apt)
 
       if apt.match_for?(user)
-        MatchMailer.send_later(:deliver_new_match_notification, apt, user)
+        MatchMailer.delay.new_match_notification(apt, user)
         MatchNotification.create(:user => user, :apartment => apt)
       end
     end
