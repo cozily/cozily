@@ -1,121 +1,127 @@
---- 
-case_by_case: 
-  name: case-by-case
-  category: pet
-  created_at: 2011-10-27 15:30:52.078001
-  updated_at: 2011-10-27 15:30:52.078001
-  id: "20"
-live_in_super: 
-  name: live-in super
-  category: building
-  created_at: 2011-10-27 15:30:52.051332
-  updated_at: 2011-10-27 15:30:52.051332
-  id: "12"
-roof_deck: 
-  name: roof deck
-  category: building
-  created_at: 2011-10-27 15:30:52.062013
-  updated_at: 2011-10-27 15:30:52.062013
-  id: "17"
-backyard: 
-  name: backyard
+---
+furnished:
   category: apartment
-  created_at: 2011-10-27 15:30:52.037098
-  updated_at: 2011-10-27 15:30:52.037098
-  id: "6"
-doorman: 
-  name: doorman
-  category: building
-  created_at: 2011-10-27 15:30:52.053265
-  updated_at: 2011-10-27 15:30:52.053265
-  id: "13"
-exposed_brick: 
-  name: exposed brick
-  category: apartment
-  created_at: 2011-10-27 15:30:52.028307
-  updated_at: 2011-10-27 15:30:52.028307
-  id: "2"
-dogs_allowed: 
-  name: dogs allowed
-  category: pet
-  created_at: 2011-10-27 15:30:52.075924
-  updated_at: 2011-10-27 15:30:52.075924
-  id: "19"
-elevator: 
-  name: elevator
-  category: building
-  created_at: 2011-10-27 15:30:52.055758
-  updated_at: 2011-10-27 15:30:52.055758
-  id: "14"
-bathtub: 
-  name: bathtub
-  category: apartment
-  created_at: 2011-10-27 15:30:52.041665
-  updated_at: 2011-10-27 15:30:52.041665
-  id: "8"
-furnished: 
+  created_at: 2011-12-12 20:51:45.799081000 Z
+  id: 1
   name: furnished
+  updated_at: 2011-12-12 20:51:45.799081000 Z
+exposed_brick:
   category: apartment
-  created_at: 2011-10-27 15:30:52.02281
-  updated_at: 2011-10-27 15:30:52.02281
-  id: "1"
-sleeping_loft: 
+  created_at: 2011-12-12 20:51:45.804450000 Z
+  id: 2
+  name: exposed brick
+  updated_at: 2011-12-12 20:51:45.804450000 Z
+sleeping_loft:
+  category: apartment
+  created_at: 2011-12-12 20:51:45.807055000 Z
+  id: 3
   name: sleeping loft
+  updated_at: 2011-12-12 20:51:45.807055000 Z
+high_ceilings:
   category: apartment
-  created_at: 2011-10-27 15:30:52.030369
-  updated_at: 2011-10-27 15:30:52.030369
-  id: "3"
-gym: 
-  name: gym
-  category: building
-  created_at: 2011-10-27 15:30:52.058174
-  updated_at: 2011-10-27 15:30:52.058174
-  id: "15"
-cats_allowed: 
-  name: cats allowed
-  category: pet
-  created_at: 2011-10-27 15:30:52.073298
-  updated_at: 2011-10-27 15:30:52.073298
-  id: "18"
-balcony: 
-  name: balcony
-  category: apartment
-  created_at: 2011-10-27 15:30:52.039347
-  updated_at: 2011-10-27 15:30:52.039347
-  id: "7"
-pool: 
-  name: pool
-  category: building
-  created_at: 2011-10-27 15:30:52.060039
-  updated_at: 2011-10-27 15:30:52.060039
-  id: "16"
-air_conditioning: 
-  name: air conditioning
-  category: apartment
-  created_at: 2011-10-27 15:30:52.035158
-  updated_at: 2011-10-27 15:30:52.035158
-  id: "5"
-dishwasher: 
-  name: dishwasher
-  category: apartment
-  created_at: 2011-10-27 15:30:52.044026
-  updated_at: 2011-10-27 15:30:52.044026
-  id: "9"
-washer_dryer: 
-  name: washer/dryer
-  category: apartment
-  created_at: 2011-10-27 15:30:52.04657
-  updated_at: 2011-10-27 15:30:52.04657
-  id: "10"
-high_ceilings: 
+  created_at: 2011-12-12 20:51:45.809506000 Z
+  id: 4
   name: high ceilings
+  updated_at: 2011-12-12 20:51:45.809506000 Z
+air_conditioning:
   category: apartment
-  created_at: 2011-10-27 15:30:52.032647
-  updated_at: 2011-10-27 15:30:52.032647
-  id: "4"
-high_rise: 
-  name: high-rise
+  created_at: 2011-12-12 20:51:45.811784000 Z
+  id: 5
+  name: air conditioning
+  updated_at: 2011-12-12 20:51:45.811784000 Z
+backyard:
+  category: apartment
+  created_at: 2011-12-12 20:51:45.814347000 Z
+  id: 6
+  name: backyard
+  updated_at: 2011-12-12 20:51:45.814347000 Z
+balcony:
+  category: apartment
+  created_at: 2011-12-12 20:51:45.816764000 Z
+  id: 7
+  name: balcony
+  updated_at: 2011-12-12 20:51:45.816764000 Z
+bathtub:
+  category: apartment
+  created_at: 2011-12-12 20:51:45.820316000 Z
+  id: 8
+  name: bathtub
+  updated_at: 2011-12-12 20:51:45.820316000 Z
+dishwasher:
+  category: apartment
+  created_at: 2011-12-12 20:51:45.824152000 Z
+  id: 9
+  name: dishwasher
+  updated_at: 2011-12-12 20:51:45.824152000 Z
+washer_dryer:
+  category: apartment
+  created_at: 2011-12-12 20:51:45.826698000 Z
+  id: 10
+  name: washer/dryer
+  updated_at: 2011-12-12 20:51:45.826698000 Z
+high_rise:
   category: building
-  created_at: 2011-10-27 15:30:52.049214
-  updated_at: 2011-10-27 15:30:52.049214
-  id: "11"
+  created_at: 2011-12-12 20:51:45.829005000 Z
+  id: 11
+  name: high-rise
+  updated_at: 2011-12-12 20:51:45.829005000 Z
+live_in_super:
+  category: building
+  created_at: 2011-12-12 20:51:45.831407000 Z
+  id: 12
+  name: live-in super
+  updated_at: 2011-12-12 20:51:45.831407000 Z
+doorman:
+  category: building
+  created_at: 2011-12-12 20:51:45.833818000 Z
+  id: 13
+  name: doorman
+  updated_at: 2011-12-12 20:51:45.833818000 Z
+elevator:
+  category: building
+  created_at: 2011-12-12 20:51:45.836184000 Z
+  id: 14
+  name: elevator
+  updated_at: 2011-12-12 20:51:45.836184000 Z
+gym:
+  category: building
+  created_at: 2011-12-12 20:51:45.838430000 Z
+  id: 15
+  name: gym
+  updated_at: 2011-12-12 20:51:45.838430000 Z
+pool:
+  category: building
+  created_at: 2011-12-12 20:51:45.841034000 Z
+  id: 16
+  name: pool
+  updated_at: 2011-12-12 20:51:45.841034000 Z
+roof_deck:
+  category: building
+  created_at: 2011-12-12 20:51:45.843518000 Z
+  id: 17
+  name: roof deck
+  updated_at: 2011-12-12 20:51:45.843518000 Z
+washer_dryer_1:
+  category: building
+  created_at: 2011-12-12 20:51:45.845845000 Z
+  id: 18
+  name: washer/dryer
+  updated_at: 2011-12-12 20:51:45.845845000 Z
+cats_allowed:
+  category: pet
+  created_at: 2011-12-12 20:51:45.848436000 Z
+  id: 19
+  name: cats allowed
+  updated_at: 2011-12-12 20:51:45.848436000 Z
+dogs_allowed:
+  category: pet
+  created_at: 2011-12-12 20:51:45.850792000 Z
+  id: 20
+  name: dogs allowed
+  updated_at: 2011-12-12 20:51:45.850792000 Z
+case_by_case:
+  category: pet
+  created_at: 2011-12-12 20:51:45.853045000 Z
+  id: 21
+  name: case-by-case
+  updated_at: 2011-12-12 20:51:45.853045000 Z
