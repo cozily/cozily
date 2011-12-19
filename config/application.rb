@@ -6,10 +6,11 @@ Bundler.require(:default, Rails.env) if defined?(Bundler)
 
 module Cozily
   class Application < Rails::Application
-    ["jobs", "mailers", "shared"].each do |subdir|
-      config.autoload_paths << "#{Rails.root.to_s}/app/#{subdir}"
+    %w{jobs mailers shared workers}.each do |dir|
+      config.autoload_paths << Rails.root.join("app", dir)
     end
-    config.autoload_paths += %W(#{config.root}/lib)
+
+    config.autoload_paths << Rails.root.join("lib")
 
     config.time_zone = "Eastern Time (US & Canada)"
     config.encoding = "utf-8"

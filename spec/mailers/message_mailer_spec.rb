@@ -4,7 +4,7 @@ describe MessageMailer do
   describe "#deliver_receiver_notification" do
     before do
       @message = Factory(:message)
-      @email = MessageMailer.receiver_notification(@message).deliver
+      @email = MessageMailer.receiver_notification(@message.id).deliver
     end
 
     it "queues the email" do

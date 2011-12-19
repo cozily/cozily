@@ -35,13 +35,13 @@ class User < ActiveRecord::Base
   class << self
     def send_finder_summary_emails
       User.finder.receive_match_summaries.each do |user|
-        UserMailer.delay.finder_summary(user)
+        UserMailer.finder_summary(user.id).deliver
       end
     end
 
     def send_lister_summary_emails
       User.lister.receive_listing_summaries.each do |user|
-        UserMailer.delay.lister_summary(user)
+        UserMailer.lister_summary(user.id).deliver
       end
     end
   end
@@ -86,7 +86,7 @@ class User < ActiveRecord::Base
     end
 
     if profile.try(:neighborhoods).try(:present?)
-      ids = apts.select { |a| (a.neighborhoods & profile.neighborhoods).present? }.map(&:id) rescue []
+      ids = apts.select { |a| (a.neighborhoods.merge profile.neighborhoods).present? }.map(&:id)
       Apartment.where(:id => ids)
     else
       apts
@@ -112,7 +112,7 @@ class User < ActiveRecord::Base
   end
 
   def send_confirmation_email
-    ClearanceMailer.delay.confirmation(self)
+    ClearanceMailer.confirmation(self.id).deliver
   end
 
   private

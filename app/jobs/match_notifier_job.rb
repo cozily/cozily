@@ -1,19 +1,15 @@
 class MatchNotifierJob
-  attr_accessor :apartment_id
+  @queue = :cozily_matcher
 
-  def initialize(apartment)
-    self.apartment_id = apartment.id
-  end
-
-  def perform
-    apt = Apartment.find(apartment_id)
+  def self.perform(apartment_id)
+    apartment = Apartment.find(apartment_id)
 
     User.finder.receive_match_notifications.each do |user|
-      next if user == apt.user || user.has_received_match_notification_for?(apt)
+      next if user == apartment.user || user.has_received_match_notification_for?(apartment)
 
-      if apt.match_for?(user)
-        MatchMailer.delay.new_match_notification(apt, user)
-        MatchNotification.create(:user => user, :apartment => apt)
+      if apartment.match_for?(user)
+        MatchNotification.create(:user => user, :apartment => apartment)
+        MatchMailer.new_match_notification(apartment.id, user.id).deliver
       end
     end
   end

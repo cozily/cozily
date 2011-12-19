@@ -4,7 +4,7 @@ describe ApartmentMailer do
   describe "#deliver_unpublished_stale_apartment_notification" do
     before do
       @apartment = Factory(:published_apartment)
-      @email = ApartmentMailer.unpublished_stale_apartment_notification(@apartment).deliver
+      @email = ApartmentMailer.unpublished_stale_apartment_notification(@apartment.id).deliver
     end
 
     it "queues the email" do

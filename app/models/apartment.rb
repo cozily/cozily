@@ -45,7 +45,7 @@ class Apartment < ActiveRecord::Base
       TimelineEvent.create(:event_type => "state_changed_to_published",
                            :subject => apt,
                            :actor => apt.user)
-      Delayed::Job.enqueue(MatchNotifierJob.new(apt)) unless defined?(Rake)
+      Resque.enqueue(MatchNotifierJob, apt.id)
     end
 
     state :published do
@@ -99,7 +99,7 @@ class Apartment < ActiveRecord::Base
       apts = Apartment.all(:conditions => ["state = 'published' AND (end_date < ? OR published_at < ?)", Date.today, 3.weeks.ago])
       apts.each do |apartment|
         apartment.unpublish!
-        ApartmentMailer.delay.unpublished_stale_apartment_notification(apartment)
+        ApartmentMailer.unpublished_stale_apartment_notification(apartment.id).deliver
       end
     end
   end
@@ -198,7 +198,7 @@ class Apartment < ActiveRecord::Base
   private
   def email_owner
     unless user.has_received_first_apartment_notification?
-      UserMailer.delay.first_apartment_notification(user)
+      UserMailer.first_apartment_notification(user.id).deliver
       FirstApartmentNotification.create(:user => user)
     end
   end

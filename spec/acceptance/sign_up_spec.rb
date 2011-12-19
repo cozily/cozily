@@ -24,8 +24,8 @@ feature "sign up" do
 
     user = User.find_by_email("email@person.com")
     assert !user.confirmation_token.blank?
-    Delayed::Job.count.should > 0
-    Delayed::Job.last.handler.should =~ /:confirmation/
+    ActionMailer::Base.deliveries.count.should > 0
+    ActionMailer::Base.deliveries.last.subject.should == "Confirm your email address"
   end
 
   scenario "user confirms his account" do

@@ -29,7 +29,7 @@ class Message < ActiveRecord::Base
   end
 
   def notify_receiver
-    MessageMailer.delay.receiver_notification(self)
+    MessageMailer.receiver_notification(self.id).deliver
   end
 
   def undelete_conversation

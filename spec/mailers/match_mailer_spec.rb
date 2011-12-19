@@ -6,7 +6,7 @@ describe MatchMailer do
       Apartment.destroy_all
       Address.destroy_all
       @apartment, @user = Factory(:apartment), Factory(:user)
-      @email = MatchMailer.new_match_notification(@apartment, @user).deliver
+      @email = MatchMailer.new_match_notification(@apartment.id, @user.id).deliver
     end
 
     it "queues the email" do

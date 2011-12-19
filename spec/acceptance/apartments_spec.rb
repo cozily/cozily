@@ -54,12 +54,12 @@ feature "apartments" do
       fill_in "Bedrooms", :with => "1"
       fill_in "Bathrooms", :with => "1"
       fill_in "Square footage", :with => "500"
-      fill_in "Start date", :with => Date.today
+      fill_in "Start date", :with => Date.today.to_date
 
       check "backyard"
       check "balcony"
       choose "apartment_sublet_true"
-      fill_in "End date", :with => 6.months.from_now
+      fill_in "End date", :with => 6.months.from_now.to_date
       click_link "Save Changes"
 
       apartment.reload

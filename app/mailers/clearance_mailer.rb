@@ -1,6 +1,8 @@
 class ClearanceMailer < ActionMailer::Base
-  def change_password(user)
-    @user = user
+  include Resque::Mailer
+
+  def change_password(user_id)
+    @user = User.find(user_id)
     from       Clearance.configuration.mailer_sender
     recipients @user.email
     subject    I18n.t(:change_password,
@@ -8,8 +10,8 @@ class ClearanceMailer < ActionMailer::Base
                       :default => "Change your password")
   end
 
-  def confirmation(user)
-    @user = user
+  def confirmation(user_id)
+    @user = User.find(user_id)
     from       Clearance.configuration.mailer_sender
     recipients @user.email
     subject    I18n.t(:confirmation,

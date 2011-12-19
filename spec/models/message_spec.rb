@@ -26,8 +26,8 @@ describe Message do
     conversation = Factory.build(:message)
     lambda {
       conversation.save
-    }.should change(Delayed::Job, :count).by(1)
-    Delayed::Job.last.handler.should =~ /:receiver_notification/
+    }.should change(ActionMailer::Base.deliveries, :count).by(1)
+    ActionMailer::Base.deliveries.last.subject.should =~ /sent you a message on Cozily/
   end
 
   describe "#recipient" do

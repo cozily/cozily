@@ -3,7 +3,7 @@
 
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
-require 'delayed/tasks'
+require 'resque/tasks'
 
 include Rake::DSL
 

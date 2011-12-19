@@ -54,8 +54,8 @@ describe Apartment do
     it "should email the owner after they create their first apartment" do
       lambda {
         Factory(:apartment, :user => @user)
-      }.should change(Delayed::Job, :count).by(1)
-      Delayed::Job.last.handler.should =~ /:first_apartment_notification/
+      }.should change(ActionMailer::Base.deliveries, :count).by(1)
+      ActionMailer::Base.deliveries.last.subject.should == "Thanks for creating a listing on Cozily"
     end
 
     it "should remember that the owner has received the first apartment email" do
@@ -68,7 +68,7 @@ describe Apartment do
       FirstApartmentNotification.create!(:user => @user)
       lambda {
         Apartment.create!(:user => @user)
-      }.should_not change(Delayed::Job, :count)
+      }.should_not change(ActionMailer::Base.deliveries, :count)
     end
   end
 
@@ -122,9 +122,9 @@ describe Apartment do
 
       lambda {
         Apartment.unpublish_stale_apartments
-      }.should change(Delayed::Job, :count).by(1)
+      }.should change(ActionMailer::Base.deliveries, :count).by(1)
 
-      Delayed::Job.last.handler.should =~ /:unpublished_stale_apartment_notification/
+      ActionMailer::Base.deliveries.last.subject.should == "One of your apartments has been unpublished on Cozily..."
     end
   end
 
@@ -230,13 +230,12 @@ describe Apartment do
     before do
       @apartment = Factory(:apartment)
       @apartment.should_receive(:publishable?).and_return(true)
+      ResqueSpec.reset!
     end
 
     it "enqueues a MatchNotifierJob when published" do
-      lambda {
-        @apartment.publish!
-      }.should change(Delayed::Job, :count).by(1)
-      Delayed::Job.last.handler.should =~ /:MatchNotifierJob/
+      @apartment.publish!
+      MatchNotifierJob.should have_queued(@apartment.id)
     end
 
     it "updates published_on" do

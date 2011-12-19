@@ -4,7 +4,7 @@ describe UserMailer do
   describe "#deliver_first_apartment_notification" do
     before do
       @user = Factory(:user)
-      @email = UserMailer.first_apartment_notification(@user).deliver
+      @email = UserMailer.first_apartment_notification(@user.id).deliver
     end
 
     it "queues the email" do
@@ -27,7 +27,7 @@ describe UserMailer do
   describe "#deliver_finder_summary" do
     before do
       @user = Factory(:user)
-      @email = UserMailer.finder_summary(@user).deliver
+      @email = UserMailer.finder_summary(@user.id).deliver
     end
 
     it "queues the email" do
@@ -52,7 +52,7 @@ describe UserMailer do
       @user = Factory(:user)
       @published_apartment = Factory(:published_apartment, :user => @user)
       @unpublished_apartment = Factory(:apartment, :user => @user)
-      @email = UserMailer.lister_summary(@user).deliver
+      @email = UserMailer.lister_summary(@user.id).deliver
     end
 
     it "queues the email" do

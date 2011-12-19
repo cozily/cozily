@@ -40,9 +40,9 @@ describe User do
     it "should send a confirmation email later" do
       lambda {
         Factory(:user)
-      }.should change(Delayed::Job, :count).by(1)
+      }.should change(ActionMailer::Base.deliveries, :count).by(1)
 
-      Delayed::Job.last.handler.should =~ /:confirmation/
+      ActionMailer::Base.deliveries.last.subject.should == "Confirm your email address"
     end
   end
 
@@ -93,15 +93,15 @@ describe User do
     it "should email finders" do
       lambda {
         User.send_finder_summary_emails
-      }.should change(Delayed::Job, :count).by(1)
-      Delayed::Job.last.handler.should =~ /:finder_summary/
+      }.should change(ActionMailer::Base.deliveries, :count).by(1)
+      ActionMailer::Base.deliveries.last.subject.should == "Your Weekly Match Summary from Cozily"
     end
 
     it "should not email finders who have opted out of weekly summaries" do
       @finder.update_attribute(:receive_match_summaries, false)
       lambda {
         User.send_finder_summary_emails
-      }.should_not change(Delayed::Job, :count)
+      }.should_not change(ActionMailer::Base.deliveries, :count)
     end
   end
 
@@ -113,15 +113,15 @@ describe User do
     it "should email listers" do
       lambda {
         User.send_lister_summary_emails
-      }.should change(Delayed::Job, :count).by(1)
-      Delayed::Job.last.handler.should =~ /:lister_summary/
+      }.should change(ActionMailer::Base.deliveries, :count).by(1)
+      ActionMailer::Base.deliveries.last.subject.should == "Your Weekly Listing Summary from Cozily"
     end
 
     it "should not email listers who have opted out of weekly summaries" do
       @lister.update_attribute(:receive_listing_summaries, false)
       lambda {
         User.send_lister_summary_emails
-      }.should_not change(Delayed::Job, :count)
+      }.should_not change(ActionMailer::Base.deliveries, :count)
     end
   end
 
