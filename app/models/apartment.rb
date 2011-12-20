@@ -184,7 +184,7 @@ class Apartment < ActiveRecord::Base
 
     ( user.profile.bedrooms.blank? || bedrooms >= user.profile.bedrooms ) &&
             ( user.profile.rent.blank? || rent <= user.profile.rent ) &&
-            ( user.profile.neighborhoods.empty? || (neighborhoods & user.profile.neighborhoods).present? )
+            ( user.profile.neighborhoods.empty? || (neighborhoods.merge user.profile.neighborhoods).present? )
   end
 
   def valid_sublet?
