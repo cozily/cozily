@@ -19,8 +19,6 @@ module ApplicationHelper
   def neighborhood_search_text
     if session[:neighborhood_ids].present?
       Neighborhood.find_all_by_id(eval(session[:neighborhood_ids])).map(&:name).join(", ")
-    else
-      "All Neighborhoods"
     end
   end
 
