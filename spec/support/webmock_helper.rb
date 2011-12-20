@@ -1,7 +1,6 @@
 WebMock.disable_net_connect!(:allow_localhost => true)
 
-puts "*" * 80
-puts "*  READING CACHED RESPONSES FOR WEBMOCK"
+puts "Reading cached responses for WebMock..."
 
 WEBMOCK_SITES = YAML.load_file("#{Rails.root}/spec/support/webmock/sites.yml")
 WEBMOCK_SITES.each do |site|
@@ -15,7 +14,7 @@ WEBMOCK_SITES.each do |site|
       response = File.read(file_name)
       WebMock.stub_http_request(:get, base_url).with(:query => querystring).to_return(response)
     else
-      puts "*  REQUESTING AND CACHING RESPONSE FOR '#{url}'"
+      puts "* Requesting and caching response for '#{url}'"
       response = `curl -is "#{url}"`
       hash = Digest::MD5.hexdigest(url)
       cache_dir = "#{Rails.root}/spec/support/webmock/cache"
@@ -28,5 +27,3 @@ WEBMOCK_SITES.each do |site|
     end
   end
 end
-
-puts "*" * 80
