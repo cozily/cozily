@@ -61,4 +61,5 @@ Cozily::Application.configure do
           :authentication => :plain,
           :user_name => "cozily@cozily.mailgun.org",
           :password => "marathon69"
+  }
 end
