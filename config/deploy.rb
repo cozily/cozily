@@ -142,9 +142,21 @@ namespace :homerun do
   end
 end
 
+namespace :resque do
+  task :start do
+    run "cd #{current_path}; nohup bundle exec rake environment resque:work QUEUE=* PIDFILE=tmp/pids/resque.pid & >> log/resque.log 2>&1"
+  end
+
+  task :stop do
+    run "cd #{current_path}; kill `cat /srv/cozily/shared/pids/resque.pid`"
+  end
+end
+
 before "bundle:install", "bundler:install"
+before "deploy", "resque:stop"
 after "deploy:update", "whenever:update_crontab"
 after "deploy:update", "homerun:install"
+after "deploy:update", "resque:start"
 after "deploy", "deploy:notify"
 
 def run_rake(cmd)
