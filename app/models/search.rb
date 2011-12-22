@@ -18,7 +18,7 @@ class Search
     @min_square_footage = (options[:min_square_footage] || 250).to_i
     @max_square_footage = (options[:max_square_footage] || 800).to_i
     @neighborhood_ids = if options[:neighborhood_ids].is_a?(String)
-                          [(eval(options[:neighborhood_ids]) rescue [])].flatten
+                          [(eval(options[:neighborhood_ids]) rescue [])].flatten.compact
                         elsif options[:neighborhood_ids].is_a?(Array)
                           options[:neighborhood_ids]
                         else
