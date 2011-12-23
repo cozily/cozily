@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101217055236) do
+ActiveRecord::Schema.define(:version => 20111223045927) do
 
   create_table "address_neighborhoods", :force => true do |t|
     t.integer  "address_id"
@@ -287,6 +287,7 @@ ActiveRecord::Schema.define(:version => 20101217055236) do
     t.boolean  "receive_match_notifications",                :default => true
     t.boolean  "receive_match_summaries",                    :default => true
     t.boolean  "receive_listing_summaries",                  :default => true
+    t.boolean  "is_admin",                                   :default => false, :null => false
   end
 
   add_index "users", ["email"], :name => "index_users_on_email"

@@ -2,7 +2,6 @@ require 'csv'
 
 Role.create(:name => "finder")
 Role.create(:name => "lister")
-Role.create(:name => "admin")
 
 ["Baychester",
  "Bedford Park",
@@ -364,6 +363,7 @@ User.create(:first_name => "Michael",
             :password => "pass",
             :password_confirmation => "pass",
             :phone => "2022707370",
+            :is_admin => true,
             :roles => Role.all)
 
 User.create(:first_name => "Todd",
@@ -372,4 +372,5 @@ User.create(:first_name => "Todd",
             :password => "pass",
             :password_confirmation => "pass",
             :phone => "6462564810",
+            :is_admin => true,
             :roles => Role.all)

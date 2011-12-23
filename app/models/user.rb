@@ -47,7 +47,7 @@ class User < ActiveRecord::Base
   end
 
   def admin?
-    roles.include?(Role.find_by_name("admin"))
+    is_admin?
   end
 
   def finder?

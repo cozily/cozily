@@ -6,7 +6,6 @@ FixtureBuilder.configure do |config|
   config.factory do
     finder_role = Factory(:role, :name => "finder")
     lister_role = Factory(:role, :name => "lister")
-    admin_role = Factory(:role, :name => "admin")
 
     ["Baychester",
      "Bedford Park",
