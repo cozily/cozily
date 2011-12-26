@@ -35,7 +35,7 @@ class User < ActiveRecord::Base
   class << self
     def send_finder_summary_emails
       User.finder.receive_match_summaries.each do |user|
-        UserMailer.finder_summary(user.id).deliver
+        UserMailer.finder_summary(user.id).deliver unless user.matches.empty?
       end
     end
 
