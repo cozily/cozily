@@ -1,5 +1,4 @@
 require "bundler/capistrano"
-require "pony"
 
 set :stages, %w(staging production)
 set :default_stage, "staging"
@@ -95,19 +94,11 @@ namespace :deploy do
   end
 
   task :notify do
-    Pony.mail(:to => 'dev@cozi.ly',
-              :from => 'dev@cozi.ly',
-              :subject => "Cozily deployed to #{stage}",
-              :via => :smtp,
-              :via_options => {
-                :enable_starttls_auto => true,
-                :address => "smtp.sendgrid.net",
-                :port => 587,
-                :domain => "cozi.ly",
-                :authentication => :plain,
-                :user_name => "cozily",
-                :password => "marathon69"
-    })
+  end
+
+  desc "Generate assets with Jammit"
+  task :generate_assets, :roles => :web do
+    run "cd #{deploy_to}/current && bundle exec jammit"
   end
 
   namespace :rollback do
@@ -144,19 +135,20 @@ end
 
 namespace :resque do
   task :start do
-    run "cd #{current_path}; nohup bundle exec rake environment resque:work QUEUE=* PIDFILE=tmp/pids/resque.pid & >> log/resque.log 2>&1"
+    run "sudo god start resque"
   end
 
   task :stop do
-    run "cd #{current_path}; kill `cat /srv/cozily/shared/pids/resque.pid`"
+    run "sudo god stop resque"
   end
 end
 
 before "bundle:install", "bundler:install"
-before "deploy", "resque:stop"
+before "deploy:update", "resque:stop"
 after "deploy:update", "whenever:update_crontab"
 after "deploy:update", "homerun:install"
 after "deploy:update", "resque:start"
+after "deploy:update", "deploy:generate_assets"
 after "deploy", "deploy:notify"
 
 def run_rake(cmd)
