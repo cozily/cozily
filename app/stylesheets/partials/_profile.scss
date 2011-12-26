@@ -73,10 +73,23 @@ body.users.edit, body.users.update, body.users.new, body.users.create, body.prof
             font-size: 14px;
         }
 
-        legend {
+        > fieldset.inputs > ol > fieldset > legend {
             margin-bottom: 12px;
             font-size: 18px;
             border-bottom: 3px solid black;
+        }
+
+        li#user_profile_attributes_features_input {
+          ol.choices-group {
+            li {
+              float: left;
+              margin-right: 20px;
+
+              label > input {
+                margin: 0 0.5em 0 0.2em;
+              }
+            }
+          }
         }
 
         div#selected_neighborhoods {

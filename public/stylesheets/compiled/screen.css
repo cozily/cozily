@@ -1659,39 +1659,48 @@ body.users.edit form.user input[type=submit], body.users.update form.user input[
   font-size: 14px;
 }
 /* line 76, ../../../app/stylesheets/partials/_profile.scss */
-body.users.edit form.user legend, body.users.update form.user legend, body.users.new form.user legend, body.users.create form.user legend, body.profiles.edit form.user legend, body.profiles.update form.user legend {
+body.users.edit form.user > fieldset.inputs > ol > fieldset > legend, body.users.update form.user > fieldset.inputs > ol > fieldset > legend, body.users.new form.user > fieldset.inputs > ol > fieldset > legend, body.users.create form.user > fieldset.inputs > ol > fieldset > legend, body.profiles.edit form.user > fieldset.inputs > ol > fieldset > legend, body.profiles.update form.user > fieldset.inputs > ol > fieldset > legend {
   margin-bottom: 12px;
   font-size: 18px;
   border-bottom: 3px solid black;
 }
-/* line 82, ../../../app/stylesheets/partials/_profile.scss */
+/* line 84, ../../../app/stylesheets/partials/_profile.scss */
+body.users.edit form.user li#user_profile_attributes_features_input ol.choices-group li, body.users.update form.user li#user_profile_attributes_features_input ol.choices-group li, body.users.new form.user li#user_profile_attributes_features_input ol.choices-group li, body.users.create form.user li#user_profile_attributes_features_input ol.choices-group li, body.profiles.edit form.user li#user_profile_attributes_features_input ol.choices-group li, body.profiles.update form.user li#user_profile_attributes_features_input ol.choices-group li {
+  float: left;
+  margin-right: 20px;
+}
+/* line 88, ../../../app/stylesheets/partials/_profile.scss */
+body.users.edit form.user li#user_profile_attributes_features_input ol.choices-group li label > input, body.users.update form.user li#user_profile_attributes_features_input ol.choices-group li label > input, body.users.new form.user li#user_profile_attributes_features_input ol.choices-group li label > input, body.users.create form.user li#user_profile_attributes_features_input ol.choices-group li label > input, body.profiles.edit form.user li#user_profile_attributes_features_input ol.choices-group li label > input, body.profiles.update form.user li#user_profile_attributes_features_input ol.choices-group li label > input {
+  margin: 0 0.5em 0 0.2em;
+}
+/* line 95, ../../../app/stylesheets/partials/_profile.scss */
 body.users.edit form.user div#selected_neighborhoods, body.users.update form.user div#selected_neighborhoods, body.users.new form.user div#selected_neighborhoods, body.users.create form.user div#selected_neighborhoods, body.profiles.edit form.user div#selected_neighborhoods, body.profiles.update form.user div#selected_neighborhoods {
   display: none;
   padding-left: 25%;
   margin: 12px 0 0 0;
 }
-/* line 87, ../../../app/stylesheets/partials/_profile.scss */
+/* line 100, ../../../app/stylesheets/partials/_profile.scss */
 body.users.edit form.user div#selected_neighborhoods div, body.users.update form.user div#selected_neighborhoods div, body.users.new form.user div#selected_neighborhoods div, body.users.create form.user div#selected_neighborhoods div, body.profiles.edit form.user div#selected_neighborhoods div, body.profiles.update form.user div#selected_neighborhoods div {
   font-weight: 500;
 }
-/* line 92, ../../../app/stylesheets/partials/_profile.scss */
+/* line 105, ../../../app/stylesheets/partials/_profile.scss */
 body.users.edit form.user div#selected_neighborhoods span a, body.users.update form.user div#selected_neighborhoods span a, body.users.new form.user div#selected_neighborhoods span a, body.users.create form.user div#selected_neighborhoods span a, body.profiles.edit form.user div#selected_neighborhoods span a, body.profiles.update form.user div#selected_neighborhoods span a {
   color: red;
 }
-/* line 98, ../../../app/stylesheets/partials/_profile.scss */
+/* line 111, ../../../app/stylesheets/partials/_profile.scss */
 body.users.edit form.user li#user_receive_match_notifications_input, body.users.edit form.user li#user_receive_listing_summaries_input, body.users.update form.user li#user_receive_match_notifications_input, body.users.update form.user li#user_receive_listing_summaries_input, body.users.new form.user li#user_receive_match_notifications_input, body.users.new form.user li#user_receive_listing_summaries_input, body.users.create form.user li#user_receive_match_notifications_input, body.users.create form.user li#user_receive_listing_summaries_input, body.profiles.edit form.user li#user_receive_match_notifications_input, body.profiles.edit form.user li#user_receive_listing_summaries_input, body.profiles.update form.user li#user_receive_match_notifications_input, body.profiles.update form.user li#user_receive_listing_summaries_input {
   padding-top: 10px;
 }
 
-/* line 105, ../../../app/stylesheets/partials/_profile.scss */
+/* line 118, ../../../app/stylesheets/partials/_profile.scss */
 body.users.edit div[data-content-key=yield], body.users.update div[data-content-key=yield], body.profiles.edit div[data-content-key=yield], body.profiles.update div[data-content-key=yield] {
   padding: 0;
 }
-/* line 109, ../../../app/stylesheets/partials/_profile.scss */
+/* line 122, ../../../app/stylesheets/partials/_profile.scss */
 body.users.edit h2, body.users.update h2, body.profiles.edit h2, body.profiles.update h2 {
   padding: 20px 0 5px 20px;
 }
-/* line 114, ../../../app/stylesheets/partials/_profile.scss */
+/* line 127, ../../../app/stylesheets/partials/_profile.scss */
 body.users.edit div.article form.user, body.users.update div.article form.user, body.profiles.edit div.article form.user, body.profiles.update div.article form.user {
   margin-left: 20px;
 }

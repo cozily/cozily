@@ -55,7 +55,7 @@ FactoryGirl.define do
   end
 
   factory :feature do
-    name  Faker::Lorem.words(1)
+    name  { Faker::Lorem.words(1) }
   end
 
   factory :flag do
@@ -86,6 +86,11 @@ FactoryGirl.define do
     bedrooms     { rand(8) }
     rent         { 1000 + 100*rand(20) }
     association  :user
+  end
+
+  factory :profile_feature do
+    association  :profile
+    association  :feature
   end
 
   factory :role do

@@ -260,5 +260,23 @@ describe User do
         @user.matches.should == [@apt2]
       end
     end
+
+    describe "when the user has specified feature preferences" do
+      before do
+        @profile = Factory(:profile,
+                           :user => @user,
+                           :bedrooms => nil,
+                           :rent => nil,
+                           :features => [Feature.find_by_name("furnished"), Feature.find_by_name("backyard")])
+      end
+
+      it "returns apartments that have the specified features" do
+        apartment_with_no_features = Factory(:published_apartment)
+        apartment_with_some_features = Factory(:published_apartment, :features => [Feature.find_by_name("furnished")])
+        apartment_with_all_features = Factory(:published_apartment, :features => [Feature.find_by_name("furnished"), Feature.find_by_name("backyard")])
+
+        @user.matches.should == [apartment_with_all_features]
+      end
+    end
   end
 end

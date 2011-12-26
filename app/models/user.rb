@@ -87,10 +87,22 @@ class User < ActiveRecord::Base
 
     if profile.try(:neighborhoods).try(:present?)
       ids = apts.select { |a| (a.neighborhoods.merge profile.neighborhoods).present? }.map(&:id)
-      Apartment.where(:id => ids)
-    else
-      apts
+      apts = Apartment.where(:id => ids)
     end
+
+    if profile.try(:features).try(:present?) && apts.present?
+      feature_apartments = []
+      profile.features.each do |feature|
+        feature_apartments << apts.includes(:features).where(:features => {:id => feature.id})
+      end
+
+      feature_apartments.reject! {|feature| feature.empty?}
+      feature_apartments.each do |feature|
+        apts = apts.merge feature
+      end
+    end
+
+    apts
   end
 
   def role_symbols

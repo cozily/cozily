@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111223045927) do
+ActiveRecord::Schema.define(:version => 20111223170512) do
 
   create_table "address_neighborhoods", :force => true do |t|
     t.integer  "address_id"
@@ -182,6 +182,13 @@ ActiveRecord::Schema.define(:version => 20111223045927) do
 
   add_index "notifications", ["apartment_id"], :name => "index_notifications_on_apartment_id"
   add_index "notifications", ["user_id"], :name => "index_notifications_on_user_id"
+
+  create_table "profile_features", :force => true do |t|
+    t.integer  "profile_id"
+    t.integer  "feature_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "profiles", :force => true do |t|
     t.integer  "user_id"

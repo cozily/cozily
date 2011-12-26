@@ -18,6 +18,7 @@
       = profile_fields.inputs do
         = profile_fields.input :bedrooms, :label => "Minimum bedrooms", :as => :select, :collection => (0..8), :required => false
         = profile_fields.input :rent, :label => "Maximum rent", :required => false
+
         %li
           %label{:for => "profile_neighborhood_autocomplete"} Neighborhoods
           = text_field_tag "profile_neighborhood_autocomplete", "e.g., Alphabet City", :'data-default-value' => "e.g., Alphabet City"
@@ -26,11 +27,15 @@
               %div Selected Neighborhoods
               = selected_neighborhood_links(f.object.profile.neighborhoods)
 
+        - %w{apartment building pet}.each do |type|
+          = profile_fields.input :features, :label => "#{type} features", :as => :check_boxes, :collection => Feature.find_all_by_category(type)
+
         - unless f.object.new_record?
           = profile_fields.input :sublets, :label => "Sublets?", :as => :select, :collection => Profile::SUBLETS, :include_blank => false
 
           = f.input :receive_match_notifications, :label => "Receive email notifications about new matches", :required => false
           = f.input :receive_match_summaries, :label => "Receive weekly summary emails about your matches", :required => false
+
 
   %fieldset.lister
     %legend We want to include a phone number with your listings.
