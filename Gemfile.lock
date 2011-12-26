@@ -60,7 +60,6 @@ GEM
     chunky_png (1.2.5)
     clearance (0.9.1)
       rails (~> 3.0.0)
-    closure-compiler (0.3.3)
     compass (0.11.5)
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
@@ -102,9 +101,8 @@ GEM
     httparty (0.6.1)
       crack (= 0.1.8)
     i18n (0.5.0)
-    jammit (0.5.4)
-      closure-compiler (>= 0.1.0)
-      yui-compressor (>= 0.9.1)
+    jammit (0.6.5)
+      yui-compressor (>= 0.9.3)
     json (1.6.3)
     json_pure (1.6.1)
     kgio (2.6.0)
@@ -292,7 +290,7 @@ DEPENDENCIES
   haml
   home_run
   httparty (= 0.6.1)
-  jammit (= 0.5.4)
+  jammit (= 0.6.5)
   mailcatcher
   newrelic_rpm
   padlock (= 0.1.0)
