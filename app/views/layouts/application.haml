@@ -107,6 +107,19 @@
         })();
 
       :javascript
+        var _gauges = _gauges || [];
+        (function() {
+          var t   = document.createElement('script');
+          t.type  = 'text/javascript';
+          t.async = true;
+          t.id    = 'gauges-tracker';
+          t.setAttribute('data-site-id', '4efb6972f5a1f51ef400000d');
+          t.src = '//secure.gaug.es/track.js';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(t, s);
+        })();
+
+      :javascript
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-6802573-2']);
         _gaq.push(['_trackPageview']);
