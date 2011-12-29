@@ -9,7 +9,11 @@
   %table
     -apts.each do |apt|
       %tr
-        %td.image=link_to(image_tag(apt.images.first.asset.url(:thumb)), apartment_url(apt))
+        %td.image
+          - if apt.images.present?
+            = link_to(image_tag(apt.images.first.asset.url(:thumb)), apartment_url(apt))
+          - else
+            = link_to(image_tag("defaults/apartment/thumb.jpg"), apartment_url(apt))
         %td
           .street= link_to(apt.street, apartment_url(apt))
           .info
