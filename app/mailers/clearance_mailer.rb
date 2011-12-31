@@ -1,8 +1,8 @@
 class ClearanceMailer < ActionMailer::Base
   include Resque::Mailer
 
-  def change_password(user_id)
-    @user = User.find(user_id)
+  def change_password(user_param)
+    @user = User.find(user_param["user"]["id"])
     from       Clearance.configuration.mailer_sender
     recipients @user.email
     subject    I18n.t(:change_password,
