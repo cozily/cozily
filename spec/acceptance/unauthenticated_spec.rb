@@ -12,7 +12,7 @@ feature "unauthenticated" do
 
     click_link(apartment.street)
     current_path.should == apartment_path(apartment)
-    page.should have_content(apartment.name)
+    page.should have_content(apartment.address.street)
 
     neighborhood = apartment.neighborhoods.first
     click_link(neighborhood.name)

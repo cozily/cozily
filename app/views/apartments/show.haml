@@ -1,6 +1,6 @@
 -content_for :page_title do
-  -if @apartment.name.present?
-    ==Cozily | #{@apartment.name}
+  -if @apartment.address_name.present?
+    ==Cozily | #{@apartment.address.street}
   -else
     ==Cozily | Apartment ##{@apartment.id}
 
