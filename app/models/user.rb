@@ -74,35 +74,53 @@ class User < ActiveRecord::Base
     role_symbols.include?(:lister) || apartments.present?
   end
 
-  def matches
-    apts = Apartment.order("published_at desc").where("user_id != ?", self.id).with_state(:published)
-    apts = apts.where("rent <= ?", profile.rent) if profile.try(:rent)
-    apts = apts.where("bedrooms >= ? ", profile.bedrooms) if profile.try(:bedrooms)
+  def matches(page = 1)
+    Apartment.search do
+      with(:published, true)
+      with(:rent).less_than(profile.rent) if profile.try(:rent)
+      with(:bedrooms).greater_than(profile.bedrooms) if profile.try(:bedrooms)
+      with(:sublet, true) if profile.try(:only_sublets?)
+      with(:sublet, false) if profile.try(:exclude_sublets?)
 
-    if profile.try(:only_sublets?)
-      apts = apts.where(:sublet => true)
-    elsif profile.try(:exclude_sublets?)
-      apts = apts.where(:sublet => false)
-    end
-
-    if profile.try(:neighborhoods).try(:present?)
-      ids = apts.select { |a| (a.neighborhoods.merge profile.neighborhoods).present? }.map(&:id)
-      apts = Apartment.where(:id => ids)
-    end
-
-    if profile.try(:features).try(:present?) && apts.present?
-      feature_apartments = []
-      profile.features.each do |feature|
-        feature_apartments << apts.includes(:features).where(:features => {:id => feature.id})
+      with(:neighborhood_ids, profile.neighborhoods.map(&:id)) if profile.try(:neighborhoods).try(:present?)
+      all_of do
+        if profile.try(:features).try(:present?)
+          profile.features.each do |feature|
+            with(:feature_ids, feature.id)
+          end
+        end
       end
 
-      feature_apartments.reject! {|feature| feature.empty?}
-      feature_apartments.each do |feature|
-        apts = apts.merge feature
-      end
+      paginate :per_page => Apartment.per_page, :page => page
     end
+    # apts = Apartment.order("published_at desc").where("user_id != ?", self.id).with_state(:published)
+    # apts = apts.where("rent <= ?", profile.rent) if profile.try(:rent)
+    # apts = apts.where("bedrooms >= ? ", profile.bedrooms) if profile.try(:bedrooms)
 
-    apts
+    # if profile.try(:only_sublets?)
+      # apts = apts.where(:sublet => true)
+    # elsif profile.try(:exclude_sublets?)
+      # apts = apts.where(:sublet => false)
+    # end
+
+    # if profile.try(:neighborhoods).try(:present?)
+      # ids = apts.select { |a| (a.neighborhoods.merge profile.neighborhoods).present? }.map(&:id)
+      # apts = Apartment.where(:id => ids)
+    # end
+
+    # if profile.try(:features).try(:present?) && apts.present?
+      # feature_apartments = []
+      # profile.features.each do |feature|
+        # feature_apartments << apts.includes(:features).where(:features => {:id => feature.id})
+      # end
+
+      # feature_apartments.reject! {|feature| feature.empty?}
+      # feature_apartments.each do |feature|
+        # apts = apts.merge feature
+      # end
+    # end
+
+    # apts
   end
 
   def role_symbols

@@ -26,7 +26,7 @@ class DashboardController < ApplicationController
   end
 
   def matches
-    @matches = current_user.matches.paginate(:page => params[:page], :per_page => Apartment.per_page)
+    @matches = current_user.matches(params[:page] || 1).results
     respond_to do |format|
       format.html
       format.js do

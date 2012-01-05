@@ -3,13 +3,13 @@
     -if matches.present?
       .pagination
         %ul
-          %li.counts= pagination_summary(params[:page], current_user.matches)
+          %li.counts= #pagination_summary(params[:page], current_user.matches.results)
           %li.navigation= will_paginate(matches)
       -matches.each do |apartment|
-        =render "dashboard/apartment", :apartment => apartment, :position => position_in_collection(apartment, current_user.matches)
+        =render "dashboard/apartment", :apartment => apartment, :position => position_in_collection(apartment, current_user.matches.results)
       .pagination
         %ul
-          %li.counts= pagination_summary(params[:page], current_user.matches)
+          %li.counts= #pagination_summary(params[:page], current_user.matches)
           %li.navigation= will_paginate(matches)
 
     -else

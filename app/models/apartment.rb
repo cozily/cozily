@@ -86,6 +86,29 @@ class Apartment < ActiveRecord::Base
   scope :bedrooms_near, lambda { |count| where("bedrooms >= ? and bedrooms <= ?", count - 0.5, count + 0.5) }
   scope :rent_near, lambda { |amount| where("rent >= ? and rent <= ?", amount * 0.8, amount * 1.2) }
 
+
+  def published
+    state == "published"
+  end
+
+  searchable do
+    text :unit
+    text :state
+    time :published_at
+    integer :rent
+    integer :square_footage
+    double :bedrooms
+    double :bathrooms
+    date :start_date
+    date :end_date
+    boolean :sublet
+    boolean :imported
+    boolean :published
+
+    integer :neighborhood_ids, :multiple => true
+    integer :feature_ids, :multiple => true
+  end
+
   class << self
     def per_page
       10
@@ -106,6 +129,10 @@ class Apartment < ActiveRecord::Base
 
   def neighborhoods
     Neighborhood.joins(:addresses => :apartments).where("apartments.id" => self.id)
+  end
+
+  def neighborhood_ids
+    neighborhoods.map(&:id)
   end
 
   def as_json(options = {})
