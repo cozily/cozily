@@ -45,7 +45,7 @@ class Apartment < ActiveRecord::Base
       TimelineEvent.create(:event_type => "state_changed_to_published",
                            :subject => apt,
                            :actor => apt.user)
-      Resque.enqueue(MatchNotifierJob, apt.id)
+      Resque.enqueue(MatchNotifierJob, apt.id) unless defined?(Rake)
     end
 
     state :published do
@@ -56,7 +56,7 @@ class Apartment < ActiveRecord::Base
       validates_numericality_of :square_footage, :allow_nil => true, :greater_than => 0, :less_than_or_equal_to => 10_000, :only_integer => true
       validates_numericality_of :bedrooms, :greater_than_or_equal_to => 0
       validates_numericality_of :bathrooms, :greater_than_or_equal_to => 0
-      validates_uniqueness_of :address_id, :scope => [ :user_id, :unit ]
+      validates_uniqueness_of :address_id, :scope => [ :user_id, :unit ], :unless => :imported?
     end
 
     state :unpublished do
@@ -67,7 +67,7 @@ class Apartment < ActiveRecord::Base
       validates_numericality_of :square_footage, :allow_nil => true, :greater_than => 0, :less_than => 10_000, :only_integer => true
       validates_numericality_of :bedrooms, :greater_than_or_equal_to => 0, :allow_nil => true
       validates_numericality_of :bathrooms, :greater_than_or_equal_to => 0, :allow_nil => true
-      validates_uniqueness_of :address_id, :scope => [ :user_id, :unit ], :allow_nil => true
+      validates_uniqueness_of :address_id, :scope => [ :user_id, :unit ], :allow_nil => true, :unless => :imported?
     end
 
     event :publish do
