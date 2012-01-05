@@ -9,9 +9,9 @@ module ApartmentsHelper
     if apartment.start_date.nil?
        "Availability unknown"
     elsif !apartment.sublet? || apartment.end_date.nil?
-      "Available starting #{apartment.start_date.to_s(:app_short)}"
+      "Available starting #{apartment.start_date.to_s(:mdy)}"
     else
-      "Available #{apartment.start_date.to_s(:app_short)} through #{apartment.end_date.to_s(:app_short)}"
+      "Available #{apartment.start_date.to_s(:mdy)} through #{apartment.end_date.to_s(:mdy)}"
     end
   end
 
