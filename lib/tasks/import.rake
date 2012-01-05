@@ -164,7 +164,6 @@ namespace :import do
 
         page.css("table.views-table tbody tr").each do |row|
           full_address = property.xpath("Identification/Address/*").map(&:inner_text).join(", ")
-          puts full_address
 
           unit = row.css("td.views-field-phpcode").inner_text.strip.gsub("-", "")
           unit = nil if unit.length > 5
@@ -208,7 +207,6 @@ namespace :import do
             assign_urban_edge_pet_features(@apartment, pet_features)
 
             @apartment.save
-            puts full_address if @apartment.unpublishable?
 
             images = listing.css("div#slide-runner div.slide a img")
             images.each do |img|
