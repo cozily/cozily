@@ -1,5 +1,5 @@
 .idea
-log/*.log
+log/*
 tmp/**
 tmp/**/*
 .bundle/
@@ -8,3 +8,4 @@ spec/fixtures/**
 .DS_Store
 .vimlog
 public/system/**
+solr
