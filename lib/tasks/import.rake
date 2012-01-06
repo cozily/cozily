@@ -125,7 +125,7 @@ def assign_urban_edge_pet_features(apartment, features)
 end
 
 namespace :import do
-  namespace :urbanedge do
+  namespace :urban_edge do
     task :all => :environment do
       doc = Nokogiri::XML(open("http://www.urbanedgeny.com/feeds/39a6a3a2bd.xml?1321654581"))
 
@@ -160,6 +160,20 @@ namespace :import do
             end
           end
           page = Nokogiri::HTML(@response)
+        end
+
+        email = property.xpath("Identification/Email").inner_text
+        phone = property.xpath("Identification/Phone/Number").inner_text
+        name = property.xpath("Identification/MarketingName").inner_text
+
+        unless @user = User.find_by_email(email)
+          @user = User.create(:first_name => name,
+                              :last_name => nil,
+                              :email => email,
+                              :password => "password!",
+                              :password_confirmation => "password!",
+                              :phone => phone,
+                              :roles => Role.find_all_by_name("lister"))
         end
 
         page.css("table.views-table tbody tr").each do |row|
@@ -215,6 +229,7 @@ namespace :import do
               Image.create(:apartment => @apartment, :asset => image)
             end
 
+            @apartment.publish! rescue nil
           else
             # find and update
           end
