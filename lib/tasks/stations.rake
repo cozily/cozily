@@ -1,3 +1,5 @@
+require 'csv'
+
 namespace :stations do
   desc "Populate station data with CSV from the MTA"
   task :populate => :environment do
