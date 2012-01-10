@@ -1433,55 +1433,53 @@ body.pages div.page {
 body.pages div.page p {
   font-size: 1.2em;
 }
-/* line 9, ../../../app/stylesheets/partials/_pages.scss */
+/* line 10, ../../../app/stylesheets/partials/_pages.scss */
 body.pages div.page div#bios {
-  border-top: 5px dashed black;
   padding-top: 15px;
 }
 /* line 13, ../../../app/stylesheets/partials/_pages.scss */
 body.pages div.page div#bios div.bio {
-  float: left;
-  width: 440px;
+  overflow: hidden;
+  *zoom: 1;
+  width: 100%;
+  clear: both;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20px;
 }
-/* line 17, ../../../app/stylesheets/partials/_pages.scss */
-body.pages div.page div#bios div.bio h2 {
+/* line 20, ../../../app/stylesheets/partials/_pages.scss */
+body.pages div.page div#bios div.bio div.photo {
+  width: 275px;
+  float: left;
+}
+/* line 24, ../../../app/stylesheets/partials/_pages.scss */
+body.pages div.page div#bios div.bio div.photo img.photo {
+  width: 250px;
+  height: 250px;
+  border: 2px solid #ccc;
+}
+/* line 30, ../../../app/stylesheets/partials/_pages.scss */
+body.pages div.page div#bios div.bio div.photo h2 {
+  color: #BE4747;
   margin-right: 5px;
   display: inline;
+  font-size: 22px;
 }
-/* line 22, ../../../app/stylesheets/partials/_pages.scss */
-body.pages div.page div#bios div.bio h3 {
+/* line 37, ../../../app/stylesheets/partials/_pages.scss */
+body.pages div.page div#bios div.bio div.photo h3 {
   font-style: italic;
   margin-top: -3px;
 }
-/* line 27, ../../../app/stylesheets/partials/_pages.scss */
-body.pages div.page div#bios div.bio img {
-  margin-right: 5px;
-}
-/* line 32, ../../../app/stylesheets/partials/_pages.scss */
-body.pages div.page div#bios div.bio p img {
-  width: 80px;
-  height: 80px;
+/* line 43, ../../../app/stylesheets/partials/_pages.scss */
+body.pages div.page div#bios div.bio div.profile {
   float: left;
-  margin-right: 12px;
-  -moz-box-shadow: 0px 0px 5px #333333;
-  -webkit-box-shadow: 0px 0px 5px #333333;
-  -o-box-shadow: 0px 0px 5px #333333;
-  box-shadow: 0px 0px 5px #333333;
+  width: 600px;
 }
-/* line 41, ../../../app/stylesheets/partials/_pages.scss */
-body.pages div.page div#bios div.bio#todd {
-  padding-right: 10px;
-}
-/* line 45, ../../../app/stylesheets/partials/_pages.scss */
-body.pages div.page div#bios div.bio#mike {
-  padding-left: 10px;
-}
-/* line 51, ../../../app/stylesheets/partials/_pages.scss */
+/* line 54, ../../../app/stylesheets/partials/_pages.scss */
 body.pages div.page div.faq {
   float: left;
   width: 70%;
 }
-/* line 56, ../../../app/stylesheets/partials/_pages.scss */
+/* line 59, ../../../app/stylesheets/partials/_pages.scss */
 body.pages div.page img.man {
   margin: 30px 0 0 15px;
 }

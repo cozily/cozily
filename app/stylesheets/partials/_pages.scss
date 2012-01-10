@@ -6,44 +6,47 @@ body.pages {
             font-size: 1.2em;
         }
 
+
         div#bios {
-            border-top: 5px dashed black;
             padding-top: 15px;
 
             div.bio {
-                float: left;
-                width: 440px;
+                @include clearfix;
+                width: 100%;
+                clear: both;
+                border-bottom: 1px solid #eee;
+                margin-bottom: 20px;
 
-                h2 {
-                    margin-right: 5px;
-                    display: inline;
+                div.photo{
+                  width: 275px;
+                  float: left;
+
+                  img.photo {
+                    width: 250px;
+                    height: 250px;
+                    border: 2px solid #ccc;
+                  }
+
+                  h2 {
+                      color: #BE4747;
+                      margin-right: 5px;
+                      display: inline;
+                      font-size: 22px;
+                  }
+
+                  h3 {
+                      font-style: italic;
+                      margin-top: -3px;
+                  }
                 }
 
-                h3 {
-                    font-style: italic;
-                    margin-top: -3px;
-                }
+                div.profile {
+                  float: left;
+                  width: 600px;
 
-                img {
-                    margin-right: 5px;
-                }
+                  p {
 
-                p {
-                    img {
-                        width: 80px;
-                        height: 80px;
-                        float: left;
-                        margin-right: 12px;
-                        @include box-shadow;
-                    }
-                }
-
-                &#todd {
-                    padding-right: 10px;
-                }
-
-                &#mike {
-                    padding-left: 10px;
+                  }
                 }
             }
         }
