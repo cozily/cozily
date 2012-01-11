@@ -258,7 +258,7 @@ body .loud {
 /* line 5, ../../../app/stylesheets/partials/_reset.scss */
 html, body {
   height: 100%;
-  font-family: "museo-slab-1", "museo-slab-2", serif;
+  font-family: "museo-slab", serif;
 }
 
 /* line 11, ../../../app/stylesheets/partials/_reset.scss */
@@ -1430,14 +1430,21 @@ body.pages div.page {
   padding: 2em;
 }
 /* line 5, ../../../app/stylesheets/partials/_pages.scss */
+body.pages div.page h1 {
+  font-family: "pt-sans-narrow";
+  font-weight: 700;
+  text-transform: uppercase;
+}
+/* line 11, ../../../app/stylesheets/partials/_pages.scss */
 body.pages div.page p {
+  font-weight: 300;
   font-size: 1.2em;
 }
-/* line 10, ../../../app/stylesheets/partials/_pages.scss */
+/* line 17, ../../../app/stylesheets/partials/_pages.scss */
 body.pages div.page div#bios {
   padding-top: 15px;
 }
-/* line 13, ../../../app/stylesheets/partials/_pages.scss */
+/* line 20, ../../../app/stylesheets/partials/_pages.scss */
 body.pages div.page div#bios div.bio {
   overflow: hidden;
   *zoom: 1;
@@ -1446,40 +1453,40 @@ body.pages div.page div#bios div.bio {
   border-bottom: 1px solid #eee;
   margin-bottom: 20px;
 }
-/* line 20, ../../../app/stylesheets/partials/_pages.scss */
+/* line 27, ../../../app/stylesheets/partials/_pages.scss */
 body.pages div.page div#bios div.bio div.photo {
   width: 275px;
   float: left;
 }
-/* line 24, ../../../app/stylesheets/partials/_pages.scss */
+/* line 31, ../../../app/stylesheets/partials/_pages.scss */
 body.pages div.page div#bios div.bio div.photo img.photo {
   width: 250px;
   height: 250px;
   border: 2px solid #ccc;
 }
-/* line 30, ../../../app/stylesheets/partials/_pages.scss */
+/* line 37, ../../../app/stylesheets/partials/_pages.scss */
 body.pages div.page div#bios div.bio div.photo h2 {
   color: #BE4747;
   margin-right: 5px;
   display: inline;
   font-size: 22px;
 }
-/* line 37, ../../../app/stylesheets/partials/_pages.scss */
+/* line 44, ../../../app/stylesheets/partials/_pages.scss */
 body.pages div.page div#bios div.bio div.photo h3 {
   font-style: italic;
   margin-top: -3px;
 }
-/* line 43, ../../../app/stylesheets/partials/_pages.scss */
+/* line 50, ../../../app/stylesheets/partials/_pages.scss */
 body.pages div.page div#bios div.bio div.profile {
   float: left;
   width: 600px;
 }
-/* line 54, ../../../app/stylesheets/partials/_pages.scss */
+/* line 57, ../../../app/stylesheets/partials/_pages.scss */
 body.pages div.page div.faq {
   float: left;
   width: 70%;
 }
-/* line 59, ../../../app/stylesheets/partials/_pages.scss */
+/* line 62, ../../../app/stylesheets/partials/_pages.scss */
 body.pages div.page img.man {
   margin: 30px 0 0 15px;
 }
