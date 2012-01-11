@@ -6,6 +6,8 @@
     %meta{name: 'alexaVerifyID', content: 'A7qvDRR7U1YVqNHsGmXuHAQq6MU'}
     %link{:rel => "shortcut icon", :href => "/images/favicon.ico"}
 
+    = yield(:nestio)
+
     = include_stylesheets :common, :media => 'all'
     /[if lt IE 8]
       = stylesheet_link_tag 'compiled/ie.css', :media => 'screen, projection'
@@ -25,6 +27,15 @@
       =yield(:page_title) || "Cozily"
 
   %body{:class => body_classes}
+    #fb-root
+    :javascript
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
     #head
       .container
         =link_to image_tag("logos/logo.png"), root_url

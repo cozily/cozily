@@ -1,8 +1,29 @@
--content_for :page_title do
+- content_for :page_title do
   -if @apartment.address_name.present?
     ==Cozily | #{@apartment.address.street}
   -else
     ==Cozily | Apartment ##{@apartment.id}
+
+- if @apartment.published?
+  - content_for :nestio do
+    - if @apartment.address.present?
+      %meta{:property => 'listing:title', :content => @apartment.address.street}
+
+      %meta{:property => 'listing:street-address', :content => @apartment.address.street}
+      %meta{:property => 'listing:neighborhood', :content => @apartment.address.neighborhoods.map(&:name).join(", ")}
+      %meta{:property => 'listing:locality', :content => @apartment.address.city}
+      %meta{:property => 'listing:region', :content => @apartment.address.state}
+      %meta{:property => 'listing:postal-code', :content => @apartment.address.zip}
+
+    %meta{:property => 'listing:rent', :content => @apartment.rent}
+    %meta{:property => 'listing:bedrooms', :content => @apartment.bedrooms}
+    %meta{:property => 'listing:bathrooms', :content => @apartment.bathrooms}
+    %meta{:property => 'listing:size', :content => @apartment.square_footage}
+
+    - if signed_in?
+      %meta{:property => 'listing:contact', :content => @apartment.user.full_name}
+      %meta{:property => 'listing:contact:telephone', :content => @apartment.user.phone}
+      %meta{:property => 'listing:contact:email', :content => @apartment.user.email}
 
 -if @apartment.published? || (signed_in? && @apartment.owned_by?(current_user))
   :javascript
@@ -83,16 +104,18 @@
             now!
 
   .aside
-    %ul.actions
-      %li.flag=render "flags/link", :apartment => @apartment
-      %li.favorite=render "favorites/link", :apartment => @apartment
-      %li.facebook
-        %iframe{ :src =>"http://www.facebook.com/widgets/like.php?href=#{apartment_url(@apartment)}&layout=button_count&action=like&show_faces=false&width=99&height=21",
-                 :scrolling => "no",
-                 :frameborder => "0",
-                 :allowTransparency => "true" }
-      %li.twitter
-        <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="cozidotly">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    %div.actions{:style => "height: 90px; padding-top: 10px;"}
+      %div.sharing
+        %span{:style => "float: left; padding-right: 5px; border-right: 1px solid #ccc;"}
+          = link_to "Add to Nestio", "http://nestio.com/add", :class => "nestio-add-btn nestio-thin"
+        %span{:style => "float: left; padding-left: 5px; padding-right: 5px; border-right: 1px solid #ccc;"}
+          <a href="http://twitter.com/share" class="twitter-share-button" data-count="none" data-via="cozidotly" data-hashtags="cozily">Tweet</a>
+          <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+        %span{:style => "float: left; padding-left: 5px; padding-right: 5px"}
+          .fb-like{"data-send" => "false", "data-layout" => "button_count", "data-width" => "100", "data-show-faces" => "false", "data-font" => "arial"}
+      %ul.actions
+        %li.flag=render "flags/link", :apartment => @apartment
+        %li.favorite=render "favorites/link", :apartment => @apartment
 
     #map_canvas
     =image_tag "backgrounds/shadow.png", :class => "shadow"
