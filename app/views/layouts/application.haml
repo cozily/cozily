@@ -17,11 +17,12 @@
       :javascript
         var _sf_startpt=(new Date()).getTime()
     - unless Rails.env.test?
-      = javascript_include_tag "http://use.typekit.com/cco3tph.js"
+      = javascript_include_tag "http://use.typekit.com/okf5ydt.js"
+      :javascript
+        try{Typekit.load();}catch(e){}
+      = javascript_include_tag "http://cdn.nestio.com/js/button.js"
     = include_javascripts :common
 
-    :javascript
-      try{Typekit.load();}catch(e){}
 
     %title
       =yield(:page_title) || "Cozily"
