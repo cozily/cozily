@@ -109,10 +109,13 @@
         %span{:style => "float: left; padding-right: 5px; border-right: 1px solid #ccc;"}
           = link_to "Add to Nestio", "http://nestio.com/add", :class => "nestio-add-btn nestio-thin"
         %span{:style => "float: left; padding-left: 5px; padding-right: 5px; border-right: 1px solid #ccc;"}
+          <g:plusone size="medium" annotation="none"></g:plusone>
+        %span{:style => "float: left; padding-left: 5px; padding-right: 5px; border-right: 1px solid #ccc;"}
           <a href="http://twitter.com/share" class="twitter-share-button" data-count="none" data-via="cozidotly" data-hashtags="cozily">Tweet</a>
           <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
         %span{:style => "float: left; padding-left: 5px; padding-right: 5px"}
-          .fb-like{"data-send" => "false", "data-layout" => "button_count", "data-width" => "100", "data-show-faces" => "false", "data-font" => "arial"}
+          <iframe src="//www.facebook.com/plugins/like.php?href&amp;send=false&amp;layout=button_count&amp;width=80&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:80px; height:21px;" allowTransparency="true"></iframe>
+          /.fb-like{"data-send" => "false", "data-layout" => "button_count", "data-width" => "100", "data-show-faces" => "false", "data-font" => "arial"}
       %ul.actions
         %li.flag=render "flags/link", :apartment => @apartment
         %li.favorite=render "favorites/link", :apartment => @apartment
