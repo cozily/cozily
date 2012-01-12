@@ -20,6 +20,9 @@
     %meta{:property => 'listing:bathrooms', :content => @apartment.bathrooms}
     %meta{:property => 'listing:size', :content => @apartment.square_footage}
 
+    - @apartment.images.each do |image|
+      %meta{:property => 'listing:image', :content => [request.protocol, request.host_with_port, image.asset.url(:original)].join}
+
     - if signed_in?
       %meta{:property => 'listing:contact', :content => @apartment.user.full_name}
       %meta{:property => 'listing:contact:telephone', :content => @apartment.user.phone}
