@@ -21,6 +21,12 @@
       :javascript
         try{Typekit.load();}catch(e){}
       = javascript_include_tag "http://cdn.nestio.com/js/button.js"
+      :javascript
+        (function() {
+          var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+          po.src = 'https://apis.google.com/js/plusone.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
     = include_javascripts :common
 
 
