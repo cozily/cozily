@@ -8,6 +8,8 @@ javascripts:
     - public/javascripts/jquery.tabSlideOut.js
     - public/javascripts/jquery.dataTables.js
     - public/javascripts/jquery.qtip.js
+    - public/javascripts/jquery.infieldlabel.js
+    - public/javascripts/jquery.tipTip.js
     - public/javascripts/ajaxupload.js
     - public/javascripts/rails.js
     - public/javascripts/application.js

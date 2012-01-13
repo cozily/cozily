@@ -198,19 +198,9 @@ function attachTips() {
 
         liveNeighborhoodAutocomplete();
 
-        // $("[data-default-value]").live("click", function(event) {
-            // var element = $(event.currentTarget);
-            // if (element.val() == element.attr('data-default-value')) {
-                // element.val('');
-            // }
-        // });
-
-        // $("[data-default-value]").live("blur", function(event) {
-            // var element = $(event.currentTarget);
-            // if (element.val() == '') {
-                // element.val(element.attr('data-default-value'));
-            // }
-        // });
+        $(document).ready(function(){
+          $("label").inFieldLabels();
+        });
 
         $("[data-large-image-path]").live("click", function(event) {
             var element = $(event.currentTarget);
