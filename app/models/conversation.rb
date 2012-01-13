@@ -5,9 +5,9 @@ class Conversation < ActiveRecord::Base
   has_many :messages, :order => "created_at"
 
   validates_presence_of :apartment, :sender, :receiver
-  validate :ensure_sender_is_not_receiver
-  validate :ensure_sender_is_email_confirmed, :if => Proc.new { |conversation| conversation.sender.present? }
-  validate :ensure_first_message_is_valid
+  # validate :ensure_sender_is_not_receiver
+  # validate :ensure_sender_is_email_confirmed, :if => Proc.new { |conversation| conversation.sender.present? }
+  # validate :ensure_first_message_is_valid
 
   scope :for_user, lambda { |user| where("(sender_id = ? AND sender_deleted_at IS NULL) OR (receiver_id = ? AND receiver_deleted_at IS NULL)", user.id, user.id) }
 

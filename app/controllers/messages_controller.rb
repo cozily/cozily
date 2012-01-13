@@ -3,13 +3,13 @@ class MessagesController < ApplicationController
     if params[:apartment_id]
       @apartment = Apartment.find(params[:apartment_id])
       @conversation = Conversation.find_or_initialize_by_apartment_id_and_sender_id(@apartment.id, current_user.id)
+
       if @conversation.new_record?
-        @conversation.update_attributes(params[:message].merge(:receiver_id => @apartment.user_id))
+        @conversation.receiver_id = @apartment.user_id
         @conversation.save
-        render :nothing => true and return unless @conversation.valid?
-      else
-        @conversation.messages.create(params[:message].merge(:sender_id => current_user.id))
       end
+
+      @conversation.messages.create(params[:message].merge(:sender_id => current_user.id))
       render :json => { :flash => "Message Sent!",
                         :thread => render_to_string(:partial => "messages/thread",
                                                     :locals => { :apartment => @apartment })}
