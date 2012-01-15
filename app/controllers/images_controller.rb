@@ -2,13 +2,14 @@ class ImagesController < ApplicationController
   before_filter :load_apartment
 
   def create
-    @image = @apartment.images.create(:asset => params[:userfile])
+    raise params[:userfile].inspect
+    @image = @apartment.photos.create(:image => params[:userfile])
 
     render :text => render_to_string(:partial => "apartments/images", :locals => { :apartment => @apartment })
   end
 
   def destroy
-    @image = @apartment.images.find(params[:id])
+    @image = @apartment.photos.find(params[:id])
     @image.destroy
     render :json => {:images              => render_to_string(:partial => "apartments/images",
                                                               :locals  => {:apartment => @apartment}),

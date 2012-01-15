@@ -54,6 +54,8 @@ GEM
       rack-test (>= 0.5.4)
       selenium-webdriver (~> 2.0)
       xpath (~> 0.1.4)
+    carrierwave (0.5.8)
+      activesupport (~> 3.0)
     childprocess (0.2.2)
       ffi (~> 1.0.6)
     chronic (0.6.6)
@@ -124,6 +126,8 @@ GEM
       sqlite3-ruby
       thin
     mime-types (1.17.2)
+    mini_magick (3.4)
+      subexec (~> 0.2.1)
     multi_json (1.0.4)
     net-scp (1.0.4)
       net-ssh (>= 1.99.1)
@@ -244,6 +248,7 @@ GEM
     steak (2.0.0)
       capybara (>= 1.0.0)
       rspec-rails (>= 2.5.0)
+    subexec (0.2.1)
     sunspot (1.3.0)
       escape (~> 0.0.4)
       pr_geohash (~> 1.0)
@@ -297,6 +302,7 @@ DEPENDENCIES
   capistrano-ext
   capistrano-unicorn
   capybara (= 1.1.2)
+  carrierwave
   clearance (= 0.9.1)
   compass (= 0.11.5)
   database_cleaner (= 0.5.2)
@@ -314,6 +320,7 @@ DEPENDENCIES
   httparty (= 0.6.1)
   jammit (= 0.6.5)
   mailcatcher
+  mini_magick
   newrelic_rpm
   padlock (= 0.1.0)
   paperclip (= 2.3.5)

@@ -9,3 +9,4 @@ spec/fixtures/**
 .vimlog
 public/system/**
 solr
+public/uploads/**

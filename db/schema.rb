@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120104235250) do
+ActiveRecord::Schema.define(:version => 20120114234623) do
 
   create_table "address_neighborhoods", :force => true do |t|
     t.integer  "address_id"
@@ -69,6 +69,7 @@ ActiveRecord::Schema.define(:version => 20120104235250) do
     t.string   "external_url"
     t.string   "external_source"
     t.boolean  "imported",        :default => false, :null => false
+    t.integer  "photos_count"
   end
 
   add_index "apartments", ["address_id"], :name => "index_apartments_on_address_id"
@@ -171,6 +172,15 @@ ActiveRecord::Schema.define(:version => 20120104235250) do
 
   add_index "notifications", ["apartment_id"], :name => "index_notifications_on_apartment_id"
   add_index "notifications", ["user_id"], :name => "index_notifications_on_user_id"
+
+  create_table "photos", :force => true do |t|
+    t.integer  "apartment_id"
+    t.string   "image"
+    t.string   "caption"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "profile_features", :force => true do |t|
     t.integer  "profile_id"
