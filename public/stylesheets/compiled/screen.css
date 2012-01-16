@@ -1918,16 +1918,16 @@ body.apartments.show div.article div.content div.info div.highlights dl dd {
   margin-left: 175px;
 }
 /* line 89, ../../../app/stylesheets/partials/apartments/_show.sass */
-body.apartments.show div.article div.content div.images {
+body.apartments.show div.article div.content div.photos {
   margin-top: 8px;
 }
 /* line 91, ../../../app/stylesheets/partials/apartments/_show.sass */
-body.apartments.show div.article div.content div.images li {
+body.apartments.show div.article div.content div.photos li {
   float: left;
   margin: 0 0 4px 8px;
 }
 /* line 94, ../../../app/stylesheets/partials/apartments/_show.sass */
-body.apartments.show div.article div.content div.images li img {
+body.apartments.show div.article div.content div.photos li img {
   width: 80px;
   height: 80px;
 }
@@ -2316,31 +2316,31 @@ body.apartments.edit div.article form.apartment fieldset.inputs div#upload_photo
   font-style: italic;
 }
 /* line 99, ../../../app/stylesheets/partials/apartments/_edit.scss */
-body.apartments.edit div.article form.apartment fieldset.inputs div#upload_photos ul#images, body.apartments.update div.article form.apartment fieldset.inputs div#upload_photos ul#images {
+body.apartments.edit div.article form.apartment fieldset.inputs div#upload_photos ul#photos, body.apartments.update div.article form.apartment fieldset.inputs div#upload_photos ul#photos {
   overflow: hidden;
   *zoom: 1;
   margin-top: 10px;
   height: 115px;
 }
 /* line 104, ../../../app/stylesheets/partials/apartments/_edit.scss */
-body.apartments.edit div.article form.apartment fieldset.inputs div#upload_photos ul#images li, body.apartments.update div.article form.apartment fieldset.inputs div#upload_photos ul#images li {
+body.apartments.edit div.article form.apartment fieldset.inputs div#upload_photos ul#photos li, body.apartments.update div.article form.apartment fieldset.inputs div#upload_photos ul#photos li {
   float: left;
   margin-right: 10px;
   width: 85px;
   height: 85px;
 }
 /* line 110, ../../../app/stylesheets/partials/apartments/_edit.scss */
-body.apartments.edit div.article form.apartment fieldset.inputs div#upload_photos ul#images li img, body.apartments.update div.article form.apartment fieldset.inputs div#upload_photos ul#images li img {
+body.apartments.edit div.article form.apartment fieldset.inputs div#upload_photos ul#photos li img, body.apartments.update div.article form.apartment fieldset.inputs div#upload_photos ul#photos li img {
   display: block;
   margin-bottom: 5px;
 }
 /* line 115, ../../../app/stylesheets/partials/apartments/_edit.scss */
-body.apartments.edit div.article form.apartment fieldset.inputs div#upload_photos ul#images li a, body.apartments.update div.article form.apartment fieldset.inputs div#upload_photos ul#images li a {
+body.apartments.edit div.article form.apartment fieldset.inputs div#upload_photos ul#photos li a, body.apartments.update div.article form.apartment fieldset.inputs div#upload_photos ul#photos li a {
   font-size: 0.85em;
   margin-left: 25px;
 }
 /* line 121, ../../../app/stylesheets/partials/apartments/_edit.scss */
-body.apartments.edit div.article form.apartment fieldset.inputs div#upload_photos ul#images li.empty, body.apartments.update div.article form.apartment fieldset.inputs div#upload_photos ul#images li.empty {
+body.apartments.edit div.article form.apartment fieldset.inputs div#upload_photos ul#photos li.empty, body.apartments.update div.article form.apartment fieldset.inputs div#upload_photos ul#photos li.empty {
   background-color: #ddd;
   color: white;
   font-size: 32px;
@@ -2352,20 +2352,20 @@ body.apartments.edit div.article form.apartment fieldset.inputs div#upload_photo
   border: 2px dashed #ccc;
 }
 /* line 133, ../../../app/stylesheets/partials/apartments/_edit.scss */
-body.apartments.edit div.article form.apartment fieldset.inputs div#upload_photos ul#images li.empty.required, body.apartments.update div.article form.apartment fieldset.inputs div#upload_photos ul#images li.empty.required {
+body.apartments.edit div.article form.apartment fieldset.inputs div#upload_photos ul#photos li.empty.required, body.apartments.update div.article form.apartment fieldset.inputs div#upload_photos ul#photos li.empty.required {
   background-color: #999;
   border: 2px dashed #666;
 }
 /* line 136, ../../../app/stylesheets/partials/apartments/_edit.scss */
-body.apartments.edit div.article form.apartment fieldset.inputs div#upload_photos ul#images li.empty.required span.number, body.apartments.update div.article form.apartment fieldset.inputs div#upload_photos ul#images li.empty.required span.number {
+body.apartments.edit div.article form.apartment fieldset.inputs div#upload_photos ul#photos li.empty.required span.number, body.apartments.update div.article form.apartment fieldset.inputs div#upload_photos ul#photos li.empty.required span.number {
   display: block;
 }
 /* line 140, ../../../app/stylesheets/partials/apartments/_edit.scss */
-body.apartments.edit div.article form.apartment fieldset.inputs div#upload_photos ul#images li.empty.required span.required, body.apartments.update div.article form.apartment fieldset.inputs div#upload_photos ul#images li.empty.required span.required {
+body.apartments.edit div.article form.apartment fieldset.inputs div#upload_photos ul#photos li.empty.required span.required, body.apartments.update div.article form.apartment fieldset.inputs div#upload_photos ul#photos li.empty.required span.required {
   font-size: 11px;
 }
 /* line 145, ../../../app/stylesheets/partials/apartments/_edit.scss */
-body.apartments.edit div.article form.apartment fieldset.inputs div#upload_photos ul#images li:last-child, body.apartments.update div.article form.apartment fieldset.inputs div#upload_photos ul#images li:last-child {
+body.apartments.edit div.article form.apartment fieldset.inputs div#upload_photos ul#photos li:last-child, body.apartments.update div.article form.apartment fieldset.inputs div#upload_photos ul#photos li:last-child {
   margin-right: 0;
 }
 /* line 151, ../../../app/stylesheets/partials/apartments/_edit.scss */
