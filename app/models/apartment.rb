@@ -235,4 +235,12 @@ class Apartment < ActiveRecord::Base
     return unless self.unit
     self.unit = self.unit.delete("#-").upcase.strip
   end
+
+  def resque_solr_update
+    Resque.enqueue(SolrUpdate, Apartment, id)
+  end
+
+  def resque_solr_remove
+    Resque.enqueue(SolrRemove, Apartment, id)
+  end
 end
