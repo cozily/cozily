@@ -1,6 +1,6 @@
 %ul#images{:'data-content-key' => 'images'}
-  - apartment.photos.each do |image|
-    = render "images/thumbnail", :image => image
+  - apartment.photos.each do |photo|
+    = render "images/thumbnail", :image => photo
   - for num in apartment.photos.count+1..6
     %li.empty
       %span.number= num

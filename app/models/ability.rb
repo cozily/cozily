@@ -6,7 +6,7 @@ class Ability
       can :manage, :all
     elsif user.present?
       can [:new, :create, :read], Apartment
-      can [:edit, :order_images, :destroy, :transition, :update], Apartment, :user_id => user.id
+      can [:edit, :order_photos, :destroy, :transition, :update], Apartment, :user_id => user.id
       can [:create, :destroy], Favorite, :user_id => user.id
       can [:create, :destroy], Flag, :user_id => user.id
       can :manage, Message

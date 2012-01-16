@@ -18,11 +18,11 @@
                   = truncate(first_message.body)
                   |
                   = first_message.created_at.strftime("%b %d, %l:%M%p")
-  
+
             %li.delete= image_tag "icons/delete_message.png"
             %li.photo
-              -if conversation.apartment.images.present?
-                =image_tag(conversation.apartment.images.first.asset.url(:micro))
+              -if conversation.apartment.photos.present?
+                =image_tag(conversation.apartment.photos.first.image.url(:micro))
               -else
                 =image_tag("defaults/apartment/micro.jpg")
             %li.name= conversation.apartment.address.street

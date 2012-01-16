@@ -57,12 +57,11 @@ class ApartmentsController < ApplicationController
     end
   end
 
-  def order_images
+  def order_photos
     @apartment = Apartment.find(params[:id])
-    images = @apartment.images
-    images.each do |image|
-      image.position = params['image'].index(image.id.to_s) + 1
-      image.save
+    @apartment.photos.each do |photo|
+      photo.position = params['photo'].index(photo.id.to_s) + 1
+      photo.save
     end
     render :nothing => true
   end

@@ -2,8 +2,8 @@ Rails.application.routes.draw do |map|
   mount Resque::Server.new, :at => "/resque"
 
   map.resources :addresses, :collection => {:geocode => :get}, :only => [:geocode]
-  map.resources :apartments, :except => [:index], :member => {:order_images => :put, :transition => :put} do |apartment|
-    apartment.resources :images, :only => [:create, :destroy]
+  map.resources :apartments, :except => [:index], :member => {:order_photos => :put, :transition => :put} do |apartment|
+    apartment.resources :photos, :only => [:create, :destroy]
     apartment.resources :messages, :only => [:create]
     apartment.resources :conversations, :only => [:create]
   end

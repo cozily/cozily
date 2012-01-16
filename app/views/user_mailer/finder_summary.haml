@@ -9,8 +9,8 @@
     -@latest_matches.each do |apt|
       %tr
         %td.image
-          - if apt.images.present?
-            = link_to(image_tag(apt.images.first.asset.url(:thumb)), apartment_url(apt))
+          - if apt.photos.present?
+            = link_to(image_tag(apt.photos.first.image.url(:thumb)), apartment_url(apt))
           - else
             = link_to(image_tag("defaults/apartment/thumb.jpg"), apartment_url(apt))
         %td

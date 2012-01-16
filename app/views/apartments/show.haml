@@ -20,8 +20,8 @@
     %meta{:property => 'listing:bathrooms', :content => @apartment.bathrooms}
     %meta{:property => 'listing:size', :content => @apartment.square_footage}
 
-    - @apartment.images.each do |image|
-      %meta{:property => 'listing:image', :content => [request.protocol, request.host_with_port, image.asset.url(:original)].join}
+    - @apartment.photos.each do |photo|
+      %meta{:property => 'listing:image', :content => [request.protocol, request.host_with_port, photo.image.url(:large)].join}
 
     - if signed_in?
       %meta{:property => 'listing:contact', :content => @apartment.user.full_name}
@@ -82,7 +82,7 @@
                   - category_features.each do |feature|
                     %dd= feature.name
 
-      .images
+      .photos
         %ul
           -@apartment.photos.each do |photo|
             %li=image_tag(photo.image.url(:thumb), :'data-large-image-path' => photo.image.url(:large))
