@@ -1,5 +1,6 @@
 require 'nokogiri'
 require 'open-uri'
+require 'net/http'
 
 def assign_bedrooms(apartment, features)
   case features
@@ -127,7 +128,9 @@ end
 namespace :import do
   namespace :urban_edge do
     task :all => :environment do
-      doc = Nokogiri::XML(open("http://www.urbanedgeny.com/feeds/39a6a3a2bd.xml?1321654581"))
+      # http://www.urbanedgeny.com/feeds/22858389ce.xml?1326301614
+      # http://www.urbanedgeny.com/feeds/39a6a3a2bd.xml?1321654581
+      doc = Nokogiri::XML(open("http://www.urbanedgeny.com/feeds/22858389ce.xml?1326301614"))
 
       @management_companies = []
       doc.xpath("/PhysicalProperty/Management").each do |management_company|
@@ -142,25 +145,7 @@ namespace :import do
 
       @properties.each do |property|
         url = property.xpath("Identification/WebSite").inner_text
-
-        if true
-          page = Nokogiri::HTML(open(url))
-        else
-          hash = Digest::MD5.hexdigest(url)
-          file_name = "#{Rails.root}/tmp/urbanedge_cache/#{hash}"
-          if File.exists?(file_name)
-            @response = File.read(file_name)
-          else
-            @response = `curl -is "#{url}"`
-            cache_dir = "#{Rails.root}/tmp/urbanedge_cache"
-            Dir.mkdir(cache_dir) unless File.exist?(cache_dir)
-            File.open("#{cache_dir}/#{hash}", "w") do |f|
-              f.puts @response
-              f.close
-            end
-          end
-          page = Nokogiri::HTML(@response)
-        end
+        page = Nokogiri::HTML(open(url))
 
         email = property.xpath("Identification/Email").inner_text
         phone = property.xpath("Identification/Phone/Number").inner_text
@@ -203,7 +188,7 @@ namespace :import do
 
           @apartment = Apartment.find_by_external_id(external_id)
           if @apartment.nil?
-            @user = User.first
+            # @user = User.first
             @apartment = Apartment.new(:full_address => full_address,
                                        :unit => unit,
                                        :rent => rent,
@@ -225,8 +210,26 @@ namespace :import do
             images = listing.css("div#slide-runner div.slide a img")
             images.each do |img|
               image_url = img["src"].gsub(" ", "%20")
-              image = open(URI.parse(image_url))
-              Image.create(:apartment => @apartment, :asset => image)
+              file_name = image_url.split("/").last
+              large_image_url = "/feeds/images/#{file_name}"
+              file_path = Tempfile.new(["image",".jpg"]).path
+              Net::HTTP.start("www.urbanedgeny.com") do |http|
+                response = http.get(large_image_url)
+                open(file_path, "wb") do |file|
+                  file.write(response.body)
+                end
+              end
+              puts file_path
+
+              if File.exist?(file_path)
+                upload = ActionDispatch::Http::UploadedFile.new({
+                  :filename => file_name,
+                  :content_type => "image/jpeg",
+                  :tempfile => File.open(file_path)
+                })
+
+                @apartment.photos.create(:image => upload)
+              end
             end
 
             @apartment.publish! rescue nil
