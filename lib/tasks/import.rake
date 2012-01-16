@@ -172,7 +172,7 @@ namespace :import do
 
           bedrooms = row.css("td.views-field-field-bedroom-value").inner_text.match(/\d+/).to_s.to_i || 0
 
-          bathrooms = row.css("td.views-field-field-bathroom-value").inner_text.match(/[\d\.]+/).to_s.to_f || 0
+          bathrooms = row.css("td.views-field-field-bathroom-value").inner_text.match(/\d*\.?\d+/).to_s.to_f || 0
 
           rent = row.css("td.views-field-field-price-value").inner_text.gsub(",", "").match(/\d+/).to_s.to_i
 
