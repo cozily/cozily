@@ -5,10 +5,10 @@
   var apartments = #{(@paginated_apartments).as_json(:methods => :to_param, :include => :address).to_json};
 
 .head
-  %h1==Hi, friend
+  %h1== Hi, Friend!
 
   .lady
-    %span=lady_text
+    %span= lady_text
 
   = render "dashboard/tabs", :active => nil
 
