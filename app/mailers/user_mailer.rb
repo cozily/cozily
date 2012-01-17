@@ -15,7 +15,7 @@ class UserMailer < ActionMailer::Base
   def finder_summary(user_id)
     @user = User.find(user_id)
 
-    @latest_matches = @user.matches.select { |a| a.published_at >= 1.week.ago } if @user.matches.present?
+    @latest_matches = @user.matches.results.select { |a| a.published_at >= 1.week.ago } if @user.matches.present?
     mail(:from => "cozily-noreply@cozi.ly",
          :to => @user.email,
          :subject => "Your Weekly Match Summary from Cozily",
