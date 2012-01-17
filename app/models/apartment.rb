@@ -24,6 +24,8 @@ class Apartment < ActiveRecord::Base
 
   before_validation :format_unit
   after_create :email_owner
+  # after_commit :resque_solr_update
+  # before_destroy :resque_solr_remove
 
   state_machine :state, :initial => :unpublished do
     after_transition :on => :unpublish do |apt|
@@ -223,6 +225,15 @@ class Apartment < ActiveRecord::Base
     user && user.phone.present? && user.email_confirmed?
   end
 
+  protected
+  def resque_solr_update
+    Resque.enqueue(SolrUpdate, Apartment, id)
+  end
+
+  def resque_solr_remove
+    Resque.enqueue(SolrRemove, Apartment, id)
+  end
+
   private
   def email_owner
     unless user.has_received_first_apartment_notification?
@@ -234,13 +245,5 @@ class Apartment < ActiveRecord::Base
   def format_unit
     return unless self.unit
     self.unit = self.unit.delete("#-").upcase.strip
-  end
-
-  def resque_solr_update
-    Resque.enqueue(SolrUpdate, Apartment, id)
-  end
-
-  def resque_solr_remove
-    Resque.enqueue(SolrRemove, Apartment, id)
   end
 end
