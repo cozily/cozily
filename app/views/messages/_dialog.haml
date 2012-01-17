@@ -1,8 +1,8 @@
 .message_dialog{:title => "Message about #{apartment.street}", :id => "message_dialog_#{apartment.id}"}
   %p Contact Landlord
 
-  = semantic_form_for [apartment, Message.new(:body => Message::DEFAULT_BODY)], :html => { :'data-remote' => true } do |form|
+  = semantic_form_for [apartment, Message.new], :html => { :'data-remote' => true } do |form|
     =form.error_messages
 
     = form.inputs do
-      = form.input :body, :as => :text, :label => false, :input_html => { :'data-default-value' => Message::DEFAULT_BODY }
+      = form.input :body, :as => :text, :label => "Dear Landlord/Agent..."
