@@ -130,11 +130,8 @@ namespace :import do
     task :all => :environment do
       # http://www.urbanedgeny.com/feeds/22858389ce.xml?1326301614
       # http://www.urbanedgeny.com/feeds/39a6a3a2bd.xml?1321654581
-      doc = Nokogiri::XML(open("http://www.urbanedgeny.com/feeds/22858389ce.xml?1326301614"))
-
-      @management_companies = []
-      doc.xpath("/PhysicalProperty/Management").each do |management_company|
-        @management_companies << management_company
+      retryable(:tries => 5, :sleep => 10) do
+        doc = Nokogiri::XML(open("http://www.urbanedgeny.com/feeds/22858389ce.xml?1326301614"))
       end
 
       @properties = []
@@ -144,8 +141,11 @@ namespace :import do
       puts "#{@properties.size} properties found.."
 
       @properties.each do |property|
-        url = property.xpath("Identification/WebSite").inner_text
-        page = Nokogiri::HTML(open(url))
+        property_url = property.xpath("Identification/WebSite").inner_text
+        puts %Q{Retrieving "#{property_url}"...}
+        retryable(:tries => 5, :sleep => 10) do
+          page = Nokogiri::HTML(open(property_url))
+        end
 
         email = property.xpath("Identification/Email").inner_text
         phone = property.xpath("Identification/Phone/Number").inner_text
@@ -179,7 +179,10 @@ namespace :import do
 
           start_date = row.css("td.views-field-field-date-value").inner_text.strip.gsub("Immediately", Date.today.to_s)
 
-          listing = Nokogiri::HTML(open(url))
+          puts %Q{Retrieving "#{url}"}
+          retryable(:tries => 5, :sleep => 10) do
+            listing = Nokogiri::HTML(open(url))
+          end
 
           building_features = listing.css("div.property-amen ul li").map(&:inner_text)
 
@@ -209,30 +212,41 @@ namespace :import do
 
             images = listing.css("div#slide-runner div.slide a img")
             images.each do |img|
-              image_url = img["src"].gsub(" ", "%20")
-              file_name = image_url.split("/").last
-              large_image_url = "/feeds/images/#{file_name}"
-              file_path = Tempfile.new(["image",".jpg"]).path
-              Net::HTTP.start("www.urbanedgeny.com") do |http|
-                response = http.get(large_image_url)
-                open(file_path, "wb") do |file|
-                  file.write(response.body)
+              retryable(:tries => 5) do
+                image_url = img["src"].gsub(" ", "%20")
+                file_name = image_url.split("/").last
+                large_image_url = "/feeds/images/#{file_name}"
+                file_path = Tempfile.new(["image",".jpg"]).path
+                puts %Q{Fetching "#{large_image_url}"...}
+                Net::HTTP.start("www.urbanedgeny.com") do |http|
+                  http.read_timeout = 120
+                  response = http.get(large_image_url)
+                  open(file_path, "wb") do |file|
+                    file.write(response.body)
+                  end
                 end
-              end
-              puts file_path
+                puts %Q{=> "#{file_path}"}
 
-              if File.exist?(file_path)
-                upload = ActionDispatch::Http::UploadedFile.new({
-                  :filename => file_name,
-                  :content_type => "image/jpeg",
-                  :tempfile => File.open(file_path)
-                })
+                if File.exist?(file_path)
+                  upload = ActionDispatch::Http::UploadedFile.new({
+                    :filename => file_name,
+                    :content_type => "image/jpeg",
+                    :tempfile => File.open(file_path)
+                  })
 
-                @apartment.photos.create(:image => upload)
+                  photo = @apartment.photos.create(:image => upload)
+                  puts photo.valid?
+                end
               end
             end
 
+            print "Publishing listing... "
             @apartment.publish! rescue nil
+            if @apartment.published?
+              puts "success."
+            else
+              puts "FAILED!"
+            end
           else
             # find and update
           end

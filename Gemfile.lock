@@ -209,6 +209,7 @@ GEM
     resque_spec (0.8.0)
       resque (>= 1.19.0)
       rspec (>= 2.5.0)
+    retryable (1.2.5)
     roadie (1.0.0.pre2)
       actionmailer (~> 3.0.0)
       css_parser
@@ -334,6 +335,7 @@ DEPENDENCIES
   resque
   resque_mailer
   resque_spec
+  retryable
   roadie (= 1.0.0.pre2)
   rspec-rails
   sass
