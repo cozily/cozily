@@ -74,7 +74,7 @@ module ApplicationHelper
 
       messages << "The median rent of #{number_with_precision(bedrooms, :precision => 0)} bedroom apartments on Cozily is $#{number_with_delimiter(number_with_precision(apartments.map(&:rent).median, :precision => 0))}."
       messages << "The median square footage of #{number_with_precision(bedrooms, :precision => 0)} bedroom apartments on Cozily is #{apartments.map(&:square_footage).median}."
-      messages << "Maybe you'd like to check out some apartments in #{link_to(neighborhood.name, neighborhood)}?"
+      # messages << "Maybe you'd like to check out some apartments in #{link_to(neighborhood.name, neighborhood)}?"
     end
 
     messages.shuffle
