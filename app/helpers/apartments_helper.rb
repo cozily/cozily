@@ -7,11 +7,15 @@ module ApartmentsHelper
 
   def availability(apartment)
     if apartment.start_date.nil?
-       "Availability unknown"
+       "Availability Unknown"
     elsif !apartment.sublet? || apartment.end_date.nil?
-      "Available starting #{apartment.start_date.to_s(:mdy)}"
+      if apartment.start_date > Date.today
+        "Available starting #{apartment.start_date.to_s(:quick)}"
+      else
+        "Available Immediately"
+      end
     else
-      "Available #{apartment.start_date.to_s(:mdy)} through #{apartment.end_date.to_s(:mdy)}"
+      "Available #{apartment.start_date.to_s(:quick)} through #{apartment.end_date.to_s(:quick)}"
     end
   end
 

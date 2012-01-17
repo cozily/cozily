@@ -63,13 +63,13 @@
           %ul
             - unless @apartment.square_footage.blank?
               %li
-                ==#{@apartment.square_footage} sq. ft.
+                #{@apartment.square_footage} sq. ft.
             %li
-              -if @apartment.address && @apartment.neighborhoods
-                ==Neighborhood: #{neighborhood_links(@apartment.neighborhoods)}
-              -else
+              - if @apartment.address && @apartment.neighborhoods
+                Neighborhood: #{neighborhood_links(@apartment.neighborhoods)}
+              - else
                 Neighborhood: Unknown
-            %li=availability(@apartment)
+            %li= availability(@apartment)
 
         -if @apartment.features.present?
           .highlights

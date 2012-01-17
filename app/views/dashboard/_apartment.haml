@@ -17,7 +17,7 @@
             ==/ #{apartment.square_footage} sq. ft.
         %li.neighborhood==Neighborhood: #{neighborhood_links(apartment.neighborhoods)}
         %li.published_on
-          ==Published on #{apartment.published_at.try(:to_date).try(:to_s, :app_long)}
+          ==Published on #{apartment.published_at.try(:to_date).try(:to_s, :quick)}
           -if apartment.sublet?
             %span (sublet)
 
