@@ -189,7 +189,7 @@ class Apartment < ActiveRecord::Base
   def nearby_stations
     return [] unless address
     nearest_stations = Station.find(:all, :origin => [lat, lng], :within => 0.5, :order => 'distance')
-    station_names = nearest_stations.map(&:name).uniq
+    station_names = nearest_stations.map {|s| [s.name, s.line]}.uniq.map(&:first)
     [].tap do |stations|
       station_names.each do |station_name|
         stations << nearest_stations.select { |s| s.name == station_name }.max{ |a, b| a.distance <=> b.distance }
