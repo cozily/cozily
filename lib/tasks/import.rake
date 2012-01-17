@@ -153,8 +153,9 @@ namespace :import do
 
         unless @user = User.find_by_email(email)
           @user = User.create(:first_name => name,
-                              :last_name => nil,
+                              :last_name => "Office",
                               :email => email,
+                              :email_confirmed => true,
                               :password => "password!",
                               :password_confirmation => "password!",
                               :phone => phone,
@@ -188,7 +189,6 @@ namespace :import do
 
           @apartment = Apartment.find_by_external_id(external_id)
           if @apartment.nil?
-            # @user = User.first
             @apartment = Apartment.new(:full_address => full_address,
                                        :unit => unit,
                                        :rent => rent,
