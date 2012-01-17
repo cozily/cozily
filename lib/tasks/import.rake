@@ -128,23 +128,32 @@ end
 namespace :import do
   namespace :urban_edge do
     task :all => :environment do
-      # http://www.urbanedgeny.com/feeds/22858389ce.xml?1326301614
-      # http://www.urbanedgeny.com/feeds/39a6a3a2bd.xml?1321654581
-      retryable(:tries => 5, :sleep => 10) do
-        doc = Nokogiri::XML(open("http://www.urbanedgeny.com/feeds/22858389ce.xml?1326301614"))
+      log = Logger.new(Rails.root.join("log","import","urban_edge","debug.log"))
+      log.level = Logger::DEBUG
+      log.formatter = proc do |severity, datetime, progname, msg|
+        "[#{severity}] #{datetime.to_s(:logger)}: #{msg}\n"
+      end
+
+      XML_FEED = "http://www.urbanedgeny.com/feeds/22858389ce.xml?1326301614"
+      # XML_FEED = "http://www.urbanedgeny.com/feeds/39a6a3a2bd.xml?1321654581"
+
+      log.debug "Starting import."
+      log.debug %Q{Retrieving "#{XML_FEED}"}
+      doc = retryable(:tries => 5, :sleep => 10) do
+        Nokogiri::XML(open(XML_FEED))
       end
 
       @properties = []
       doc.xpath("/PhysicalProperty/Property").each do |property|
         @properties << property
       end
-      puts "#{@properties.size} properties found.."
+      log.debug "#{@properties.size} properties found.."
 
       @properties.each do |property|
         property_url = property.xpath("Identification/WebSite").inner_text
-        puts %Q{Retrieving "#{property_url}"...}
-        retryable(:tries => 5, :sleep => 10) do
-          page = Nokogiri::HTML(open(property_url))
+        log.debug %Q{Retrieving "#{property_url}"...}
+        page = retryable(:tries => 5, :sleep => 10) do
+          Nokogiri::HTML(open(property_url))
         end
 
         email = property.xpath("Identification/Email").inner_text
@@ -154,7 +163,7 @@ namespace :import do
         unless @user = User.find_by_email(email)
           @user = User.create(:first_name => name,
                               :last_name => "Office",
-                              :email => email,
+                              :email => email || "#{name.gsub(" ", "")}@cozi.ly",
                               :email_confirmed => true,
                               :password => "password!",
                               :password_confirmation => "password!",
@@ -179,9 +188,9 @@ namespace :import do
 
           start_date = row.css("td.views-field-field-date-value").inner_text.strip.gsub("Immediately", Date.today.to_s)
 
-          puts %Q{Retrieving "#{url}"}
-          retryable(:tries => 5, :sleep => 10) do
-            listing = Nokogiri::HTML(open(url))
+          log.debug %Q{Retrieving "#{url}"}
+          listing = retryable(:tries => 5, :sleep => 10) do
+            Nokogiri::HTML(open(url))
           end
 
           building_features = listing.css("div.property-amen ul li").map(&:inner_text)
@@ -217,7 +226,7 @@ namespace :import do
                 file_name = image_url.split("/").last
                 large_image_url = "/feeds/images/#{file_name}"
                 file_path = Tempfile.new(["image",".jpg"]).path
-                puts %Q{Fetching "#{large_image_url}"...}
+                log.debug %Q{Fetching "http://www.urbanedgeny.com#{large_image_url}"...}
                 Net::HTTP.start("www.urbanedgeny.com") do |http|
                   http.read_timeout = 120
                   response = http.get(large_image_url)
@@ -225,7 +234,7 @@ namespace :import do
                     file.write(response.body)
                   end
                 end
-                puts %Q{=> "#{file_path}"}
+                log.debug %Q{=> "#{file_path}"}
 
                 if File.exist?(file_path)
                   upload = ActionDispatch::Http::UploadedFile.new({
@@ -235,20 +244,20 @@ namespace :import do
                   })
 
                   photo = @apartment.photos.create(:image => upload)
-                  puts photo.valid?
+                  log.debug "The photo is #{photo.valid? ? "valid" : "INVALID"}."
                 end
               end
             end
 
-            print "Publishing listing... "
+            log.debug "Publishing listing... "
             @apartment.publish! rescue nil
             if @apartment.published?
-              puts "success."
+              log.error "Successfully published."
             else
-              puts "FAILED!"
+              log.error "Failed to publish."
             end
           else
-            # find and update
+            log.debug "Apartment already exists, skipping."
           end
         end
       end
