@@ -379,26 +379,31 @@ div#breadcrumbs div.profile_summary span {
 div#body {
   background-color: #EBEBEB;
 }
-/* line 86, ../../../app/stylesheets/partials/_application.scss */
+/* line 87, ../../../app/stylesheets/partials/_application.scss */
+div#body label.infield {
+  padding-left: 10px;
+  color: #ccc;
+}
+/* line 92, ../../../app/stylesheets/partials/_application.scss */
 div#body div.container {
   background-color: white;
 }
 
-/* line 91, ../../../app/stylesheets/partials/_application.scss */
+/* line 97, ../../../app/stylesheets/partials/_application.scss */
 div#foot {
   background-color: #EBEBEB;
   height: 60px;
   clear: both;
 }
-/* line 96, ../../../app/stylesheets/partials/_application.scss */
+/* line 102, ../../../app/stylesheets/partials/_application.scss */
 div#foot div.container {
   background-color: white;
 }
-/* line 100, ../../../app/stylesheets/partials/_application.scss */
+/* line 106, ../../../app/stylesheets/partials/_application.scss */
 div#foot ul {
   margin: 0 10px;
 }
-/* line 103, ../../../app/stylesheets/partials/_application.scss */
+/* line 109, ../../../app/stylesheets/partials/_application.scss */
 div#foot ul li {
   float: left;
   padding: 0 6px;
@@ -406,60 +411,60 @@ div#foot ul li {
   line-height: 58px;
   font-size: 1.05em;
 }
-/* line 109, ../../../app/stylesheets/partials/_application.scss */
+/* line 115, ../../../app/stylesheets/partials/_application.scss */
 div#foot ul li a {
   color: #1982A0;
 }
-/* line 114, ../../../app/stylesheets/partials/_application.scss */
+/* line 120, ../../../app/stylesheets/partials/_application.scss */
 div#foot ul li.copyright {
   float: right;
   color: #666666;
 }
-/* line 119, ../../../app/stylesheets/partials/_application.scss */
+/* line 125, ../../../app/stylesheets/partials/_application.scss */
 div#foot ul li.facebook, div#foot ul li.twitter {
   float: right;
 }
-/* line 121, ../../../app/stylesheets/partials/_application.scss */
+/* line 127, ../../../app/stylesheets/partials/_application.scss */
 div#foot ul li.facebook img, div#foot ul li.twitter img {
   padding-top: 16px;
 }
 
-/* line 128, ../../../app/stylesheets/partials/_application.scss */
+/* line 134, ../../../app/stylesheets/partials/_application.scss */
 div#map_canvas {
   width: 50%;
   height: 500px;
 }
 
-/* line 133, ../../../app/stylesheets/partials/_application.scss */
+/* line 139, ../../../app/stylesheets/partials/_application.scss */
 div.ui-datepicker {
   width: 19em;
 }
 
-/* line 137, ../../../app/stylesheets/partials/_application.scss */
+/* line 143, ../../../app/stylesheets/partials/_application.scss */
 div.feedback {
   padding: 20px;
   width: 250px;
   background: #CCC;
   border: 1px solid #29216D;
 }
-/* line 143, ../../../app/stylesheets/partials/_application.scss */
+/* line 149, ../../../app/stylesheets/partials/_application.scss */
 div.feedback p {
   font-size: 14px;
 }
-/* line 147, ../../../app/stylesheets/partials/_application.scss */
+/* line 153, ../../../app/stylesheets/partials/_application.scss */
 div.feedback form.formtastic {
   margin-bottom: 0;
 }
-/* line 151, ../../../app/stylesheets/partials/_application.scss */
+/* line 157, ../../../app/stylesheets/partials/_application.scss */
 div.feedback form.formtastic fieldset > ol > li label {
   line-height: 30px;
   font-weight: bold;
 }
-/* line 156, ../../../app/stylesheets/partials/_application.scss */
+/* line 162, ../../../app/stylesheets/partials/_application.scss */
 div.feedback form.formtastic fieldset > ol > li input[type=text] {
   width: 180px;
 }
-/* line 160, ../../../app/stylesheets/partials/_application.scss */
+/* line 166, ../../../app/stylesheets/partials/_application.scss */
 div.feedback form.formtastic fieldset > ol > li textarea {
   width: 180px;
   height: 100px;
@@ -467,7 +472,7 @@ div.feedback form.formtastic fieldset > ol > li textarea {
   font-size: 15px;
   padding: 5px;
 }
-/* line 168, ../../../app/stylesheets/partials/_application.scss */
+/* line 174, ../../../app/stylesheets/partials/_application.scss */
 div.feedback form.formtastic fieldset > ol > li input[type=submit] {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -486,7 +491,7 @@ div.feedback form.formtastic fieldset > ol > li input[type=submit] {
   width: 75px;
 }
 
-/* line 176, ../../../app/stylesheets/partials/_application.scss */
+/* line 182, ../../../app/stylesheets/partials/_application.scss */
 div#flash, div#loading {
   position: fixed;
   top: 0px;
@@ -496,7 +501,7 @@ div#flash, div#loading {
   display: none;
   z-index: 100;
 }
-/* line 185, ../../../app/stylesheets/partials/_application.scss */
+/* line 191, ../../../app/stylesheets/partials/_application.scss */
 div#flash span, div#loading span {
   background-color: #E1B55E;
   padding: 5px 12px;
@@ -515,7 +520,7 @@ div#flash span, div#loading span {
   font-style: italic;
 }
 
-/* line 197, ../../../app/stylesheets/partials/_application.scss */
+/* line 203, ../../../app/stylesheets/partials/_application.scss */
 div#loading span {
   background-image: url("/images/spinner.gif");
   background-repeat: no-repeat;
@@ -524,31 +529,31 @@ div#loading span {
   line-height: 30px;
 }
 
-/* line 208, ../../../app/stylesheets/partials/_application.scss */
+/* line 214, ../../../app/stylesheets/partials/_application.scss */
 div#body div.container div.internal_error {
   margin: 50px 20px 0 20px;
 }
-/* line 212, ../../../app/stylesheets/partials/_application.scss */
+/* line 218, ../../../app/stylesheets/partials/_application.scss */
 div#body div.container div#four_oh_four {
   background: url(/images/characters/lady.png) no-repeat;
   height: 400px;
 }
-/* line 215, ../../../app/stylesheets/partials/_application.scss */
+/* line 221, ../../../app/stylesheets/partials/_application.scss */
 div#body div.container div#four_oh_four h1, div#body div.container div#four_oh_four h2 {
   padding-left: 200px;
 }
-/* line 220, ../../../app/stylesheets/partials/_application.scss */
+/* line 226, ../../../app/stylesheets/partials/_application.scss */
 div#body div.container div#five_hundred {
   background: url(/images/characters/man.png) no-repeat;
   background-position: right top;
   height: 400px;
 }
-/* line 224, ../../../app/stylesheets/partials/_application.scss */
+/* line 230, ../../../app/stylesheets/partials/_application.scss */
 div#body div.container div#five_hundred h1, div#body div.container div#five_hundred h2 {
   padding-right: 200px;
 }
 
-/* line 232, ../../../app/stylesheets/partials/_application.scss */
+/* line 238, ../../../app/stylesheets/partials/_application.scss */
 form.formtastic div.errorExplanation {
   border: 1px solid red;
   background-color: pink;
@@ -561,20 +566,20 @@ form.formtastic div.errorExplanation {
   -khtml-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 239, ../../../app/stylesheets/partials/_application.scss */
+/* line 245, ../../../app/stylesheets/partials/_application.scss */
 form.formtastic div.errorExplanation h2 {
   display: none;
 }
-/* line 243, ../../../app/stylesheets/partials/_application.scss */
+/* line 249, ../../../app/stylesheets/partials/_application.scss */
 form.formtastic div.errorExplanation ul {
   list-style-type: disc;
   margin: 5px 0 5px 30px;
 }
-/* line 250, ../../../app/stylesheets/partials/_application.scss */
+/* line 256, ../../../app/stylesheets/partials/_application.scss */
 form.formtastic li.error input {
   border: 1px solid red;
 }
-/* line 254, ../../../app/stylesheets/partials/_application.scss */
+/* line 260, ../../../app/stylesheets/partials/_application.scss */
 form.formtastic li.error p.inline-errors {
   display: none;
 }
