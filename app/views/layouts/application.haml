@@ -149,21 +149,16 @@
         })();
 
     :javascript
-      var _usrp = {
-        type: "button",
-        company: "cozily",
-        host: "cozily.userrules.com",
-        mode: "advanced",
-        sso: {},
-        getVisitorId: function() {return "";},
-        getAdditionalParams: function() {return "";},
-        placement: "left",
-        color: ["#b08e4b", "#e5c380"]
-      };
+      var is_ssl = ("https:" == document.location.protocol);
+      var asset_host = is_ssl ? "https://s3.amazonaws.com/getsatisfaction.com/" : "http://s3.amazonaws.com/getsatisfaction.com/";
+      document.write(unescape("%3Cscript src='" + asset_host + "javascripts/feedback-v2.js' type='text/javascript'%3E%3C/script%3E"));
 
-      (function(D) {
-        var _usr = D.createElement("script"), s = D.getElementsByTagName("script")[0];
-        _usr.type = "text/javascript"; _usr.async = true;
-        _usr.src = ("https:" == D.location.protocol ? "https" : "http" ) + "://dtkm4pd19nw6z.cloudfront.net/js/userrules/9a41a826e957127b4e5bfc7d140e45c4/feedback.canary.js";
-        s.parentNode.insertBefore(_usr, s);
-      })(document);
+    :javascript
+      var feedback_widget_options = {};
+      feedback_widget_options.display = "overlay";
+      feedback_widget_options.company = "cozily";
+      feedback_widget_options.placement = "left";
+      feedback_widget_options.color = "#333";
+      feedback_widget_options.style = "problem";
+      var feedback_widget = new GSFN.feedback_widget(feedback_widget_options);
+
