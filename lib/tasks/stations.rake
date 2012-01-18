@@ -23,6 +23,8 @@ namespace :stations do
           StationTrain.create(:station => station, :train => train)
         end
       end
+
+      station.update_attribute(:train_group, station.trains.map(&:name).sort.join)
     end
   end
 end

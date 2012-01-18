@@ -189,12 +189,16 @@ class Apartment < ActiveRecord::Base
   def nearby_stations
     return [] unless address
     nearest_stations = Station.find(:all, :origin => [lat, lng], :within => 0.5, :order => 'distance')
-    station_names = nearest_stations.map {|s| [s.name, s.line]}.uniq.map(&:first)
-    [].tap do |stations|
-      station_names.each do |station_name|
-        stations << nearest_stations.select { |s| s.name == station_name }.max{ |a, b| a.distance <=> b.distance }
+    if nearest_stations.empty?
+      Station.find(:all, :origin => [lat, lng], :order => 'distance', :limit => 1)
+    else
+      unique_stations = nearest_stations.uniq {|a| [a.name, a.train_group]}.map {|a| [a.name, a.train_group]}
+      [].tap do |stations|
+        unique_stations.each do |unique_station|
+          stations << nearest_stations[nearest_stations.index {|s| s.name == unique_station.first && s.train_group == unique_station.last}]
+        end
       end
-    end.sort { |a, b| a.distance <=> b.distance }
+    end
   end
 
   def last_state_change
