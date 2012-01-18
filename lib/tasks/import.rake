@@ -157,13 +157,14 @@ namespace :import do
         end
 
         email = property.xpath("Identification/Email").inner_text
+        email = "#{name.gsub(" ", "")}@cozi.ly" if email.blank?
         phone = property.xpath("Identification/Phone/Number").inner_text
         name = property.xpath("Identification/MarketingName").inner_text
 
         unless @user = User.find_by_email(email)
           @user = User.create(:first_name => name,
                               :last_name => "Office",
-                              :email => email || "#{name.gsub(" ", "")}@cozi.ly",
+                              :email => email,
                               :email_confirmed => true,
                               :password => "password!",
                               :password_confirmation => "password!",
