@@ -5,8 +5,8 @@
         %li.counts= pagination_summary(params[:page], search.results)
         %li.navigation= will_paginate(search.paginated_results)
 
-    -search.paginated_results.each do |apartment|
-      =render "dashboard/apartment", :apartment => apartment, :position => position_in_collection(apartment, search.results)
+    - search.paginated_results.each do |apartment|
+      = render "dashboard/apartment", :apartment => apartment, :position => position_in_collection(apartment, search.results)
 
   -else
     %p.empty

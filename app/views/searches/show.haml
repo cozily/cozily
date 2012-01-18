@@ -1,4 +1,4 @@
--content_for :page_title do
+- content_for :page_title do
   Cozily | Search
 
 - if @search.results.present?
@@ -6,9 +6,9 @@
     var apartments = #{@search.paginated_results.as_json(:methods => :to_param, :include => :address).to_json};
 
 .article
-  =render "results", :search => @search
+  = render "results", :search => @search
 
 .aside
 
   #map_canvas
-  =image_tag "backgrounds/shadow.png", :class => "shadow"
+  = image_tag "backgrounds/shadow.png", :class => "shadow"
