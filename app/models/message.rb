@@ -3,7 +3,7 @@ class Message < ActiveRecord::Base
   belongs_to :conversation
 
   validates_presence_of :sender, :body, :conversation
-  validate :ensure_body_is_not_default_body
+  # validate :ensure_body_is_not_default_body
   validate :ensure_sender_is_email_confirmed, :if => Proc.new { |message| message.sender.present? }
 
   scope :unread, where(:read_at => nil)
