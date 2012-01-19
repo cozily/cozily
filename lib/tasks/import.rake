@@ -169,6 +169,9 @@ namespace :import do
                               :email_confirmed => true,
                               :password => "password!",
                               :password_confirmation => "password!",
+                              :receive_match_summaries => false,
+                              :receive_listing_summaries => false,
+                              :receive_match_notifications => false,
                               :phone => phone,
                               :roles => Role.find_all_by_name("lister"))
         end
@@ -260,7 +263,7 @@ namespace :import do
             end
           else
             log.debug "Apartment already exists..."
-            if apartment.user.nil?
+            if @apartment.user.nil?
               log.debug "User is nil, reattaching."
               unless @user = User.find_by_email(email)
                 @user = User.create(:first_name => name,
@@ -269,19 +272,26 @@ namespace :import do
                                     :email_confirmed => true,
                                     :password => "password!",
                                     :password_confirmation => "password!",
+                                    :receive_match_summaries => false,
+                                    :receive_listing_summaries => false,
+                                    :receive_match_notifications => false,
                                     :phone => phone,
                                     :roles => Role.find_all_by_name("lister"))
               end
               @apartment.user = @user
               @apartment.save
+            end
 
-              log.debug "Publishing listing..."
-              @apartment.publish
-              if @apartment.published?
-                log.debug "Successfully published."
-              else
-                log.error "Failed to publish."
-              end
+            if @apartment.address.nil?
+              console_for(binding)
+            end
+
+            log.debug "Publishing listing..."
+            @apartment.publish
+            if @apartment.published?
+              log.debug "Successfully published."
+            else
+              log.error "Failed to publish."
             end
           end
         end
