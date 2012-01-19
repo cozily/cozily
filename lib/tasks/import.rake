@@ -85,7 +85,7 @@ def assign_urban_edge_apartment_features(apartment, features)
     apartment.features << Feature.find_by_name_and_category("exposed brick", :apartment)
   end
   if features.include?("Washer/Dryer in Unit") || features.include?("Stackable Washer/Dryer in Home")
-    apartment.features << Feature.find_by_name_and_category("washer/dryer", :apartment)
+    apartment.features << Feature.find_by_name_and_category("washer/dryer in unit", :apartment)
   end
 end
 
@@ -156,10 +156,11 @@ namespace :import do
           Nokogiri::HTML(open(property_url))
         end
 
-        email = property.xpath("Identification/Email").inner_text
-        email = "#{name.gsub(" ", "")}@cozi.ly" if email.blank?
-        phone = property.xpath("Identification/Phone/Number").inner_text
         name = property.xpath("Identification/MarketingName").inner_text
+        phone = property.xpath("Identification/Phone/Number").inner_text
+
+        email = property.xpath("Identification/Email").inner_text
+        email = "#{name.gsub(" ", "").downcase}@cozi.ly" if email.blank?
 
         unless @user = User.find_by_email(email)
           @user = User.create(:first_name => name,
@@ -250,15 +251,38 @@ namespace :import do
               end
             end
 
-            log.debug "Publishing listing... "
-            @apartment.publish! rescue nil
+            log.debug "Publishing listing..."
+            @apartment.publish
             if @apartment.published?
-              log.error "Successfully published."
+              log.debug "Successfully published."
             else
               log.error "Failed to publish."
             end
           else
-            log.debug "Apartment already exists, skipping."
+            log.debug "Apartment already exists..."
+            if apartment.user.nil?
+              log.debug "User is nil, reattaching."
+              unless @user = User.find_by_email(email)
+                @user = User.create(:first_name => name,
+                                    :last_name => "Office",
+                                    :email => email,
+                                    :email_confirmed => true,
+                                    :password => "password!",
+                                    :password_confirmation => "password!",
+                                    :phone => phone,
+                                    :roles => Role.find_all_by_name("lister"))
+              end
+              @apartment.user = @user
+              @apartment.save
+
+              log.debug "Publishing listing..."
+              @apartment.publish
+              if @apartment.published?
+                log.debug "Successfully published."
+              else
+                log.error "Failed to publish."
+              end
+            end
           end
         end
       end
