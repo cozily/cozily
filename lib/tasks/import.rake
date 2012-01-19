@@ -296,6 +296,7 @@ namespace :import do
           end
         end
       end
+      log.debug "Done."
     end
   end
 
