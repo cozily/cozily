@@ -199,7 +199,7 @@ function attachTips() {
         liveNeighborhoodAutocomplete();
 
         $(document).ready(function(){
-          $("label").inFieldLabels();
+          $("label.placeholder").inFieldLabels();
         });
 
         $("[data-large-image-path]").live("click", function(event) {
