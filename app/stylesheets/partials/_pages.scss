@@ -1,66 +1,66 @@
 body.pages {
-    div.page {
-        padding: 2em;
+  div.page {
+    padding: 2em;
 
-        h1 {
-          font-family: "pt-sans-narrow";
-          font-weight: 700;
-          text-transform: uppercase;
-        }
-
-        p {
-            font-weight: 300;
-            font-size: 1.2em;
-        }
-
-
-        div#bios {
-            padding-top: 15px;
-
-            div.bio {
-                @include clearfix;
-                width: 100%;
-                clear: both;
-                border-bottom: 1px solid #eee;
-                margin-bottom: 20px;
-
-                div.photo{
-                  width: 275px;
-                  float: left;
-
-                  img.photo {
-                    width: 250px;
-                    height: 250px;
-                    border: 2px solid #ccc;
-                  }
-
-                  h2 {
-                      color: #BE4747;
-                      margin-right: 5px;
-                      display: inline;
-                      font-size: 22px;
-                  }
-
-                  h3 {
-                      font-style: italic;
-                      margin-top: -3px;
-                  }
-                }
-
-                div.profile {
-                  float: left;
-                  width: 600px;
-                }
-            }
-        }
-
-        div.faq {
-            float: left;
-            width: 70%;
-        }
-
-        img.man {
-            margin: 30px 0 0 15px;
-        }
+    h1 {
+      font-family: "pt-sans-narrow";
+      font-weight: 700;
+      text-transform: uppercase;
     }
+
+    p {
+      font-weight: 300;
+      font-size: 1.2em;
+    }
+
+
+    div#bios {
+      padding-top: 15px;
+
+      div.bio {
+        @include clearfix;
+        width: 100%;
+        clear: both;
+        border-bottom: 1px solid #eee;
+        margin-bottom: 20px;
+
+        div.photo{
+          width: 275px;
+          float: left;
+
+          img.photo {
+            width: 250px;
+            height: 250px;
+            border: 2px solid #ccc;
+          }
+
+          h2 {
+            color: #BE4747;
+            margin-right: 5px;
+            display: inline;
+            font-size: 22px;
+          }
+
+          h3 {
+            font-style: italic;
+            margin-top: -3px;
+          }
+        }
+
+        div.profile {
+          float: left;
+          width: 600px;
+        }
+      }
+    }
+
+    div.faq {
+      float: left;
+      width: 70%;
+    }
+
+    img.man {
+      margin: 30px 0 0 15px;
+    }
+  }
 }

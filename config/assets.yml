@@ -17,6 +17,7 @@ javascripts:
 
 stylesheets:
   common:
+    - public/stylesheets/simple_form.css
     - public/stylesheets/formtastic.css
     - public/stylesheets/formtastic_changes.css
     - public/stylesheets/jquery-ui.css
