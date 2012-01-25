@@ -2,10 +2,9 @@ class PhotosController < ApplicationController
   before_filter :load_apartment
 
   def create
-    raise params[:userfile].inspect
     @image = @apartment.photos.create(:image => params[:userfile])
 
-    render :text => render_to_string(:partial => "apartments/photo", :locals => { :apartment => @apartment })
+    render :text => render_to_string(:partial => "apartments/photos", :locals => { :apartment => @apartment })
   end
 
   def destroy

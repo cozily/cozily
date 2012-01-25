@@ -26,14 +26,14 @@ FactoryGirl.define do
 
   factory :publishable_apartment, :parent => :apartment do
     after_create do |apartment|
-      2.times { Factory(:image, :apartment => apartment) }
+      # 2.times { Factory(:photo, :apartment => apartment) }
     end
   end
 
   factory :published_apartment, :parent => :apartment do
     state  'published'
     after_create do |apartment|
-      2.times { Factory(:image, :apartment => apartment) }
+      # 2.times { Factory(:photo, :apartment => apartment) }
     end
   end
 
@@ -63,7 +63,7 @@ FactoryGirl.define do
     association  :apartment, :factory => :published_apartment
   end
 
-  factory :image do
+  factory :photo do
     association  :apartment
   end
 

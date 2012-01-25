@@ -10,9 +10,9 @@ var sortableOptions = {
     update: function() {
         $.ajax({
             type: 'put',
-            data: $('ul#images').sortable('serialize'),
+            data: $('ul#photos').sortable('serialize'),
             dataType: 'script',
-            url: "/apartments/" + self.apartment.id + "/order_images"});
+            url: "/apartments/" + self.apartment.id + "/order_photos"});
     }
 };
 
@@ -22,7 +22,7 @@ function updateContent(content) {
         var node = $(this);
         var key = node.attr("data-content-key");
         $("[data-content-key=" + key + "]").replaceWith(node);
-        if (node.is("ul#images")) {
+        if (node.is("ul#photos")) {
             node.sortable(sortableOptions);
         }
     });
@@ -199,7 +199,7 @@ function attachTips() {
         liveNeighborhoodAutocomplete();
 
         $(document).ready(function(){
-          $("label.placeholder").inFieldLabels();
+          // $("form.simple_form div.input label").inFieldLabels();
         });
 
         $("[data-large-image-path]").live("click", function(event) {
@@ -319,14 +319,14 @@ function attachTips() {
                 },
                 onComplete : function(file, response) {
                     $("div#upload_status").text('');
-                    $("ul#images").replaceWith(response);
-                    $("ul#images").sortable(sortableOptions);
+                    $("ul#photos").replaceWith(response);
+                    $("ul#photos").sortable(sortableOptions);
                     $("form.apartment :input:first").trigger("blur");
                 }
             });
         }
 
-        $('ul#images').sortable(sortableOptions);
+        $('ul#photos').sortable(sortableOptions);
 
         $(document).bind("selected_neighborhood::change", function(event) {
             var div = $(event.target);
