@@ -1,5 +1,5 @@
 class DashboardController < ApplicationController
-  before_filter :authenticate, :except => [ :fail, :map ]
+  before_filter :authenticate_user!, :except => [ :fail, :map ]
   before_filter :load_events
 
   def show

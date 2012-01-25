@@ -13,6 +13,10 @@ form.formtastic fieldset ol li fieldset legend { margin-left: -6px;}
 
 --------------------------------------------------------------------------------------------------*/
 
+form#new_user.formtastic.user {
+  margin-left: 20px;
+}
+
 form.formtastic fieldset {
     display: block;
 }

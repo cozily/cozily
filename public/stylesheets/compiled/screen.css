@@ -704,17 +704,17 @@ body.welcome.index div#body div.container div#login h6, body.signup.create div#b
   color: #55534E;
 }
 /* line 44, ../../../app/stylesheets/partials/_unauthenticated.scss */
-body.welcome.index div#body div.container div#login form.session, body.signup.create div#body div.container div#login form.session {
+body.welcome.index div#body div.container div#login form.session, body.welcome.index div#body div.container div#login form.user, body.signup.create div#body div.container div#login form.session, body.signup.create div#body div.container div#login form.user {
   margin-left: 245px;
 }
 /* line 47, ../../../app/stylesheets/partials/_unauthenticated.scss */
-body.welcome.index div#body div.container div#login form.session li, body.signup.create div#body div.container div#login form.session li {
+body.welcome.index div#body div.container div#login form.session div, body.welcome.index div#body div.container div#login form.user div, body.signup.create div#body div.container div#login form.session div, body.signup.create div#body div.container div#login form.user div {
   float: left;
   width: 175px;
   margin-right: 8px;
 }
 /* line 52, ../../../app/stylesheets/partials/_unauthenticated.scss */
-body.welcome.index div#body div.container div#login form.session li input, body.signup.create div#body div.container div#login form.session li input {
+body.welcome.index div#body div.container div#login form.session div input, body.welcome.index div#body div.container div#login form.user div input, body.signup.create div#body div.container div#login form.session div input, body.signup.create div#body div.container div#login form.user div input {
   width: 175px;
   max-width: 175px;
   height: 33px;
@@ -722,8 +722,8 @@ body.welcome.index div#body div.container div#login form.session li input, body.
   font-size: 1.25em;
   color: #888;
 }
-/* line 61, ../../../app/stylesheets/partials/_unauthenticated.scss */
-body.welcome.index div#body div.container div#login form.session li input[type=submit], body.signup.create div#body div.container div#login form.session li input[type=submit] {
+/* line 62, ../../../app/stylesheets/partials/_unauthenticated.scss */
+body.welcome.index div#body div.container div#login form.session input[type=submit], body.welcome.index div#body div.container div#login form.user input[type=submit], body.signup.create div#body div.container div#login form.session input[type=submit], body.signup.create div#body div.container div#login form.user input[type=submit] {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   -o-border-radius: 5px;
@@ -1501,16 +1501,19 @@ body.pages div.page img.man {
 }
 
 /* line 2, ../../../app/stylesheets/partials/_sessions.scss */
-body.sessions div[data-content-key=yield], body.passwords div[data-content-key=yield] {
+body.sessions div[data-content-key=yield], body.passwords div[data-content-key=yield], body.registrations div[data-content-key=yield] {
   padding: 20px;
 }
-/* line 4, ../../../app/stylesheets/partials/_sessions.scss */
-body.sessions div[data-content-key=yield] h2, body.passwords div[data-content-key=yield] h2 {
+/* line 5, ../../../app/stylesheets/partials/_sessions.scss */
+body.sessions div[data-content-key=yield] h2, body.passwords div[data-content-key=yield] h2, body.registrations div[data-content-key=yield] h2 {
+  font-family: "pt-sans-narrow";
+  font-weight: 700;
+  text-transform: uppercase;
   margin-bottom: 5px;
 }
-/* line 9, ../../../app/stylesheets/partials/_sessions.scss */
-body.sessions form.session, body.sessions form.password, body.sessions form.user, body.passwords form.session, body.passwords form.password, body.passwords form.user {
-  background-color: #DDD;
+/* line 13, ../../../app/stylesheets/partials/_sessions.scss */
+body.sessions form.session, body.sessions form.password, body.sessions form.user, body.passwords form.session, body.passwords form.password, body.passwords form.user, body.registrations form.session, body.registrations form.password, body.registrations form.user {
+  background-color: #eee;
   padding: 20px;
   margin-bottom: 15px;
   -moz-box-shadow: 0px 0px 5px #333333;
@@ -1525,70 +1528,97 @@ body.sessions form.session, body.sessions form.password, body.sessions form.user
   border-radius: 5px;
   width: 60%;
 }
-/* line 17, ../../../app/stylesheets/partials/_sessions.scss */
-body.sessions form.session label, body.sessions form.password label, body.sessions form.user label, body.passwords form.session label, body.passwords form.password label, body.passwords form.user label {
+/* line 21, ../../../app/stylesheets/partials/_sessions.scss */
+body.sessions form.session label, body.sessions form.password label, body.sessions form.user label, body.passwords form.session label, body.passwords form.password label, body.passwords form.user label, body.registrations form.session label, body.registrations form.password label, body.registrations form.user label {
   line-height: 32px;
   font-size: 1.2em;
 }
-/* line 22, ../../../app/stylesheets/partials/_sessions.scss */
-body.sessions form.session input[type=text], body.sessions form.password input[type=text], body.sessions form.user input[type=text], body.passwords form.session input[type=text], body.passwords form.password input[type=text], body.passwords form.user input[type=text] {
-  width: 65%;
-}
 /* line 26, ../../../app/stylesheets/partials/_sessions.scss */
-body.sessions form.session input[type=text], body.sessions form.session input[type=password], body.sessions form.password input[type=text], body.sessions form.password input[type=password], body.sessions form.user input[type=text], body.sessions form.user input[type=password], body.passwords form.session input[type=text], body.passwords form.session input[type=password], body.passwords form.password input[type=text], body.passwords form.password input[type=password], body.passwords form.user input[type=text], body.passwords form.user input[type=password] {
+body.sessions form.session input[type=text], body.sessions form.session input[type=email], body.sessions form.session input[type=password], body.sessions form.password input[type=text], body.sessions form.password input[type=email], body.sessions form.password input[type=password], body.sessions form.user input[type=text], body.sessions form.user input[type=email], body.sessions form.user input[type=password], body.passwords form.session input[type=text], body.passwords form.session input[type=email], body.passwords form.session input[type=password], body.passwords form.password input[type=text], body.passwords form.password input[type=email], body.passwords form.password input[type=password], body.passwords form.user input[type=text], body.passwords form.user input[type=email], body.passwords form.user input[type=password], body.registrations form.session input[type=text], body.registrations form.session input[type=email], body.registrations form.session input[type=password], body.registrations form.password input[type=text], body.registrations form.password input[type=email], body.registrations form.password input[type=password], body.registrations form.user input[type=text], body.registrations form.user input[type=email], body.registrations form.user input[type=password] {
   height: 35px;
   font-size: 1.2em;
   color: #888;
   padding: 5px;
 }
 /* line 33, ../../../app/stylesheets/partials/_sessions.scss */
-body.sessions form.session input[type=submit], body.sessions form.password input[type=submit], body.sessions form.user input[type=submit], body.passwords form.session input[type=submit], body.passwords form.password input[type=submit], body.passwords form.user input[type=submit] {
-  -moz-border-radius: 5px;
+body.sessions form.session input[type=submit], body.sessions form.password input[type=submit], body.sessions form.user input[type=submit], body.passwords form.session input[type=submit], body.passwords form.password input[type=submit], body.passwords form.user input[type=submit], body.registrations form.session input[type=submit], body.registrations form.password input[type=submit], body.registrations form.user input[type=submit] {
+  background-color: #8c9cbf;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #8c9cbf), color-stop(50%, #546a9e), color-stop(50%, #36518f), color-stop(100%, #3d5691));
+  background-image: -webkit-linear-gradient(top, #8c9cbf 0%, #546a9e 50%, #36518f 50%, #3d5691 100%);
+  background-image: -moz-linear-gradient(top, #8c9cbf 0%, #546a9e 50%, #36518f 50%, #3d5691 100%);
+  background-image: -ms-linear-gradient(top, #8c9cbf 0%, #546a9e 50%, #36518f 50%, #3d5691 100%);
+  background-image: -o-linear-gradient(top, #8c9cbf 0%, #546a9e 50%, #36518f 50%, #3d5691 100%);
+  background-image: linear-gradient(top, #8c9cbf 0%, #546a9e 50%, #36518f 50%, #3d5691 100%);
+  border: 1px solid #172d6e;
+  border-bottom: 1px solid #0e1d45;
   -webkit-border-radius: 5px;
-  -o-border-radius: 5px;
+  -moz-border-radius: 5px;
   -ms-border-radius: 5px;
-  -khtml-border-radius: 5px;
+  -o-border-radius: 5px;
   border-radius: 5px;
-  height: 33px;
-  color: white;
-  font-weight: 500;
-  font-size: 1.2em;
-  text-transform: capitalize;
-  line-height: 32px;
-  background: url(/images/buttons/blue_button.png) repeat-x;
-  border: 1px solid #637379;
+  -webkit-box-shadow: inset 0 1px 0 0 #b1b9cb;
+  -moz-box-shadow: inset 0 1px 0 0 #b1b9cb;
+  -ms-box-shadow: inset 0 1px 0 0 #b1b9cb;
+  -o-box-shadow: inset 0 1px 0 0 #b1b9cb;
+  box-shadow: inset 0 1px 0 0 #b1b9cb;
+  color: #fff;
+  font: bold 16px "helvetica neue", helvetica, arial, sans-serif;
+  padding: 7px 0 8px 0;
+  text-decoration: none;
+  text-align: center;
+  text-shadow: 0 -1px 1px #000f4d;
+  width: 150px;
   width: 125px;
 }
-/* line 40, ../../../app/stylesheets/partials/_sessions.scss */
-body.sessions form.password input[type=submit], body.passwords form.password input[type=submit] {
+/* line 29, ../../../app/stylesheets/partials/_buttons.scss */
+body.sessions form.session input[type=submit]:hover, body.sessions form.password input[type=submit]:hover, body.sessions form.user input[type=submit]:hover, body.passwords form.session input[type=submit]:hover, body.passwords form.password input[type=submit]:hover, body.passwords form.user input[type=submit]:hover, body.registrations form.session input[type=submit]:hover, body.registrations form.password input[type=submit]:hover, body.registrations form.user input[type=submit]:hover {
+  background-color: #7f8dad;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7f8dad), color-stop(50%, #4a5e8c), color-stop(50%, #2f477d), color-stop(100%, #364c80));
+  background-image: -webkit-linear-gradient(top, #7f8dad 0%, #4a5e8c 50%, #2f477d 50%, #364c80 100%);
+  background-image: -moz-linear-gradient(top, #7f8dad 0%, #4a5e8c 50%, #2f477d 50%, #364c80 100%);
+  background-image: -ms-linear-gradient(top, #7f8dad 0%, #4a5e8c 50%, #2f477d 50%, #364c80 100%);
+  background-image: -o-linear-gradient(top, #7f8dad 0%, #4a5e8c 50%, #2f477d 50%, #364c80 100%);
+  background-image: linear-gradient(top, #7f8dad 0%, #4a5e8c 50%, #2f477d 50%, #364c80 100%);
+  cursor: pointer;
+}
+/* line 40, ../../../app/stylesheets/partials/_buttons.scss */
+body.sessions form.session input[type=submit]:active, body.sessions form.password input[type=submit]:active, body.sessions form.user input[type=submit]:active, body.passwords form.session input[type=submit]:active, body.passwords form.password input[type=submit]:active, body.passwords form.user input[type=submit]:active, body.registrations form.session input[type=submit]:active, body.registrations form.password input[type=submit]:active, body.registrations form.user input[type=submit]:active {
+  -webkit-box-shadow: inset 0 0 20px 0 #1d2845, 0 1px 0 white;
+  -moz-box-shadow: inset 0 0 20px 0 #1d2845, 0 1px 0 white;
+  -ms-box-shadow: inset 0 0 20px 0 #1d2845, 0 1px 0 white;
+  -o-box-shadow: inset 0 0 20px 0 #1d2845, 0 1px 0 white;
+  box-shadow: inset 0 0 20px 0 #1d2845, 0 1px 0 white;
+}
+/* line 41, ../../../app/stylesheets/partials/_sessions.scss */
+body.sessions form.password input[type=submit], body.passwords form.password input[type=submit], body.registrations form.password input[type=submit] {
   width: 140px;
 }
-/* line 46, ../../../app/stylesheets/partials/_sessions.scss */
-body.sessions form.user label, body.passwords form.user label {
+/* line 47, ../../../app/stylesheets/partials/_sessions.scss */
+body.sessions form.user label, body.passwords form.user label, body.registrations form.user label {
   width: 30%;
 }
-/* line 50, ../../../app/stylesheets/partials/_sessions.scss */
-body.sessions form.user fieldset.buttons, body.passwords form.user fieldset.buttons {
+/* line 51, ../../../app/stylesheets/partials/_sessions.scss */
+body.sessions form.user fieldset.buttons, body.passwords form.user fieldset.buttons, body.registrations form.user fieldset.buttons {
   padding-left: 30%;
 }
-/* line 53, ../../../app/stylesheets/partials/_sessions.scss */
-body.sessions form.user fieldset.buttons input[type=submit], body.passwords form.user fieldset.buttons input[type=submit] {
+/* line 54, ../../../app/stylesheets/partials/_sessions.scss */
+body.sessions form.user fieldset.buttons input[type=submit], body.passwords form.user fieldset.buttons input[type=submit], body.registrations form.user fieldset.buttons input[type=submit] {
   width: 170px;
 }
 
 /* line 2, ../../../app/stylesheets/partials/_profile.scss */
-body.users.edit div.head, body.users.update div.head, body.users.new div.head, body.users.create div.head, body.profiles.edit div.head, body.profiles.update div.head {
+body.registrations div.head, body.users.edit div.head, body.users.update div.head, body.users.new div.head, body.users.create div.head, body.profiles.edit div.head, body.profiles.update div.head {
   background: url(/images/backgrounds/tab.png) repeat-x left bottom;
 }
 /* line 5, ../../../app/stylesheets/partials/_profile.scss */
-body.users.edit div.head ul.tabs, body.users.update div.head ul.tabs, body.users.new div.head ul.tabs, body.users.create div.head ul.tabs, body.profiles.edit div.head ul.tabs, body.profiles.update div.head ul.tabs {
+body.registrations div.head ul.tabs, body.users.edit div.head ul.tabs, body.users.update div.head ul.tabs, body.users.new div.head ul.tabs, body.users.create div.head ul.tabs, body.profiles.edit div.head ul.tabs, body.profiles.update div.head ul.tabs {
   overflow: hidden;
   *zoom: 1;
   margin-left: 25px;
   margin-bottom: 20px;
 }
 /* line 10, ../../../app/stylesheets/partials/_profile.scss */
-body.users.edit div.head ul.tabs li, body.users.update div.head ul.tabs li, body.users.new div.head ul.tabs li, body.users.create div.head ul.tabs li, body.profiles.edit div.head ul.tabs li, body.profiles.update div.head ul.tabs li {
+body.registrations div.head ul.tabs li, body.users.edit div.head ul.tabs li, body.users.update div.head ul.tabs li, body.users.new div.head ul.tabs li, body.users.create div.head ul.tabs li, body.profiles.edit div.head ul.tabs li, body.profiles.update div.head ul.tabs li {
   float: left;
   padding: 5px 20px 10px;
   text-transform: uppercase;
@@ -1597,22 +1627,22 @@ body.users.edit div.head ul.tabs li, body.users.update div.head ul.tabs li, body
   border-top: 4px solid white;
 }
 /* line 19, ../../../app/stylesheets/partials/_profile.scss */
-body.users.edit div.head ul.tabs li.active, body.users.update div.head ul.tabs li.active, body.users.new div.head ul.tabs li.active, body.users.create div.head ul.tabs li.active, body.profiles.edit div.head ul.tabs li.active, body.profiles.update div.head ul.tabs li.active {
+body.registrations div.head ul.tabs li.active, body.users.edit div.head ul.tabs li.active, body.users.update div.head ul.tabs li.active, body.users.new div.head ul.tabs li.active, body.users.create div.head ul.tabs li.active, body.profiles.edit div.head ul.tabs li.active, body.profiles.update div.head ul.tabs li.active {
   border-top: 4px solid #A0C045;
   border-left: 4px solid #DCDCDC;
   border-right: 4px solid #DCDCDC;
   background: url(/images/backgrounds/white.png) repeat-x left bottom;
 }
 /* line 28, ../../../app/stylesheets/partials/_profile.scss */
-body.users.edit div[data-content-key=yield], body.users.update div[data-content-key=yield], body.users.new div[data-content-key=yield], body.users.create div[data-content-key=yield], body.profiles.edit div[data-content-key=yield], body.profiles.update div[data-content-key=yield] {
+body.registrations div[data-content-key=yield], body.users.edit div[data-content-key=yield], body.users.update div[data-content-key=yield], body.users.new div[data-content-key=yield], body.users.create div[data-content-key=yield], body.profiles.edit div[data-content-key=yield], body.profiles.update div[data-content-key=yield] {
   padding: 20px;
 }
 /* line 30, ../../../app/stylesheets/partials/_profile.scss */
-body.users.edit div[data-content-key=yield] h2, body.users.update div[data-content-key=yield] h2, body.users.new div[data-content-key=yield] h2, body.users.create div[data-content-key=yield] h2, body.profiles.edit div[data-content-key=yield] h2, body.profiles.update div[data-content-key=yield] h2 {
+body.registrations div[data-content-key=yield] h2, body.users.edit div[data-content-key=yield] h2, body.users.update div[data-content-key=yield] h2, body.users.new div[data-content-key=yield] h2, body.users.create div[data-content-key=yield] h2, body.profiles.edit div[data-content-key=yield] h2, body.profiles.update div[data-content-key=yield] h2 {
   margin-bottom: 5px;
 }
 /* line 35, ../../../app/stylesheets/partials/_profile.scss */
-body.users.edit form.user, body.users.update form.user, body.users.new form.user, body.users.create form.user, body.profiles.edit form.user, body.profiles.update form.user {
+body.registrations form.user, body.users.edit form.user, body.users.update form.user, body.users.new form.user, body.users.create form.user, body.profiles.edit form.user, body.profiles.update form.user {
   background-color: #DDD;
   padding: 20px;
   margin-bottom: 15px;
@@ -1630,92 +1660,123 @@ body.users.edit form.user, body.users.update form.user, body.users.new form.user
   font-size: 1.2em;
 }
 /* line 44, ../../../app/stylesheets/partials/_profile.scss */
-body.users.edit form.user label, body.users.update form.user label, body.users.new form.user label, body.users.create form.user label, body.profiles.edit form.user label, body.profiles.update form.user label {
+body.registrations form.user label, body.users.edit form.user label, body.users.update form.user label, body.users.new form.user label, body.users.create form.user label, body.profiles.edit form.user label, body.profiles.update form.user label {
   line-height: 32px;
 }
 /* line 48, ../../../app/stylesheets/partials/_profile.scss */
-body.users.edit form.user input[type=text], body.users.update form.user input[type=text], body.users.new form.user input[type=text], body.users.create form.user input[type=text], body.profiles.edit form.user input[type=text], body.profiles.update form.user input[type=text] {
+body.registrations form.user input[type=text], body.users.edit form.user input[type=text], body.users.update form.user input[type=text], body.users.new form.user input[type=text], body.users.create form.user input[type=text], body.profiles.edit form.user input[type=text], body.profiles.update form.user input[type=text] {
   width: 60%;
 }
 /* line 52, ../../../app/stylesheets/partials/_profile.scss */
-body.users.edit form.user li.boolean, body.users.update form.user li.boolean, body.users.new form.user li.boolean, body.users.create form.user li.boolean, body.profiles.edit form.user li.boolean, body.profiles.update form.user li.boolean {
+body.registrations form.user li.boolean, body.users.edit form.user li.boolean, body.users.update form.user li.boolean, body.users.new form.user li.boolean, body.users.create form.user li.boolean, body.profiles.edit form.user li.boolean, body.profiles.update form.user li.boolean {
   margin-bottom: 0;
   position: relative;
   top: -28px;
 }
 /* line 59, ../../../app/stylesheets/partials/_profile.scss */
-body.users.edit form.user li.select select, body.users.update form.user li.select select, body.users.new form.user li.select select, body.users.create form.user li.select select, body.profiles.edit form.user li.select select, body.profiles.update form.user li.select select {
+body.registrations form.user li.select select, body.users.edit form.user li.select select, body.users.update form.user li.select select, body.users.new form.user li.select select, body.users.create form.user li.select select, body.profiles.edit form.user li.select select, body.profiles.update form.user li.select select {
   margin-top: 8px;
 }
 /* line 64, ../../../app/stylesheets/partials/_profile.scss */
-body.users.edit form.user input[type=text], body.users.edit form.user input[type=password], body.users.update form.user input[type=text], body.users.update form.user input[type=password], body.users.new form.user input[type=text], body.users.new form.user input[type=password], body.users.create form.user input[type=text], body.users.create form.user input[type=password], body.profiles.edit form.user input[type=text], body.profiles.edit form.user input[type=password], body.profiles.update form.user input[type=text], body.profiles.update form.user input[type=password] {
+body.registrations form.user input[type=text], body.registrations form.user input[type=password], body.users.edit form.user input[type=text], body.users.edit form.user input[type=password], body.users.update form.user input[type=text], body.users.update form.user input[type=password], body.users.new form.user input[type=text], body.users.new form.user input[type=password], body.users.create form.user input[type=text], body.users.create form.user input[type=password], body.profiles.edit form.user input[type=text], body.profiles.edit form.user input[type=password], body.profiles.update form.user input[type=text], body.profiles.update form.user input[type=password] {
   height: 35px;
   color: #888;
   padding: 5px;
 }
 /* line 70, ../../../app/stylesheets/partials/_profile.scss */
-body.users.edit form.user input[type=submit], body.users.update form.user input[type=submit], body.users.new form.user input[type=submit], body.users.create form.user input[type=submit], body.profiles.edit form.user input[type=submit], body.profiles.update form.user input[type=submit] {
-  -moz-border-radius: 5px;
+body.registrations form.user input[type=submit], body.users.edit form.user input[type=submit], body.users.update form.user input[type=submit], body.users.new form.user input[type=submit], body.users.create form.user input[type=submit], body.profiles.edit form.user input[type=submit], body.profiles.update form.user input[type=submit] {
+  background-color: #8c9cbf;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #8c9cbf), color-stop(50%, #546a9e), color-stop(50%, #36518f), color-stop(100%, #3d5691));
+  background-image: -webkit-linear-gradient(top, #8c9cbf 0%, #546a9e 50%, #36518f 50%, #3d5691 100%);
+  background-image: -moz-linear-gradient(top, #8c9cbf 0%, #546a9e 50%, #36518f 50%, #3d5691 100%);
+  background-image: -ms-linear-gradient(top, #8c9cbf 0%, #546a9e 50%, #36518f 50%, #3d5691 100%);
+  background-image: -o-linear-gradient(top, #8c9cbf 0%, #546a9e 50%, #36518f 50%, #3d5691 100%);
+  background-image: linear-gradient(top, #8c9cbf 0%, #546a9e 50%, #36518f 50%, #3d5691 100%);
+  border: 1px solid #172d6e;
+  border-bottom: 1px solid #0e1d45;
   -webkit-border-radius: 5px;
-  -o-border-radius: 5px;
+  -moz-border-radius: 5px;
   -ms-border-radius: 5px;
-  -khtml-border-radius: 5px;
+  -o-border-radius: 5px;
   border-radius: 5px;
-  height: 33px;
-  color: white;
-  font-weight: 500;
-  font-size: 1.2em;
-  text-transform: capitalize;
-  line-height: 32px;
-  background: url(/images/buttons/blue_button.png) repeat-x;
-  border: 1px solid #637379;
+  -webkit-box-shadow: inset 0 1px 0 0 #b1b9cb;
+  -moz-box-shadow: inset 0 1px 0 0 #b1b9cb;
+  -ms-box-shadow: inset 0 1px 0 0 #b1b9cb;
+  -o-box-shadow: inset 0 1px 0 0 #b1b9cb;
+  box-shadow: inset 0 1px 0 0 #b1b9cb;
+  color: #fff;
+  font: bold 16px "helvetica neue", helvetica, arial, sans-serif;
+  padding: 7px 0 8px 0;
+  text-decoration: none;
+  text-align: center;
+  text-shadow: 0 -1px 1px #000f4d;
+  width: 150px;
   width: 125px;
   font-size: 14px;
 }
+/* line 29, ../../../app/stylesheets/partials/_buttons.scss */
+body.registrations form.user input[type=submit]:hover, body.users.edit form.user input[type=submit]:hover, body.users.update form.user input[type=submit]:hover, body.users.new form.user input[type=submit]:hover, body.users.create form.user input[type=submit]:hover, body.profiles.edit form.user input[type=submit]:hover, body.profiles.update form.user input[type=submit]:hover {
+  background-color: #7f8dad;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7f8dad), color-stop(50%, #4a5e8c), color-stop(50%, #2f477d), color-stop(100%, #364c80));
+  background-image: -webkit-linear-gradient(top, #7f8dad 0%, #4a5e8c 50%, #2f477d 50%, #364c80 100%);
+  background-image: -moz-linear-gradient(top, #7f8dad 0%, #4a5e8c 50%, #2f477d 50%, #364c80 100%);
+  background-image: -ms-linear-gradient(top, #7f8dad 0%, #4a5e8c 50%, #2f477d 50%, #364c80 100%);
+  background-image: -o-linear-gradient(top, #7f8dad 0%, #4a5e8c 50%, #2f477d 50%, #364c80 100%);
+  background-image: linear-gradient(top, #7f8dad 0%, #4a5e8c 50%, #2f477d 50%, #364c80 100%);
+  cursor: pointer;
+}
+/* line 40, ../../../app/stylesheets/partials/_buttons.scss */
+body.registrations form.user input[type=submit]:active, body.users.edit form.user input[type=submit]:active, body.users.update form.user input[type=submit]:active, body.users.new form.user input[type=submit]:active, body.users.create form.user input[type=submit]:active, body.profiles.edit form.user input[type=submit]:active, body.profiles.update form.user input[type=submit]:active {
+  -webkit-box-shadow: inset 0 0 20px 0 #1d2845, 0 1px 0 white;
+  -moz-box-shadow: inset 0 0 20px 0 #1d2845, 0 1px 0 white;
+  -ms-box-shadow: inset 0 0 20px 0 #1d2845, 0 1px 0 white;
+  -o-box-shadow: inset 0 0 20px 0 #1d2845, 0 1px 0 white;
+  box-shadow: inset 0 0 20px 0 #1d2845, 0 1px 0 white;
+}
 /* line 76, ../../../app/stylesheets/partials/_profile.scss */
-body.users.edit form.user > fieldset.inputs > ol > fieldset > legend, body.users.update form.user > fieldset.inputs > ol > fieldset > legend, body.users.new form.user > fieldset.inputs > ol > fieldset > legend, body.users.create form.user > fieldset.inputs > ol > fieldset > legend, body.profiles.edit form.user > fieldset.inputs > ol > fieldset > legend, body.profiles.update form.user > fieldset.inputs > ol > fieldset > legend {
+body.registrations form.user > fieldset.inputs > ol > fieldset > legend, body.users.edit form.user > fieldset.inputs > ol > fieldset > legend, body.users.update form.user > fieldset.inputs > ol > fieldset > legend, body.users.new form.user > fieldset.inputs > ol > fieldset > legend, body.users.create form.user > fieldset.inputs > ol > fieldset > legend, body.profiles.edit form.user > fieldset.inputs > ol > fieldset > legend, body.profiles.update form.user > fieldset.inputs > ol > fieldset > legend {
   margin-bottom: 12px;
   font-size: 18px;
   border-bottom: 3px solid black;
 }
 /* line 84, ../../../app/stylesheets/partials/_profile.scss */
-body.users.edit form.user li#user_profile_attributes_features_input ol.choices-group li, body.users.update form.user li#user_profile_attributes_features_input ol.choices-group li, body.users.new form.user li#user_profile_attributes_features_input ol.choices-group li, body.users.create form.user li#user_profile_attributes_features_input ol.choices-group li, body.profiles.edit form.user li#user_profile_attributes_features_input ol.choices-group li, body.profiles.update form.user li#user_profile_attributes_features_input ol.choices-group li {
+body.registrations form.user li#user_profile_attributes_features_input ol.choices-group li, body.users.edit form.user li#user_profile_attributes_features_input ol.choices-group li, body.users.update form.user li#user_profile_attributes_features_input ol.choices-group li, body.users.new form.user li#user_profile_attributes_features_input ol.choices-group li, body.users.create form.user li#user_profile_attributes_features_input ol.choices-group li, body.profiles.edit form.user li#user_profile_attributes_features_input ol.choices-group li, body.profiles.update form.user li#user_profile_attributes_features_input ol.choices-group li {
   float: left;
   margin-right: 20px;
 }
 /* line 88, ../../../app/stylesheets/partials/_profile.scss */
-body.users.edit form.user li#user_profile_attributes_features_input ol.choices-group li label > input, body.users.update form.user li#user_profile_attributes_features_input ol.choices-group li label > input, body.users.new form.user li#user_profile_attributes_features_input ol.choices-group li label > input, body.users.create form.user li#user_profile_attributes_features_input ol.choices-group li label > input, body.profiles.edit form.user li#user_profile_attributes_features_input ol.choices-group li label > input, body.profiles.update form.user li#user_profile_attributes_features_input ol.choices-group li label > input {
+body.registrations form.user li#user_profile_attributes_features_input ol.choices-group li label > input, body.users.edit form.user li#user_profile_attributes_features_input ol.choices-group li label > input, body.users.update form.user li#user_profile_attributes_features_input ol.choices-group li label > input, body.users.new form.user li#user_profile_attributes_features_input ol.choices-group li label > input, body.users.create form.user li#user_profile_attributes_features_input ol.choices-group li label > input, body.profiles.edit form.user li#user_profile_attributes_features_input ol.choices-group li label > input, body.profiles.update form.user li#user_profile_attributes_features_input ol.choices-group li label > input {
   margin: 0 0.5em 0 0.2em;
 }
 /* line 95, ../../../app/stylesheets/partials/_profile.scss */
-body.users.edit form.user div#selected_neighborhoods, body.users.update form.user div#selected_neighborhoods, body.users.new form.user div#selected_neighborhoods, body.users.create form.user div#selected_neighborhoods, body.profiles.edit form.user div#selected_neighborhoods, body.profiles.update form.user div#selected_neighborhoods {
+body.registrations form.user div#selected_neighborhoods, body.users.edit form.user div#selected_neighborhoods, body.users.update form.user div#selected_neighborhoods, body.users.new form.user div#selected_neighborhoods, body.users.create form.user div#selected_neighborhoods, body.profiles.edit form.user div#selected_neighborhoods, body.profiles.update form.user div#selected_neighborhoods {
   display: none;
   padding-left: 25%;
   margin: 12px 0 0 0;
 }
 /* line 100, ../../../app/stylesheets/partials/_profile.scss */
-body.users.edit form.user div#selected_neighborhoods div, body.users.update form.user div#selected_neighborhoods div, body.users.new form.user div#selected_neighborhoods div, body.users.create form.user div#selected_neighborhoods div, body.profiles.edit form.user div#selected_neighborhoods div, body.profiles.update form.user div#selected_neighborhoods div {
+body.registrations form.user div#selected_neighborhoods div, body.users.edit form.user div#selected_neighborhoods div, body.users.update form.user div#selected_neighborhoods div, body.users.new form.user div#selected_neighborhoods div, body.users.create form.user div#selected_neighborhoods div, body.profiles.edit form.user div#selected_neighborhoods div, body.profiles.update form.user div#selected_neighborhoods div {
   font-weight: 500;
 }
 /* line 105, ../../../app/stylesheets/partials/_profile.scss */
-body.users.edit form.user div#selected_neighborhoods span a, body.users.update form.user div#selected_neighborhoods span a, body.users.new form.user div#selected_neighborhoods span a, body.users.create form.user div#selected_neighborhoods span a, body.profiles.edit form.user div#selected_neighborhoods span a, body.profiles.update form.user div#selected_neighborhoods span a {
+body.registrations form.user div#selected_neighborhoods span a, body.users.edit form.user div#selected_neighborhoods span a, body.users.update form.user div#selected_neighborhoods span a, body.users.new form.user div#selected_neighborhoods span a, body.users.create form.user div#selected_neighborhoods span a, body.profiles.edit form.user div#selected_neighborhoods span a, body.profiles.update form.user div#selected_neighborhoods span a {
   color: red;
 }
 /* line 111, ../../../app/stylesheets/partials/_profile.scss */
-body.users.edit form.user li#user_receive_match_notifications_input, body.users.edit form.user li#user_receive_listing_summaries_input, body.users.update form.user li#user_receive_match_notifications_input, body.users.update form.user li#user_receive_listing_summaries_input, body.users.new form.user li#user_receive_match_notifications_input, body.users.new form.user li#user_receive_listing_summaries_input, body.users.create form.user li#user_receive_match_notifications_input, body.users.create form.user li#user_receive_listing_summaries_input, body.profiles.edit form.user li#user_receive_match_notifications_input, body.profiles.edit form.user li#user_receive_listing_summaries_input, body.profiles.update form.user li#user_receive_match_notifications_input, body.profiles.update form.user li#user_receive_listing_summaries_input {
+body.registrations form.user li#user_receive_match_notifications_input, body.registrations form.user li#user_receive_listing_summaries_input, body.users.edit form.user li#user_receive_match_notifications_input, body.users.edit form.user li#user_receive_listing_summaries_input, body.users.update form.user li#user_receive_match_notifications_input, body.users.update form.user li#user_receive_listing_summaries_input, body.users.new form.user li#user_receive_match_notifications_input, body.users.new form.user li#user_receive_listing_summaries_input, body.users.create form.user li#user_receive_match_notifications_input, body.users.create form.user li#user_receive_listing_summaries_input, body.profiles.edit form.user li#user_receive_match_notifications_input, body.profiles.edit form.user li#user_receive_listing_summaries_input, body.profiles.update form.user li#user_receive_match_notifications_input, body.profiles.update form.user li#user_receive_listing_summaries_input {
   padding-top: 10px;
 }
 
 /* line 118, ../../../app/stylesheets/partials/_profile.scss */
-body.users.edit div[data-content-key=yield], body.users.update div[data-content-key=yield], body.profiles.edit div[data-content-key=yield], body.profiles.update div[data-content-key=yield] {
+body.registrations div[data-content-key=yield], body.users.edit div[data-content-key=yield], body.users.update div[data-content-key=yield], body.profiles.edit div[data-content-key=yield], body.profiles.update div[data-content-key=yield] {
   padding: 0;
 }
 /* line 122, ../../../app/stylesheets/partials/_profile.scss */
-body.users.edit h2, body.users.update h2, body.profiles.edit h2, body.profiles.update h2 {
+body.registrations h2, body.users.edit h2, body.users.update h2, body.profiles.edit h2, body.profiles.update h2 {
   padding: 20px 0 5px 20px;
 }
 /* line 127, ../../../app/stylesheets/partials/_profile.scss */
-body.users.edit div.article form.user, body.users.update div.article form.user, body.profiles.edit div.article form.user, body.profiles.update div.article form.user {
+body.registrations div.article form.user, body.users.edit div.article form.user, body.users.update div.article form.user, body.profiles.edit div.article form.user, body.profiles.update div.article form.user {
   margin-left: 20px;
 }
 

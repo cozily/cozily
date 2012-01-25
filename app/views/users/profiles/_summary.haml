@@ -1,3 +1,3 @@
 .profile_summary{ :'data-content-key' => 'profile-summary' }
   ==* #{profile_summary(current_user.try(:profile))}
-  %span=link_to("update", signed_in? ? edit_user_profile_path(current_user) : sign_up_path, :'data-tip' => "click here to change how Cozily finds your matches")
+  %span=link_to("update", signed_in? ? edit_profile_path : new_user_registration_path, :'data-tip' => "click here to change how Cozily finds your matches")

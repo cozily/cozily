@@ -23,10 +23,8 @@ module ApplicationHelper
   end
 
   def lady_text
-    text = if signed_out?
-             "Thanks for checking out Cozily.  #{link_to("Sign up", sign_up_path)} if you like what you see!"
-           elsif !current_user.email_confirmed?
-             "Hey #{current_user.first_name}, remember to confirm your email address. #{link_to("Resend link", resend_confirmation_user_path(current_user), :'data-remote' => true)}."
+    text = if !user_signed_in?
+             "Thanks for checking out Cozily.  #{link_to("Sign up", new_user_registration_path)} if you like what you see!"
            elsif action_name == "messages"
              "Wow #{current_user.first_name}, people really seem to love talking to you!"
            else
@@ -48,19 +46,19 @@ module ApplicationHelper
 
   def lady_messages
     messages = [
-      "Home interprets heaven. Home is heaven for beginners.",
-      "A house is not a home unless it contains food and fire for the mind as well as the body.",
-      "Be grateful for the home you have, knowing that at this moment, all you have is all you need.",
+      # "Home wasn't built in a day.",
+      # "The home is the chief school of human virtues.",
+      # "Home interprets heaven. Home is heaven for beginners.",
+      # "There is nothing like staying at home for real comfort.",
+      "Where we love is home - home that our feet may leave, but not our hearts.",
       "Home is the most popular, and will be the most enduring of all earthly establishments.",
       "Home is the place where, when you have to go there, they have to take you in.",
-      "Home wasn't built in a day.",
-      "If I were asked to name the chief benefit of the house, I should say: the house shelters day-dreaming, the house protects the dreamer, the house allows one to dream in peace.",
       "The fellow that owns his own home is always just coming out of a hardware store.",
-      "The home is the chief school of human virtues.",
-      "The home to everyone is to him his castle and fortress, as well for his defense against injury and violence, as for his repose.",
-      "There is nothing like staying at home for real comfort.",
+      "A house is not a home unless it contains food and fire for the mind as well as the body.",
       "When I go home, its an easy way to be grounded. You learn to realize what truly matters.",
-      "Where we love is home - home that our feet may leave, but not our hearts."
+      "Be grateful for the home you have, knowing that at this moment, all you have is all you need."
+      # "The home to everyone is to him his castle and fortress, as well for his defense against injury and violence, as for his repose."
+      # "If I were asked to name the chief benefit of the house, I should say: the house shelters day-dreaming, the house protects the dreamer, the house allows one to dream in peace."
     ]
 
     messages << "Wow #{current_user.first_name}, that's a fabulous shirt you're wearing."

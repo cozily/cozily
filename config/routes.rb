@@ -1,4 +1,9 @@
 Rails.application.routes.draw do |map|
+  ActiveAdmin.routes(self)
+
+  devise_for :users, :controllers => { :registrations => "registrations" }
+  devise_for :admin_users, ActiveAdmin::Devise.config
+
   mount Resque::Server.new, :at => "/resque"
 
   map.resources :addresses, :collection => {:geocode => :get}, :only => [:geocode]
@@ -17,17 +22,12 @@ Rails.application.routes.draw do |map|
   map.resources :neighborhood_profiles, :only => [:create, :destroy]
 
   map.resource :search, :only => [:show]
-  map.resources :users,
-                :controller => 'users',
-                :only => [:edit, :create, :update],
-                :member => {:resend_confirmation => :post} do |user|
+  map.resources :users do |user|
     user.resources :favorites, :only => [:create, :destroy]
     user.resources :flags, :only => [:create, :destroy]
-    user.resource :profile, :only => [:edit], :controller => "users/profiles"
-    user.resource :confirmation, :controller => 'confirmations', :only => [:new, :create]
+    # user.resource :confirmation, :controller => 'confirmations', :only => [:new, :create]
   end
-
-  map.resource :session, :controller => 'sessions', :only => [:create]
+  resource :profile, :only => [:edit, :update], :controller => "users/profiles"
 
   map.business_search "yelp/business_search", :controller => "yelp", :action => "business_search"
 
@@ -53,35 +53,6 @@ Rails.application.routes.draw do |map|
     page.privacy_policy_page "/privacy_policy", :action => "privacy_policy"
     page.terms_of_service_page "/terms_of_service", :action => "terms_of_service"
   end
-
-  map.resources :passwords,
-                :controller => 'clearance/passwords',
-                :only       => [:new, :create]
-
-  map.resource :session,
-               :controller => 'clearance/sessions',
-               :only       => [:new, :create, :destroy]
-
-  map.resources :users, :controller => 'clearance/users' do |users|
-    users.resource :password,
-                   :controller => 'clearance/passwords',
-                   :only       => [:create, :edit, :update]
-
-    users.resource :confirmation,
-                   :controller => 'clearance/confirmations',
-                   :only       => [:new, :create]
-  end
-
-  map.sign_up 'sign_up',
-              :controller => 'clearance/users',
-              :action     => 'new'
-  map.sign_in 'sign_in',
-              :controller => 'clearance/sessions',
-              :action     => 'new'
-  map.sign_out 'sign_out',
-               :controller => 'clearance/sessions',
-               :action     => 'destroy',
-               :method     => :delete
 
   map.sitemap 'sitemap.xml', :controller => 'sitemap', :action => 'index'
 

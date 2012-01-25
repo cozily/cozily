@@ -2,7 +2,7 @@ require File.dirname(__FILE__) + '/acceptance_helper'
 
 feature "sign up" do
   scenario "user signs up with invalid data" do
-    visit sign_up_path
+    visit new_user_registration_path
     fill_in "Email", :with => "invalidemail"
     fill_in "Password", :with => "password"
     fill_in "Confirm password", :with => ""
@@ -11,7 +11,7 @@ feature "sign up" do
   end
 
   scenario "user signs up with valid data" do
-    visit sign_up_path
+    visit new_user_registration_path
     fill_in "First name", :with => "Barack"
     fill_in "Last name", :with => "Obama"
     fill_in "Email", :with => "email@person.com"
@@ -23,37 +23,7 @@ feature "sign up" do
     page.should have_content "Hi Barack"
 
     user = User.find_by_email("email@person.com")
-    assert !user.confirmation_token.blank?
-    ActionMailer::Base.deliveries.count.should > 0
-    ActionMailer::Base.deliveries.last.subject.should == "Confirm your email address"
-  end
-
-  scenario "user confirms his account" do
-    user = Factory(:user)
-    visit new_user_confirmation_path(:user_id => user, :token => user.confirmation_token)
-    page.should have_content("Confirmed email and signed in")
-    page.should have_content("Sign out")
-  end
-
-  scenario "signed in user clicks confirmation link again" do
-    user = Factory(:user)
-    visit new_user_confirmation_path(:user_id => user, :token => user.confirmation_token)
-    page.should have_content("Sign out")
-
-    visit new_user_confirmation_path(:user_id => user, :token => user.confirmation_token)
-    page.should have_content("Confirmed email and signed in")
-    page.should have_content("Sign out")
-  end
-
-  scenario "signed out user clicks confirmation link again" do
-    user = Factory(:user)
-    visit new_user_confirmation_path(:user_id => user, :token => user.confirmation_token)
-    page.should have_content("Sign out")
-
-    visit sign_out_path
-    visit new_user_confirmation_path(:user_id => user, :token => user.confirmation_token)
-    page.should have_content("Already confirmed email. Please sign in.")
-    page.should have_content("Sign in")
+    user.should_not be_nil
   end
 
   scenario "apartment seeker signs up", :js => true do

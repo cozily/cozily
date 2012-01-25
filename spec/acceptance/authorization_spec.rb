@@ -8,7 +8,7 @@ feature "authorization" do
     page.should have_no_css("a:contains('new apartment')")
 
     visit new_apartment_path
-    current_path.should == sign_in_path
+    current_path.should == new_user_session_path
   end
 
   scenario "user cannot edit another user's apartment" do

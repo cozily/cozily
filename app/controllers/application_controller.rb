@@ -1,7 +1,6 @@
 require 'geokit-rails'
 
 class ApplicationController < ActionController::Base
-  include Clearance::Authentication
   helper :all
   protect_from_forgery
 
@@ -66,13 +65,13 @@ class ApplicationController < ActionController::Base
   end
 
   def save_user_activity
-    return if signed_out? || current_user.has_activity_today?
+    return if !signed_in? || current_user.has_activity_today?
     current_user.activities.create(:date => Date.today)
   end
 
   def unauthenticate
     if current_user
-      redirect_to sign_out_path
+      redirect_to destroy_user_session
       return false
     end
   end

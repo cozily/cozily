@@ -1,6 +1,11 @@
 class User < ActiveRecord::Base
   is_gravtastic!
-  include Clearance::User
+  devise :database_authenticatable, :registerable, :omniauthable, :encryptable,
+         :recoverable, :rememberable, :trackable, :validatable
+
+  attr_accessible :email, :first_name, :last_name, :password, :password_confirmation, :remember_me, :phone, :profile_attributes,
+    :role_ids, :receive_listing_summaries, :receive_match_notifications, :receive_match_summaries
+
 
   has_one :profile, :dependent => :destroy
   has_many :activities, :class_name => "UserActivity", :dependent => :destroy

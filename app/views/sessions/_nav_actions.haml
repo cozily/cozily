@@ -1,8 +1,8 @@
 %ul.session
   -if signed_in?
     %li==Hi #{current_user.first_name}
-    %li.action=link_to("Sign out", sign_out_path)
-    %li.profile=link_to("My Cozily", edit_user_path(current_user))
+    %li.action=link_to("Sign out", destroy_user_session_path, :method => :delete)
+    %li.profile=link_to("My Cozily", edit_user_registration_path)
   -else
-    %li.action=link_to("Sign up", sign_up_path)
-    %li.action=link_to("Sign in", sign_in_path)
+    %li.action=link_to("Sign up", new_user_registration_path)
+    %li.action=link_to("Sign in", new_user_session_path)

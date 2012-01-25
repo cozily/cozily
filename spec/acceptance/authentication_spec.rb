@@ -13,13 +13,12 @@ feature "authentication" do
      dashboard_messages_path,
      new_apartment_path,
      edit_apartment_path(@apartment),
-     edit_user_path(@user),
-     edit_user_profile_path(@user),
-     admin_users_path,
-     sign_out_path].each do |path|
+     edit_user_registration_path,
+     edit_profile_path,
+     destroy_user_session_path].each do |path|
       visit path
 
-      current_path.should == sign_in_path
+      current_path.should == new_user_session_path
       page.should have_content("Sign in")
     end
   end

@@ -50,7 +50,7 @@ module ApartmentsHelper
     associations = apartment.missing_associations
 
     text = []
-    text << link_to('provide your phone number', edit_user_profile_path(apartment.user)) if associations.include?(:phone)
+    text << link_to('provide your phone number', edit_profile_path) if associations.include?(:phone)
     text << "confirm your email" if associations.include?(:email_confirmed)
 
     output = if apartment.missing_fields.present?

@@ -2,8 +2,8 @@ source :gemcutter
 
 gem "rails", "3.0.11"
 
+gem "activeadmin"
 gem "cancan", "1.3.4"
-gem "clearance", "0.9.1"
 gem "carrierwave"
 gem "compass", "0.11.5"
 gem "escape_utils"
@@ -18,6 +18,7 @@ gem "home_run", :require => "date"
 gem "jammit", "0.6.5"
 gem "newrelic_rpm"
 gem "mini_magick"
+gem "omniauth-facebook"
 gem "resque", :require => "resque/server"
 gem "resque_mailer"
 gem "roadie", "1.0.0.pre2"
@@ -27,6 +28,7 @@ gem "pg", "0.12.0"
 gem "rdiscount", "1.6.8"
 gem "retryable"
 gem "sass"
+gem "simple_form"
 gem "sunspot_rails"
 gem "sunspot_solr"
 gem "state_machine", "0.9.4"
@@ -47,6 +49,7 @@ group :test do
   gem "remarkable_activerecord", "4.0.0.alpha4"
   gem "resque_spec"
   gem "rspec-rails"
+  gem "sunspot_matchers"
   gem "webmock", "1.3.5"
 end
 

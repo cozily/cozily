@@ -1,0 +1,9 @@
+- content_for :page_title do
+  Cozily | Reset Password
+
+%h2 Forgot your password?
+%p We will email you a link to reset your password.
+
+= simple_form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f|
+  = f.input :email, :label => "Email address"
+  = f.submit "Send Reset Instructions", :style => "width: 250px;"

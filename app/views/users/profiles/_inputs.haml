@@ -21,7 +21,7 @@
 
         %li
           %label{:for => "profile_neighborhood_autocomplete"} Neighborhoods
-          = text_field_tag "profile_neighborhood_autocomplete", "e.g., Alphabet City", :'data-default-value' => "e.g., Alphabet City"
+          = text_field_tag "profile_neighborhood_autocomplete", "", :placeholder => "e.g., Alphabet City"
           #selected_neighborhoods
             - if f.object.profile.neighborhoods.present?
               %div Selected Neighborhoods

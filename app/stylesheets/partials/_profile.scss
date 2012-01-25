@@ -1,4 +1,4 @@
-body.users.edit, body.users.update, body.users.new, body.users.create, body.profiles.edit, body.profiles.update {
+body.registrations, body.users.edit, body.users.update, body.users.new, body.users.create, body.profiles.edit, body.profiles.update {
     div.head {
         background: url(/images/backgrounds/tab.png) repeat-x left bottom;
 
@@ -68,7 +68,7 @@ body.users.edit, body.users.update, body.users.new, body.users.create, body.prof
         }
 
         input[type=submit] {
-            @include dark-blue-button;
+            @include new-button;
             width: 125px;
             font-size: 14px;
         }
@@ -114,7 +114,7 @@ body.users.edit, body.users.update, body.users.new, body.users.create, body.prof
     }
 }
 
-body.users.edit, body.users.update, body.profiles.edit, body.profiles.update {
+body.registrations, body.users.edit, body.users.update, body.profiles.edit, body.profiles.update {
     div[data-content-key=yield] {
         padding: 0;
     }

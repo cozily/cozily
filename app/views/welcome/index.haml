@@ -1,5 +1,5 @@
 -content_for :page_title do
-  Welcome to Cozily
+  Welcome to Cozily: No-fee apartments in New York City
 
 %h1 Intelligent apartment hunting in NYC. No hassle. No fees.
 
@@ -11,8 +11,7 @@
 
 #login
   %h6 Already have an account?
-  = semantic_form_for :session, :url => session_path do |form|
-    = form.inputs do
-      =form.input :email, :label => false, :placeholder => "Email Address"
-      =form.input :password, :as => :password, :label => false, :placeholder => "Password"
-      =form.commit_button "Sign in"
+  = simple_form_for(:user, :url => user_session_path) do |form|
+    = form.input :email, :label => false, :placeholder => "Email Address"
+    = form.input :password, :as => :password, :label => false, :placeholder => "Password"
+    = form.submit "Sign in"

@@ -1,0 +1,19 @@
+- content_for :page_title do
+  Cozily | Sign up
+
+%h2 Sign up
+
+= semantic_form_for resource, :url => user_registration_path do |f|
+  = f.error_messages
+  = f.inputs do
+    = f.input :first_name
+    = f.input :last_name
+    = f.input :email, :as => :string
+    = f.input :password
+    = f.input :password_confirmation, :label => "Confirm password"
+
+  = render "users/profiles/inputs", :f => f
+
+  = f.buttons do
+    = f.commit_button "Sign up"
+

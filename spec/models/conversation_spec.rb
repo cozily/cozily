@@ -19,19 +19,6 @@ describe Conversation do
     conversation.should be_invalid
   end
 
-  it "should be invalid if the sender hasn't confirmed their email" do
-    user = Factory(:user, :email_confirmed => false)
-    conversation = Factory.build(:conversation, :sender => user)
-    conversation.should be_invalid
-    conversation.should have(1).error_on(:sender)
-  end
-
-  it "should be invalid if the first message is invalid" do
-    conversation = Factory.build(:conversation, :body => nil)
-    conversation.should be_invalid
-    conversation.should have(1).error
-  end
-
   it "should create a message and after it is created" do
     conversation = Factory.build(:conversation)
     lambda { conversation.save }.should change(Message, :count).by(1)

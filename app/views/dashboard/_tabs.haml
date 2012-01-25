@@ -1,4 +1,4 @@
--if signed_in?
+-if user_signed_in?
   %ul.tabs{ :'data-content-key' => "dashboard-tabs" }
     -if current_user.lister?
       %li{:class => "#{'active' if active == :listings}"}

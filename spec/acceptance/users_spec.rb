@@ -10,7 +10,8 @@ feature "users" do
     visit root_path
 
     click_link "My Cozily"
-    current_path.should == edit_user_path(@user)
+
+    current_path.should == edit_user_registration_path
 
     fill_in "Email", :with => "new@email.com"
     click_button "Update Account"
@@ -23,7 +24,7 @@ feature "users" do
     page.should have_content("Matches")
     page.should have_no_content("My Listings")
 
-    visit edit_user_profile_path(@user)
+    visit edit_profile_path
     uncheck "role_ids_0"
     check "role_ids_1"
     fill_in "user_phone", :with => "123-456-7890"
@@ -33,7 +34,7 @@ feature "users" do
     page.should have_no_content("Matches")
     page.should have_content("My Listings")
 
-    visit edit_user_profile_path(@user)
+    visit edit_profile_path
     check "role_ids_0"
     click_button "Update Profile"
 
@@ -41,7 +42,7 @@ feature "users" do
     page.should have_content("Matches")
     page.should have_content("My Listings")
 
-    visit edit_user_profile_path(@user)
+    visit edit_profile_path
     uncheck "role_ids_0"
     uncheck "role_ids_1"
     click_button "Update Profile"

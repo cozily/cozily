@@ -1,0 +1,13 @@
+-content_for :page_title do
+  Cozily | Change Password
+
+%h2 Change your password
+%p
+  Your password has been reset. Choose a new password below.
+= simple_form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |form|
+  = devise_error_messages!
+
+  = form.input :reset_password_token, :as => :hidden
+  = form.input :password, :as => :password, :label => "Choose password"
+  = form.input :password_confirmation, :as => :password, :label => "Confirm password"
+  = form.submit "Change my password", :style => "width: 250px;"

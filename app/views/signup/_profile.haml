@@ -12,7 +12,7 @@
             = profile_fields.input :rent, :label => "How much can you pay?", :required => false
             %li
               %label{:for => "neighborhood_autocomplete"} Where do you want to live?
-              =text_field_tag "neighborhood_autocomplete", "e.g., Alphabet City", :'data-default-value' => "e.g., Alphabet City"
+              =text_field_tag "neighborhood_autocomplete", :placeholder => "e.g., Alphabet City"
               #selected_neighborhoods
 
         = f.buttons do

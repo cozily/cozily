@@ -24,14 +24,14 @@
         =link_to image_tag("logos/logo.png"), root_url
 
         %ul.nav
-          -if signed_out?
+          -if !user_signed_in?
             %li=link_to "browse", browse_path
           -if current_user.try(:lister?)
             %li=link_to "my listings (#{current_user.apartments.count})", dashboard_listings_path
           -if current_user.try(:finder?)
             %li=link_to "matches (#{current_user.matches.total})", dashboard_matches_path
             %li=link_to "favorites (#{current_user.favorites.count})", dashboard_favorites_path
-          -if signed_in?
+          -if user_signed_in?
             %li=link_to "Inbox (#{current_user.unread_message_count})", dashboard_messages_path
 
         =render "sessions/nav_actions"

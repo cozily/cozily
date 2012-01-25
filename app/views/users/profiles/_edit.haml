@@ -2,13 +2,13 @@
   .head
     %ul.tabs
       %li
-        =link_to "Account", edit_user_path(current_user), :'data-remote' => 'true', :'data-method' => 'get'
+        =link_to "Account", edit_user_registration_path, :'data-remote' => 'true', :'data-method' => 'get'
       %li.active
-        =link_to "Profile", edit_user_profile_path(current_user), :'data-remote' => 'true', :'data-method' => 'get'
+        =link_to "Profile", edit_profile_path, :'data-remote' => 'true', :'data-method' => 'get'
 
   .article
-    = semantic_form_for @user do |f|
-      =hidden_field_tag "return_to", edit_user_profile_path(current_user)
+    = semantic_form_for @user, :url => profile_path do |f|
+      =hidden_field_tag "return_to", edit_profile_path
       =f.error_messages
       =render "users/profiles/inputs", :f => f
       = f.buttons do

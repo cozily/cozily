@@ -1,0 +1,16 @@
+-content_for :page_title do
+  Cozily | Sign in
+
+%h2 Sign in
+
+= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |form|
+  = devise_error_messages!
+
+  = form.input :email
+  = form.input :password, :as => :password
+  = form.submit "Sign in"
+
+%ul
+  %li= link_to "Sign up", new_user_registration_path
+  %li= link_to "Forgot password?", new_password_path(resource_name)
+

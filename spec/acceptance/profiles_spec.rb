@@ -5,9 +5,7 @@ feature "profiles" do
     user = Factory(:user)
     login_as(user)
 
-#    neighborhood = Apartment.last.neighborhoods.first
-
-    visit edit_user_profile_path(user)
+    visit edit_profile_path
     check "role_ids_0"
     check "Receive email notifications about new matches"
     check "Receive weekly summary emails about your matches"

@@ -8,7 +8,12 @@
       %h2 Just a little more to do.
 
       = semantic_form_for @user, :url => { :controller => "signup", :action => "create" } do |f|
-        =render "users/inputs", :f => f
+        = f.inputs do
+          = f.input :first_name
+          = f.input :last_name
+          = f.input :email, :as => :string
+          = f.input :password
+          = f.input :password_confirmation, :label => "Confirm password"
 
         = f.buttons do
           =f.commit_button "Sign Up & Start Browsing"
