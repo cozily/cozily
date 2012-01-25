@@ -54,12 +54,6 @@ Rails.application.routes.draw do |map|
     page.terms_of_service_page "/terms_of_service", :action => "terms_of_service"
   end
 
-  map.namespace :admin do |admin|
-    admin.home "", :controller => "base"
-    admin.resources :apartments, :only => [:index]
-    admin.resources :users, :only => [:index, :show, :activity], :collection => {:activity => :get}
-  end
-
   map.resources :passwords,
                 :controller => 'clearance/passwords',
                 :only       => [:new, :create]

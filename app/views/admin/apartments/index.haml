@@ -1,7 +1,0 @@
--content_for :page_title do
-  ==Cozily | Admin | Apartments
-
-=render "admin/base/nav"
-
-%h1==Apartments (#{Apartment.count})
-=render "table", :apartments => @apartments, :show_user => true
