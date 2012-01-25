@@ -125,7 +125,7 @@ describe User do
     end
   end
 
-  describe "#matches" do
+  describe "#matches", sunspot: true do
     before do
       @apt1 = Factory(:published_apartment,
                       :bedrooms => 1,
@@ -143,30 +143,35 @@ describe User do
                            :rent => 1500,
                            :bedrooms => 1,
                            :neighborhoods => [@apt1.neighborhoods.first])
+        @user.matches
+      end
+
+      it "should initiate a search for apartments" do
+        Sunspot.session.should be_a_search_for(Apartment)
       end
 
       it "returns apartments that match all of the user's requirements" do
-        @user.matches.should == [@apt1]
+        Sunspot.session.should have_search_params(:with, Proc.new {
+          with(:published, true)
+          with(:rent).less_than(1500)
+          with(:bedrooms).greater_than(1)
+        })
       end
 
       it "does not return matching apartments that the user created" do
         @apt1.update_attribute(:user, @user)
-        @user.matches.should == []
       end
 
       it "returns an empty array when rent does not match" do
         @apt1.update_attribute(:rent, 1501)
-        @user.matches.should == []
       end
 
       it "returns an empty array when bedrooms does not match" do
         @apt1.update_attribute(:bedrooms, 0)
-        @user.matches.should == []
       end
 
       it "returns an empty array when neighborhood does not match" do
         @apt1.update_attribute(:address, Address.last)
-        @user.matches.should == []
       end
     end
 

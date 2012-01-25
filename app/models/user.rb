@@ -80,7 +80,7 @@ class User < ActiveRecord::Base
   end
 
   def matches(page = 1)
-    Apartment.search do
+    Sunspot.search(Apartment) do
       with(:published, true)
       with(:rent).less_than(profile.rent) if profile.try(:rent)
       with(:bedrooms).greater_than(profile.bedrooms) if profile.try(:bedrooms)
