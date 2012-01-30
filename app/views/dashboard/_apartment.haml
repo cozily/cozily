@@ -24,7 +24,7 @@
     %li.contact
       %ul
         %li.phone=number_to_phone(apartment.user.phone, :area_code => true)
-        -if signed_in?
+        -if user_signed_in?
           %li.message
             =link_to "send message", "#", :'data-apartment-id' => apartment.id
             =render "messages/dialog", :apartment => apartment

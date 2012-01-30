@@ -1,6 +1,6 @@
-- if signed_in? && current_user.profile.present? && current_user.profile.neighborhoods.include?(neighborhood)
+- if user_signed_in? && current_user.profile.present? && current_user.profile.neighborhoods.include?(neighborhood)
   - klass = "active"
 %li{:'data-content-key' => "neighborhood_link_#{neighborhood.id}", :class => klass}
-  - if signed_in?
+  - if user_signed_in?
     = profile_icon_for_user_and_neighborhood(current_user, neighborhood)
   = link_to neighborhood.name, neighborhood

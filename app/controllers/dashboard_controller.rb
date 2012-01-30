@@ -68,7 +68,7 @@ class DashboardController < ApplicationController
   end
 
   def map
-    @matches = signed_in? ? current_user.matches : Apartment.with_state(:published)
+    @matches = user_signed_in? ? current_user.matches : Apartment.with_state(:published)
     respond_to do |format|
       format.html
       format.js do

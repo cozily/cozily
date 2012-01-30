@@ -103,7 +103,7 @@
       var ip_lng = '#{ip_lng}';
       var neighborhoods = #{Neighborhood.to_autocomplete.to_json};
 
-    - if signed_in?
+    - if user_signed_in?
       :javascript
         var lady_messages = #{lady_messages.to_json};
 

@@ -23,17 +23,17 @@
     - @apartment.photos.each do |photo|
       %meta{:property => 'listing:image', :content => [request.protocol, request.host_with_port, photo.image.url(:large)].join}
 
-    - if signed_in?
+    - if user_signed_in?
       %meta{:property => 'listing:contact', :content => @apartment.user.full_name}
       %meta{:property => 'listing:contact:telephone', :content => @apartment.user.phone}
       %meta{:property => 'listing:contact:email', :content => @apartment.user.email}
 
--if @apartment.published? || (signed_in? && @apartment.owned_by?(current_user))
+-if @apartment.published? || (user_signed_in? && @apartment.owned_by?(current_user))
   :javascript
     var self = #{@apartment.as_json(:methods => :to_param, :include => :address).to_json};
     var apartments = #{@apartment.comparable_apartments.as_json(:methods => :to_param, :include => :address).to_json};
 
-  -if signed_in? && @apartment.owned_by?(current_user)
+  -if user_signed_in? && @apartment.owned_by?(current_user)
     =render "apartments/owner", :apartment => @apartment, :type => :show
 
   .article
@@ -91,7 +91,7 @@
 
       .contact
         %h3 Contact
-        - if signed_in?
+        - if user_signed_in?
           %span.name=@apartment.user.full_name
           %span.email=@apartment.user.email
           %span.phone=number_to_phone(@apartment.user.phone, :area_code => true)

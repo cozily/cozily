@@ -65,7 +65,7 @@ class ApplicationController < ActionController::Base
   end
 
   def save_user_activity
-    return if !signed_in? || current_user.has_activity_today?
+    return if !user_signed_in? || current_user.has_activity_today?
     current_user.activities.create(:date => Date.today)
   end
 
