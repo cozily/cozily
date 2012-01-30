@@ -28,18 +28,45 @@ class Search
   end
 
   def results
-    apartments = Apartment.where(:state => "published")
-    apartments = apartments.where("bedrooms >= #{@min_bedrooms}") if @min_bedrooms.present?
-    apartments = apartments.where("rent <= #{@max_rent}") if @max_rent.present?
-    apartments = apartments.joins(:address).order("published_at desc")
-    unless @neighborhood_ids.empty?
-      apts = apartments.select { |a| (a.neighborhoods.map(&:id) & @neighborhood_ids).present? }
-      apartments = Apartment.where(:id => apts.map(&:id))
-    end
-    apartments
+    Sunspot.search(Apartment) do
+      if max_rent.present?
+        any_of do
+          with(:rent).less_than(max_rent)
+          with(:rent).equal_to(max_rent)
+        end
+      end
+
+      if min_bedrooms.present?
+        any_of do
+          with(:bedrooms).greater_than(min_bedrooms)
+          with(:bedrooms).equal_to(min_bedrooms)
+        end
+      end
+
+      with(:published, true)
+      with(:neighborhood_ids, neighborhood_ids) if neighborhood_ids.present?
+    end.results
   end
 
   def paginated_results
-    results.paginate(:page => page, :per_page => Apartment.per_page)
+    Sunspot.search(Apartment) do
+      if max_rent.present?
+        any_of do
+          with(:rent).less_than(max_rent)
+          with(:rent).equal_to(max_rent)
+        end
+      end
+
+      if min_bedrooms.present?
+        any_of do
+          with(:bedrooms).greater_than(min_bedrooms)
+          with(:bedrooms).equal_to(min_bedrooms)
+        end
+      end
+
+      with(:published, true)
+      with(:neighborhood_ids, neighborhood_ids) if neighborhood_ids.present?
+      paginate :per_page => Apartment.per_page, :page => page
+    end.results
   end
 end
