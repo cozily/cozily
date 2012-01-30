@@ -191,7 +191,6 @@ describe Apartment do
                            :bedrooms => 1,
                            :bathrooms => 1,
                            :square_footage => 500)
-      2.times { Factory(:image, :apartment => @apartment) }
     end
 
     it "returns true when required fields are present" do

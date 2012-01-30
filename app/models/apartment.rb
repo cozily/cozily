@@ -13,7 +13,6 @@ class Apartment < ActiveRecord::Base
   has_many :favorites, :dependent => :destroy
   has_many :features, :through => :apartment_features
   has_many :flags, :dependent => :destroy
-  has_many :images, :order => "position", :dependent => :destroy
   has_many :photos, :order => "position", :dependent => :destroy
   has_many :conversations, :dependent => :destroy, :order => "created_at desc"
 
