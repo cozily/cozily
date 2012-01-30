@@ -12,12 +12,20 @@ class RegistrationsController < Devise::RegistrationsController
 
   def create
     params[:user].merge!(:role_ids => params[:role_ids]) if params[:assign_roles]
-    @user = User.new(params[:user])
-    if @user.save
-      sign_in(@user)
-      flash[:notice] = "Welcome to Cozily!"
-      redirect_to dashboard_path
+
+    if verify_recaptcha
+      @user = User.new(params[:user])
+      if @user.save
+        sign_in(@user)
+        flash[:notice] = "Welcome to Cozily!"
+        redirect_to dashboard_path
+      else
+        render :template => 'users/registrations/new'
+      end
     else
+      build_resource
+      clean_up_passwords(resource)
+      flash.now[:alert] = "There was an error with the recaptcha code below. Please re-enter the code."
       render :template => 'users/registrations/new'
     end
   end

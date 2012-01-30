@@ -14,6 +14,9 @@
 
   = render "users/profiles/inputs", :f => f
 
+  .recaptcha
+    = recaptcha_tags
+
   = f.buttons do
     = f.commit_button "Sign up"
 

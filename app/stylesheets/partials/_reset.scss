@@ -23,10 +23,12 @@ body {
     margin: 0;
   }
 
-  input[type=text], input[type=password] {
-    color: #888;
-    font-size: 15px;
-    padding: 5px;
-    height: 35px;
+  fieldset {
+    input[type=text], input[type=password] {
+      color: #888;
+      font-size: 15px;
+      padding: 5px;
+      height: 35px;
+    }
   }
 }
