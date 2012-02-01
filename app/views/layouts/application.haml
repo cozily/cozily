@@ -1,9 +1,8 @@
 %html
   %head
+    = csrf_meta_tag
     %meta{:name => "google-site-verification", :content => "ngNx19GIfLCZM5M7JswVdccMH_hpwAOOdIj5sU-ieMQ"}
-    %meta{:name => 'csrf-token', :content => form_authenticity_token}
-    %meta{:name => 'csrf-param', :content => 'authenticity_token'}
-    %meta{name: 'alexaVerifyID', content: 'A7qvDRR7U1YVqNHsGmXuHAQq6MU'}
+    %meta{:name => "alexaVerifyID", :content => "A7qvDRR7U1YVqNHsGmXuHAQq6MU"}
     %link{:rel => "shortcut icon", :href => "/images/favicon.ico"}
 
     = yield(:nestio)
@@ -67,7 +66,7 @@
 
           = form_for @search, :as => :q, :url => search_path, :html => {:method => :post, :class => 'search'} do |f|
             = f.select :neighborhood_id, grouped_options_for_select(Neighborhood.to_grouped_dropdown, @search.neighborhood_id), {}, {:class => "chosen", :style => "width:250px", :"data-placeholder" => "Choose a neighborhood..."}
-            = f.select :min_bedrooms, [["0 Bedrooms (Studio)", 0], ["1 Bedroom", 1]], {:include_blank => true}, {:class => "chosen", :style => "width:180px", :"data-placeholder" => "Min Bedrooms?"}
+            = f.select :min_bedrooms, Apartment::BEDROOM_CHOICES, {:include_blank => true}, {:class => "chosen", :style => "width:180px", :"data-placeholder" => "Min Bedrooms?"}
             = f.text_field :max_rent, :placeholder => "Max Rent?"
 
             = f.submit :search, :value => "Search!"

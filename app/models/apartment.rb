@@ -3,6 +3,7 @@ default_url_options[:host] = "cozi.ly"
 
 class Apartment < ActiveRecord::Base
   REQUIRED_FIELDS = [:address, :user, :rent, :bedrooms, :bathrooms, :start_date]
+  BEDROOM_CHOICES = [["0 Bedrooms (Studio)", 0], ["1 Bedroom", 1], ["2 Bedrooms", 2], ["3 Bedrooms", 3], ["4+ Bedrooms", 4]]
 
   include Eventable
 

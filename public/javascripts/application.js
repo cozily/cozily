@@ -119,6 +119,11 @@ function attachTips() {
 }
 
 (function($) {
+    $(document).ajaxSend(function(e, xhr, options) {
+      var token = $("meta[name='csrf-token']").attr("content");
+      xhr.setRequestHeader("X-CSRF-Token", token);
+    });
+
     $(document).ready(function(){
       $("select.chosen").chosen();
       $("input#q_max_rent").mask("$ 999?99", {placeholder:" "})
