@@ -8,7 +8,7 @@ describe Apartment do
   it { should have_many(:favorites, :dependent => :destroy) }
   it { should have_many(:features, :through => :apartment_features) }
   it { should have_many(:flags, :dependent => :destroy) }
-  it { should have_many(:images, :order => "position", :dependent => :destroy) }
+  it { should have_many(:photos, :order => "position", :dependent => :destroy) }
   it { should have_many(:conversations, :dependent => :destroy) }
 
   it { should validate_presence_of(:user) }
