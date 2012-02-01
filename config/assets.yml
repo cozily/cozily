@@ -12,7 +12,7 @@ javascripts:
     - public/javascripts/jquery.infieldlabel.js
     - public/javascripts/jquery.tipTip.js
     - public/javascripts/jquery.maskedinput.js
-    - public/javascripts/chosen.jquery.min.js
+    - public/javascripts/chosen.jquery.js
     - public/javascripts/ajaxupload.js
     - public/javascripts/application.js
     - public/javascripts/maps.js
