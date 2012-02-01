@@ -1,8 +1,5 @@
 Rails.application.routes.draw do |map|
-  ActiveAdmin.routes(self)
-
   devise_for :users, :controllers => { :registrations => "registrations" }
-  devise_for :admin_users, ActiveAdmin::Devise.config
 
   mount Resque::Server.new, :at => "/resque"
 

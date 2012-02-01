@@ -2,11 +2,11 @@ source :gemcutter
 
 gem "rails", "3.0.11"
 
-gem "activeadmin"
 gem "active_hash"
 gem "cancan", "1.3.4"
 gem "carrierwave"
 gem "compass", "0.11.5"
+gem "devise"
 gem "escape_utils"
 gem "exceptional"
 gem "formtastic", "2.0.2"
