@@ -52,7 +52,7 @@ body.dashboard, body.searches, body.neighborhoods.show, body.browse {
         float: left;
 
         h2 {
-            margin: 15px;
+            margin: 10px 0 0 10px;
             border-bottom: 3px solid black;
         }
 
@@ -278,18 +278,25 @@ body.dashboard, body.searches, body.neighborhoods.show, body.browse {
         font-size: 1.2em;
         height: 36px;
         width: 100%;
+        border-bottom: 1px solid #f7f7f7;
+
         > ul {
-            padding: 9px 18px;
+            padding: 9px 0 0 9px;
             > li.counts {
                 float: left;
             }
             > li.navigation {
                 float: right;
-                > ul.pagination {
-                    > li {
-                        float: left;
-                        padding: 0 0 0 5px;
+                > nav.pagination {
+                  a {
+                    padding: 1px 5px;
+                    background-color: #f6e7b2;
+                    color: #333;
+
+                    &:hover {
+                      background-color: #efd389;
                     }
+                  }
                 }
             }
         }

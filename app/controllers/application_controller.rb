@@ -58,7 +58,7 @@ class ApplicationController < ActionController::Base
   end
 
   def load_search
-    @search = Search.new(:neighborhood_ids => session[:neighborhood_ids],
+    @search = Search.new(:neighborhood_id => session[:neighborhood_id],
                          :min_bedrooms => session[:min_bedrooms],
                          :max_rent => session[:max_rent],
                          :page => params[:page])

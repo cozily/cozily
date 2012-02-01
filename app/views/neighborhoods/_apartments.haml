@@ -1,13 +1,12 @@
 %div{:'data-content-key' => 'neighborhood-apartments'}
-  - if @neighborhood.published_apartments.present?
+  - if apartments.present?
     .pagination
       %ul
-        %li.counts= pagination_summary(params[:page], @neighborhood.published_apartments)
-        %li.navigation= will_paginate(apartments)
+        %li.counts= raw(page_entries_info apartments)
+        %li.navigation= paginate apartments
 
-    -apartments.each do |apartment|
-      =render "dashboard/apartment", :apartment => apartment, :position => position_in_collection(apartment, @neighborhood.published_apartments)
+    - apartments.each_with_index do |apartment, index|
+      = render "dashboard/apartment", :apartment => apartment, :position => index + pagination_offset(apartments)
 
-  -else
-    %p.empty
-      We don't have any listings in this neighborhood.  But we're working on it.
+  - else
+    %p.empty We don't have any listings in this neighborhood. But we're working on it.

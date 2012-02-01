@@ -12,7 +12,7 @@ class DashboardController < ApplicationController
   end
 
   def listings
-    @apartments = current_user.apartments.paginate(:page => params[:page], :per_page => Apartment.per_page)
+    @apartments = current_user.apartments.page(params[:page])
     respond_to do |format|
       format.html
       format.js do
@@ -40,7 +40,7 @@ class DashboardController < ApplicationController
   end
 
   def favorites
-    @favorites = current_user.favorite_apartments.paginate(:page => params[:page], :per_page => Apartment.per_page)
+    @favorites = current_user.favorite_apartments.page(params[:page])
     respond_to do |format|
       format.html
       format.js do

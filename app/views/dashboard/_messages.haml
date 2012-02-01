@@ -2,8 +2,8 @@
   - if @conversations.present?
     .pagination
       %ul
-        %li.counts= pagination_summary(params[:page], @conversations)
-        %li.navigation= will_paginate((@conversations))
+        %li.counts= raw(page_entries_info @conversations)
+        %li.navigation= paginate @conversations
 
     .conversations
       - @conversations.each do |conversation|
@@ -21,13 +21,12 @@
 
             %li.delete= image_tag "icons/delete_message.png"
             %li.photo
-              -if conversation.apartment.photos.present?
-                =image_tag(conversation.apartment.photos.first.image.url(:micro))
-              -else
-                =image_tag("defaults/apartment/micro.jpg")
+              - if conversation.apartment.photos.present?
+                = image_tag(conversation.apartment.photos.first.image.url(:micro))
+              - else
+                = image_tag("defaults/apartment/micro.jpg")
             %li.name= conversation.apartment.address.street
         %div.messages{:style => "display: none;"}
           = render "dashboard/messages/messages", :conversation => conversation
   - else
-    %p.empty
-      Your inbox is empty.  You should be more talkative.
+    %p.empty Your inbox is empty. You should be more talkative.

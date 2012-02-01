@@ -3,14 +3,14 @@
     -if @paginated_apartments.present?
       .pagination
         %ul
-          %li.counts= pagination_summary(params[:page], @all_apartments)
-          %li.navigation= will_paginate(@paginated_apartments)
-      -@paginated_apartments.each do |apartment|
-        =render "dashboard/apartment", :apartment => apartment, :position => position_in_collection(apartment, @all_apartments)
+          %li.counts= raw(page_entries_info @paginated_apartments)
+          %li.navigation= paginate @paginated_apartments
+      - @paginated_apartments.each_with_index do |apartment, index|
+        =render "dashboard/apartment", :apartment => apartment, :position => index + pagination_offset(@paginated_apartments)
       .pagination
         %ul
-          %li.counts= pagination_summary(params[:page], @all_apartments)
-          %li.navigation= will_paginate(@paginated_apartments)
+          %li.counts= raw(page_entries_info @paginated_apartments)
+          %li.navigation= paginate @paginated_apartments
 
     -else
       %p.empty

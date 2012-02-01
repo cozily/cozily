@@ -1,19 +1,18 @@
 %div{:'data-content-key' => 'active-tab'}
   .article
-    -if favorites.present?
+    - if favorites.present?
       .pagination
         %ul
-          %li.counts= pagination_summary(params[:page], current_user.favorite_apartments)
-          %li.navigation= will_paginate(favorites)
-      -favorites.each do |apartment|
-        =render "dashboard/apartment", :apartment => apartment, :position => position_in_collection(apartment, current_user.favorite_apartments)
+          %li.counts= raw(page_entries_info favorites)
+          %li.navigation= paginate favorites
+      - favorites.each_with_index do |apartment, index|
+        = render "dashboard/apartment", :apartment => apartment, :position => index + pagination_offset(favorites)
 
-    -else
-      %p.empty
-        You haven't favorited any apartments.  What gives?
+    - else
+      %p.empty You haven't favorited any apartments.  What gives?
 
   .aside
     #map_canvas
-    =image_tag "backgrounds/shadow.png", :class => "shadow"
+    = image_tag "backgrounds/shadow.png", :class => "shadow"
 
-    =render "shared/activity_feed", :events => @events
+    = render "shared/activity_feed", :events => @events

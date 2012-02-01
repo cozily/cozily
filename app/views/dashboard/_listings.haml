@@ -5,10 +5,10 @@
 
       .pagination
         %ul
-          %li.counts= pagination_summary(params[:page], current_user.apartments)
-          %li.navigation= will_paginate(apartments)
+          %li.counts= raw(page_entries_info apartments)
+          %li.navigation= paginate apartments
       -apartments.each do |apartment|
-        -position = position_in_collection(apartment, current_user.apartments)
+        -position = 1 #position_in_collection(apartment, current_user.apartments)
         .listing[apartment]
           %ul
             %li.photo
@@ -42,15 +42,13 @@
             ==Number of Favorites: <span>#{apartment.favorites_count}</span>
       .pagination
         %ul
-          %li.counts= pagination_summary(params[:page], current_user.apartments)
-          %li.navigation= will_paginate(apartments)
+          %li.counts= raw(page_entries_info apartments)
+          %li.navigation= paginate apartments
 
-    -else
-      %p.empty
-        ==You haven't created any apartments.  #{link_to("Create one", new_apartment_path)}.
+    - else
+      %p.empty You haven't created any apartments. #{link_to("Create one", new_apartment_path)}.
 
   .aside
     #map_canvas
-    =image_tag "backgrounds/shadow.png", :class => "shadow"
-
-    =render "shared/activity_feed", :events => @events
+    = image_tag "backgrounds/shadow.png", :class => "shadow"
+    = render "shared/activity_feed", :events => @events

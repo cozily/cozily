@@ -595,7 +595,7 @@ div#search div.container {
 /* line 6, ../../../app/stylesheets/partials/_search.scss */
 div#search h2 {
   color: white;
-  font-weight: 500;
+  font-weight: 300;
   padding: 15px 0;
   float: left;
   margin-right: 30px;
@@ -605,57 +605,92 @@ div#search form {
   padding: 18px 0;
 }
 /* line 17, ../../../app/stylesheets/partials/_search.scss */
-div#search form input#neighborhood_autocomplete, div#search form input#q_min_bedrooms, div#search form input#q_max_rent {
-  float: left;
-  height: 32px;
-  background-color: white;
+div#search form input#q_max_rent {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   -o-border-radius: 5px;
   -ms-border-radius: 5px;
   -khtml-border-radius: 5px;
   border-radius: 5px;
-  -moz-box-shadow: 0px 0px 5px #333333;
-  -webkit-box-shadow: 0px 0px 5px #333333;
-  -o-box-shadow: 0px 0px 5px #333333;
-  box-shadow: 0px 0px 5px #333333;
-  padding: 5px 5px 5px 15px;
-  border: none;
-  color: #999;
-  font-size: 1.2em;
-  font-weight: 200;
-  margin-right: 15px;
+  height: 28px;
+  line-height: 1;
+  padding: 6px 8px;
+  border: 1px solid #aaa;
+  float: left;
+  font: normal 13px "museo-slab";
+  text-decoration: none;
+  color: #444444;
+  background-color: white;
+  margin-left: 10px;
+  width: 100px;
 }
-/* line 31, ../../../app/stylesheets/partials/_search.scss */
-div#search form input#neighborhood_autocomplete {
-  width: 250px;
+/* line 32, ../../../app/stylesheets/partials/_search.scss */
+div#search form select#q_neighborhood_id, div#search form select#q_min_bedrooms, div#search form input#q_max_rent {
+  float: left;
 }
-/* line 35, ../../../app/stylesheets/partials/_search.scss */
-div#search form input#q_min_bedrooms {
-  width: 150px;
+/* line 36, ../../../app/stylesheets/partials/_search.scss */
+div#search form div#q_neighborhood_id_chzn {
+  float: left;
+  padding-right: 10px;
 }
-/* line 39, ../../../app/stylesheets/partials/_search.scss */
-div#search form input#q_max_rent {
-  width: 145px;
+/* line 41, ../../../app/stylesheets/partials/_search.scss */
+div#search form div#q_min_bedrooms_chzn {
+  float: left;
 }
 /* line 43, ../../../app/stylesheets/partials/_search.scss */
+div#search form div#q_min_bedrooms_chzn input {
+  display: none;
+}
+/* line 48, ../../../app/stylesheets/partials/_search.scss */
 div#search form input[type=submit] {
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -o-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -khtml-border-radius: 5px;
-  border-radius: 5px;
-  height: 33px;
-  color: white;
-  font-weight: 500;
-  font-size: 1.2em;
-  text-transform: capitalize;
-  line-height: 32px;
-  background: url(/images/buttons/blue_button.png) repeat-x;
-  border: 1px solid #637379;
+  background-color: #eeeeee;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeeeee), color-stop(100%, #cccccc));
+  background-image: -webkit-linear-gradient(top, #eeeeee, #cccccc);
+  background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);
+  background-image: -ms-linear-gradient(top, #eeeeee, #cccccc);
+  background-image: -o-linear-gradient(top, #eeeeee, #cccccc);
+  background-image: linear-gradient(top, #eeeeee, #cccccc);
+  border: 1px solid #ccc;
+  border-bottom: 1px solid #bbb;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  color: #333;
+  font: bold 12px "museo-slab";
+  line-height: 1;
+  padding: 5px 0;
+  text-align: center;
+  text-shadow: 0 1px 0 #eee;
+  width: 150px;
   width: 110px;
-  margin-left: 20px;
+  height: 28px;
+  margin-left: 10px;
+}
+/* line 23, ../../../app/stylesheets/partials/_buttons.scss */
+div#search form input[type=submit]:hover {
+  background-color: #dddddd;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dddddd), color-stop(100%, #bbbbbb));
+  background-image: -webkit-linear-gradient(top, #dddddd, #bbbbbb);
+  background-image: -moz-linear-gradient(top, #dddddd, #bbbbbb);
+  background-image: -ms-linear-gradient(top, #dddddd, #bbbbbb);
+  background-image: -o-linear-gradient(top, #dddddd, #bbbbbb);
+  background-image: linear-gradient(top, #dddddd, #bbbbbb);
+  border: 1px solid #bbb;
+  border-bottom: 1px solid #999;
+  cursor: pointer;
+  text-shadow: 0 1px 0 #ddd;
+}
+/* line 36, ../../../app/stylesheets/partials/_buttons.scss */
+div#search form input[type=submit]:active {
+  border: 1px solid #aaa;
+  border-bottom: 1px solid #888;
+  -webkit-box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
+  -moz-box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
+  -ms-box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
+  -o-box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
+  box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
 }
 
 /* line 2, ../../../app/stylesheets/partials/_unauthenticated.scss */
@@ -922,7 +957,7 @@ body.dashboard div.article, body.searches div.article, body.neighborhoods.show d
 }
 /* line 54, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.article h2, body.searches div.article h2, body.neighborhoods.show div.article h2, body.browse div.article h2 {
-  margin: 15px;
+  margin: 10px 0 0 10px;
   border-bottom: 3px solid black;
 }
 /* line 59, ../../../app/stylesheets/partials/_dashboard.scss */
@@ -1193,109 +1228,115 @@ body.dashboard div.pagination, body.searches div.pagination, body.neighborhoods.
   font-size: 1.2em;
   height: 36px;
   width: 100%;
-}
-/* line 281, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.pagination > ul, body.searches div.pagination > ul, body.neighborhoods.show div.pagination > ul, body.browse div.pagination > ul {
-  padding: 9px 18px;
+  border-bottom: 1px solid #f7f7f7;
 }
 /* line 283, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.pagination > ul, body.searches div.pagination > ul, body.neighborhoods.show div.pagination > ul, body.browse div.pagination > ul {
+  padding: 9px 0 0 9px;
+}
+/* line 285, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.pagination > ul > li.counts, body.searches div.pagination > ul > li.counts, body.neighborhoods.show div.pagination > ul > li.counts, body.browse div.pagination > ul > li.counts {
   float: left;
 }
-/* line 286, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 288, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.pagination > ul > li.navigation, body.searches div.pagination > ul > li.navigation, body.neighborhoods.show div.pagination > ul > li.navigation, body.browse div.pagination > ul > li.navigation {
   float: right;
 }
-/* line 289, ../../../app/stylesheets/partials/_dashboard.scss */
-body.dashboard div.pagination > ul > li.navigation > ul.pagination > li, body.searches div.pagination > ul > li.navigation > ul.pagination > li, body.neighborhoods.show div.pagination > ul > li.navigation > ul.pagination > li, body.browse div.pagination > ul > li.navigation > ul.pagination > li {
-  float: left;
-  padding: 0 0 0 5px;
+/* line 291, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.pagination > ul > li.navigation > nav.pagination a, body.searches div.pagination > ul > li.navigation > nav.pagination a, body.neighborhoods.show div.pagination > ul > li.navigation > nav.pagination a, body.browse div.pagination > ul > li.navigation > nav.pagination a {
+  padding: 1px 5px;
+  background-color: #f6e7b2;
+  color: #333;
 }
-/* line 299, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 296, ../../../app/stylesheets/partials/_dashboard.scss */
+body.dashboard div.pagination > ul > li.navigation > nav.pagination a:hover, body.searches div.pagination > ul > li.navigation > nav.pagination a:hover, body.neighborhoods.show div.pagination > ul > li.navigation > nav.pagination a:hover, body.browse div.pagination > ul > li.navigation > nav.pagination a:hover {
+  background-color: #efd389;
+}
+/* line 306, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div[data-content-key=active-tab] div#map_canvas.full, body.searches div[data-content-key=active-tab] div#map_canvas.full, body.neighborhoods.show div[data-content-key=active-tab] div#map_canvas.full, body.browse div[data-content-key=active-tab] div#map_canvas.full {
   margin: 10px;
   width: 930px;
 }
-/* line 305, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 312, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside, body.searches div.aside, body.neighborhoods.show div.aside, body.browse div.aside {
   width: 310px;
   float: right;
 }
-/* line 309, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 316, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside h3, body.searches div.aside h3, body.neighborhoods.show div.aside h3, body.browse div.aside h3 {
   font-size: 2em;
   padding-bottom: 8px;
   margin-bottom: 0;
 }
-/* line 315, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 322, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#map_canvas, body.searches div.aside div#map_canvas, body.neighborhoods.show div.aside div#map_canvas, body.browse div.aside div#map_canvas {
   width: 306px;
   height: 306px;
   margin-top: 4px;
 }
-/* line 321, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 328, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed, body.searches div.aside div#activity_feed, body.neighborhoods.show div.aside div#activity_feed, body.browse div.aside div#activity_feed {
   margin-top: 15px;
 }
-/* line 324, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 331, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed h3, body.searches div.aside div#activity_feed h3, body.neighborhoods.show div.aside div#activity_feed h3, body.browse div.aside div#activity_feed h3 {
   border-right: 4px solid #429E87;
 }
-/* line 328, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 335, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul, body.searches div.aside div#activity_feed ul, body.neighborhoods.show div.aside div#activity_feed ul, body.browse div.aside div#activity_feed ul {
   margin-top: 5px;
   padding-right: 22px;
 }
-/* line 332, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 339, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li, body.searches div.aside div#activity_feed ul li, body.neighborhoods.show div.aside div#activity_feed ul li, body.browse div.aside div#activity_feed ul li {
   background-repeat: no-repeat;
   background-position: 0 2px;
   padding-left: 25px;
   margin-bottom: 12px;
 }
-/* line 338, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 345, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li span.text, body.searches div.aside div#activity_feed ul li span.text, body.neighborhoods.show div.aside div#activity_feed ul li span.text, body.browse div.aside div#activity_feed ul li span.text {
   font-weight: 500;
 }
-/* line 342, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 349, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li span.date, body.searches div.aside div#activity_feed ul li span.date, body.neighborhoods.show div.aside div#activity_feed ul li span.date, body.browse div.aside div#activity_feed ul li span.date {
   display: block;
   color: #888;
 }
-/* line 348, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 355, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li.favorite.created, body.searches div.aside div#activity_feed ul li.favorite.created, body.neighborhoods.show div.aside div#activity_feed ul li.favorite.created, body.browse div.aside div#activity_feed ul li.favorite.created {
   background: url(/images/icons/add.png) no-repeat 0 2px;
 }
-/* line 352, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 359, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li.favorite.destroyed, body.searches div.aside div#activity_feed ul li.favorite.destroyed, body.neighborhoods.show div.aside div#activity_feed ul li.favorite.destroyed, body.browse div.aside div#activity_feed ul li.favorite.destroyed {
   background: url(/images/icons/remove.png) no-repeat 0 2px;
 }
-/* line 356, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 363, ../../../app/stylesheets/partials/_dashboard.scss */
 body.dashboard div.aside div#activity_feed ul li.message.created, body.searches div.aside div#activity_feed ul li.message.created, body.neighborhoods.show div.aside div#activity_feed ul li.message.created, body.browse div.aside div#activity_feed ul li.message.created {
   background: url(/images/icons/message.png) no-repeat 0 2px;
 }
 
-/* line 364, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 371, ../../../app/stylesheets/partials/_dashboard.scss */
 div.message_dialog {
   display: none;
 }
-/* line 367, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 374, ../../../app/stylesheets/partials/_dashboard.scss */
 div.message_dialog p {
   margin: 3px 0 10px;
   font-weight: 600;
 }
-/* line 373, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 380, ../../../app/stylesheets/partials/_dashboard.scss */
 div.message_dialog form.formtastic.message li {
   margin: 0;
 }
-/* line 377, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 384, ../../../app/stylesheets/partials/_dashboard.scss */
 div.message_dialog form.formtastic.message textarea {
   height: 125px;
   width: 100%;
   padding: 5px;
 }
 
-/* line 386, ../../../app/stylesheets/partials/_dashboard.scss */
+/* line 393, ../../../app/stylesheets/partials/_dashboard.scss */
 div.ui-dialog div.ui-dialog-buttonpane {
   text-align: right;
 }
@@ -1528,20 +1569,20 @@ body.sessions form.session, body.sessions form.password, body.sessions form.user
   border-radius: 5px;
   width: 60%;
 }
-/* line 22, ../../../app/stylesheets/partials/_sessions.scss */
-body.sessions form.session fieldset label, body.sessions form.password fieldset label, body.sessions form.user fieldset label, body.passwords form.session fieldset label, body.passwords form.password fieldset label, body.passwords form.user fieldset label, body.registrations form.session fieldset label, body.registrations form.password fieldset label, body.registrations form.user fieldset label {
+/* line 21, ../../../app/stylesheets/partials/_sessions.scss */
+body.sessions form.session label, body.sessions form.password label, body.sessions form.user label, body.passwords form.session label, body.passwords form.password label, body.passwords form.user label, body.registrations form.session label, body.registrations form.password label, body.registrations form.user label {
   line-height: 32px;
   font-size: 1.2em;
 }
-/* line 27, ../../../app/stylesheets/partials/_sessions.scss */
-body.sessions form.session fieldset input[type=text], body.sessions form.session fieldset input[type=email], body.sessions form.session fieldset input[type=password], body.sessions form.password fieldset input[type=text], body.sessions form.password fieldset input[type=email], body.sessions form.password fieldset input[type=password], body.sessions form.user fieldset input[type=text], body.sessions form.user fieldset input[type=email], body.sessions form.user fieldset input[type=password], body.passwords form.session fieldset input[type=text], body.passwords form.session fieldset input[type=email], body.passwords form.session fieldset input[type=password], body.passwords form.password fieldset input[type=text], body.passwords form.password fieldset input[type=email], body.passwords form.password fieldset input[type=password], body.passwords form.user fieldset input[type=text], body.passwords form.user fieldset input[type=email], body.passwords form.user fieldset input[type=password], body.registrations form.session fieldset input[type=text], body.registrations form.session fieldset input[type=email], body.registrations form.session fieldset input[type=password], body.registrations form.password fieldset input[type=text], body.registrations form.password fieldset input[type=email], body.registrations form.password fieldset input[type=password], body.registrations form.user fieldset input[type=text], body.registrations form.user fieldset input[type=email], body.registrations form.user fieldset input[type=password] {
+/* line 26, ../../../app/stylesheets/partials/_sessions.scss */
+body.sessions form.session input[type=text], body.sessions form.session input[type=email], body.sessions form.session input[type=password], body.sessions form.password input[type=text], body.sessions form.password input[type=email], body.sessions form.password input[type=password], body.sessions form.user input[type=text], body.sessions form.user input[type=email], body.sessions form.user input[type=password], body.passwords form.session input[type=text], body.passwords form.session input[type=email], body.passwords form.session input[type=password], body.passwords form.password input[type=text], body.passwords form.password input[type=email], body.passwords form.password input[type=password], body.passwords form.user input[type=text], body.passwords form.user input[type=email], body.passwords form.user input[type=password], body.registrations form.session input[type=text], body.registrations form.session input[type=email], body.registrations form.session input[type=password], body.registrations form.password input[type=text], body.registrations form.password input[type=email], body.registrations form.password input[type=password], body.registrations form.user input[type=text], body.registrations form.user input[type=email], body.registrations form.user input[type=password] {
   height: 35px;
   font-size: 1.2em;
   color: #888;
   padding: 5px;
 }
-/* line 34, ../../../app/stylesheets/partials/_sessions.scss */
-body.sessions form.session fieldset input[type=submit], body.sessions form.password fieldset input[type=submit], body.sessions form.user fieldset input[type=submit], body.passwords form.session fieldset input[type=submit], body.passwords form.password fieldset input[type=submit], body.passwords form.user fieldset input[type=submit], body.registrations form.session fieldset input[type=submit], body.registrations form.password fieldset input[type=submit], body.registrations form.user fieldset input[type=submit] {
+/* line 33, ../../../app/stylesheets/partials/_sessions.scss */
+body.sessions form.session input[type=submit], body.sessions form.password input[type=submit], body.sessions form.user input[type=submit], body.passwords form.session input[type=submit], body.passwords form.password input[type=submit], body.passwords form.user input[type=submit], body.registrations form.session input[type=submit], body.registrations form.password input[type=submit], body.registrations form.user input[type=submit] {
   background-color: #8c9cbf;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #8c9cbf), color-stop(50%, #546a9e), color-stop(50%, #36518f), color-stop(100%, #3d5691));
   background-image: -webkit-linear-gradient(top, #8c9cbf 0%, #546a9e 50%, #36518f 50%, #3d5691 100%);
@@ -1570,8 +1611,8 @@ body.sessions form.session fieldset input[type=submit], body.sessions form.passw
   width: 150px;
   width: 125px;
 }
-/* line 29, ../../../app/stylesheets/partials/_buttons.scss */
-body.sessions form.session fieldset input[type=submit]:hover, body.sessions form.password fieldset input[type=submit]:hover, body.sessions form.user fieldset input[type=submit]:hover, body.passwords form.session fieldset input[type=submit]:hover, body.passwords form.password fieldset input[type=submit]:hover, body.passwords form.user fieldset input[type=submit]:hover, body.registrations form.session fieldset input[type=submit]:hover, body.registrations form.password fieldset input[type=submit]:hover, body.registrations form.user fieldset input[type=submit]:hover {
+/* line 75, ../../../app/stylesheets/partials/_buttons.scss */
+body.sessions form.session input[type=submit]:hover, body.sessions form.password input[type=submit]:hover, body.sessions form.user input[type=submit]:hover, body.passwords form.session input[type=submit]:hover, body.passwords form.password input[type=submit]:hover, body.passwords form.user input[type=submit]:hover, body.registrations form.session input[type=submit]:hover, body.registrations form.password input[type=submit]:hover, body.registrations form.user input[type=submit]:hover {
   background-color: #7f8dad;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7f8dad), color-stop(50%, #4a5e8c), color-stop(50%, #2f477d), color-stop(100%, #364c80));
   background-image: -webkit-linear-gradient(top, #7f8dad 0%, #4a5e8c 50%, #2f477d 50%, #364c80 100%);
@@ -1581,27 +1622,27 @@ body.sessions form.session fieldset input[type=submit]:hover, body.sessions form
   background-image: linear-gradient(top, #7f8dad 0%, #4a5e8c 50%, #2f477d 50%, #364c80 100%);
   cursor: pointer;
 }
-/* line 40, ../../../app/stylesheets/partials/_buttons.scss */
-body.sessions form.session fieldset input[type=submit]:active, body.sessions form.password fieldset input[type=submit]:active, body.sessions form.user fieldset input[type=submit]:active, body.passwords form.session fieldset input[type=submit]:active, body.passwords form.password fieldset input[type=submit]:active, body.passwords form.user fieldset input[type=submit]:active, body.registrations form.session fieldset input[type=submit]:active, body.registrations form.password fieldset input[type=submit]:active, body.registrations form.user fieldset input[type=submit]:active {
+/* line 86, ../../../app/stylesheets/partials/_buttons.scss */
+body.sessions form.session input[type=submit]:active, body.sessions form.password input[type=submit]:active, body.sessions form.user input[type=submit]:active, body.passwords form.session input[type=submit]:active, body.passwords form.password input[type=submit]:active, body.passwords form.user input[type=submit]:active, body.registrations form.session input[type=submit]:active, body.registrations form.password input[type=submit]:active, body.registrations form.user input[type=submit]:active {
   -webkit-box-shadow: inset 0 0 20px 0 #1d2845, 0 1px 0 white;
   -moz-box-shadow: inset 0 0 20px 0 #1d2845, 0 1px 0 white;
   -ms-box-shadow: inset 0 0 20px 0 #1d2845, 0 1px 0 white;
   -o-box-shadow: inset 0 0 20px 0 #1d2845, 0 1px 0 white;
   box-shadow: inset 0 0 20px 0 #1d2845, 0 1px 0 white;
 }
-/* line 43, ../../../app/stylesheets/partials/_sessions.scss */
+/* line 40, ../../../app/stylesheets/partials/_sessions.scss */
 body.sessions form.password input[type=submit], body.passwords form.password input[type=submit], body.registrations form.password input[type=submit] {
   width: 140px;
 }
-/* line 49, ../../../app/stylesheets/partials/_sessions.scss */
+/* line 46, ../../../app/stylesheets/partials/_sessions.scss */
 body.sessions form.user label, body.passwords form.user label, body.registrations form.user label {
   width: 30%;
 }
-/* line 53, ../../../app/stylesheets/partials/_sessions.scss */
+/* line 50, ../../../app/stylesheets/partials/_sessions.scss */
 body.sessions form.user fieldset.buttons, body.passwords form.user fieldset.buttons, body.registrations form.user fieldset.buttons {
   padding-left: 30%;
 }
-/* line 56, ../../../app/stylesheets/partials/_sessions.scss */
+/* line 53, ../../../app/stylesheets/partials/_sessions.scss */
 body.sessions form.user fieldset.buttons input[type=submit], body.passwords form.user fieldset.buttons input[type=submit], body.registrations form.user fieldset.buttons input[type=submit] {
   width: 170px;
 }
@@ -1714,7 +1755,7 @@ body.registrations form.user fieldset input[type=submit], body.users.edit form.u
   width: 125px;
   font-size: 14px;
 }
-/* line 29, ../../../app/stylesheets/partials/_buttons.scss */
+/* line 75, ../../../app/stylesheets/partials/_buttons.scss */
 body.registrations form.user fieldset input[type=submit]:hover, body.users.edit form.user fieldset input[type=submit]:hover, body.users.update form.user fieldset input[type=submit]:hover, body.users.new form.user fieldset input[type=submit]:hover, body.users.create form.user fieldset input[type=submit]:hover, body.profiles.edit form.user fieldset input[type=submit]:hover, body.profiles.update form.user fieldset input[type=submit]:hover {
   background-color: #7f8dad;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7f8dad), color-stop(50%, #4a5e8c), color-stop(50%, #2f477d), color-stop(100%, #364c80));
@@ -1725,7 +1766,7 @@ body.registrations form.user fieldset input[type=submit]:hover, body.users.edit 
   background-image: linear-gradient(top, #7f8dad 0%, #4a5e8c 50%, #2f477d 50%, #364c80 100%);
   cursor: pointer;
 }
-/* line 40, ../../../app/stylesheets/partials/_buttons.scss */
+/* line 86, ../../../app/stylesheets/partials/_buttons.scss */
 body.registrations form.user fieldset input[type=submit]:active, body.users.edit form.user fieldset input[type=submit]:active, body.users.update form.user fieldset input[type=submit]:active, body.users.new form.user fieldset input[type=submit]:active, body.users.create form.user fieldset input[type=submit]:active, body.profiles.edit form.user fieldset input[type=submit]:active, body.profiles.update form.user fieldset input[type=submit]:active {
   -webkit-box-shadow: inset 0 0 20px 0 #1d2845, 0 1px 0 white;
   -moz-box-shadow: inset 0 0 20px 0 #1d2845, 0 1px 0 white;
@@ -1798,25 +1839,26 @@ body.neighborhoods.show div.article p.empty {
 }
 /* line 14, ../../../app/stylesheets/partials/_neighborhood.scss */
 body.neighborhoods.show div.article a.neighborhoods {
-  float: left;
-  padding-left: 16px;
+  float: right;
+  position: relative;
+  top: -25px;
 }
 
-/* line 22, ../../../app/stylesheets/partials/_neighborhood.scss */
+/* line 23, ../../../app/stylesheets/partials/_neighborhood.scss */
 body.neighborhoods.index div[data-content-key=yield] {
   padding: 20px;
 }
-/* line 25, ../../../app/stylesheets/partials/_neighborhood.scss */
+/* line 26, ../../../app/stylesheets/partials/_neighborhood.scss */
 body.neighborhoods.index div[data-content-key=yield] h2 {
   font-size: 24px;
   margin-bottom: 5px;
 }
-/* line 30, ../../../app/stylesheets/partials/_neighborhood.scss */
+/* line 31, ../../../app/stylesheets/partials/_neighborhood.scss */
 body.neighborhoods.index div[data-content-key=yield] ul {
   overflow: hidden;
   margin-bottom: 20px;
 }
-/* line 34, ../../../app/stylesheets/partials/_neighborhood.scss */
+/* line 35, ../../../app/stylesheets/partials/_neighborhood.scss */
 body.neighborhoods.index div[data-content-key=yield] ul li {
   float: left;
   width: 205px;
@@ -1825,7 +1867,7 @@ body.neighborhoods.index div[data-content-key=yield] ul li {
   font-size: 18px;
   padding-left: 5px;
 }
-/* line 42, ../../../app/stylesheets/partials/_neighborhood.scss */
+/* line 43, ../../../app/stylesheets/partials/_neighborhood.scss */
 body.neighborhoods.index div[data-content-key=yield] ul li.active {
   text-shadow: #aaaaaa 0px 0px 1px;
   font-weight: bold;

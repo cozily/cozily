@@ -1,24 +1,23 @@
 %div{:'data-content-key' => 'active-tab'}
   .article
-    -if matches.present?
+    - if matches.present?
       .pagination
         %ul
-          %li.counts= #pagination_summary(params[:page], current_user.matches.results)
-          %li.navigation= will_paginate(matches)
-      -matches.each do |apartment|
-        =render "dashboard/apartment", :apartment => apartment, :position => position_in_collection(apartment, current_user.matches.results)
+          %li.counts= raw(page_entries_info matches)
+          %li.navigation= paginate matches
+      - matches.each_with_index do |apartment, index|
+        = render "dashboard/apartment", :apartment => apartment, :position => index + pagination_offset(matches)
       .pagination
         %ul
-          %li.counts= #pagination_summary(params[:page], current_user.matches)
-          %li.navigation= will_paginate(matches)
+          %li.counts= raw(page_entries_info matches)
+          %li.navigation= paginate matches
 
-    -else
-      %p.empty
-        You don't have any matches.  We're working on it.
+    - else
+      %p.empty You don't have any matches.  We're working on it.
 
   .aside
     #map_canvas
-    =image_tag "backgrounds/shadow.png", :class => "shadow"
-    =link_to "view on larger map", dashboard_map_path, :'data-remote' => true
+    = image_tag "backgrounds/shadow.png", :class => "shadow"
+    = link_to "view on larger map", dashboard_map_path, :'data-remote' => true
 
-    =render "shared/activity_feed", :events => @events
+    = render "shared/activity_feed", :events => @events

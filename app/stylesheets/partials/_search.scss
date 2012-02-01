@@ -5,7 +5,7 @@ div#search {
 
     h2 {
         color: white;
-        font-weight: 500;
+        font-weight: 300;
         padding: 15px 0;
         float: left;
         margin-right: 30px;
@@ -14,36 +14,42 @@ div#search {
     form {
         padding: 18px 0;
 
-        input#neighborhood_autocomplete, input#q_min_bedrooms, input#q_max_rent {
-            float: left;
-            height: 32px;
-            background-color: white;
-            @include border-radius(5px);
-            @include box-shadow;
-            padding: 5px 5px 5px 15px;
-            border: none;
-            color: #999;
-            font-size: 1.2em;
-            font-weight: 200;
-            margin-right: 15px;
-        }
-
-        input#neighborhood_autocomplete {
-            width: 250px;
-        }
-
-        input#q_min_bedrooms {
-            width: 150px;
-        }
-
         input#q_max_rent {
-            width: 145px;
+            @include border-radius(5px);
+            height: 28px;
+            line-height: 1;
+            padding: 6px 8px;
+            border: 1px solid #aaa;
+            float: left;
+            font: normal 13px "museo-slab";
+            text-decoration: none;
+            color: #444444;
+            background-color: white;
+            margin-left: 10px;
+            width: 100px;
+        }
+
+        select#q_neighborhood_id, select#q_min_bedrooms, input#q_max_rent {
+          float: left;
+        }
+
+        div#q_neighborhood_id_chzn {
+          float: left;
+          padding-right: 10px;
+        }
+
+        div#q_min_bedrooms_chzn {
+          float: left;
+          input {
+            display: none;
+          }
         }
 
         input[type=submit] {
-            @include dark-blue-button;
+            @include gray-button;
             width: 110px;
-            margin-left: 20px;
+            height: 28px;
+            margin-left: 10px;
         }
     }
 }

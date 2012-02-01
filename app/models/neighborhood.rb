@@ -29,6 +29,12 @@ class Neighborhood < ActiveRecord::Base
     def to_dropdown
       Neighborhood.ascend_by_name.map {|n| [n.name, n.id]}
     end
+
+    def to_grouped_dropdown
+      ["Manhattan", "Brooklyn", "Queens", "Bronx", "Staten Island"].map do |borough|
+        [borough, Neighborhood.find_all_by_borough(borough).map {|neighborhood| [neighborhood.name, neighborhood.id.to_s]}]
+      end
+    end
   end
 
   def apartments

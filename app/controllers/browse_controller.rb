@@ -1,7 +1,7 @@
 class BrowseController < ApplicationController
   def index
     @all_apartments = Apartment.order("published_at desc").with_state(:published)
-    @paginated_apartments = @all_apartments.paginate(:page => params[:page], :per_page => Apartment.per_page)
+    @paginated_apartments = @all_apartments.page(params[:page])
     respond_to do |format|
       format.html
       format.js do

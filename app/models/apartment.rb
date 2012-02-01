@@ -6,6 +6,8 @@ class Apartment < ActiveRecord::Base
 
   include Eventable
 
+  paginates_per 10
+
   belongs_to :address
   belongs_to :user
 
@@ -112,10 +114,6 @@ class Apartment < ActiveRecord::Base
   end
 
   class << self
-    def per_page
-      10
-    end
-
     def distinct_bedrooms
       where(:state => "published").select('DISTINCT bedrooms').map(&:bedrooms).sort
     end

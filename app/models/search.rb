@@ -5,7 +5,7 @@ class Search
   attr_accessor :min_bathrooms, :max_bathrooms
   attr_accessor :min_rent, :max_rent
   attr_accessor :min_square_footage, :max_square_footage
-  attr_accessor :neighborhood_ids
+  attr_accessor :neighborhood_ids, :neighborhood_id
   attr_accessor :page
 
   def initialize(options = {})
@@ -24,6 +24,7 @@ class Search
                         else
                           []
                         end
+    @neighborhood_id = options[:neighborhood_id]
     @page = options[:page]
   end
 
@@ -44,7 +45,7 @@ class Search
       end
 
       with(:published, true)
-      with(:neighborhood_ids, neighborhood_ids) if neighborhood_ids.present?
+      with(:neighborhood_ids, neighborhood_id) if neighborhood_id.present?
     end.results
   end
 
@@ -65,8 +66,8 @@ class Search
       end
 
       with(:published, true)
-      with(:neighborhood_ids, neighborhood_ids) if neighborhood_ids.present?
-      paginate :per_page => Apartment.per_page, :page => page
+      with(:neighborhood_ids, neighborhood_id) if neighborhood_id.present?
+      paginate :page => page, :per_page => 10
     end.results
   end
 end

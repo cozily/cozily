@@ -7,7 +7,7 @@
 
 .article
   %h2==Matches in #{@neighborhood.name}
-  =link_to "see all neighborhoods", neighborhoods_path, :class => "neighborhoods"
+  =link_to raw("all neighborhoods &raquo;"), neighborhoods_path, :class => "neighborhoods"
   =render "users/profiles/neighborhood_link", :neighborhood => @neighborhood
 
   =render "apartments", :apartments => @apartments

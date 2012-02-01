@@ -96,7 +96,7 @@ class User < ActiveRecord::Base
         end
       end
 
-      paginate :per_page => Apartment.per_page, :page => page
+      paginate :page => page
     end
   end
 

@@ -63,15 +63,14 @@
     -if show_search?
       #search
         .container
-          %h2 Find Apartments
+          %h2 Find Apartments!
 
-          = form_for @search, :as => :q, :url => search_path, :html => {:method => :get, :class => 'search'} do |f|
-            = text_field_tag :neighborhood_autocomplete, neighborhood_search_text, :placeholder => "All Neighborhoods"
-            = f.text_field :min_bedrooms, :placeholder => "All # Bedrooms"
-            = f.text_field :max_rent, :placeholder => "All Prices"
-            = f.hidden_field :neighborhood_ids
+          = form_for @search, :as => :q, :url => search_path, :html => {:method => :post, :class => 'search'} do |f|
+            = f.select :neighborhood_id, grouped_options_for_select(Neighborhood.to_grouped_dropdown, @search.neighborhood_id), {}, {:class => "chosen", :style => "width:250px", :"data-placeholder" => "Choose a neighborhood..."}
+            = f.select :min_bedrooms, [["0 Bedrooms (Studio)", 0], ["1 Bedroom", 1]], {:include_blank => true}, {:class => "chosen", :style => "width:180px", :"data-placeholder" => "Min Bedrooms?"}
+            = f.text_field :max_rent, :placeholder => "Max Rent?"
 
-            = f.submit :search
+            = f.submit :search, :value => "Search!"
 
       #breadcrumbs
         -if !user_signed_in? || current_user.finder?

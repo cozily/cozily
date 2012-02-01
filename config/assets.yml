@@ -10,6 +10,8 @@ javascripts:
     - public/javascripts/jquery.qtip.js
     - public/javascripts/jquery.infieldlabel.js
     - public/javascripts/jquery.tipTip.js
+    - public/javascripts/jquery.maskedinput.js
+    - public/javascripts/chosen.jquery.min.js
     - public/javascripts/ajaxupload.js
     - public/javascripts/rails.js
     - public/javascripts/application.js
@@ -17,9 +19,10 @@ javascripts:
 
 stylesheets:
   common:
-    - public/stylesheets/simple_form.css
     - public/stylesheets/formtastic.css
     - public/stylesheets/formtastic_changes.css
     - public/stylesheets/jquery-ui.css
+    - public/stylesheets/chosen/chosen.css
+    - public/stylesheets/simple_form.css
     - public/stylesheets/compiled/screen.css
     - public/stylesheets/compiled/print.css

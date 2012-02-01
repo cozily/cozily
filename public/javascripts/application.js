@@ -119,6 +119,11 @@ function attachTips() {
 }
 
 (function($) {
+    $(document).ready(function(){
+      $("select.chosen").chosen();
+      $("input#q_max_rent").mask("$ 999?99", {placeholder:" "})
+    });
+
     $(function() {
         $('.pagination a').attr('data-remote', 'true');
         $('.pagination a').attr('data-method', 'get');
@@ -163,44 +168,7 @@ function attachTips() {
             }
         });
 
-        $("form.search input[type=text]").live("click", function(event) {
-            var element = $(event.currentTarget);
-            element.val('');
-
-            if (element.attr('id') == "neighborhood_autocomplete") {
-                $("input#q_neighborhood_ids").val('');
-            }
-        });
-
-        $("input#q_min_bedrooms").live("blur", function(event) {
-            var element = $(event.currentTarget);
-            var count = (element.val().replace(/[^\d]/g, ""));
-
-            if (count) {
-                element.val(count + "+ Bedrooms");
-            } else {
-                element.val("All # Bedrooms");
-            }
-        });
-
-        $("input#q_max_rent").live("blur", function(event) {
-            var element = $(event.currentTarget);
-            var count = (element.val().replace(/[^\d]/g, ""));
-
-            if (count) {
-                element.val("Under $" + count);
-            } else {
-                element.val("All Prices");
-            }
-        });
-
-        $("input#q_min_bedrooms, input#q_max_rent").blur();
-
         liveNeighborhoodAutocomplete();
-
-        $(document).ready(function(){
-          // $("form.simple_form div.input label").inFieldLabels();
-        });
 
         $("[data-large-image-path]").live("click", function(event) {
             var element = $(event.currentTarget);
