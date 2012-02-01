@@ -127,30 +127,30 @@ body.welcome.index, body.signup.create {
                     }
 
                     form.formtastic.user {
-                        label {
-                            width: 300px;
-                            text-align: right;
-                            margin-right: 20px;
-                            line-height: 32px;
-                            font-size: 1.2em;
-                        }
-
-                        select {
-                            margin-top: 10px;
-                        }
-
-                        input[type=text], input[type=password] {
-                            width: 250px;
-                            height: 35px;
-                        }
-
-                        input[type=submit] {
-                            @include green-button;
-                            width: 75px;
-                        }
-
                         fieldset.inputs {
                             width: 100%;
+
+                          label {
+                              width: 300px;
+                              text-align: right;
+                              margin-right: 20px;
+                              line-height: 32px;
+                              font-size: 1.2em;
+                          }
+
+                          select {
+                              margin-top: 10px;
+                          }
+
+                          > input[type=text], input[type=password] {
+                              width: 250px;
+                              height: 35px;
+                          }
+
+                          input[type=submit] {
+                              @include green-button;
+                              width: 75px;
+                          }
                         }
 
                         fieldset.buttons {

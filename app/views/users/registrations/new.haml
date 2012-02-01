@@ -12,8 +12,25 @@
     = f.input :password
     = f.input :password_confirmation, :label => "Confirm password"
 
-  = render "users/profiles/inputs", :f => f
+    %label I am here to:
+    = hidden_field_tag :assign_roles, true
+    %li.boolean.optional
+      %label{ :for => "role_ids_0" }
+        = check_box_tag "role_ids[]", Role.find_by_name("finder").id, f.object.finder?, :id => "role_ids_0", :style => "margin-left: 33px;"
+        find apartments
 
+    %li.boolean.optional
+      %label{ :for => "role_ids_1" }
+        =check_box_tag "role_ids[]", Role.find_by_name("lister").id, f.object.lister?, :id => "role_ids_1", :style => "margin-left: 33px;"
+        list apartments
+
+    %fieldset.lister
+      %legend We want to include a phone number with your listings.
+      = f.inputs do
+        = f.input :phone, :as => :string
+        = f.input :receive_listing_summaries, :label => "Receive weekly summary emails about your listings", :required => false
+
+  %label{:style => "position:absolute; margin-top:10px;"} Type following text:
   .recaptcha
     = recaptcha_tags
 

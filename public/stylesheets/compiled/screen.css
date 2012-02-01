@@ -833,24 +833,28 @@ body.welcome.index div#body div.container div.profile div.article div#selected_n
   color: red;
 }
 /* line 130, ../../../app/stylesheets/partials/_unauthenticated.scss */
-body.welcome.index div#body div.container div.profile div.article form.formtastic.user label, body.welcome.index div#body div.container div.account div.article form.formtastic.user label, body.signup.create div#body div.container div.profile div.article form.formtastic.user label, body.signup.create div#body div.container div.account div.article form.formtastic.user label {
+body.welcome.index div#body div.container div.profile div.article form.formtastic.user fieldset.inputs, body.welcome.index div#body div.container div.account div.article form.formtastic.user fieldset.inputs, body.signup.create div#body div.container div.profile div.article form.formtastic.user fieldset.inputs, body.signup.create div#body div.container div.account div.article form.formtastic.user fieldset.inputs {
+  width: 100%;
+}
+/* line 133, ../../../app/stylesheets/partials/_unauthenticated.scss */
+body.welcome.index div#body div.container div.profile div.article form.formtastic.user fieldset.inputs label, body.welcome.index div#body div.container div.account div.article form.formtastic.user fieldset.inputs label, body.signup.create div#body div.container div.profile div.article form.formtastic.user fieldset.inputs label, body.signup.create div#body div.container div.account div.article form.formtastic.user fieldset.inputs label {
   width: 300px;
   text-align: right;
   margin-right: 20px;
   line-height: 32px;
   font-size: 1.2em;
 }
-/* line 138, ../../../app/stylesheets/partials/_unauthenticated.scss */
-body.welcome.index div#body div.container div.profile div.article form.formtastic.user select, body.welcome.index div#body div.container div.account div.article form.formtastic.user select, body.signup.create div#body div.container div.profile div.article form.formtastic.user select, body.signup.create div#body div.container div.account div.article form.formtastic.user select {
+/* line 141, ../../../app/stylesheets/partials/_unauthenticated.scss */
+body.welcome.index div#body div.container div.profile div.article form.formtastic.user fieldset.inputs select, body.welcome.index div#body div.container div.account div.article form.formtastic.user fieldset.inputs select, body.signup.create div#body div.container div.profile div.article form.formtastic.user fieldset.inputs select, body.signup.create div#body div.container div.account div.article form.formtastic.user fieldset.inputs select {
   margin-top: 10px;
 }
-/* line 142, ../../../app/stylesheets/partials/_unauthenticated.scss */
-body.welcome.index div#body div.container div.profile div.article form.formtastic.user input[type=text], body.welcome.index div#body div.container div.profile div.article form.formtastic.user input[type=password], body.welcome.index div#body div.container div.account div.article form.formtastic.user input[type=text], body.welcome.index div#body div.container div.account div.article form.formtastic.user input[type=password], body.signup.create div#body div.container div.profile div.article form.formtastic.user input[type=text], body.signup.create div#body div.container div.profile div.article form.formtastic.user input[type=password], body.signup.create div#body div.container div.account div.article form.formtastic.user input[type=text], body.signup.create div#body div.container div.account div.article form.formtastic.user input[type=password] {
+/* line 145, ../../../app/stylesheets/partials/_unauthenticated.scss */
+body.welcome.index div#body div.container div.profile div.article form.formtastic.user fieldset.inputs > input[type=text], body.welcome.index div#body div.container div.profile div.article form.formtastic.user fieldset.inputs input[type=password], body.welcome.index div#body div.container div.account div.article form.formtastic.user fieldset.inputs > input[type=text], body.welcome.index div#body div.container div.account div.article form.formtastic.user fieldset.inputs input[type=password], body.signup.create div#body div.container div.profile div.article form.formtastic.user fieldset.inputs > input[type=text], body.signup.create div#body div.container div.profile div.article form.formtastic.user fieldset.inputs input[type=password], body.signup.create div#body div.container div.account div.article form.formtastic.user fieldset.inputs > input[type=text], body.signup.create div#body div.container div.account div.article form.formtastic.user fieldset.inputs input[type=password] {
   width: 250px;
   height: 35px;
 }
-/* line 147, ../../../app/stylesheets/partials/_unauthenticated.scss */
-body.welcome.index div#body div.container div.profile div.article form.formtastic.user input[type=submit], body.welcome.index div#body div.container div.account div.article form.formtastic.user input[type=submit], body.signup.create div#body div.container div.profile div.article form.formtastic.user input[type=submit], body.signup.create div#body div.container div.account div.article form.formtastic.user input[type=submit] {
+/* line 150, ../../../app/stylesheets/partials/_unauthenticated.scss */
+body.welcome.index div#body div.container div.profile div.article form.formtastic.user fieldset.inputs input[type=submit], body.welcome.index div#body div.container div.account div.article form.formtastic.user fieldset.inputs input[type=submit], body.signup.create div#body div.container div.profile div.article form.formtastic.user fieldset.inputs input[type=submit], body.signup.create div#body div.container div.account div.article form.formtastic.user fieldset.inputs input[type=submit] {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   -o-border-radius: 5px;
@@ -866,10 +870,6 @@ body.welcome.index div#body div.container div.profile div.article form.formtasti
   background: url(/images/buttons/green_button.png) repeat-x;
   border: 1px solid #8EAC46;
   width: 75px;
-}
-/* line 152, ../../../app/stylesheets/partials/_unauthenticated.scss */
-body.welcome.index div#body div.container div.profile div.article form.formtastic.user fieldset.inputs, body.welcome.index div#body div.container div.account div.article form.formtastic.user fieldset.inputs, body.signup.create div#body div.container div.profile div.article form.formtastic.user fieldset.inputs, body.signup.create div#body div.container div.account div.article form.formtastic.user fieldset.inputs {
-  width: 100%;
 }
 /* line 156, ../../../app/stylesheets/partials/_unauthenticated.scss */
 body.welcome.index div#body div.container div.profile div.article form.formtastic.user fieldset.buttons, body.welcome.index div#body div.container div.account div.article form.formtastic.user fieldset.buttons, body.signup.create div#body div.container div.profile div.article form.formtastic.user fieldset.buttons, body.signup.create div#body div.container div.account div.article form.formtastic.user fieldset.buttons {
@@ -1569,20 +1569,20 @@ body.sessions form.session, body.sessions form.password, body.sessions form.user
   border-radius: 5px;
   width: 60%;
 }
-/* line 21, ../../../app/stylesheets/partials/_sessions.scss */
-body.sessions form.session label, body.sessions form.password label, body.sessions form.user label, body.passwords form.session label, body.passwords form.password label, body.passwords form.user label, body.registrations form.session label, body.registrations form.password label, body.registrations form.user label {
+/* line 22, ../../../app/stylesheets/partials/_sessions.scss */
+body.sessions form.session fieldset label, body.sessions form.password fieldset label, body.sessions form.user fieldset label, body.passwords form.session fieldset label, body.passwords form.password fieldset label, body.passwords form.user fieldset label, body.registrations form.session fieldset label, body.registrations form.password fieldset label, body.registrations form.user fieldset label {
   line-height: 32px;
   font-size: 1.2em;
 }
-/* line 26, ../../../app/stylesheets/partials/_sessions.scss */
-body.sessions form.session input[type=text], body.sessions form.session input[type=email], body.sessions form.session input[type=password], body.sessions form.password input[type=text], body.sessions form.password input[type=email], body.sessions form.password input[type=password], body.sessions form.user input[type=text], body.sessions form.user input[type=email], body.sessions form.user input[type=password], body.passwords form.session input[type=text], body.passwords form.session input[type=email], body.passwords form.session input[type=password], body.passwords form.password input[type=text], body.passwords form.password input[type=email], body.passwords form.password input[type=password], body.passwords form.user input[type=text], body.passwords form.user input[type=email], body.passwords form.user input[type=password], body.registrations form.session input[type=text], body.registrations form.session input[type=email], body.registrations form.session input[type=password], body.registrations form.password input[type=text], body.registrations form.password input[type=email], body.registrations form.password input[type=password], body.registrations form.user input[type=text], body.registrations form.user input[type=email], body.registrations form.user input[type=password] {
+/* line 27, ../../../app/stylesheets/partials/_sessions.scss */
+body.sessions form.session fieldset input[type=text], body.sessions form.session fieldset input[type=email], body.sessions form.session fieldset input[type=password], body.sessions form.password fieldset input[type=text], body.sessions form.password fieldset input[type=email], body.sessions form.password fieldset input[type=password], body.sessions form.user fieldset input[type=text], body.sessions form.user fieldset input[type=email], body.sessions form.user fieldset input[type=password], body.passwords form.session fieldset input[type=text], body.passwords form.session fieldset input[type=email], body.passwords form.session fieldset input[type=password], body.passwords form.password fieldset input[type=text], body.passwords form.password fieldset input[type=email], body.passwords form.password fieldset input[type=password], body.passwords form.user fieldset input[type=text], body.passwords form.user fieldset input[type=email], body.passwords form.user fieldset input[type=password], body.registrations form.session fieldset input[type=text], body.registrations form.session fieldset input[type=email], body.registrations form.session fieldset input[type=password], body.registrations form.password fieldset input[type=text], body.registrations form.password fieldset input[type=email], body.registrations form.password fieldset input[type=password], body.registrations form.user fieldset input[type=text], body.registrations form.user fieldset input[type=email], body.registrations form.user fieldset input[type=password] {
   height: 35px;
   font-size: 1.2em;
   color: #888;
   padding: 5px;
 }
-/* line 33, ../../../app/stylesheets/partials/_sessions.scss */
-body.sessions form.session input[type=submit], body.sessions form.password input[type=submit], body.sessions form.user input[type=submit], body.passwords form.session input[type=submit], body.passwords form.password input[type=submit], body.passwords form.user input[type=submit], body.registrations form.session input[type=submit], body.registrations form.password input[type=submit], body.registrations form.user input[type=submit] {
+/* line 34, ../../../app/stylesheets/partials/_sessions.scss */
+body.sessions form.session fieldset input[type=submit], body.sessions form.password fieldset input[type=submit], body.sessions form.user fieldset input[type=submit], body.passwords form.session fieldset input[type=submit], body.passwords form.password fieldset input[type=submit], body.passwords form.user fieldset input[type=submit], body.registrations form.session fieldset input[type=submit], body.registrations form.password fieldset input[type=submit], body.registrations form.user fieldset input[type=submit] {
   background-color: #8c9cbf;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #8c9cbf), color-stop(50%, #546a9e), color-stop(50%, #36518f), color-stop(100%, #3d5691));
   background-image: -webkit-linear-gradient(top, #8c9cbf 0%, #546a9e 50%, #36518f 50%, #3d5691 100%);
@@ -1612,7 +1612,7 @@ body.sessions form.session input[type=submit], body.sessions form.password input
   width: 125px;
 }
 /* line 75, ../../../app/stylesheets/partials/_buttons.scss */
-body.sessions form.session input[type=submit]:hover, body.sessions form.password input[type=submit]:hover, body.sessions form.user input[type=submit]:hover, body.passwords form.session input[type=submit]:hover, body.passwords form.password input[type=submit]:hover, body.passwords form.user input[type=submit]:hover, body.registrations form.session input[type=submit]:hover, body.registrations form.password input[type=submit]:hover, body.registrations form.user input[type=submit]:hover {
+body.sessions form.session fieldset input[type=submit]:hover, body.sessions form.password fieldset input[type=submit]:hover, body.sessions form.user fieldset input[type=submit]:hover, body.passwords form.session fieldset input[type=submit]:hover, body.passwords form.password fieldset input[type=submit]:hover, body.passwords form.user fieldset input[type=submit]:hover, body.registrations form.session fieldset input[type=submit]:hover, body.registrations form.password fieldset input[type=submit]:hover, body.registrations form.user fieldset input[type=submit]:hover {
   background-color: #7f8dad;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7f8dad), color-stop(50%, #4a5e8c), color-stop(50%, #2f477d), color-stop(100%, #364c80));
   background-image: -webkit-linear-gradient(top, #7f8dad 0%, #4a5e8c 50%, #2f477d 50%, #364c80 100%);
@@ -1623,26 +1623,104 @@ body.sessions form.session input[type=submit]:hover, body.sessions form.password
   cursor: pointer;
 }
 /* line 86, ../../../app/stylesheets/partials/_buttons.scss */
-body.sessions form.session input[type=submit]:active, body.sessions form.password input[type=submit]:active, body.sessions form.user input[type=submit]:active, body.passwords form.session input[type=submit]:active, body.passwords form.password input[type=submit]:active, body.passwords form.user input[type=submit]:active, body.registrations form.session input[type=submit]:active, body.registrations form.password input[type=submit]:active, body.registrations form.user input[type=submit]:active {
+body.sessions form.session fieldset input[type=submit]:active, body.sessions form.password fieldset input[type=submit]:active, body.sessions form.user fieldset input[type=submit]:active, body.passwords form.session fieldset input[type=submit]:active, body.passwords form.password fieldset input[type=submit]:active, body.passwords form.user fieldset input[type=submit]:active, body.registrations form.session fieldset input[type=submit]:active, body.registrations form.password fieldset input[type=submit]:active, body.registrations form.user fieldset input[type=submit]:active {
   -webkit-box-shadow: inset 0 0 20px 0 #1d2845, 0 1px 0 white;
   -moz-box-shadow: inset 0 0 20px 0 #1d2845, 0 1px 0 white;
   -ms-box-shadow: inset 0 0 20px 0 #1d2845, 0 1px 0 white;
   -o-box-shadow: inset 0 0 20px 0 #1d2845, 0 1px 0 white;
   box-shadow: inset 0 0 20px 0 #1d2845, 0 1px 0 white;
 }
-/* line 40, ../../../app/stylesheets/partials/_sessions.scss */
+/* line 41, ../../../app/stylesheets/partials/_sessions.scss */
+body.sessions form.simple_form.user, body.passwords form.simple_form.user, body.registrations form.simple_form.user {
+  background-color: #eee;
+  padding: 20px;
+  margin-bottom: 15px;
+  -moz-box-shadow: 0px 0px 5px #333333;
+  -webkit-box-shadow: 0px 0px 5px #333333;
+  -o-box-shadow: 0px 0px 5px #333333;
+  box-shadow: 0px 0px 5px #333333;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  width: 60%;
+}
+/* line 50, ../../../app/stylesheets/partials/_sessions.scss */
+body.sessions form.simple_form.user div.input label, body.passwords form.simple_form.user div.input label, body.registrations form.simple_form.user div.input label {
+  line-height: 32px;
+  font-size: 1.2em;
+}
+/* line 55, ../../../app/stylesheets/partials/_sessions.scss */
+body.sessions form.simple_form.user div.input input[type=text], body.sessions form.simple_form.user div.input input[type=email], body.sessions form.simple_form.user div.input input[type=password], body.passwords form.simple_form.user div.input input[type=text], body.passwords form.simple_form.user div.input input[type=email], body.passwords form.simple_form.user div.input input[type=password], body.registrations form.simple_form.user div.input input[type=text], body.registrations form.simple_form.user div.input input[type=email], body.registrations form.simple_form.user div.input input[type=password] {
+  height: 35px;
+  font-size: 1.2em;
+  color: #888;
+  padding: 5px;
+}
+/* line 64, ../../../app/stylesheets/partials/_sessions.scss */
+body.sessions form.simple_form.user input[type=submit], body.passwords form.simple_form.user input[type=submit], body.registrations form.simple_form.user input[type=submit] {
+  background-color: #8c9cbf;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #8c9cbf), color-stop(50%, #546a9e), color-stop(50%, #36518f), color-stop(100%, #3d5691));
+  background-image: -webkit-linear-gradient(top, #8c9cbf 0%, #546a9e 50%, #36518f 50%, #3d5691 100%);
+  background-image: -moz-linear-gradient(top, #8c9cbf 0%, #546a9e 50%, #36518f 50%, #3d5691 100%);
+  background-image: -ms-linear-gradient(top, #8c9cbf 0%, #546a9e 50%, #36518f 50%, #3d5691 100%);
+  background-image: -o-linear-gradient(top, #8c9cbf 0%, #546a9e 50%, #36518f 50%, #3d5691 100%);
+  background-image: linear-gradient(top, #8c9cbf 0%, #546a9e 50%, #36518f 50%, #3d5691 100%);
+  border: 1px solid #172d6e;
+  border-bottom: 1px solid #0e1d45;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 1px 0 0 #b1b9cb;
+  -moz-box-shadow: inset 0 1px 0 0 #b1b9cb;
+  -ms-box-shadow: inset 0 1px 0 0 #b1b9cb;
+  -o-box-shadow: inset 0 1px 0 0 #b1b9cb;
+  box-shadow: inset 0 1px 0 0 #b1b9cb;
+  color: #fff;
+  font: bold 16px "helvetica neue", helvetica, arial, sans-serif;
+  padding: 7px 0 8px 0;
+  text-decoration: none;
+  text-align: center;
+  text-shadow: 0 -1px 1px #000f4d;
+  width: 150px;
+  width: 125px;
+}
+/* line 75, ../../../app/stylesheets/partials/_buttons.scss */
+body.sessions form.simple_form.user input[type=submit]:hover, body.passwords form.simple_form.user input[type=submit]:hover, body.registrations form.simple_form.user input[type=submit]:hover {
+  background-color: #7f8dad;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7f8dad), color-stop(50%, #4a5e8c), color-stop(50%, #2f477d), color-stop(100%, #364c80));
+  background-image: -webkit-linear-gradient(top, #7f8dad 0%, #4a5e8c 50%, #2f477d 50%, #364c80 100%);
+  background-image: -moz-linear-gradient(top, #7f8dad 0%, #4a5e8c 50%, #2f477d 50%, #364c80 100%);
+  background-image: -ms-linear-gradient(top, #7f8dad 0%, #4a5e8c 50%, #2f477d 50%, #364c80 100%);
+  background-image: -o-linear-gradient(top, #7f8dad 0%, #4a5e8c 50%, #2f477d 50%, #364c80 100%);
+  background-image: linear-gradient(top, #7f8dad 0%, #4a5e8c 50%, #2f477d 50%, #364c80 100%);
+  cursor: pointer;
+}
+/* line 86, ../../../app/stylesheets/partials/_buttons.scss */
+body.sessions form.simple_form.user input[type=submit]:active, body.passwords form.simple_form.user input[type=submit]:active, body.registrations form.simple_form.user input[type=submit]:active {
+  -webkit-box-shadow: inset 0 0 20px 0 #1d2845, 0 1px 0 white;
+  -moz-box-shadow: inset 0 0 20px 0 #1d2845, 0 1px 0 white;
+  -ms-box-shadow: inset 0 0 20px 0 #1d2845, 0 1px 0 white;
+  -o-box-shadow: inset 0 0 20px 0 #1d2845, 0 1px 0 white;
+  box-shadow: inset 0 0 20px 0 #1d2845, 0 1px 0 white;
+}
+/* line 71, ../../../app/stylesheets/partials/_sessions.scss */
 body.sessions form.password input[type=submit], body.passwords form.password input[type=submit], body.registrations form.password input[type=submit] {
   width: 140px;
 }
-/* line 46, ../../../app/stylesheets/partials/_sessions.scss */
+/* line 77, ../../../app/stylesheets/partials/_sessions.scss */
 body.sessions form.user label, body.passwords form.user label, body.registrations form.user label {
   width: 30%;
 }
-/* line 50, ../../../app/stylesheets/partials/_sessions.scss */
+/* line 81, ../../../app/stylesheets/partials/_sessions.scss */
 body.sessions form.user fieldset.buttons, body.passwords form.user fieldset.buttons, body.registrations form.user fieldset.buttons {
   padding-left: 30%;
 }
-/* line 53, ../../../app/stylesheets/partials/_sessions.scss */
+/* line 84, ../../../app/stylesheets/partials/_sessions.scss */
 body.sessions form.user fieldset.buttons input[type=submit], body.passwords form.user fieldset.buttons input[type=submit], body.registrations form.user fieldset.buttons input[type=submit] {
   width: 170px;
 }
