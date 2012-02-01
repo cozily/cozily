@@ -1,6 +1,4 @@
 class SignupController < ApplicationController
-  before_filter :unauthenticate
-
   def profile
     session[:want] = params[:want]
     @user = User.new
