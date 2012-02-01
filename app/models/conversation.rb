@@ -1,4 +1,6 @@
 class Conversation < ActiveRecord::Base
+  paginates_per 10
+
   belongs_to :apartment
   belongs_to :sender, :class_name => "User"
   belongs_to :receiver, :class_name => "User"

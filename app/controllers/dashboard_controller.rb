@@ -54,7 +54,7 @@ class DashboardController < ApplicationController
   end
 
   def messages
-    @conversations = Conversation.for_user(current_user).paginate(:page => params[:page])
+    @conversations = Conversation.for_user(current_user).page(params[:page])
     respond_to do |format|
       format.html
       format.js do
