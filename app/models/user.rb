@@ -26,6 +26,7 @@ class User < ActiveRecord::Base
   validate :ensure_has_role
 
   before_validation :format_phone
+  after_create :send_welcome_email
 
   accepts_nested_attributes_for :profile
 
@@ -39,7 +40,7 @@ class User < ActiveRecord::Base
   class << self
     def send_finder_summary_emails
       User.finder.receive_match_summaries.each do |user|
-        UserMailer.finder_summary(user.id).deliver unless user.matches.results.total_count.zero?
+        UserMailer.finder_summary(user.id).deliver unless user.has_matches?
       end
     end
 
@@ -78,11 +79,25 @@ class User < ActiveRecord::Base
     role_symbols.include?(:lister) || apartments.present?
   end
 
+  def has_matches?
+   !match_results.total_count.zero?
+  end
+
   def matches(page = 1)
     Sunspot.search(Apartment) do
+      without(:user_id, self.id)
       with(:published, true)
-      with(:rent).less_than(profile.rent) if profile.try(:rent)
-      with(:bedrooms).greater_than(profile.bedrooms) if profile.try(:bedrooms)
+
+      if profile.try(:rent)
+        with(:rent).less_than(profile.rent)
+        with(:rent).equal_to(profile.rent)
+      end
+
+      if profile.try(:bedrooms)
+        with(:bedrooms).greater_than(profile.bedrooms)
+        with(:bedrooms).equal_to(profile.bedrooms)
+      end
+
       with(:sublet, true) if profile.try(:only_sublets?)
       with(:sublet, false) if profile.try(:exclude_sublets?)
 
@@ -95,8 +110,37 @@ class User < ActiveRecord::Base
         end
       end
 
-      paginate :page => page
+      paginate :page => page, :per_page => 10
     end
+  end
+
+  def match_results
+    Sunspot.search(Apartment) do
+      without(:user_id, self.id)
+      with(:published, true)
+
+      if profile.try(:rent)
+        with(:rent).less_than(profile.rent)
+        with(:rent).equal_to(profile.rent)
+      end
+
+      if profile.try(:bedrooms)
+        with(:bedrooms).greater_than(profile.bedrooms)
+        with(:bedrooms).equal_to(profile.bedrooms)
+      end
+
+      with(:sublet, true) if profile.try(:only_sublets?)
+      with(:sublet, false) if profile.try(:exclude_sublets?)
+
+      with(:neighborhood_ids, profile.neighborhoods.map(&:id)) if profile.try(:neighborhoods).try(:present?)
+      all_of do
+        if profile.try(:features).try(:present?)
+          profile.features.each do |feature|
+            with(:feature_ids, feature.id)
+          end
+        end
+      end
+    end.results
   end
 
   def role_symbols
@@ -117,8 +161,8 @@ class User < ActiveRecord::Base
 #    messages.sent_by(self)
   end
 
-  def send_confirmation_email
-    ClearanceMailer.confirmation(self.id).deliver
+  def send_welcome_email
+    UserMailer.welcome(self.id).deliver
   end
 
   private

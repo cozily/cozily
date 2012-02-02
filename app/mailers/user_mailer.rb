@@ -4,6 +4,14 @@ include UsersHelper
 class UserMailer < ActionMailer::Base
   include Resque::Mailer
 
+  def welcome(user_id)
+    @user = User.find(user_id)
+
+    from "support@cozi.ly"
+    recipients @user.email
+    subject "Thanks for creating an account on Cozily"
+  end
+
   def first_apartment_notification(user_id)
     @user = User.find(user_id)
 
@@ -15,7 +23,7 @@ class UserMailer < ActionMailer::Base
   def finder_summary(user_id)
     @user = User.find(user_id)
 
-    @latest_matches = @user.matches.results.select { |a| a.published_at >= 1.week.ago } if @user.matches.present?
+    @latest_matches = @user.match_results.select { |a| a.published_at >= 1.week.ago }
     mail(:from => "cozily-noreply@cozi.ly",
          :to => @user.email,
          :subject => "Your Weekly Match Summary from Cozily",

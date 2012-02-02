@@ -1,12 +1,12 @@
 %div.head
   %h1 Cozily
 
-=render "shared/mailer_salutation", :user => @user
+= render "shared/mailer_salutation", :user => @user
 
--if @latest_matches.present?
-  %p==You have <span class='highlight'>#{pluralize(@latest_matches.count, "match")} published</span> on #{link_to("Cozily", root_url)} since last week.  Check them out.
+- if @latest_matches.present?
+  %p You have <span class='highlight'>#{pluralize(@latest_matches.count, "match")} published</span> on #{link_to("Cozily", root_url)} since last week.  Check them out.
   %table
-    -@latest_matches.each do |apt|
+    - @latest_matches.each do |apt|
       %tr
         %td.image
           - if apt.photos.present?
@@ -16,20 +16,21 @@
         %td
           .street= link_to(apt.street, apartment_url(apt))
           .info
-            ==$#{number_with_delimiter(apt.rent)}
+            $#{number_with_delimiter(apt.rent)}
             ==/ #{apt.bedrooms.prettify}bd/#{apt.bathrooms.prettify}ba
             - if apt.square_footage
               ==/ #{apt.square_footage} sq. ft.
-          .neighborhoods== Neighborhood: #{neighborhood_links(apt.neighborhoods)}
+          .neighborhoods Neighborhood: #{neighborhood_links(apt.neighborhoods)}
           .published_on
-            ==Published on #{apt.published_at.try(:to_date).try(:to_s, :app_long)}
-            -if apt.sublet?
+            Published on #{apt.published_at.try(:to_date).try(:to_s, :app_long)}
+            - if apt.sublet?
               %span (sublet)
 
 - else
-  %p==You didn't have any matches published on #{link_to("Cozily", root_url)} this week.  But we're still growing!
+  %p You didn't have any matches published on #{link_to("Cozily", root_url)} this week.  But we're still growing!
 
 %p
-  ==Based on your profile, Cozily is currently #{profile_summary(@user.profile)}.  To update your profile or opt out of email notifications, follow the link below:<br />
-  =url_for({:controller => 'users/profiles', :action => 'edit', :user_id => @user.id, :host => "cozi.ly"})
+  Based on your profile, Cozily is currently #{profile_summary(@user.profile)}.  To update your profile or opt out of email notifications, follow the link below:<br />
+  = edit_user_registration_url
+
 =render "shared/mailer_signature"
