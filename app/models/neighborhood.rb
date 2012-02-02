@@ -1,6 +1,6 @@
 class Neighborhood < ActiveRecord::Base
-  has_many :address_neighborhoods, :dependent => :destroy
-  has_many :addresses, :through => :address_neighborhoods
+  has_many :building_neighborhoods, :dependent => :destroy
+  has_many :buildings, :through => :building_neighborhoods
 
   has_friendly_id :name, :use_slug => true
 
@@ -38,7 +38,7 @@ class Neighborhood < ActiveRecord::Base
   end
 
   def apartments
-    Apartment.joins(:address => :neighborhoods).where("address_neighborhoods.neighborhood_id" => self.id)
+    Apartment.joins(:building => :neighborhoods).where("building_neighborhoods.neighborhood_id" => self.id)
   end
 
   def published_apartments

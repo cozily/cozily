@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 describe Neighborhood do
-  it { should have_many(:address_neighborhoods, :dependent => :destroy) }
-  it { should have_many(:addresses, :through => :address_neighborhoods) }
+  it { should have_many(:building_neighborhoods, :dependent => :destroy) }
+  it { should have_many(:buildings, :through => :building_neighborhoods) }
 
   it { should validate_presence_of(:name) }
 
@@ -28,12 +28,12 @@ describe Neighborhood do
 
   describe "#published_apartments" do
     it "should return a list of published apartments" do
-      address = Factory.create(:address)
+      building = Factory.create(:building)
 
-      apartment1 = Factory.create(:published_apartment, :address => address)
-      apartment2 = Factory.create(:apartment, :address => address)
+      apartment1 = Factory.create(:published_apartment, :building => building)
+      apartment2 = Factory.create(:apartment, :building => building)
 
-      address.neighborhoods.first.published_apartments.should == [apartment1]
+      building.neighborhoods.first.published_apartments.should == [apartment1]
     end
   end
 end

@@ -11,30 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120201072836) do
-
-  create_table "address_neighborhoods", :force => true do |t|
-    t.integer  "address_id"
-    t.integer  "neighborhood_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "address_neighborhoods", ["address_id"], :name => "index_address_neighborhoods_on_address_id"
-  add_index "address_neighborhoods", ["neighborhood_id"], :name => "index_address_neighborhoods_on_neighborhood_id"
-
-  create_table "addresses", :force => true do |t|
-    t.string   "street"
-    t.string   "city"
-    t.string   "state"
-    t.string   "zip"
-    t.string   "full_address"
-    t.decimal  "lat",          :precision => 15, :scale => 10
-    t.decimal  "lng",          :precision => 15, :scale => 10
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "accuracy"
-  end
+ActiveRecord::Schema.define(:version => 20120202161910) do
 
   create_table "apartment_features", :force => true do |t|
     t.integer  "apartment_id"
@@ -47,7 +24,7 @@ ActiveRecord::Schema.define(:version => 20120201072836) do
   add_index "apartment_features", ["feature_id"], :name => "index_apartment_features_on_feature_id"
 
   create_table "apartments", :force => true do |t|
-    t.integer  "address_id"
+    t.integer  "building_id"
     t.integer  "rent"
     t.float    "bedrooms"
     t.float    "bathrooms"
@@ -72,8 +49,31 @@ ActiveRecord::Schema.define(:version => 20120201072836) do
     t.integer  "photos_count"
   end
 
-  add_index "apartments", ["address_id"], :name => "index_apartments_on_address_id"
+  add_index "apartments", ["building_id"], :name => "index_apartments_on_address_id"
   add_index "apartments", ["user_id"], :name => "index_apartments_on_user_id"
+
+  create_table "building_neighborhoods", :force => true do |t|
+    t.integer  "building_id"
+    t.integer  "neighborhood_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "building_neighborhoods", ["building_id"], :name => "index_address_neighborhoods_on_address_id"
+  add_index "building_neighborhoods", ["neighborhood_id"], :name => "index_address_neighborhoods_on_neighborhood_id"
+
+  create_table "buildings", :force => true do |t|
+    t.string   "street"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.string   "full_address"
+    t.decimal  "lat",          :precision => 15, :scale => 10
+    t.decimal  "lng",          :precision => 15, :scale => 10
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "accuracy"
+  end
 
   create_table "conversations", :force => true do |t|
     t.integer  "apartment_id"

@@ -2,14 +2,14 @@ include Rails.application.routes.url_helpers
 default_url_options[:host] = "cozi.ly"
 
 class Apartment < ActiveRecord::Base
-  REQUIRED_FIELDS = [:address, :user, :rent, :bedrooms, :bathrooms, :start_date]
+  REQUIRED_FIELDS = [:building, :user, :rent, :bedrooms, :bathrooms, :start_date]
   BEDROOM_CHOICES = [["0 Bedrooms (Studio)", 0], ["1 Bedroom", 1], ["2 Bedrooms", 2], ["3 Bedrooms", 3], ["4+ Bedrooms", 4]]
 
   include Eventable
 
   paginates_per 10
 
-  belongs_to :address
+  belongs_to :building
   belongs_to :user
 
   has_many :apartment_features, :dependent => :destroy
@@ -19,10 +19,10 @@ class Apartment < ActiveRecord::Base
   has_many :photos, :order => "position", :dependent => :destroy
   has_many :conversations, :dependent => :destroy, :order => "created_at desc"
 
-  acts_as_mappable :through => :address
+  acts_as_mappable :through => :building
   has_friendly_id :name, :use_slug => true, :allow_nil => true
 
-  delegate :full_address, :lat, :lng, :street, :to => :address
+  delegate :full_address, :lat, :lng, :street, :to => :building
 
   before_validation :format_unit
   after_create :email_owner
@@ -54,14 +54,14 @@ class Apartment < ActiveRecord::Base
     end
 
     state :published do
-      validates_presence_of :address, :user, :start_date
+      validates_presence_of :building, :user, :start_date
       validates_presence_of :end_date, :if => Proc.new { |apartment| apartment.sublet? }
       validates_length_of :unit, :maximum => 5
       validates_numericality_of :rent, :greater_than => 500, :less_than => 50_000, :only_integer => true
       validates_numericality_of :square_footage, :allow_nil => true, :greater_than => 0, :less_than_or_equal_to => 10_000, :only_integer => true
       validates_numericality_of :bedrooms, :greater_than_or_equal_to => 0
       validates_numericality_of :bathrooms, :greater_than_or_equal_to => 0
-      validates_uniqueness_of :address_id, :scope => [ :user_id, :unit ], :unless => :imported?
+      validates_uniqueness_of :building_id, :scope => [ :user_id, :unit ], :unless => :imported?
     end
 
     state :unpublished do
@@ -72,7 +72,7 @@ class Apartment < ActiveRecord::Base
       validates_numericality_of :square_footage, :allow_nil => true, :greater_than => 0, :less_than => 10_000, :only_integer => true
       validates_numericality_of :bedrooms, :greater_than_or_equal_to => 0, :allow_nil => true
       validates_numericality_of :bathrooms, :greater_than_or_equal_to => 0, :allow_nil => true
-      validates_uniqueness_of :address_id, :scope => [ :user_id, :unit ], :allow_nil => true, :unless => :imported?
+      validates_uniqueness_of :building_id, :scope => [ :user_id, :unit ], :allow_nil => true, :unless => :imported?
     end
 
     event :publish do
@@ -130,7 +130,7 @@ class Apartment < ActiveRecord::Base
   end
 
   def neighborhoods
-    Neighborhood.joins(:addresses => :apartments).where("apartments.id" => self.id)
+    Neighborhood.joins(:buildings => :apartments).where("apartments.id" => self.id)
   end
 
   def neighborhood_ids
@@ -142,7 +142,7 @@ class Apartment < ActiveRecord::Base
   end
 
   def comparable_apartments
-    return [] unless bedrooms && rent && address
+    return [] unless bedrooms && rent && building
     Apartment.with_state(:published).bedrooms_near(bedrooms).rent_near(rent).to_a.sort_by_distance_from(self) - [self]
   end
 
@@ -163,29 +163,29 @@ class Apartment < ActiveRecord::Base
   end
 
   def full_address
-    address.try(:full_address)
+    building.try(:full_address)
   end
 
   def full_address=(full_address)
-    unless full_address == self.address.try(:full_address)
-      self.address = Address.for_full_address(full_address)
+    unless full_address == self.building.try(:full_address)
+      self.building = Building.for_full_address(full_address)
     end
   end
 
   def name
-    [full_address, unit].reject { |str| str.blank? }.join(" #") if address && address.valid?
+    [full_address, unit].reject { |str| str.blank? }.join(" #") if building && building.valid?
   end
 
   def quick_name
-    [full_address, unit].reject { |str| str.blank? }.join(" #") if address && address.geocoded?
+    [full_address, unit].reject { |str| str.blank? }.join(" #") if building && building.geocoded?
   end
 
   def address_name
-    full_address.split(",").first if address && address.geocoded?
+    full_address.split(",").first if building && building.geocoded?
   end
 
   def nearby_stations
-    return [] unless address
+    return [] unless building
     nearest_stations = Station.find(:all, :origin => [lat, lng], :within => 0.5, :order => 'distance')
     if nearest_stations.empty?
       Station.find(:all, :origin => [lat, lng], :order => 'distance', :limit => 1)

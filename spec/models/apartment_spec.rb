@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Apartment do
-  it { should belong_to(:address) }
+  it { should belong_to(:building) }
   it { should belong_to(:user) }
 
   it { should have_many(:apartment_features, :dependent => :destroy) }
@@ -32,7 +32,7 @@ describe Apartment do
   it "should validate the uniqueness of the address scoped to the user and unit" do
     @apartment1 = Factory(:apartment)
     @apartment2 = Factory.build(:apartment,
-                                :address => @apartment1.address,
+                                :building => @apartment1.building,
                                 :unit => @apartment1.unit,
                                 :user => @apartment1.user)
     @apartment2.should be_invalid
@@ -185,7 +185,7 @@ describe Apartment do
     before do
       @user = Factory(:user, :phone => "800-555-1212")
       @apartment = Factory(:apartment,
-                           :address => Factory.build(:address),
+                           :building => Factory.build(:building),
                            :user => @user,
                            :rent => 1500,
                            :bedrooms => 1,
@@ -202,7 +202,7 @@ describe Apartment do
       @apartment.should be_publishable
     end
 
-    [:address, :user, :rent, :bedrooms, :bathrooms].each do |attr|
+    [:building, :user, :rent, :bedrooms, :bathrooms].each do |attr|
       it "returns false when #{attr} is missing" do
         @apartment.send("#{attr}=", nil)
         @apartment.should_not be_publishable
@@ -295,7 +295,7 @@ describe Apartment do
     end
 
     it "returns true when the apartment matches the user's neighborhoods" do
-      @apartment.update_attribute(:address, Factory(:address))
+      @apartment.update_attribute(:building, Factory(:building))
       @apartment.reload.match_for?(@user).should be_false
     end
 

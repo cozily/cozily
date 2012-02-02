@@ -4,7 +4,7 @@ describe MatchMailer do
   describe "#deliver_new_match_notification" do
     before do
       Apartment.destroy_all
-      Address.destroy_all
+      Building.destroy_all
       @apartment, @user = Factory(:apartment), Factory(:user)
       @email = MatchMailer.new_match_notification(@apartment.id, @user.id).deliver
     end

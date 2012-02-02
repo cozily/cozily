@@ -7,8 +7,7 @@ class Conversation < ActiveRecord::Base
   has_many :messages, :order => "created_at"
 
   validates_presence_of :apartment, :sender, :receiver
-  # validate :ensure_sender_is_not_receiver
-  # validate :ensure_first_message_is_valid
+  validate :ensure_sender_is_not_receiver
 
   scope :for_user, lambda { |user| where("(sender_id = ? AND sender_deleted_at IS NULL) OR (receiver_id = ? AND receiver_deleted_at IS NULL)", user.id, user.id) }
 
@@ -35,12 +34,6 @@ class Conversation < ActiveRecord::Base
   end
 
   private
-  def ensure_first_message_is_valid
-    unless messages.present? || Message.new(:conversation => self, :sender => sender, :body => body).valid?
-      errors.add(:base, "The first message is invalid")
-    end
-  end
-
   def ensure_sender_is_not_receiver
     errors.add(:base, "You can't message yourself") if sender == receiver
   end

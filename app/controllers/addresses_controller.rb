@@ -1,4 +1,4 @@
-class AddressesController < ApplicationController
+class BuildingController < ApplicationController
   def geocode
     nyc_bounds = GoogleGeocoder.geocode('New York City').suggested_bounds
     response = GoogleGeocoder.geocode(params[:term], :bias => nyc_bounds)
