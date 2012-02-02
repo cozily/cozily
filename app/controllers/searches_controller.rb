@@ -1,5 +1,5 @@
 class SearchesController < ApplicationController
-  def create
+  def show
     if params[:q].present?
       session[:neighborhood_id] = params[:q][:neighborhood_id].to_i
 

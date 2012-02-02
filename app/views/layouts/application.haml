@@ -64,7 +64,7 @@
         .container
           %h2 Find Apartments!
 
-          = form_for @search, :as => :q, :url => search_path, :html => {:method => :post, :class => 'search'} do |f|
+          = form_for @search, :as => :q, :url => search_path, :html => {:method => :get, :class => 'search'} do |f|
             = f.select :neighborhood_id, grouped_options_for_select(Neighborhood.to_grouped_dropdown, @search.neighborhood_id), {}, {:class => "chosen", :style => "width:250px", :"data-placeholder" => "Choose a neighborhood..."}
             = f.select :min_bedrooms, Apartment::BEDROOM_CHOICES, {:include_blank => true}, {:class => "chosen", :style => "width:180px", :"data-placeholder" => "Min Bedrooms?"}
             = f.text_field :max_rent, :placeholder => "Max Rent?"

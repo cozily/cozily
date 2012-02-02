@@ -18,7 +18,7 @@ Rails.application.routes.draw do |map|
 
   map.resources :neighborhood_profiles, :only => [:create, :destroy]
 
-  map.resource :search, :only => [:create]
+  map.resource :search, :only => [:show]
   map.resources :users do |user|
     user.resources :favorites, :only => [:create, :destroy]
     user.resources :flags, :only => [:create, :destroy]
