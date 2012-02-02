@@ -1,0 +1,15 @@
+=render "shared/mailer_salutation", :user => @user
+%p
+  Welcome to Cozily!
+%p
+  Thanks for creating an account! We're here to help you find your new home.
+%p
+  Fill out your profile (#{link_to edit_user_registration_url, edit_user_registration_url}) to let us know what you're looking for, and we'll send you matches as they come in.
+%p
+  Or, feel free to just browse (#{link_to browse_url, browse_url}).
+%p
+  We're beginning to revamp the site, so please keep checking back to see what's new! And definitely feel free to get in touch with us at info@cozi.ly (or just reply to this email).
+%p
+  Happy Renting,<br/>
+  Team Cozily<br/>
+  http://cozi.ly
