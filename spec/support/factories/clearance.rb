@@ -12,11 +12,7 @@ FactoryGirl.define do
     role_ids              { [Role.find_by_name("finder").id] }
   end
 
-  factory :email_confirmed_user, :parent => :user do
-    email_confirmed { true }
-  end
-
-  factory :lister, :parent => :email_confirmed_user do
+  factory :lister, :parent => :user do
     role_ids { [Role.find_by_name("lister").id] }
     phone { "202-270-7370" }
   end

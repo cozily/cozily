@@ -44,8 +44,8 @@ FactoryGirl.define do
 
   factory :conversation do
     association  :apartment, :factory => :published_apartment
-    association  :sender, :factory => :email_confirmed_user
-    association  :receiver, :factory => :email_confirmed_user
+    association  :sender, :factory => :user
+    association  :receiver, :factory => :user
     body         { Faker::Lorem.paragraph }
   end
 
@@ -69,7 +69,7 @@ FactoryGirl.define do
 
   factory :message do
     association  :conversation
-    association  :sender, :factory => :email_confirmed_user
+    association  :sender, :factory => :user
     body         { Faker::Lorem.paragraph }
   end
 

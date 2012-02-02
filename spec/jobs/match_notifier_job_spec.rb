@@ -3,7 +3,7 @@ require 'spec_helper'
 describe MatchNotifierJob do
   describe "#perform" do
     before do
-      @user, @apartment = Factory(:email_confirmed_user), Factory(:apartment)
+      @user, @apartment = Factory(:user), Factory(:apartment)
       Apartment.stub!(:find).and_return(@apartment)
       @apartment.stub!(:match_for?).and_return(true)
     end

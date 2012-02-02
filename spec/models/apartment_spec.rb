@@ -183,7 +183,7 @@ describe Apartment do
 
   describe "#publishable?" do
     before do
-      @user = Factory(:email_confirmed_user, :phone => "800-555-1212")
+      @user = Factory(:user, :phone => "800-555-1212")
       @apartment = Factory(:apartment,
                            :address => Factory.build(:address),
                            :user => @user,
@@ -216,11 +216,6 @@ describe Apartment do
 
     it "returns false when the user doesn't have a phone number" do
       @user.update_attribute(:phone, nil)
-      @apartment.should_not be_publishable
-    end
-
-    it "returns false when the user hasn't confirmed their email" do
-      @user.update_attribute(:email_confirmed, false)
       @apartment.should_not be_publishable
     end
   end
@@ -336,11 +331,6 @@ describe Apartment do
     it "includes phone when the user doesn't have a phone" do
       @apartment.user.update_attribute(:phone, nil)
       @apartment.missing_associations.should include(:phone)
-    end
-
-    it "includes email_confirmed when the user hasn't confirmed their email" do
-      @apartment.user.update_attribute(:email_confirmed, false)
-      @apartment.missing_associations.should include(:email_confirmed)
     end
   end
 

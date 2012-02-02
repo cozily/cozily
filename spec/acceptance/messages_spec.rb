@@ -2,7 +2,7 @@ require File.dirname(__FILE__) + '/acceptance_helper'
 
 feature "messages" do
   before do
-    @user = Factory(:email_confirmed_user)
+    @user = Factory(:user)
     login_as(@user)
   end
 
@@ -31,7 +31,7 @@ feature "messages" do
   end
 
   scenario "user views replies to a message", :js => true do
-    user = Factory(:email_confirmed_user)
+    user = Factory(:user)
     apartment = Factory(:apartment, :user => user)
     conversation = Factory(:conversation,
                            :sender => @user,

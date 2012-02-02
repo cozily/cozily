@@ -21,7 +21,7 @@ feature "unauthenticated" do
   end
 
   scenario "user can sign in on the homepage" do
-    user = Factory(:email_confirmed_user)
+    user = Factory(:user)
     visit root_path
 
     fill_in "session_email", :with => user.email

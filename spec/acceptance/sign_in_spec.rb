@@ -13,18 +13,6 @@ feature "sign in" do
     page.should have_content "Sign in"
   end
 
-  scenario "user is not confirmed" do
-    user = Factory(:user)
-
-    visit new_user_session_path
-    fill_in "Email", :with => user.email
-    fill_in "Password", :with => "password"
-    click_button "Sign in"
-
-    page.should have_content "remember to confirm your email address"
-    page.should have_content "Sign out"
-  end
-
   scenario "user enters wrong password" do
     user = Factory(:user)
 
@@ -38,7 +26,7 @@ feature "sign in" do
   end
 
   scenario "user signs in successfully" do
-    user = Factory(:email_confirmed_user)
+    user = Factory(:user)
 
     visit new_user_session_path
     fill_in "Email", :with => user.email

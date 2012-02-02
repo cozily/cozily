@@ -29,7 +29,6 @@ class User < ActiveRecord::Base
 
   accepts_nested_attributes_for :profile
 
-  scope :email_confirmed, where(:email_confirmed => true)
   scope :receive_match_notifications, where(:receive_match_notifications => true)
   scope :receive_match_summaries, where(:receive_match_summaries => true)
   scope :receive_listing_summaries, where(:receive_listing_summaries => true)

@@ -3,7 +3,7 @@ require File.dirname(__FILE__) + '/acceptance_helper'
 feature "activity feed" do
   scenario "user views activity feed" do
     pending "activity feed feature"
-    user = Factory(:email_confirmed_user, :phone => "800-555-1212")
+    user = Factory(:user, :phone => "800-555-1212")
     login_as(user)
 
     apartment = Factory(:apartment, :user => user)

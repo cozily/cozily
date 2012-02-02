@@ -148,7 +148,6 @@ class Apartment < ActiveRecord::Base
   def missing_associations
     missing_associations = []
     missing_associations << :phone unless user && user.phone.present?
-    missing_associations << :email_confirmed unless user && user.email_confirmed?
     missing_associations
   end
 
@@ -224,7 +223,7 @@ class Apartment < ActiveRecord::Base
   end
 
   def valid_user?
-    user && user.phone.present? && user.email_confirmed?
+    user && user.phone.present?
   end
 
   protected

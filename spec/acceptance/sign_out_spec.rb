@@ -2,7 +2,7 @@ require File.dirname(__FILE__) + '/acceptance_helper'
 
 feature "sign out" do
   scenario "user signs out" do
-    user = Factory(:email_confirmed_user)
+    user = Factory(:user)
 
     visit new_user_session_path
     fill_in "Email", :with => user.email
