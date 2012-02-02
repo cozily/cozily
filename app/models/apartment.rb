@@ -97,6 +97,7 @@ class Apartment < ActiveRecord::Base
   end
 
   searchable do
+    integer :user_id
     text :unit
     text :state
     time :published_at

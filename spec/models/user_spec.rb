@@ -42,7 +42,7 @@ describe User do
         Factory(:user)
       }.should change(ActionMailer::Base.deliveries, :count).by(1)
 
-      ActionMailer::Base.deliveries.last.subject.should == "Confirm your email address"
+      ActionMailer::Base.deliveries.last.subject.should == "Thanks for creating an account on Cozily"
     end
   end
 
@@ -127,13 +127,8 @@ describe User do
 
   describe "#matches", sunspot: true do
     before do
-      @apt1 = Factory(:published_apartment,
-                      :bedrooms => 1,
-                      :rent => 1500)
-      @apt2 = Factory(:published_apartment,
-                      :bedrooms => 2,
-                      :rent => 2100)
       @user = Factory(:user)
+      @neighborhood = Factory(:neighborhood)
     end
 
     context "when the user has a complete profile" do
@@ -142,7 +137,7 @@ describe User do
                            :user => @user,
                            :rent => 1500,
                            :bedrooms => 1,
-                           :neighborhoods => [@apt1.neighborhoods.first])
+                           :neighborhoods => [@neighborhood])
         @user.matches
       end
 
@@ -151,27 +146,17 @@ describe User do
       end
 
       it "returns apartments that match all of the user's requirements" do
+        neighborhood_id = @neighborhood.id
+
+        Sunspot.session.should have_search_params(:without, :user_id, @user.id)
         Sunspot.session.should have_search_params(:with, Proc.new {
           with(:published, true)
           with(:rent).less_than(1500)
+          with(:rent).equal_to(1500)
           with(:bedrooms).greater_than(1)
+          with(:bedrooms).equal_to(1)
+          with(:neighborhood_ids, [neighborhood_id])
         })
-      end
-
-      it "does not return matching apartments that the user created" do
-        @apt1.update_attribute(:user, @user)
-      end
-
-      it "returns an empty array when rent does not match" do
-        @apt1.update_attribute(:rent, 1501)
-      end
-
-      it "returns an empty array when bedrooms does not match" do
-        @apt1.update_attribute(:bedrooms, 0)
-      end
-
-      it "returns an empty array when neighborhood does not match" do
-        @apt1.update_attribute(:address, Address.last)
       end
     end
 
@@ -182,10 +167,12 @@ describe User do
                            :rent => nil,
                            :bedrooms => nil,
                            :neighborhoods => [])
+        @user.matches
       end
 
-      it "returns all published apartments" do
-        @user.matches.should == [@apt1, @apt2]
+      it "searches with the default information" do
+        Sunspot.session.should have_search_params(:without, :user_id, @user.id)
+        Sunspot.session.should have_search_params(:with, :published, true)
       end
     end
 
@@ -196,12 +183,12 @@ describe User do
                              :user => @user,
                              :rent => nil,
                              :bedrooms => 1,
-                             :neighborhoods => [@apt1.neighborhoods.first])
+                             :neighborhoods => [@neighborhood])
+          @user.matches
         end
 
         it "ignores rent" do
-          @apt1.update_attribute(:rent, 1501)
-          @user.matches.should == [@apt1]
+          Sunspot.session.should_not have_search_params(:with, :rent)
         end
       end
     end
@@ -213,12 +200,12 @@ describe User do
                              :user => @user,
                              :rent => 1500,
                              :bedrooms => nil,
-                             :neighborhoods => [@apt1.neighborhoods.first])
+                             :neighborhoods => [@neighborhood])
+          @user.matches
         end
 
         it "ignores bedrooms" do
-          @apt1.update_attribute(:bedrooms, 0)
-          @user.matches.should == [@apt1]
+          Sunspot.session.should_not have_search_params(:with, :neighborhood_ids)
         end
       end
     end
@@ -231,19 +218,17 @@ describe User do
                              :rent => 1500,
                              :bedrooms => nil,
                              :neighborhoods => [])
+          @user.matches
         end
 
         it "ignores neighborhood" do
-          @user.matches.should == [@apt1]
+          Sunspot.session.should_not have_search_params(:with, :neighborhoods)
         end
       end
     end
 
     describe "sublet preference" do
       before do
-        @apt1.update_attributes(:sublet => true,
-                                :end_date => 1.month.from_now)
-
         @profile = Factory(:profile,
                            :user => @user,
                            :bedrooms => nil,
@@ -252,17 +237,21 @@ describe User do
 
       it "returns sublets when the user includes them" do
         @profile.update_attribute(:sublets, Profile::SUBLETS["include them"])
-        @user.matches.should include(@apt1, @apt2)
+        @user.matches
+        Sunspot.session.should_not have_search_params(:with, :sublet, true)
+        Sunspot.session.should_not have_search_params(:with, :sublet, false)
       end
 
       it "only returns sublets when the user includes them exclusively" do
         @profile.update_attribute(:sublets, Profile::SUBLETS["only show them"])
-        @user.matches.should == [@apt1]
+        @user.matches
+        Sunspot.session.should have_search_params(:with, :sublet, true)
       end
 
       it "excludes sublets when the user excludes them" do
         @profile.update_attribute(:sublets, Profile::SUBLETS["exclude them"])
-        @user.matches.should == [@apt2]
+        @user.matches
+        Sunspot.session.should have_search_params(:with, :sublet, false)
       end
     end
 
@@ -273,14 +262,12 @@ describe User do
                            :bedrooms => nil,
                            :rent => nil,
                            :features => [Feature.find_by_name("furnished"), Feature.find_by_name("backyard")])
+        @user.matches
       end
 
       it "returns apartments that have the specified features" do
-        apartment_with_no_features = Factory(:published_apartment)
-        apartment_with_some_features = Factory(:published_apartment, :features => [Feature.find_by_name("furnished")])
-        apartment_with_all_features = Factory(:published_apartment, :features => [Feature.find_by_name("furnished"), Feature.find_by_name("backyard")])
-
-        @user.matches.should == [apartment_with_all_features]
+        Sunspot.session.should have_search_params(:with, :feature_ids, Feature.find_by_name("furnished").id)
+        Sunspot.session.should have_search_params(:with, :feature_ids, Feature.find_by_name("backyard").id)
       end
     end
   end

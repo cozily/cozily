@@ -1,44 +1,46 @@
 require 'spec_helper'
 
-describe Search do
-  context "when searching by number of bedrooms" do
-    before do
-      Factory(:published_apartment, :bedrooms => 1)
-      Factory(:published_apartment, :bedrooms => 2)
-      Factory(:published_apartment, :bedrooms => 4)
-      @search = Search.new
-      @search.min_bedrooms = 2
-    end
+describe Search, sunspot: true do
+  it "should perform a search for Apartments" do
+    @search = Search.new
+    @search.results
+    Sunspot.session.should be_a_search_for(Apartment)
+  end
 
+  context "when searching by number of bedrooms" do
     it "returns the correct number of apartments with bedrooms between min and max" do
-      @search.results.count.should == 2
+      @search = Search.new(:min_bedrooms => 2)
+      @search.results
+      Sunspot.session.should have_search_params(:with, Proc.new {
+        with(:published, true)
+        with(:bedrooms).greater_than(2)
+        with(:bedrooms).equal_to(2)
+      })
+
     end
   end
 
   context "when searching by rent" do
-    before do
-      Factory(:published_apartment, :rent => 1900)
-      Factory(:published_apartment, :rent => 2200)
-      Factory(:published_apartment, :rent => 2750)
-      @search = Search.new(:max_rent => 2700)
-    end
-
     it "returns the correct number of apartments with rent between min and max" do
-      @search.results.count.should == 2
+      @search = Search.new(:max_rent => 2700)
+      @search.results
+      Sunspot.session.should have_search_params(:with, Proc.new {
+        with(:published, true)
+        with(:rent).less_than(2700)
+        with(:rent).equal_to(2700)
+      })
     end
   end
 
   context "when searching by neighborhood" do
-    before do
-      Factory(:published_apartment,
-              :address => Factory(:address, :full_address => "546 Henry St 11231"))
-      Factory(:published_apartment,
-              :address => Factory(:address, :full_address => "111 W 74th St 10023"))
-      @search = Search.new(:neighborhood_ids => Neighborhood.find_all_by_name("Upper West Side").map(&:id))
-    end
-
     it "returns the correct number of apartments in that neighborhood" do
-      @search.results.count.should == 1
+      neighborhood = Neighborhood.find_by_name("Upper West Side")
+      @search = Search.new(:neighborhood_id => neighborhood.id)
+      @search.results
+      Sunspot.session.should have_search_params(:with, Proc.new {
+        with(:published, true)
+        with(:neighborhood_ids, neighborhood.id)
+      })
     end
   end
 end
