@@ -12,5 +12,8 @@ Cozily::Application.configure do
   config.action_mailer.perform_deliveries = :true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = { :host => "localhost", :port => 1025 }
+
+  FACEBOOK_APP_ID = "222311754528494"
+  FACEBOOK_APP_SECRET = "274c15daf1839090384eef9bdb1986d4"
 end
 

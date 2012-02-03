@@ -20,7 +20,7 @@ class DashboardController < ApplicationController
                                                          :locals  => {:apartments => @apartments}),
                          :tabs       => render_to_string(:partial => "dashboard/tabs",
                                                          :locals  => {:active => :listings}),
-                         :map_others => @apartments.as_json(:methods => :to_param, :include => :address).to_json}
+                         :map_others => @apartments.as_json(:methods => :to_param, :include => :building).to_json}
       end
     end
   end
@@ -34,7 +34,7 @@ class DashboardController < ApplicationController
                                                          :locals  => {:matches => @matches}),
                          :tabs       => render_to_string(:partial => "dashboard/tabs",
                                                          :locals  => {:active => :matches}),
-                         :map_others => @matches.as_json(:methods => :to_param, :include => :address).to_json}
+                         :map_others => @matches.as_json(:methods => :to_param, :include => :building).to_json}
       end
     end
   end
@@ -48,7 +48,7 @@ class DashboardController < ApplicationController
                                                          :locals  => {:favorites => @favorites}),
                          :tabs       => render_to_string(:partial => "dashboard/tabs",
                                                          :locals  => {:active => :favorites}),
-                         :map_others => @favorites.as_json(:methods => :to_param, :include => :address).to_json}
+                         :map_others => @favorites.as_json(:methods => :to_param, :include => :building).to_json}
       end
     end
   end
@@ -73,7 +73,7 @@ class DashboardController < ApplicationController
       format.html
       format.js do
         render :json => {:map        => render_to_string(:partial => "dashboard/map"),
-                         :map_others => @matches.as_json(:methods => :to_param, :include => :address).to_json}
+                         :map_others => @matches.as_json(:methods => :to_param, :include => :building).to_json}
       end
     end
   end

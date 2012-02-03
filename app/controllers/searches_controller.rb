@@ -23,7 +23,7 @@ class SearchesController < ApplicationController
       format.js do
         render :json => { :results => render_to_string(:partial => "searches/results",
                                                        :locals => { :results => @search.paginated_results } ),
-                          :map_others => @search.paginated_results.as_json(:methods => :to_param, :include => :address).to_json }
+                          :map_others => @search.paginated_results.as_json(:methods => :to_param, :include => :building).to_json }
       end
     end
   end

@@ -3,7 +3,7 @@
 
 - if @search.results.present?
   :javascript
-    var apartments = #{@search.paginated_results.as_json(:methods => :to_param, :include => :address).to_json};
+    var apartments = #{@search.paginated_results.as_json(:methods => :to_param, :include => :building).to_json};
 
 .article
   = render "results", :results => @search.paginated_results

@@ -6,7 +6,7 @@ class BrowseController < ApplicationController
       format.html
       format.js do
         render :json => {:apartments => render_to_string(:partial => "browse/index"),
-                         :map_others => @paginated_apartments.as_json(:methods => :to_param, :include => :address).to_json}
+                         :map_others => @paginated_apartments.as_json(:methods => :to_param, :include => :building).to_json}
       end
     end
   end

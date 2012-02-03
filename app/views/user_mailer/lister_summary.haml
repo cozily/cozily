@@ -40,14 +40,14 @@
           -else
             =link_to(image_tag("defaults/apartment/thumb.jpg"), apartment_url(apt))
         %td
-          .street= link_to(apt.address.present? ? apt.street : name_for_apartment(apt), apartment_url(apt))
+          .street= link_to(apt.building.present? ? apt.street : name_for_apartment(apt), apartment_url(apt))
           .info
             ==$#{number_with_delimiter(apt.rent)}
             ==/ #{apt.bedrooms.try(:prettify)}bd/#{apt.bathrooms.try(:prettify)}ba
             - if apt.square_footage
               ==/ #{apt.square_footage} sq. ft.
 
-          -if apt.address
+          -if apt.building
             .neighborhoods== Neighborhood: #{neighborhood_links(apt.neighborhoods)}
           .published_on
             =last_state_change(apt)

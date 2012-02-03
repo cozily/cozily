@@ -24,10 +24,10 @@ class ApartmentsController < ApplicationController
     @apartment = Apartment.find(params[:id])
     params[:apartment][:rent].gsub!(/[^0-9]/, "")
     if @apartment.update_attributes(params[:apartment])
-      if @apartment.address.try(:invalid?)
+      if @apartment.building.try(:invalid?)
         flash[:failure] = "We're currently only accepting apartment listings in New York City."
-      elsif @apartment.address.nil? && params[:apartment][:full_address].present?
-        flash[:failure] = "We're looking for building level accuracy on the address.  No intersections, please."
+      elsif @apartment.building.nil? && params[:apartment][:full_address].present?
+        flash[:failure] = "We're looking for building-level accuracy on the address.  No intersections, please."
       end
       respond_to do |format|
         format.html { redirect_to params[:return_to] || edit_apartment_path(@apartment) }

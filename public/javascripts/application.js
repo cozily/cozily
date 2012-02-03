@@ -150,7 +150,7 @@ function attachTips() {
         toggleRoleFields();
 
         $("input#apartment_full_address").autocomplete({
-            source: "/addresses/geocode",
+            source: "/buildings/geocode",
             minLength: 3,
             delay: 400,
             select: function(event, ui) {

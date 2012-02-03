@@ -2,7 +2,7 @@
   Cozily | Browse
 
 :javascript
-  var apartments = #{(@paginated_apartments).as_json(:methods => :to_param, :include => :address).to_json};
+  var apartments = #{(@paginated_apartments).as_json(:methods => :to_param, :include => :building).to_json};
 
 .head
   %h1== Hi, Friend!

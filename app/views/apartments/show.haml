@@ -6,14 +6,14 @@
 
 - if @apartment.published?
   - content_for :nestio do
-    - if @apartment.address.present?
-      %meta{:property => 'listing:title', :content => @apartment.address.street}
+    - if @apartment.building.present?
+      %meta{:property => 'listing:title', :content => @apartment.building.street}
 
-      %meta{:property => 'listing:street-address', :content => @apartment.address.street}
-      %meta{:property => 'listing:neighborhood', :content => @apartment.address.neighborhoods.map(&:name).join(", ")}
-      %meta{:property => 'listing:locality', :content => @apartment.address.city}
-      %meta{:property => 'listing:region', :content => @apartment.address.state}
-      %meta{:property => 'listing:postal-code', :content => @apartment.address.zip}
+      %meta{:property => 'listing:street-address', :content => @apartment.building.street}
+      %meta{:property => 'listing:neighborhood', :content => @apartment.building.neighborhoods.map(&:name).join(", ")}
+      %meta{:property => 'listing:locality', :content => @apartment.building.city}
+      %meta{:property => 'listing:region', :content => @apartment.building.state}
+      %meta{:property => 'listing:postal-code', :content => @apartment.building.zip}
 
     %meta{:property => 'listing:rent', :content => @apartment.rent}
     %meta{:property => 'listing:bedrooms', :content => @apartment.bedrooms}
@@ -30,8 +30,8 @@
 
 -if @apartment.published? || (user_signed_in? && @apartment.owned_by?(current_user))
   :javascript
-    var self = #{@apartment.as_json(:methods => :to_param, :include => :address).to_json};
-    var apartments = #{@apartment.comparable_apartments.as_json(:methods => :to_param, :include => :address).to_json};
+    var self = #{@apartment.as_json(:methods => :to_param, :include => :building).to_json};
+    var apartments = #{@apartment.comparable_apartments.as_json(:methods => :to_param, :include => :building).to_json};
 
   -if user_signed_in? && @apartment.owned_by?(current_user)
     =render "apartments/owner", :apartment => @apartment, :type => :show
@@ -40,8 +40,8 @@
     .head
       .name
         -if @apartment.address_name
-          %h1=@apartment.address.street
-          %h2==#{@apartment.address.city}, #{@apartment.address.state} #{@apartment.address.zip}
+          %h1=@apartment.building.street
+          %h2==#{@apartment.building.city}, #{@apartment.building.state} #{@apartment.building.zip}
         -else
           %h1 Unknown Address
 
@@ -65,7 +65,7 @@
               %li
                 #{@apartment.square_footage} sq. ft.
             %li
-              - if @apartment.address && @apartment.neighborhoods
+              - if @apartment.building && @apartment.neighborhoods
                 Neighborhood: #{neighborhood_links(@apartment.neighborhoods)}
               - else
                 Neighborhood: Unknown
@@ -142,12 +142,12 @@
             %td None
     =image_tag "backgrounds/shadow.png", :class => "shadow"
 
-    -if @apartment.address
+    -if @apartment.building
       .business_search{:'data-lat' => @apartment.lat, :'data-lng' => @apartment.lng}
 
 -else
   %p.unpublished
-    -if @apartment.address.present?
+    -if @apartment.building.present?
       ==Oops, this apartment is unpublished.  Why not check out other places in #{neighborhood_links(@apartment.neighborhoods)}?
     -else
       ==Oops, this apartment is unpublished.  Why not check out this #{link_to("random apartment", Apartment.with_state(:published).first(:order => "RANDOM()"))}?

@@ -25,7 +25,7 @@
                 = image_tag(conversation.apartment.photos.first.image.url(:micro))
               - else
                 = image_tag("defaults/apartment/micro.jpg")
-            %li.name= conversation.apartment.address.street
+            %li.name= conversation.apartment.building.street
         %div.messages{:style => "display: none;"}
           = render "dashboard/messages/messages", :conversation => conversation
   - else
