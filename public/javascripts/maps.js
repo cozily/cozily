@@ -32,8 +32,8 @@ function setPrimaryApartment(lat, lng, title) {
 }
 
 function updateMap(self, others) {
-    if (self.apartment != undefined && self.apartment.address != undefined) {
-        var marker = setPrimaryApartment(self.apartment.address.lat, self.apartment.address.lng, self.apartment.address.full_address);
+    if (self.apartment != undefined && self.apartment.building != undefined) {
+        var marker = setPrimaryApartment(self.apartment.building.lat, self.apartment.building.lng, self.apartment.building.full_address);
         attachClickToMarker(marker, self.apartment);
     } else {
         map.setCenter(new google.maps.LatLng(40.7144843, -74.0072444));
@@ -42,12 +42,12 @@ function updateMap(self, others) {
 
     for (var i = 0; i < others.length; i++) {
         var apartment = others[i].apartment;
-        if (apartment.address != undefined) {
-            point = new google.maps.LatLng(apartment.address.lat, apartment.address.lng);
+        if (apartment.building != undefined) {
+            point = new google.maps.LatLng(apartment.building.lat, apartment.building.lng);
             marker = new google.maps.Marker({
                 position: point,
                 param: apartment.to_param,
-                title: apartment.address.street,
+                title: apartment.building.street,
                 animation: google.maps.Animation.DROP
             });
 
