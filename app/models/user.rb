@@ -110,7 +110,7 @@ class User < ActiveRecord::Base
         end
       end
 
-      order :published_at, :desc
+      order_by :published_at, :desc
       paginate :page => page, :per_page => 10
     end
   end
