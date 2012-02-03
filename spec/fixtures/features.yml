@@ -1,127 +1,127 @@
 ---
 furnished:
   category: apartment
-  created_at: 2012-02-02 16:22:34.298157000 Z
+  created_at: 2012-02-03 07:15:29.924292000 Z
   id: 1
   name: furnished
-  updated_at: 2012-02-02 16:22:34.298157000 Z
+  updated_at: 2012-02-03 07:15:29.924292000 Z
 exposed_brick:
   category: apartment
-  created_at: 2012-02-02 16:22:34.303359000 Z
+  created_at: 2012-02-03 07:15:29.930106000 Z
   id: 2
   name: exposed brick
-  updated_at: 2012-02-02 16:22:34.303359000 Z
+  updated_at: 2012-02-03 07:15:29.930106000 Z
 sleeping_loft:
   category: apartment
-  created_at: 2012-02-02 16:22:34.305836000 Z
+  created_at: 2012-02-03 07:15:29.932925000 Z
   id: 3
   name: sleeping loft
-  updated_at: 2012-02-02 16:22:34.305836000 Z
+  updated_at: 2012-02-03 07:15:29.932925000 Z
 high_ceilings:
   category: apartment
-  created_at: 2012-02-02 16:22:34.309133000 Z
+  created_at: 2012-02-03 07:15:29.935618000 Z
   id: 4
   name: high ceilings
-  updated_at: 2012-02-02 16:22:34.309133000 Z
+  updated_at: 2012-02-03 07:15:29.935618000 Z
 air_conditioning:
   category: apartment
-  created_at: 2012-02-02 16:22:34.311993000 Z
+  created_at: 2012-02-03 07:15:29.938875000 Z
   id: 5
   name: air conditioning
-  updated_at: 2012-02-02 16:22:34.311993000 Z
+  updated_at: 2012-02-03 07:15:29.938875000 Z
 backyard:
   category: apartment
-  created_at: 2012-02-02 16:22:34.315024000 Z
+  created_at: 2012-02-03 07:15:29.941695000 Z
   id: 6
   name: backyard
-  updated_at: 2012-02-02 16:22:34.315024000 Z
+  updated_at: 2012-02-03 07:15:29.941695000 Z
 balcony:
   category: apartment
-  created_at: 2012-02-02 16:22:34.317931000 Z
+  created_at: 2012-02-03 07:15:29.944142000 Z
   id: 7
   name: balcony
-  updated_at: 2012-02-02 16:22:34.317931000 Z
+  updated_at: 2012-02-03 07:15:29.944142000 Z
 bathtub:
   category: apartment
-  created_at: 2012-02-02 16:22:34.320550000 Z
+  created_at: 2012-02-03 07:15:29.946804000 Z
   id: 8
   name: bathtub
-  updated_at: 2012-02-02 16:22:34.320550000 Z
+  updated_at: 2012-02-03 07:15:29.946804000 Z
 dishwasher:
   category: apartment
-  created_at: 2012-02-02 16:22:34.323490000 Z
+  created_at: 2012-02-03 07:15:29.949287000 Z
   id: 9
   name: dishwasher
-  updated_at: 2012-02-02 16:22:34.323490000 Z
+  updated_at: 2012-02-03 07:15:29.949287000 Z
 washer_dryer:
   category: apartment
-  created_at: 2012-02-02 16:22:34.326851000 Z
+  created_at: 2012-02-03 07:15:29.952690000 Z
   id: 10
   name: washer/dryer
-  updated_at: 2012-02-02 16:22:34.326851000 Z
+  updated_at: 2012-02-03 07:15:29.952690000 Z
 high_rise:
   category: building
-  created_at: 2012-02-02 16:22:34.329507000 Z
+  created_at: 2012-02-03 07:15:29.955708000 Z
   id: 11
   name: high-rise
-  updated_at: 2012-02-02 16:22:34.329507000 Z
+  updated_at: 2012-02-03 07:15:29.955708000 Z
 live_in_super:
   category: building
-  created_at: 2012-02-02 16:22:34.331903000 Z
+  created_at: 2012-02-03 07:15:29.958291000 Z
   id: 12
   name: live-in super
-  updated_at: 2012-02-02 16:22:34.331903000 Z
+  updated_at: 2012-02-03 07:15:29.958291000 Z
 doorman:
   category: building
-  created_at: 2012-02-02 16:22:34.334468000 Z
+  created_at: 2012-02-03 07:15:29.960745000 Z
   id: 13
   name: doorman
-  updated_at: 2012-02-02 16:22:34.334468000 Z
+  updated_at: 2012-02-03 07:15:29.960745000 Z
 elevator:
   category: building
-  created_at: 2012-02-02 16:22:34.337251000 Z
+  created_at: 2012-02-03 07:15:29.963704000 Z
   id: 14
   name: elevator
-  updated_at: 2012-02-02 16:22:34.337251000 Z
+  updated_at: 2012-02-03 07:15:29.963704000 Z
 gym:
   category: building
-  created_at: 2012-02-02 16:22:34.339626000 Z
+  created_at: 2012-02-03 07:15:29.966470000 Z
   id: 15
   name: gym
-  updated_at: 2012-02-02 16:22:34.339626000 Z
+  updated_at: 2012-02-03 07:15:29.966470000 Z
 pool:
   category: building
-  created_at: 2012-02-02 16:22:34.342569000 Z
+  created_at: 2012-02-03 07:15:29.969029000 Z
   id: 16
   name: pool
-  updated_at: 2012-02-02 16:22:34.342569000 Z
+  updated_at: 2012-02-03 07:15:29.969029000 Z
 roof_deck:
   category: building
-  created_at: 2012-02-02 16:22:34.345360000 Z
+  created_at: 2012-02-03 07:15:29.971391000 Z
   id: 17
   name: roof deck
-  updated_at: 2012-02-02 16:22:34.345360000 Z
+  updated_at: 2012-02-03 07:15:29.971391000 Z
 washer_dryer_1:
   category: building
-  created_at: 2012-02-02 16:22:34.347797000 Z
+  created_at: 2012-02-03 07:15:29.973904000 Z
   id: 18
   name: washer/dryer
-  updated_at: 2012-02-02 16:22:34.347797000 Z
+  updated_at: 2012-02-03 07:15:29.973904000 Z
 cats_allowed:
   category: pet
-  created_at: 2012-02-02 16:22:34.350160000 Z
+  created_at: 2012-02-03 07:15:29.976353000 Z
   id: 19
   name: cats allowed
-  updated_at: 2012-02-02 16:22:34.350160000 Z
+  updated_at: 2012-02-03 07:15:29.976353000 Z
 dogs_allowed:
   category: pet
-  created_at: 2012-02-02 16:22:34.352649000 Z
+  created_at: 2012-02-03 07:15:29.978793000 Z
   id: 20
   name: dogs allowed
-  updated_at: 2012-02-02 16:22:34.352649000 Z
+  updated_at: 2012-02-03 07:15:29.978793000 Z
 case_by_case:
   category: pet
-  created_at: 2012-02-02 16:22:34.355003000 Z
+  created_at: 2012-02-03 07:15:29.981450000 Z
   id: 21
   name: case-by-case
-  updated_at: 2012-02-02 16:22:34.355003000 Z
+  updated_at: 2012-02-03 07:15:29.981450000 Z

@@ -24,8 +24,8 @@ feature "unauthenticated" do
     user = Factory(:user)
     visit root_path
 
-    fill_in "session_email", :with => user.email
-    fill_in "session_password", :with => user.password
+    fill_in "user_email", :with => user.email
+    fill_in "user_password", :with => user.password
     click_button "Sign in"
 
     page.should have_content "Hi #{user.first_name}"

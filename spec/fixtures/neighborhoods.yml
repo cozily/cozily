@@ -3,2474 +3,2474 @@ alphabet_city:
   borough: Manhattan
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.951049000 Z
+  created_at: 2012-02-03 07:15:28.537759000 Z
   id: 113
   name: Alphabet City
   state: NY
-  updated_at: 2012-02-02 16:22:32.951049000 Z
+  updated_at: 2012-02-03 07:15:28.537759000 Z
 annadale:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.858607000 Z
+  created_at: 2012-02-03 07:15:29.466217000 Z
   id: 223
   name: Annadale
   state: NY
-  updated_at: 2012-02-02 16:22:33.858607000 Z
+  updated_at: 2012-02-03 07:15:29.466217000 Z
 arden_heights:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.865647000 Z
+  created_at: 2012-02-03 07:15:29.473570000 Z
   id: 224
   name: Arden Heights
   state: NY
-  updated_at: 2012-02-02 16:22:33.865647000 Z
+  updated_at: 2012-02-03 07:15:29.473570000 Z
 arlington:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.872442000 Z
+  created_at: 2012-02-03 07:15:29.480656000 Z
   id: 225
   name: Arlington
   state: NY
-  updated_at: 2012-02-02 16:22:33.872442000 Z
+  updated_at: 2012-02-03 07:15:29.480656000 Z
 arrochar:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.880258000 Z
+  created_at: 2012-02-03 07:15:29.487962000 Z
   id: 226
   name: Arrochar
   state: NY
-  updated_at: 2012-02-02 16:22:33.880258000 Z
+  updated_at: 2012-02-03 07:15:29.487962000 Z
 arverne:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.302228000 Z
+  created_at: 2012-02-03 07:15:28.899183000 Z
   id: 154
   name: Arverne
   state: NY
-  updated_at: 2012-02-02 16:22:33.302228000 Z
+  updated_at: 2012-02-03 07:15:28.899183000 Z
 astoria:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.309156000 Z
+  created_at: 2012-02-03 07:15:28.906295000 Z
   id: 155
   name: Astoria
   state: NY
-  updated_at: 2012-02-02 16:22:33.309156000 Z
+  updated_at: 2012-02-03 07:15:28.906295000 Z
 astoria_heights:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.316984000 Z
+  created_at: 2012-02-03 07:15:28.913874000 Z
   id: 156
   name: Astoria Heights
   state: NY
-  updated_at: 2012-02-02 16:22:33.316984000 Z
+  updated_at: 2012-02-03 07:15:28.913874000 Z
 auburndale:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.323760000 Z
+  created_at: 2012-02-03 07:15:28.921222000 Z
   id: 157
   name: Auburndale
   state: NY
-  updated_at: 2012-02-02 16:22:33.323760000 Z
+  updated_at: 2012-02-03 07:15:28.921222000 Z
 bath_beach:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.412975000 Z
+  created_at: 2012-02-03 07:15:28.005965000 Z
   id: 49
   name: Bath Beach
   state: NY
-  updated_at: 2012-02-02 16:22:32.412975000 Z
+  updated_at: 2012-02-03 07:15:28.005965000 Z
 battery_park:
   borough: Manhattan
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.957859000 Z
+  created_at: 2012-02-03 07:15:28.545638000 Z
   id: 114
   name: Battery Park
   state: NY
-  updated_at: 2012-02-02 16:22:32.957859000 Z
+  updated_at: 2012-02-03 07:15:28.545638000 Z
 bay_ridge:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.423238000 Z
+  created_at: 2012-02-03 07:15:28.013952000 Z
   id: 50
   name: Bay Ridge
   state: NY
-  updated_at: 2012-02-02 16:22:32.423238000 Z
+  updated_at: 2012-02-03 07:15:28.013952000 Z
 bay_terrace:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.331575000 Z
+  created_at: 2012-02-03 07:15:28.928102000 Z
   id: 158
   name: Bay Terrace
   state: NY
-  updated_at: 2012-02-02 16:22:33.331575000 Z
+  updated_at: 2012-02-03 07:15:28.928102000 Z
 bay_terrace_1:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.887433000 Z
+  created_at: 2012-02-03 07:15:29.495091000 Z
   id: 227
   name: Bay Terrace
   state: NY
-  updated_at: 2012-02-02 16:22:33.887433000 Z
+  updated_at: 2012-02-03 07:15:29.495091000 Z
 baychester:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.007070000 Z
+  created_at: 2012-02-03 07:15:27.587698000 Z
   id: 1
   name: Baychester
   state: NY
-  updated_at: 2012-02-02 16:22:32.007070000 Z
+  updated_at: 2012-02-03 07:15:27.587698000 Z
 bayside:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.338813000 Z
+  created_at: 2012-02-03 07:15:28.936131000 Z
   id: 159
   name: Bayside
   state: NY
-  updated_at: 2012-02-02 16:22:33.338813000 Z
+  updated_at: 2012-02-03 07:15:28.936131000 Z
 bedford_park:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.022125000 Z
+  created_at: 2012-02-03 07:15:27.605202000 Z
   id: 2
   name: Bedford Park
   state: NY
-  updated_at: 2012-02-02 16:22:32.022125000 Z
+  updated_at: 2012-02-03 07:15:27.605202000 Z
 bedford_stuyvesant:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.430230000 Z
+  created_at: 2012-02-03 07:15:28.020981000 Z
   id: 51
   name: Bedford Stuyvesant
   state: NY
-  updated_at: 2012-02-02 16:22:32.430230000 Z
+  updated_at: 2012-02-03 07:15:28.020981000 Z
 beechurst:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.346780000 Z
+  created_at: 2012-02-03 07:15:28.943135000 Z
   id: 160
   name: Beechurst
   state: NY
-  updated_at: 2012-02-02 16:22:33.346780000 Z
+  updated_at: 2012-02-03 07:15:28.943135000 Z
 bellaire:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.353662000 Z
+  created_at: 2012-02-03 07:15:28.950640000 Z
   id: 161
   name: Bellaire
   state: NY
-  updated_at: 2012-02-02 16:22:33.353662000 Z
+  updated_at: 2012-02-03 07:15:28.950640000 Z
 belle_harbor:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.360796000 Z
+  created_at: 2012-02-03 07:15:28.958134000 Z
   id: 162
   name: Belle Harbor
   state: NY
-  updated_at: 2012-02-02 16:22:33.360796000 Z
+  updated_at: 2012-02-03 07:15:28.958134000 Z
 bellerose:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.367759000 Z
+  created_at: 2012-02-03 07:15:28.965548000 Z
   id: 163
   name: Bellerose
   state: NY
-  updated_at: 2012-02-02 16:22:33.367759000 Z
+  updated_at: 2012-02-03 07:15:28.965548000 Z
 belmont:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.029329000 Z
+  created_at: 2012-02-03 07:15:27.612637000 Z
   id: 3
   name: Belmont
   state: NY
-  updated_at: 2012-02-02 16:22:32.029329000 Z
+  updated_at: 2012-02-03 07:15:27.612637000 Z
 bensonhurst:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.437262000 Z
+  created_at: 2012-02-03 07:15:28.029593000 Z
   id: 52
   name: Bensonhurst
   state: NY
-  updated_at: 2012-02-02 16:22:32.437262000 Z
+  updated_at: 2012-02-03 07:15:28.029593000 Z
 bloomfield:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.896341000 Z
+  created_at: 2012-02-03 07:15:29.503841000 Z
   id: 228
   name: Bloomfield
   state: NY
-  updated_at: 2012-02-02 16:22:33.896341000 Z
+  updated_at: 2012-02-03 07:15:29.503841000 Z
 boerum_hill:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.444102000 Z
+  created_at: 2012-02-03 07:15:28.036758000 Z
   id: 53
   name: Boerum Hill
   state: NY
-  updated_at: 2012-02-02 16:22:32.444102000 Z
+  updated_at: 2012-02-03 07:15:28.036758000 Z
 borough_park:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.450905000 Z
+  created_at: 2012-02-03 07:15:28.046163000 Z
   id: 54
   name: Borough Park
   state: NY
-  updated_at: 2012-02-02 16:22:32.450905000 Z
+  updated_at: 2012-02-03 07:15:28.046163000 Z
 breezy_point:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.374652000 Z
+  created_at: 2012-02-03 07:15:28.973101000 Z
   id: 164
   name: Breezy Point
   state: NY
-  updated_at: 2012-02-02 16:22:33.374652000 Z
+  updated_at: 2012-02-03 07:15:28.973101000 Z
 briarwood:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.381528000 Z
+  created_at: 2012-02-03 07:15:28.980252000 Z
   id: 165
   name: Briarwood
   state: NY
-  updated_at: 2012-02-02 16:22:33.381528000 Z
+  updated_at: 2012-02-03 07:15:28.980252000 Z
 brighton_beach:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.457706000 Z
+  created_at: 2012-02-03 07:15:28.053323000 Z
   id: 55
   name: Brighton Beach
   state: NY
-  updated_at: 2012-02-02 16:22:32.457706000 Z
+  updated_at: 2012-02-03 07:15:28.053323000 Z
 brooklyn_heights:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.464576000 Z
+  created_at: 2012-02-03 07:15:28.060653000 Z
   id: 56
   name: Brooklyn Heights
   state: NY
-  updated_at: 2012-02-02 16:22:32.464576000 Z
+  updated_at: 2012-02-03 07:15:28.060653000 Z
 brownsville:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.472268000 Z
+  created_at: 2012-02-03 07:15:28.067766000 Z
   id: 57
   name: Brownsville
   state: NY
-  updated_at: 2012-02-02 16:22:32.472268000 Z
+  updated_at: 2012-02-03 07:15:28.067766000 Z
 bullshead:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.903650000 Z
+  created_at: 2012-02-03 07:15:29.510611000 Z
   id: 229
   name: Bullshead
   state: NY
-  updated_at: 2012-02-02 16:22:33.903650000 Z
+  updated_at: 2012-02-03 07:15:29.510611000 Z
 bushwick:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.479848000 Z
+  created_at: 2012-02-03 07:15:28.074899000 Z
   id: 58
   name: Bushwick
   state: NY
-  updated_at: 2012-02-02 16:22:32.479848000 Z
+  updated_at: 2012-02-03 07:15:28.074899000 Z
 cambria_heights:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.388498000 Z
+  created_at: 2012-02-03 07:15:28.987877000 Z
   id: 166
   name: Cambria Heights
   state: NY
-  updated_at: 2012-02-02 16:22:33.388498000 Z
+  updated_at: 2012-02-03 07:15:28.987877000 Z
 canarsie:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.488035000 Z
+  created_at: 2012-02-03 07:15:28.082116000 Z
   id: 59
   name: Canarsie
   state: NY
-  updated_at: 2012-02-02 16:22:32.488035000 Z
+  updated_at: 2012-02-03 07:15:28.082116000 Z
 carroll_gardens:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.494896000 Z
+  created_at: 2012-02-03 07:15:28.089417000 Z
   id: 60
   name: Carroll Gardens
   state: NY
-  updated_at: 2012-02-02 16:22:32.494896000 Z
+  updated_at: 2012-02-03 07:15:28.089417000 Z
 castle_hill:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.036702000 Z
+  created_at: 2012-02-03 07:15:27.619913000 Z
   id: 4
   name: Castle Hill
   state: NY
-  updated_at: 2012-02-02 16:22:32.036702000 Z
+  updated_at: 2012-02-03 07:15:27.619913000 Z
 castleton_corners:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.911251000 Z
+  created_at: 2012-02-03 07:15:29.518733000 Z
   id: 230
   name: Castleton Corners
   state: NY
-  updated_at: 2012-02-02 16:22:33.911251000 Z
+  updated_at: 2012-02-03 07:15:29.518733000 Z
 charleston:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.918215000 Z
+  created_at: 2012-02-03 07:15:29.526402000 Z
   id: 231
   name: Charleston
   state: NY
-  updated_at: 2012-02-02 16:22:33.918215000 Z
+  updated_at: 2012-02-03 07:15:29.526402000 Z
 chelsea:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.924881000 Z
+  created_at: 2012-02-03 07:15:29.534436000 Z
   id: 232
   name: Chelsea
   state: NY
-  updated_at: 2012-02-02 16:22:33.924881000 Z
+  updated_at: 2012-02-03 07:15:29.534436000 Z
 chelsea_1:
   borough: Manhattan
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.965050000 Z
+  created_at: 2012-02-03 07:15:28.552889000 Z
   id: 115
   name: Chelsea
   state: NY
-  updated_at: 2012-02-02 16:22:32.965050000 Z
+  updated_at: 2012-02-03 07:15:28.552889000 Z
 chinatown:
   borough: Manhattan
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.972935000 Z
+  created_at: 2012-02-03 07:15:28.560831000 Z
   id: 116
   name: Chinatown
   state: NY
-  updated_at: 2012-02-02 16:22:32.972935000 Z
+  updated_at: 2012-02-03 07:15:28.560831000 Z
 city_island:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.044353000 Z
+  created_at: 2012-02-03 07:15:27.626945000 Z
   id: 5
   name: City Island
   state: NY
-  updated_at: 2012-02-02 16:22:32.044353000 Z
+  updated_at: 2012-02-03 07:15:27.626945000 Z
 city_line:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.502752000 Z
+  created_at: 2012-02-03 07:15:28.096905000 Z
   id: 61
   name: City Line
   state: NY
-  updated_at: 2012-02-02 16:22:32.502752000 Z
+  updated_at: 2012-02-03 07:15:28.096905000 Z
 civic_center:
   borough: Manhattan
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.980285000 Z
+  created_at: 2012-02-03 07:15:28.567821000 Z
   id: 117
   name: Civic Center
   state: NY
-  updated_at: 2012-02-02 16:22:32.980285000 Z
+  updated_at: 2012-02-03 07:15:28.567821000 Z
 claremont_village:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.051480000 Z
+  created_at: 2012-02-03 07:15:27.634875000 Z
   id: 6
   name: Claremont Village
   state: NY
-  updated_at: 2012-02-02 16:22:32.051480000 Z
+  updated_at: 2012-02-03 07:15:27.634875000 Z
 clason_point:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.058899000 Z
+  created_at: 2012-02-03 07:15:27.642533000 Z
   id: 7
   name: Clason Point
   state: NY
-  updated_at: 2012-02-02 16:22:32.058899000 Z
+  updated_at: 2012-02-03 07:15:27.642533000 Z
 clifton:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.932552000 Z
+  created_at: 2012-02-03 07:15:29.542548000 Z
   id: 233
   name: Clifton
   state: NY
-  updated_at: 2012-02-02 16:22:33.932552000 Z
+  updated_at: 2012-02-03 07:15:29.542548000 Z
 clinton_hill:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.510044000 Z
+  created_at: 2012-02-03 07:15:28.103764000 Z
   id: 62
   name: Clinton Hill
   state: NY
-  updated_at: 2012-02-02 16:22:32.510044000 Z
+  updated_at: 2012-02-03 07:15:28.103764000 Z
 co_op_city:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.066184000 Z
+  created_at: 2012-02-03 07:15:27.650051000 Z
   id: 8
   name: Co-op City
   state: NY
-  updated_at: 2012-02-02 16:22:32.066184000 Z
+  updated_at: 2012-02-03 07:15:27.650051000 Z
 cobble_hill:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.517082000 Z
+  created_at: 2012-02-03 07:15:28.110982000 Z
   id: 63
   name: Cobble Hill
   state: NY
-  updated_at: 2012-02-02 16:22:32.517082000 Z
+  updated_at: 2012-02-03 07:15:28.110982000 Z
 college_point:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.395675000 Z
+  created_at: 2012-02-03 07:15:28.995003000 Z
   id: 167
   name: College Point
   state: NY
-  updated_at: 2012-02-02 16:22:33.395675000 Z
+  updated_at: 2012-02-03 07:15:28.995003000 Z
 columbia_street_waterfront_district:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.524322000 Z
+  created_at: 2012-02-03 07:15:28.118449000 Z
   id: 64
   name: Columbia Street Waterfront District
   state: NY
-  updated_at: 2012-02-02 16:22:32.524322000 Z
+  updated_at: 2012-02-03 07:15:28.118449000 Z
 concord:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.939611000 Z
+  created_at: 2012-02-03 07:15:29.549958000 Z
   id: 234
   name: Concord
   state: NY
-  updated_at: 2012-02-02 16:22:33.939611000 Z
+  updated_at: 2012-02-03 07:15:29.549958000 Z
 concourse:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.074573000 Z
+  created_at: 2012-02-03 07:15:27.657714000 Z
   id: 9
   name: Concourse
   state: NY
-  updated_at: 2012-02-02 16:22:32.074573000 Z
+  updated_at: 2012-02-03 07:15:27.657714000 Z
 concourse_village:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.081765000 Z
+  created_at: 2012-02-03 07:15:27.664932000 Z
   id: 10
   name: Concourse Village
   state: NY
-  updated_at: 2012-02-02 16:22:32.081765000 Z
+  updated_at: 2012-02-03 07:15:27.664932000 Z
 coney_island:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.531632000 Z
+  created_at: 2012-02-03 07:15:28.125736000 Z
   id: 65
   name: Coney Island
   state: NY
-  updated_at: 2012-02-02 16:22:32.531632000 Z
+  updated_at: 2012-02-03 07:15:28.125736000 Z
 country_club:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.088684000 Z
+  created_at: 2012-02-03 07:15:27.672605000 Z
   id: 11
   name: Country Club
   state: NY
-  updated_at: 2012-02-02 16:22:32.088684000 Z
+  updated_at: 2012-02-03 07:15:27.672605000 Z
 crown_heights:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.538629000 Z
+  created_at: 2012-02-03 07:15:28.133726000 Z
   id: 66
   name: Crown Heights
   state: NY
-  updated_at: 2012-02-02 16:22:32.538629000 Z
+  updated_at: 2012-02-03 07:15:28.133726000 Z
 cypress_hills:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.545162000 Z
+  created_at: 2012-02-03 07:15:28.140762000 Z
   id: 67
   name: Cypress Hills
   state: NY
-  updated_at: 2012-02-02 16:22:32.545162000 Z
+  updated_at: 2012-02-03 07:15:28.140762000 Z
 dumbo:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.552826000 Z
+  created_at: 2012-02-03 07:15:28.149173000 Z
   id: 68
   name: DUMBO
   state: NY
-  updated_at: 2012-02-02 16:22:32.552826000 Z
+  updated_at: 2012-02-03 07:15:28.149173000 Z
 ditmas_park:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.560768000 Z
+  created_at: 2012-02-03 07:15:28.156221000 Z
   id: 69
   name: Ditmas Park
   state: NY
-  updated_at: 2012-02-02 16:22:32.560768000 Z
+  updated_at: 2012-02-03 07:15:28.156221000 Z
 dongan_hills:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.946435000 Z
+  created_at: 2012-02-03 07:15:29.558048000 Z
   id: 235
   name: Dongan Hills
   state: NY
-  updated_at: 2012-02-02 16:22:33.946435000 Z
+  updated_at: 2012-02-03 07:15:29.558048000 Z
 douglaston:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.403229000 Z
+  created_at: 2012-02-03 07:15:29.002570000 Z
   id: 168
   name: Douglaston
   state: NY
-  updated_at: 2012-02-02 16:22:33.403229000 Z
+  updated_at: 2012-02-03 07:15:29.002570000 Z
 downtown_brooklyn:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.569978000 Z
+  created_at: 2012-02-03 07:15:28.163507000 Z
   id: 70
   name: Downtown Brooklyn
   state: NY
-  updated_at: 2012-02-02 16:22:32.569978000 Z
+  updated_at: 2012-02-03 07:15:28.163507000 Z
 downtown_flushing:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.411001000 Z
+  created_at: 2012-02-03 07:15:29.010042000 Z
   id: 169
   name: Downtown Flushing
   state: NY
-  updated_at: 2012-02-02 16:22:33.411001000 Z
+  updated_at: 2012-02-03 07:15:29.010042000 Z
 dyker_heights:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.577879000 Z
+  created_at: 2012-02-03 07:15:28.170450000 Z
   id: 71
   name: Dyker Heights
   state: NY
-  updated_at: 2012-02-02 16:22:32.577879000 Z
+  updated_at: 2012-02-03 07:15:28.170450000 Z
 east_elmhurst:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.420408000 Z
+  created_at: 2012-02-03 07:15:29.018089000 Z
   id: 170
   name: East Elmhurst
   state: NY
-  updated_at: 2012-02-02 16:22:33.420408000 Z
+  updated_at: 2012-02-03 07:15:29.018089000 Z
 east_flatbush:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.585659000 Z
+  created_at: 2012-02-03 07:15:28.177760000 Z
   id: 72
   name: East Flatbush
   state: NY
-  updated_at: 2012-02-02 16:22:32.585659000 Z
+  updated_at: 2012-02-03 07:15:28.177760000 Z
 east_harlem:
   borough: Manhattan
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.987496000 Z
+  created_at: 2012-02-03 07:15:28.575300000 Z
   id: 118
   name: East Harlem
   state: NY
-  updated_at: 2012-02-02 16:22:32.987496000 Z
+  updated_at: 2012-02-03 07:15:28.575300000 Z
 east_new_york:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.593685000 Z
+  created_at: 2012-02-03 07:15:28.185017000 Z
   id: 73
   name: East New York
   state: NY
-  updated_at: 2012-02-02 16:22:32.593685000 Z
+  updated_at: 2012-02-03 07:15:28.185017000 Z
 east_tremont:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.095806000 Z
+  created_at: 2012-02-03 07:15:27.679983000 Z
   id: 12
   name: East Tremont
   state: NY
-  updated_at: 2012-02-02 16:22:32.095806000 Z
+  updated_at: 2012-02-03 07:15:27.679983000 Z
 east_village:
   borough: Manhattan
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.994272000 Z
+  created_at: 2012-02-03 07:15:28.582122000 Z
   id: 119
   name: East Village
   state: NY
-  updated_at: 2012-02-02 16:22:32.994272000 Z
+  updated_at: 2012-02-03 07:15:28.582122000 Z
 east_williamsburg:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.600559000 Z
+  created_at: 2012-02-03 07:15:28.192017000 Z
   id: 74
   name: East Williamsburg
   state: NY
-  updated_at: 2012-02-02 16:22:32.600559000 Z
+  updated_at: 2012-02-03 07:15:28.192017000 Z
 eastchester:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.102609000 Z
+  created_at: 2012-02-03 07:15:27.687118000 Z
   id: 13
   name: Eastchester
   state: NY
-  updated_at: 2012-02-02 16:22:32.102609000 Z
+  updated_at: 2012-02-03 07:15:27.687118000 Z
 edenwald:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.110128000 Z
+  created_at: 2012-02-03 07:15:27.694238000 Z
   id: 14
   name: Edenwald
   state: NY
-  updated_at: 2012-02-02 16:22:32.110128000 Z
+  updated_at: 2012-02-03 07:15:27.694238000 Z
 edgemere:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.428205000 Z
+  created_at: 2012-02-03 07:15:29.025322000 Z
   id: 171
   name: Edgemere
   state: NY
-  updated_at: 2012-02-02 16:22:33.428205000 Z
+  updated_at: 2012-02-03 07:15:29.025322000 Z
 edgewater_park:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.117329000 Z
+  created_at: 2012-02-03 07:15:27.702252000 Z
   id: 15
   name: Edgewater Park
   state: NY
-  updated_at: 2012-02-02 16:22:32.117329000 Z
+  updated_at: 2012-02-03 07:15:27.702252000 Z
 elm_park:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.953643000 Z
+  created_at: 2012-02-03 07:15:29.565410000 Z
   id: 236
   name: Elm Park
   state: NY
-  updated_at: 2012-02-02 16:22:33.953643000 Z
+  updated_at: 2012-02-03 07:15:29.565410000 Z
 elmhurst:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.436593000 Z
+  created_at: 2012-02-03 07:15:29.031961000 Z
   id: 172
   name: Elmhurst
   state: NY
-  updated_at: 2012-02-02 16:22:33.436593000 Z
+  updated_at: 2012-02-03 07:15:29.031961000 Z
 eltingville:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.960742000 Z
+  created_at: 2012-02-03 07:15:29.572671000 Z
   id: 237
   name: Eltingville
   state: NY
-  updated_at: 2012-02-02 16:22:33.960742000 Z
+  updated_at: 2012-02-03 07:15:29.572671000 Z
 emerson_hill:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.967747000 Z
+  created_at: 2012-02-03 07:15:29.580537000 Z
   id: 238
   name: Emerson Hill
   state: NY
-  updated_at: 2012-02-02 16:22:33.967747000 Z
+  updated_at: 2012-02-03 07:15:29.580537000 Z
 far_rockaway:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.443426000 Z
+  created_at: 2012-02-03 07:15:29.040027000 Z
   id: 173
   name: Far Rockaway
   state: NY
-  updated_at: 2012-02-02 16:22:33.443426000 Z
+  updated_at: 2012-02-03 07:15:29.040027000 Z
 fieldston:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.124551000 Z
+  created_at: 2012-02-03 07:15:27.709403000 Z
   id: 16
   name: Fieldston
   state: NY
-  updated_at: 2012-02-02 16:22:32.124551000 Z
+  updated_at: 2012-02-03 07:15:27.709403000 Z
 financial_district:
   borough: Manhattan
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.001377000 Z
+  created_at: 2012-02-03 07:15:28.588987000 Z
   id: 120
   name: Financial District
   state: NY
-  updated_at: 2012-02-02 16:22:33.001377000 Z
+  updated_at: 2012-02-03 07:15:28.588987000 Z
 flatbush:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.607330000 Z
+  created_at: 2012-02-03 07:15:28.200197000 Z
   id: 75
   name: Flatbush
   state: NY
-  updated_at: 2012-02-02 16:22:32.607330000 Z
+  updated_at: 2012-02-03 07:15:28.200197000 Z
 flatiron:
   borough: Manhattan
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.008588000 Z
+  created_at: 2012-02-03 07:15:28.596805000 Z
   id: 121
   name: Flatiron
   state: NY
-  updated_at: 2012-02-02 16:22:33.008588000 Z
+  updated_at: 2012-02-03 07:15:28.596805000 Z
 flatlands:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.613943000 Z
+  created_at: 2012-02-03 07:15:28.207480000 Z
   id: 76
   name: Flatlands
   state: NY
-  updated_at: 2012-02-02 16:22:32.613943000 Z
+  updated_at: 2012-02-03 07:15:28.207480000 Z
 floral_park:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.450276000 Z
+  created_at: 2012-02-03 07:15:29.047223000 Z
   id: 174
   name: Floral Park
   state: NY
-  updated_at: 2012-02-02 16:22:33.450276000 Z
+  updated_at: 2012-02-03 07:15:29.047223000 Z
 flushing:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.457059000 Z
+  created_at: 2012-02-03 07:15:29.054460000 Z
   id: 175
   name: Flushing
   state: NY
-  updated_at: 2012-02-02 16:22:33.457059000 Z
+  updated_at: 2012-02-03 07:15:29.054460000 Z
 flushing_meadows:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.463937000 Z
+  created_at: 2012-02-03 07:15:29.061628000 Z
   id: 176
   name: Flushing Meadows
   state: NY
-  updated_at: 2012-02-02 16:22:33.463937000 Z
+  updated_at: 2012-02-03 07:15:29.061628000 Z
 fordham:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.131591000 Z
+  created_at: 2012-02-03 07:15:27.716370000 Z
   id: 17
   name: Fordham
   state: NY
-  updated_at: 2012-02-02 16:22:32.131591000 Z
+  updated_at: 2012-02-03 07:15:27.716370000 Z
 forest_hills:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.471117000 Z
+  created_at: 2012-02-03 07:15:29.069160000 Z
   id: 177
   name: Forest Hills
   state: NY
-  updated_at: 2012-02-02 16:22:33.471117000 Z
+  updated_at: 2012-02-03 07:15:29.069160000 Z
 fort_greene:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.621144000 Z
+  created_at: 2012-02-03 07:15:28.215623000 Z
   id: 77
   name: Fort Greene
   state: NY
-  updated_at: 2012-02-02 16:22:32.621144000 Z
+  updated_at: 2012-02-03 07:15:28.215623000 Z
 fort_hamilton:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.628983000 Z
+  created_at: 2012-02-03 07:15:28.222818000 Z
   id: 78
   name: Fort Hamilton
   state: NY
-  updated_at: 2012-02-02 16:22:32.628983000 Z
+  updated_at: 2012-02-03 07:15:28.222818000 Z
 fresh_meadows:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.478214000 Z
+  created_at: 2012-02-03 07:15:29.076440000 Z
   id: 178
   name: Fresh Meadows
   state: NY
-  updated_at: 2012-02-02 16:22:33.478214000 Z
+  updated_at: 2012-02-03 07:15:29.076440000 Z
 georgetown:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.635897000 Z
+  created_at: 2012-02-03 07:15:28.230086000 Z
   id: 79
   name: Georgetown
   state: NY
-  updated_at: 2012-02-02 16:22:32.635897000 Z
+  updated_at: 2012-02-03 07:15:28.230086000 Z
 gerritson_beach:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.642811000 Z
+  created_at: 2012-02-03 07:15:28.237624000 Z
   id: 80
   name: Gerritson Beach
   state: NY
-  updated_at: 2012-02-02 16:22:32.642811000 Z
+  updated_at: 2012-02-03 07:15:28.237624000 Z
 glen_oaks:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.485206000 Z
+  created_at: 2012-02-03 07:15:29.083683000 Z
   id: 179
   name: Glen Oaks
   state: NY
-  updated_at: 2012-02-02 16:22:33.485206000 Z
+  updated_at: 2012-02-03 07:15:29.083683000 Z
 glendale:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.492127000 Z
+  created_at: 2012-02-03 07:15:29.091072000 Z
   id: 180
   name: Glendale
   state: NY
-  updated_at: 2012-02-02 16:22:33.492127000 Z
+  updated_at: 2012-02-03 07:15:29.091072000 Z
 gowanus:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.649699000 Z
+  created_at: 2012-02-03 07:15:28.245003000 Z
   id: 81
   name: Gowanus
   state: NY
-  updated_at: 2012-02-02 16:22:32.649699000 Z
+  updated_at: 2012-02-03 07:15:28.245003000 Z
 gramercy:
   borough: Manhattan
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.015539000 Z
+  created_at: 2012-02-03 07:15:28.603769000 Z
   id: 122
   name: Gramercy
   state: NY
-  updated_at: 2012-02-02 16:22:33.015539000 Z
+  updated_at: 2012-02-03 07:15:28.603769000 Z
 graniteville:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.974721000 Z
+  created_at: 2012-02-03 07:15:29.588500000 Z
   id: 239
   name: Graniteville
   state: NY
-  updated_at: 2012-02-02 16:22:33.974721000 Z
+  updated_at: 2012-02-03 07:15:29.588500000 Z
 grant_city:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.982091000 Z
+  created_at: 2012-02-03 07:15:29.596271000 Z
   id: 240
   name: Grant City
   state: NY
-  updated_at: 2012-02-02 16:22:33.982091000 Z
+  updated_at: 2012-02-03 07:15:29.596271000 Z
 grasmere:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.989195000 Z
+  created_at: 2012-02-03 07:15:29.603543000 Z
   id: 241
   name: Grasmere
   state: NY
-  updated_at: 2012-02-02 16:22:33.989195000 Z
+  updated_at: 2012-02-03 07:15:29.603543000 Z
 gravesend:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.657375000 Z
+  created_at: 2012-02-03 07:15:28.253543000 Z
   id: 82
   name: Gravesend
   state: NY
-  updated_at: 2012-02-02 16:22:32.657375000 Z
+  updated_at: 2012-02-03 07:15:28.253543000 Z
 great_kills:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.996088000 Z
+  created_at: 2012-02-03 07:15:29.610923000 Z
   id: 242
   name: Great Kills
   state: NY
-  updated_at: 2012-02-02 16:22:33.996088000 Z
+  updated_at: 2012-02-03 07:15:29.610923000 Z
 greenpoint:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.664740000 Z
+  created_at: 2012-02-03 07:15:28.260971000 Z
   id: 83
   name: Greenpoint
   state: NY
-  updated_at: 2012-02-02 16:22:32.664740000 Z
+  updated_at: 2012-02-03 07:15:28.260971000 Z
 greenwich_village:
   borough: Manhattan
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.022541000 Z
+  created_at: 2012-02-03 07:15:28.611596000 Z
   id: 123
   name: Greenwich Village
   state: NY
-  updated_at: 2012-02-02 16:22:33.022541000 Z
+  updated_at: 2012-02-03 07:15:28.611596000 Z
 grymes_hill:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:34.003056000 Z
+  created_at: 2012-02-03 07:15:29.618566000 Z
   id: 243
   name: Grymes Hill
   state: NY
-  updated_at: 2012-02-02 16:22:34.003056000 Z
+  updated_at: 2012-02-03 07:15:29.618566000 Z
 harlem:
   borough: Manhattan
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.029308000 Z
+  created_at: 2012-02-03 07:15:28.619162000 Z
   id: 124
   name: Harlem
   state: NY
-  updated_at: 2012-02-02 16:22:33.029308000 Z
+  updated_at: 2012-02-03 07:15:28.619162000 Z
 heartland_village:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:34.009779000 Z
+  created_at: 2012-02-03 07:15:29.626078000 Z
   id: 244
   name: Heartland Village
   state: NY
-  updated_at: 2012-02-02 16:22:34.009779000 Z
+  updated_at: 2012-02-03 07:15:29.626078000 Z
 hell_s_kitchen:
   borough: Manhattan
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.036321000 Z
+  created_at: 2012-02-03 07:15:28.626539000 Z
   id: 125
   name: Hell's Kitchen
   state: NY
-  updated_at: 2012-02-02 16:22:33.036321000 Z
+  updated_at: 2012-02-03 07:15:28.626539000 Z
 high_bridge:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.138319000 Z
+  created_at: 2012-02-03 07:15:27.723969000 Z
   id: 18
   name: High Bridge
   state: NY
-  updated_at: 2012-02-02 16:22:32.138319000 Z
+  updated_at: 2012-02-03 07:15:27.723969000 Z
 highland_park:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.673198000 Z
+  created_at: 2012-02-03 07:15:28.268133000 Z
   id: 84
   name: Highland Park
   state: NY
-  updated_at: 2012-02-02 16:22:32.673198000 Z
+  updated_at: 2012-02-03 07:15:28.268133000 Z
 hillcrest:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.500166000 Z
+  created_at: 2012-02-03 07:15:29.098281000 Z
   id: 181
   name: Hillcrest
   state: NY
-  updated_at: 2012-02-02 16:22:33.500166000 Z
+  updated_at: 2012-02-03 07:15:29.098281000 Z
 hollis:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.507613000 Z
+  created_at: 2012-02-03 07:15:29.106052000 Z
   id: 182
   name: Hollis
   state: NY
-  updated_at: 2012-02-02 16:22:33.507613000 Z
+  updated_at: 2012-02-03 07:15:29.106052000 Z
 holliswood:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.514645000 Z
+  created_at: 2012-02-03 07:15:29.112923000 Z
   id: 183
   name: Holliswood
   state: NY
-  updated_at: 2012-02-02 16:22:33.514645000 Z
+  updated_at: 2012-02-03 07:15:29.112923000 Z
 howard_beach:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.522499000 Z
+  created_at: 2012-02-03 07:15:29.120216000 Z
   id: 184
   name: Howard Beach
   state: NY
-  updated_at: 2012-02-02 16:22:33.522499000 Z
+  updated_at: 2012-02-03 07:15:29.120216000 Z
 howland_hook:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:34.016641000 Z
+  created_at: 2012-02-03 07:15:29.633402000 Z
   id: 245
   name: Howland Hook
   state: NY
-  updated_at: 2012-02-02 16:22:34.016641000 Z
+  updated_at: 2012-02-03 07:15:29.633402000 Z
 huguenot:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:34.024388000 Z
+  created_at: 2012-02-03 07:15:29.641391000 Z
   id: 246
   name: Huguenot
   state: NY
-  updated_at: 2012-02-02 16:22:34.024388000 Z
+  updated_at: 2012-02-03 07:15:29.641391000 Z
 hunts_point:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.146137000 Z
+  created_at: 2012-02-03 07:15:27.731735000 Z
   id: 19
   name: Hunts Point
   state: NY
-  updated_at: 2012-02-02 16:22:32.146137000 Z
+  updated_at: 2012-02-03 07:15:27.731735000 Z
 inwood:
   borough: Manhattan
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.043419000 Z
+  created_at: 2012-02-03 07:15:28.633840000 Z
   id: 126
   name: Inwood
   state: NY
-  updated_at: 2012-02-02 16:22:33.043419000 Z
+  updated_at: 2012-02-03 07:15:28.633840000 Z
 jfk_airport:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.529511000 Z
+  created_at: 2012-02-03 07:15:29.127871000 Z
   id: 185
   name: JFK Airport
   state: NY
-  updated_at: 2012-02-02 16:22:33.529511000 Z
+  updated_at: 2012-02-03 07:15:29.127871000 Z
 jackson_heights:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.537345000 Z
+  created_at: 2012-02-03 07:15:29.135954000 Z
   id: 186
   name: Jackson Heights
   state: NY
-  updated_at: 2012-02-02 16:22:33.537345000 Z
+  updated_at: 2012-02-03 07:15:29.135954000 Z
 jamaica:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.544053000 Z
+  created_at: 2012-02-03 07:15:29.143202000 Z
   id: 187
   name: Jamaica
   state: NY
-  updated_at: 2012-02-02 16:22:33.544053000 Z
+  updated_at: 2012-02-03 07:15:29.143202000 Z
 jamaica_estates:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.551134000 Z
+  created_at: 2012-02-03 07:15:29.150276000 Z
   id: 188
   name: Jamaica Estates
   state: NY
-  updated_at: 2012-02-02 16:22:33.551134000 Z
+  updated_at: 2012-02-03 07:15:29.150276000 Z
 jamaica_hills:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.558390000 Z
+  created_at: 2012-02-03 07:15:29.157853000 Z
   id: 189
   name: Jamaica Hills
   state: NY
-  updated_at: 2012-02-02 16:22:33.558390000 Z
+  updated_at: 2012-02-03 07:15:29.157853000 Z
 kensington:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.681882000 Z
+  created_at: 2012-02-03 07:15:28.275342000 Z
   id: 85
   name: Kensington
   state: NY
-  updated_at: 2012-02-02 16:22:32.681882000 Z
+  updated_at: 2012-02-03 07:15:28.275342000 Z
 kew_gardens:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.565319000 Z
+  created_at: 2012-02-03 07:15:29.165264000 Z
   id: 190
   name: Kew Gardens
   state: NY
-  updated_at: 2012-02-02 16:22:33.565319000 Z
+  updated_at: 2012-02-03 07:15:29.165264000 Z
 kew_gardens_hills:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.572709000 Z
+  created_at: 2012-02-03 07:15:29.173005000 Z
   id: 191
   name: Kew Gardens Hills
   state: NY
-  updated_at: 2012-02-02 16:22:33.572709000 Z
+  updated_at: 2012-02-03 07:15:29.173005000 Z
 kingsbridge:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.153048000 Z
+  created_at: 2012-02-03 07:15:27.740659000 Z
   id: 20
   name: Kingsbridge
   state: NY
-  updated_at: 2012-02-02 16:22:32.153048000 Z
+  updated_at: 2012-02-03 07:15:27.740659000 Z
 kips_bay:
   borough: Manhattan
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.050005000 Z
+  created_at: 2012-02-03 07:15:28.642659000 Z
   id: 127
   name: Kips Bay
   state: NY
-  updated_at: 2012-02-02 16:22:33.050005000 Z
+  updated_at: 2012-02-03 07:15:28.642659000 Z
 koreatown:
   borough: Manhattan
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.057673000 Z
+  created_at: 2012-02-03 07:15:28.650827000 Z
   id: 128
   name: Koreatown
   state: NY
-  updated_at: 2012-02-02 16:22:33.057673000 Z
+  updated_at: 2012-02-03 07:15:28.650827000 Z
 la_guardia_airport:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.579922000 Z
+  created_at: 2012-02-03 07:15:29.180432000 Z
   id: 192
   name: LaGuardia Airport
   state: NY
-  updated_at: 2012-02-02 16:22:33.579922000 Z
+  updated_at: 2012-02-03 07:15:29.180432000 Z
 laurelton:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.587289000 Z
+  created_at: 2012-02-03 07:15:29.187286000 Z
   id: 193
   name: Laurelton
   state: NY
-  updated_at: 2012-02-02 16:22:33.587289000 Z
+  updated_at: 2012-02-03 07:15:29.187286000 Z
 le_frak_city:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.594297000 Z
+  created_at: 2012-02-03 07:15:29.194697000 Z
   id: 194
   name: LeFrak City
   state: NY
-  updated_at: 2012-02-02 16:22:33.594297000 Z
+  updated_at: 2012-02-03 07:15:29.194697000 Z
 lighthouse_hill:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:34.031637000 Z
+  created_at: 2012-02-03 07:15:29.648671000 Z
   id: 247
   name: Lighthouse Hill
   state: NY
-  updated_at: 2012-02-02 16:22:34.031637000 Z
+  updated_at: 2012-02-03 07:15:29.648671000 Z
 lindenwood:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.601828000 Z
+  created_at: 2012-02-03 07:15:29.201456000 Z
   id: 195
   name: Lindenwood
   state: NY
-  updated_at: 2012-02-02 16:22:33.601828000 Z
+  updated_at: 2012-02-03 07:15:29.201456000 Z
 little_italy:
   borough: Manhattan
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.064575000 Z
+  created_at: 2012-02-03 07:15:28.658498000 Z
   id: 129
   name: Little Italy
   state: NY
-  updated_at: 2012-02-02 16:22:33.064575000 Z
+  updated_at: 2012-02-03 07:15:28.658498000 Z
 little_neck:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.609471000 Z
+  created_at: 2012-02-03 07:15:29.208666000 Z
   id: 196
   name: Little Neck
   state: NY
-  updated_at: 2012-02-02 16:22:33.609471000 Z
+  updated_at: 2012-02-03 07:15:29.208666000 Z
 long_island_city:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.616372000 Z
+  created_at: 2012-02-03 07:15:29.215508000 Z
   id: 197
   name: Long Island City
   state: NY
-  updated_at: 2012-02-02 16:22:33.616372000 Z
+  updated_at: 2012-02-03 07:15:29.215508000 Z
 longwood:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.160572000 Z
+  created_at: 2012-02-03 07:15:27.747874000 Z
   id: 21
   name: Longwood
   state: NY
-  updated_at: 2012-02-02 16:22:32.160572000 Z
+  updated_at: 2012-02-03 07:15:27.747874000 Z
 lower_east_side:
   borough: Manhattan
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.072154000 Z
+  created_at: 2012-02-03 07:15:28.666334000 Z
   id: 130
   name: Lower East Side
   state: NY
-  updated_at: 2012-02-02 16:22:33.072154000 Z
+  updated_at: 2012-02-03 07:15:28.666334000 Z
 malba:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.623345000 Z
+  created_at: 2012-02-03 07:15:29.222641000 Z
   id: 198
   name: Malba
   state: NY
-  updated_at: 2012-02-02 16:22:33.623345000 Z
+  updated_at: 2012-02-03 07:15:29.222641000 Z
 manhattan_beach:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.688958000 Z
+  created_at: 2012-02-03 07:15:28.282901000 Z
   id: 86
   name: Manhattan Beach
   state: NY
-  updated_at: 2012-02-02 16:22:32.688958000 Z
+  updated_at: 2012-02-03 07:15:28.282901000 Z
 manhattan_valley:
   borough: Manhattan
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.079210000 Z
+  created_at: 2012-02-03 07:15:28.673274000 Z
   id: 131
   name: Manhattan Valley
   state: NY
-  updated_at: 2012-02-02 16:22:33.079210000 Z
+  updated_at: 2012-02-03 07:15:28.673274000 Z
 marble_hill:
   borough: Manhattan
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.086391000 Z
+  created_at: 2012-02-03 07:15:28.680499000 Z
   id: 132
   name: Marble Hill
   state: NY
-  updated_at: 2012-02-02 16:22:33.086391000 Z
+  updated_at: 2012-02-03 07:15:28.680499000 Z
 marine_park:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.697017000 Z
+  created_at: 2012-02-03 07:15:28.290400000 Z
   id: 87
   name: Marine Park
   state: NY
-  updated_at: 2012-02-02 16:22:32.697017000 Z
+  updated_at: 2012-02-03 07:15:28.290400000 Z
 mariner:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:34.039587000 Z
+  created_at: 2012-02-03 07:15:29.657164000 Z
   id: 248
   name: Mariner
   state: NY
-  updated_at: 2012-02-02 16:22:34.039587000 Z
+  updated_at: 2012-02-03 07:15:29.657164000 Z
 maspeth:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.630346000 Z
+  created_at: 2012-02-03 07:15:29.229793000 Z
   id: 199
   name: Maspeth
   state: NY
-  updated_at: 2012-02-02 16:22:33.630346000 Z
+  updated_at: 2012-02-03 07:15:29.229793000 Z
 meatpacking_district:
   borough: Manhattan
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.093823000 Z
+  created_at: 2012-02-03 07:15:28.687558000 Z
   id: 133
   name: Meatpacking District
   state: NY
-  updated_at: 2012-02-02 16:22:33.093823000 Z
+  updated_at: 2012-02-03 07:15:28.687558000 Z
 melrose:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.167685000 Z
+  created_at: 2012-02-03 07:15:27.755745000 Z
   id: 22
   name: Melrose
   state: NY
-  updated_at: 2012-02-02 16:22:32.167685000 Z
+  updated_at: 2012-02-03 07:15:27.755745000 Z
 middle_village:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.638062000 Z
+  created_at: 2012-02-03 07:15:29.294107000 Z
   id: 200
   name: Middle Village
   state: NY
-  updated_at: 2012-02-02 16:22:33.638062000 Z
+  updated_at: 2012-02-03 07:15:29.294107000 Z
 midland_beach:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:34.046774000 Z
+  created_at: 2012-02-03 07:15:29.664473000 Z
   id: 249
   name: Midland Beach
   state: NY
-  updated_at: 2012-02-02 16:22:34.046774000 Z
+  updated_at: 2012-02-03 07:15:29.664473000 Z
 midtown_east:
   borough: Manhattan
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.101072000 Z
+  created_at: 2012-02-03 07:15:28.694723000 Z
   id: 134
   name: Midtown East
   state: NY
-  updated_at: 2012-02-02 16:22:33.101072000 Z
+  updated_at: 2012-02-03 07:15:28.694723000 Z
 midtown_west:
   borough: Manhattan
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.109111000 Z
+  created_at: 2012-02-03 07:15:28.702015000 Z
   id: 135
   name: Midtown West
   state: NY
-  updated_at: 2012-02-02 16:22:33.109111000 Z
+  updated_at: 2012-02-03 07:15:28.702015000 Z
 midwood:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.704139000 Z
+  created_at: 2012-02-03 07:15:28.297776000 Z
   id: 88
   name: Midwood
   state: NY
-  updated_at: 2012-02-02 16:22:32.704139000 Z
+  updated_at: 2012-02-03 07:15:28.297776000 Z
 mill_basin:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.711405000 Z
+  created_at: 2012-02-03 07:15:28.305313000 Z
   id: 89
   name: Mill Basin
   state: NY
-  updated_at: 2012-02-02 16:22:32.711405000 Z
+  updated_at: 2012-02-03 07:15:28.305313000 Z
 mill_island:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.718710000 Z
+  created_at: 2012-02-03 07:15:28.364196000 Z
   id: 90
   name: Mill Island
   state: NY
-  updated_at: 2012-02-02 16:22:32.718710000 Z
+  updated_at: 2012-02-03 07:15:28.364196000 Z
 morningside_heights:
   borough: Manhattan
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.116388000 Z
+  created_at: 2012-02-03 07:15:28.709177000 Z
   id: 136
   name: Morningside Heights
   state: NY
-  updated_at: 2012-02-02 16:22:33.116388000 Z
+  updated_at: 2012-02-03 07:15:28.709177000 Z
 morris_heights:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.176291000 Z
+  created_at: 2012-02-03 07:15:27.763148000 Z
   id: 23
   name: Morris Heights
   state: NY
-  updated_at: 2012-02-02 16:22:32.176291000 Z
+  updated_at: 2012-02-03 07:15:27.763148000 Z
 morris_park:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.183890000 Z
+  created_at: 2012-02-03 07:15:27.771202000 Z
   id: 24
   name: Morris Park
   state: NY
-  updated_at: 2012-02-02 16:22:32.183890000 Z
+  updated_at: 2012-02-03 07:15:27.771202000 Z
 morrisania:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.191647000 Z
+  created_at: 2012-02-03 07:15:27.778795000 Z
   id: 25
   name: Morrisania
   state: NY
-  updated_at: 2012-02-02 16:22:32.191647000 Z
+  updated_at: 2012-02-03 07:15:27.778795000 Z
 mott_haven:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.198964000 Z
+  created_at: 2012-02-03 07:15:27.786209000 Z
   id: 26
   name: Mott Haven
   state: NY
-  updated_at: 2012-02-02 16:22:32.198964000 Z
+  updated_at: 2012-02-03 07:15:27.786209000 Z
 mount_eden:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.205574000 Z
+  created_at: 2012-02-03 07:15:27.793324000 Z
   id: 27
   name: Mount Eden
   state: NY
-  updated_at: 2012-02-02 16:22:32.205574000 Z
+  updated_at: 2012-02-03 07:15:27.793324000 Z
 mount_hope:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.212680000 Z
+  created_at: 2012-02-03 07:15:27.801399000 Z
   id: 28
   name: Mount Hope
   state: NY
-  updated_at: 2012-02-02 16:22:32.212680000 Z
+  updated_at: 2012-02-03 07:15:27.801399000 Z
 murray_hill:
   borough: Manhattan
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.123467000 Z
+  created_at: 2012-02-03 07:15:28.717582000 Z
   id: 137
   name: Murray Hill
   state: NY
-  updated_at: 2012-02-02 16:22:33.123467000 Z
+  updated_at: 2012-02-03 07:15:28.717582000 Z
 murray_hill_1:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.645364000 Z
+  created_at: 2012-02-03 07:15:29.302304000 Z
   id: 201
   name: Murray Hill
   state: NY
-  updated_at: 2012-02-02 16:22:33.645364000 Z
+  updated_at: 2012-02-03 07:15:29.302304000 Z
 new_brighton:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:34.053801000 Z
+  created_at: 2012-02-03 07:15:29.671493000 Z
   id: 250
   name: New Brighton
   state: NY
-  updated_at: 2012-02-02 16:22:34.053801000 Z
+  updated_at: 2012-02-03 07:15:29.671493000 Z
 new_dorp:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:34.060718000 Z
+  created_at: 2012-02-03 07:15:29.678978000 Z
   id: 251
   name: New Dorp
   state: NY
-  updated_at: 2012-02-02 16:22:34.060718000 Z
+  updated_at: 2012-02-03 07:15:29.678978000 Z
 new_dorp_beach:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:34.067592000 Z
+  created_at: 2012-02-03 07:15:29.686492000 Z
   id: 252
   name: New Dorp Beach
   state: NY
-  updated_at: 2012-02-02 16:22:34.067592000 Z
+  updated_at: 2012-02-03 07:15:29.686492000 Z
 new_lots:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.725709000 Z
+  created_at: 2012-02-03 07:15:28.376865000 Z
   id: 91
   name: New Lots
   state: NY
-  updated_at: 2012-02-02 16:22:32.725709000 Z
+  updated_at: 2012-02-03 07:15:28.376865000 Z
 new_springville:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:34.074415000 Z
+  created_at: 2012-02-03 07:15:29.693820000 Z
   id: 253
   name: New Springville
   state: NY
-  updated_at: 2012-02-02 16:22:34.074415000 Z
+  updated_at: 2012-02-03 07:15:29.693820000 Z
 no_ho:
   borough: Manhattan
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.130369000 Z
+  created_at: 2012-02-03 07:15:28.724794000 Z
   id: 138
   name: NoHo
   state: NY
-  updated_at: 2012-02-02 16:22:33.130369000 Z
+  updated_at: 2012-02-03 07:15:28.724794000 Z
 nolita:
   borough: Manhattan
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.138381000 Z
+  created_at: 2012-02-03 07:15:28.731896000 Z
   id: 139
   name: Nolita
   state: NY
-  updated_at: 2012-02-02 16:22:33.138381000 Z
+  updated_at: 2012-02-03 07:15:28.731896000 Z
 north_corona:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.653207000 Z
+  created_at: 2012-02-03 07:15:29.310773000 Z
   id: 202
   name: North Corona
   state: NY
-  updated_at: 2012-02-02 16:22:33.653207000 Z
+  updated_at: 2012-02-03 07:15:29.310773000 Z
 north_riverdale:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.219367000 Z
+  created_at: 2012-02-03 07:15:27.809066000 Z
   id: 29
   name: North Riverdale
   state: NY
-  updated_at: 2012-02-02 16:22:32.219367000 Z
+  updated_at: 2012-02-03 07:15:27.809066000 Z
 norwood:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.226545000 Z
+  created_at: 2012-02-03 07:15:27.816231000 Z
   id: 30
   name: Norwood
   state: NY
-  updated_at: 2012-02-02 16:22:32.226545000 Z
+  updated_at: 2012-02-03 07:15:27.816231000 Z
 oakland_gardens:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.660162000 Z
+  created_at: 2012-02-03 07:15:29.317826000 Z
   id: 203
   name: Oakland Gardens
   state: NY
-  updated_at: 2012-02-02 16:22:33.660162000 Z
+  updated_at: 2012-02-03 07:15:29.317826000 Z
 oakwood:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:34.081068000 Z
+  created_at: 2012-02-03 07:15:29.751050000 Z
   id: 254
   name: Oakwood
   state: NY
-  updated_at: 2012-02-02 16:22:34.081068000 Z
+  updated_at: 2012-02-03 07:15:29.751050000 Z
 ocean_hill:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.733128000 Z
+  created_at: 2012-02-03 07:15:28.384021000 Z
   id: 92
   name: Ocean Hill
   state: NY
-  updated_at: 2012-02-02 16:22:32.733128000 Z
+  updated_at: 2012-02-03 07:15:28.384021000 Z
 ocean_parkway:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.740341000 Z
+  created_at: 2012-02-03 07:15:28.392044000 Z
   id: 93
   name: Ocean Parkway
   state: NY
-  updated_at: 2012-02-02 16:22:32.740341000 Z
+  updated_at: 2012-02-03 07:15:28.392044000 Z
 old_town:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:34.088263000 Z
+  created_at: 2012-02-03 07:15:29.763142000 Z
   id: 255
   name: Old Town
   state: NY
-  updated_at: 2012-02-02 16:22:34.088263000 Z
+  updated_at: 2012-02-03 07:15:29.763142000 Z
 olinville:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.233626000 Z
+  created_at: 2012-02-03 07:15:27.824425000 Z
   id: 31
   name: Olinville
   state: NY
-  updated_at: 2012-02-02 16:22:32.233626000 Z
+  updated_at: 2012-02-03 07:15:27.824425000 Z
 ozone_park:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.666964000 Z
+  created_at: 2012-02-03 07:15:29.325188000 Z
   id: 204
   name: Ozone Park
   state: NY
-  updated_at: 2012-02-02 16:22:33.666964000 Z
+  updated_at: 2012-02-03 07:15:29.325188000 Z
 paedergat_basin:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.747465000 Z
+  created_at: 2012-02-03 07:15:28.398964000 Z
   id: 94
   name: Paedergat Basin
   state: NY
-  updated_at: 2012-02-02 16:22:32.747465000 Z
+  updated_at: 2012-02-03 07:15:28.398964000 Z
 park_hill:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:34.094903000 Z
+  created_at: 2012-02-03 07:15:29.770374000 Z
   id: 256
   name: Park Hill
   state: NY
-  updated_at: 2012-02-02 16:22:34.094903000 Z
+  updated_at: 2012-02-03 07:15:29.770374000 Z
 park_slope:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.755666000 Z
+  created_at: 2012-02-03 07:15:28.406967000 Z
   id: 95
   name: Park Slope
   state: NY
-  updated_at: 2012-02-02 16:22:32.755666000 Z
+  updated_at: 2012-02-03 07:15:28.406967000 Z
 parkchester:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.240572000 Z
+  created_at: 2012-02-03 07:15:27.831595000 Z
   id: 32
   name: Parkchester
   state: NY
-  updated_at: 2012-02-02 16:22:32.240572000 Z
+  updated_at: 2012-02-03 07:15:27.831595000 Z
 pelham_bay:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.248861000 Z
+  created_at: 2012-02-03 07:15:27.839189000 Z
   id: 33
   name: Pelham Bay
   state: NY
-  updated_at: 2012-02-02 16:22:32.248861000 Z
+  updated_at: 2012-02-03 07:15:27.839189000 Z
 pelham_gardens:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.257033000 Z
+  created_at: 2012-02-03 07:15:27.847568000 Z
   id: 34
   name: Pelham Gardens
   state: NY
-  updated_at: 2012-02-02 16:22:32.257033000 Z
+  updated_at: 2012-02-03 07:15:27.847568000 Z
 pleasant_plains:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:34.102345000 Z
+  created_at: 2012-02-03 07:15:29.778452000 Z
   id: 257
   name: Pleasant Plains
   state: NY
-  updated_at: 2012-02-02 16:22:34.102345000 Z
+  updated_at: 2012-02-03 07:15:29.778452000 Z
 pomonok:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.675203000 Z
+  created_at: 2012-02-03 07:15:29.333107000 Z
   id: 205
   name: Pomonok
   state: NY
-  updated_at: 2012-02-02 16:22:33.675203000 Z
+  updated_at: 2012-02-03 07:15:29.333107000 Z
 port_morris:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.265193000 Z
+  created_at: 2012-02-03 07:15:27.899038000 Z
   id: 35
   name: Port Morris
   state: NY
-  updated_at: 2012-02-02 16:22:32.265193000 Z
+  updated_at: 2012-02-03 07:15:27.899038000 Z
 port_richmond:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:34.109896000 Z
+  created_at: 2012-02-03 07:15:29.785574000 Z
   id: 258
   name: Port Richmond
   state: NY
-  updated_at: 2012-02-02 16:22:34.109896000 Z
+  updated_at: 2012-02-03 07:15:29.785574000 Z
 princes_bay:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:34.117698000 Z
+  created_at: 2012-02-03 07:15:29.793697000 Z
   id: 259
   name: Princes Bay
   state: NY
-  updated_at: 2012-02-02 16:22:34.117698000 Z
+  updated_at: 2012-02-03 07:15:29.793697000 Z
 prospect_heights:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.763936000 Z
+  created_at: 2012-02-03 07:15:28.414790000 Z
   id: 96
   name: Prospect Heights
   state: NY
-  updated_at: 2012-02-02 16:22:32.763936000 Z
+  updated_at: 2012-02-03 07:15:28.414790000 Z
 prospect_lefferts_gardens:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.826125000 Z
+  created_at: 2012-02-03 07:15:28.421921000 Z
   id: 97
   name: Prospect Lefferts Gardens
   state: NY
-  updated_at: 2012-02-02 16:22:32.826125000 Z
+  updated_at: 2012-02-03 07:15:28.421921000 Z
 prospect_park_south:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.834504000 Z
+  created_at: 2012-02-03 07:15:28.429038000 Z
   id: 98
   name: Prospect Park South
   state: NY
-  updated_at: 2012-02-02 16:22:32.834504000 Z
+  updated_at: 2012-02-03 07:15:28.429038000 Z
 queens_village:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.682268000 Z
+  created_at: 2012-02-03 07:15:29.340572000 Z
   id: 206
   name: Queens Village
   state: NY
-  updated_at: 2012-02-02 16:22:33.682268000 Z
+  updated_at: 2012-02-03 07:15:29.340572000 Z
 queensborough_hill:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.738330000 Z
+  created_at: 2012-02-03 07:15:29.348136000 Z
   id: 207
   name: Queensborough Hill
   state: NY
-  updated_at: 2012-02-02 16:22:33.738330000 Z
+  updated_at: 2012-02-03 07:15:29.348136000 Z
 randall_manor:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:34.124792000 Z
+  created_at: 2012-02-03 07:15:29.801146000 Z
   id: 260
   name: Randall Manor
   state: NY
-  updated_at: 2012-02-02 16:22:34.124792000 Z
+  updated_at: 2012-02-03 07:15:29.801146000 Z
 red_hook:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.842078000 Z
+  created_at: 2012-02-03 07:15:28.436014000 Z
   id: 99
   name: Red Hook
   state: NY
-  updated_at: 2012-02-02 16:22:32.842078000 Z
+  updated_at: 2012-02-03 07:15:28.436014000 Z
 rego_park:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.745755000 Z
+  created_at: 2012-02-03 07:15:29.355435000 Z
   id: 208
   name: Rego Park
   state: NY
-  updated_at: 2012-02-02 16:22:33.745755000 Z
+  updated_at: 2012-02-03 07:15:29.355435000 Z
 remsen_village:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.850022000 Z
+  created_at: 2012-02-03 07:15:28.443199000 Z
   id: 100
   name: Remsen Village
   state: NY
-  updated_at: 2012-02-02 16:22:32.850022000 Z
+  updated_at: 2012-02-03 07:15:28.443199000 Z
 richmond_hill:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.754229000 Z
+  created_at: 2012-02-03 07:15:29.362546000 Z
   id: 209
   name: Richmond Hill
   state: NY
-  updated_at: 2012-02-02 16:22:33.754229000 Z
+  updated_at: 2012-02-03 07:15:29.362546000 Z
 richmond_town:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:34.131903000 Z
+  created_at: 2012-02-03 07:15:29.808427000 Z
   id: 261
   name: Richmond Town
   state: NY
-  updated_at: 2012-02-02 16:22:34.131903000 Z
+  updated_at: 2012-02-03 07:15:29.808427000 Z
 richmond_valley:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:34.188904000 Z
+  created_at: 2012-02-03 07:15:29.816439000 Z
   id: 262
   name: Richmond Valley
   state: NY
-  updated_at: 2012-02-02 16:22:34.188904000 Z
+  updated_at: 2012-02-03 07:15:29.816439000 Z
 ridgewood:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.762638000 Z
+  created_at: 2012-02-03 07:15:29.369701000 Z
   id: 210
   name: Ridgewood
   state: NY
-  updated_at: 2012-02-02 16:22:33.762638000 Z
+  updated_at: 2012-02-03 07:15:29.369701000 Z
 riverdale:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.272211000 Z
+  created_at: 2012-02-03 07:15:27.908987000 Z
   id: 36
   name: Riverdale
   state: NY
-  updated_at: 2012-02-02 16:22:32.272211000 Z
+  updated_at: 2012-02-03 07:15:27.908987000 Z
 rochdale:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.769832000 Z
+  created_at: 2012-02-03 07:15:29.377573000 Z
   id: 211
   name: Rochdale
   state: NY
-  updated_at: 2012-02-02 16:22:33.769832000 Z
+  updated_at: 2012-02-03 07:15:29.377573000 Z
 rockaway_park:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.777148000 Z
+  created_at: 2012-02-03 07:15:29.385047000 Z
   id: 212
   name: Rockaway Park
   state: NY
-  updated_at: 2012-02-02 16:22:33.777148000 Z
+  updated_at: 2012-02-03 07:15:29.385047000 Z
 roosevelt_island:
   borough: Manhattan
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.145618000 Z
+  created_at: 2012-02-03 07:15:28.739187000 Z
   id: 140
   name: Roosevelt Island
   state: NY
-  updated_at: 2012-02-02 16:22:33.145618000 Z
+  updated_at: 2012-02-03 07:15:28.739187000 Z
 rosebank:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:34.196563000 Z
+  created_at: 2012-02-03 07:15:29.823444000 Z
   id: 263
   name: Rosebank
   state: NY
-  updated_at: 2012-02-02 16:22:34.196563000 Z
+  updated_at: 2012-02-03 07:15:29.823444000 Z
 rosedale:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.783858000 Z
+  created_at: 2012-02-03 07:15:29.392550000 Z
   id: 213
   name: Rosedale
   state: NY
-  updated_at: 2012-02-02 16:22:33.783858000 Z
+  updated_at: 2012-02-03 07:15:29.392550000 Z
 rossville:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:34.204606000 Z
+  created_at: 2012-02-03 07:15:29.830574000 Z
   id: 264
   name: Rossville
   state: NY
-  updated_at: 2012-02-02 16:22:34.204606000 Z
+  updated_at: 2012-02-03 07:15:29.830574000 Z
 schuylerville:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.279485000 Z
+  created_at: 2012-02-03 07:15:27.916648000 Z
   id: 37
   name: Schuylerville
   state: NY
-  updated_at: 2012-02-02 16:22:32.279485000 Z
+  updated_at: 2012-02-03 07:15:27.916648000 Z
 sea_gate:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.857267000 Z
+  created_at: 2012-02-03 07:15:28.450085000 Z
   id: 101
   name: Sea Gate
   state: NY
-  updated_at: 2012-02-02 16:22:32.857267000 Z
+  updated_at: 2012-02-03 07:15:28.450085000 Z
 seaside:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.790784000 Z
+  created_at: 2012-02-03 07:15:29.399698000 Z
   id: 214
   name: Seaside
   state: NY
-  updated_at: 2012-02-02 16:22:33.790784000 Z
+  updated_at: 2012-02-03 07:15:29.399698000 Z
 sheepshead_bay:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.866693000 Z
+  created_at: 2012-02-03 07:15:28.457553000 Z
   id: 102
   name: Sheepshead Bay
   state: NY
-  updated_at: 2012-02-02 16:22:32.866693000 Z
+  updated_at: 2012-02-03 07:15:28.457553000 Z
 shore_acres:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:34.212448000 Z
+  created_at: 2012-02-03 07:15:29.837532000 Z
   id: 265
   name: Shore Acres
   state: NY
-  updated_at: 2012-02-02 16:22:34.212448000 Z
+  updated_at: 2012-02-03 07:15:29.837532000 Z
 silver_lake:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:34.220688000 Z
+  created_at: 2012-02-03 07:15:29.844460000 Z
   id: 266
   name: Silver Lake
   state: NY
-  updated_at: 2012-02-02 16:22:34.220688000 Z
+  updated_at: 2012-02-03 07:15:29.844460000 Z
 so_ho:
   borough: Manhattan
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.152550000 Z
+  created_at: 2012-02-03 07:15:28.746471000 Z
   id: 141
   name: SoHo
   state: NY
-  updated_at: 2012-02-02 16:22:33.152550000 Z
+  updated_at: 2012-02-03 07:15:28.746471000 Z
 somerville:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.798052000 Z
+  created_at: 2012-02-03 07:15:29.406821000 Z
   id: 215
   name: Somerville
   state: NY
-  updated_at: 2012-02-02 16:22:33.798052000 Z
+  updated_at: 2012-02-03 07:15:29.406821000 Z
 soundview:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.286703000 Z
+  created_at: 2012-02-03 07:15:27.923879000 Z
   id: 38
   name: Soundview
   state: NY
-  updated_at: 2012-02-02 16:22:32.286703000 Z
+  updated_at: 2012-02-03 07:15:27.923879000 Z
 south_street_seaport:
   borough: Manhattan
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.159945000 Z
+  created_at: 2012-02-03 07:15:28.753563000 Z
   id: 142
   name: South Street Seaport
   state: NY
-  updated_at: 2012-02-02 16:22:33.159945000 Z
+  updated_at: 2012-02-03 07:15:28.753563000 Z
 south_village:
   borough: Manhattan
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.166719000 Z
+  created_at: 2012-02-03 07:15:28.760679000 Z
   id: 143
   name: South Village
   state: NY
-  updated_at: 2012-02-02 16:22:33.166719000 Z
+  updated_at: 2012-02-03 07:15:28.760679000 Z
 south_williamsburg:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.875366000 Z
+  created_at: 2012-02-03 07:15:28.464994000 Z
   id: 103
   name: South Williamsburg
   state: NY
-  updated_at: 2012-02-02 16:22:32.875366000 Z
+  updated_at: 2012-02-03 07:15:28.464994000 Z
 spring_creek:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.883839000 Z
+  created_at: 2012-02-03 07:15:28.473016000 Z
   id: 104
   name: Spring Creek
   state: NY
-  updated_at: 2012-02-02 16:22:32.883839000 Z
+  updated_at: 2012-02-03 07:15:28.473016000 Z
 springfield_gardens:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.806100000 Z
+  created_at: 2012-02-03 07:15:29.414452000 Z
   id: 216
   name: Springfield Gardens
   state: NY
-  updated_at: 2012-02-02 16:22:33.806100000 Z
+  updated_at: 2012-02-03 07:15:29.414452000 Z
 spuyten_duyvil:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.293433000 Z
+  created_at: 2012-02-03 07:15:27.931181000 Z
   id: 39
   name: Spuyten Duyvil
   state: NY
-  updated_at: 2012-02-02 16:22:32.293433000 Z
+  updated_at: 2012-02-03 07:15:27.931181000 Z
 st_george:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:34.227643000 Z
+  created_at: 2012-02-03 07:15:29.851765000 Z
   id: 267
   name: St. George
   state: NY
-  updated_at: 2012-02-02 16:22:34.227643000 Z
+  updated_at: 2012-02-03 07:15:29.851765000 Z
 stapleton:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:34.234680000 Z
+  created_at: 2012-02-03 07:15:29.858705000 Z
   id: 268
   name: Stapleton
   state: NY
-  updated_at: 2012-02-02 16:22:34.234680000 Z
+  updated_at: 2012-02-03 07:15:29.858705000 Z
 starret_city:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.892490000 Z
+  created_at: 2012-02-03 07:15:28.480200000 Z
   id: 105
   name: Starret City
   state: NY
-  updated_at: 2012-02-02 16:22:32.892490000 Z
+  updated_at: 2012-02-03 07:15:28.480200000 Z
 steinway:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.813944000 Z
+  created_at: 2012-02-03 07:15:29.421837000 Z
   id: 217
   name: Steinway
   state: NY
-  updated_at: 2012-02-02 16:22:33.813944000 Z
+  updated_at: 2012-02-03 07:15:29.421837000 Z
 stuyvesant_town:
   borough: Manhattan
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.173697000 Z
+  created_at: 2012-02-03 07:15:28.768090000 Z
   id: 144
   name: Stuyvesant Town
   state: NY
-  updated_at: 2012-02-02 16:22:33.173697000 Z
+  updated_at: 2012-02-03 07:15:28.768090000 Z
 sunnyside:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:34.241792000 Z
+  created_at: 2012-02-03 07:15:29.866453000 Z
   id: 269
   name: Sunnyside
   state: NY
-  updated_at: 2012-02-02 16:22:34.241792000 Z
+  updated_at: 2012-02-03 07:15:29.866453000 Z
 sunnyside_1:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.821589000 Z
+  created_at: 2012-02-03 07:15:29.429353000 Z
   id: 218
   name: Sunnyside
   state: NY
-  updated_at: 2012-02-02 16:22:33.821589000 Z
+  updated_at: 2012-02-03 07:15:29.429353000 Z
 sunset_park:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.900294000 Z
+  created_at: 2012-02-03 07:15:28.487205000 Z
   id: 106
   name: Sunset Park
   state: NY
-  updated_at: 2012-02-02 16:22:32.900294000 Z
+  updated_at: 2012-02-03 07:15:28.487205000 Z
 theater_district:
   borough: Manhattan
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.180816000 Z
+  created_at: 2012-02-03 07:15:28.831881000 Z
   id: 145
   name: Theater District
   state: NY
-  updated_at: 2012-02-02 16:22:33.180816000 Z
+  updated_at: 2012-02-03 07:15:28.831881000 Z
 throgs_neck:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.300689000 Z
+  created_at: 2012-02-03 07:15:27.938087000 Z
   id: 40
   name: Throgs Neck
   state: NY
-  updated_at: 2012-02-02 16:22:32.300689000 Z
+  updated_at: 2012-02-03 07:15:27.938087000 Z
 todt_hill:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:34.249494000 Z
+  created_at: 2012-02-03 07:15:29.875096000 Z
   id: 270
   name: Todt Hill
   state: NY
-  updated_at: 2012-02-02 16:22:34.249494000 Z
+  updated_at: 2012-02-03 07:15:29.875096000 Z
 tompkinsville:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:34.258104000 Z
+  created_at: 2012-02-03 07:15:29.883475000 Z
   id: 271
   name: Tompkinsville
   state: NY
-  updated_at: 2012-02-02 16:22:34.258104000 Z
+  updated_at: 2012-02-03 07:15:29.883475000 Z
 tottenville:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:34.265098000 Z
+  created_at: 2012-02-03 07:15:29.890464000 Z
   id: 272
   name: Tottenville
   state: NY
-  updated_at: 2012-02-02 16:22:34.265098000 Z
+  updated_at: 2012-02-03 07:15:29.890464000 Z
 tri_be_ca:
   borough: Manhattan
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.188268000 Z
+  created_at: 2012-02-03 07:15:28.839250000 Z
   id: 146
   name: TriBeCa
   state: NY
-  updated_at: 2012-02-02 16:22:33.188268000 Z
+  updated_at: 2012-02-03 07:15:28.839250000 Z
 two_bridges:
   borough: Manhattan
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.195504000 Z
+  created_at: 2012-02-03 07:15:28.847299000 Z
   id: 147
   name: Two Bridges
   state: NY
-  updated_at: 2012-02-02 16:22:33.195504000 Z
+  updated_at: 2012-02-03 07:15:28.847299000 Z
 union_square:
   borough: Manhattan
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.202549000 Z
+  created_at: 2012-02-03 07:15:28.854869000 Z
   id: 148
   name: Union Square
   state: NY
-  updated_at: 2012-02-02 16:22:33.202549000 Z
+  updated_at: 2012-02-03 07:15:28.854869000 Z
 unionport:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.307353000 Z
+  created_at: 2012-02-03 07:15:27.945859000 Z
   id: 41
   name: Unionport
   state: NY
-  updated_at: 2012-02-02 16:22:32.307353000 Z
+  updated_at: 2012-02-03 07:15:27.945859000 Z
 university_heights:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.361644000 Z
+  created_at: 2012-02-03 07:15:27.952762000 Z
   id: 42
   name: University Heights
   state: NY
-  updated_at: 2012-02-02 16:22:32.361644000 Z
+  updated_at: 2012-02-03 07:15:27.952762000 Z
 upper_east_side:
   borough: Manhattan
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.209627000 Z
+  created_at: 2012-02-03 07:15:28.862055000 Z
   id: 149
   name: Upper East Side
   state: NY
-  updated_at: 2012-02-02 16:22:33.209627000 Z
+  updated_at: 2012-02-03 07:15:28.862055000 Z
 upper_west_side:
   borough: Manhattan
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.216821000 Z
+  created_at: 2012-02-03 07:15:28.869809000 Z
   id: 150
   name: Upper West Side
   state: NY
-  updated_at: 2012-02-02 16:22:33.216821000 Z
+  updated_at: 2012-02-03 07:15:28.869809000 Z
 utopia:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.829102000 Z
+  created_at: 2012-02-03 07:15:29.436409000 Z
   id: 219
   name: Utopia
   state: NY
-  updated_at: 2012-02-02 16:22:33.829102000 Z
+  updated_at: 2012-02-03 07:15:29.436409000 Z
 van_nest:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.369629000 Z
+  created_at: 2012-02-03 07:15:27.960668000 Z
   id: 43
   name: Van Nest
   state: NY
-  updated_at: 2012-02-02 16:22:32.369629000 Z
+  updated_at: 2012-02-03 07:15:27.960668000 Z
 vinegar_hill:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.907508000 Z
+  created_at: 2012-02-03 07:15:28.494916000 Z
   id: 107
   name: Vinegar Hill
   state: NY
-  updated_at: 2012-02-02 16:22:32.907508000 Z
+  updated_at: 2012-02-03 07:15:28.494916000 Z
 wakefield:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.377209000 Z
+  created_at: 2012-02-03 07:15:27.967569000 Z
   id: 44
   name: Wakefield
   state: NY
-  updated_at: 2012-02-02 16:22:32.377209000 Z
+  updated_at: 2012-02-03 07:15:27.967569000 Z
 washington_heights:
   borough: Manhattan
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.223864000 Z
+  created_at: 2012-02-03 07:15:28.876969000 Z
   id: 151
   name: Washington Heights
   state: NY
-  updated_at: 2012-02-02 16:22:33.223864000 Z
+  updated_at: 2012-02-03 07:15:28.876969000 Z
 weeksville:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.914500000 Z
+  created_at: 2012-02-03 07:15:28.501833000 Z
   id: 108
   name: Weeksville
   state: NY
-  updated_at: 2012-02-02 16:22:32.914500000 Z
+  updated_at: 2012-02-03 07:15:28.501833000 Z
 west_brighton:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:34.271739000 Z
+  created_at: 2012-02-03 07:15:29.897649000 Z
   id: 273
   name: West Brighton
   state: NY
-  updated_at: 2012-02-02 16:22:34.271739000 Z
+  updated_at: 2012-02-03 07:15:29.897649000 Z
 west_farms:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.384195000 Z
+  created_at: 2012-02-03 07:15:27.975405000 Z
   id: 45
   name: West Farms
   state: NY
-  updated_at: 2012-02-02 16:22:32.384195000 Z
+  updated_at: 2012-02-03 07:15:27.975405000 Z
 west_village:
   borough: Manhattan
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.286682000 Z
+  created_at: 2012-02-03 07:15:28.884271000 Z
   id: 152
   name: West Village
   state: NY
-  updated_at: 2012-02-02 16:22:33.286682000 Z
+  updated_at: 2012-02-03 07:15:28.884271000 Z
 westchester_square:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.390999000 Z
+  created_at: 2012-02-03 07:15:27.982664000 Z
   id: 46
   name: Westchester Square
   state: NY
-  updated_at: 2012-02-02 16:22:32.390999000 Z
+  updated_at: 2012-02-03 07:15:27.982664000 Z
 westerleigh:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:34.279210000 Z
+  created_at: 2012-02-03 07:15:29.904943000 Z
   id: 274
   name: Westerleigh
   state: NY
-  updated_at: 2012-02-02 16:22:34.279210000 Z
+  updated_at: 2012-02-03 07:15:29.904943000 Z
 whitestone:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.836545000 Z
+  created_at: 2012-02-03 07:15:29.443361000 Z
   id: 220
   name: Whitestone
   state: NY
-  updated_at: 2012-02-02 16:22:33.836545000 Z
+  updated_at: 2012-02-03 07:15:29.443361000 Z
 williamsbridge:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.398701000 Z
+  created_at: 2012-02-03 07:15:27.991967000 Z
   id: 47
   name: Williamsbridge
   state: NY
-  updated_at: 2012-02-02 16:22:32.398701000 Z
+  updated_at: 2012-02-03 07:15:27.991967000 Z
 williamsburg___north_side:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.921419000 Z
+  created_at: 2012-02-03 07:15:28.509559000 Z
   id: 109
   name: Williamsburg - North Side
   state: NY
-  updated_at: 2012-02-02 16:22:32.921419000 Z
+  updated_at: 2012-02-03 07:15:28.509559000 Z
 williamsburg___south_side:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.928706000 Z
+  created_at: 2012-02-03 07:15:28.516660000 Z
   id: 110
   name: Williamsburg - South Side
   state: NY
-  updated_at: 2012-02-02 16:22:32.928706000 Z
+  updated_at: 2012-02-03 07:15:28.516660000 Z
 windsor_terrace:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.936430000 Z
+  created_at: 2012-02-03 07:15:28.523721000 Z
   id: 111
   name: Windsor Terrace
   state: NY
-  updated_at: 2012-02-02 16:22:32.936430000 Z
+  updated_at: 2012-02-03 07:15:28.523721000 Z
 wingate:
   borough: Brooklyn
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.943418000 Z
+  created_at: 2012-02-03 07:15:28.530914000 Z
   id: 112
   name: Wingate
   state: NY
-  updated_at: 2012-02-02 16:22:32.943418000 Z
+  updated_at: 2012-02-03 07:15:28.530914000 Z
 woodhaven:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.844063000 Z
+  created_at: 2012-02-03 07:15:29.451649000 Z
   id: 221
   name: Woodhaven
   state: NY
-  updated_at: 2012-02-02 16:22:33.844063000 Z
+  updated_at: 2012-02-03 07:15:29.451649000 Z
 woodlawn:
   borough: Bronx
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:32.406012000 Z
+  created_at: 2012-02-03 07:15:27.998873000 Z
   id: 48
   name: Woodlawn
   state: NY
-  updated_at: 2012-02-02 16:22:32.406012000 Z
+  updated_at: 2012-02-03 07:15:27.998873000 Z
 woodrow:
   borough: Staten Island
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:34.286096000 Z
+  created_at: 2012-02-03 07:15:29.911941000 Z
   id: 275
   name: Woodrow
   state: NY
-  updated_at: 2012-02-02 16:22:34.286096000 Z
+  updated_at: 2012-02-03 07:15:29.911941000 Z
 woodside:
   borough: Queens
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.850798000 Z
+  created_at: 2012-02-03 07:15:29.458796000 Z
   id: 222
   name: Woodside
   state: NY
-  updated_at: 2012-02-02 16:22:33.850798000 Z
+  updated_at: 2012-02-03 07:15:29.458796000 Z
 yorkville:
   borough: Manhattan
   city: New York
   country: USA
-  created_at: 2012-02-02 16:22:33.295103000 Z
+  created_at: 2012-02-03 07:15:28.891891000 Z
   id: 153
   name: Yorkville
   state: NY
-  updated_at: 2012-02-02 16:22:33.295103000 Z
+  updated_at: 2012-02-03 07:15:28.891891000 Z
