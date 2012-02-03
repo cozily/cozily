@@ -46,6 +46,7 @@ class Search
 
       with(:published, true)
       with(:neighborhood_ids, neighborhood_id) if neighborhood_id.present?
+      order :published_at, :desc
     end.results
   end
 
@@ -67,6 +68,7 @@ class Search
 
       with(:published, true)
       with(:neighborhood_ids, neighborhood_id) if neighborhood_id.present?
+      order :published_at, :desc
       paginate :page => page, :per_page => 10
     end.results
   end
