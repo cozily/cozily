@@ -2656,7 +2656,7 @@ body.apartments.edit div.aside div#map_canvas, body.apartments.update div.aside 
   height: 306px;
 }
 /* line 197, ../../../app/stylesheets/partials/apartments/_edit.scss */
-body.apartments.edit div.aside div[data-content-key=missing-information], body.apartments.update div.aside div[data-content-key=missing-information] {
+body.apartments.edit div.aside div#missing_information, body.apartments.update div.aside div#missing_information {
   overflow: hidden;
   *zoom: 1;
   padding: 5px 5px 0 5px;
@@ -2664,20 +2664,20 @@ body.apartments.edit div.aside div[data-content-key=missing-information], body.a
   border: 5px solid #ff6666;
 }
 /* line 203, ../../../app/stylesheets/partials/apartments/_edit.scss */
-body.apartments.edit div.aside div[data-content-key=missing-information] h2, body.apartments.update div.aside div[data-content-key=missing-information] h2 {
+body.apartments.edit div.aside div#missing_information h2, body.apartments.update div.aside div#missing_information h2 {
   padding: 5px;
   background-color: #ff9999;
   text-align: center;
 }
 /* line 209, ../../../app/stylesheets/partials/apartments/_edit.scss */
-body.apartments.edit div.aside div[data-content-key=missing-information] p, body.apartments.update div.aside div[data-content-key=missing-information] p {
+body.apartments.edit div.aside div#missing_information p, body.apartments.update div.aside div#missing_information p {
   margin: 10px 0;
   font-size: 16px;
   width: 95%;
   font-weight: 300;
 }
 /* line 216, ../../../app/stylesheets/partials/apartments/_edit.scss */
-body.apartments.edit div.aside div[data-content-key=missing-information] ul, body.apartments.update div.aside div[data-content-key=missing-information] ul {
+body.apartments.edit div.aside div#missing_information ul, body.apartments.update div.aside div#missing_information ul {
   list-style-type: square;
   font-size: 16px;
   margin-left: 40px;

@@ -1,15 +1,17 @@
 %div{ :'data-content-key' => "missing-information" }
-  -if apartment.missing_fields.present? || apartment.missing_associations.present?
-    %h2 Missing Information
+  - if apartment.missing_fields.present? || apartment.missing_associations.present?
+    #missing_information
+      %h2 Missing Information
 
-    -if apartment.missing_fields.present?
-      %p In order to publish your listing, we need the following details:
-      %ul
-        -apartment.missing_fields.each do |field|
-          %li=field.to_s.humanize.downcase
+      - if apartment.missing_fields.present?
+        %p In order to publish your listing, we need the following details:
+        %ul
+          - apartment.missing_fields.each do |field|
+            %li=field.to_s.humanize.downcase
 
-    -if apartment.missing_associations.present?
-      %p=missing_associations(apartment)
+      - if apartment.missing_associations.present?
+        %p= missing_associations(apartment)
 
-    %p Other than that, you're good to go!
+      %p Other than that, you're good to go!
+
 
