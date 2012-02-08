@@ -196,18 +196,26 @@ body.apartments.edit, body.apartments.update {
 
         div[data-content-key=missing-information] {
             @include clearfix;
-            margin-top: 10px;
+            padding: 5px;
+            margin: 10px 5px 0 0;
+            border: 5px solid #ff6666;
+
+            h2 {
+              padding: 5px;
+              background-color: #ff9999;
+              text-align: center;
+            }
 
             p {
                 margin: 10px 0;
                 font-size: 16px;
                 width: 95%;
+                font-weight: 300;
             }
 
             ul {
-                list-style-type: disc;
+                list-style-type: square;
                 font-size: 16px;
-                font-style: italic;
                 margin-left: 40px;
             }
         }
