@@ -1,3 +1,4 @@
+require "pony"
 require "bundler/capistrano"
 
 set :stages, %w(staging production)
@@ -31,6 +32,9 @@ set(:current_revision)  { capture("cd #{current_path}; git rev-parse --short HEA
 set(:latest_revision)   { capture("cd #{current_path}; git rev-parse --short HEAD").strip }
 set(:previous_revision) { capture("cd #{current_path}; git rev-parse --short HEAD@{1}").strip }
 
+set(:deploying_user_name) { `bash -c 'git config --get user.name'`.strip }
+set(:deploying_user_email) { `bash -c 'git config --get user.email'`.strip }
+
 default_run_options[:shell] = 'bash'
 
 namespace :deploy do
@@ -38,6 +42,23 @@ namespace :deploy do
   task :default do
     update
     unicorn.reload
+
+    puts "  * Sending deployment notification."
+    Pony.mail({
+      :to => 'dev@cozi.ly',
+      :from => 'deployments@cozi.ly',
+      :subject => %Q{[Cozily] Successful deployment to #{stage} by #{deploying_user_name} (#{deploying_user_email}).},
+      :via => :smtp,
+      :via_options => {
+        :address              => 'smtp.mailgun.org',
+        :port                 => 587,
+        :enable_starttls_auto => true,
+        :user_name            => 'cozily@cozily.mailgun.org',
+        :password             => 'marathon69',
+        :authentication       => :plain,
+        :domain               => "cozi.ly"
+      }
+    })
   end
 
   desc "Setup your git-based deployment app"
