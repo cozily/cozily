@@ -3,7 +3,7 @@
     %h2 Missing Information
 
     -if apartment.missing_fields.present?
-      %p We need the following details:
+      %p In order to publish your listing, we need the following details:
       %ul
         -apartment.missing_fields.each do |field|
           %li=field.to_s.humanize.downcase

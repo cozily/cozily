@@ -18,8 +18,8 @@
   =render "apartments/form", :apartment => @apartment
 
 .aside
+  =render "apartments/missing_information", :apartment => @apartment
+
   %h2 Nearby Apartments
 
   #map_canvas
-
-  =render "apartments/missing_information", :apartment => @apartment
