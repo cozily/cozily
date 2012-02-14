@@ -37,3 +37,7 @@
   = f.buttons do
     = f.commit_button "Sign up"
 
+    %b &nbsp;&nbsp;or&nbsp;&nbsp;
+    %a.facebook-login-button{:href => "/users/auth/facebook"}
+      %span Sign up using Facebook
+

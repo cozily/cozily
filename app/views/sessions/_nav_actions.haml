@@ -1,7 +1,9 @@
 %ul.session
   -if user_signed_in?
     %li.action=link_to("Sign out", destroy_user_session_path, :method => :delete)
-    %li.profile=link_to("My Cozily", edit_user_registration_path)
+    %li.profile=link_to("Hi #{current_user.first_name}!", edit_user_registration_path)
   -else
     %li.action=link_to("Sign up", new_user_registration_path)
     %li.action=link_to("Sign in", new_user_session_path)
+    %a.facebook-login-button{:href => "/users/auth/facebook"}
+      %span Login

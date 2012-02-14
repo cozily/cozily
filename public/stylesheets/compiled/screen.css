@@ -285,7 +285,7 @@ body fieldset input[type=text], body fieldset input[type=password] {
   height: 35px;
 }
 
-/* line 149, ../../../app/stylesheets/partials/_buttons.scss */
+/* line 136, ../../../app/stylesheets/partials/_buttons.scss */
 a.facebook-login-button {
   background: url("/images/sprites/facebook.png") no-repeat scroll 0 0 #29447e;
   text-decoration: none;
@@ -297,7 +297,7 @@ a.facebook-login-button {
   outline: medium none;
   padding: 0 0 0 1px;
 }
-/* line 161, ../../../app/stylesheets/partials/_buttons.scss */
+/* line 148, ../../../app/stylesheets/partials/_buttons.scss */
 a.facebook-login-button span {
   background: url("/images/sprites/facebook.png") repeat scroll 0 0 #5f78ab;
   border-bottom: 1px solid #1A356E;
@@ -310,13 +310,13 @@ a.facebook-login-button span {
   padding: 2px 6px 3px;
   text-shadow: none;
 }
-/* line 174, ../../../app/stylesheets/partials/_buttons.scss */
+/* line 161, ../../../app/stylesheets/partials/_buttons.scss */
 a.facebook-login-button:active {
   background-position: left -210px;
   color: #1982A0;
   text-decoration: none;
 }
-/* line 179, ../../../app/stylesheets/partials/_buttons.scss */
+/* line 166, ../../../app/stylesheets/partials/_buttons.scss */
 a.facebook-login-button:active span {
   background: none repeat scroll 0 0 #4F6AA3;
   border-bottom: 1px solid #29447E;
@@ -387,20 +387,25 @@ div#head ul.session li.action a {
 div#head ul.session li.profile a {
   color: #E29C47;
 }
+/* line 57, ../../../app/stylesheets/partials/_application.scss */
+div#head ul.session a.facebook-login-button {
+  margin-left: 5px;
+  margin-top: 7px;
+}
 
-/* line 59, ../../../app/stylesheets/partials/_application.scss */
+/* line 64, ../../../app/stylesheets/partials/_application.scss */
 div#search {
   height: 72px;
   background-color: #8D9CA1;
   background: url(/images/backgrounds/search_bar.png) repeat-x;
 }
 
-/* line 65, ../../../app/stylesheets/partials/_application.scss */
+/* line 70, ../../../app/stylesheets/partials/_application.scss */
 div#breadcrumbs {
   height: 30px;
   background-color: #F3F3F3;
 }
-/* line 69, ../../../app/stylesheets/partials/_application.scss */
+/* line 74, ../../../app/stylesheets/partials/_application.scss */
 div#breadcrumbs div.profile_summary {
   text-align: right;
   font-style: italic;
@@ -409,47 +414,47 @@ div#breadcrumbs div.profile_summary {
   margin: 0 auto;
   line-height: 28px;
 }
-/* line 77, ../../../app/stylesheets/partials/_application.scss */
+/* line 82, ../../../app/stylesheets/partials/_application.scss */
 div#breadcrumbs div.profile_summary span {
   margin-left: 12px;
   font-style: normal;
 }
 
-/* line 84, ../../../app/stylesheets/partials/_application.scss */
+/* line 89, ../../../app/stylesheets/partials/_application.scss */
 div#body {
   background-color: #F3F3F3;
 }
-/* line 87, ../../../app/stylesheets/partials/_application.scss */
+/* line 92, ../../../app/stylesheets/partials/_application.scss */
 div#body label.infield {
   padding-left: 10px;
   color: #ccc;
 }
-/* line 93, ../../../app/stylesheets/partials/_application.scss */
+/* line 98, ../../../app/stylesheets/partials/_application.scss */
 div#body li#message_body_input label.infield {
   font-size: 1.1em;
 }
-/* line 99, ../../../app/stylesheets/partials/_application.scss */
+/* line 104, ../../../app/stylesheets/partials/_application.scss */
 div#body div.container {
   background-color: white;
 }
 
-/* line 104, ../../../app/stylesheets/partials/_application.scss */
+/* line 109, ../../../app/stylesheets/partials/_application.scss */
 div#foot {
   background-color: #F3F3F3;
   height: 50px;
   clear: both;
 }
-/* line 109, ../../../app/stylesheets/partials/_application.scss */
+/* line 114, ../../../app/stylesheets/partials/_application.scss */
 div#foot div.container {
   border-top: 1px solid #eee;
   border-bottom: 3px solid #ddd;
   background-color: white;
 }
-/* line 115, ../../../app/stylesheets/partials/_application.scss */
+/* line 120, ../../../app/stylesheets/partials/_application.scss */
 div#foot ul {
   margin: 0 10px;
 }
-/* line 118, ../../../app/stylesheets/partials/_application.scss */
+/* line 123, ../../../app/stylesheets/partials/_application.scss */
 div#foot ul li {
   text-transform: uppercase;
   font-weight: 700;
@@ -459,63 +464,63 @@ div#foot ul li {
   line-height: 52px;
   font-size: 1em;
 }
-/* line 126, ../../../app/stylesheets/partials/_application.scss */
+/* line 131, ../../../app/stylesheets/partials/_application.scss */
 div#foot ul li a {
   color: #333333;
 }
-/* line 130, ../../../app/stylesheets/partials/_application.scss */
+/* line 135, ../../../app/stylesheets/partials/_application.scss */
 div#foot ul li.copyright {
   font-weight: normal;
   text-transform: none;
   float: right;
   color: #666666;
 }
-/* line 137, ../../../app/stylesheets/partials/_application.scss */
+/* line 142, ../../../app/stylesheets/partials/_application.scss */
 div#foot ul li.facebook, div#foot ul li.twitter {
   padding: 0 5px;
   float: right;
 }
-/* line 140, ../../../app/stylesheets/partials/_application.scss */
+/* line 145, ../../../app/stylesheets/partials/_application.scss */
 div#foot ul li.facebook img, div#foot ul li.twitter img {
   padding-top: 14px;
 }
 
-/* line 148, ../../../app/stylesheets/partials/_application.scss */
+/* line 153, ../../../app/stylesheets/partials/_application.scss */
 div#map_canvas {
   width: 50%;
   height: 500px;
 }
 
-/* line 153, ../../../app/stylesheets/partials/_application.scss */
+/* line 158, ../../../app/stylesheets/partials/_application.scss */
 div.ui-datepicker {
   width: 19em;
 }
 
-/* line 157, ../../../app/stylesheets/partials/_application.scss */
+/* line 162, ../../../app/stylesheets/partials/_application.scss */
 div.feedback {
   padding: 20px;
   width: 250px;
   background: #CCC;
   border: 1px solid #29216D;
 }
-/* line 163, ../../../app/stylesheets/partials/_application.scss */
+/* line 168, ../../../app/stylesheets/partials/_application.scss */
 div.feedback p {
   font-size: 14px;
 }
-/* line 167, ../../../app/stylesheets/partials/_application.scss */
+/* line 172, ../../../app/stylesheets/partials/_application.scss */
 div.feedback form.formtastic {
   margin-bottom: 0;
 }
-/* line 171, ../../../app/stylesheets/partials/_application.scss */
+/* line 176, ../../../app/stylesheets/partials/_application.scss */
 div.feedback form.formtastic fieldset > ol > li label {
   line-height: 30px;
   font-weight: bold;
 }
-/* line 176, ../../../app/stylesheets/partials/_application.scss */
+/* line 181, ../../../app/stylesheets/partials/_application.scss */
 div.feedback form.formtastic fieldset > ol > li input[type=text] {
   width: 180px;
 }
-/* line 180, ../../../app/stylesheets/partials/_application.scss */
+/* line 185, ../../../app/stylesheets/partials/_application.scss */
 div.feedback form.formtastic fieldset > ol > li textarea {
   width: 180px;
   height: 100px;
@@ -523,7 +528,7 @@ div.feedback form.formtastic fieldset > ol > li textarea {
   font-size: 15px;
   padding: 5px;
 }
-/* line 188, ../../../app/stylesheets/partials/_application.scss */
+/* line 193, ../../../app/stylesheets/partials/_application.scss */
 div.feedback form.formtastic fieldset > ol > li input[type=submit] {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -542,7 +547,7 @@ div.feedback form.formtastic fieldset > ol > li input[type=submit] {
   width: 75px;
 }
 
-/* line 196, ../../../app/stylesheets/partials/_application.scss */
+/* line 201, ../../../app/stylesheets/partials/_application.scss */
 div#flash, div#loading {
   position: fixed;
   top: 0px;
@@ -552,7 +557,7 @@ div#flash, div#loading {
   display: none;
   z-index: 100;
 }
-/* line 205, ../../../app/stylesheets/partials/_application.scss */
+/* line 210, ../../../app/stylesheets/partials/_application.scss */
 div#flash span, div#loading span {
   background-color: #E1B55E;
   padding: 5px 12px;
@@ -571,7 +576,7 @@ div#flash span, div#loading span {
   font-style: italic;
 }
 
-/* line 217, ../../../app/stylesheets/partials/_application.scss */
+/* line 222, ../../../app/stylesheets/partials/_application.scss */
 div#loading span {
   background-image: url("/images/spinner.gif");
   background-repeat: no-repeat;
@@ -580,31 +585,31 @@ div#loading span {
   line-height: 30px;
 }
 
-/* line 228, ../../../app/stylesheets/partials/_application.scss */
+/* line 233, ../../../app/stylesheets/partials/_application.scss */
 div#body div.container div.internal_error {
   margin: 50px 20px 0 20px;
 }
-/* line 232, ../../../app/stylesheets/partials/_application.scss */
+/* line 237, ../../../app/stylesheets/partials/_application.scss */
 div#body div.container div#four_oh_four {
   background: url(/images/characters/lady.png) no-repeat;
   height: 400px;
 }
-/* line 235, ../../../app/stylesheets/partials/_application.scss */
+/* line 240, ../../../app/stylesheets/partials/_application.scss */
 div#body div.container div#four_oh_four h1, div#body div.container div#four_oh_four h2 {
   padding-left: 200px;
 }
-/* line 240, ../../../app/stylesheets/partials/_application.scss */
+/* line 245, ../../../app/stylesheets/partials/_application.scss */
 div#body div.container div#five_hundred {
   background: url(/images/characters/man.png) no-repeat;
   background-position: right top;
   height: 400px;
 }
-/* line 244, ../../../app/stylesheets/partials/_application.scss */
+/* line 249, ../../../app/stylesheets/partials/_application.scss */
 div#body div.container div#five_hundred h1, div#body div.container div#five_hundred h2 {
   padding-right: 200px;
 }
 
-/* line 252, ../../../app/stylesheets/partials/_application.scss */
+/* line 257, ../../../app/stylesheets/partials/_application.scss */
 form.formtastic div.errorExplanation {
   border: 1px solid red;
   background-color: pink;
@@ -617,20 +622,20 @@ form.formtastic div.errorExplanation {
   -khtml-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 259, ../../../app/stylesheets/partials/_application.scss */
+/* line 264, ../../../app/stylesheets/partials/_application.scss */
 form.formtastic div.errorExplanation h2 {
   display: none;
 }
-/* line 263, ../../../app/stylesheets/partials/_application.scss */
+/* line 268, ../../../app/stylesheets/partials/_application.scss */
 form.formtastic div.errorExplanation ul {
   list-style-type: disc;
   margin: 5px 0 5px 30px;
 }
-/* line 270, ../../../app/stylesheets/partials/_application.scss */
+/* line 275, ../../../app/stylesheets/partials/_application.scss */
 form.formtastic li.error input {
   border: 1px solid red;
 }
-/* line 274, ../../../app/stylesheets/partials/_application.scss */
+/* line 279, ../../../app/stylesheets/partials/_application.scss */
 form.formtastic li.error p.inline-errors {
   display: none;
 }
@@ -715,7 +720,7 @@ div#search form input[type=submit] {
   height: 28px;
   margin-left: 10px;
 }
-/* line 36, ../../../app/stylesheets/partials/_buttons.scss */
+/* line 23, ../../../app/stylesheets/partials/_buttons.scss */
 div#search form input[type=submit]:hover {
   background-color: #dddddd;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dddddd), color-stop(100%, #bbbbbb));
@@ -729,7 +734,7 @@ div#search form input[type=submit]:hover {
   cursor: pointer;
   text-shadow: 0 1px 0 #ddd;
 }
-/* line 49, ../../../app/stylesheets/partials/_buttons.scss */
+/* line 36, ../../../app/stylesheets/partials/_buttons.scss */
 div#search form input[type=submit]:active {
   border: 1px solid #aaa;
   border-bottom: 1px solid #888;
@@ -1658,7 +1663,7 @@ body.sessions form.session fieldset input[type=submit], body.sessions form.passw
   width: 150px;
   width: 125px;
 }
-/* line 88, ../../../app/stylesheets/partials/_buttons.scss */
+/* line 75, ../../../app/stylesheets/partials/_buttons.scss */
 body.sessions form.session fieldset input[type=submit]:hover, body.sessions form.password fieldset input[type=submit]:hover, body.sessions form.user fieldset input[type=submit]:hover, body.passwords form.session fieldset input[type=submit]:hover, body.passwords form.password fieldset input[type=submit]:hover, body.passwords form.user fieldset input[type=submit]:hover, body.registrations form.session fieldset input[type=submit]:hover, body.registrations form.password fieldset input[type=submit]:hover, body.registrations form.user fieldset input[type=submit]:hover {
   background-color: #7f8dad;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7f8dad), color-stop(50%, #4a5e8c), color-stop(50%, #2f477d), color-stop(100%, #364c80));
@@ -1669,7 +1674,7 @@ body.sessions form.session fieldset input[type=submit]:hover, body.sessions form
   background-image: linear-gradient(top, #7f8dad 0%, #4a5e8c 50%, #2f477d 50%, #364c80 100%);
   cursor: pointer;
 }
-/* line 99, ../../../app/stylesheets/partials/_buttons.scss */
+/* line 86, ../../../app/stylesheets/partials/_buttons.scss */
 body.sessions form.session fieldset input[type=submit]:active, body.sessions form.password fieldset input[type=submit]:active, body.sessions form.user fieldset input[type=submit]:active, body.passwords form.session fieldset input[type=submit]:active, body.passwords form.password fieldset input[type=submit]:active, body.passwords form.user fieldset input[type=submit]:active, body.registrations form.session fieldset input[type=submit]:active, body.registrations form.password fieldset input[type=submit]:active, body.registrations form.user fieldset input[type=submit]:active {
   -webkit-box-shadow: inset 0 0 20px 0 #1d2845, 0 1px 0 white;
   -moz-box-shadow: inset 0 0 20px 0 #1d2845, 0 1px 0 white;
@@ -1736,7 +1741,7 @@ body.sessions form.simple_form.user input[type=submit], body.passwords form.simp
   width: 150px;
   width: 125px;
 }
-/* line 88, ../../../app/stylesheets/partials/_buttons.scss */
+/* line 75, ../../../app/stylesheets/partials/_buttons.scss */
 body.sessions form.simple_form.user input[type=submit]:hover, body.passwords form.simple_form.user input[type=submit]:hover, body.registrations form.simple_form.user input[type=submit]:hover {
   background-color: #7f8dad;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7f8dad), color-stop(50%, #4a5e8c), color-stop(50%, #2f477d), color-stop(100%, #364c80));
@@ -1747,7 +1752,7 @@ body.sessions form.simple_form.user input[type=submit]:hover, body.passwords for
   background-image: linear-gradient(top, #7f8dad 0%, #4a5e8c 50%, #2f477d 50%, #364c80 100%);
   cursor: pointer;
 }
-/* line 99, ../../../app/stylesheets/partials/_buttons.scss */
+/* line 86, ../../../app/stylesheets/partials/_buttons.scss */
 body.sessions form.simple_form.user input[type=submit]:active, body.passwords form.simple_form.user input[type=submit]:active, body.registrations form.simple_form.user input[type=submit]:active {
   -webkit-box-shadow: inset 0 0 20px 0 #1d2845, 0 1px 0 white;
   -moz-box-shadow: inset 0 0 20px 0 #1d2845, 0 1px 0 white;
@@ -1880,7 +1885,7 @@ body.registrations form.user fieldset input[type=submit], body.users.edit form.u
   width: 125px;
   font-size: 14px;
 }
-/* line 88, ../../../app/stylesheets/partials/_buttons.scss */
+/* line 75, ../../../app/stylesheets/partials/_buttons.scss */
 body.registrations form.user fieldset input[type=submit]:hover, body.users.edit form.user fieldset input[type=submit]:hover, body.users.update form.user fieldset input[type=submit]:hover, body.users.new form.user fieldset input[type=submit]:hover, body.users.create form.user fieldset input[type=submit]:hover, body.profiles.edit form.user fieldset input[type=submit]:hover, body.profiles.update form.user fieldset input[type=submit]:hover {
   background-color: #7f8dad;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7f8dad), color-stop(50%, #4a5e8c), color-stop(50%, #2f477d), color-stop(100%, #364c80));
@@ -1891,7 +1896,7 @@ body.registrations form.user fieldset input[type=submit]:hover, body.users.edit 
   background-image: linear-gradient(top, #7f8dad 0%, #4a5e8c 50%, #2f477d 50%, #364c80 100%);
   cursor: pointer;
 }
-/* line 99, ../../../app/stylesheets/partials/_buttons.scss */
+/* line 86, ../../../app/stylesheets/partials/_buttons.scss */
 body.registrations form.user fieldset input[type=submit]:active, body.users.edit form.user fieldset input[type=submit]:active, body.users.update form.user fieldset input[type=submit]:active, body.users.new form.user fieldset input[type=submit]:active, body.users.create form.user fieldset input[type=submit]:active, body.profiles.edit form.user fieldset input[type=submit]:active, body.profiles.update form.user fieldset input[type=submit]:active {
   -webkit-box-shadow: inset 0 0 20px 0 #1d2845, 0 1px 0 white;
   -moz-box-shadow: inset 0 0 20px 0 #1d2845, 0 1px 0 white;

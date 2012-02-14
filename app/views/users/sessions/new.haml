@@ -4,11 +4,16 @@
 %h2 Sign in
 
 = simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |form|
+
   = devise_error_messages!
 
   = form.input :email
   = form.input :password, :as => :password
   = form.submit "Sign in"
+
+  %b &nbsp;&nbsp;or&nbsp;&nbsp;
+  %a.facebook-login-button{:href => "/users/auth/facebook"}
+    %span Login with Facebook
 
 %ul
   %li= link_to "Sign up", new_user_registration_path

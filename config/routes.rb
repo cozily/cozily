@@ -1,5 +1,8 @@
 Rails.application.routes.draw do |map|
-  devise_for :users, :controllers => { :registrations => "registrations" }
+  devise_for :users, :controllers => { :registrations => "registrations", :omniauth_callbacks => "users/omniauth_callbacks" }
+  devise_scope :user do
+    get '/users/auth/:provider' => 'users/omniauth_callbacks#passthru'
+  end
 
   mount Resque::Server.new, :at => "/resque"
 
@@ -54,5 +57,4 @@ Rails.application.routes.draw do |map|
   map.sitemap 'sitemap.xml', :controller => 'sitemap', :action => 'index'
 
   map.root :controller => "welcome"
-  match '*route', :to => 'errors#routing'
 end

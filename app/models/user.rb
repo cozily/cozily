@@ -1,13 +1,13 @@
 class User < ActiveRecord::Base
   is_gravtastic!
   devise :database_authenticatable, :registerable, :omniauthable, :encryptable,
-         :recoverable, :rememberable, :trackable, :validatable
+    :recoverable, :rememberable, :trackable, :validatable
 
   attr_accessible :email, :first_name, :last_name, :password, :password_confirmation, :remember_me, :phone, :profile_attributes,
     :role_ids, :receive_listing_summaries, :receive_match_notifications, :receive_match_summaries
 
-
   has_one :profile, :dependent => :destroy
+  has_many :authentications
   has_many :activities, :class_name => "UserActivity", :dependent => :destroy
   has_many :apartments, :dependent => :destroy
   has_many :favorites, :dependent => :destroy
@@ -48,6 +48,32 @@ class User < ActiveRecord::Base
       User.lister.receive_listing_summaries.each do |user|
         UserMailer.lister_summary(user.id).deliver
       end
+    end
+
+    def new_with_session(params, session)
+      super.tap do |user|
+        if data = session["devise.facebook_data"] && session["devise.facebook_data"]["extra"]["raw_info"]
+          user.email = data["email"]
+        end
+      end
+    end
+
+    def find_for_facebook_oauth(access_token, signed_in_resource=nil)
+      data = access_token.extra.raw_info
+      authentication = Authentication.new(:provider => access_token.provider,
+                                          :uid => access_token.uid,
+                                          :token => access_token.credentials.token)
+      if user = User.where(:email => data.email).first
+        user
+      else
+        user = User.create!(:email => data.email,
+                            :first_name => data.first_name,
+                            :last_name => data.last_name,
+                            :role_ids => [1],
+                            :password => Devise.friendly_token[0,20])
+      end
+      user.authentications << authentication
+      user
     end
   end
 

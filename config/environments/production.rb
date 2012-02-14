@@ -62,4 +62,7 @@ Cozily::Application.configure do
     :user_name => "cozily@cozily.mailgun.org",
     :password => "marathon69"
   }
+
+  FACEBOOK_APP_ID = "312305782142023"
+  FACEBOOK_APP_SECRET = "c04778a984d26f7d838ab548858099d3"
 end

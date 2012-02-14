@@ -33,4 +33,7 @@ Cozily::Application.configure do
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
+
+  FACEBOOK_APP_ID = "xxx"
+  FACEBOOK_APP_SECRET = "XXX"
 end

@@ -4,10 +4,10 @@
 %h1 Intelligent apartment hunting in NYC. No hassle. No fees.
 
 #buttons
-  =link_to image_tag("buttons/find_an_apartment.png", :class => "find"), browse_path
-  =link_to image_tag("buttons/list_an_apartment.png", :class => "list"), {:controller => 'signup', :action => 'profile', :want => 'lister'}, :'data-remote' => true, :'data-method' => 'get'
-=image_tag "characters/lady.png", :class => "lady"
-=image_tag "characters/man.png", :class => "man"
+  = link_to image_tag("buttons/find_an_apartment.png", :class => "find"), browse_path
+  = link_to image_tag("buttons/list_an_apartment.png", :class => "list"), new_user_registration_path
+= image_tag "characters/lady.png", :class => "lady"
+= image_tag "characters/man.png", :class => "man"
 
 #login
   %h6 Already have an account?
