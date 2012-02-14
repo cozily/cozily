@@ -1,7 +1,7 @@
+
 = semantic_form_for [apartment, Message.new], :html => { :'data-remote' => true } do |form|
   =form.error_messages
-
   = form.inputs do
-    =form.input :body, :as => :text, :label => "Dear Landlord/Agent..."
+    = form.input :body, :as => :text, :placeholder => "Dear Landlord/Agent..."
   = form.buttons do
-    =form.commit_button "Send Message"
+    = form.commit_button "Send Message"
