@@ -1,0 +1,57 @@
+- content_for :page_title do
+  Apartments at #{@building.full_address} | Cozily
+
+  :javascript
+    var self = #{@building.as_json(:methods => :to_param).to_json};
+    var buildings = {};
+
+.article
+  .head
+    .name
+      - if @building.geocoded?
+        %h1= @building.street
+        %h2 #{@building.city}, #{@building.state} #{@building.zip}
+      - else
+        %h1 Unknown Address
+
+  .content
+    %h3.sublet Streetview
+    = image_tag "http://maps.googleapis.com/maps/api/streetview?size=625x440&location=#{@building.lat},%20#{@building.lng}&fov=90&pitch=0&sensor=false"
+
+    .photos
+    .contact
+      %h3 Building Information
+
+.aside
+  %div.actions{:style => "height: 90px; padding-top: 10px;"}
+    %div.sharing
+      %span{:style => "float: left; padding-left: 5px; padding-right: 5px; border-right: 1px solid #ccc;"}
+        <g:plusone size="medium" annotation="none"></g:plusone>
+      %span{:style => "float: left; padding-left: 5px; padding-right: 5px; border-right: 1px solid #ccc;"}
+        <a href="http://twitter.com/share" class="twitter-share-button" data-count="none" data-via="cozidotly" data-hashtags="cozily">Tweet</a>
+        <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+      %span{:style => "float: left; padding-left: 5px; padding-right: 5px"}
+        <iframe src="//www.facebook.com/plugins/like.php?href&amp;send=false&amp;layout=button_count&amp;width=80&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:80px; height:21px;" allowTransparency="true"></iframe>
+        /.fb-like{"data-send" => "false", "data-layout" => "button_count", "data-width" => "100", "data-show-faces" => "false", "data-font" => "arial"}
+
+  #map_canvas
+  =image_tag "backgrounds/shadow.png", :class => "shadow"
+
+  #nearby_stations
+    %h3 Nearby Stations
+    %table
+      -if @nearby_stations.present?
+        -@nearby_stations.each do |station|
+          %tr
+            %td
+              .name= station.name
+              - station.trains.each do |train|
+                = image_tag "mta/#{train.name}.gif"
+            %td==#{number_with_precision(station.distance, :precision => 2)}mi
+      -else
+        %tr
+          %td None
+  =image_tag "backgrounds/shadow.png", :class => "shadow"
+
+  .business_search{:'data-lat' => @building.lat, :'data-lng' => @building.lng}
+

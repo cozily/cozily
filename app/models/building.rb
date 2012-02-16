@@ -22,6 +22,8 @@ class Building < ActiveRecord::Base
   validates_uniqueness_of :lat, :scope => :lng
   validate :ensure_at_least_one_neighborhood
 
+  has_friendly_id :full_address, :use_slug => true, :allow_nil => true
+
   class << self
     def for_full_address(address_string)
       return unless address_string
@@ -42,6 +44,20 @@ class Building < ActiveRecord::Base
 
   def geocoded?
     lat.present? && lng.present?
+  end
+
+  def nearby_stations
+    nearest_stations = Station.find(:all, :origin => [lat, lng], :within => 0.5, :order => 'distance')
+    if nearest_stations.empty?
+      Station.find(:all, :origin => [lat, lng], :order => 'distance', :limit => 1)
+    else
+      unique_stations = nearest_stations.uniq {|a| [a.name, a.train_group]}.map {|a| [a.name, a.train_group]}
+      [].tap do |stations|
+        unique_stations.each do |unique_station|
+          stations << nearest_stations[nearest_stations.index {|s| s.name == unique_station.first && s.train_group == unique_station.last}]
+        end
+      end
+    end
   end
 
   private

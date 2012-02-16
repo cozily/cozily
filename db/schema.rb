@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120202221439) do
+ActiveRecord::Schema.define(:version => 20120216000222) do
 
   create_table "apartment_features", :force => true do |t|
     t.integer  "apartment_id"
@@ -181,6 +181,57 @@ ActiveRecord::Schema.define(:version => 20120202221439) do
 
   add_index "notifications", ["apartment_id"], :name => "index_notifications_on_apartment_id"
   add_index "notifications", ["user_id"], :name => "index_notifications_on_user_id"
+
+  create_table "nyc_buildings", :force => true do |t|
+    t.string "boro",      :limit => 1
+    t.string "block",     :limit => 5
+    t.string "lot",       :limit => 4
+    t.string "bin",       :limit => 7
+    t.string "lhnd",      :limit => 12
+    t.string "lhns",      :limit => 11
+    t.string "lcontpar",  :limit => 1
+    t.string "lsos",      :limit => 1
+    t.string "hhnd",      :limit => 12
+    t.string "hhns",      :limit => 11
+    t.string "hcontpar",  :limit => 1
+    t.string "hsos",      :limit => 1
+    t.string "scboro",    :limit => 1
+    t.string "sc5",       :limit => 5
+    t.string "sclgc",     :limit => 2
+    t.string "stname",    :limit => 32
+    t.string "addrtype",  :limit => 1
+    t.string "realb7sc",  :limit => 8
+    t.string "validlgcs", :limit => 8
+    t.string "parity",    :limit => 1
+    t.string "b10sc",     :limit => 11
+    t.string "segid",     :limit => 7
+  end
+
+  create_table "nyc_tax_lots", :force => true do |t|
+    t.string "loboro",     :limit => 1
+    t.string "loblock",    :limit => 5
+    t.string "lolot",      :limit => 4
+    t.string "lobblssc",   :limit => 1
+    t.string "hiboro",     :limit => 1
+    t.string "hiblock",    :limit => 5
+    t.string "hilot",      :limit => 4
+    t.string "hibblssc",   :limit => 1
+    t.string "boro",       :limit => 1
+    t.string "block",      :limit => 5
+    t.string "lot",        :limit => 4
+    t.string "bblssc",     :limit => 1
+    t.string "billboro",   :limit => 1
+    t.string "billblock",  :limit => 5
+    t.string "billlot",    :limit => 4
+    t.string "billbblssc", :limit => 1
+    t.string "condoflag",  :limit => 1
+    t.string "condonum",   :limit => 4
+    t.string "coopnum",    :limit => 4
+    t.string "numbf",      :limit => 2
+    t.string "numaddr",    :limit => 4
+    t.string "vacant",     :limit => 1
+    t.string "interior",   :limit => 1
+  end
 
   create_table "photos", :force => true do |t|
     t.integer  "apartment_id"
