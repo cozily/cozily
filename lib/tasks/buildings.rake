@@ -17,7 +17,9 @@ namespace :import do
       `cd #{Rails.root.join("lib","data")} && tar -xzf nyc_bob.tar.gz`
 
       CSV.foreach(Rails.root.join("lib", "data", "bobaadr.txt"), :headers => :first_row) do |row|
-        row.each_value.map(&:strip!)
+        row = row.to_hash unless row.is_a? Hash
+        row.values.map(&:strip!)
+
         NycBuilding.create(:boro => row["boro"],
                            :block => row["block"],
                            :lot => row["lot"],

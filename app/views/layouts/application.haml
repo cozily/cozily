@@ -62,7 +62,7 @@
     -if show_search?
       #search
         .container
-          %h2 Find a Home!
+          %h2 Find an Apartment!
 
           = form_for @search, :as => :q, :url => search_path, :html => {:method => :get, :class => 'search'} do |f|
             = f.select :neighborhood_id, grouped_options_for_select(Neighborhood.to_grouped_dropdown, @search.neighborhood_id), {:include_blank => true}, {:class => "chosen", :style => "width:250px", :"data-placeholder" => "Choose a neighborhood..."}

@@ -14,6 +14,9 @@ class SitemapController < ApplicationController
       Neighborhood.all.each do |neighborhood|
         m.add neighborhood_path(neighborhood), updated: neighborhood.updated_at, priority: 1.0, period: :hourly
       end
+      Building.all.each do |building|
+        m.add building_path(building), updated: building.updated_at, priority: 1.0, period: :daily
+      end
     end
     render xml: sitemap.render
   end

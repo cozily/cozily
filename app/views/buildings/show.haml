@@ -18,9 +18,16 @@
     %h3.sublet Streetview
     = image_tag "http://maps.googleapis.com/maps/api/streetview?size=625x440&location=#{@building.lat},%20#{@building.lng}&fov=90&pitch=0&sensor=false"
 
-    .photos
+    .article
+      %h2 Nearest Apartments
+      - @apartments.each_with_index do |apartment, index|
+        =render "dashboard/apartment", :apartment => apartment, :position => index + 1
+
     .contact
-      %h3 Building Information
+      - unless user_signed_in?
+        %h3
+          Want to be notified when an apartment in this building becomes available?
+          #{link_to "Sign up", new_user_registration_path} or #{link_to "Sign in", new_user_session_path}!
 
 .aside
   %div.actions{:style => "height: 90px; padding-top: 10px;"}

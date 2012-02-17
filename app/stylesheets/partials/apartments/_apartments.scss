@@ -24,3 +24,236 @@ body.apartments {
         }
     }
 }
+
+body.buildings.show {
+  div.container {
+    div.content {
+      div.article {
+          width: 620px;
+          margin-right: 10px;
+          float: left;
+
+          h2 {
+              margin: 10px 0 0 10px;
+              border-bottom: 3px solid black;
+          }
+
+          p.empty {
+              font-size: 18px;
+              padding: 18px;
+              text-align: center;
+              clear: both;
+          }
+
+          div.new > a {
+              width: 160px;
+              margin: 20px auto 0;
+              @include green-link;
+          }
+
+          div.apartment.listing {
+              height: 140px;
+              margin-bottom: 45px;
+
+              p.summary {
+                  background-color: #F0F4F7;
+                  border-bottom: 1px solid #CCCCCC;
+                  height: 32px;
+                  line-height: 32px;
+                  clear: both;
+                  font-size: 1.1em;
+                  font-weight: 500;
+                  padding-left: 10px;
+
+                  span {
+                      margin-right: 30px;
+                      font-weight: bold;
+                  }
+              }
+          }
+
+          div.apartment {
+              height: 130px;
+              margin-left: 3px;
+              border-bottom: 1px solid #CCC;
+              padding: 3px 0;
+
+              > ul {
+                  > li {
+                      float: left;
+                      margin-right: 10px;
+                      height: 100%;
+                  }
+
+                  li.photo {
+                      width: 150px;
+
+                      div {
+                          float: left;
+                      }
+
+                      div.image {
+                          width: 110px;
+                          height: 110px;
+                          float: left;
+                          padding: 5px 0 5px 5px;
+                      }
+
+                      div.count {
+                          width: 35px;
+                          height: 35px;
+                          background-color: #E1B55E;
+                          font-size: 2em;
+                          text-align: right;
+                          padding-right: 10px;
+                          float: right;
+                          position: relative;
+                          top: -105px;
+                      }
+                  }
+
+                  li.info {
+                      border-right: 1px solid #CCC;
+                      width: 265px;
+                      font-weight: 500;
+
+                      ul {
+                          li.street {
+                              padding-top: 10px;
+                              margin-bottom: 4px;
+                              a {
+                                  font-size: 1.8em;
+                                  font-weight: 600;
+                              }
+                          }
+
+                          li.neighborhood a {
+                              font-size: 1em;
+                          }
+
+                          li.basic {
+                              font-size: 1.2em;
+                              span.rent {
+                                  font-weight: 600;
+                              }
+                          }
+
+                          li.neighborhood, li.published_on {
+                              font-size: 0.95em;
+
+                              span {
+                                  font-style: italic;
+                                  font-weight: 600;
+                                  margin-left: 5px;
+                              }
+                          }
+                      }
+                  }
+
+                  li.status {
+                      div {
+                          height: 62px;
+                      }
+
+                      p {
+                          font-weight: bold;
+                          font-size: 1.1em;
+                          margin-bottom: 3px;
+                          padding-top: 2px;
+                      }
+
+                      ul.buttons {
+                          padding-left: 12px;
+                          margin-top: 10px;
+
+                          li {
+                              float: left;
+                              margin-right: 10px;
+                              width: 70px;
+
+                              a {
+                                  color: white;
+                              }
+                          }
+
+                          li.edit {
+                              @include green-link;
+                              height: 26px;
+                              line-height: 26px;
+                          }
+
+                          li.delete {
+                              @include dark-blue-link;
+                              height: 26px;
+                              line-height: 26px;
+                          }
+                      }
+
+                      fieldset.inputs {
+                          ol {
+                              li {
+                                  padding-left: 10px;
+                                  margin-bottom: 1px;
+                                  label {
+                                      display: inline;
+                                      float: none;
+                                      font-size: 18px;
+                                  }
+
+                                  input[type=radio] {
+                                      margin-right: 5px;
+                                  }
+
+                                  &.active {
+                                      font-style: italic;
+                                      font-weight: 600;
+                                  }
+                              }
+                          }
+                      }
+                  }
+
+                  li.contact {
+                      width: 180px;
+                      margin-right: 0;
+
+                      ul {
+                          position: relative;
+                          top: 20px;
+
+                          li {
+                              padding-left: 15px;
+                          }
+
+                          li.phone {
+                              font-weight: 500;
+                              font-size: 1.7em;
+                              margin-bottom: 5px;
+                          }
+
+                          li.message a, li.favorite a {
+                              padding-left: 15px;
+                              font-size: 0.95em;
+                          }
+
+                          li.message a {
+                              background: url(/images/icons/message_small.png) no-repeat 0 4px;
+                          }
+
+                          li.favorite a {
+                              &.add {
+                                  background: url(/images/icons/add_small.png) no-repeat 0 3px;
+                              }
+
+                              &.remove {
+                                  background: url(/images/icons/remove_small.png) no-repeat 0 3px;
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+      }
+    }
+  }
+}
